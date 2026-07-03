@@ -1,0 +1,1946 @@
+[
+  {
+    "id": "deco_422304422",
+    "nameZh": "達藝珠【2】",
+    "slotLevel": 2,
+    "skillName": "達人藝",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_229177724",
+    "nameZh": "匠珠【3】",
+    "slotLevel": 3,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1951027710",
+    "nameZh": "運氣珠【3】",
+    "slotLevel": 3,
+    "skillName": "幸運",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1755961030",
+    "nameZh": "鬼火珠【3】",
+    "slotLevel": 3,
+    "skillName": "鬼火纏身",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2026860724",
+    "nameZh": "強跳珠【3】",
+    "slotLevel": 3,
+    "skillName": "跳躍鐵人",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_733228413",
+    "nameZh": "速射珠【3】",
+    "slotLevel": 3,
+    "skillName": "速射強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_257661234",
+    "nameZh": "省彈珠【2】",
+    "slotLevel": 2,
+    "skillName": "彈藥節約",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_243411229",
+    "nameZh": "斬鐵珠【2】",
+    "slotLevel": 2,
+    "skillName": "利刃",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_762691032",
+    "nameZh": "散彈珠【3】",
+    "slotLevel": 3,
+    "skillName": "散彈･擴散箭強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_748441147",
+    "nameZh": "貫通珠【3】",
+    "slotLevel": 3,
+    "skillName": "貫通彈･貫通箭強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_599465498",
+    "nameZh": "強彈珠【3】",
+    "slotLevel": 3,
+    "skillName": "通常彈･連射箭強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_138201299",
+    "nameZh": "剛刃珠【2】",
+    "slotLevel": 2,
+    "skillName": "剛刃研磨",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_215451999",
+    "nameZh": "爆破珠【2】",
+    "slotLevel": 2,
+    "skillName": "爆破屬性強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_67000766",
+    "nameZh": "睡眠珠【2】",
+    "slotLevel": 2,
+    "skillName": "睡眠屬性強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_19196313",
+    "nameZh": "麻痺珠【2】",
+    "slotLevel": 2,
+    "skillName": "麻痺屬性強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_514312899",
+    "nameZh": "全開珠【2】",
+    "slotLevel": 2,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_289049423",
+    "nameZh": "絕境珠【2】",
+    "slotLevel": 2,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_274815918",
+    "nameZh": "暴怒珠【2】",
+    "slotLevel": 2,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_395307913",
+    "nameZh": "無傷珠【2】",
+    "slotLevel": 2,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_381074408",
+    "nameZh": "挑戰珠【2】",
+    "slotLevel": 2,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_500079394",
+    "nameZh": "痛擊珠【2】",
+    "slotLevel": 2,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_485829389",
+    "nameZh": "超心珠【2】",
+    "slotLevel": 2,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_776924665",
+    "nameZh": "裝填珠【3】",
+    "slotLevel": 3,
+    "skillName": "裝填擴充",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1047302063",
+    "nameZh": "守勢珠【3】",
+    "slotLevel": 3,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1893605725",
+    "nameZh": "愛菇珠【3】",
+    "slotLevel": 3,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1061551948",
+    "nameZh": "拔刀珠【3】",
+    "slotLevel": 3,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_200239249",
+    "nameZh": "射法珠【2】",
+    "slotLevel": 2,
+    "skillName": "彈道強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_408054401",
+    "nameZh": "屬會珠【2】",
+    "slotLevel": 2,
+    "skillName": "會心擊【屬性】",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_657919655",
+    "nameZh": "砲術珠【2】",
+    "slotLevel": 2,
+    "skillName": "砲術",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_808327178",
+    "nameZh": "強走珠【2】",
+    "slotLevel": 2,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_913537140",
+    "nameZh": "縮短珠【2】",
+    "slotLevel": 2,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_152451312",
+    "nameZh": "心眼珠【2】",
+    "slotLevel": 2,
+    "skillName": "心眼",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2084266193",
+    "nameZh": "潛力珠【2】",
+    "slotLevel": 2,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_585215589",
+    "nameZh": "特射珠【2】",
+    "slotLevel": 2,
+    "skillName": "特殊射擊強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_537427524",
+    "nameZh": "增彈珠【2】",
+    "slotLevel": 2,
+    "skillName": "砲彈裝填",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1032544142",
+    "nameZh": "強壁珠【2】",
+    "slotLevel": 2,
+    "skillName": "防禦強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1018294249",
+    "nameZh": "鐵壁珠【2】",
+    "slotLevel": 2,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_869842888",
+    "nameZh": "早氣珠【2】",
+    "slotLevel": 2,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_928294933",
+    "nameZh": "昂揚珠【2】",
+    "slotLevel": 2,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_528038624",
+    "nameZh": "渾身珠【2】",
+    "slotLevel": 2,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_366824395",
+    "nameZh": "攻擊珠【2】",
+    "slotLevel": 2,
+    "skillName": "攻擊",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_303299436",
+    "nameZh": "達人珠【2】",
+    "slotLevel": 2,
+    "skillName": "看破",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1875928865",
+    "nameZh": "速變珠【2】",
+    "slotLevel": 2,
+    "skillName": "高速變形",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_704220607",
+    "nameZh": "抑反珠【1】",
+    "slotLevel": 1,
+    "skillName": "後座力減輕",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_885053622",
+    "nameZh": "鈍器珠【2】",
+    "slotLevel": 2,
+    "skillName": "鈍器能手",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_790650270",
+    "nameZh": "早填珠【1】",
+    "slotLevel": 1,
+    "skillName": "裝填速度",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1132974822",
+    "nameZh": "耐絕珠【1】",
+    "slotLevel": 1,
+    "skillName": "昏厥耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1551805557",
+    "nameZh": "耐震珠【2】",
+    "slotLevel": 2,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1389104311",
+    "nameZh": "防音珠【3】",
+    "slotLevel": 3,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1862219520",
+    "nameZh": "逆襲珠【2】",
+    "slotLevel": 2,
+    "skillName": "逆襲",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1565531242",
+    "nameZh": "泡沫珠【2】",
+    "slotLevel": 2,
+    "skillName": "泡沫之舞",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_718470492",
+    "nameZh": "點射珠【1】",
+    "slotLevel": 1,
+    "skillName": "抑制偏移",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_941567853",
+    "nameZh": "拔打珠【2】",
+    "slotLevel": 2,
+    "skillName": "拔刀術【力】",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1594014760",
+    "nameZh": "跳躍珠【2】",
+    "slotLevel": 2,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1579764747",
+    "nameZh": "迴避珠【2】",
+    "slotLevel": 2,
+    "skillName": "迴避性能",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2146828439",
+    "nameZh": "耐衝珠【1】",
+    "slotLevel": 1,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_988847874",
+    "nameZh": "速納珠【2】",
+    "slotLevel": 2,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1403354196",
+    "nameZh": "防風珠【1】",
+    "slotLevel": 1,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1003081507",
+    "nameZh": "KO珠【2】",
+    "slotLevel": 2,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1921564947",
+    "nameZh": "友愛珠【2】",
+    "slotLevel": 2,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1237729819",
+    "nameZh": "重擊珠【2】",
+    "slotLevel": 2,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1176146786",
+    "nameZh": "耐屬珠【2】",
+    "slotLevel": 2,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1374346390",
+    "nameZh": "快吃珠【2】",
+    "slotLevel": 2,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1432800563",
+    "nameZh": "加護珠【2】",
+    "slotLevel": 2,
+    "skillName": "精靈加護",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1814415203",
+    "nameZh": "走壁珠【2】",
+    "slotLevel": 2,
+    "skillName": "飛簷走壁",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1665963842",
+    "nameZh": "翔蟲珠【2】",
+    "slotLevel": 2,
+    "skillName": "翔蟲能手",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1965261215",
+    "nameZh": "研磨珠【1】",
+    "slotLevel": 1,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1907855730",
+    "nameZh": "持續珠【2】",
+    "slotLevel": 2,
+    "skillName": "道具使用強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1460759793",
+    "nameZh": "早復珠【1】",
+    "slotLevel": 1,
+    "skillName": "回復速度",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1446526160",
+    "nameZh": "治癒珠【2】",
+    "slotLevel": 2,
+    "skillName": "體力回復量UP",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_643686022",
+    "nameZh": "鼓笛珠【1】",
+    "slotLevel": 1,
+    "skillName": "吹笛名人",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_614678208",
+    "nameZh": "奪氣珠【1】",
+    "slotLevel": 1,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_822560811",
+    "nameZh": "體術珠【2】",
+    "slotLevel": 2,
+    "skillName": "體術",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_4438520",
+    "nameZh": "毒珠【1】",
+    "slotLevel": 1,
+    "skillName": "毒屬性強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_629436129",
+    "nameZh": "滑走珠【1】",
+    "slotLevel": 1,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1980035516",
+    "nameZh": "爆師珠【1】",
+    "slotLevel": 1,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_437062215",
+    "nameZh": "火炎珠【1】",
+    "slotLevel": 1,
+    "skillName": "火屬性攻擊強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_82213476",
+    "nameZh": "流水珠【1】",
+    "slotLevel": 1,
+    "skillName": "水屬性攻擊強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_110172730",
+    "nameZh": "雷光珠【1】",
+    "slotLevel": 1,
+    "skillName": "雷屬性攻擊強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_96446981",
+    "nameZh": "冰結珠【1】",
+    "slotLevel": 1,
+    "skillName": "冰屬性攻擊強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_124406235",
+    "nameZh": "破龍珠【1】",
+    "slotLevel": 1,
+    "skillName": "龍屬性攻擊強化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1418566930",
+    "nameZh": "防禦珠【1】",
+    "slotLevel": 1,
+    "skillName": "防禦",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2040569941",
+    "nameZh": "剝皮珠【1】",
+    "slotLevel": 1,
+    "skillName": "剝取鐵人",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1695408169",
+    "nameZh": "騎慣珠【2】",
+    "slotLevel": 2,
+    "skillName": "騎乘名人",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2054819914",
+    "nameZh": "無食珠【1】",
+    "slotLevel": 1,
+    "skillName": "飢餓耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1935814960",
+    "nameZh": "節食珠【1】",
+    "slotLevel": 1,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1280901767",
+    "nameZh": "泥雪珠【1】",
+    "slotLevel": 1,
+    "skillName": "泥雪耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1681174536",
+    "nameZh": "佯攻珠【1】",
+    "slotLevel": 1,
+    "skillName": "佯攻",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2069053547",
+    "nameZh": "飛躍珠【1】",
+    "slotLevel": 1,
+    "skillName": "飛身躍入",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2099040502",
+    "nameZh": "逆境珠【2】",
+    "slotLevel": 2,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1223496314",
+    "nameZh": "地學珠【1】",
+    "slotLevel": 1,
+    "skillName": "地質學",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1309385285",
+    "nameZh": "植學珠【1】",
+    "slotLevel": 1,
+    "skillName": "植生學",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1295151780",
+    "nameZh": "耐爆珠【1】",
+    "slotLevel": 1,
+    "skillName": "爆破異常狀態的耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1118724801",
+    "nameZh": "耐眠珠【1】",
+    "slotLevel": 1,
+    "skillName": "睡眠耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1104491296",
+    "nameZh": "耐麻珠【1】",
+    "slotLevel": 1,
+    "skillName": "麻痺耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1089716995",
+    "nameZh": "耐毒珠【1】",
+    "slotLevel": 1,
+    "skillName": "毒耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1507582921",
+    "nameZh": "耐火珠【1】",
+    "slotLevel": 1,
+    "skillName": "火耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1522357230",
+    "nameZh": "耐水珠【1】",
+    "slotLevel": 1,
+    "skillName": "水耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1148187564",
+    "nameZh": "耐雷珠【1】",
+    "slotLevel": 1,
+    "skillName": "雷耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1536590735",
+    "nameZh": "耐冰珠【1】",
+    "slotLevel": 1,
+    "skillName": "冰耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1161896781",
+    "nameZh": "耐龍珠【1】",
+    "slotLevel": 1,
+    "skillName": "龍耐性",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1784968836",
+    "nameZh": "耐火珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "火耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_1799202469",
+    "nameZh": "耐水珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "水耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_337057370",
+    "nameZh": "耐冰珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "冰耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_384321147",
+    "nameZh": "耐雷珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "雷耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_398571032",
+    "nameZh": "耐龍珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "龍耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_469771709",
+    "nameZh": "植學珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "植生學",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_517576018",
+    "nameZh": "地學珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "地質學",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_531809651",
+    "nameZh": "節食珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "滿足感",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_412366096",
+    "nameZh": "奪氣珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "奪取耐力",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_426599729",
+    "nameZh": "持續珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "道具使用強化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_440849622",
+    "nameZh": "無食珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "飢餓耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_454558967",
+    "nameZh": "火炎珠Ⅱ【2】",
+    "slotLevel": 2,
+    "skillName": "火屬性攻擊強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_99710100",
+    "nameZh": "火炎珠Ⅲ【3】",
+    "slotLevel": 3,
+    "skillName": "火屬性攻擊強化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_128717994",
+    "nameZh": "流水珠Ⅱ【2】",
+    "slotLevel": 2,
+    "skillName": "水屬性攻擊強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_8733771",
+    "nameZh": "流水珠Ⅲ【3】",
+    "slotLevel": 3,
+    "skillName": "水屬性攻擊強化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_37217289",
+    "nameZh": "冰結珠Ⅱ【2】",
+    "slotLevel": 2,
+    "skillName": "冰屬性攻擊強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_50943022",
+    "nameZh": "冰結珠Ⅲ【3】",
+    "slotLevel": 3,
+    "skillName": "冰屬性攻擊強化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_247196652",
+    "nameZh": "雷光珠Ⅱ【2】",
+    "slotLevel": 2,
+    "skillName": "雷屬性攻擊強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_261970829",
+    "nameZh": "雷光珠Ⅲ【3】",
+    "slotLevel": 3,
+    "skillName": "雷屬性攻擊強化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_156236611",
+    "nameZh": "破龍珠Ⅱ【2】",
+    "slotLevel": 2,
+    "skillName": "龍屬性攻擊強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_169945952",
+    "nameZh": "破龍珠Ⅲ【3】",
+    "slotLevel": 3,
+    "skillName": "龍屬性攻擊強化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_903072550",
+    "nameZh": "防禦珠Ⅱ【2】",
+    "slotLevel": 2,
+    "skillName": "防禦",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_917846727",
+    "nameZh": "防禦珠Ⅲ【3】",
+    "slotLevel": 3,
+    "skillName": "防禦",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_932080356",
+    "nameZh": "防禦珠Ⅴ【4】",
+    "slotLevel": 4,
+    "skillName": "防禦",
+    "skillLevel": 5,
+    "craftable": true
+  },
+  {
+    "id": "deco_812112517",
+    "nameZh": "爆師珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "炸彈客",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_825821882",
+    "nameZh": "研磨珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_840071771",
+    "nameZh": "治癒珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "體力回復量UP",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1022077560",
+    "nameZh": "體術珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "體術",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1036851737",
+    "nameZh": "翔蟲珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "翔蟲能手",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1051085374",
+    "nameZh": "走壁珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "飛簷走壁",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_944826876",
+    "nameZh": "早復珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "回復速度",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_959076765",
+    "nameZh": "加護珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "精靈加護",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_973310386",
+    "nameZh": "快吃珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "快吃",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_618985811",
+    "nameZh": "耐屬珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_647469329",
+    "nameZh": "友愛珠Ⅲ【3】",
+    "slotLevel": 3,
+    "skillName": "廣域化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_661178678",
+    "nameZh": "友愛珠Ⅳ【4】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 4,
+    "craftable": true
+  },
+  {
+    "id": "deco_541210839",
+    "nameZh": "迴避珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "迴避性能",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_752224394",
+    "nameZh": "拔打珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【力】",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_766474411",
+    "nameZh": "耐衝珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "減輕膽怯",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_780183624",
+    "nameZh": "泡沫珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "泡沫之舞",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_794433641",
+    "nameZh": "KO珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "KO術",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_674449422",
+    "nameZh": "跳躍珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "迴避距離UP",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_689223727",
+    "nameZh": "防風珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_1450311587",
+    "nameZh": "早氣珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "耐力急速回復",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1464545088",
+    "nameZh": "鐵壁珠Ⅱ【3】",
+    "slotLevel": 3,
+    "skillName": "防禦性能",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1345101665",
+    "nameZh": "強壁珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "防禦強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1359335174",
+    "nameZh": "射法珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "彈道強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1555066564",
+    "nameZh": "屬會珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "會心擊【屬性】",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1569316581",
+    "nameZh": "縮短珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "集中",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1583550106",
+    "nameZh": "強走珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "跑者",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1526144633",
+    "nameZh": "拔刀珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1539853854",
+    "nameZh": "愛菇珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "最愛菇類",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1151450687",
+    "nameZh": "耐絕珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "昏厥耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_1074724275",
+    "nameZh": "心眼珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "心眼",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1284689174",
+    "nameZh": "防音珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1299463479",
+    "nameZh": "昂揚珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "強化持續",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1240993002",
+    "nameZh": "耐震珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "耐震",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_2130785031",
+    "nameZh": "鬼火珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "鬼火纏身",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_2058605253",
+    "nameZh": "運氣珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "幸運",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1788752151",
+    "nameZh": "吐納珠【3】",
+    "slotLevel": 3,
+    "skillName": "迅疾吐納",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1669747165",
+    "nameZh": "刃鱗珠【2】",
+    "slotLevel": 2,
+    "skillName": "刃鱗研磨",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1846157744",
+    "nameZh": "合氣珠【3】",
+    "slotLevel": 3,
+    "skillName": "合氣",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1818198514",
+    "nameZh": "壁翔珠【1】",
+    "slotLevel": 1,
+    "skillName": "飛簷走壁【翔】",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_340316373",
+    "nameZh": "強弓珠【4】",
+    "slotLevel": 4,
+    "skillName": "解放弓的蓄力階段",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_354549962",
+    "nameZh": "點射珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "抑制偏移",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_603773077",
+    "nameZh": "點射珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "抑制偏移",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_1121987920",
+    "nameZh": "速變珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "高速變形",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1327946997",
+    "nameZh": "增彈珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "砲彈裝填",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1313696980",
+    "nameZh": "特射珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "特殊射擊強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1136237937",
+    "nameZh": "砲術珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "砲術",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1640739359",
+    "nameZh": "強蓄珠【2】",
+    "slotLevel": 2,
+    "skillName": "蓄力大師",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_555444468",
+    "nameZh": "速納珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "收刀術",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1983822863",
+    "nameZh": "絕境珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "死裡逃生",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_633219440",
+    "nameZh": "重擊珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "破壞王",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_737013708",
+    "nameZh": "逆襲珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "逆襲",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1939600259",
+    "nameZh": "剛刃珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "剛刃研磨",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1065335263",
+    "nameZh": "毒珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "毒屬性強化",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_1180458493",
+    "nameZh": "斬鐵珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "利刃",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1699193528",
+    "nameZh": "巧緻珠【3】",
+    "slotLevel": 3,
+    "skillName": "槍械改良",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_278586937",
+    "nameZh": "耐毒珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "毒耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_293361118",
+    "nameZh": "耐麻珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "麻痺耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_307594751",
+    "nameZh": "耐眠珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "睡眠耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_321844636",
+    "nameZh": "耐爆珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "爆破異常狀態的耐性",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_2073363194",
+    "nameZh": "達藝珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "達人藝",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1626489470",
+    "nameZh": "款待珠【1】",
+    "slotLevel": 1,
+    "skillName": "款待",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1712919129",
+    "nameZh": "研銳珠【3】",
+    "slotLevel": 3,
+    "skillName": "研磨術【銳】",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1655497276",
+    "nameZh": "轉福珠【2】",
+    "slotLevel": 2,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1911116749",
+    "nameZh": "麻痺珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "麻痺屬性強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1925350370",
+    "nameZh": "睡眠珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "睡眠屬性強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1255242891",
+    "nameZh": "爆破珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "爆破屬性強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1759744337",
+    "nameZh": "攻勢珠【2】",
+    "slotLevel": 2,
+    "skillName": "攻勢",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1407139623",
+    "nameZh": "渾身珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "精神抖擻",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1831924115",
+    "nameZh": "連擊珠【2】",
+    "slotLevel": 2,
+    "skillName": "連擊",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_84698884",
+    "nameZh": "轉福珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "轉禍為福",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_132503333",
+    "nameZh": "霞皮珠【1】",
+    "slotLevel": 1,
+    "skillName": "霞皮之恩惠",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_2088575904",
+    "nameZh": "強彈珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "通常彈･連射箭強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_2102825793",
+    "nameZh": "貫通珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "貫通彈･貫通箭強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1269476520",
+    "nameZh": "散彈珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "散彈･擴散箭強化",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_2044355364",
+    "nameZh": "匠珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_888838913",
+    "nameZh": "破龍珠Ⅳ【4】",
+    "slotLevel": 4,
+    "skillName": "龍屬性攻擊強化",
+    "skillLevel": 4,
+    "craftable": true
+  },
+  {
+    "id": "deco_141986722",
+    "nameZh": "雷光珠Ⅳ【4】",
+    "slotLevel": 4,
+    "skillName": "雷屬性攻擊強化",
+    "skillLevel": 4,
+    "craftable": true
+  },
+  {
+    "id": "deco_232963023",
+    "nameZh": "冰結珠Ⅳ【4】",
+    "slotLevel": 4,
+    "skillName": "冰屬性攻擊強化",
+    "skillLevel": 4,
+    "craftable": true
+  },
+  {
+    "id": "deco_22983784",
+    "nameZh": "流水珠Ⅳ【4】",
+    "slotLevel": 4,
+    "skillName": "水屬性攻擊強化",
+    "skillLevel": 4,
+    "craftable": true
+  },
+  {
+    "id": "deco_113943733",
+    "nameZh": "火炎珠Ⅳ【4】",
+    "slotLevel": 4,
+    "skillName": "火屬性攻擊強化",
+    "skillLevel": 4,
+    "craftable": true
+  },
+  {
+    "id": "deco_265741852",
+    "nameZh": "合氣珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "合氣",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_251508351",
+    "nameZh": "炎鱗珠【1】",
+    "slotLevel": 1,
+    "skillName": "炎鱗之恩惠",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1998056492",
+    "nameZh": "全開珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_203703902",
+    "nameZh": "鋼殼珠【1】",
+    "slotLevel": 1,
+    "skillName": "鋼殼之恩惠",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1684959899",
+    "nameZh": "無傷珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "無傷",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_54728377",
+    "nameZh": "研銳珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "研磨術【銳】",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_12519130",
+    "nameZh": "強蓄珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "蓄力大師",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_282894472",
+    "nameZh": "屬擊珠【2】",
+    "slotLevel": 2,
+    "skillName": "弱點特效【屬性】",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_311377998",
+    "nameZh": "背擊珠【2】",
+    "slotLevel": 2,
+    "skillName": "奇襲",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_297144489",
+    "nameZh": "反攻珠【2】",
+    "slotLevel": 2,
+    "skillName": "巧擊",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1598324411",
+    "nameZh": "守勢珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "攻擊守勢",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_26244859",
+    "nameZh": "巧緻珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "槍械改良",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_40478360",
+    "nameZh": "血氣珠【3】",
+    "slotLevel": 3,
+    "skillName": "血氣",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_487804973",
+    "nameZh": "煽動珠【2】",
+    "slotLevel": 2,
+    "skillName": "煽動",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1969572974",
+    "nameZh": "暴怒珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_145249853",
+    "nameZh": "龍氣珠【4】",
+    "slotLevel": 4,
+    "skillName": "龍氣活化",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_159483346",
+    "nameZh": "屬擊珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "弱點特效【屬性】",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_536119234",
+    "nameZh": "剛心珠【1】",
+    "slotLevel": 1,
+    "skillName": "剛心",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_173733363",
+    "nameZh": "磐石珠Ⅲ【4】",
+    "slotLevel": 4,
+    "skillName": "堅若磐石",
+    "skillLevel": 3,
+    "craftable": true
+  },
+  {
+    "id": "deco_873829809",
+    "nameZh": "背擊珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "奇襲",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_921617750",
+    "nameZh": "攻勢珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "攻勢",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_188491152",
+    "nameZh": "反攻珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "巧擊",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_473554956",
+    "nameZh": "翻異珠【3】",
+    "slotLevel": 3,
+    "skillName": "必定累積狀態異常值",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1165684188",
+    "nameZh": "潛力珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_935343479",
+    "nameZh": "連擊珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "連擊",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1054348425",
+    "nameZh": "緩衝珠【1】",
+    "slotLevel": 1,
+    "skillName": "緩衝",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_948614223",
+    "nameZh": "刃鱗珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "刃鱗研磨",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1955339337",
+    "nameZh": "挑戰珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1478340184",
+    "nameZh": "裝填珠Ⅱ【４】",
+    "slotLevel": 1,
+    "skillName": "裝填擴充",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_815359252",
+    "nameZh": "狂蝕珠【4】",
+    "slotLevel": 4,
+    "skillName": "狂龍症【蝕】",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_829609269",
+    "nameZh": "煽動珠Ⅱ【４】",
+    "slotLevel": 1,
+    "skillName": "煽動",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_844367146",
+    "nameZh": "剛心珠Ⅱ【3】",
+    "slotLevel": 3,
+    "skillName": "剛心",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_858617035",
+    "nameZh": "翻異珠Ⅱ【４】",
+    "slotLevel": 1,
+    "skillName": "必定累積狀態異常值",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1436061570",
+    "nameZh": "達人珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "看破",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1422352365",
+    "nameZh": "攻擊珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "攻擊",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1068582062",
+    "nameZh": "激勵珠【1】",
+    "slotLevel": 1,
+    "skillName": "激勵",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
+    "id": "deco_1007068392",
+    "nameZh": "血氣珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "血氣",
+    "skillLevel": 2,
+    "craftable": true
+  },
+  {
+    "id": "deco_1194691986",
+    "nameZh": "省彈珠Ⅱ【4】",
+    "slotLevel": 4,
+    "skillName": "彈藥節約",
+    "skillLevel": 2,
+    "craftable": true
+  }
+]

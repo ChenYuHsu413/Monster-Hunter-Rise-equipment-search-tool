@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark-first game-tool palette (slate/zinc base with amber accent) */
+    --background: 222 18% 8%;
+    --foreground: 210 20% 92%;
+
+    --card: 222 16% 11%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 222 18% 10%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 38 92% 55%;
+    --primary-foreground: 26 40% 12%;
+
+    --secondary: 220 14% 18%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 220 14% 16%;
+    --muted-foreground: 217 12% 60%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 22%;
+    --ring: 38 92% 55%;
+
+    --radius: 0.6rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Thin scrollbars for the dashboard panels */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 9999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}

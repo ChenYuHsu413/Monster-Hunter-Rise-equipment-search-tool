@@ -1,0 +1,600 @@
+[
+  {
+    "name": "攻擊",
+    "maxLevel": 7
+  },
+  {
+    "name": "挑戰者",
+    "maxLevel": 5
+  },
+  {
+    "name": "無傷",
+    "maxLevel": 3
+  },
+  {
+    "name": "怨恨",
+    "maxLevel": 5
+  },
+  {
+    "name": "死裡逃生",
+    "maxLevel": 3
+  },
+  {
+    "name": "看破",
+    "maxLevel": 7
+  },
+  {
+    "name": "超會心",
+    "maxLevel": 3
+  },
+  {
+    "name": "弱點特效",
+    "maxLevel": 3
+  },
+  {
+    "name": "力量解放",
+    "maxLevel": 5
+  },
+  {
+    "name": "精神抖擻",
+    "maxLevel": 3
+  },
+  {
+    "name": "會心擊【屬性】",
+    "maxLevel": 3
+  },
+  {
+    "name": "達人藝",
+    "maxLevel": 3
+  },
+  {
+    "name": "火屬性攻擊強化",
+    "maxLevel": 5
+  },
+  {
+    "name": "水屬性攻擊強化",
+    "maxLevel": 5
+  },
+  {
+    "name": "冰屬性攻擊強化",
+    "maxLevel": 5
+  },
+  {
+    "name": "雷屬性攻擊強化",
+    "maxLevel": 5
+  },
+  {
+    "name": "龍屬性攻擊強化",
+    "maxLevel": 5
+  },
+  {
+    "name": "毒屬性強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "麻痺屬性強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "睡眠屬性強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "爆破屬性強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "匠",
+    "maxLevel": 5
+  },
+  {
+    "name": "利刃",
+    "maxLevel": 3
+  },
+  {
+    "name": "彈藥節約",
+    "maxLevel": 3
+  },
+  {
+    "name": "剛刃研磨",
+    "maxLevel": 3
+  },
+  {
+    "name": "心眼",
+    "maxLevel": 3
+  },
+  {
+    "name": "彈道強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "鈍器能手",
+    "maxLevel": 3
+  },
+  {
+    "name": "解放弓的蓄力階段",
+    "maxLevel": 1
+  },
+  {
+    "name": "集中",
+    "maxLevel": 3
+  },
+  {
+    "name": "強化持續",
+    "maxLevel": 3
+  },
+  {
+    "name": "跑者",
+    "maxLevel": 3
+  },
+  {
+    "name": "體術",
+    "maxLevel": 5
+  },
+  {
+    "name": "耐力急速回復",
+    "maxLevel": 3
+  },
+  {
+    "name": "防禦性能",
+    "maxLevel": 5
+  },
+  {
+    "name": "防禦強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "攻擊守勢",
+    "maxLevel": 3
+  },
+  {
+    "name": "拔刀術【技】",
+    "maxLevel": 3
+  },
+  {
+    "name": "拔刀術【力】",
+    "maxLevel": 3
+  },
+  {
+    "name": "收刀術",
+    "maxLevel": 3
+  },
+  {
+    "name": "KO術",
+    "maxLevel": 3
+  },
+  {
+    "name": "奪取耐力",
+    "maxLevel": 3
+  },
+  {
+    "name": "滑走強化",
+    "maxLevel": 1
+  },
+  {
+    "name": "吹笛名人",
+    "maxLevel": 1
+  },
+  {
+    "name": "砲術",
+    "maxLevel": 3
+  },
+  {
+    "name": "砲彈裝填",
+    "maxLevel": 2
+  },
+  {
+    "name": "特殊射擊強化",
+    "maxLevel": 2
+  },
+  {
+    "name": "通常彈･連射箭強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "貫通彈･貫通箭強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "散彈･擴散箭強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "裝填擴充",
+    "maxLevel": 3
+  },
+  {
+    "name": "裝填速度",
+    "maxLevel": 3
+  },
+  {
+    "name": "後座力減輕",
+    "maxLevel": 3
+  },
+  {
+    "name": "抑制偏移",
+    "maxLevel": 3
+  },
+  {
+    "name": "速射強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "防禦",
+    "maxLevel": 7
+  },
+  {
+    "name": "精靈加護",
+    "maxLevel": 3
+  },
+  {
+    "name": "體力回復量UP",
+    "maxLevel": 3
+  },
+  {
+    "name": "回復速度",
+    "maxLevel": 3
+  },
+  {
+    "name": "快吃",
+    "maxLevel": 3
+  },
+  {
+    "name": "耳塞",
+    "maxLevel": 5
+  },
+  {
+    "name": "風壓耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "耐震",
+    "maxLevel": 3
+  },
+  {
+    "name": "泡沫之舞",
+    "maxLevel": 3
+  },
+  {
+    "name": "迴避性能",
+    "maxLevel": 5
+  },
+  {
+    "name": "迴避距離UP",
+    "maxLevel": 3
+  },
+  {
+    "name": "火耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "水耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "冰耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "雷耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "龍耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "屬性異常狀態的耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "毒耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "麻痺耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "睡眠耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "昏厥耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "泥雪耐性",
+    "maxLevel": 2
+  },
+  {
+    "name": "爆破異常狀態的耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "植生學",
+    "maxLevel": 4
+  },
+  {
+    "name": "地質學",
+    "maxLevel": 3
+  },
+  {
+    "name": "破壞王",
+    "maxLevel": 3
+  },
+  {
+    "name": "捕獲名人",
+    "maxLevel": 1
+  },
+  {
+    "name": "剝取名人",
+    "maxLevel": 1
+  },
+  {
+    "name": "幸運",
+    "maxLevel": 3
+  },
+  {
+    "name": "砥石使用高速化",
+    "maxLevel": 3
+  },
+  {
+    "name": "炸彈客",
+    "maxLevel": 3
+  },
+  {
+    "name": "最愛菇類",
+    "maxLevel": 3
+  },
+  {
+    "name": "道具使用強化",
+    "maxLevel": 3
+  },
+  {
+    "name": "廣域化",
+    "maxLevel": 5
+  },
+  {
+    "name": "滿足感",
+    "maxLevel": 3
+  },
+  {
+    "name": "火場怪力",
+    "maxLevel": 5
+  },
+  {
+    "name": "不屈",
+    "maxLevel": 1
+  },
+  {
+    "name": "減輕膽怯",
+    "maxLevel": 3
+  },
+  {
+    "name": "跳躍鐵人",
+    "maxLevel": 1
+  },
+  {
+    "name": "剝取鐵人",
+    "maxLevel": 1
+  },
+  {
+    "name": "飢餓耐性",
+    "maxLevel": 3
+  },
+  {
+    "name": "飛身躍入",
+    "maxLevel": 1
+  },
+  {
+    "name": "佯攻",
+    "maxLevel": 1
+  },
+  {
+    "name": "騎乘名人",
+    "maxLevel": 1
+  },
+  {
+    "name": "霞皮之恩惠",
+    "maxLevel": 4
+  },
+  {
+    "name": "鋼殼之恩惠",
+    "maxLevel": 4,
+    "special": true
+  },
+  {
+    "name": "炎鱗之恩惠",
+    "maxLevel": 4
+  },
+  {
+    "name": "龍氣活化",
+    "maxLevel": 5
+  },
+  {
+    "name": "翔蟲能手",
+    "maxLevel": 3
+  },
+  {
+    "name": "飛簷走壁",
+    "maxLevel": 3
+  },
+  {
+    "name": "逆襲",
+    "maxLevel": 3
+  },
+  {
+    "name": "高速變形",
+    "maxLevel": 3
+  },
+  {
+    "name": "鬼火纏身",
+    "maxLevel": 4
+  },
+  {
+    "name": "風紋一致",
+    "maxLevel": 5
+  },
+  {
+    "name": "雷紋一致",
+    "maxLevel": 5
+  },
+  {
+    "name": "風雷合一",
+    "maxLevel": 5
+  },
+  {
+    "name": "血氣",
+    "maxLevel": 3,
+    "special": true
+  },
+  {
+    "name": "伏魔響命",
+    "maxLevel": 3,
+    "special": true
+  },
+  {
+    "name": "激昂",
+    "maxLevel": 1
+  },
+  {
+    "name": "業鎧【修羅】",
+    "maxLevel": 1,
+    "special": true
+  },
+  {
+    "name": "轉禍為福",
+    "maxLevel": 3
+  },
+  {
+    "name": "狂龍症【蝕】",
+    "maxLevel": 1,
+    "special": true
+  },
+  {
+    "name": "堅若磐石",
+    "maxLevel": 3
+  },
+  {
+    "name": "奇襲",
+    "maxLevel": 3
+  },
+  {
+    "name": "巧擊",
+    "maxLevel": 3
+  },
+  {
+    "name": "合氣",
+    "maxLevel": 2
+  },
+  {
+    "name": "款待",
+    "maxLevel": 3
+  },
+  {
+    "name": "蓄力大師",
+    "maxLevel": 3
+  },
+  {
+    "name": "攻勢",
+    "maxLevel": 3
+  },
+  {
+    "name": "槍械改良",
+    "maxLevel": 2
+  },
+  {
+    "name": "研磨術【銳】",
+    "maxLevel": 3
+  },
+  {
+    "name": "刃鱗研磨",
+    "maxLevel": 2
+  },
+  {
+    "name": "飛簷走壁【翔】",
+    "maxLevel": 1
+  },
+  {
+    "name": "迅疾吐納",
+    "maxLevel": 1
+  },
+  {
+    "name": "弱點特效【屬性】",
+    "maxLevel": 2
+  },
+  {
+    "name": "連擊",
+    "maxLevel": 5
+  },
+  {
+    "name": "毅力",
+    "maxLevel": 1
+  },
+  {
+    "name": "必定累積狀態異常值",
+    "maxLevel": 2
+  },
+  {
+    "name": "剛心",
+    "maxLevel": 2
+  },
+  {
+    "name": "異常累積強化",
+    "maxLevel": 1
+  },
+  {
+    "name": "煽動",
+    "maxLevel": 2
+  },
+  {
+    "name": "暴風纏身",
+    "maxLevel": 1,
+    "special": true
+  },
+  {
+    "name": "粉塵飛舞",
+    "maxLevel": 1,
+    "special": true
+  },
+  {
+    "name": "狂化",
+    "maxLevel": 1,
+    "special": true
+  },
+  {
+    "name": "奮鬥",
+    "maxLevel": 2
+  },
+  {
+    "name": "寒氣鍊成",
+    "maxLevel": 3
+  },
+  {
+    "name": "龍氣轉換",
+    "maxLevel": 1
+  },
+  {
+    "name": "天衣無縫",
+    "maxLevel": 3
+  },
+  {
+    "name": "狂龍症【翔】",
+    "maxLevel": 1,
+    "special": true
+  },
+  {
+    "name": "血氣覺醒",
+    "maxLevel": 1,
+    "special": true
+  },
+  {
+    "name": "緩衝",
+    "maxLevel": 3
+  },
+  {
+    "name": "激勵",
+    "maxLevel": 1
+  }
+]

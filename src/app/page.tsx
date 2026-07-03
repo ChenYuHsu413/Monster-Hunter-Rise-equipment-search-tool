@@ -1,0 +1,467 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import type {
+  ArmorPart,
+  ArmorPiece,
+  BuildResult,
+  BuildSearchRequest,
+  Charm,
+  FixedParts,
+  ExcludedItems,
+  ReservedSlots,
+  SearchMode,
+  SkillMap,
+} from "@/types/build";
+import {
+  armors as allArmors,
+  armorById as baseArmorById,
+  weaponById,
+  buildPresets,
+  weaponTypes,
+  skills as allSkills,
+  getPreset,
+  presetsForWeapon,
+} from "@/lib/data";
+import { searchBuilds, createSearchDeps, type SearchMeta } from "@/lib/build-search";
+import { parseSlotString, formatSlots } from "@/lib/slot-utils";
+
+import { WeaponSelector } from "@/components/WeaponSelector";
+import { BuildPresetSelector } from "@/components/BuildPresetSelector";
+import { SearchModeSelector } from "@/components/SearchModeSelector";
+import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
+import { WeaponSlotInput } from "@/components/WeaponSlotInput";
+import { CharmInput, type CharmRow } from "@/components/CharmInput";
+import { ReservedSlotsInput } from "@/components/ReservedSlotsInput";
+import { FixedPartsPanel } from "@/components/FixedPartsPanel";
+import { AugmentedArmorEditor } from "@/components/AugmentedArmorEditor";
+import { BuildResultCard } from "@/components/BuildResultCard";
+import { EmptyState } from "@/components/EmptyState";
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Search, Swords, Loader2, Check, AlertTriangle } from "lucide-react";
+
+const EMPTY_CHARM_ROWS: CharmRow[] = [
+  { name: "", level: 1 },
+  { name: "", level: 1 },
+  { name: "", level: 1 },
+];
+
+const clone = (m: SkillMap): SkillMap => ({ ...m });
+
+export default function Home() {
+  const firstPreset = presetsForWeapon("long-sword")[0] ?? buildPresets[0];
+
+  // ---- 基礎設定 ----
+  const [weaponType, setWeaponType] = useState("long-sword");
+  const [presetId, setPresetId] = useState(firstPreset.id);
+  const [searchMode, setSearchMode] = useState<SearchMode>("fast");
+
+  // ---- 技能條件（由 preset 帶入，可編輯）----
+  const [required, setRequired] = useState<SkillMap>(clone(firstPreset.requiredSkills));
+  const [preferred, setPreferred] = useState<SkillMap>(clone(firstPreset.preferredSkills));
+  const [avoid, setAvoid] = useState<SkillMap>(clone(firstPreset.avoidSkills));
+  const [weights, setWeights] = useState<SkillMap>(clone(firstPreset.skillWeights));
+
+  // ---- 武器洞 / 護石 / 保留洞位 ----
+  const [weaponSlotStr, setWeaponSlotStr] = useState("3-2-1");
+  const [charmRows, setCharmRows] = useState<CharmRow[]>(EMPTY_CHARM_ROWS);
+  const [charmSlotsStr, setCharmSlotsStr] = useState("2-1-0");
+  const [reservedSlots, setReservedSlots] = useState<ReservedSlots>({
+    4: 0,
+    3: 0,
+    2: 0,
+    1: 0,
+  });
+
+  // ---- 固定 / 排除 / 鍊成 ----
+  const [fixedParts, setFixedParts] = useState<FixedParts>({});
+  const [excludedItems, setExcludedItems] = useState<ExcludedItems>({
+    armorIds: [],
+    weaponIds: [],
+  });
+  const [augments, setAugments] = useState<ArmorPiece[]>([]);
+
+  // ---- 結果 ----
+  const [results, setResults] = useState<BuildResult[]>([]);
+  const [meta, setMeta] = useState<SearchMeta | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [resultLimit, setResultLimit] = useState(100);
+
+  const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [compared, setCompared] = useState<Set<string>>(new Set());
+  const [toast, setToast] = useState<string | null>(null);
+
+  const presets = useMemo(() => presetsForWeapon(weaponType), [weaponType]);
+
+  // 合併鍊成防具的 armorById（供固定面板顯示名稱）
+  const armorById = useMemo(() => {
+    const m = { ...baseArmorById };
+    for (const a of augments) m[a.id] = a;
+    return m;
+  }, [augments]);
+
+  const applyPreset = (id: string) => {
+    setPresetId(id);
+    const p = getPreset(id);
+    if (!p) return;
+    setRequired(clone(p.requiredSkills));
+    setPreferred(clone(p.preferredSkills));
+    setAvoid(clone(p.avoidSkills));
+    setWeights(clone(p.skillWeights));
+  };
+
+  const changeWeapon = (w: string) => {
+    setWeaponType(w);
+    const first = presetsForWeapon(w)[0];
+    if (first) applyPreset(first.id);
+  };
+
+  const buildCharm = (): Charm => {
+    const skillMap: SkillMap = {};
+    for (const r of charmRows) {
+      if (r.name) skillMap[r.name] = (skillMap[r.name] ?? 0) + r.level;
+    }
+    return { skills: skillMap, slots: parseSlotString(charmSlotsStr) };
+  };
+
+  const runSearch = () => {
+    setLoading(true);
+    setHasSearched(true);
+    const request: BuildSearchRequest = {
+      weaponType,
+      presetId,
+      weaponSlots: parseSlotString(weaponSlotStr),
+      charm: buildCharm(),
+      fixedParts,
+      excludedItems,
+      requiredSkills: required,
+      preferredSkills: preferred,
+      avoidSkills: avoid,
+      skillWeights: weights,
+      reservedSlots,
+      searchMode,
+      resultLimit,
+    };
+    const deps = createSearchDeps(augments);
+    // 讓 UI 先繪製 loading 狀態，再執行同步搜尋
+    setTimeout(() => {
+      const out = searchBuilds(request, deps, () =>
+        typeof performance !== "undefined" ? performance.now() : 0
+      );
+      setResults(out.results);
+      setMeta(out.meta);
+      setLoading(false);
+    }, 20);
+  };
+
+  // ---- 結果卡片操作 ----
+  const fixArmor = (part: ArmorPart, id: string) =>
+    setFixedParts((prev) => ({ ...prev, [part]: id }));
+
+  const excludeArmor = (id: string) => {
+    setExcludedItems((prev) =>
+      prev.armorIds.includes(id)
+        ? prev
+        : { ...prev, armorIds: [...prev.armorIds, id] }
+    );
+    // 若該裝備正被固定，一併解除
+    setFixedParts((prev) => {
+      const next = { ...prev };
+      for (const k of ["head", "chest", "arms", "waist", "legs"] as ArmorPart[]) {
+        if (next[k] === id) delete next[k];
+      }
+      return next;
+    });
+  };
+
+  const clearFixed = (key: ArmorPart | "weapon" | "charm") =>
+    setFixedParts((prev) => {
+      const next = { ...prev };
+      delete next[key];
+      return next;
+    });
+
+  const removeExcluded = (id: string) =>
+    setExcludedItems((prev) => ({
+      ...prev,
+      armorIds: prev.armorIds.filter((x) => x !== id),
+    }));
+
+  const showToast = (msg: string) => {
+    setToast(msg);
+    window.setTimeout(() => setToast(null), 1800);
+  };
+
+  const copySummary = async (summary: string) => {
+    try {
+      await navigator.clipboard.writeText(summary);
+      showToast("已複製配裝摘要");
+    } catch {
+      showToast("複製失敗，請手動選取");
+    }
+  };
+
+  const toggleSet = (
+    setter: React.Dispatch<React.SetStateAction<Set<string>>>,
+    id: string
+  ) =>
+    setter((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+
+  const weaponSlotsLabel = formatSlots(parseSlotString(weaponSlotStr));
+
+  return (
+    <div className="flex h-screen flex-col bg-background">
+      {/* ---- 頂部列 ---- */}
+      <header className="flex shrink-0 flex-col gap-3 border-b border-border px-4 py-3 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15">
+            <Swords className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <h1 className="text-base font-bold leading-tight">
+              太刀配裝搜尋器
+            </h1>
+            <p className="text-[11px] text-muted-foreground">
+              MHRise: Sunbreak · 可擴充配裝器 MVP
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="w-[260px]">
+            <SearchModeSelector value={searchMode} onChange={setSearchMode} />
+          </div>
+          <Button
+            size="lg"
+            onClick={runSearch}
+            disabled={loading || Object.keys(required).length === 0}
+            className="gap-2"
+          >
+            {loading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Search className="h-4 w-4" />
+            )}
+            搜尋配裝
+          </Button>
+        </div>
+      </header>
+
+      {/* ---- 主體：左右雙欄 ---- */}
+      <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
+        {/* 左側控制欄 */}
+        <aside className="flex w-full shrink-0 flex-col gap-3 overflow-y-auto border-b border-border p-3 scrollbar-thin lg:w-[400px] lg:border-b-0 lg:border-r">
+          <Card>
+            <CardContent className="space-y-3 p-3">
+              <WeaponSelector
+                weaponTypes={weaponTypes}
+                value={weaponType}
+                onChange={changeWeapon}
+              />
+              <BuildPresetSelector
+                presets={presets}
+                value={presetId}
+                onChange={applyPreset}
+              />
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-3">
+              <Tabs defaultValue="skills">
+                <TabsList className="grid w-full grid-cols-3">
+                  <TabsTrigger value="skills">技能</TabsTrigger>
+                  <TabsTrigger value="gear">裝備</TabsTrigger>
+                  <TabsTrigger value="locks">鎖定</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="skills" className="pt-2">
+                  <SkillRequirementEditor
+                    required={required}
+                    preferred={preferred}
+                    avoid={avoid}
+                    onChangeRequired={setRequired}
+                    onChangePreferred={setPreferred}
+                    onChangeAvoid={setAvoid}
+                    allSkills={allSkills}
+                  />
+                </TabsContent>
+
+                <TabsContent value="gear" className="space-y-4 pt-2">
+                  <WeaponSlotInput
+                    value={weaponSlotStr}
+                    onChange={setWeaponSlotStr}
+                    lockedWeaponName={
+                      fixedParts.weapon
+                        ? weaponById[fixedParts.weapon]?.nameZh
+                        : undefined
+                    }
+                  />
+                  <div className="space-y-1.5">
+                    <Label className="text-xs text-muted-foreground">
+                      護石
+                    </Label>
+                    <CharmInput
+                      rows={charmRows}
+                      slotsStr={charmSlotsStr}
+                      onChangeRows={setCharmRows}
+                      onChangeSlots={setCharmSlotsStr}
+                      allSkills={allSkills}
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label className="text-xs text-muted-foreground">
+                      保留洞位
+                    </Label>
+                    <ReservedSlotsInput
+                      value={reservedSlots}
+                      onChange={setReservedSlots}
+                    />
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="locks" className="space-y-4 pt-2">
+                  <FixedPartsPanel
+                    fixedParts={fixedParts}
+                    excludedItems={excludedItems}
+                    armorById={armorById}
+                    weaponById={weaponById}
+                    onClearFixed={clearFixed}
+                    onRemoveExcluded={removeExcluded}
+                  />
+                  <div className="space-y-1.5 border-t border-border pt-3">
+                    <Label className="text-xs text-muted-foreground">
+                      傀異鍊成（自訂防具）
+                    </Label>
+                    <AugmentedArmorEditor
+                      allArmors={allArmors}
+                      allSkills={allSkills}
+                      augments={augments}
+                      onAdd={(p) => setAugments((prev) => [...prev, p])}
+                      onRemove={(id) =>
+                        setAugments((prev) => prev.filter((a) => a.id !== id))
+                      }
+                    />
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </CardContent>
+          </Card>
+        </aside>
+
+        {/* 右側結果 */}
+        <main className="flex min-h-0 flex-1 flex-col">
+          {/* 結果工具列 */}
+          <div className="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-2">
+            <div className="flex items-center gap-2 text-sm">
+              <span className="font-medium">搜尋結果</span>
+              {meta && (
+                <span className="text-xs text-muted-foreground">
+                  顯示前 {results.length} 套 · 有效組合 {meta.validBuilds} ·
+                  評估 {meta.combosEvaluated} 組 · {Math.round(meta.elapsedMs)}ms
+                </span>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              {(favorites.size > 0 || compared.size > 0) && (
+                <span className="text-xs text-muted-foreground">
+                  收藏 {favorites.size} · 比較 {compared.size}
+                </span>
+              )}
+              <Label className="text-[11px] text-muted-foreground">
+                顯示上限
+              </Label>
+              <Input
+                type="number"
+                min={1}
+                max={100}
+                value={resultLimit}
+                onChange={(e) =>
+                  setResultLimit(
+                    Math.max(1, Math.min(100, Number(e.target.value) || 1))
+                  )
+                }
+                className="h-7 w-16 font-mono"
+              />
+            </div>
+          </div>
+
+          {/* 結果列表 */}
+          <div className="min-h-0 flex-1 overflow-y-auto p-4 scrollbar-thin">
+            {searchMode === "exact" && !loading && (
+              <div className="mb-3 flex items-center gap-2 rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-300">
+                <AlertTriangle className="h-3.5 w-3.5" />
+                完整搜尋會枚舉所有裝備，組合數量大時可能較慢。
+              </div>
+            )}
+            {searchMode === "greedy" && !loading && (
+              <div className="mb-3 flex items-center gap-2 rounded-md border border-sky-500/30 bg-sky-500/10 px-3 py-2 text-xs text-sky-300">
+                <AlertTriangle className="h-3.5 w-3.5" />
+                推薦模式速度最快，優先補足必要技能，但結果可能不是最佳解。
+              </div>
+            )}
+
+            {loading ? (
+              <div className="flex flex-col items-center justify-center gap-3 py-24 text-muted-foreground">
+                <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                <p className="text-sm">搜尋配裝中…</p>
+              </div>
+            ) : !hasSearched ? (
+              <EmptyState
+                icon="swords"
+                title="設定條件後按「搜尋配裝」"
+                description="選擇太刀流派會自動帶入技能需求，你可以再微調必要／偏好／排除技能，輸入護石與武器洞數，然後開始搜尋。"
+              />
+            ) : results.length === 0 ? (
+              <EmptyState
+                title="找不到符合條件的配裝"
+                description="試著放寬必要技能、減少保留洞位，或解除部分固定／排除設定。"
+              />
+            ) : (
+              <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
+                {results.map((r, i) => (
+                  <BuildResultCard
+                    key={r.id}
+                    result={r}
+                    rank={i + 1}
+                    weaponSlotsLabel={weaponSlotsLabel}
+                    requiredSkills={required}
+                    preferredSkills={preferred}
+                    avoidSkills={avoid}
+                    reservedSlots={reservedSlots}
+                    fixedParts={fixedParts}
+                    isFavorite={favorites.has(r.id)}
+                    isCompared={compared.has(r.id)}
+                    onFixArmor={fixArmor}
+                    onExcludeArmor={excludeArmor}
+                    onCopy={copySummary}
+                    onToggleFavorite={(id) => toggleSet(setFavorites, id)}
+                    onToggleCompare={(id) => toggleSet(setCompared, id)}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </main>
+      </div>
+
+      {/* Toast */}
+      {toast && (
+        <div className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 text-sm shadow-lg">
+          <Check className="h-4 w-4 text-emerald-400" />
+          {toast}
+        </div>
+      )}
+    </div>
+  );
+}

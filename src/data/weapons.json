@@ -1,0 +1,33 @@
+[
+  {
+    "id": "ls_kamura_ultra",
+    "nameZh": "神淵之太刀",
+    "weaponType": "long-sword",
+    "slots": [3, 2, 1],
+    "attack": 330,
+    "affinity": 0,
+    "tags": ["里帳", "泛用"]
+  },
+  {
+    "id": "ls_abyssal_gale",
+    "nameZh": "冰牙太刀【嵐】",
+    "weaponType": "long-sword",
+    "slots": [4, 2, 0],
+    "attack": 310,
+    "affinity": 10,
+    "element": "ice",
+    "elementValue": 32,
+    "tags": ["冰屬性"]
+  },
+  {
+    "id": "ls_daora_slasher",
+    "nameZh": "戴奧拉太刀",
+    "weaponType": "long-sword",
+    "slots": [2, 1, 0],
+    "attack": 320,
+    "affinity": 15,
+    "element": "ice",
+    "elementValue": 40,
+    "tags": ["冰屬性", "高會心"]
+  }
+]
