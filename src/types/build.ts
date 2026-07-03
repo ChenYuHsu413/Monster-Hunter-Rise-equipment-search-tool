@@ -158,6 +158,10 @@ export type Weapon = {
   seriesName?: string;
   /** 依稀有度推算的階級標籤：村 / HR / MR。為推算值，非精確任務解放條件。 */
   rankLabel?: string;
+  /** 生產素材（Kiranico 原始資料，含數量，例如「爵銀龍的純淨殼×6」）。 */
+  materials?: string[];
+  /** 推測的主要來源怪物（由生產素材推得，非官方標註）。 */
+  sourceMonster?: string;
 };
 
 export type Decoration = {

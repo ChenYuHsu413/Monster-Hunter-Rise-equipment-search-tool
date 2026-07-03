@@ -17,7 +17,12 @@ import { SkillSummary } from "./SkillSummary";
 import { DecorationSummary } from "./DecorationSummary";
 import { ProvenanceHint } from "./ProvenanceHint";
 import { formatSlots } from "@/lib/slot-utils";
-import { formatWeaponSpecial, formatWeaponStats } from "@/lib/weapon-utils";
+import {
+  formatWeaponSource,
+  formatWeaponSpecial,
+  formatWeaponStats,
+  weaponSeriesLabel,
+} from "@/lib/weapon-utils";
 import { weaponTypes } from "@/lib/data";
 import {
   Lock,
@@ -239,7 +244,7 @@ export function BuildResultCard({
                     </Badge>
                   </div>
                   <ProvenanceHint
-                    seriesName={weapon.seriesName}
+                    seriesName={weaponSeriesLabel(weapon)}
                     rankLabel={weapon.rankLabel}
                   />
                   <div className="truncate text-[11px] text-muted-foreground">
@@ -247,6 +252,11 @@ export function BuildResultCard({
                       "　"
                     )}
                   </div>
+                  {formatWeaponSource(weapon) && (
+                    <div className="truncate text-[11px] text-muted-foreground/70">
+                      {formatWeaponSource(weapon)}
+                    </div>
+                  )}
                 </div>
                 <div className="flex shrink-0 items-center gap-0.5">
                   <Button

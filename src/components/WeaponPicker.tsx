@@ -12,7 +12,12 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { ProvenanceHint } from "./ProvenanceHint";
 import { formatSlots } from "@/lib/slot-utils";
-import { formatWeaponSpecial, formatWeaponStats } from "@/lib/weapon-utils";
+import {
+  formatWeaponSource,
+  formatWeaponSpecial,
+  formatWeaponStats,
+  weaponSeriesLabel,
+} from "@/lib/weapon-utils";
 import { cn } from "@/lib/utils";
 import { Lock, Search, Sparkles } from "lucide-react";
 
@@ -112,7 +117,7 @@ export function WeaponPicker({
                 </span>
               </div>
               <ProvenanceHint
-                seriesName={picked.seriesName}
+                seriesName={weaponSeriesLabel(picked)}
                 rankLabel={picked.rankLabel}
               />
               <p className="text-[11px] text-muted-foreground">
@@ -123,6 +128,16 @@ export function WeaponPicker({
                   {line}
                 </p>
               ))}
+              {formatWeaponSource(picked) && (
+                <p className="text-[11px] text-muted-foreground/80">
+                  {formatWeaponSource(picked)}
+                </p>
+              )}
+              {picked.materials && picked.materials.length > 0 && (
+                <p className="text-[11px] text-muted-foreground/70">
+                  生產素材：{picked.materials.join("、")}
+                </p>
+              )}
               {picked.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 pt-0.5">
                   {picked.tags.map((t) => (

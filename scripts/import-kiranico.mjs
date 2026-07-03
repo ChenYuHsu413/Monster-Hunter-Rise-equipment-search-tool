@@ -421,6 +421,132 @@ function parseWeaponsView(html, weaponType) {
   return out;
 }
 
+// ---------------- 武器來源（詳細頁：生產素材 + 推測主怪）----------------
+/** 抓取大型 + 小型怪物名稱（用於從素材名比對來源怪）。回傳依長度遞減排序。 */
+async function fetchMonsterNames() {
+  const names = new Set();
+  for (const view of ["lg", "sm"]) {
+    try {
+      const html = await fetchText(`${BASE}/monsters?view=${view}`);
+      for (const m of html.matchAll(/images\/icons\/em[^"]+"\s+alt="([^"]+)"/g)) {
+        const n = m[1].trim();
+        if (n) names.add(n);
+      }
+    } catch (e) {
+      console.warn(`  怪物名單 ${view} 抓取失敗：${e.message}`);
+    }
+  }
+  // 長名優先，讓「原初爵銀龍」在「爵銀龍」之前比對到
+  return [...names].sort((a, b) => b.length - a.length);
+}
+
+/**
+ * 解析武器詳細頁：取生產素材清單，並推測主要來源怪。
+ * 推測方式：對每個素材名找「以某怪物名為前綴」者，依素材數量加總，取最高的怪物。
+ * 非怪物素材（龍血玉、餘料等）不計入。此為啟發式推測，非官方標註。
+ */
+/** 從一段 HTML 抽出（素材名, 數量）配對。素材名與數量分屬相鄰 <td>，各自依序出現。 */
+function parseMaterialSegment(seg) {
+  const names = [...seg.matchAll(/data\/items\/\d+">([^<]+)<\/a>/g)].map((m) =>
+    m[1].trim()
+  );
+  const qtys = [...seg.matchAll(/>x(\d+)</g)].map((m) => Number(m[1]));
+  return names.map((name, i) => ({ name, qty: qtys[i] ?? 1 }));
+}
+
+function parseWeaponDetail(html, monstersByLen) {
+  const start = html.indexOf("生產素材");
+  if (start < 0) return { materials: [], sourceMonster: undefined };
+  const upgIdx = html.indexOf("強化素材", start);
+
+  // 生產素材：顯示用（升級武器可能為空）
+  const prod = parseMaterialSegment(
+    html.slice(start, upgIdx < 0 ? start + 4000 : upgIdx)
+  );
+  // 強化素材：僅用於推測來源（升級武器的怪物素材在這裡）。之後接 Previous/Next
+  // 為 data/weapons/ 連結，item 正則不會誤抓。
+  const upg =
+    upgIdx < 0 ? [] : parseMaterialSegment(html.slice(upgIdx, upgIdx + 4000));
+
+  const materials = prod.map((m) =>
+    m.qty > 1 ? `${m.name}×${m.qty}` : m.name
+  );
+
+  // 來源推測：生產 + 強化素材一起看，累計「以某怪物名為前綴」的素材數量。
+  const monsterQty = {};
+  let total = 0;
+  for (const { name, qty } of [...prod, ...upg]) {
+    const monster = monstersByLen.find((mon) => name.startsWith(mon));
+    if (monster) {
+      monsterQty[monster] = (monsterQty[monster] ?? 0) + qty;
+      total += qty;
+    }
+  }
+  let best = 0;
+  let top;
+  for (const [mon, qty] of Object.entries(monsterQty)) {
+    if (qty > best) {
+      best = qty;
+      top = mon;
+    }
+  }
+  // 只有當某隻怪物明顯主導素材（>=60%）時才標來源，避免神火/村莊等
+  // 混合素材的通用武器被硬套一隻不相干的怪。
+  const sourceMonster = top && best / total >= 0.6 ? top : undefined;
+  return { materials, sourceMonster };
+}
+
+/** 併發跑 items，同時最多 limit 個。 */
+async function mapConcurrent(items, limit, fn, onProgress) {
+  const results = new Array(items.length);
+  let idx = 0;
+  let done = 0;
+  async function worker() {
+    while (idx < items.length) {
+      const cur = idx++;
+      results[cur] = await fn(items[cur], cur);
+      done++;
+      if (onProgress && done % 250 === 0) onProgress(done, items.length);
+    }
+  }
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, worker)
+  );
+  return results;
+}
+
+/** 逐把抓武器詳細頁，attach materials + sourceMonster。就地修改 weapons。 */
+async function attachWeaponSources(weapons) {
+  console.log("→ 武器來源（詳細頁：生產素材 + 推測主怪）");
+  const monstersByLen = await fetchMonsterNames();
+  console.log(`  怪物名單 ${monstersByLen.length} 種`);
+  let failed = 0;
+  await mapConcurrent(
+    weapons,
+    10,
+    async (w) => {
+      const numId = w.id.replace(/^weapon_/, "");
+      try {
+        const html = await fetchText(`${BASE}/weapons/${numId}`, 2);
+        const { materials, sourceMonster } = parseWeaponDetail(html, monstersByLen);
+        if (materials.length) w.materials = materials;
+        // 來源：武器名本身含怪物名時以名稱為準（identity，最可靠，也能修正「改」等
+        // 升級版被升級素材帶偏的問題）；否則才用素材推測。
+        const nameSource = monstersByLen.find(
+          (mon) => mon.length >= 3 && w.nameZh.includes(mon)
+        );
+        const src = nameSource ?? sourceMonster;
+        if (src) w.sourceMonster = src;
+      } catch {
+        failed++;
+      }
+    },
+    (done, total) => console.log(`  ...${done}/${total}`)
+  );
+  const withSource = weapons.filter((w) => w.sourceMonster).length;
+  console.log(`  完成：${withSource} 把有推測來源，${failed} 把詳細頁抓取失敗`);
+}
+
 // ---------------- 主流程 ----------------
 async function main() {
   console.log("→ 技能");
@@ -453,6 +579,11 @@ async function main() {
     console.log(`  ${weaponType}: ${list.length} 把`);
   }
   console.log(`  合計 ${weapons.length} 把武器`);
+
+  // 逐把抓詳細頁補上生產素材與推測來源怪（較慢，可用 --skip-weapon-source 略過）
+  if (!process.argv.includes("--skip-weapon-source")) {
+    await attachWeaponSources(weapons);
+  }
 
   // 補：確保裝飾珠引用的技能都在 skills 內（有些技能只出現在珠子)
   const skillNames = new Set(skills.map((s) => s.name));

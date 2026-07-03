@@ -77,6 +77,18 @@ export function formatWeaponSpecial(weapon: Weapon): string[] {
   return lines;
 }
 
+/** 武器系列名（去重）：僅在與武器全名不同時回傳，否則 undefined（避免重複顯示名字）。 */
+export function weaponSeriesLabel(weapon: Weapon): string | undefined {
+  return weapon.seriesName && weapon.seriesName !== weapon.nameZh
+    ? weapon.seriesName
+    : undefined;
+}
+
+/** 來源摘要：「來源：爵銀龍（推測）」；無來源時回傳 null。 */
+export function formatWeaponSource(weapon: Weapon): string | null {
+  return weapon.sourceMonster ? `來源：${weapon.sourceMonster}（推測）` : null;
+}
+
 /** 一行式基礎數值摘要：「攻擊 330 · 會心 15% · 冰 35 · 百龍 Lv2」。 */
 export function formatWeaponStats(weapon: Weapon): string {
   const parts = [`攻擊 ${weapon.attack}`, `會心 ${weapon.affinity}%`];
