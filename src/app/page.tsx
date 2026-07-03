@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   ArmorPart,
   ArmorPiece,
@@ -49,7 +49,16 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Search, Swords, Loader2, Check, AlertTriangle } from "lucide-react";
+import {
+  Search,
+  Swords,
+  Loader2,
+  Check,
+  AlertTriangle,
+  SlidersHorizontal,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
 const EMPTY_CHARM_ROWS: CharmRow[] = [
   { name: "", level: 1 },
@@ -124,6 +133,10 @@ export default function Home() {
   const [favorites, setFavorites] = useLocalStorage<string[]>("mhsb.favorites", []);
   const [compared, setCompared] = useLocalStorage<string[]>("mhsb.compared", []);
   const [toast, setToast] = useState<string | null>(null);
+
+  // 手機版：搜尋條件面板是否展開（桌機恆顯示，此狀態只影響 <lg）。
+  const [conditionsOpen, setConditionsOpen] = useState(true);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   const presets = useMemo(() => presetsForWeapon(weaponType), [weaponType]);
   const weaponById = gameData?.weaponById ?? {};
@@ -254,6 +267,19 @@ export default function Home() {
       setResults(out.results);
       setMeta(out.meta);
       setLoading(false);
+      // 手機版：搜尋後自動收合條件並跳到結果（桌機恆顯示，收合僅影響視覺）。
+      // 延遲捲動，等收合的版面重排完成後再對齊到（sticky 的）條件收合列。
+      if (typeof window !== "undefined" && window.innerWidth < 1024) {
+        setConditionsOpen(false);
+        setTimeout(
+          () =>
+            toggleRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            }),
+          140
+        );
+      }
     }, 20);
   };
 
@@ -387,10 +413,35 @@ export default function Home() {
         </div>
       </header>
 
+      {/* ---- 手機版：搜尋條件收合列（sticky，桌機隱藏）---- */}
+      <button
+        ref={toggleRef}
+        type="button"
+        onClick={() => setConditionsOpen((o) => !o)}
+        className="sticky top-0 z-20 flex shrink-0 items-center justify-between border-b border-border bg-background px-4 py-2.5 text-sm font-medium lg:hidden"
+      >
+        <span className="flex items-center gap-2">
+          <SlidersHorizontal className="h-4 w-4 text-primary" />
+          搜尋條件
+        </span>
+        {conditionsOpen ? (
+          <ChevronUp className="h-4 w-4 text-muted-foreground" />
+        ) : (
+          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            展開修改
+            <ChevronDown className="h-4 w-4" />
+          </span>
+        )}
+      </button>
+
       {/* ---- 主體：左右雙欄（桌機固定分欄捲動；手機正常堆疊捲動）---- */}
       <div className="flex flex-1 flex-col lg:min-h-0 lg:flex-row">
-        {/* 左側控制欄 */}
-        <aside className="flex w-full flex-col gap-3 border-b border-border p-3 scrollbar-thin lg:w-[400px] lg:shrink-0 lg:overflow-y-auto lg:border-b-0 lg:border-r">
+        {/* 左側控制欄（手機可收合，桌機恆顯示）*/}
+        <aside
+          className={`${
+            conditionsOpen ? "flex" : "hidden"
+          } w-full flex-col gap-3 border-b border-border p-3 scrollbar-thin lg:flex lg:w-[400px] lg:shrink-0 lg:overflow-y-auto lg:border-b-0 lg:border-r`}
+        >
           <Card>
             <CardContent className="space-y-3 p-3">
               <WeaponSelector
