@@ -9,16 +9,15 @@ import type {
 } from "@/types/build";
 import { ARMOR_PARTS, ARMOR_PART_LABELS } from "@/types/build";
 import {
-  armors as defaultArmors,
-  armorById as defaultArmorById,
   decorationsBySkill as defaultDecosBySkill,
   skillMax as defaultSkillMax,
   skillIsSpecial as defaultSkillIsSpecial,
-  weaponById as defaultWeaponById,
 } from "./data";
+import type { GameData } from "./game-data";
 import {
   applyFixedParts,
   buildEquipmentPools,
+  buildWeaponPool,
   prunePools,
 } from "./equipment-pools";
 import { collectSlots, formatSlots } from "./slot-utils";
@@ -27,6 +26,8 @@ import {
   clampSkillsToMax,
   mergeSkills,
 } from "./skill-calculator";
+import { mergeMaxSkills, resolveAutoSkills } from "./preset-resolver";
+import { formatWeaponStats } from "./weapon-utils";
 import { solveDecorations } from "./decoration-solver";
 import { scoreBuild } from "./score-build";
 
@@ -38,27 +39,33 @@ export type SearchDeps = {
   skillMax: Record<string, number>;
   skillIsSpecial: Record<string, boolean>;
   weaponById: Record<string, Weapon>;
-};
-
-const defaultDeps: SearchDeps = {
-  armors: defaultArmors,
-  armorById: defaultArmorById,
-  decorationsBySkill: defaultDecosBySkill,
-  skillMax: defaultSkillMax,
-  skillIsSpecial: defaultSkillIsSpecial,
-  weaponById: defaultWeaponById,
+  weapons: Weapon[];
 };
 
 /**
- * 建立搜尋相依，可注入額外防具（例如傀異鍊成產生的自訂版本）。
- * 額外防具會與原始防具並存於候選池中，並更新 armorById 索引。
+ * 由延遲載入的 GameData（防具 + 武器）搭配靜態小資料組出搜尋相依。
+ * 可注入額外防具（例如傀異鍊成產生的自訂版本），與原始防具並存於候選池。
  */
-export function createSearchDeps(extraArmors: ArmorPiece[] = []): SearchDeps {
-  if (extraArmors.length === 0) return defaultDeps;
-  const armors = [...defaultDeps.armors, ...extraArmors];
-  const armorById = { ...defaultDeps.armorById };
-  for (const a of extraArmors) armorById[a.id] = a;
-  return { ...defaultDeps, armors, armorById };
+export function createSearchDeps(
+  gameData: GameData,
+  extraArmors: ArmorPiece[] = []
+): SearchDeps {
+  let armors = gameData.armors;
+  let armorById = gameData.armorById;
+  if (extraArmors.length > 0) {
+    armors = [...gameData.armors, ...extraArmors];
+    armorById = { ...gameData.armorById };
+    for (const a of extraArmors) armorById[a.id] = a;
+  }
+  return {
+    armors,
+    armorById,
+    weapons: gameData.weapons,
+    weaponById: gameData.weaponById,
+    decorationsBySkill: defaultDecosBySkill,
+    skillMax: defaultSkillMax,
+    skillIsSpecial: defaultSkillIsSpecial,
+  };
 }
 
 export type SearchMeta = {
@@ -67,6 +74,8 @@ export type SearchMeta = {
   truncated: boolean;
   mode: string;
   candidatesPerPart: Record<string, number>;
+  /** 參與搜尋的武器候選數（fixed 為 1；後援手動洞數為 0）。 */
+  weaponsTried: number;
   elapsedMs: number;
 };
 
@@ -82,7 +91,7 @@ const MAX_COMBOS = 300000;
 
 export function searchBuilds(
   request: BuildSearchRequest,
-  deps: SearchDeps = defaultDeps,
+  deps: SearchDeps,
   /** 可傳入計時器；預設 0（避免非決定性，交由呼叫端量測亦可）。 */
   now: () => number = () => 0
 ): SearchOutput {
@@ -98,109 +107,140 @@ export function searchBuilds(
     reservedSlots,
     searchMode,
     resultLimit,
+    weaponSearchMode,
+    fixedWeaponId,
+    autoRules,
   } = normalizeRequest(request);
 
   // 護石：固定護石即使用者輸入的護石，兩者在第一版等價
   const effectiveCharm: Charm = fixedParts.charm ?? charm;
 
-  // 武器：固定武器用其洞位與技能，否則用使用者輸入的武器洞
-  let weapon: Weapon | undefined;
-  let weaponSlots = request.weaponSlots;
-  if (fixedParts.weapon && deps.weaponById[fixedParts.weapon]) {
-    weapon = deps.weaponById[fixedParts.weapon];
-    weaponSlots = weapon.slots;
-  }
+  // 武器候選池：fixed → 單一指定武器；search → 同類型武器依分數取前 N
+  const weaponPool = buildWeaponPool({
+    weapons: deps.weapons,
+    weaponById: deps.weaponById,
+    weaponType: request.weaponType,
+    weaponSearchMode,
+    fixedWeaponId,
+    fixedPartsWeapon: fixedParts.weapon,
+    excludedWeaponIds: excludedItems.weaponIds,
+    preset: { requiredSkills, preferredSkills, skillWeights },
+    mode: searchMode,
+  });
+  // 後援：無任何武器候選（無資料或全被排除）時，退回舊版手動洞數
+  const weaponCandidates: (Weapon | undefined)[] =
+    weaponPool.length > 0 ? weaponPool : [undefined];
+  const weaponFixed = weaponSearchMode === "fixed";
 
-  // 候選池：分組 → 排除 → 固定 → 依模式裁切
-  let pools = buildEquipmentPools(deps.armors, excludedItems);
-  pools = applyFixedParts(pools, fixedParts, deps.armorById);
-  pools = prunePools(
-    pools,
-    { requiredSkills, preferredSkills, avoidSkills, skillWeights },
-    searchMode,
-    fixedParts
-  );
+  // 防具基礎池：分組 → 排除 → 固定（依武器逐次裁切，因 autoRules 會改變相關技能）
+  const basePools0 = buildEquipmentPools(deps.armors, excludedItems);
+  const basePools = applyFixedParts(basePools0, fixedParts, deps.armorById);
 
   const candidatesPerPart: Record<string, number> = {};
-  for (const part of ARMOR_PARTS) candidatesPerPart[part] = pools[part].length;
-
-  // 武器/護石不動的既有技能
-  const baseSkills = mergeSkills(effectiveCharm.skills, weapon?.skills);
-
   const buffer: BuildResult[] = [];
   let combos = 0;
   let valid = 0;
   let truncated = false;
 
-  const heads = pools.head;
-  const chests = pools.chest;
-  const armsArr = pools.arms;
-  const waists = pools.waist;
-  const legsArr = pools.legs;
+  weaponLoop: for (const weapon of weaponCandidates) {
+    // 依武器屬性套用自動技能（硬條件：併入必要技能）
+    const autoSkills = resolveAutoSkills(autoRules, weapon);
+    const effRequired = mergeMaxSkills(requiredSkills, autoSkills);
 
-  outer: for (const head of heads) {
-    for (const chest of chests) {
-      for (const arms of armsArr) {
-        for (const waist of waists) {
-          for (const legs of legsArr) {
-            combos++;
-            if (combos > MAX_COMBOS) {
-              truncated = true;
-              break outer;
+    const pools = prunePools(
+      basePools,
+      {
+        requiredSkills: effRequired,
+        preferredSkills,
+        avoidSkills,
+        skillWeights,
+      },
+      searchMode,
+      fixedParts,
+      weaponCandidates.length
+    );
+    for (const part of ARMOR_PARTS) {
+      candidatesPerPart[part] = pools[part].length;
+    }
+
+    const weaponSlots = weapon ? weapon.slots : (request.weaponSlots ?? []);
+    // 武器/護石不動的既有技能
+    const baseSkills = mergeSkills(effectiveCharm.skills, weapon?.skills);
+
+    const heads = pools.head;
+    const chests = pools.chest;
+    const armsArr = pools.arms;
+    const waists = pools.waist;
+    const legsArr = pools.legs;
+
+    for (const head of heads) {
+      for (const chest of chests) {
+        for (const arms of armsArr) {
+          for (const waist of waists) {
+            for (const legs of legsArr) {
+              combos++;
+              if (combos > MAX_COMBOS) {
+                truncated = true;
+                break weaponLoop;
+              }
+              const pieces: ArmorPiece[] = [head, chest, arms, waist, legs];
+
+              const armorSkills = calculateSkills(pieces, undefined);
+              const currentSkills = mergeSkills(armorSkills, baseSkills);
+              const slots = collectSlots(pieces, effectiveCharm, weaponSlots);
+
+              const solve = solveDecorations({
+                slots,
+                currentSkills,
+                requiredSkills: effRequired,
+                preferredSkills,
+                reservedSlots,
+                decorationsBySkill: deps.decorationsBySkill,
+                skillMax: deps.skillMax,
+              });
+
+              if (!solve.success) continue; // 必要技能或保留洞位不符 → 淘汰
+
+              valid++;
+              const finalSkills = clampSkillsToMax(
+                mergeSkills(currentSkills, decoSkillMap(solve.assignments)),
+                deps.skillMax
+              );
+
+              const score = scoreBuild({
+                finalSkills,
+                requiredSkills: effRequired,
+                preferredSkills,
+                avoidSkills,
+                skillWeights,
+                remainingSlots: solve.remainingSlots,
+                reservedSlots,
+                meetsReserved: true,
+                fixedParts,
+                skillMax: deps.skillMax,
+                skillIsSpecial: deps.skillIsSpecial,
+              });
+
+              const result: BuildResult = {
+                id: `${weapon?.id ?? "custom"}|${head.id}|${chest.id}|${arms.id}|${waist.id}|${legs.id}`,
+                weapon,
+                armor: { head, chest, arms, waist, legs },
+                charm: effectiveCharm,
+                decorations: solve.assignments,
+                finalSkills,
+                remainingSlots: solve.remainingSlots,
+                score,
+                missingRequiredSkills: {},
+                meetsReservedSlots: true,
+                autoSkills: Object.keys(autoSkills).length
+                  ? autoSkills
+                  : undefined,
+                weaponFixed: weapon ? weaponFixed : undefined,
+                summary: "",
+              };
+              result.summary = formatBuildResult(result);
+              buffer.push(result);
             }
-            const pieces: ArmorPiece[] = [head, chest, arms, waist, legs];
-
-            const armorSkills = calculateSkills(pieces, undefined);
-            const currentSkills = mergeSkills(armorSkills, baseSkills);
-            const slots = collectSlots(pieces, effectiveCharm, weaponSlots);
-
-            const solve = solveDecorations({
-              slots,
-              currentSkills,
-              requiredSkills,
-              preferredSkills,
-              reservedSlots,
-              decorationsBySkill: deps.decorationsBySkill,
-              skillMax: deps.skillMax,
-            });
-
-            if (!solve.success) continue; // 必要技能或保留洞位不符 → 淘汰
-
-            valid++;
-            const finalSkills = clampSkillsToMax(
-              mergeSkills(currentSkills, decoSkillMap(solve.assignments)),
-              deps.skillMax
-            );
-
-            const score = scoreBuild({
-              finalSkills,
-              requiredSkills,
-              preferredSkills,
-              avoidSkills,
-              skillWeights,
-              remainingSlots: solve.remainingSlots,
-              reservedSlots,
-              meetsReserved: true,
-              fixedParts,
-              skillMax: deps.skillMax,
-              skillIsSpecial: deps.skillIsSpecial,
-            });
-
-            const result: BuildResult = {
-              id: `${head.id}|${chest.id}|${arms.id}|${waist.id}|${legs.id}`,
-              weapon,
-              armor: { head, chest, arms, waist, legs },
-              charm: effectiveCharm,
-              decorations: solve.assignments,
-              finalSkills,
-              remainingSlots: solve.remainingSlots,
-              score,
-              missingRequiredSkills: {},
-              meetsReservedSlots: true,
-              summary: "",
-            };
-            result.summary = formatBuildResult(result);
-            buffer.push(result);
           }
         }
       }
@@ -221,6 +261,7 @@ export function searchBuilds(
       truncated,
       mode: searchMode,
       candidatesPerPart,
+      weaponsTried: weaponPool.length,
       elapsedMs: now() - start,
     },
   };
@@ -239,9 +280,11 @@ function decoSkillMap(
 
 /** 補齊 request 缺省欄位，避免 undefined。 */
 function normalizeRequest(req: BuildSearchRequest) {
+  const fixedParts = req.fixedParts ?? {};
+  const fixedWeaponId = req.fixedWeaponId ?? fixedParts.weapon;
   return {
     charm: req.charm ?? { skills: {}, slots: [] },
-    fixedParts: req.fixedParts ?? {},
+    fixedParts,
     excludedItems: req.excludedItems ?? { armorIds: [], weaponIds: [] },
     requiredSkills: req.requiredSkills ?? {},
     preferredSkills: req.preferredSkills ?? {},
@@ -250,6 +293,11 @@ function normalizeRequest(req: BuildSearchRequest) {
     reservedSlots: req.reservedSlots ?? { 4: 0, 3: 0, 2: 0, 1: 0 },
     searchMode: req.searchMode ?? "fast",
     resultLimit: req.resultLimit ?? 100,
+    // 相容舊請求：未指定模式時，有固定武器視為 fixed，否則 search
+    weaponSearchMode:
+      req.weaponSearchMode ?? (fixedWeaponId ? "fixed" : "search"),
+    fixedWeaponId,
+    autoRules: req.autoRules,
   };
 }
 
@@ -257,7 +305,16 @@ function normalizeRequest(req: BuildSearchRequest) {
 export function formatBuildResult(build: BuildResult): string {
   const lines: string[] = [];
   if (build.weapon) {
-    lines.push(`武器：${build.weapon.nameZh}（${formatSlots(build.weapon.slots)}）`);
+    lines.push(
+      `武器：${build.weapon.nameZh}（${formatSlots(build.weapon.slots)}）${formatWeaponStats(build.weapon)}`
+    );
+  }
+  if (build.autoSkills && Object.keys(build.autoSkills).length) {
+    lines.push(
+      `自動技能：${Object.entries(build.autoSkills)
+        .map(([n, l]) => `${n} Lv${l}`)
+        .join("、")}`
+    );
   }
   for (const part of ARMOR_PARTS) {
     const piece = build.armor[part];

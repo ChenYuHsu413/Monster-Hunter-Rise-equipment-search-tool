@@ -61,6 +61,33 @@ const SPECIAL_SKILLS = [
   "鎧【", "煉獄", "赫耀", "災厄",
 ];
 
+/**
+ * 依稀有度推算的階級標籤（村 / HR / MR）。
+ * 這是 Sunbreak 稀有度慣例的推算值：1-3 通常為村莊/初期任務,4-7 為集會所（HR),
+ * 8-10 為傀異/傀異克服等 Master Rank 內容。並非精確的「第幾星緊急任務解放」資訊——
+ * Kiranico 的防具/武器列表頁不提供逐怪物解放任務資料，若要更精確需另外對照任務資料。
+ */
+function rankByRarity(rarity) {
+  if (rarity == null) return undefined;
+  if (rarity <= 3) return "村";
+  if (rarity <= 7) return "HR";
+  return "MR";
+}
+
+/** 一組字串的最長共同前綴（用於推算防具/武器系列名）。 */
+function longestCommonPrefix(strs) {
+  if (strs.length === 0) return "";
+  let prefix = strs[0];
+  for (const s of strs.slice(1)) {
+    let i = 0;
+    while (i < prefix.length && i < s.length && prefix[i] === s[i]) i++;
+    prefix = prefix.slice(0, i);
+    if (!prefix) break;
+  }
+  // 去除尾端懸空的連接字/半個括號（例如「冥淵纏鎧憤怒之」「神火裝【」）。
+  return prefix.replace(/[之的【（(]+$/, "").trim();
+}
+
 async function fetchText(url, tries = 3) {
   for (let i = 0; i < tries; i++) {
     try {
@@ -75,11 +102,32 @@ async function fetchText(url, tries = 3) {
   throw new Error(`failed: ${url}`);
 }
 
-/** 取出 <tbody>…</tbody> 內的每個 <tr>…</tr> 原始 HTML。 */
+/**
+ * 取出 <tbody>…</tbody> 內的每個 <tr>…</tr> 原始 HTML（以深度計數處理巢狀 <tr>，
+ * 例如弩槍頁彈藥表本身也有 <tr>，naive 的 non-greedy regex 會在內層就提早截斷)。
+ */
 function tableRows(html) {
   const tb = html.match(/<tbody[\s\S]*?<\/tbody>/);
   if (!tb) return [];
-  return [...tb[0].matchAll(/<tr[\s\S]*?<\/tr>/g)].map((m) => m[0]);
+  const body = tb[0];
+  const rows = [];
+  const tagRe = /<tr\b[^>]*>|<\/tr>/g;
+  let depth = 0;
+  let start = -1;
+  let m;
+  while ((m = tagRe.exec(body))) {
+    if (m[0].startsWith("</")) {
+      depth--;
+      if (depth === 0 && start !== -1) {
+        rows.push(body.slice(start, tagRe.lastIndex));
+        start = -1;
+      }
+    } else {
+      if (depth === 0) start = m.index;
+      depth++;
+    }
+  }
+  return rows;
 }
 
 // ---------------- 技能 ----------------
@@ -177,24 +225,200 @@ function parseArmorRow(row, rarity) {
 function parseArmorView(html, rarity) {
   const pieces = [];
   let cursor = 0; // 部位游標,每個 view 從 head 開始
+  // 系列分組：與部位判定共用同一套「新系列從 head 開始」邏輯,
+  // 每次判定為 head（不論是關鍵字或游標歸零）就視為新系列起點。
+  let currentSeries = [];
+  const flushSeries = () => {
+    if (currentSeries.length === 0) return;
+    const seriesName = longestCommonPrefix(currentSeries.map((p) => p.nameZh));
+    for (const p of currentSeries) p.seriesName = seriesName || undefined;
+    pieces.push(...currentSeries);
+    currentSeries = [];
+  };
+
   for (const row of tableRows(html)) {
     const p = parseArmorRow(row, rarity);
     if (!p) continue;
     const kw = classifyPartKW(p.nameZh);
     const part = kw || PARTS[cursor];
+    if (part === "head") flushSeries();
     if (kw) cursor = PARTS.indexOf(kw);
     cursor = (cursor + 1) % 5;
-    pieces.push({
+    currentSeries.push({
       id: p.id,
       nameZh: p.nameZh,
       part,
       rarity: p.rarity,
+      rankLabel: rankByRarity(p.rarity),
       slots: p.slots,
       skills: p.skills,
       ...(p.defense != null ? { defense: p.defense } : {}),
     });
   }
+  flushSeries();
   return pieces;
+}
+
+// ---------------- 武器 ----------------
+/** Kiranico /data/weapons?view=N 的 view 順序（與武器選單一致）。 */
+const WEAPON_TYPE_BY_VIEW = [
+  "great-sword", // 0 大劍
+  "sword-and-shield", // 1 單手劍
+  "dual-blades", // 2 雙劍
+  "long-sword", // 3 太刀
+  "hammer", // 4 大錘
+  "hunting-horn", // 5 狩獵笛
+  "lance", // 6 長槍
+  "gunlance", // 7 銃槍
+  "switch-axe", // 8 斬擊斧
+  "charge-blade", // 9 充能斧
+  "insect-glaive", // 10 操蟲棍
+  "bow", // 11 弓
+  "heavy-bowgun", // 12 重弩
+  "light-bowgun", // 13 輕弩
+];
+
+/**
+ * 屬性代碼 → 型別。1-5（火水雷冰龍）已以武器名稱交叉驗證（例如「王刀雷切」= 雷）。
+ * 6-9（毒/睡眠/麻痺/爆破）採用 MH 系列常見的資料排序慣例，信心度較低，
+ * 但不影響搜尋硬條件（僅五屬性才觸發 autoRules），純屬顯示用途。
+ */
+const ELEMENT_TYPE_BY_VALUE = {
+  1: "fire",
+  2: "water",
+  3: "thunder",
+  4: "ice",
+  5: "dragon",
+  6: "poison",
+  7: "sleep",
+  8: "paralysis",
+  9: "blast",
+};
+const ELEMENT_LABEL_ZH = {
+  fire: "火",
+  water: "水",
+  thunder: "雷",
+  ice: "冰",
+  dragon: "龍",
+  poison: "毒",
+  sleep: "睡眠",
+  paralysis: "麻痺",
+  blast: "爆破",
+};
+
+const SHELLING_TYPE_BY_LABEL = { 通常型: "normal", 放射型: "long", 擴散型: "wide" };
+const PHIAL_TYPE_BY_LABEL = {
+  強擊瓶: "power",
+  強屬性瓶: "element",
+  減氣瓶: "exhaust",
+  滅龍瓶: "dragon",
+  毒瓶: "poison",
+  麻痺瓶: "paralysis",
+  榴彈瓶: "impact",
+};
+const BOW_SHOT_BY_LABEL = { 連射: "rapid", 貫通: "pierce", 擴散: "spread" };
+
+/** 武器系列/線：去除強化階數羅馬數字（Ⅰ Ⅱ …）與「改」尾綴。 */
+function weaponSeriesName(name) {
+  return name.replace(/[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]+$/, "").replace(/改$/, "").trim();
+}
+
+function parseWeaponRow(row, weaponType) {
+  const nameM = row.match(/data\/weapons\/(\d+)">([^<]+)<\/a>/);
+  if (!nameM) return null;
+  const id = `weapon_${nameM[1]}`;
+  const nameZh = nameM[2].trim();
+
+  // 洞位：以「百龍鑲嵌槽」切開前後兩段，各自抓 deco{N}.png（洞等級)。
+  const rampageIdx = row.indexOf("百龍鑲嵌槽");
+  const slotSection = rampageIdx >= 0 ? row.slice(0, rampageIdx) : row;
+  const rampageSection = rampageIdx >= 0 ? row.slice(rampageIdx) : "";
+  const slots = [...slotSection.matchAll(/deco(\d)\.png/g)].map((m) => Number(m[1]));
+  const rampageMatch = rampageSection.match(/deco(\d)\.png/);
+  const rampageSlot = rampageMatch ? Number(rampageMatch[1]) : undefined;
+
+  const atkM = row.match(/data-key="attack">(\d+)</);
+  const attack = atkM ? Number(atkM[1]) : 0;
+
+  let element;
+  const elM = row.match(
+    /data-key="element" data-value="(\d)"[\s\S]{0,500}?data-key="elementAttack" data-value="(\d+)"/
+  );
+  if (elM && Number(elM[2]) > 0) {
+    const type = ELEMENT_TYPE_BY_VALUE[elM[1]];
+    if (type) element = { type, value: Number(elM[2]) };
+  }
+
+  let affinity = 0;
+  const affM = row.match(/會心率\s*<span class="text-(?:red|green)-\d+">([+-]?\d+)%<\/span>/);
+  if (affM) affinity = Number(affM[1]);
+
+  const rareM = row.match(/Rare (\d+)/);
+  const rarity = rareM ? Number(rareM[1]) : undefined;
+
+  const weapon = {
+    id,
+    nameZh,
+    weaponType,
+    attack,
+    affinity,
+    slots,
+    ...(rampageSlot ? { rampageSlot } : {}),
+    ...(element ? { element } : {}),
+    tags: element ? [`${ELEMENT_LABEL_ZH[element.type]}屬性`] : [],
+    rarity,
+    seriesName: weaponSeriesName(nameZh),
+    rankLabel: rankByRarity(rarity),
+  };
+
+  if (weaponType === "gunlance") {
+    const m = row.match(/columns-3">\s*<div>\s*(通常型|放射型|擴散型)\s*(\d+)\s*<\/div>/);
+    if (m) weapon.shelling = { type: SHELLING_TYPE_BY_LABEL[m[1]], level: Number(m[2]) };
+  } else if (weaponType === "switch-axe" || weaponType === "charge-blade") {
+    const m = row.match(
+      /columns-3">\s*<div>\s*(強擊瓶|強屬性瓶|減氣瓶|滅龍瓶|毒瓶|麻痺瓶|榴彈瓶)/
+    );
+    if (m) weapon.phial = { type: PHIAL_TYPE_BY_LABEL[m[1]] };
+  } else if (weaponType === "insect-glaive") {
+    const m = row.match(/獵蟲Lv\s*(\d+)/);
+    if (m) weapon.kinsectLevel = Number(m[1]);
+  } else if (weaponType === "bow") {
+    const shotM = row.match(/(連射|貫通|擴散)Lv\d+/);
+    if (shotM) {
+      weapon.bow = { shotType: BOW_SHOT_BY_LABEL[shotM[1]] };
+    }
+    const chargeDivs = [...row.matchAll(/<div(?: class="([^"]*)")?>((?:連射|貫通|擴散)Lv\d+)<\/div>/g)];
+    const reachedCharges = chargeDivs
+      .filter((m) => !(m[1] ?? "").includes("text-gray-400"))
+      .map((m) => m[2]);
+    if (reachedCharges.length) {
+      weapon.bow = weapon.bow ?? {};
+      weapon.bow.chargeLevels = reachedCharges;
+    }
+    const coatSection = row.match(/columns-3">([\s\S]*?)<\/small>/);
+    if (coatSection) {
+      const coatDivs = [...coatSection[1].matchAll(/<div class="([^"]*)">([^<]+)<\/div>/g)];
+      const coatings = coatDivs
+        .filter((m) => !m[1].includes("text-gray-400"))
+        .map((m) => m[2].trim())
+        .filter(Boolean);
+      if (coatings.length) {
+        weapon.bow = weapon.bow ?? {};
+        weapon.bow.coatings = coatings;
+      }
+    }
+  }
+
+  return weapon;
+}
+
+function parseWeaponsView(html, weaponType) {
+  const out = [];
+  for (const row of tableRows(html)) {
+    const w = parseWeaponRow(row, weaponType);
+    if (w) out.push(w);
+  }
+  return out;
 }
 
 // ---------------- 主流程 ----------------
@@ -218,6 +442,17 @@ async function main() {
     console.log(`  RARE${view + 1}: ${pieces.length} 件`);
   }
   console.log(`  合計 ${armors.length} 件防具`);
+
+  console.log("→ 武器（14 類全武器）");
+  const weapons = [];
+  for (let view = 0; view <= 13; view++) {
+    const weaponType = WEAPON_TYPE_BY_VIEW[view];
+    const html = await fetchText(`${BASE}/weapons?view=${view}`);
+    const list = parseWeaponsView(html, weaponType);
+    weapons.push(...list);
+    console.log(`  ${weaponType}: ${list.length} 把`);
+  }
+  console.log(`  合計 ${weapons.length} 把武器`);
 
   // 補：確保裝飾珠引用的技能都在 skills 內（有些技能只出現在珠子)
   const skillNames = new Set(skills.map((s) => s.name));
@@ -257,7 +492,11 @@ async function main() {
     path.join(DATA_DIR, "armors.json"),
     JSON.stringify(armors, null, 2) + "\n"
   );
-  console.log("✓ 已寫入 src/data/{skills,decorations,armors}.json");
+  fs.writeFileSync(
+    path.join(DATA_DIR, "weapons.json"),
+    JSON.stringify(weapons, null, 2) + "\n"
+  );
+  console.log("✓ 已寫入 src/data/{skills,decorations,armors,weapons}.json");
 }
 
 main().catch((e) => {

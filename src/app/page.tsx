@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type {
   ArmorPart,
   ArmorPiece,
@@ -12,25 +12,31 @@ import type {
   ReservedSlots,
   SearchMode,
   SkillMap,
+  Weapon,
+  WeaponSearchMode,
 } from "@/types/build";
 import {
-  armors as allArmors,
-  armorById as baseArmorById,
-  weaponById,
   buildPresets,
   weaponTypes,
   skills as allSkills,
   getPreset,
   presetsForWeapon,
 } from "@/lib/data";
+import { loadGameData, type GameData } from "@/lib/game-data";
 import { searchBuilds, createSearchDeps, type SearchMeta } from "@/lib/build-search";
-import { parseSlotString, formatSlots } from "@/lib/slot-utils";
+import { parseSlotString } from "@/lib/slot-utils";
+import { useLocalStorage } from "@/lib/use-local-storage";
+import {
+  mergeMaxSkills,
+  resolveAutoSkills,
+  resolvePresetSkills,
+} from "@/lib/preset-resolver";
 
 import { WeaponSelector } from "@/components/WeaponSelector";
+import { WeaponPicker } from "@/components/WeaponPicker";
 import { BuildPresetSelector } from "@/components/BuildPresetSelector";
 import { SearchModeSelector } from "@/components/SearchModeSelector";
 import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
-import { WeaponSlotInput } from "@/components/WeaponSlotInput";
 import { CharmInput, type CharmRow } from "@/components/CharmInput";
 import { ReservedSlotsInput } from "@/components/ReservedSlotsInput";
 import { FixedPartsPanel } from "@/components/FixedPartsPanel";
@@ -56,22 +62,43 @@ const clone = (m: SkillMap): SkillMap => ({ ...m });
 export default function Home() {
   const firstPreset = presetsForWeapon("long-sword")[0] ?? buildPresets[0];
 
-  // ---- 基礎設定 ----
-  const [weaponType, setWeaponType] = useState("long-sword");
-  const [presetId, setPresetId] = useState(firstPreset.id);
-  const [searchMode, setSearchMode] = useState<SearchMode>("fast");
+  // ---- 延遲載入的防具 / 武器資料（不進首屏 bundle）----
+  const [gameData, setGameData] = useState<GameData | null>(null);
+  useEffect(() => {
+    let alive = true;
+    loadGameData().then((gd) => {
+      if (alive) setGameData(gd);
+    });
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // ---- 基礎設定（persist 到 localStorage）----
+  const [weaponType, setWeaponType] = useLocalStorage("mhsb.weaponType", "long-sword");
+  const [presetId, setPresetId] = useLocalStorage("mhsb.presetId", firstPreset.id);
+  const [searchMode, setSearchMode] = useLocalStorage<SearchMode>("mhsb.searchMode", "fast");
+
+  // ---- 武器設定 ----
+  const [weaponSearchMode, setWeaponSearchMode] = useLocalStorage<WeaponSearchMode>(
+    "mhsb.weaponSearchMode",
+    "search"
+  );
+  // 固定武器 id，"" 表示未選（localStorage 不便存 undefined）。
+  const [fixedWeaponId, setFixedWeaponId] = useLocalStorage("mhsb.fixedWeaponId", "");
+  /** 目前套用在技能編輯器中的自動技能（依 preset autoRules 與固定武器屬性）。 */
+  const [autoSkills, setAutoSkills] = useLocalStorage<SkillMap>("mhsb.autoSkills", {});
 
   // ---- 技能條件（由 preset 帶入，可編輯）----
-  const [required, setRequired] = useState<SkillMap>(clone(firstPreset.requiredSkills));
-  const [preferred, setPreferred] = useState<SkillMap>(clone(firstPreset.preferredSkills));
-  const [avoid, setAvoid] = useState<SkillMap>(clone(firstPreset.avoidSkills));
-  const [weights, setWeights] = useState<SkillMap>(clone(firstPreset.skillWeights));
+  const [required, setRequired] = useLocalStorage<SkillMap>("mhsb.required", clone(firstPreset.requiredSkills));
+  const [preferred, setPreferred] = useLocalStorage<SkillMap>("mhsb.preferred", clone(firstPreset.preferredSkills));
+  const [avoid, setAvoid] = useLocalStorage<SkillMap>("mhsb.avoid", clone(firstPreset.avoidSkills));
+  const [weights, setWeights] = useLocalStorage<SkillMap>("mhsb.weights", clone(firstPreset.skillWeights));
 
-  // ---- 武器洞 / 護石 / 保留洞位 ----
-  const [weaponSlotStr, setWeaponSlotStr] = useState("3-2-1");
-  const [charmRows, setCharmRows] = useState<CharmRow[]>(EMPTY_CHARM_ROWS);
-  const [charmSlotsStr, setCharmSlotsStr] = useState("2-1-0");
-  const [reservedSlots, setReservedSlots] = useState<ReservedSlots>({
+  // ---- 護石 / 保留洞位 ----
+  const [charmRows, setCharmRows] = useLocalStorage<CharmRow[]>("mhsb.charmRows", EMPTY_CHARM_ROWS);
+  const [charmSlotsStr, setCharmSlotsStr] = useLocalStorage("mhsb.charmSlots", "2-1-0");
+  const [reservedSlots, setReservedSlots] = useLocalStorage<ReservedSlots>("mhsb.reserved", {
     4: 0,
     3: 0,
     2: 0,
@@ -79,47 +106,109 @@ export default function Home() {
   });
 
   // ---- 固定 / 排除 / 鍊成 ----
-  const [fixedParts, setFixedParts] = useState<FixedParts>({});
-  const [excludedItems, setExcludedItems] = useState<ExcludedItems>({
+  const [fixedParts, setFixedParts] = useLocalStorage<FixedParts>("mhsb.fixedParts", {});
+  const [excludedItems, setExcludedItems] = useLocalStorage<ExcludedItems>("mhsb.excluded", {
     armorIds: [],
     weaponIds: [],
   });
-  const [augments, setAugments] = useState<ArmorPiece[]>([]);
+  const [augments, setAugments] = useLocalStorage<ArmorPiece[]>("mhsb.augments", []);
 
-  // ---- 結果 ----
+  // ---- 結果（不 persist）----
   const [results, setResults] = useState<BuildResult[]>([]);
   const [meta, setMeta] = useState<SearchMeta | null>(null);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-  const [resultLimit, setResultLimit] = useState(100);
+  const [resultLimit, setResultLimit] = useLocalStorage("mhsb.resultLimit", 100);
 
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
-  const [compared, setCompared] = useState<Set<string>>(new Set());
+  // 收藏 / 比較（存為陣列以利序列化）
+  const [favorites, setFavorites] = useLocalStorage<string[]>("mhsb.favorites", []);
+  const [compared, setCompared] = useLocalStorage<string[]>("mhsb.compared", []);
   const [toast, setToast] = useState<string | null>(null);
 
   const presets = useMemo(() => presetsForWeapon(weaponType), [weaponType]);
+  const weaponById = gameData?.weaponById ?? {};
+  const allArmors = gameData?.armors ?? [];
+  const typeWeapons = useMemo(
+    () => (gameData ? gameData.weapons.filter((w) => w.weaponType === weaponType) : []),
+    [gameData, weaponType]
+  );
+  const currentPreset = getPreset(presetId);
+  const pickedWeapon: Weapon | undefined =
+    weaponSearchMode === "fixed" && fixedWeaponId
+      ? weaponById[fixedWeaponId]
+      : undefined;
 
   // 合併鍊成防具的 armorById（供固定面板顯示名稱）
   const armorById = useMemo(() => {
-    const m = { ...baseArmorById };
+    const m: Record<string, ArmorPiece> = { ...(gameData?.armorById ?? {}) };
     for (const a of augments) m[a.id] = a;
     return m;
-  }, [augments]);
+  }, [gameData, augments]);
 
-  const applyPreset = (id: string) => {
+  /** 以 preset（+ 目前固定武器）重設技能編輯器。 */
+  const applyPreset = (id: string, weapon?: Weapon) => {
     setPresetId(id);
     const p = getPreset(id);
     if (!p) return;
-    setRequired(clone(p.requiredSkills));
-    setPreferred(clone(p.preferredSkills));
-    setAvoid(clone(p.avoidSkills));
-    setWeights(clone(p.skillWeights));
+    const resolved = resolvePresetSkills(p, weapon);
+    setRequired(resolved.requiredSkills);
+    setPreferred(resolved.preferredSkills);
+    setAvoid(resolved.avoidSkills);
+    setWeights(resolved.skillWeights);
+    setAutoSkills(resolved.autoAddedSkills);
+  };
+
+  /**
+   * 武器（或模式）變更時，只重算自動技能：
+   * 移除舊自動技能（若使用者未改動其等級），併入新武器對應的自動技能，保留其他手動編輯。
+   */
+  const reapplyAutoSkills = (weapon: Weapon | undefined) => {
+    const p = getPreset(presetId);
+    const newAuto = resolveAutoSkills(p?.autoRules, weapon);
+    setRequired((prev) => {
+      const next = { ...prev };
+      for (const [k, v] of Object.entries(autoSkills)) {
+        if (next[k] === v) delete next[k];
+      }
+      return mergeMaxSkills(next, newAuto);
+    });
+    setAutoSkills(newAuto);
   };
 
   const changeWeapon = (w: string) => {
     setWeaponType(w);
+    setFixedWeaponId("");
+    setFixedParts((prev) => {
+      const next = { ...prev };
+      delete next.weapon;
+      return next;
+    });
     const first = presetsForWeapon(w)[0];
-    if (first) applyPreset(first.id);
+    if (first) applyPreset(first.id, undefined);
+  };
+
+  const changeWeaponSearchMode = (m: WeaponSearchMode) => {
+    setWeaponSearchMode(m);
+    if (m === "search") {
+      setFixedParts((prev) => {
+        const next = { ...prev };
+        delete next.weapon;
+        return next;
+      });
+      reapplyAutoSkills(undefined);
+    } else {
+      const w = fixedWeaponId ? weaponById[fixedWeaponId] : undefined;
+      if (w) {
+        setFixedParts((prev) => ({ ...prev, weapon: w.id }));
+      }
+      reapplyAutoSkills(w);
+    }
+  };
+
+  const pickWeapon = (id: string) => {
+    setFixedWeaponId(id);
+    setFixedParts((prev) => ({ ...prev, weapon: id }));
+    reapplyAutoSkills(weaponById[id]);
   };
 
   const buildCharm = (): Charm => {
@@ -130,13 +219,21 @@ export default function Home() {
     return { skills: skillMap, slots: parseSlotString(charmSlotsStr) };
   };
 
-  const runSearch = () => {
+  const runSearch = async () => {
     setLoading(true);
     setHasSearched(true);
+    // 確保防具/武器資料已載入（第一次搜尋可能還在載）
+    const gd = gameData ?? (await loadGameData());
+    if (!gameData) setGameData(gd);
     const request: BuildSearchRequest = {
       weaponType,
       presetId,
-      weaponSlots: parseSlotString(weaponSlotStr),
+      weaponSearchMode,
+      fixedWeaponId:
+        weaponSearchMode === "fixed" ? fixedWeaponId || undefined : undefined,
+      // fixed 模式的自動技能已在編輯器中；search 模式由搜尋引擎逐武器套用
+      autoRules:
+        weaponSearchMode === "search" ? currentPreset?.autoRules : undefined,
       charm: buildCharm(),
       fixedParts,
       excludedItems,
@@ -148,7 +245,7 @@ export default function Home() {
       searchMode,
       resultLimit,
     };
-    const deps = createSearchDeps(augments);
+    const deps = createSearchDeps(gd, augments);
     // 讓 UI 先繪製 loading 狀態，再執行同步搜尋
     setTimeout(() => {
       const out = searchBuilds(request, deps, () =>
@@ -180,17 +277,42 @@ export default function Home() {
     });
   };
 
-  const clearFixed = (key: ArmorPart | "weapon" | "charm") =>
+  const clearFixed = (key: ArmorPart | "weapon" | "charm") => {
     setFixedParts((prev) => {
       const next = { ...prev };
       delete next[key];
       return next;
     });
+    if (key === "weapon") {
+      setFixedWeaponId("");
+      setWeaponSearchMode("search");
+      reapplyAutoSkills(undefined);
+    }
+  };
+
+  // ---- 武器固定 / 排除（結果卡片操作）----
+  const fixWeapon = (id: string) => {
+    setWeaponSearchMode("fixed");
+    setFixedWeaponId(id);
+    setFixedParts((prev) => ({ ...prev, weapon: id }));
+    reapplyAutoSkills(weaponById[id]);
+  };
+
+  const excludeWeapon = (id: string) => {
+    setExcludedItems((prev) =>
+      prev.weaponIds.includes(id)
+        ? prev
+        : { ...prev, weaponIds: [...prev.weaponIds, id] }
+    );
+    if (fixedWeaponId === id) {
+      clearFixed("weapon");
+    }
+  };
 
   const removeExcluded = (id: string) =>
     setExcludedItems((prev) => ({
-      ...prev,
       armorIds: prev.armorIds.filter((x) => x !== id),
+      weaponIds: prev.weaponIds.filter((x) => x !== id),
     }));
 
   const showToast = (msg: string) => {
@@ -207,18 +329,26 @@ export default function Home() {
     }
   };
 
-  const toggleSet = (
-    setter: React.Dispatch<React.SetStateAction<Set<string>>>,
+  const toggleInList = (
+    setter: React.Dispatch<React.SetStateAction<string[]>>,
     id: string
   ) =>
-    setter((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
+    setter((prev) =>
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+    );
 
-  const weaponSlotsLabel = formatSlots(parseSlotString(weaponSlotStr));
+  // 自動技能提示（WeaponPicker 顯示）
+  const autoHint = (() => {
+    if (!currentPreset?.autoRules?.addElementAttackSkill) return null;
+    if (weaponSearchMode === "fixed") {
+      const entries = Object.entries(autoSkills);
+      if (entries.length === 0) return null;
+      return `已根據目前武器屬性自動加入：${entries
+        .map(([n, l]) => `${n} Lv${l}`)
+        .join("、")}`;
+    }
+    return "搜尋時將依各候選武器屬性自動加入對應的屬性攻擊強化。";
+  })();
 
   return (
     <div className="flex h-screen flex-col bg-background">
@@ -230,10 +360,10 @@ export default function Home() {
           </div>
           <div>
             <h1 className="text-base font-bold leading-tight">
-              太刀配裝搜尋器
+              魔物獵人 Rise：破曉配裝搜尋器
             </h1>
             <p className="text-[11px] text-muted-foreground">
-              MHRise: Sunbreak · 可擴充配裝器 MVP
+              選擇武器、技能條件與固定部位，搜尋符合條件的前 100 套配裝
             </p>
           </div>
         </div>
@@ -252,7 +382,7 @@ export default function Home() {
             ) : (
               <Search className="h-4 w-4" />
             )}
-            搜尋配裝
+            {!gameData && !loading ? "資料載入中…" : "搜尋配裝"}
           </Button>
         </div>
       </header>
@@ -268,10 +398,19 @@ export default function Home() {
                 value={weaponType}
                 onChange={changeWeapon}
               />
+              <WeaponPicker
+                weapons={typeWeapons}
+                loading={!gameData}
+                mode={weaponSearchMode}
+                onModeChange={changeWeaponSearchMode}
+                fixedWeaponId={fixedWeaponId}
+                onPickWeapon={pickWeapon}
+                autoHint={autoHint}
+              />
               <BuildPresetSelector
                 presets={presets}
                 value={presetId}
-                onChange={applyPreset}
+                onChange={(id) => applyPreset(id, pickedWeapon)}
               />
             </CardContent>
           </Card>
@@ -298,15 +437,6 @@ export default function Home() {
                 </TabsContent>
 
                 <TabsContent value="gear" className="space-y-4 pt-2">
-                  <WeaponSlotInput
-                    value={weaponSlotStr}
-                    onChange={setWeaponSlotStr}
-                    lockedWeaponName={
-                      fixedParts.weapon
-                        ? weaponById[fixedParts.weapon]?.nameZh
-                        : undefined
-                    }
-                  />
                   <div className="space-y-1.5">
                     <Label className="text-xs text-muted-foreground">
                       護石
@@ -373,9 +503,9 @@ export default function Home() {
               )}
             </div>
             <div className="flex items-center gap-2">
-              {(favorites.size > 0 || compared.size > 0) && (
+              {(favorites.length > 0 || compared.length > 0) && (
                 <span className="text-xs text-muted-foreground">
-                  收藏 {favorites.size} · 比較 {compared.size}
+                  收藏 {favorites.length} · 比較 {compared.length}
                 </span>
               )}
               <Label className="text-[11px] text-muted-foreground">
@@ -419,8 +549,15 @@ export default function Home() {
             ) : !hasSearched ? (
               <EmptyState
                 icon="swords"
-                title="設定條件後按「搜尋配裝」"
-                description="選擇太刀流派會自動帶入技能需求，你可以再微調必要／偏好／排除技能，輸入護石與武器洞數，然後開始搜尋。"
+                title="尚未搜尋配裝"
+                description={`你可以先完成：
+1. 選擇武器與流派（會自動帶入技能需求）
+2. 調整必要技能、偏好技能與排除技能
+3. 輸入護石與武器洞數
+4. 視需要固定部位或排除裝備
+5. 按下搜尋配裝
+
+搜尋後會顯示前 100 套符合硬條件的配裝。`}
               />
             ) : results.length === 0 ? (
               <EmptyState
@@ -434,19 +571,21 @@ export default function Home() {
                     key={r.id}
                     result={r}
                     rank={i + 1}
-                    weaponSlotsLabel={weaponSlotsLabel}
+                    weaponSlotsLabel="—"
                     requiredSkills={required}
                     preferredSkills={preferred}
                     avoidSkills={avoid}
                     reservedSlots={reservedSlots}
                     fixedParts={fixedParts}
-                    isFavorite={favorites.has(r.id)}
-                    isCompared={compared.has(r.id)}
+                    isFavorite={favorites.includes(r.id)}
+                    isCompared={compared.includes(r.id)}
                     onFixArmor={fixArmor}
                     onExcludeArmor={excludeArmor}
+                    onFixWeapon={fixWeapon}
+                    onExcludeWeapon={excludeWeapon}
                     onCopy={copySummary}
-                    onToggleFavorite={(id) => toggleSet(setFavorites, id)}
-                    onToggleCompare={(id) => toggleSet(setCompared, id)}
+                    onToggleFavorite={(id) => toggleInList(setFavorites, id)}
+                    onToggleCompare={(id) => toggleInList(setCompared, id)}
                   />
                 ))}
               </div>

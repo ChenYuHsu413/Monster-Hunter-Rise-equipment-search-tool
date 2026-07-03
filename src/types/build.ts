@@ -2,7 +2,7 @@
  * 核心型別定義。
  *
  * 設計原則：
- * - 不寫死「太刀」。所有武器共用同一組結構，武器差異只透過 `weaponType` 字串區分。
+ * - 不寫死特定武器。所有武器共用同一組結構，武器差異只透過 `weaponType` 字串區分。
  * - 保持可擴充：未來要接 SQLite / Supabase / IndexedDB 時，這些型別即為資料列的 shape。
  */
 
@@ -76,19 +76,88 @@ export type ArmorPiece = {
   isAugmented?: boolean;
   /** 若為鍊成版本，指向原始防具 id。 */
   baseArmorId?: string;
+  /** 防具系列名稱（同系列 5 部位共用，例如「冥淵」「原初」）。 */
+  seriesName?: string;
+  /** 依稀有度推算的階級標籤：村 / HR / MR。為推算值，非精確任務解放條件。 */
+  rankLabel?: string;
 };
+
+/** 屬性 / 狀態異常類型。none 表示無屬性。 */
+export type ElementType =
+  | "fire"
+  | "water"
+  | "thunder"
+  | "ice"
+  | "dragon"
+  | "poison"
+  | "paralysis"
+  | "sleep"
+  | "blast"
+  | "none";
 
 export type Weapon = {
   id: string;
   nameZh: string;
+  nameEn?: string;
   weaponType: string;
+  attack: number;
+  /** 會心率（%）。 */
+  affinity: number;
   slots: number[];
+  element?: {
+    type: ElementType;
+    value: number;
+  };
+  sharpness?: {
+    purple?: number;
+    white?: number;
+    blue?: number;
+    green?: number;
+  };
+  /** 百龍洞等級（顯示用，不參與裝飾珠洞位計算）。 */
+  rampageSlot?: number;
   skills?: SkillMap;
-  attack?: number;
-  affinity?: number;
-  element?: string;
-  elementValue?: number;
-  tags?: string[];
+  tags: string[];
+  rarity?: number;
+  /** 弩槍彈種資訊（輕弩/重弩）。 */
+  ammo?: {
+    normal?: number[];
+    pierce?: number[];
+    spread?: number[];
+    shrapnel?: number[];
+    sticky?: number[];
+    slicing?: number[];
+    elemental?: string[];
+    rapidFire?: string[];
+  };
+  /** 弓的射法/瓶種資訊。 */
+  bow?: {
+    shotType?: "rapid" | "pierce" | "spread";
+    chargeLevels?: string[];
+    coatings?: string[];
+  };
+  /** 銃槍砲擊資訊。 */
+  shelling?: {
+    type: "normal" | "long" | "wide";
+    level: number;
+  };
+  /** 斬擊斧/盾斧瓶種。 */
+  phial?: {
+    type:
+      | "power"
+      | "element"
+      | "impact"
+      | "dragon"
+      | "poison"
+      | "paralysis"
+      | "exhaust";
+  };
+  /** 操蟲棍獵蟲等級。 */
+  kinsectLevel?: number;
+  /** 武器系列/線（同一把武器的強化前後共用，例如「白兔刃」）。 */
+  seriesName?: string;
+  /** 依稀有度推算的階級標籤：村 / HR / MR。為推算值，非精確任務解放條件。 */
+  rankLabel?: string;
 };
 
 export type Decoration = {
@@ -118,12 +187,20 @@ export type Skill = {
   special?: boolean;
 };
 
-/** 武器類型定義。第一版只有太刀完整支援，其餘 `supported: false` 佔位。 */
+/** 武器類型定義。`supported: false` 的武器為佔位，將陸續開放。 */
 export type WeaponType = {
   id: string;
   nameZh: string;
   nameEn?: string;
   supported: boolean;
+};
+
+/** preset 自動規則：依武器屬性自動加入條件技能等。 */
+export type PresetAutoRules = {
+  /** 依武器屬性（五屬性）自動加入對應「○屬性攻擊強化」。 */
+  addElementAttackSkill?: boolean;
+  /** 自動加入的屬性強化等級，預設 5。 */
+  elementAttackLevel?: number;
 };
 
 export type BuildPreset = {
@@ -135,7 +212,18 @@ export type BuildPreset = {
   preferredSkills: SkillMap;
   avoidSkills: SkillMap;
   skillWeights: SkillMap;
+  autoRules?: PresetAutoRules;
   tags: string[];
+};
+
+/** resolvePresetSkills() 的結果：套用 autoRules 後的技能條件。 */
+export type ResolvedSkillConditions = {
+  requiredSkills: SkillMap;
+  preferredSkills: SkillMap;
+  avoidSkills: SkillMap;
+  skillWeights: SkillMap;
+  /** 由 autoRules 自動加入的技能（顯示用）。 */
+  autoAddedSkills: SkillMap;
 };
 
 /** 固定部位。字串為裝備 id；護石因為使用者手動輸入，直接存物件。 */
@@ -164,10 +252,19 @@ export type ReservedSlots = {
 
 export type SearchMode = "fast" | "exact" | "greedy";
 
+/** 武器搜尋模式：fixed = 固定指定武器；search = 從同類型武器中搜尋。 */
+export type WeaponSearchMode = "fixed" | "search";
+
 export type BuildSearchRequest = {
   weaponType: string;
   presetId: string;
-  weaponSlots: number[];
+  weaponSearchMode: WeaponSearchMode;
+  /** weaponSearchMode 為 fixed 時使用的武器 id（與 fixedParts.weapon 相容，此欄優先）。 */
+  fixedWeaponId?: string;
+  /** preset 的自動規則（search 模式下由搜尋引擎逐武器套用）。 */
+  autoRules?: PresetAutoRules;
+  /** @deprecated 舊版手動武器洞數。僅在武器候選池為空時作為後援。 */
+  weaponSlots?: number[];
   charm: Charm;
   fixedParts: FixedParts;
   excludedItems: ExcludedItems;
@@ -224,6 +321,10 @@ export type BuildResult = {
   missingRequiredSkills: SkillMap;
   /** 是否符合保留洞位需求。 */
   meetsReservedSlots: boolean;
+  /** 由 autoRules 依武器屬性自動加入的技能（顯示用）。 */
+  autoSkills?: SkillMap;
+  /** 武器是否為使用者固定（false = 系統搜尋選出）。 */
+  weaponFixed?: boolean;
   summary: string;
 };
 

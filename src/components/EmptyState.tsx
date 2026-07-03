@@ -18,7 +18,7 @@ export function EmptyState({ title, description, icon = "search" }: Props) {
       <div>
         <p className="font-medium">{title}</p>
         {description && (
-          <p className="mt-1 max-w-sm text-sm text-muted-foreground">
+          <p className="mt-1 max-w-sm whitespace-pre-line text-left text-sm text-muted-foreground">
             {description}
           </p>
         )}

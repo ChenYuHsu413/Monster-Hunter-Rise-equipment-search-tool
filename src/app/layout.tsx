@@ -14,9 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "太刀配裝搜尋器 · MHRise Sunbreak",
+  title: "魔物獵人 Rise：破曉配裝搜尋器 | Sunbreak Build Finder",
   description:
-    "Monster Hunter Rise: Sunbreak 配裝搜尋工具 — 以太刀為完整示範的可擴充配裝器 MVP",
+    "支援全武器、技能硬條件、固定部位、排除裝備、保留洞位與裝飾珠自動配置的 Monster Hunter Rise: Sunbreak 配裝搜尋工具。",
 };
 
 export default function RootLayout({

@@ -54,7 +54,8 @@ export function FixedPartsPanel({
   }
 
   const hasFixed = fixedRows.length > 0;
-  const hasExcluded = excludedItems.armorIds.length > 0;
+  const hasExcluded =
+    excludedItems.armorIds.length > 0 || excludedItems.weaponIds.length > 0;
 
   return (
     <div className="space-y-3">
@@ -98,6 +99,22 @@ export function FixedPartsPanel({
         </div>
         {hasExcluded ? (
           <div className="flex flex-wrap gap-1.5">
+            {excludedItems.weaponIds.map((id) => (
+              <Badge
+                key={id}
+                variant="destructive"
+                className="gap-1 py-0.5 pl-2 pr-1"
+              >
+                🗡 {weaponById[id]?.nameZh ?? id}
+                <button
+                  onClick={() => onRemoveExcluded(id)}
+                  className="rounded-sm hover:bg-destructive/20"
+                  title="移除排除"
+                >
+                  <X className="h-3 w-3" />
+                </button>
+              </Badge>
+            ))}
             {excludedItems.armorIds.map((id) => (
               <Badge
                 key={id}

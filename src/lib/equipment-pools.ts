@@ -4,6 +4,8 @@ import type {
   ExcludedItems,
   FixedParts,
   SkillMap,
+  Weapon,
+  WeaponSearchMode,
 } from "@/types/build";
 import { ARMOR_PARTS } from "@/types/build";
 import { slotValue } from "./slot-utils";
@@ -113,11 +115,24 @@ export function prunePools(
     skillWeights: SkillMap;
   },
   mode: "fast" | "exact" | "greedy",
-  fixed: FixedParts
+  fixed: FixedParts,
+  /** 參與搜尋的武器候選數。>1 時縮小每部位件數，讓總組合數（W × N^5）維持在可負荷範圍。 */
+  weaponCount: number = 1
 ): EquipmentPools {
   // 每部位保留件數（控制組合數 N^5)。
   // 全防具資料庫下（每部位 300+ 件),暴力枚舉不可行,故各模式皆做相關度裁切。
-  const limit = mode === "greedy" ? 7 : mode === "fast" ? 9 : 12;
+  const limit =
+    weaponCount > 1
+      ? mode === "greedy"
+        ? 6
+        : mode === "fast"
+          ? 7
+          : 9
+      : mode === "greedy"
+        ? 7
+        : mode === "fast"
+          ? 9
+          : 12;
 
   // 相關技能集合（必要 + 偏好),用於預先濾除完全無關的裝備。
   const relevant = new Set([
@@ -158,4 +173,79 @@ export function prunePools(
       .map((x) => x.piece);
   }
   return out;
+}
+
+/**
+ * 單把武器對某流派的啟發式分數（search 模式候選排序用）。
+ * 攻擊/會心/洞位/自帶技能相關度綜合。
+ */
+export function scoreWeaponForPreset(
+  weapon: Weapon,
+  required: SkillMap,
+  preferred: SkillMap,
+  weights: SkillMap
+): number {
+  let score = weapon.attack / 10 + weapon.affinity / 5;
+  score += slotValue(weapon.slots) * 3;
+  if (weapon.rampageSlot) score += weapon.rampageSlot;
+  for (const [skill, lvl] of Object.entries(weapon.skills ?? {})) {
+    if (required[skill]) score += lvl * 12;
+    if (preferred[skill]) score += lvl * (weights[skill] ?? 1) * 4;
+  }
+  return score;
+}
+
+/**
+ * 建立武器候選池。
+ * - fixed：只回傳指定武器（fixedWeaponId 優先，其次 fixedParts.weapon）
+ * - search：同 weaponType 的武器，套用排除清單，依分數取前 N（控制組合數）
+ * 回傳空陣列時由呼叫端後援（例如舊版手動洞數）。
+ */
+export function buildWeaponPool(opts: {
+  weapons: Weapon[];
+  weaponById: Record<string, Weapon>;
+  weaponType: string;
+  weaponSearchMode: WeaponSearchMode;
+  fixedWeaponId?: string;
+  fixedPartsWeapon?: string;
+  excludedWeaponIds: string[];
+  preset: { requiredSkills: SkillMap; preferredSkills: SkillMap; skillWeights: SkillMap };
+  mode: "fast" | "exact" | "greedy";
+}): Weapon[] {
+  const {
+    weapons,
+    weaponById,
+    weaponType,
+    weaponSearchMode,
+    fixedWeaponId,
+    fixedPartsWeapon,
+    excludedWeaponIds,
+    preset,
+    mode,
+  } = opts;
+
+  if (weaponSearchMode === "fixed") {
+    const id = fixedWeaponId ?? fixedPartsWeapon;
+    const w = id ? weaponById[id] : undefined;
+    return w ? [w] : [];
+  }
+
+  const excluded = new Set(excludedWeaponIds);
+  const candidates = weapons.filter(
+    (w) => w.weaponType === weaponType && !excluded.has(w.id)
+  );
+  const cap = mode === "greedy" ? 2 : mode === "fast" ? 3 : 4;
+  return candidates
+    .map((w) => ({
+      w,
+      score: scoreWeaponForPreset(
+        w,
+        preset.requiredSkills,
+        preset.preferredSkills,
+        preset.skillWeights
+      ),
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, cap)
+    .map((x) => x.w);
 }

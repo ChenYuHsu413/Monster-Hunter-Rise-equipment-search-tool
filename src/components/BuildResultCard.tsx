@@ -15,7 +15,10 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SkillSummary } from "./SkillSummary";
 import { DecorationSummary } from "./DecorationSummary";
+import { ProvenanceHint } from "./ProvenanceHint";
 import { formatSlots } from "@/lib/slot-utils";
+import { formatWeaponSpecial, formatWeaponStats } from "@/lib/weapon-utils";
+import { weaponTypes } from "@/lib/data";
 import {
   Lock,
   Ban,
@@ -24,6 +27,7 @@ import {
   Copy,
   CheckCircle2,
   Gem,
+  Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -40,6 +44,8 @@ type Props = {
   isCompared: boolean;
   onFixArmor: (part: ArmorPart, id: string) => void;
   onExcludeArmor: (id: string) => void;
+  onFixWeapon: (id: string) => void;
+  onExcludeWeapon: (id: string) => void;
   onCopy: (summary: string) => void;
   onToggleFavorite: (id: string) => void;
   onToggleCompare: (id: string) => void;
@@ -78,6 +84,10 @@ function PartRow({
             </Badge>
           )}
         </div>
+        <ProvenanceHint
+          seriesName={piece.seriesName}
+          rankLabel={piece.rankLabel}
+        />
         {Object.keys(piece.skills).length > 0 && (
           <div className="truncate text-[11px] text-muted-foreground">
             {Object.entries(piece.skills)
@@ -122,12 +132,19 @@ export function BuildResultCard({
   isCompared,
   onFixArmor,
   onExcludeArmor,
+  onFixWeapon,
+  onExcludeWeapon,
   onCopy,
   onToggleFavorite,
   onToggleCompare,
 }: Props) {
   const s = result.score;
   const missing = Object.entries(result.missingRequiredSkills);
+  const weapon = result.weapon;
+  const weaponTypeLabel = weapon
+    ? weaponTypes.find((t) => t.id === weapon.weaponType)?.nameZh
+    : undefined;
+  const autoEntries = Object.entries(result.autoSkills ?? {});
 
   return (
     <Card className="overflow-hidden">
@@ -201,14 +218,67 @@ export function BuildResultCard({
             >
               武器
             </Badge>
-            <span className="flex-1 text-sm text-muted-foreground">
-              {result.weapon ? result.weapon.nameZh : "（自訂洞數）"}
-            </span>
-            <span className="font-mono text-[10px] text-muted-foreground">
-              {result.weapon
-                ? formatSlots(result.weapon.slots)
-                : weaponSlotsLabel}
-            </span>
+            {weapon ? (
+              <>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="truncate text-sm">{weapon.nameZh}</span>
+                    {weaponTypeLabel && (
+                      <span className="shrink-0 text-[10px] text-muted-foreground">
+                        {weaponTypeLabel}
+                      </span>
+                    )}
+                    <span className="shrink-0 font-mono text-[10px] text-muted-foreground">
+                      {formatSlots(weapon.slots)}
+                    </span>
+                    <Badge
+                      variant={result.weaponFixed ? "default" : "accent"}
+                      className="shrink-0 px-1 py-0 text-[9px]"
+                    >
+                      {result.weaponFixed ? "固定" : "搜尋"}
+                    </Badge>
+                  </div>
+                  <ProvenanceHint
+                    seriesName={weapon.seriesName}
+                    rankLabel={weapon.rankLabel}
+                  />
+                  <div className="truncate text-[11px] text-muted-foreground">
+                    {[formatWeaponStats(weapon), ...formatWeaponSpecial(weapon)].join(
+                      "　"
+                    )}
+                  </div>
+                </div>
+                <div className="flex shrink-0 items-center gap-0.5">
+                  <Button
+                    variant={result.weaponFixed ? "default" : "ghost"}
+                    size="icon"
+                    className="h-7 w-7"
+                    onClick={() => onFixWeapon(weapon.id)}
+                    title={result.weaponFixed ? "已固定此武器" : "固定此武器"}
+                  >
+                    <Lock className="h-3.5 w-3.5" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-7 w-7 text-muted-foreground hover:text-destructive"
+                    onClick={() => onExcludeWeapon(weapon.id)}
+                    title="排除此武器"
+                  >
+                    <Ban className="h-3.5 w-3.5" />
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <>
+                <span className="flex-1 text-sm text-muted-foreground">
+                  （自訂洞數）
+                </span>
+                <span className="font-mono text-[10px] text-muted-foreground">
+                  {weaponSlotsLabel}
+                </span>
+              </>
+            )}
           </div>
           {ARMOR_PARTS.map((part) => (
             <PartRow
@@ -247,6 +317,15 @@ export function BuildResultCard({
           </div>
           <DecorationSummary decorations={result.decorations} />
         </div>
+
+        {/* 自動技能（依武器屬性加入） */}
+        {autoEntries.length > 0 && (
+          <p className="flex items-center gap-1.5 rounded-md bg-accent/10 px-2 py-1 text-[11px] text-accent">
+            <Sparkles className="h-3 w-3 shrink-0" />
+            自動技能：
+            {autoEntries.map(([n, l]) => `${n} Lv${l}`).join("、")}
+          </p>
+        )}
 
         {/* 技能摘要 */}
         <div className="space-y-1">

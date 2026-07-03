@@ -9,7 +9,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 
 type Props = {
   weaponTypes: WeaponType[];
@@ -41,11 +40,8 @@ export function WeaponSelector({ weaponTypes, value, onChange }: Props) {
           ))}
         </SelectContent>
       </Select>
-      <p className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-        <Badge variant="success" className="px-1.5 py-0 text-[10px]">
-          v1
-        </Badge>
-        第一版完整支援太刀，其餘武器沿用同一套架構陸續開放。
+      <p className="text-[11px] text-muted-foreground">
+        標示「即將推出」的武器將陸續開放。
       </p>
     </div>
   );
