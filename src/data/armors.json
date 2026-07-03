@@ -10,7 +10,8 @@
       "精靈加護": 1
     },
     "defense": 1,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_484172842",
@@ -23,7 +24,8 @@
       "翔蟲能手": 1
     },
     "defense": 1,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_315352106",
@@ -36,7 +38,8 @@
       "火場怪力": 1
     },
     "defense": 1,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_280749098",
@@ -49,7 +52,8 @@
       "看破": 1
     },
     "defense": 1,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_380363818",
@@ -62,7 +66,8 @@
       "飛簷走壁": 1
     },
     "defense": 1,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_413580264",
@@ -75,7 +80,8 @@
       "飢餓耐性": 1
     },
     "defense": 1,
-    "seriesName": "皮製"
+    "seriesName": "皮製",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_513194984",
@@ -88,7 +94,8 @@
       "植生學": 1
     },
     "defense": 1,
-    "seriesName": "皮製"
+    "seriesName": "皮製",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_478591976",
@@ -101,7 +108,8 @@
       "地質學": 1
     },
     "defense": 1,
-    "seriesName": "皮製"
+    "seriesName": "皮製",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_309771240",
@@ -114,7 +122,8 @@
       "體力回復量UP": 1
     },
     "defense": 1,
-    "seriesName": "皮製"
+    "seriesName": "皮製",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_275168232",
@@ -127,7 +136,8 @@
       "地質學": 1
     },
     "defense": 1,
-    "seriesName": "皮製"
+    "seriesName": "皮製",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_441539502",
@@ -273,7 +283,8 @@
       "看破": 1
     },
     "defense": 10,
-    "seriesName": "鐮鼬龍"
+    "seriesName": "鐮鼬龍",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1117606894",
@@ -287,7 +298,8 @@
       "回復速度": 1
     },
     "defense": 10,
-    "seriesName": "鐮鼬龍"
+    "seriesName": "鐮鼬龍",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1083003886",
@@ -300,7 +312,8 @@
       "體術": 1
     },
     "defense": 10,
-    "seriesName": "鐮鼬龍"
+    "seriesName": "鐮鼬龍",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1182618606",
@@ -313,7 +326,8 @@
       "看破": 1
     },
     "defense": 10,
-    "seriesName": "鐮鼬龍"
+    "seriesName": "鐮鼬龍",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1148015598",
@@ -326,7 +340,8 @@
       "回復速度": 1
     },
     "defense": 10,
-    "seriesName": "鐮鼬龍"
+    "seriesName": "鐮鼬龍",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1642463383",
@@ -339,7 +354,8 @@
       "冰屬性攻擊強化": 1
     },
     "defense": 10,
-    "seriesName": "眠狗龍"
+    "seriesName": "眠狗龍",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_1742078103",
@@ -352,7 +368,8 @@
       "攻擊": 1
     },
     "defense": 10,
-    "seriesName": "眠狗龍"
+    "seriesName": "眠狗龍",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_1707475095",
@@ -366,7 +383,8 @@
       "冰屬性攻擊強化": 1
     },
     "defense": 10,
-    "seriesName": "眠狗龍"
+    "seriesName": "眠狗龍",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_2075525271",
@@ -379,7 +397,8 @@
       "睡眠耐性": 1
     },
     "defense": 10,
-    "seriesName": "眠狗龍"
+    "seriesName": "眠狗龍",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_2040922263",
@@ -392,7 +411,8 @@
       "攻擊": 1
     },
     "defense": 10,
-    "seriesName": "眠狗龍"
+    "seriesName": "眠狗龍",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_1670422613",
@@ -405,7 +425,8 @@
       "不屈": 1
     },
     "defense": 10,
-    "seriesName": "青熊獸"
+    "seriesName": "青熊獸",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1635819605",
@@ -418,7 +439,8 @@
       "逆襲": 1
     },
     "defense": 10,
-    "seriesName": "青熊獸"
+    "seriesName": "青熊獸",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1735434325",
@@ -431,7 +453,8 @@
       "防禦": 1
     },
     "defense": 10,
-    "seriesName": "青熊獸"
+    "seriesName": "青熊獸",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1700831317",
@@ -444,7 +467,8 @@
       "防禦": 1
     },
     "defense": 10,
-    "seriesName": "青熊獸"
+    "seriesName": "青熊獸",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_2068881493",
@@ -457,7 +481,8 @@
       "佯攻": 1
     },
     "defense": 10,
-    "seriesName": "青熊獸"
+    "seriesName": "青熊獸",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_992545466",
@@ -470,7 +495,8 @@
       "看破": 1
     },
     "defense": 10,
-    "seriesName": "白兔獸"
+    "seriesName": "白兔獸",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_957942458",
@@ -483,7 +509,8 @@
       "滑走強化": 1
     },
     "defense": 10,
-    "seriesName": "白兔獸"
+    "seriesName": "白兔獸",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_1057557178",
@@ -496,7 +523,8 @@
       "冰屬性攻擊強化": 1
     },
     "defense": 10,
-    "seriesName": "白兔獸"
+    "seriesName": "白兔獸",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_1056508602",
@@ -509,7 +537,8 @@
       "體術": 1
     },
     "defense": 10,
-    "seriesName": "白兔獸"
+    "seriesName": "白兔獸",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_1021905594",
@@ -522,7 +551,8 @@
       "看破": 1
     },
     "defense": 10,
-    "seriesName": "白兔獸"
+    "seriesName": "白兔獸",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_9947843",
@@ -601,7 +631,8 @@
       "風壓耐性": 1
     },
     "defense": 18,
-    "seriesName": "鑄鐵"
+    "seriesName": "鑄鐵",
+    "sourceMonster": "冠突龍"
   },
   {
     "id": "armor_3304065",
@@ -614,7 +645,8 @@
       "風壓耐性": 1
     },
     "defense": 18,
-    "seriesName": "鑄鐵"
+    "seriesName": "鑄鐵",
+    "sourceMonster": "冠突龍"
   },
   {
     "id": "armor_102918785",
@@ -627,7 +659,8 @@
       "雷屬性攻擊強化": 2
     },
     "defense": 18,
-    "seriesName": "鑄鐵"
+    "seriesName": "鑄鐵",
+    "sourceMonster": "冠突龍"
   },
   {
     "id": "armor_68315777",
@@ -640,7 +673,8 @@
       "強化持續": 1
     },
     "defense": 18,
-    "seriesName": "鑄鐵"
+    "seriesName": "鑄鐵",
+    "sourceMonster": "冠突龍"
   },
   {
     "id": "armor_436365953",
@@ -654,7 +688,8 @@
       "看破": 1
     },
     "defense": 18,
-    "seriesName": "鑄鐵"
+    "seriesName": "鑄鐵",
+    "sourceMonster": "冠突龍"
   },
   {
     "id": "armor_248937060",
@@ -735,7 +770,8 @@
       "龍耐性": 2
     },
     "defense": 18,
-    "seriesName": "死神"
+    "seriesName": "死神",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_136559096",
@@ -748,7 +784,8 @@
       "高速變形": 1
     },
     "defense": 18,
-    "seriesName": "死神"
+    "seriesName": "死神",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_236173816",
@@ -761,7 +798,8 @@
       "精神抖擻": 1
     },
     "defense": 18,
-    "seriesName": "死神"
+    "seriesName": "死神",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_201570808",
@@ -774,7 +812,8 @@
       "龍耐性": 1
     },
     "defense": 18,
-    "seriesName": "死神"
+    "seriesName": "死神",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_66304504",
@@ -787,7 +826,8 @@
       "高速變形": 1
     },
     "defense": 18,
-    "seriesName": "死神"
+    "seriesName": "死神",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_904812990",
@@ -1004,7 +1044,8 @@
     "rankLabel": "村",
     "slots": [],
     "skills": {},
-    "defense": 12
+    "defense": 12,
+    "sourceMonster": "鐮鼬龍王"
   },
   {
     "id": "armor_975050762",
@@ -1028,7 +1069,8 @@
     "skills": {
       "體力回復量UP": 1
     },
-    "defense": 12
+    "defense": 12,
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1073616906",
@@ -1053,7 +1095,8 @@
       "雷耐性": 1
     },
     "defense": 12,
-    "seriesName": "高貴"
+    "seriesName": "高貴",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_870193162",
@@ -1066,7 +1109,8 @@
       "雷耐性": 1
     },
     "defense": 12,
-    "seriesName": "高貴"
+    "seriesName": "高貴",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_633913288",
@@ -1275,7 +1319,8 @@
       "昏厥耐性": 1
     },
     "defense": 22,
-    "seriesName": "天狗獸"
+    "seriesName": "天狗獸",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1431682520",
@@ -1288,7 +1333,8 @@
       "廣域化": 1
     },
     "defense": 22,
-    "seriesName": "天狗獸"
+    "seriesName": "天狗獸",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_725990872",
@@ -1301,7 +1347,8 @@
       "昏厥耐性": 1
     },
     "defense": 22,
-    "seriesName": "天狗獸"
+    "seriesName": "天狗獸",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_691387864",
@@ -1314,7 +1361,8 @@
       "道具使用強化": 1
     },
     "defense": 22,
-    "seriesName": "天狗獸"
+    "seriesName": "天狗獸",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_791002584",
@@ -1327,7 +1375,8 @@
       "精神抖擻": 1
     },
     "defense": 22,
-    "seriesName": "天狗獸"
+    "seriesName": "天狗獸",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1360027038",
@@ -1340,7 +1389,8 @@
       "火屬性攻擊強化": 1
     },
     "defense": 16,
-    "seriesName": "傘鳥"
+    "seriesName": "傘鳥",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1459641758",
@@ -1353,7 +1403,8 @@
       "收刀術": 1
     },
     "defense": 16,
-    "seriesName": "傘鳥"
+    "seriesName": "傘鳥",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1458593182",
@@ -1366,7 +1417,8 @@
       "火屬性攻擊強化": 1
     },
     "defense": 16,
-    "seriesName": "傘鳥"
+    "seriesName": "傘鳥",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1423990174",
@@ -1379,7 +1431,8 @@
       "回復速度": 1
     },
     "defense": 16,
-    "seriesName": "傘鳥"
+    "seriesName": "傘鳥",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_718298526",
@@ -1392,7 +1445,8 @@
       "火屬性攻擊強化": 1
     },
     "defense": 16,
-    "seriesName": "傘鳥"
+    "seriesName": "傘鳥",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1556282716",
@@ -1405,7 +1459,8 @@
       "快吃": 1
     },
     "defense": 18,
-    "seriesName": "河童蛙"
+    "seriesName": "河童蛙",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1387461980",
@@ -1418,7 +1473,8 @@
       "通常彈･連射箭強化": 1
     },
     "defense": 18,
-    "seriesName": "河童蛙"
+    "seriesName": "河童蛙",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1352858972",
@@ -1431,7 +1487,8 @@
       "特殊射擊強化": 1
     },
     "defense": 18,
-    "seriesName": "河童蛙"
+    "seriesName": "河童蛙",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1452473692",
@@ -1444,7 +1501,8 @@
       "火場怪力": 1
     },
     "defense": 18,
-    "seriesName": "河童蛙"
+    "seriesName": "河童蛙",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1417870684",
@@ -1457,7 +1515,8 @@
       "飢餓耐性": 1
     },
     "defense": 18,
-    "seriesName": "河童蛙"
+    "seriesName": "河童蛙",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1585290514",
@@ -1470,7 +1529,8 @@
       "睡眠屬性強化": 1
     },
     "defense": 22,
-    "seriesName": "人魚龍"
+    "seriesName": "人魚龍",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1550687506",
@@ -1483,7 +1543,8 @@
       "道具使用強化": 1
     },
     "defense": 22,
-    "seriesName": "人魚龍"
+    "seriesName": "人魚龍",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1381866770",
@@ -1497,7 +1558,8 @@
       "精靈加護": 1
     },
     "defense": 22,
-    "seriesName": "人魚龍"
+    "seriesName": "人魚龍",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1347263762",
@@ -1510,7 +1572,8 @@
       "炸彈客": 1
     },
     "defense": 22,
-    "seriesName": "人魚龍"
+    "seriesName": "人魚龍",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1446878482",
@@ -1523,7 +1586,8 @@
       "精靈加護": 1
     },
     "defense": 22,
-    "seriesName": "人魚龍"
+    "seriesName": "人魚龍",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1256440579",
@@ -1536,7 +1600,8 @@
       "飛身躍入": 1
     },
     "defense": 14,
-    "seriesName": "丸鳥偽裝"
+    "seriesName": "丸鳥偽裝",
+    "sourceMonster": "丸鳥"
   },
   {
     "id": "armor_1956537025",
@@ -1549,7 +1614,8 @@
       "滿足感": 1
     },
     "defense": 14,
-    "seriesName": "垂皮龍"
+    "seriesName": "垂皮龍",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1250845377",
@@ -1562,7 +1628,8 @@
       "滿足感": 1
     },
     "defense": 14,
-    "seriesName": "垂皮龍"
+    "seriesName": "垂皮龍",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1984496263",
@@ -1574,7 +1641,8 @@
     "skills": {
       "貫通彈･貫通箭強化": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1949893255",
@@ -1587,7 +1655,8 @@
       "砲術": 1,
       "昏厥耐性": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1244201607",
@@ -1599,7 +1668,8 @@
     "skills": {
       "砲術": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1209598599",
@@ -1611,7 +1681,8 @@
     "skills": {
       "耐震": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1309213319",
@@ -1623,7 +1694,8 @@
     "skills": {
       "耐震": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1977328197",
@@ -1635,7 +1707,8 @@
     "skills": {
       "攻擊": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_1237033541",
@@ -1647,7 +1720,8 @@
     "skills": {
       "騎乘名人": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_1941324315",
@@ -1660,7 +1734,8 @@
       "後座力減輕": 1
     },
     "defense": 14,
-    "seriesName": "飛甲蟲"
+    "seriesName": "飛甲蟲",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1906721307",
@@ -1673,7 +1748,8 @@
       "麻痺屬性強化": 1
     },
     "defense": 14,
-    "seriesName": "飛甲蟲"
+    "seriesName": "飛甲蟲",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_2006336027",
@@ -1686,7 +1762,8 @@
       "迴避性能": 1
     },
     "defense": 14,
-    "seriesName": "飛甲蟲"
+    "seriesName": "飛甲蟲",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1971733019",
@@ -1699,7 +1776,8 @@
       "麻痺屬性強化": 1
     },
     "defense": 14,
-    "seriesName": "飛甲蟲"
+    "seriesName": "飛甲蟲",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1266041371",
@@ -1712,7 +1790,8 @@
       "後座力減輕": 1
     },
     "defense": 14,
-    "seriesName": "飛甲蟲"
+    "seriesName": "飛甲蟲",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_2103501273",
@@ -1725,7 +1804,8 @@
       "鈍器能手": 1
     },
     "defense": 14,
-    "seriesName": "野豬偽裝"
+    "seriesName": "野豬偽裝",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_2131984799",
@@ -1737,7 +1817,8 @@
     "skills": {
       "風壓耐性": 2
     },
-    "defense": 18
+    "defense": 18,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_2097381791",
@@ -1749,7 +1830,8 @@
     "skills": {
       "道具使用強化": 1
     },
-    "defense": 18
+    "defense": 18,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_2096333215",
@@ -1762,7 +1844,8 @@
       "會心擊【屬性】": 1,
       "風壓耐性": 1
     },
-    "defense": 18
+    "defense": 18,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_1927512479",
@@ -1774,7 +1857,8 @@
     "skills": {
       "會心擊【屬性】": 1
     },
-    "defense": 18
+    "defense": 18,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_1892909471",
@@ -1786,7 +1870,8 @@
     "skills": {
       "精靈加護": 1
     },
-    "defense": 18
+    "defense": 18,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_2025726301",
@@ -1798,7 +1883,8 @@
     "skills": {
       "水耐性": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_2090738013",
@@ -1810,7 +1896,8 @@
     "skills": {
       "佯攻": 1
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1921917277",
@@ -1822,7 +1909,8 @@
     "skills": {
       "水耐性": 2
     },
-    "defense": 14
+    "defense": 14,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_2053685523",
@@ -1834,7 +1922,8 @@
     "skills": {
       "火耐性": 2
     },
-    "defense": 18
+    "defense": 18,
+    "sourceMonster": "熔岩獸"
   },
   {
     "id": "armor_2118697235",
@@ -1846,7 +1935,8 @@
     "skills": {
       "火耐性": 1
     },
-    "defense": 18
+    "defense": 18,
+    "sourceMonster": "熔岩獸"
   },
   {
     "id": "armor_1714118865",
@@ -1859,7 +1949,8 @@
       "迴避距離UP": 1
     },
     "defense": 16,
-    "seriesName": "毒狗龍"
+    "seriesName": "毒狗龍",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_1679515857",
@@ -1872,7 +1963,8 @@
       "毒屬性強化": 1
     },
     "defense": 16,
-    "seriesName": "毒狗龍"
+    "seriesName": "毒狗龍",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_2047566033",
@@ -1885,7 +1977,8 @@
       "裝填擴充": 1
     },
     "defense": 16,
-    "seriesName": "毒狗龍"
+    "seriesName": "毒狗龍",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_2046517457",
@@ -1898,7 +1991,8 @@
       "毒屬性強化": 1
     },
     "defense": 16,
-    "seriesName": "毒狗龍"
+    "seriesName": "毒狗龍",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_2146132177",
@@ -1911,7 +2005,8 @@
       "迴避距離UP": 1
     },
     "defense": 16,
-    "seriesName": "毒狗龍"
+    "seriesName": "毒狗龍",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_1833123947",
@@ -1924,7 +2019,8 @@
       "麻痺屬性強化": 1
     },
     "defense": 20,
-    "seriesName": "赤甲獸"
+    "seriesName": "赤甲獸",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1664303211",
@@ -1937,7 +2033,8 @@
       "高速變形": 1
     },
     "defense": 20,
-    "seriesName": "赤甲獸"
+    "seriesName": "赤甲獸",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1629700203",
@@ -1950,7 +2047,8 @@
       "迴避距離UP": 1
     },
     "defense": 20,
-    "seriesName": "赤甲獸"
+    "seriesName": "赤甲獸",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1729314923",
@@ -1963,7 +2061,8 @@
       "高速變形": 1
     },
     "defense": 20,
-    "seriesName": "赤甲獸"
+    "seriesName": "赤甲獸",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1694711915",
@@ -1976,7 +2075,8 @@
       "迴避距離UP": 1
     },
     "defense": 20,
-    "seriesName": "赤甲獸"
+    "seriesName": "赤甲獸",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1761468457",
@@ -1989,7 +2089,8 @@
       "水屬性攻擊強化": 1
     },
     "defense": 18,
-    "seriesName": "水獸"
+    "seriesName": "水獸",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1861083177",
@@ -2002,7 +2103,8 @@
       "耐力急速回復": 1
     },
     "defense": 18,
-    "seriesName": "水獸"
+    "seriesName": "水獸",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1826480169",
@@ -2015,7 +2117,8 @@
       "跑者": 1
     },
     "defense": 18,
-    "seriesName": "水獸"
+    "seriesName": "水獸",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1657659433",
@@ -2028,7 +2131,8 @@
       "水屬性攻擊強化": 2
     },
     "defense": 18,
-    "seriesName": "水獸"
+    "seriesName": "水獸",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1623056425",
@@ -2041,7 +2145,8 @@
       "強化持續": 1
     },
     "defense": 18,
-    "seriesName": "水獸"
+    "seriesName": "水獸",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1789429743",
@@ -2054,7 +2159,8 @@
       "攻擊": 1
     },
     "defense": 18,
-    "seriesName": "土砂龍"
+    "seriesName": "土砂龍",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1754826735",
@@ -2068,7 +2174,8 @@
       "防禦": 1
     },
     "defense": 18,
-    "seriesName": "土砂龍"
+    "seriesName": "土砂龍",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1854441455",
@@ -2081,7 +2188,8 @@
       "滑走強化": 1
     },
     "defense": 18,
-    "seriesName": "土砂龍"
+    "seriesName": "土砂龍",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1819838447",
@@ -2094,7 +2202,8 @@
       "防禦性能": 1
     },
     "defense": 18,
-    "seriesName": "土砂龍"
+    "seriesName": "土砂龍",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1651017711",
@@ -2107,7 +2216,8 @@
       "防禦性能": 1
     },
     "defense": 18,
-    "seriesName": "土砂龍"
+    "seriesName": "土砂龍",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_341518253",
@@ -2120,7 +2230,8 @@
       "體力回復量UP": 1
     },
     "defense": 16,
-    "seriesName": "奇怪龍"
+    "seriesName": "奇怪龍",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1783310253",
@@ -2133,7 +2244,8 @@
       "飛簷走壁": 1
     },
     "defense": 16,
-    "seriesName": "奇怪龍"
+    "seriesName": "奇怪龍",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1748707245",
@@ -2148,7 +2260,8 @@
       "雷屬性攻擊強化": 1
     },
     "defense": 16,
-    "seriesName": "奇怪龍"
+    "seriesName": "奇怪龍",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1848321965",
@@ -2162,7 +2275,8 @@
       "KO術": 1
     },
     "defense": 16,
-    "seriesName": "奇怪龍"
+    "seriesName": "奇怪龍",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1813718957",
@@ -2175,7 +2289,8 @@
       "回復速度": 1
     },
     "defense": 16,
-    "seriesName": "奇怪龍"
+    "seriesName": "奇怪龍",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_297821985",
@@ -2188,7 +2303,8 @@
       "拔刀術【技】": 1
     },
     "defense": 20,
-    "seriesName": "冰牙龍"
+    "seriesName": "冰牙龍",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_397436705",
@@ -2201,7 +2317,8 @@
       "收刀術": 1
     },
     "defense": 20,
-    "seriesName": "冰牙龍"
+    "seriesName": "冰牙龍",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_362833697",
@@ -2214,7 +2331,8 @@
       "看破": 1
     },
     "defense": 20,
-    "seriesName": "冰牙龍"
+    "seriesName": "冰牙龍",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_1804625697",
@@ -2227,7 +2345,8 @@
       "看破": 2
     },
     "defense": 20,
-    "seriesName": "冰牙龍"
+    "seriesName": "冰牙龍",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_1770022689",
@@ -2240,7 +2359,8 @@
       "收刀術": 1
     },
     "defense": 20,
-    "seriesName": "冰牙龍"
+    "seriesName": "冰牙龍",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_326305511",
@@ -2253,7 +2373,8 @@
       "屬性異常狀態的耐性": 1
     },
     "defense": 22,
-    "seriesName": "雌火龍"
+    "seriesName": "雌火龍",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_291702503",
@@ -2266,7 +2387,8 @@
       "體力回復量UP": 1
     },
     "defense": 22,
-    "seriesName": "雌火龍"
+    "seriesName": "雌火龍",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_391317223",
@@ -2279,7 +2401,8 @@
       "屬性異常狀態的耐性": 1
     },
     "defense": 22,
-    "seriesName": "雌火龍"
+    "seriesName": "雌火龍",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_356714215",
@@ -2293,7 +2416,8 @@
       "廣域化": 1
     },
     "defense": 22,
-    "seriesName": "雌火龍"
+    "seriesName": "雌火龍",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_1798506215",
@@ -2306,7 +2430,8 @@
       "滿足感": 1
     },
     "defense": 22,
-    "seriesName": "雌火龍"
+    "seriesName": "雌火龍",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_71665151",
@@ -2319,7 +2444,8 @@
       "防禦": 2
     },
     "defense": 22,
-    "seriesName": "岩龍"
+    "seriesName": "岩龍",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_439715327",
@@ -2332,7 +2458,8 @@
       "防禦性能": 1
     },
     "defense": 22,
-    "seriesName": "岩龍"
+    "seriesName": "岩龍",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_405112319",
@@ -2346,7 +2473,8 @@
       "砥石使用高速化": 1
     },
     "defense": 22,
-    "seriesName": "岩龍"
+    "seriesName": "岩龍",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_504727039",
@@ -2360,7 +2488,8 @@
       "防禦": 1
     },
     "defense": 22,
-    "seriesName": "岩龍"
+    "seriesName": "岩龍",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_470124031",
@@ -2374,7 +2503,8 @@
       "防禦": 1
     },
     "defense": 22,
-    "seriesName": "岩龍"
+    "seriesName": "岩龍",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_56452401",
@@ -2387,7 +2517,8 @@
       "精神抖擻": 1
     },
     "defense": 16,
-    "seriesName": "搔鳥"
+    "seriesName": "搔鳥",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_21849393",
@@ -2400,7 +2531,8 @@
       "吹笛名人": 1
     },
     "defense": 16,
-    "seriesName": "搔鳥"
+    "seriesName": "搔鳥",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_121464113",
@@ -2413,7 +2545,8 @@
       "KO術": 1
     },
     "defense": 16,
-    "seriesName": "搔鳥"
+    "seriesName": "搔鳥",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_86861105",
@@ -2426,7 +2559,8 @@
       "奪取耐力": 1
     },
     "defense": 16,
-    "seriesName": "搔鳥"
+    "seriesName": "搔鳥",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_454911281",
@@ -2440,7 +2574,8 @@
       "看破": 1
     },
     "defense": 16,
-    "seriesName": "搔鳥"
+    "seriesName": "搔鳥",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_218629367",
@@ -2453,7 +2588,8 @@
       "特殊射擊強化": 1
     },
     "defense": 20,
-    "seriesName": "毒妖鳥"
+    "seriesName": "毒妖鳥",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_217580791",
@@ -2466,7 +2602,8 @@
       "體術": 1
     },
     "defense": 20,
-    "seriesName": "毒妖鳥"
+    "seriesName": "毒妖鳥",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_48760055",
@@ -2479,7 +2616,8 @@
       "彈藥節約": 1
     },
     "defense": 20,
-    "seriesName": "毒妖鳥"
+    "seriesName": "毒妖鳥",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_14157047",
@@ -2492,7 +2630,8 @@
       "毒屬性強化": 2
     },
     "defense": 20,
-    "seriesName": "毒妖鳥"
+    "seriesName": "毒妖鳥",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_113771767",
@@ -2505,7 +2644,8 @@
       "體術": 1
     },
     "defense": 20,
-    "seriesName": "毒妖鳥"
+    "seriesName": "毒妖鳥",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_161223850",
@@ -2518,7 +2658,8 @@
       "跳躍鐵人": 1
     },
     "defense": 20,
-    "seriesName": "飛雷龍"
+    "seriesName": "飛雷龍",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_260838570",
@@ -2531,7 +2672,8 @@
       "看破": 1
     },
     "defense": 20,
-    "seriesName": "飛雷龍"
+    "seriesName": "飛雷龍",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_226235562",
@@ -2544,7 +2686,8 @@
       "體術": 1
     },
     "defense": 20,
-    "seriesName": "飛雷龍"
+    "seriesName": "飛雷龍",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_57414826",
@@ -2557,7 +2700,8 @@
       "雷屬性攻擊強化": 2
     },
     "defense": 20,
-    "seriesName": "飛雷龍"
+    "seriesName": "飛雷龍",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_22811818",
@@ -2571,7 +2715,8 @@
       "看破": 1
     },
     "defense": 20,
-    "seriesName": "飛雷龍"
+    "seriesName": "飛雷龍",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_1007758176",
@@ -2584,7 +2729,8 @@
       "滑走強化": 1
     },
     "defense": 14,
-    "seriesName": "狗龍偽裝"
+    "seriesName": "狗龍偽裝",
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_651930232",
@@ -2662,7 +2808,8 @@
       "睡眠耐性": 1
     },
     "defense": 24,
-    "seriesName": "魚鱗"
+    "seriesName": "魚鱗",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_242293306",
@@ -2675,7 +2822,8 @@
       "水屬性攻擊強化": 2
     },
     "defense": 24,
-    "seriesName": "魚鱗"
+    "seriesName": "魚鱗",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_207690298",
@@ -2688,7 +2836,8 @@
       "飛身躍入": 1
     },
     "defense": 24,
-    "seriesName": "魚鱗"
+    "seriesName": "魚鱗",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_38869562",
@@ -2701,7 +2850,8 @@
       "睡眠耐性": 1
     },
     "defense": 24,
-    "seriesName": "魚鱗"
+    "seriesName": "魚鱗",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_4266554",
@@ -2714,7 +2864,8 @@
       "快吃": 1
     },
     "defense": 24,
-    "seriesName": "魚鱗"
+    "seriesName": "魚鱗",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_827038002",
@@ -3129,7 +3280,8 @@
       "精靈加護": 1
     },
     "defense": 24,
-    "seriesName": "歌德"
+    "seriesName": "歌德",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_731586074",
@@ -3142,7 +3294,8 @@
       "爆破屬性強化": 1
     },
     "defense": 24,
-    "seriesName": "歌德"
+    "seriesName": "歌德",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_696983066",
@@ -3155,7 +3308,8 @@
       "精靈加護": 1
     },
     "defense": 24,
-    "seriesName": "歌德"
+    "seriesName": "歌德",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_796597786",
@@ -3168,7 +3322,8 @@
       "破壞王": 1
     },
     "defense": 24,
-    "seriesName": "歌德"
+    "seriesName": "歌德",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_761994778",
@@ -3181,7 +3336,8 @@
       "爆破屬性強化": 1
     },
     "defense": 24,
-    "seriesName": "歌德"
+    "seriesName": "歌德",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1541069974",
@@ -3194,7 +3350,8 @@
       "挑戰者": 1
     },
     "defense": 30,
-    "seriesName": "雪鬼獸"
+    "seriesName": "雪鬼獸",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1506466966",
@@ -3207,7 +3364,8 @@
       "拔刀術【技】": 1
     },
     "defense": 30,
-    "seriesName": "雪鬼獸"
+    "seriesName": "雪鬼獸",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1606081686",
@@ -3221,7 +3379,8 @@
       "拔刀術【力】": 1
     },
     "defense": 30,
-    "seriesName": "雪鬼獸"
+    "seriesName": "雪鬼獸",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1571478678",
@@ -3235,7 +3394,8 @@
       "怨恨": 1
     },
     "defense": 30,
-    "seriesName": "雪鬼獸"
+    "seriesName": "雪鬼獸",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1402657942",
@@ -3248,7 +3408,8 @@
       "挑戰者": 1
     },
     "defense": 30,
-    "seriesName": "雪鬼獸"
+    "seriesName": "雪鬼獸",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1167424596",
@@ -3261,7 +3422,8 @@
       "高速變形": 1
     },
     "defense": 30,
-    "seriesName": "泥翁龍"
+    "seriesName": "泥翁龍",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1535474772",
@@ -3274,7 +3436,8 @@
       "利刃": 1
     },
     "defense": 30,
-    "seriesName": "泥翁龍"
+    "seriesName": "泥翁龍",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1500871764",
@@ -3288,7 +3451,8 @@
       "迴避性能": 1
     },
     "defense": 30,
-    "seriesName": "泥翁龍"
+    "seriesName": "泥翁龍",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1600486484",
@@ -3301,7 +3465,8 @@
       "強化持續": 1
     },
     "defense": 30,
-    "seriesName": "泥翁龍"
+    "seriesName": "泥翁龍",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1565883476",
@@ -3314,7 +3479,8 @@
       "利刃": 1
     },
     "defense": 30,
-    "seriesName": "泥翁龍"
+    "seriesName": "泥翁龍",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_370526051",
@@ -3327,7 +3493,8 @@
       "迴避性能": 1
     },
     "defense": 26,
-    "seriesName": "迅龍"
+    "seriesName": "迅龍",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_335923043",
@@ -3340,7 +3507,8 @@
       "看破": 1
     },
     "defense": 26,
-    "seriesName": "迅龍"
+    "seriesName": "迅龍",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_1811269475",
@@ -3354,7 +3522,8 @@
       "迴避距離UP": 1
     },
     "defense": 26,
-    "seriesName": "迅龍"
+    "seriesName": "迅龍",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_1776666467",
@@ -3367,7 +3536,8 @@
       "迴避距離UP": 1
     },
     "defense": 26,
-    "seriesName": "迅龍"
+    "seriesName": "迅龍",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_1876281187",
@@ -3381,7 +3551,8 @@
       "看破": 1
     },
     "defense": 26,
-    "seriesName": "迅龍"
+    "seriesName": "迅龍",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_489531045",
@@ -3395,7 +3566,8 @@
       "火屬性攻擊強化": 1
     },
     "defense": 28,
-    "seriesName": "火龍"
+    "seriesName": "火龍",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_320710309",
@@ -3409,7 +3581,8 @@
       "風壓耐性": 1
     },
     "defense": 28,
-    "seriesName": "火龍"
+    "seriesName": "火龍",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_286107301",
@@ -3422,7 +3595,8 @@
       "攻擊": 1
     },
     "defense": 28,
-    "seriesName": "火龍"
+    "seriesName": "火龍",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_285058725",
@@ -3436,7 +3610,8 @@
       "風壓耐性": 1
     },
     "defense": 28,
-    "seriesName": "火龍"
+    "seriesName": "火龍",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_384673445",
@@ -3450,7 +3625,8 @@
       "火屬性攻擊強化": 1
     },
     "defense": 28,
-    "seriesName": "火龍"
+    "seriesName": "火龍",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_416827003",
@@ -3464,7 +3640,8 @@
       "快吃": 1
     },
     "defense": 30,
-    "seriesName": "轟龍"
+    "seriesName": "轟龍",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_516441723",
@@ -3478,7 +3655,8 @@
       "鈍器能手": 1
     },
     "defense": 30,
-    "seriesName": "轟龍"
+    "seriesName": "轟龍",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_481838715",
@@ -3491,7 +3669,8 @@
       "鈍器能手": 2
     },
     "defense": 30,
-    "seriesName": "轟龍"
+    "seriesName": "轟龍",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_313017979",
@@ -3504,7 +3683,8 @@
       "耳塞": 1
     },
     "defense": 30,
-    "seriesName": "轟龍"
+    "seriesName": "轟龍",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_278414971",
@@ -3517,7 +3697,8 @@
       "快吃": 1
     },
     "defense": 30,
-    "seriesName": "轟龍"
+    "seriesName": "轟龍",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_445310521",
@@ -3531,7 +3712,8 @@
       "耐力急速回復": 1
     },
     "defense": 30,
-    "seriesName": "角龍"
+    "seriesName": "角龍",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_410707513",
@@ -3544,7 +3726,8 @@
       "防禦性能": 1
     },
     "defense": 30,
-    "seriesName": "角龍"
+    "seriesName": "角龍",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_510322233",
@@ -3557,7 +3740,8 @@
       "攻擊守勢": 1
     },
     "defense": 30,
-    "seriesName": "角龍"
+    "seriesName": "角龍",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_475719225",
@@ -3570,7 +3754,8 @@
       "耐力急速回復": 1
     },
     "defense": 30,
-    "seriesName": "角龍"
+    "seriesName": "角龍",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_306898489",
@@ -3584,7 +3769,8 @@
       "攻擊守勢": 1
     },
     "defense": 30,
-    "seriesName": "角龍"
+    "seriesName": "角龍",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_133178813",
@@ -3598,7 +3784,8 @@
       "看破": 1
     },
     "defense": 28,
-    "seriesName": "雷狼龍"
+    "seriesName": "雷狼龍",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_98575805",
@@ -3612,7 +3799,8 @@
       "看破": 1
     },
     "defense": 28,
-    "seriesName": "雷狼龍"
+    "seriesName": "雷狼龍",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_466625981",
@@ -3625,7 +3813,8 @@
       "體術": 1
     },
     "defense": 28,
-    "seriesName": "雷狼龍"
+    "seriesName": "雷狼龍",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_432022973",
@@ -3638,7 +3827,8 @@
       "力量解放": 1
     },
     "defense": 28,
-    "seriesName": "雷狼龍"
+    "seriesName": "雷狼龍",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_531637693",
@@ -3651,7 +3841,8 @@
       "體術": 2
     },
     "defense": 28,
-    "seriesName": "雷狼龍"
+    "seriesName": "雷狼龍",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_189707368",
@@ -3665,7 +3856,8 @@
       "KO術": 1
     },
     "defense": 26,
-    "seriesName": "蠻顎龍"
+    "seriesName": "蠻顎龍",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_155104360",
@@ -3679,7 +3871,8 @@
       "跑者": 1
     },
     "defense": 26,
-    "seriesName": "蠻顎龍"
+    "seriesName": "蠻顎龍",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_254719080",
@@ -3693,7 +3886,8 @@
       "攻擊": 1
     },
     "defense": 26,
-    "seriesName": "蠻顎龍"
+    "seriesName": "蠻顎龍",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_220116072",
@@ -3706,7 +3900,8 @@
       "攻擊": 2
     },
     "defense": 26,
-    "seriesName": "蠻顎龍"
+    "seriesName": "蠻顎龍",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_51295336",
@@ -3719,7 +3914,8 @@
       "跑者": 1
     },
     "defense": 26,
-    "seriesName": "蠻顎龍"
+    "seriesName": "蠻顎龍",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_816573420",
@@ -3746,7 +3942,8 @@
       "逆襲": 1
     },
     "defense": 28,
-    "seriesName": "禍鎧"
+    "seriesName": "禍鎧",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1064200932",
@@ -3760,7 +3957,8 @@
       "怨恨": 1
     },
     "defense": 28,
-    "seriesName": "禍鎧"
+    "seriesName": "禍鎧",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1029597924",
@@ -3773,7 +3971,8 @@
       "鬼火纏身": 1
     },
     "defense": 28,
-    "seriesName": "禍鎧"
+    "seriesName": "禍鎧",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_860777188",
@@ -3787,7 +3986,8 @@
       "逆襲": 2
     },
     "defense": 28,
-    "seriesName": "禍鎧"
+    "seriesName": "禍鎧",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_826174180",
@@ -3800,7 +4000,8 @@
       "怨恨": 1
     },
     "defense": 28,
-    "seriesName": "禍鎧"
+    "seriesName": "禍鎧",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_546720318",
@@ -3813,7 +4014,8 @@
       "水屬性攻擊強化": 1
     },
     "defense": 26,
-    "seriesName": "泡狐龍"
+    "seriesName": "泡狐龍",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_646335038",
@@ -3827,7 +4029,8 @@
       "水屬性攻擊強化": 1
     },
     "defense": 26,
-    "seriesName": "泡狐龍"
+    "seriesName": "泡狐龍",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_611732030",
@@ -3841,7 +4044,8 @@
       "滿足感": 1
     },
     "defense": 26,
-    "seriesName": "泡狐龍"
+    "seriesName": "泡狐龍",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_979782206",
@@ -3854,7 +4058,8 @@
       "滿足感": 1
     },
     "defense": 26,
-    "seriesName": "泡狐龍"
+    "seriesName": "泡狐龍",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_945179198",
@@ -3867,7 +4072,8 @@
       "泡沫之舞": 1
     },
     "defense": 26,
-    "seriesName": "泡狐龍"
+    "seriesName": "泡狐龍",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_574679548",
@@ -4235,7 +4441,8 @@
       "死裡逃生": 1
     },
     "defense": 30,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_498944971",
@@ -4252,7 +4459,8 @@
       "看破": 1
     },
     "defense": 30,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_330124235",
@@ -4268,7 +4476,8 @@
       "火場怪力": 1
     },
     "defense": 30,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_295521227",
@@ -4285,7 +4494,8 @@
       "看破": 1
     },
     "defense": 30,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_395135947",
@@ -4301,7 +4511,8 @@
       "死裡逃生": 1
     },
     "defense": 30,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_427813769",
@@ -4318,7 +4529,8 @@
       "飢餓耐性": 1
     },
     "defense": 30,
-    "seriesName": "皮製S"
+    "seriesName": "皮製S",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_527428489",
@@ -4333,7 +4545,8 @@
       "植生學": 1
     },
     "defense": 30,
-    "seriesName": "皮製S"
+    "seriesName": "皮製S",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_492825481",
@@ -4350,7 +4563,8 @@
       "特殊射擊強化": 1
     },
     "defense": 30,
-    "seriesName": "皮製S"
+    "seriesName": "皮製S",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_324004745",
@@ -4366,7 +4580,8 @@
       "飢餓耐性": 2
     },
     "defense": 30,
-    "seriesName": "皮製S"
+    "seriesName": "皮製S",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_289401737",
@@ -4381,7 +4596,8 @@
       "地質學": 1
     },
     "defense": 30,
-    "seriesName": "皮製S"
+    "seriesName": "皮製S",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_455773007",
@@ -4479,7 +4695,8 @@
       "道具使用強化": 1
     },
     "defense": 32,
-    "seriesName": "獵人S"
+    "seriesName": "獵人S",
+    "sourceMonster": "凶豺龍"
   },
   {
     "id": "armor_81079053",
@@ -4495,7 +4712,8 @@
       "匠": 1
     },
     "defense": 32,
-    "seriesName": "獵人S"
+    "seriesName": "獵人S",
+    "sourceMonster": "凶豺龍"
   },
   {
     "id": "armor_449129229",
@@ -4510,7 +4728,8 @@
       "收刀術": 1
     },
     "defense": 32,
-    "seriesName": "獵人S"
+    "seriesName": "獵人S",
+    "sourceMonster": "凶豺龍"
   },
   {
     "id": "armor_414526221",
@@ -4526,7 +4745,8 @@
       "昏厥耐性": 2
     },
     "defense": 32,
-    "seriesName": "獵人S"
+    "seriesName": "獵人S",
+    "sourceMonster": "凶豺龍"
   },
   {
     "id": "armor_514140941",
@@ -4542,7 +4762,8 @@
       "攻擊": 2
     },
     "defense": 32,
-    "seriesName": "獵人S"
+    "seriesName": "獵人S",
+    "sourceMonster": "凶豺龍"
   },
   {
     "id": "armor_23673568",
@@ -4727,7 +4948,8 @@
     "skills": {
       "最愛菇類": 2
     },
-    "defense": 40
+    "defense": 40,
+    "sourceMonster": "鐮鼬龍王"
   },
   {
     "id": "armor_620185643",
@@ -4757,7 +4979,8 @@
     "skills": {
       "體力回復量UP": 2
     },
-    "defense": 40
+    "defense": 40,
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_953632811",
@@ -4784,7 +5007,8 @@
       "體力回復量UP": 1
     },
     "defense": 40,
-    "seriesName": "高貴S"
+    "seriesName": "高貴S",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1018644523",
@@ -4800,7 +5024,8 @@
       "毒耐性": 1
     },
     "defense": 40,
-    "seriesName": "高貴S"
+    "seriesName": "高貴S",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_648146921",
@@ -4815,7 +5040,8 @@
       "毒屬性強化": 2
     },
     "defense": 32,
-    "seriesName": "毒蠍S"
+    "seriesName": "毒蠍S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_613543913",
@@ -4830,7 +5056,8 @@
       "力量解放": 1
     },
     "defense": 32,
-    "seriesName": "毒蠍S"
+    "seriesName": "毒蠍S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_981594089",
@@ -4847,7 +5074,8 @@
       "毒耐性": 1
     },
     "defense": 32,
-    "seriesName": "毒蠍S"
+    "seriesName": "毒蠍S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_946991081",
@@ -4860,7 +5088,8 @@
       "弱點特效": 2
     },
     "defense": 32,
-    "seriesName": "毒蠍S"
+    "seriesName": "毒蠍S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1046605801",
@@ -4877,7 +5106,8 @@
       "心眼": 1
     },
     "defense": 32,
-    "seriesName": "毒蠍S"
+    "seriesName": "毒蠍S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_542937007",
@@ -4892,7 +5122,8 @@
       "毒屬性強化": 2
     },
     "defense": 32,
-    "seriesName": "毒蛛S"
+    "seriesName": "毒蛛S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_642551727",
@@ -4907,7 +5138,8 @@
       "力量解放": 1
     },
     "defense": 32,
-    "seriesName": "毒蛛S"
+    "seriesName": "毒蛛S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_607948719",
@@ -4924,7 +5156,8 @@
       "毒耐性": 1
     },
     "defense": 32,
-    "seriesName": "毒蛛S"
+    "seriesName": "毒蛛S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_975998895",
@@ -4937,7 +5170,8 @@
       "弱點特效": 2
     },
     "defense": 32,
-    "seriesName": "毒蛛S"
+    "seriesName": "毒蛛S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_941395887",
@@ -4954,7 +5188,8 @@
       "心眼": 1
     },
     "defense": 32,
-    "seriesName": "毒蛛S"
+    "seriesName": "毒蛛S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1407815103",
@@ -4970,7 +5205,8 @@
       "火屬性攻擊強化": 1
     },
     "defense": 38,
-    "seriesName": "傘鳥S"
+    "seriesName": "傘鳥S",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1373212095",
@@ -4986,7 +5222,8 @@
       "無傷": 1
     },
     "defense": 38,
-    "seriesName": "傘鳥S"
+    "seriesName": "傘鳥S",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1472826815",
@@ -5003,7 +5240,8 @@
       "火屬性攻擊強化": 1
     },
     "defense": 38,
-    "seriesName": "傘鳥S"
+    "seriesName": "傘鳥S",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1438223807",
@@ -5019,7 +5257,8 @@
       "收刀術": 1
     },
     "defense": 38,
-    "seriesName": "傘鳥S"
+    "seriesName": "傘鳥S",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_732532159",
@@ -5035,7 +5274,8 @@
       "火屬性攻擊強化": 2
     },
     "defense": 38,
-    "seriesName": "傘鳥S"
+    "seriesName": "傘鳥S",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1571040637",
@@ -5051,7 +5291,8 @@
       "快吃": 1
     },
     "defense": 40,
-    "seriesName": "河童蛙S"
+    "seriesName": "河童蛙S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1402219901",
@@ -5067,7 +5308,8 @@
       "迴避距離UP": 1
     },
     "defense": 40,
-    "seriesName": "河童蛙S"
+    "seriesName": "河童蛙S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1367616893",
@@ -5084,7 +5326,8 @@
       "特殊射擊強化": 1
     },
     "defense": 40,
-    "seriesName": "河童蛙S"
+    "seriesName": "河童蛙S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1467231613",
@@ -5099,7 +5342,8 @@
       "火場怪力": 2
     },
     "defense": 40,
-    "seriesName": "河童蛙S"
+    "seriesName": "河童蛙S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1432628605",
@@ -5115,7 +5359,8 @@
       "飢餓耐性": 1
     },
     "defense": 40,
-    "seriesName": "河童蛙S"
+    "seriesName": "河童蛙S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1300661135",
@@ -5131,7 +5376,8 @@
       "看破": 1
     },
     "defense": 36,
-    "seriesName": "鐮鼬龍S"
+    "seriesName": "鐮鼬龍S",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1131840399",
@@ -5147,7 +5393,8 @@
       "回復速度": 1
     },
     "defense": 36,
-    "seriesName": "鐮鼬龍S"
+    "seriesName": "鐮鼬龍S",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1097237391",
@@ -5163,7 +5410,8 @@
       "體術": 2
     },
     "defense": 36,
-    "seriesName": "鐮鼬龍S"
+    "seriesName": "鐮鼬龍S",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1196852111",
@@ -5179,7 +5427,8 @@
       "看破": 2
     },
     "defense": 36,
-    "seriesName": "鐮鼬龍S"
+    "seriesName": "鐮鼬龍S",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1162249103",
@@ -5196,7 +5445,8 @@
       "體術": 1
     },
     "defense": 36,
-    "seriesName": "鐮鼬龍S"
+    "seriesName": "鐮鼬龍S",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1970787046",
@@ -5212,7 +5462,8 @@
       "佯攻": 1
     },
     "defense": 42,
-    "seriesName": "垂皮龍S"
+    "seriesName": "垂皮龍S",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1265095398",
@@ -5228,7 +5479,8 @@
       "滿足感": 2
     },
     "defense": 42,
-    "seriesName": "垂皮龍S"
+    "seriesName": "垂皮龍S",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1998746276",
@@ -5243,7 +5495,8 @@
       "貫通彈･貫通箭強化": 2,
       "昏厥耐性": 1
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1964143268",
@@ -5259,7 +5512,8 @@
       "砲術": 1,
       "昏厥耐性": 2
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1258451620",
@@ -5274,7 +5528,8 @@
     "skills": {
       "砲術": 2
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1257403044",
@@ -5289,7 +5544,8 @@
     "skills": {
       "耐震": 2
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1222800036",
@@ -5305,7 +5561,8 @@
       "貫通彈･貫通箭強化": 1,
       "耐震": 1
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_1992102522",
@@ -5320,7 +5577,8 @@
     "skills": {
       "攻擊": 2
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_1251807866",
@@ -5335,7 +5593,8 @@
     "skills": {
       "騎乘名人": 1
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_2089792056",
@@ -5351,7 +5610,8 @@
       "後座力減輕": 2
     },
     "defense": 34,
-    "seriesName": "飛甲蟲S"
+    "seriesName": "飛甲蟲S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1920971320",
@@ -5368,7 +5628,8 @@
       "迴避性能": 1
     },
     "defense": 34,
-    "seriesName": "飛甲蟲S"
+    "seriesName": "飛甲蟲S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1886368312",
@@ -5384,7 +5645,8 @@
       "迴避性能": 1
     },
     "defense": 34,
-    "seriesName": "飛甲蟲S"
+    "seriesName": "飛甲蟲S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1985983032",
@@ -5401,7 +5663,8 @@
       "迴避性能": 1
     },
     "defense": 34,
-    "seriesName": "飛甲蟲S"
+    "seriesName": "飛甲蟲S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1951380024",
@@ -5418,7 +5681,8 @@
       "後座力減輕": 1
     },
     "defense": 34,
-    "seriesName": "飛甲蟲S"
+    "seriesName": "飛甲蟲S",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_2117751294",
@@ -5432,7 +5696,8 @@
     "skills": {
       "鈍器能手": 2
     },
-    "defense": 36
+    "defense": 36,
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_2039976306",
@@ -5447,7 +5712,8 @@
     "skills": {
       "水屬性攻擊強化": 2
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_2104988018",
@@ -5462,7 +5728,8 @@
     "skills": {
       "佯攻": 1
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1936167282",
@@ -5476,7 +5743,8 @@
     "skills": {
       "水屬性攻擊強化": 3
     },
-    "defense": 42
+    "defense": 42,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1728893174",
@@ -5492,7 +5760,8 @@
       "迴避距離UP": 1
     },
     "defense": 38,
-    "seriesName": "毒狗龍S"
+    "seriesName": "毒狗龍S",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_1727844598",
@@ -5508,7 +5777,8 @@
       "毒屬性強化": 1
     },
     "defense": 38,
-    "seriesName": "毒狗龍S"
+    "seriesName": "毒狗龍S",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_1693241590",
@@ -5523,7 +5793,8 @@
       "裝填擴充": 1
     },
     "defense": 38,
-    "seriesName": "毒狗龍S"
+    "seriesName": "毒狗龍S",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_2061291766",
@@ -5539,7 +5810,8 @@
       "毒屬性強化": 2
     },
     "defense": 38,
-    "seriesName": "毒狗龍S"
+    "seriesName": "毒狗龍S",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_2026688758",
@@ -5556,7 +5828,8 @@
       "迴避距離UP": 1
     },
     "defense": 38,
-    "seriesName": "毒狗龍S"
+    "seriesName": "毒狗龍S",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_1656713396",
@@ -5572,7 +5845,8 @@
       "冰屬性攻擊強化": 2
     },
     "defense": 36,
-    "seriesName": "眠狗龍S"
+    "seriesName": "眠狗龍S",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_1622110388",
@@ -5588,7 +5862,8 @@
       "冰屬性攻擊強化": 1
     },
     "defense": 36,
-    "seriesName": "眠狗龍S"
+    "seriesName": "眠狗龍S",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_1721725108",
@@ -5605,7 +5880,8 @@
       "冰屬性攻擊強化": 1
     },
     "defense": 36,
-    "seriesName": "眠狗龍S"
+    "seriesName": "眠狗龍S",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_1687122100",
@@ -5621,7 +5897,8 @@
       "睡眠耐性": 1
     },
     "defense": 36,
-    "seriesName": "眠狗龍S"
+    "seriesName": "眠狗龍S",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_2055172276",
@@ -5637,7 +5914,8 @@
       "攻擊": 1
     },
     "defense": 36,
-    "seriesName": "眠狗龍S"
+    "seriesName": "眠狗龍S",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_1818890314",
@@ -5654,7 +5932,8 @@
       "防禦": 1
     },
     "defense": 36,
-    "seriesName": "青熊獸S"
+    "seriesName": "青熊獸S",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1650069578",
@@ -5669,7 +5948,8 @@
       "逆襲": 1
     },
     "defense": 36,
-    "seriesName": "青熊獸S"
+    "seriesName": "青熊獸S",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1615466570",
@@ -5685,7 +5965,8 @@
       "防禦": 2
     },
     "defense": 36,
-    "seriesName": "青熊獸S"
+    "seriesName": "青熊獸S",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1715081290",
@@ -5702,7 +5983,8 @@
       "防禦": 1
     },
     "defense": 36,
-    "seriesName": "青熊獸S"
+    "seriesName": "青熊獸S",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1680478282",
@@ -5717,7 +5999,8 @@
     ],
     "skills": {},
     "defense": 36,
-    "seriesName": "青熊獸S"
+    "seriesName": "青熊獸S",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1847898120",
@@ -5734,7 +6017,8 @@
       "鈍器能手": 1
     },
     "defense": 50,
-    "seriesName": "赤甲獸S"
+    "seriesName": "赤甲獸S",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1813295112",
@@ -5750,7 +6034,8 @@
       "跳躍鐵人": 1
     },
     "defense": 50,
-    "seriesName": "赤甲獸S"
+    "seriesName": "赤甲獸S",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1644474376",
@@ -5768,7 +6053,8 @@
       "麻痺屬性強化": 1
     },
     "defense": 50,
-    "seriesName": "赤甲獸S"
+    "seriesName": "赤甲獸S",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1643425800",
@@ -5785,7 +6071,8 @@
       "鈍器能手": 1
     },
     "defense": 50,
-    "seriesName": "赤甲獸S"
+    "seriesName": "赤甲獸S",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1743040520",
@@ -5802,7 +6089,8 @@
       "迴避距離UP": 2
     },
     "defense": 50,
-    "seriesName": "赤甲獸S"
+    "seriesName": "赤甲獸S",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_1775720398",
@@ -5819,7 +6107,8 @@
       "無傷": 1
     },
     "defense": 48,
-    "seriesName": "水獸S"
+    "seriesName": "水獸S",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1875335118",
@@ -5834,7 +6123,8 @@
       "耐力急速回復": 2
     },
     "defense": 48,
-    "seriesName": "水獸S"
+    "seriesName": "水獸S",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1840732110",
@@ -5851,7 +6141,8 @@
       "跑者": 1
     },
     "defense": 48,
-    "seriesName": "水獸S"
+    "seriesName": "水獸S",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1671911374",
@@ -5867,7 +6158,8 @@
       "無傷": 2
     },
     "defense": 48,
-    "seriesName": "水獸S"
+    "seriesName": "水獸S",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1637308366",
@@ -5882,7 +6174,8 @@
       "強化持續": 2
     },
     "defense": 48,
-    "seriesName": "水獸S"
+    "seriesName": "水獸S",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_1803679628",
@@ -5900,7 +6193,8 @@
       "攻擊守勢": 1
     },
     "defense": 50,
-    "seriesName": "土砂龍S"
+    "seriesName": "土砂龍S",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1769076620",
@@ -5916,7 +6210,8 @@
       "防禦": 2
     },
     "defense": 50,
-    "seriesName": "土砂龍S"
+    "seriesName": "土砂龍S",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1868691340",
@@ -5933,7 +6228,8 @@
       "滑走強化": 1
     },
     "defense": 50,
-    "seriesName": "土砂龍S"
+    "seriesName": "土砂龍S",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1834088332",
@@ -5949,7 +6245,8 @@
       "防禦": 1
     },
     "defense": 50,
-    "seriesName": "土砂龍S"
+    "seriesName": "土砂龍S",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1665267596",
@@ -5967,7 +6264,8 @@
       "攻擊守勢": 1
     },
     "defense": 50,
-    "seriesName": "土砂龍S"
+    "seriesName": "土砂龍S",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_356292418",
@@ -5983,7 +6281,8 @@
       "體力回復量UP": 1
     },
     "defense": 38,
-    "seriesName": "奇怪龍S"
+    "seriesName": "奇怪龍S",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1798084418",
@@ -6000,7 +6299,8 @@
       "體力回復量UP": 1
     },
     "defense": 38,
-    "seriesName": "奇怪龍S"
+    "seriesName": "奇怪龍S",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1763481410",
@@ -6018,7 +6318,8 @@
       "雷屬性攻擊強化": 2
     },
     "defense": 38,
-    "seriesName": "奇怪龍S"
+    "seriesName": "奇怪龍S",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1863096130",
@@ -6035,7 +6336,8 @@
       "KO術": 1
     },
     "defense": 38,
-    "seriesName": "奇怪龍S"
+    "seriesName": "奇怪龍S",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_1862047554",
@@ -6053,7 +6355,8 @@
       "回復速度": 1
     },
     "defense": 38,
-    "seriesName": "奇怪龍S"
+    "seriesName": "奇怪龍S",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_204920022",
@@ -6069,7 +6372,8 @@
       "精神抖擻": 1
     },
     "defense": 38,
-    "seriesName": "搔鳥S"
+    "seriesName": "搔鳥S",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_36099286",
@@ -6085,7 +6389,8 @@
       "吹笛名人": 1
     },
     "defense": 38,
-    "seriesName": "搔鳥S"
+    "seriesName": "搔鳥S",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_1496278",
@@ -6101,7 +6406,8 @@
       "奪取耐力": 2
     },
     "defense": 38,
-    "seriesName": "搔鳥S"
+    "seriesName": "搔鳥S",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_101110998",
@@ -6118,7 +6424,8 @@
       "精神抖擻": 1
     },
     "defense": 38,
-    "seriesName": "搔鳥S"
+    "seriesName": "搔鳥S",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_100062422",
@@ -6134,7 +6441,8 @@
       "看破": 2
     },
     "defense": 38,
-    "seriesName": "搔鳥S"
+    "seriesName": "搔鳥S",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_1055562497",
@@ -6149,7 +6457,8 @@
       "滑走強化": 1
     },
     "defense": 36,
-    "seriesName": "狗龍S偽裝"
+    "seriesName": "狗龍S偽裝",
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_604142171",
@@ -6165,7 +6474,8 @@
       "冰屬性攻擊強化": 2
     },
     "defense": 36,
-    "seriesName": "白兔獸S"
+    "seriesName": "白兔獸S",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_1005746779",
@@ -6182,7 +6492,8 @@
       "體術": 1
     },
     "defense": 36,
-    "seriesName": "白兔獸S"
+    "seriesName": "白兔獸S",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_971143771",
@@ -6199,7 +6510,8 @@
       "冰屬性攻擊強化": 1
     },
     "defense": 36,
-    "seriesName": "白兔獸S"
+    "seriesName": "白兔獸S",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_1070758491",
@@ -6214,7 +6526,8 @@
       "體術": 2
     },
     "defense": 36,
-    "seriesName": "白兔獸S"
+    "seriesName": "白兔獸S",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_1036155483",
@@ -6231,7 +6544,8 @@
       "看破": 1
     },
     "defense": 36,
-    "seriesName": "白兔獸S"
+    "seriesName": "白兔獸S",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_666704409",
@@ -6415,7 +6729,8 @@
       "麻痺耐性": 2
     },
     "defense": 52,
-    "seriesName": "花瓣S"
+    "seriesName": "花瓣S",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_228567557",
@@ -6432,7 +6747,8 @@
       "體力回復量UP": 1
     },
     "defense": 52,
-    "seriesName": "花瓣S"
+    "seriesName": "花瓣S",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_59746821",
@@ -6450,7 +6766,8 @@
       "體力回復量UP": 1
     },
     "defense": 52,
-    "seriesName": "花瓣S"
+    "seriesName": "花瓣S",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_25143813",
@@ -6466,7 +6783,8 @@
       "回復速度": 1
     },
     "defense": 52,
-    "seriesName": "花瓣S"
+    "seriesName": "花瓣S",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_124758533",
@@ -6483,7 +6801,8 @@
       "回復速度": 2
     },
     "defense": 52,
-    "seriesName": "花瓣S"
+    "seriesName": "花瓣S",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_156912091",
@@ -6499,7 +6818,8 @@
       "睡眠耐性": 2
     },
     "defense": 52,
-    "seriesName": "魚鱗S"
+    "seriesName": "魚鱗S",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_256526811",
@@ -6514,7 +6834,8 @@
       "水屬性攻擊強化": 3
     },
     "defense": 52,
-    "seriesName": "魚鱗S"
+    "seriesName": "魚鱗S",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_221923803",
@@ -6530,7 +6851,8 @@
       "飛身躍入": 1
     },
     "defense": 52,
-    "seriesName": "魚鱗S"
+    "seriesName": "魚鱗S",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_53103067",
@@ -6545,7 +6867,8 @@
       "睡眠耐性": 1
     },
     "defense": 52,
-    "seriesName": "魚鱗S"
+    "seriesName": "魚鱗S",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_18500059",
@@ -6562,7 +6885,8 @@
       "快吃": 1
     },
     "defense": 52,
-    "seriesName": "魚鱗S"
+    "seriesName": "魚鱗S",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_185919897",
@@ -6577,7 +6901,8 @@
       "剛刃研磨": 1
     },
     "defense": 52,
-    "seriesName": "死神S"
+    "seriesName": "死神S",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_151316889",
@@ -6593,7 +6918,8 @@
       "高速變形": 1
     },
     "defense": 52,
-    "seriesName": "死神S"
+    "seriesName": "死神S",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_150268313",
@@ -6608,7 +6934,8 @@
       "精神抖擻": 2
     },
     "defense": 52,
-    "seriesName": "死神S"
+    "seriesName": "死神S",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_249883033",
@@ -6625,7 +6952,8 @@
       "精神抖擻": 1
     },
     "defense": 52,
-    "seriesName": "死神S"
+    "seriesName": "死神S",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_215280025",
@@ -6642,7 +6970,8 @@
       "高速變形": 1
     },
     "defense": 52,
-    "seriesName": "死神S"
+    "seriesName": "死神S",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_919046495",
@@ -7312,7 +7641,8 @@
       "昏厥耐性": 1
     },
     "defense": 52,
-    "seriesName": "天狗獸S"
+    "seriesName": "天狗獸S",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1445916153",
@@ -7327,7 +7657,8 @@
       "廣域化": 1
     },
     "defense": 52,
-    "seriesName": "天狗獸S"
+    "seriesName": "天狗獸S",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1411313145",
@@ -7343,7 +7674,8 @@
       "昏厥耐性": 1
     },
     "defense": 52,
-    "seriesName": "天狗獸S"
+    "seriesName": "天狗獸S",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_705621497",
@@ -7360,7 +7692,8 @@
       "精神抖擻": 1
     },
     "defense": 52,
-    "seriesName": "天狗獸S"
+    "seriesName": "天狗獸S",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_704572921",
@@ -7377,7 +7710,8 @@
       "精神抖擻": 1
     },
     "defense": 52,
-    "seriesName": "天狗獸S"
+    "seriesName": "天狗獸S",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1599524147",
@@ -7393,7 +7727,8 @@
       "睡眠屬性強化": 1
     },
     "defense": 58,
-    "seriesName": "人魚龍S"
+    "seriesName": "人魚龍S",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1564921139",
@@ -7410,7 +7745,8 @@
       "道具使用強化": 1
     },
     "defense": 58,
-    "seriesName": "人魚龍S"
+    "seriesName": "人魚龍S",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1396100403",
@@ -7426,7 +7762,8 @@
       "精靈加護": 1
     },
     "defense": 58,
-    "seriesName": "人魚龍S"
+    "seriesName": "人魚龍S",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1361497395",
@@ -7442,7 +7779,8 @@
       "炸彈客": 1
     },
     "defense": 58,
-    "seriesName": "人魚龍S"
+    "seriesName": "人魚龍S",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1461112115",
@@ -7458,7 +7796,8 @@
       "精靈加護": 2
     },
     "defense": 58,
-    "seriesName": "人魚龍S"
+    "seriesName": "人魚龍S",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_2046095804",
@@ -7472,7 +7811,8 @@
     "skills": {
       "風壓耐性": 2
     },
-    "defense": 52
+    "defense": 52,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_2145710524",
@@ -7487,7 +7827,8 @@
     "skills": {
       "超會心": 1
     },
-    "defense": 52
+    "defense": 52,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_2111107516",
@@ -7502,7 +7843,8 @@
       "會心擊【屬性】": 1,
       "風壓耐性": 1
     },
-    "defense": 52
+    "defense": 52,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_1942286780",
@@ -7517,7 +7859,8 @@
     "skills": {
       "會心擊【屬性】": 2
     },
-    "defense": 52
+    "defense": 52,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_1907683772",
@@ -7532,7 +7875,8 @@
     "skills": {
       "弱點特效": 1
     },
-    "defense": 52
+    "defense": 52,
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_2067935536",
@@ -7546,7 +7890,8 @@
     "skills": {
       "火屬性攻擊強化": 3
     },
-    "defense": 52
+    "defense": 52,
+    "sourceMonster": "熔岩獸"
   },
   {
     "id": "armor_2132947248",
@@ -7561,7 +7906,8 @@
     "skills": {
       "火屬性攻擊強化": 2
     },
-    "defense": 52
+    "defense": 52,
+    "sourceMonster": "熔岩獸"
   },
   {
     "id": "armor_312071878",
@@ -7576,7 +7922,8 @@
       "拔刀術【技】": 2
     },
     "defense": 58,
-    "seriesName": "冰牙龍S"
+    "seriesName": "冰牙龍S",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_277468870",
@@ -7594,7 +7941,8 @@
       "精神抖擻": 1
     },
     "defense": 58,
-    "seriesName": "冰牙龍S"
+    "seriesName": "冰牙龍S",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_377083590",
@@ -7611,7 +7959,8 @@
       "看破": 1
     },
     "defense": 58,
-    "seriesName": "冰牙龍S"
+    "seriesName": "冰牙龍S",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_342480582",
@@ -7627,7 +7976,8 @@
       "看破": 2
     },
     "defense": 58,
-    "seriesName": "冰牙龍S"
+    "seriesName": "冰牙龍S",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_1784272582",
@@ -7643,7 +7993,8 @@
       "收刀術": 1
     },
     "defense": 58,
-    "seriesName": "冰牙龍S"
+    "seriesName": "冰牙龍S",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_475297412",
@@ -7659,7 +8010,8 @@
       "屬性異常狀態的耐性": 1
     },
     "defense": 52,
-    "seriesName": "雌火龍S"
+    "seriesName": "雌火龍S",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_306476676",
@@ -7677,7 +8029,8 @@
       "植生學": 1
     },
     "defense": 52,
-    "seriesName": "雌火龍S"
+    "seriesName": "雌火龍S",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_271873668",
@@ -7694,7 +8047,8 @@
       "廣域化": 1
     },
     "defense": 52,
-    "seriesName": "雌火龍S"
+    "seriesName": "雌火龍S",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_371488388",
@@ -7710,7 +8064,8 @@
       "廣域化": 1
     },
     "defense": 52,
-    "seriesName": "雌火龍S"
+    "seriesName": "雌火龍S",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_336885380",
@@ -7726,7 +8081,8 @@
       "滿足感": 1
     },
     "defense": 52,
-    "seriesName": "雌火龍S"
+    "seriesName": "雌火龍S",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_85915036",
@@ -7743,7 +8099,8 @@
       "防禦": 2
     },
     "defense": 52,
-    "seriesName": "岩龍S"
+    "seriesName": "岩龍S",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_453965212",
@@ -7760,7 +8117,8 @@
       "砲彈裝填": 1
     },
     "defense": 52,
-    "seriesName": "岩龍S"
+    "seriesName": "岩龍S",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_452916636",
@@ -7777,7 +8135,8 @@
       "砥石使用高速化": 1
     },
     "defense": 52,
-    "seriesName": "岩龍S"
+    "seriesName": "岩龍S",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_418313628",
@@ -7793,7 +8152,8 @@
       "防禦": 2
     },
     "defense": 52,
-    "seriesName": "岩龍S"
+    "seriesName": "岩龍S",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_517928348",
@@ -7809,7 +8169,8 @@
       "防禦": 1
     },
     "defense": 52,
-    "seriesName": "岩龍S"
+    "seriesName": "岩龍S",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_266433684",
@@ -7825,7 +8186,8 @@
       "彈藥節約": 1
     },
     "defense": 50,
-    "seriesName": "毒妖鳥S"
+    "seriesName": "毒妖鳥S",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_231830676",
@@ -7841,7 +8203,8 @@
       "體術": 2
     },
     "defense": 50,
-    "seriesName": "毒妖鳥S"
+    "seriesName": "毒妖鳥S",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_63009940",
@@ -7857,7 +8220,8 @@
       "彈道強化": 1
     },
     "defense": 50,
-    "seriesName": "毒妖鳥S"
+    "seriesName": "毒妖鳥S",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_28406932",
@@ -7874,7 +8238,8 @@
       "毒屬性強化": 2
     },
     "defense": 50,
-    "seriesName": "毒妖鳥S"
+    "seriesName": "毒妖鳥S",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_128021652",
@@ -7892,7 +8257,8 @@
       "彈道強化": 1
     },
     "defense": 50,
-    "seriesName": "毒妖鳥S"
+    "seriesName": "毒妖鳥S",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_146449589",
@@ -7909,7 +8275,8 @@
       "迴避距離UP": 1
     },
     "defense": 48,
-    "seriesName": "泥魚龍"
+    "seriesName": "泥魚龍",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_246064309",
@@ -7927,7 +8294,8 @@
       "迴避距離UP": 1
     },
     "defense": 48,
-    "seriesName": "泥魚龍"
+    "seriesName": "泥魚龍",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_211461301",
@@ -7942,7 +8310,8 @@
     ],
     "skills": {},
     "defense": 48,
-    "seriesName": "泥魚龍"
+    "seriesName": "泥魚龍",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_42640565",
@@ -7960,7 +8329,8 @@
       "攻擊守勢": 1
     },
     "defense": 48,
-    "seriesName": "泥魚龍"
+    "seriesName": "泥魚龍",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_8037557",
@@ -7977,7 +8347,8 @@
       "防禦強化": 2
     },
     "defense": 48,
-    "seriesName": "泥魚龍"
+    "seriesName": "泥魚龍",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_175457355",
@@ -7994,7 +8365,8 @@
       "體術": 1,
       "看破": 1
     },
-    "defense": 58
+    "defense": 58,
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_140854347",
@@ -8009,7 +8381,8 @@
       "心眼": 1,
       "看破": 1
     },
-    "defense": 58
+    "defense": 58,
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_240469067",
@@ -8023,7 +8396,8 @@
     "skills": {
       "體術": 3
     },
-    "defense": 58
+    "defense": 58,
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_205866059",
@@ -8038,7 +8412,8 @@
     "skills": {
       "心眼": 2
     },
-    "defense": 58
+    "defense": 58,
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_37045323",
@@ -8054,7 +8429,8 @@
       "體術": 1,
       "看破": 2
     },
-    "defense": 58
+    "defense": 58,
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_161659855",
@@ -8068,7 +8444,8 @@
       3
     ],
     "skills": {},
-    "defense": 46
+    "defense": 46,
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_261274575",
@@ -8082,7 +8459,8 @@
     "skills": {
       "減輕膽怯": 2
     },
-    "defense": 46
+    "defense": 46,
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_770935218",
@@ -8272,7 +8650,8 @@
       "精靈加護": 1
     },
     "defense": 62,
-    "seriesName": "歌德S"
+    "seriesName": "歌德S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1417432635",
@@ -8288,7 +8667,8 @@
       "爆破屬性強化": 2
     },
     "defense": 62,
-    "seriesName": "歌德S"
+    "seriesName": "歌德S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_711740987",
@@ -8304,7 +8684,8 @@
       "精靈加護": 2
     },
     "defense": 62,
-    "seriesName": "歌德S"
+    "seriesName": "歌德S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_677137979",
@@ -8320,7 +8701,8 @@
       "破壞王": 2
     },
     "defense": 62,
-    "seriesName": "歌德S"
+    "seriesName": "歌德S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_776752699",
@@ -8336,7 +8718,8 @@
       "爆破屬性強化": 1
     },
     "defense": 62,
-    "seriesName": "歌德S"
+    "seriesName": "歌德S",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1479032016",
@@ -8353,7 +8736,8 @@
       "裝填速度": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1578646736",
@@ -8370,7 +8754,8 @@
       "裝填速度": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1544043728",
@@ -8386,7 +8771,8 @@
       "耐力急速回復": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1408777424",
@@ -8402,7 +8788,8 @@
       "散彈･擴散箭強化": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1374174416",
@@ -8418,7 +8805,8 @@
       "耐力急速回復": 2
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1493265649",
@@ -8435,7 +8823,8 @@
       "裝填速度": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1492217073",
@@ -8452,7 +8841,8 @@
       "裝填速度": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1591831793",
@@ -8468,7 +8858,8 @@
       "耐力急速回復": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1557228785",
@@ -8484,7 +8875,8 @@
       "散彈･擴散箭強化": 1
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1388408049",
@@ -8500,7 +8892,8 @@
       "耐力急速回復": 2
     },
     "defense": 66,
-    "seriesName": "妃蜘蛛"
+    "seriesName": "妃蜘蛛",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1153174711",
@@ -8517,7 +8910,8 @@
       "挑戰者": 1
     },
     "defense": 64,
-    "seriesName": "雪鬼獸S"
+    "seriesName": "雪鬼獸S",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1521224887",
@@ -8534,7 +8928,8 @@
       "怨恨": 1
     },
     "defense": 64,
-    "seriesName": "雪鬼獸S"
+    "seriesName": "雪鬼獸S",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1486621879",
@@ -8550,7 +8945,8 @@
       "拔刀術【力】": 1
     },
     "defense": 64,
-    "seriesName": "雪鬼獸S"
+    "seriesName": "雪鬼獸S",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1586236599",
@@ -8567,7 +8963,8 @@
       "怨恨": 1
     },
     "defense": 64,
-    "seriesName": "雪鬼獸S"
+    "seriesName": "雪鬼獸S",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1551633591",
@@ -8583,7 +8980,8 @@
       "挑戰者": 3
     },
     "defense": 64,
-    "seriesName": "雪鬼獸S"
+    "seriesName": "雪鬼獸S",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1181658229",
@@ -8599,7 +8997,8 @@
       "高速變形": 2
     },
     "defense": 64,
-    "seriesName": "泥翁龍S"
+    "seriesName": "泥翁龍S",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1147055221",
@@ -8615,7 +9014,8 @@
       "強化持續": 1
     },
     "defense": 64,
-    "seriesName": "泥翁龍S"
+    "seriesName": "泥翁龍S",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1515105397",
@@ -8632,7 +9032,8 @@
       "迴避性能": 2
     },
     "defense": 64,
-    "seriesName": "泥翁龍S"
+    "seriesName": "泥翁龍S",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1480502389",
@@ -8649,7 +9050,8 @@
       "強化持續": 1
     },
     "defense": 64,
-    "seriesName": "泥翁龍S"
+    "seriesName": "泥翁龍S",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1580117109",
@@ -8665,7 +9067,8 @@
       "利刃": 1
     },
     "defense": 64,
-    "seriesName": "泥翁龍S"
+    "seriesName": "泥翁龍S",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_1271214880",
@@ -8679,7 +9082,8 @@
       "幸運": 1
     },
     "defense": 54,
-    "seriesName": "丸鳥S偽裝"
+    "seriesName": "丸鳥S偽裝",
+    "sourceMonster": "凶豺龍"
   },
   {
     "id": "armor_284112640",
@@ -8694,7 +9098,8 @@
       "迴避性能": 1
     },
     "defense": 60,
-    "seriesName": "迅龍S"
+    "seriesName": "迅龍S",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_383727360",
@@ -8711,7 +9116,8 @@
       "看破": 2
     },
     "defense": 60,
-    "seriesName": "迅龍S"
+    "seriesName": "迅龍S",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_349124352",
@@ -8728,7 +9134,8 @@
       "迴避距離UP": 1
     },
     "defense": 60,
-    "seriesName": "迅龍S"
+    "seriesName": "迅龍S",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_1790916352",
@@ -8744,7 +9151,8 @@
       "看破": 1
     },
     "defense": 60,
-    "seriesName": "迅龍S"
+    "seriesName": "迅龍S",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_1756313344",
@@ -8760,7 +9168,8 @@
       "看破": 1
     },
     "defense": 60,
-    "seriesName": "迅龍S"
+    "seriesName": "迅龍S",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_503780954",
@@ -8777,7 +9186,8 @@
       "破壞王": 1
     },
     "defense": 62,
-    "seriesName": "火龍S"
+    "seriesName": "火龍S",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_502732378",
@@ -8794,7 +9204,8 @@
       "風壓耐性": 1
     },
     "defense": 62,
-    "seriesName": "火龍S"
+    "seriesName": "火龍S",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_333911642",
@@ -8809,7 +9220,8 @@
       "攻擊": 2
     },
     "defense": 62,
-    "seriesName": "火龍S"
+    "seriesName": "火龍S",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_299308634",
@@ -8825,7 +9237,8 @@
       "風壓耐性": 1
     },
     "defense": 62,
-    "seriesName": "火龍S"
+    "seriesName": "火龍S",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_398923354",
@@ -8842,7 +9255,8 @@
       "破壞王": 1
     },
     "defense": 62,
-    "seriesName": "火龍S"
+    "seriesName": "火龍S",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_431076888",
@@ -8859,7 +9273,8 @@
       "快吃": 1
     },
     "defense": 64,
-    "seriesName": "轟龍S"
+    "seriesName": "轟龍S",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_530691608",
@@ -8876,7 +9291,8 @@
       "鈍器能手": 1
     },
     "defense": 64,
-    "seriesName": "轟龍S"
+    "seriesName": "轟龍S",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_496088600",
@@ -8892,7 +9308,8 @@
       "心眼": 1
     },
     "defense": 64,
-    "seriesName": "轟龍S"
+    "seriesName": "轟龍S",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_327267864",
@@ -8908,7 +9325,8 @@
       "耳塞": 2
     },
     "defense": 64,
-    "seriesName": "轟龍S"
+    "seriesName": "轟龍S",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_292664856",
@@ -8924,7 +9342,8 @@
       "心眼": 1
     },
     "defense": 64,
-    "seriesName": "轟龍S"
+    "seriesName": "轟龍S",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_460084702",
@@ -8940,7 +9359,8 @@
       "耐力急速回復": 1
     },
     "defense": 64,
-    "seriesName": "角龍S"
+    "seriesName": "角龍S",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_425481694",
@@ -8956,7 +9376,8 @@
       "攻擊守勢": 1
     },
     "defense": 64,
-    "seriesName": "角龍S"
+    "seriesName": "角龍S",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_525096414",
@@ -8972,7 +9393,8 @@
       "攻擊守勢": 1
     },
     "defense": 64,
-    "seriesName": "角龍S"
+    "seriesName": "角龍S",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_490493406",
@@ -8989,7 +9411,8 @@
       "耐力急速回復": 1
     },
     "defense": 64,
-    "seriesName": "角龍S"
+    "seriesName": "角龍S",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_321672670",
@@ -9005,7 +9428,8 @@
       "攻擊守勢": 1
     },
     "defense": 64,
-    "seriesName": "角龍S"
+    "seriesName": "角龍S",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_13210962",
@@ -9021,7 +9445,8 @@
       "弱點特效": 1
     },
     "defense": 62,
-    "seriesName": "雷狼龍S"
+    "seriesName": "雷狼龍S",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_112825682",
@@ -9037,7 +9462,8 @@
       "弱點特效": 1
     },
     "defense": 62,
-    "seriesName": "雷狼龍S"
+    "seriesName": "雷狼龍S",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_78222674",
@@ -9053,7 +9479,8 @@
       "體術": 1
     },
     "defense": 62,
-    "seriesName": "雷狼龍S"
+    "seriesName": "雷狼龍S",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_446272850",
@@ -9069,7 +9496,8 @@
       "力量解放": 1
     },
     "defense": 62,
-    "seriesName": "雷狼龍S"
+    "seriesName": "雷狼龍S",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_411669842",
@@ -9085,7 +9513,8 @@
       "體術": 2
     },
     "defense": 62,
-    "seriesName": "雷狼龍S"
+    "seriesName": "雷狼龍S",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_875029513",
@@ -9100,7 +9529,8 @@
       "集中": 1,
       "KO術": 1
     },
-    "defense": 60
+    "defense": 60,
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_169337865",
@@ -9116,7 +9546,8 @@
       "集中": 2,
       "跑者": 1
     },
-    "defense": 60
+    "defense": 60,
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_134734857",
@@ -9131,7 +9562,8 @@
       "KO術": 2,
       "攻擊": 2
     },
-    "defense": 60
+    "defense": 60,
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_267904009",
@@ -9147,7 +9579,8 @@
     "skills": {
       "攻擊": 2
     },
-    "defense": 60
+    "defense": 60,
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_233301001",
@@ -9161,7 +9594,8 @@
     "skills": {
       "跑者": 2
     },
-    "defense": 60
+    "defense": 60,
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_170298274",
@@ -9204,7 +9638,8 @@
       "解放弓的蓄力階段": 1
     },
     "defense": 56,
-    "seriesName": "強弓羽飾"
+    "seriesName": "強弓羽飾",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_978836101",
@@ -9221,7 +9656,8 @@
       "減輕膽怯": 1
     },
     "defense": 64,
-    "seriesName": "禍鎧･霸"
+    "seriesName": "禍鎧･霸",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_944233093",
@@ -9237,7 +9673,8 @@
       "怨恨": 1
     },
     "defense": 64,
-    "seriesName": "禍鎧･霸"
+    "seriesName": "禍鎧･霸",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1043847813",
@@ -9253,7 +9690,8 @@
       "匠": 2
     },
     "defense": 64,
-    "seriesName": "禍鎧･霸"
+    "seriesName": "禍鎧･霸",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1009244805",
@@ -9268,7 +9706,8 @@
       "鬼火纏身": 1
     },
     "defense": 64,
-    "seriesName": "禍鎧･霸"
+    "seriesName": "禍鎧･霸",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_840424069",
@@ -9286,7 +9725,8 @@
       "減輕膽怯": 1
     },
     "defense": 64,
-    "seriesName": "禍鎧･霸"
+    "seriesName": "禍鎧･霸",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_560970207",
@@ -9302,7 +9742,8 @@
       "死裡逃生": 1
     },
     "defense": 60,
-    "seriesName": "泡狐龍S"
+    "seriesName": "泡狐龍S",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_660584927",
@@ -9318,7 +9759,8 @@
       "死裡逃生": 1
     },
     "defense": 60,
-    "seriesName": "泡狐龍S"
+    "seriesName": "泡狐龍S",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_625981919",
@@ -9334,7 +9776,8 @@
       "滿足感": 1
     },
     "defense": 60,
-    "seriesName": "泡狐龍S"
+    "seriesName": "泡狐龍S",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_994032095",
@@ -9351,7 +9794,8 @@
       "滿足感": 1
     },
     "defense": 60,
-    "seriesName": "泡狐龍S"
+    "seriesName": "泡狐龍S",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_959429087",
@@ -9368,7 +9812,8 @@
       "泡沫之舞": 1
     },
     "defense": 60,
-    "seriesName": "泡狐龍S"
+    "seriesName": "泡狐龍S",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_785709395",
@@ -10170,7 +10615,8 @@
       "迴避距離UP": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1160780906",
@@ -10185,7 +10631,8 @@
       "減輕膽怯": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1528831082",
@@ -10200,7 +10647,8 @@
       "耐力急速回復": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1494228074",
@@ -10215,7 +10663,8 @@
       "迴避性能": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1593842794",
@@ -10230,7 +10679,8 @@
       "防禦強化": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1075399691",
@@ -10246,7 +10696,8 @@
       "風雷合一": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1175014411",
@@ -10262,7 +10713,8 @@
       "風雷合一": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1173965835",
@@ -10278,7 +10730,8 @@
       "風雷合一": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1542016011",
@@ -10294,7 +10747,8 @@
       "風雷合一": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1507413003",
@@ -10310,7 +10764,8 @@
       "風雷合一": 1
     },
     "defense": 66,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_1123204136",
@@ -10325,7 +10780,8 @@
       "攻擊守勢": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1088601128",
@@ -10340,7 +10796,8 @@
       "拔刀術【技】": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1188215848",
@@ -10355,7 +10812,8 @@
       "破壞王": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1153612840",
@@ -10370,7 +10828,8 @@
       "砲術": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1521663016",
@@ -10385,7 +10844,8 @@
       "跑者": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1137435593",
@@ -10401,7 +10861,8 @@
       "風雷合一": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1102832585",
@@ -10417,7 +10878,8 @@
       "風雷合一": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1202447305",
@@ -10433,7 +10895,8 @@
       "風雷合一": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1167844297",
@@ -10449,7 +10912,8 @@
       "風雷合一": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1535894473",
@@ -10465,7 +10929,8 @@
       "風雷合一": 1
     },
     "defense": 76,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_1314911148",
@@ -10481,7 +10946,8 @@
       "通常彈･連射箭強化": 2
     },
     "defense": 74,
-    "seriesName": "鋼龍"
+    "seriesName": "鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_1280308140",
@@ -10498,7 +10964,8 @@
       "佯攻": 1
     },
     "defense": 74,
-    "seriesName": "鋼龍"
+    "seriesName": "鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_1111487404",
@@ -10515,7 +10982,8 @@
       "挑戰者": 2
     },
     "defense": 74,
-    "seriesName": "鋼龍"
+    "seriesName": "鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_1076884396",
@@ -10533,7 +11001,8 @@
       "貫通彈･貫通箭強化": 1
     },
     "defense": 74,
-    "seriesName": "鋼龍"
+    "seriesName": "鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_1176499116",
@@ -10550,7 +11019,8 @@
       "貫通彈･貫通箭強化": 1
     },
     "defense": 74,
-    "seriesName": "鋼龍"
+    "seriesName": "鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_1328620365",
@@ -10567,7 +11037,8 @@
       "迴避性能": 2
     },
     "defense": 74,
-    "seriesName": "霞龍劍裝"
+    "seriesName": "霞龍劍裝",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_1294017357",
@@ -10585,7 +11056,8 @@
       "彈道強化": 1
     },
     "defense": 74,
-    "seriesName": "霞龍劍裝"
+    "seriesName": "霞龍劍裝",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_1125196621",
@@ -10602,7 +11074,8 @@
       "迴避性能": 1
     },
     "defense": 74,
-    "seriesName": "霞龍劍裝"
+    "seriesName": "霞龍劍裝",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_1090593613",
@@ -10619,7 +11092,8 @@
       "無傷": 2
     },
     "defense": 74,
-    "seriesName": "霞龍劍裝"
+    "seriesName": "霞龍劍裝",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_1089545037",
@@ -10635,7 +11109,8 @@
       "迴避性能": 1
     },
     "defense": 74,
-    "seriesName": "霞龍劍裝"
+    "seriesName": "霞龍劍裝",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_1208652642",
@@ -10651,7 +11126,8 @@
       "超會心": 1
     },
     "defense": 74,
-    "seriesName": "帝王"
+    "seriesName": "帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_1341821794",
@@ -10668,7 +11144,8 @@
       "達人藝": 1
     },
     "defense": 74,
-    "seriesName": "帝王"
+    "seriesName": "帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_1307218786",
@@ -10685,7 +11162,8 @@
       "超會心": 1
     },
     "defense": 74,
-    "seriesName": "帝王"
+    "seriesName": "帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_1138398050",
@@ -10701,7 +11179,8 @@
       "看破": 1
     },
     "defense": 74,
-    "seriesName": "帝王"
+    "seriesName": "帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_1103795042",
@@ -10717,7 +11196,8 @@
       "達人藝": 1
     },
     "defense": 74,
-    "seriesName": "帝王"
+    "seriesName": "帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_27444595",
@@ -10734,7 +11214,8 @@
       "精神抖擻": 1
     },
     "defense": 70,
-    "seriesName": "金色"
+    "seriesName": "金色",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_127059315",
@@ -10751,7 +11232,8 @@
       "力量解放": 1
     },
     "defense": 70,
-    "seriesName": "金色"
+    "seriesName": "金色",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_92456307",
@@ -10768,7 +11250,8 @@
       "力量解放": 1
     },
     "defense": 70,
-    "seriesName": "金色"
+    "seriesName": "金色",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_460506483",
@@ -10785,7 +11268,8 @@
       "精神抖擻": 1
     },
     "defense": 70,
-    "seriesName": "金色"
+    "seriesName": "金色",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_425903475",
@@ -10802,7 +11286,8 @@
       "力量解放": 1
     },
     "defense": 70,
-    "seriesName": "金色"
+    "seriesName": "金色",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_42218768",
@@ -10902,7 +11387,8 @@
       "防禦性能": 1
     },
     "defense": 72,
-    "seriesName": "爆鱗龍"
+    "seriesName": "爆鱗龍",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_887706670",
@@ -10919,7 +11405,8 @@
       "挑戰者": 1
     },
     "defense": 72,
-    "seriesName": "爆鱗龍"
+    "seriesName": "爆鱗龍",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_182015022",
@@ -10936,7 +11423,8 @@
       "防禦強化": 1
     },
     "defense": 72,
-    "seriesName": "爆鱗龍"
+    "seriesName": "爆鱗龍",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_147412014",
@@ -10953,7 +11441,8 @@
       "防禦性能": 1
     },
     "defense": 72,
-    "seriesName": "爆鱗龍"
+    "seriesName": "爆鱗龍",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_247026734",
@@ -10969,7 +11458,8 @@
       "防禦性能": 1
     },
     "defense": 72,
-    "seriesName": "爆鱗龍"
+    "seriesName": "爆鱗龍",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_831347597",
@@ -11237,7 +11727,8 @@
       "死裡逃生": 1
     },
     "defense": 80,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1972240262",
@@ -11255,7 +11746,8 @@
       "看破": 1
     },
     "defense": 80,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1266548614",
@@ -11272,7 +11764,8 @@
       "精靈加護": 1
     },
     "defense": 80,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1231945606",
@@ -11289,7 +11782,8 @@
       "看破": 1
     },
     "defense": 80,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1331560326",
@@ -11306,7 +11800,8 @@
       "滑走強化": 1
     },
     "defense": 80,
-    "seriesName": "神火裝"
+    "seriesName": "神火裝",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_1886859175",
@@ -11324,7 +11819,8 @@
       "剝取鐵人": 1
     },
     "defense": 80,
-    "seriesName": "皮製X"
+    "seriesName": "皮製X",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_1986473895",
@@ -11340,7 +11836,8 @@
       "體力回復量UP": 1
     },
     "defense": 80,
-    "seriesName": "皮製X"
+    "seriesName": "皮製X",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_1951870887",
@@ -11357,7 +11854,8 @@
       "特殊射擊強化": 1
     },
     "defense": 80,
-    "seriesName": "皮製X"
+    "seriesName": "皮製X",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_1246179239",
@@ -11374,7 +11872,8 @@
       "飢餓耐性": 2
     },
     "defense": 80,
-    "seriesName": "皮製X"
+    "seriesName": "皮製X",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_1211576231",
@@ -11391,7 +11890,8 @@
       "植生學": 2
     },
     "defense": 80,
-    "seriesName": "皮製X"
+    "seriesName": "皮製X",
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_1900584772",
@@ -11745,7 +12245,8 @@
       "幸運": 2
     },
     "defense": 86,
-    "seriesName": "丸鳥X偽裝"
+    "seriesName": "丸鳥X偽裝",
+    "sourceMonster": "迅猛龍"
   },
   {
     "id": "armor_49787506",
@@ -11762,7 +12263,8 @@
       "泥雪耐性": 1
     },
     "defense": 90,
-    "seriesName": "原角龍X"
+    "seriesName": "原角龍X",
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_15184498",
@@ -11779,7 +12281,8 @@
       "昏厥耐性": 2
     },
     "defense": 90,
-    "seriesName": "原角龍X"
+    "seriesName": "原角龍X",
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_114799218",
@@ -11797,7 +12300,8 @@
       "特殊射擊強化": 1
     },
     "defense": 90,
-    "seriesName": "原角龍X"
+    "seriesName": "原角龍X",
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_80196210",
@@ -11814,7 +12318,8 @@
       "特殊射擊強化": 1
     },
     "defense": 90,
-    "seriesName": "原角龍X"
+    "seriesName": "原角龍X",
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_448246386",
@@ -11830,7 +12335,8 @@
       "耐震": 1
     },
     "defense": 90,
-    "seriesName": "原角龍X"
+    "seriesName": "原角龍X",
+    "sourceMonster": "原角龍"
   },
   {
     "id": "armor_226197969",
@@ -11845,7 +12351,8 @@
       "佯攻": 1,
       "挑戰者": 3
     },
-    "defense": 86
+    "defense": 86,
+    "sourceMonster": "野豬"
   },
   {
     "id": "armor_220602775",
@@ -11860,7 +12367,8 @@
     "skills": {
       "水屬性攻擊強化": 2
     },
-    "defense": 90
+    "defense": 90,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_17179031",
@@ -11876,7 +12384,8 @@
       "佯攻": 1,
       "怨恨": 1
     },
-    "defense": 90
+    "defense": 90,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_16130455",
@@ -11891,7 +12400,8 @@
     "skills": {
       "水屬性攻擊強化": 3
     },
-    "defense": 90
+    "defense": 90,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_211964464",
@@ -11908,7 +12418,8 @@
       "後座力減輕": 2
     },
     "defense": 84,
-    "seriesName": "飛甲蟲X"
+    "seriesName": "飛甲蟲X",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_43143728",
@@ -11925,7 +12436,8 @@
       "迴避性能": 2
     },
     "defense": 84,
-    "seriesName": "飛甲蟲X"
+    "seriesName": "飛甲蟲X",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_8540720",
@@ -11941,7 +12453,8 @@
       "迴避性能": 2
     },
     "defense": 84,
-    "seriesName": "飛甲蟲X"
+    "seriesName": "飛甲蟲X",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_108155440",
@@ -11958,7 +12471,8 @@
       "迴避性能": 1
     },
     "defense": 84,
-    "seriesName": "飛甲蟲X"
+    "seriesName": "飛甲蟲X",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_73552432",
@@ -11975,7 +12489,8 @@
       "抑制偏移": 2
     },
     "defense": 84,
-    "seriesName": "飛甲蟲X"
+    "seriesName": "飛甲蟲X",
+    "sourceMonster": "飛甲蟲"
   },
   {
     "id": "armor_1948588627",
@@ -11991,7 +12506,8 @@
       "體力回復量UP": 1
     },
     "defense": 86,
-    "seriesName": "巨甲蟲"
+    "seriesName": "巨甲蟲",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_1242896979",
@@ -12007,7 +12523,8 @@
       "體力回復量UP": 1
     },
     "defense": 86,
-    "seriesName": "巨甲蟲"
+    "seriesName": "巨甲蟲",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_1208293971",
@@ -12024,7 +12541,8 @@
       "抑制偏移": 2
     },
     "defense": 86,
-    "seriesName": "巨甲蟲"
+    "seriesName": "巨甲蟲",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_1341463123",
@@ -12040,7 +12558,8 @@
       "龍耐性": 3
     },
     "defense": 86,
-    "seriesName": "巨甲蟲"
+    "seriesName": "巨甲蟲",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_1306860115",
@@ -12058,7 +12577,8 @@
       "體力回復量UP": 1
     },
     "defense": 86,
-    "seriesName": "巨甲蟲"
+    "seriesName": "巨甲蟲",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_1262725810",
@@ -12073,7 +12593,8 @@
       "麻痺屬性強化": 1,
       "翔蟲能手": 2
     },
-    "defense": 84
+    "defense": 84,
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1228122802",
@@ -12089,7 +12610,8 @@
       "收刀術": 1,
       "麻痺耐性": 2
     },
-    "defense": 84
+    "defense": 84,
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1327737522",
@@ -12104,7 +12626,8 @@
       "麻痺屬性強化": 2,
       "騎乘名人": 1
     },
-    "defense": 84
+    "defense": 84,
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1293134514",
@@ -12120,7 +12643,8 @@
       "收刀術": 1,
       "麻痺耐性": 1
     },
-    "defense": 84
+    "defense": 84,
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1124313778",
@@ -12135,7 +12659,8 @@
       "收刀術": 1,
       "翔蟲能手": 1
     },
-    "defense": 84
+    "defense": 84,
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_128508435",
@@ -12150,7 +12675,8 @@
     "skills": {
       "攻擊": 3
     },
-    "defense": 90
+    "defense": 90,
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_461955603",
@@ -12166,7 +12692,8 @@
       "騎乘名人": 1,
       "飛簷走壁": 2
     },
-    "defense": 90
+    "defense": 90,
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_687007347",
@@ -12183,7 +12710,8 @@
       "跑者": 2
     },
     "defense": 86,
-    "seriesName": "狗龍X偽裝"
+    "seriesName": "狗龍X偽裝",
+    "sourceMonster": "狗龍"
   },
   {
     "id": "armor_1248492189",
@@ -12200,7 +12728,8 @@
       "昏厥耐性": 1
     },
     "defense": 86,
-    "seriesName": "迅猛龍"
+    "seriesName": "迅猛龍",
+    "sourceMonster": "迅猛龍"
   },
   {
     "id": "armor_1213889181",
@@ -12217,7 +12746,8 @@
       "風壓耐性": 1
     },
     "defense": 86,
-    "seriesName": "迅猛龍"
+    "seriesName": "迅猛龍",
+    "sourceMonster": "迅猛龍"
   },
   {
     "id": "armor_1313503901",
@@ -12233,7 +12763,8 @@
       "攻擊": 2
     },
     "defense": 86,
-    "seriesName": "迅猛龍"
+    "seriesName": "迅猛龍",
+    "sourceMonster": "迅猛龍"
   },
   {
     "id": "armor_1278900893",
@@ -12249,7 +12780,8 @@
       "捕獲名人": 1
     },
     "defense": 86,
-    "seriesName": "迅猛龍"
+    "seriesName": "迅猛龍",
+    "sourceMonster": "迅猛龍"
   },
   {
     "id": "armor_1110080157",
@@ -12266,7 +12798,8 @@
       "昏厥耐性": 2
     },
     "defense": 86,
-    "seriesName": "迅猛龍"
+    "seriesName": "迅猛龍",
+    "sourceMonster": "迅猛龍"
   },
   {
     "id": "armor_467653432",
@@ -12283,7 +12816,8 @@
       "迴避性能": 2
     },
     "defense": 86,
-    "seriesName": "鐮鼬龍X"
+    "seriesName": "鐮鼬龍X",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_433050424",
@@ -12300,7 +12834,8 @@
       "迴避性能": 1
     },
     "defense": 86,
-    "seriesName": "鐮鼬龍X"
+    "seriesName": "鐮鼬龍X",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_532665144",
@@ -12317,7 +12852,8 @@
       "迴避性能": 1
     },
     "defense": 86,
-    "seriesName": "鐮鼬龍X"
+    "seriesName": "鐮鼬龍X",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_498062136",
@@ -12334,7 +12870,8 @@
       "體術": 1
     },
     "defense": 86,
-    "seriesName": "鐮鼬龍X"
+    "seriesName": "鐮鼬龍X",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_329241400",
@@ -12352,7 +12889,8 @@
       "迴避性能": 1
     },
     "defense": 86,
-    "seriesName": "鐮鼬龍X"
+    "seriesName": "鐮鼬龍X",
+    "sourceMonster": "鐮鼬龍"
   },
   {
     "id": "armor_196751690",
@@ -12369,7 +12907,8 @@
       "冰耐性": 1
     },
     "defense": 86,
-    "seriesName": "眠狗龍X"
+    "seriesName": "眠狗龍X",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_162148682",
@@ -12385,7 +12924,8 @@
       "睡眠屬性強化": 1
     },
     "defense": 86,
-    "seriesName": "眠狗龍X"
+    "seriesName": "眠狗龍X",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_261763402",
@@ -12402,7 +12942,8 @@
       "睡眠屬性強化": 1
     },
     "defense": 86,
-    "seriesName": "眠狗龍X"
+    "seriesName": "眠狗龍X",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_227160394",
@@ -12418,7 +12959,8 @@
       "睡眠耐性": 1
     },
     "defense": 86,
-    "seriesName": "眠狗龍X"
+    "seriesName": "眠狗龍X",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_58339658",
@@ -12435,7 +12977,8 @@
       "冰耐性": 2
     },
     "defense": 86,
-    "seriesName": "眠狗龍X"
+    "seriesName": "眠狗龍X",
+    "sourceMonster": "眠狗龍"
   },
   {
     "id": "armor_626472794",
@@ -12453,7 +12996,8 @@
       "昏厥耐性": 1
     },
     "defense": 86,
-    "seriesName": "搔鳥X"
+    "seriesName": "搔鳥X",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_994522970",
@@ -12470,7 +13014,8 @@
       "收刀術": 1
     },
     "defense": 86,
-    "seriesName": "搔鳥X"
+    "seriesName": "搔鳥X",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_959919962",
@@ -12488,7 +13033,8 @@
       "收刀術": 1
     },
     "defense": 86,
-    "seriesName": "搔鳥X"
+    "seriesName": "搔鳥X",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_1059534682",
@@ -12505,7 +13051,8 @@
       "精神抖擻": 1
     },
     "defense": 86,
-    "seriesName": "搔鳥X"
+    "seriesName": "搔鳥X",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_1024931674",
@@ -12521,7 +13068,8 @@
       "看破": 2
     },
     "defense": 86,
-    "seriesName": "搔鳥X"
+    "seriesName": "搔鳥X",
+    "sourceMonster": "搔鳥"
   },
   {
     "id": "armor_182501717",
@@ -12537,7 +13085,8 @@
       "迴避距離UP": 1
     },
     "defense": 88,
-    "seriesName": "毒狗龍X"
+    "seriesName": "毒狗龍X",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_147898709",
@@ -12554,7 +13103,8 @@
       "毒耐性": 1
     },
     "defense": 88,
-    "seriesName": "毒狗龍X"
+    "seriesName": "毒狗龍X",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_247513429",
@@ -12571,7 +13121,8 @@
       "心眼": 2
     },
     "defense": 88,
-    "seriesName": "毒狗龍X"
+    "seriesName": "毒狗龍X",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_212910421",
@@ -12587,7 +13138,8 @@
       "毒屬性強化": 2
     },
     "defense": 88,
-    "seriesName": "毒狗龍X"
+    "seriesName": "毒狗龍X",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_44089685",
@@ -12602,7 +13154,8 @@
       "迴避距離UP": 2
     },
     "defense": 88,
-    "seriesName": "毒狗龍X"
+    "seriesName": "毒狗龍X",
+    "sourceMonster": "毒狗龍"
   },
   {
     "id": "armor_882073963",
@@ -12621,7 +13174,8 @@
       "快吃": 1
     },
     "defense": 86,
-    "seriesName": "青熊獸X"
+    "seriesName": "青熊獸X",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_176382315",
@@ -12637,7 +13191,8 @@
       "怨恨": 1
     },
     "defense": 86,
-    "seriesName": "青熊獸X"
+    "seriesName": "青熊獸X",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_141779307",
@@ -12655,7 +13210,8 @@
       "怨恨": 2
     },
     "defense": 86,
-    "seriesName": "青熊獸X"
+    "seriesName": "青熊獸X",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_241394027",
@@ -12673,7 +13229,8 @@
       "快吃": 1
     },
     "defense": 86,
-    "seriesName": "青熊獸X"
+    "seriesName": "青熊獸X",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_206791019",
@@ -12690,7 +13247,8 @@
       "快吃": 1
     },
     "defense": 86,
-    "seriesName": "青熊獸X"
+    "seriesName": "青熊獸X",
+    "sourceMonster": "青熊獸"
   },
   {
     "id": "armor_1415063031",
@@ -12708,7 +13266,8 @@
       "裝填速度": 1
     },
     "defense": 86,
-    "seriesName": "白兔獸X"
+    "seriesName": "白兔獸X",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_709371383",
@@ -12727,7 +13286,8 @@
       "裝填速度": 1
     },
     "defense": 86,
-    "seriesName": "白兔獸X"
+    "seriesName": "白兔獸X",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_674768375",
@@ -12744,7 +13304,8 @@
       "冰屬性攻擊強化": 3
     },
     "defense": 86,
-    "seriesName": "白兔獸X"
+    "seriesName": "白兔獸X",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_774383095",
@@ -12759,7 +13320,8 @@
       "體術": 3
     },
     "defense": 86,
-    "seriesName": "白兔獸X"
+    "seriesName": "白兔獸X",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_739780087",
@@ -12777,7 +13339,8 @@
       "裝填速度": 1
     },
     "defense": 86,
-    "seriesName": "白兔獸X"
+    "seriesName": "白兔獸X",
+    "sourceMonster": "白兔獸"
   },
   {
     "id": "armor_896848136",
@@ -12795,7 +13358,8 @@
       "耳塞": 1
     },
     "defense": 94,
-    "seriesName": "赤甲獸X"
+    "seriesName": "赤甲獸X",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_191156488",
@@ -12812,7 +13376,8 @@
       "耳塞": 1
     },
     "defense": 94,
-    "seriesName": "赤甲獸X"
+    "seriesName": "赤甲獸X",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_156553480",
@@ -12831,7 +13396,8 @@
       "耳塞": 1
     },
     "defense": 94,
-    "seriesName": "赤甲獸X"
+    "seriesName": "赤甲獸X",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_256168200",
@@ -12846,7 +13412,8 @@
       "耳塞": 2
     },
     "defense": 94,
-    "seriesName": "赤甲獸X"
+    "seriesName": "赤甲獸X",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_221565192",
@@ -12862,7 +13429,8 @@
       "迴避距離UP": 2
     },
     "defense": 94,
-    "seriesName": "赤甲獸X"
+    "seriesName": "赤甲獸X",
+    "sourceMonster": "赤甲獸"
   },
   {
     "id": "armor_377572429",
@@ -12879,7 +13447,8 @@
       "拔刀術【技】": 1
     },
     "defense": 88,
-    "seriesName": "傘鳥X"
+    "seriesName": "傘鳥X",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_342969421",
@@ -12897,7 +13466,8 @@
       "拔刀術【技】": 1
     },
     "defense": 88,
-    "seriesName": "傘鳥X"
+    "seriesName": "傘鳥X",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1784761421",
@@ -12916,7 +13486,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 88,
-    "seriesName": "傘鳥X"
+    "seriesName": "傘鳥X",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1750158413",
@@ -12933,7 +13504,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 88,
-    "seriesName": "傘鳥X"
+    "seriesName": "傘鳥X",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_1849773133",
@@ -12951,7 +13523,8 @@
       "拔刀術【技】": 1
     },
     "defense": 88,
-    "seriesName": "傘鳥X"
+    "seriesName": "傘鳥X",
+    "sourceMonster": "傘鳥"
   },
   {
     "id": "armor_911081769",
@@ -12969,7 +13542,8 @@
       "集中": 1
     },
     "defense": 92,
-    "seriesName": "水獸X"
+    "seriesName": "水獸X",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_876478761",
@@ -12985,7 +13559,8 @@
       "集中": 1
     },
     "defense": 92,
-    "seriesName": "水獸X"
+    "seriesName": "水獸X",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_170787113",
@@ -13004,7 +13579,8 @@
       "彈藥節約": 1
     },
     "defense": 92,
-    "seriesName": "水獸X"
+    "seriesName": "水獸X",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_136184105",
@@ -13020,7 +13596,8 @@
       "無傷": 2
     },
     "defense": 92,
-    "seriesName": "水獸X"
+    "seriesName": "水獸X",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_235798825",
@@ -13036,7 +13613,8 @@
       "集中": 1
     },
     "defense": 92,
-    "seriesName": "水獸X"
+    "seriesName": "水獸X",
+    "sourceMonster": "水獸"
   },
   {
     "id": "armor_925331662",
@@ -13055,7 +13633,8 @@
       "散彈･擴散箭強化": 1
     },
     "defense": 94,
-    "seriesName": "土砂龍X"
+    "seriesName": "土砂龍X",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_890728654",
@@ -13072,7 +13651,8 @@
       "泥雪耐性": 2
     },
     "defense": 94,
-    "seriesName": "土砂龍X"
+    "seriesName": "土砂龍X",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_185037006",
@@ -13091,7 +13671,8 @@
       "散彈･擴散箭強化": 1
     },
     "defense": 94,
-    "seriesName": "土砂龍X"
+    "seriesName": "土砂龍X",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_183988430",
@@ -13107,7 +13688,8 @@
       "防禦": 1
     },
     "defense": 94,
-    "seriesName": "土砂龍X"
+    "seriesName": "土砂龍X",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_149385422",
@@ -13125,7 +13707,8 @@
       "攻擊守勢": 1
     },
     "defense": 94,
-    "seriesName": "土砂龍X"
+    "seriesName": "土砂龍X",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1386141032",
@@ -13141,7 +13724,8 @@
       "耐震": 2
     },
     "defense": 94,
-    "seriesName": "大名蟹"
+    "seriesName": "大名蟹",
+    "sourceMonster": "大名蟹"
   },
   {
     "id": "armor_1351538024",
@@ -13159,7 +13743,8 @@
       "裝填擴充": 1
     },
     "defense": 94,
-    "seriesName": "大名蟹"
+    "seriesName": "大名蟹",
+    "sourceMonster": "大名蟹"
   },
   {
     "id": "armor_1451152744",
@@ -13176,7 +13761,8 @@
       "通常彈･連射箭強化": 2
     },
     "defense": 94,
-    "seriesName": "大名蟹"
+    "seriesName": "大名蟹",
+    "sourceMonster": "大名蟹"
   },
   {
     "id": "armor_1416549736",
@@ -13194,7 +13780,8 @@
       "收刀術": 1
     },
     "defense": 94,
-    "seriesName": "大名蟹"
+    "seriesName": "大名蟹",
+    "sourceMonster": "大名蟹"
   },
   {
     "id": "armor_710858088",
@@ -13211,7 +13798,8 @@
       "耐震": 1
     },
     "defense": 94,
-    "seriesName": "大名蟹"
+    "seriesName": "大名蟹",
+    "sourceMonster": "大名蟹"
   },
   {
     "id": "armor_391822434",
@@ -13227,7 +13815,8 @@
       "快吃": 1
     },
     "defense": 90,
-    "seriesName": "河童蛙X"
+    "seriesName": "河童蛙X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_357219426",
@@ -13244,7 +13833,8 @@
       "快吃": 1
     },
     "defense": 90,
-    "seriesName": "河童蛙X"
+    "seriesName": "河童蛙X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1799011426",
@@ -13262,7 +13852,8 @@
       "飢餓耐性": 1
     },
     "defense": 90,
-    "seriesName": "河童蛙X"
+    "seriesName": "河童蛙X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1764408418",
@@ -13278,7 +13869,8 @@
       "迴避距離UP": 2
     },
     "defense": 90,
-    "seriesName": "河童蛙X"
+    "seriesName": "河童蛙X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1864023138",
@@ -13295,7 +13887,8 @@
       "快吃": 1
     },
     "defense": 90,
-    "seriesName": "河童蛙X"
+    "seriesName": "河童蛙X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_2125848280",
@@ -13394,7 +13987,8 @@
       "力量解放": 1
     },
     "defense": 98,
-    "seriesName": "毒蠍X"
+    "seriesName": "毒蠍X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1658166612",
@@ -13410,7 +14004,8 @@
       "心眼": 1
     },
     "defense": 98,
-    "seriesName": "毒蠍X"
+    "seriesName": "毒蠍X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1623563604",
@@ -13428,7 +14023,8 @@
       "毒耐性": 1
     },
     "defense": 98,
-    "seriesName": "毒蠍X"
+    "seriesName": "毒蠍X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1723178324",
@@ -13444,7 +14040,8 @@
       "毒耐性": 1
     },
     "defense": 98,
-    "seriesName": "毒蠍X"
+    "seriesName": "毒蠍X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1688575316",
@@ -13461,7 +14058,8 @@
       "心眼": 2
     },
     "defense": 98,
-    "seriesName": "毒蠍X"
+    "seriesName": "毒蠍X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1841220981",
@@ -13477,7 +14075,8 @@
       "力量解放": 1
     },
     "defense": 98,
-    "seriesName": "毒蛛X"
+    "seriesName": "毒蛛X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1672400245",
@@ -13493,7 +14092,8 @@
       "心眼": 1
     },
     "defense": 98,
-    "seriesName": "毒蛛X"
+    "seriesName": "毒蛛X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1637797237",
@@ -13511,7 +14111,8 @@
       "毒耐性": 1
     },
     "defense": 98,
-    "seriesName": "毒蛛X"
+    "seriesName": "毒蛛X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1737411957",
@@ -13527,7 +14128,8 @@
       "毒耐性": 1
     },
     "defense": 98,
-    "seriesName": "毒蛛X"
+    "seriesName": "毒蛛X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1702808949",
@@ -13544,7 +14146,8 @@
       "心眼": 2
     },
     "defense": 98,
-    "seriesName": "毒蛛X"
+    "seriesName": "毒蛛X",
+    "sourceMonster": "巨蜂"
   },
   {
     "id": "armor_1630207382",
@@ -13577,7 +14180,8 @@
       "最愛菇類": 2,
       "吹笛名人": 1
     },
-    "defense": 98
+    "defense": 98,
+    "sourceMonster": "鐮鼬龍王"
   },
   {
     "id": "armor_1644965303",
@@ -13609,7 +14213,8 @@
       "體力回復量UP": 2,
       "廣域化": 1
     },
-    "defense": 96
+    "defense": 96,
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1743531447",
@@ -13642,7 +14247,8 @@
       "廣域化": 1
     },
     "defense": 96,
-    "seriesName": "高貴X"
+    "seriesName": "高貴X",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_2076978615",
@@ -13659,7 +14265,8 @@
       "快吃": 2
     },
     "defense": 96,
-    "seriesName": "高貴X"
+    "seriesName": "高貴X",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1811774702",
@@ -13763,7 +14370,8 @@
       "精靈加護": 2
     },
     "defense": 92,
-    "seriesName": "花瓣X"
+    "seriesName": "花瓣X",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_2119204510",
@@ -13781,7 +14389,8 @@
       "精靈加護": 1
     },
     "defense": 92,
-    "seriesName": "花瓣X"
+    "seriesName": "花瓣X",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_2084601502",
@@ -13799,7 +14408,8 @@
       "體力回復量UP": 1
     },
     "defense": 92,
-    "seriesName": "花瓣X"
+    "seriesName": "花瓣X",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_1915780766",
@@ -13817,7 +14427,8 @@
       "耐力急速回復": 1
     },
     "defense": 92,
-    "seriesName": "花瓣X"
+    "seriesName": "花瓣X",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_1881177758",
@@ -13835,7 +14446,8 @@
       "耐力急速回復": 1
     },
     "defense": 92,
-    "seriesName": "花瓣X"
+    "seriesName": "花瓣X",
+    "sourceMonster": "臣蜘蛛"
   },
   {
     "id": "armor_1725474946",
@@ -14018,7 +14630,8 @@
       "體力回復量UP": 1
     },
     "defense": 92,
-    "seriesName": "結雲"
+    "seriesName": "結雲",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1734129761",
@@ -14034,7 +14647,8 @@
       "耳塞": 2
     },
     "defense": 92,
-    "seriesName": "結雲"
+    "seriesName": "結雲",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1699526753",
@@ -14052,7 +14666,8 @@
       "迴避性能": 2
     },
     "defense": 92,
-    "seriesName": "結雲"
+    "seriesName": "結雲",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_2067576929",
@@ -14070,7 +14685,8 @@
       "耳塞": 1
     },
     "defense": 92,
-    "seriesName": "結雲"
+    "seriesName": "結雲",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_2032973921",
@@ -14087,7 +14703,8 @@
       "體力回復量UP": 2
     },
     "defense": 92,
-    "seriesName": "結雲"
+    "seriesName": "結雲",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_500362774",
@@ -14116,7 +14733,8 @@
       "快吃": 2
     },
     "defense": 92,
-    "seriesName": "垂皮龍X"
+    "seriesName": "垂皮龍X",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_101597789",
@@ -14133,7 +14751,8 @@
       "道具使用強化": 2
     },
     "defense": 92,
-    "seriesName": "垂皮龍X"
+    "seriesName": "垂皮龍X",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_838377711",
@@ -14150,7 +14769,8 @@
       "雷屬性攻擊強化": 2
     },
     "defense": 96,
-    "seriesName": "奇怪龍X"
+    "seriesName": "奇怪龍X",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_937992431",
@@ -14168,7 +14788,8 @@
       "體力回復量UP": 2
     },
     "defense": 96,
-    "seriesName": "奇怪龍X"
+    "seriesName": "奇怪龍X",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_903389423",
@@ -14186,7 +14807,8 @@
       "雷屬性攻擊強化": 3
     },
     "defense": 96,
-    "seriesName": "奇怪龍X"
+    "seriesName": "奇怪龍X",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_197697775",
@@ -14204,7 +14826,8 @@
       "KO術": 1
     },
     "defense": 96,
-    "seriesName": "奇怪龍X"
+    "seriesName": "奇怪龍X",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_163094767",
@@ -14222,7 +14845,8 @@
       "回復速度": 2
     },
     "defense": 96,
-    "seriesName": "奇怪龍X"
+    "seriesName": "奇怪龍X",
+    "sourceMonster": "奇怪龍"
   },
   {
     "id": "armor_363338924",
@@ -14240,7 +14864,8 @@
       "昏厥耐性": 2
     },
     "defense": 96,
-    "seriesName": "天狗獸X"
+    "seriesName": "天狗獸X",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1805130924",
@@ -14255,7 +14880,8 @@
       "廣域化": 3
     },
     "defense": 96,
-    "seriesName": "天狗獸X"
+    "seriesName": "天狗獸X",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1770527916",
@@ -14272,7 +14898,8 @@
       "快吃": 1
     },
     "defense": 96,
-    "seriesName": "天狗獸X"
+    "seriesName": "天狗獸X",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1870142636",
@@ -14290,7 +14917,8 @@
       "快吃": 1
     },
     "defense": 96,
-    "seriesName": "天狗獸X"
+    "seriesName": "天狗獸X",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1835539628",
@@ -14310,7 +14938,8 @@
       "彈藥節約": 1
     },
     "defense": 96,
-    "seriesName": "天狗獸X"
+    "seriesName": "天狗獸X",
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1158935590",
@@ -14327,7 +14956,8 @@
       "力量解放": 2
     },
     "defense": 96,
-    "seriesName": "緋天狗獸"
+    "seriesName": "緋天狗獸",
+    "sourceMonster": "緋天狗獸"
   },
   {
     "id": "armor_1526985766",
@@ -14346,7 +14976,8 @@
       "回復速度": 3
     },
     "defense": 96,
-    "seriesName": "緋天狗獸"
+    "seriesName": "緋天狗獸",
+    "sourceMonster": "緋天狗獸"
   },
   {
     "id": "armor_1525937190",
@@ -14363,7 +14994,8 @@
       "收刀術": 1
     },
     "defense": 96,
-    "seriesName": "緋天狗獸"
+    "seriesName": "緋天狗獸",
+    "sourceMonster": "緋天狗獸"
   },
   {
     "id": "armor_1491334182",
@@ -14380,7 +15012,8 @@
       "散彈･擴散箭強化": 2
     },
     "defense": 96,
-    "seriesName": "緋天狗獸"
+    "seriesName": "緋天狗獸",
+    "sourceMonster": "緋天狗獸"
   },
   {
     "id": "armor_1590948902",
@@ -14398,7 +15031,8 @@
       "散彈･擴散箭強化": 1
     },
     "defense": 96,
-    "seriesName": "緋天狗獸"
+    "seriesName": "緋天狗獸",
+    "sourceMonster": "緋天狗獸"
   },
   {
     "id": "armor_640182139",
@@ -14415,7 +15049,8 @@
       "毒屬性強化": 1
     },
     "defense": 96,
-    "seriesName": "毒妖鳥X"
+    "seriesName": "毒妖鳥X",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_605579131",
@@ -14432,7 +15067,8 @@
       "砥石使用高速化": 2
     },
     "defense": 96,
-    "seriesName": "毒妖鳥X"
+    "seriesName": "毒妖鳥X",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_973629307",
@@ -14448,7 +15084,8 @@
       "彈道強化": 2
     },
     "defense": 96,
-    "seriesName": "毒妖鳥X"
+    "seriesName": "毒妖鳥X",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_972580731",
@@ -14465,7 +15102,8 @@
       "毒屬性強化": 2
     },
     "defense": 96,
-    "seriesName": "毒妖鳥X"
+    "seriesName": "毒妖鳥X",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_1072195451",
@@ -14483,7 +15121,8 @@
       "彈道強化": 1
     },
     "defense": 96,
-    "seriesName": "毒妖鳥X"
+    "seriesName": "毒妖鳥X",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_654432024",
@@ -14501,7 +15140,8 @@
       "怨恨": 1
     },
     "defense": 96,
-    "seriesName": "泥魚龍X"
+    "seriesName": "泥魚龍X",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_653383448",
@@ -14521,7 +15161,8 @@
       "槍械改良": 1
     },
     "defense": 96,
-    "seriesName": "泥魚龍X"
+    "seriesName": "泥魚龍X",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_618780440",
@@ -14538,7 +15179,8 @@
       "怨恨": 2
     },
     "defense": 96,
-    "seriesName": "泥魚龍X"
+    "seriesName": "泥魚龍X",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_986830616",
@@ -14556,7 +15198,8 @@
       "攻擊守勢": 2
     },
     "defense": 96,
-    "seriesName": "泥魚龍X"
+    "seriesName": "泥魚龍X",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_952227608",
@@ -14574,7 +15217,8 @@
       "怨恨": 1
     },
     "defense": 96,
-    "seriesName": "泥魚龍X"
+    "seriesName": "泥魚龍X",
+    "sourceMonster": "泥魚龍"
   },
   {
     "id": "armor_971634630",
@@ -14592,7 +15236,8 @@
       "砲術": 2
     },
     "defense": 100,
-    "seriesName": "岩龍X"
+    "seriesName": "岩龍X",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_1071249350",
@@ -14610,7 +15255,8 @@
       "力量解放": 1
     },
     "defense": 100,
-    "seriesName": "岩龍X"
+    "seriesName": "岩龍X",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_1036646342",
@@ -14627,7 +15273,8 @@
       "砥石使用高速化": 1
     },
     "defense": 100,
-    "seriesName": "岩龍X"
+    "seriesName": "岩龍X",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_867825606",
@@ -14645,7 +15292,8 @@
       "裝填速度": 1
     },
     "defense": 100,
-    "seriesName": "岩龍X"
+    "seriesName": "岩龍X",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_833222598",
@@ -14663,7 +15311,8 @@
       "裝填速度": 1
     },
     "defense": 100,
-    "seriesName": "岩龍X"
+    "seriesName": "岩龍X",
+    "sourceMonster": "岩龍"
   },
   {
     "id": "armor_271838211",
@@ -14681,7 +15330,8 @@
       "彈藥節約": 1
     },
     "defense": 96,
-    "seriesName": "人魚龍X"
+    "seriesName": "人魚龍X",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_371452931",
@@ -14699,7 +15349,8 @@
       "裝填擴充": 1
     },
     "defense": 96,
-    "seriesName": "人魚龍X"
+    "seriesName": "人魚龍X",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_336849923",
@@ -14717,7 +15368,8 @@
       "匠": 1
     },
     "defense": 96,
-    "seriesName": "人魚龍X"
+    "seriesName": "人魚龍X",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1778641923",
@@ -14734,7 +15386,8 @@
       "裝填擴充": 1
     },
     "defense": 96,
-    "seriesName": "人魚龍X"
+    "seriesName": "人魚龍X",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1777593347",
@@ -14751,7 +15404,8 @@
       "睡眠耐性": 1
     },
     "defense": 96,
-    "seriesName": "人魚龍X"
+    "seriesName": "人魚龍X",
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1207262151",
@@ -14768,7 +15422,8 @@
       "挑戰者": 2
     },
     "defense": 108,
-    "seriesName": "冰人魚龍"
+    "seriesName": "冰人魚龍",
+    "sourceMonster": "冰人魚龍"
   },
   {
     "id": "armor_1172659143",
@@ -14784,7 +15439,8 @@
       "挑戰者": 2
     },
     "defense": 108,
-    "seriesName": "冰人魚龍"
+    "seriesName": "冰人魚龍",
+    "sourceMonster": "冰人魚龍"
   },
   {
     "id": "armor_1540709319",
@@ -14802,7 +15458,8 @@
       "冰屬性攻擊強化": 1
     },
     "defense": 108,
-    "seriesName": "冰人魚龍"
+    "seriesName": "冰人魚龍",
+    "sourceMonster": "冰人魚龍"
   },
   {
     "id": "armor_1506106311",
@@ -14819,7 +15476,8 @@
       "冰屬性攻擊強化": 2
     },
     "defense": 108,
-    "seriesName": "冰人魚龍"
+    "seriesName": "冰人魚龍",
+    "sourceMonster": "冰人魚龍"
   },
   {
     "id": "armor_1605721031",
@@ -14837,7 +15495,8 @@
       "冰屬性攻擊強化": 2
     },
     "defense": 108,
-    "seriesName": "冰人魚龍"
+    "seriesName": "冰人魚龍",
+    "sourceMonster": "冰人魚龍"
   },
   {
     "id": "armor_1015853122",
@@ -14855,7 +15514,8 @@
       "挑戰者": 1
     },
     "defense": 96,
-    "seriesName": "雌火龍X"
+    "seriesName": "雌火龍X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_847032386",
@@ -14874,7 +15534,8 @@
       "滿足感": 1
     },
     "defense": 96,
-    "seriesName": "雌火龍X"
+    "seriesName": "雌火龍X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_812429378",
@@ -14892,7 +15553,8 @@
       "滿足感": 1
     },
     "defense": 96,
-    "seriesName": "雌火龍X"
+    "seriesName": "雌火龍X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_912044098",
@@ -14909,7 +15571,8 @@
       "挑戰者": 1
     },
     "defense": 96,
-    "seriesName": "雌火龍X"
+    "seriesName": "雌火龍X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_877441090",
@@ -14926,7 +15589,8 @@
       "挑戰者": 1
     },
     "defense": 96,
-    "seriesName": "雌火龍X"
+    "seriesName": "雌火龍X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_568002361",
@@ -14944,7 +15608,8 @@
       "看破": 3
     },
     "defense": 96,
-    "seriesName": "飛雷龍X"
+    "seriesName": "飛雷龍X",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_667617081",
@@ -14961,7 +15626,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 96,
-    "seriesName": "飛雷龍X"
+    "seriesName": "飛雷龍X",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_633014073",
@@ -14977,7 +15643,8 @@
       "不屈": 1
     },
     "defense": 96,
-    "seriesName": "飛雷龍X"
+    "seriesName": "飛雷龍X",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_1001064249",
@@ -14995,7 +15662,8 @@
       "貫通彈･貫通箭強化": 1
     },
     "defense": 96,
-    "seriesName": "飛雷龍X"
+    "seriesName": "飛雷龍X",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_966461241",
@@ -15013,7 +15681,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 96,
-    "seriesName": "飛雷龍X"
+    "seriesName": "飛雷龍X",
+    "sourceMonster": "飛雷龍"
   },
   {
     "id": "armor_582776542",
@@ -15030,7 +15699,8 @@
       "攻擊": 1
     },
     "defense": 98,
-    "seriesName": "蠻顎龍X"
+    "seriesName": "蠻顎龍X",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_548173534",
@@ -15048,7 +15718,8 @@
       "挑戰者": 1
     },
     "defense": 98,
-    "seriesName": "蠻顎龍X"
+    "seriesName": "蠻顎龍X",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_647788254",
@@ -15065,7 +15736,8 @@
       "挑戰者": 1
     },
     "defense": 98,
-    "seriesName": "蠻顎龍X"
+    "seriesName": "蠻顎龍X",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_613185246",
@@ -15082,7 +15754,8 @@
       "攻擊": 2
     },
     "defense": 98,
-    "seriesName": "蠻顎龍X"
+    "seriesName": "蠻顎龍X",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_981235422",
@@ -15098,7 +15771,8 @@
       "挑戰者": 2
     },
     "defense": 98,
-    "seriesName": "蠻顎龍X"
+    "seriesName": "蠻顎龍X",
+    "sourceMonster": "蠻顎龍"
   },
   {
     "id": "armor_759187133",
@@ -15221,7 +15895,8 @@
       "回復速度": 1
     },
     "defense": 100,
-    "seriesName": "海境X"
+    "seriesName": "海境X",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1715572209",
@@ -15238,7 +15913,8 @@
       "飢餓耐性": 1
     },
     "defense": 100,
-    "seriesName": "海境X"
+    "seriesName": "海境X",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1680969201",
@@ -15256,7 +15932,8 @@
       "利刃": 2
     },
     "defense": 100,
-    "seriesName": "海境X"
+    "seriesName": "海境X",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_2049019377",
@@ -15273,7 +15950,8 @@
       "利刃": 1
     },
     "defense": 100,
-    "seriesName": "海境X"
+    "seriesName": "海境X",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_2014416369",
@@ -15290,7 +15968,8 @@
       "飢餓耐性": 1
     },
     "defense": 100,
-    "seriesName": "海境X"
+    "seriesName": "海境X",
+    "sourceMonster": "水生獸"
   },
   {
     "id": "armor_1693732477",
@@ -15483,7 +16162,8 @@
       "攻擊": 1
     },
     "defense": 110,
-    "seriesName": "死神X"
+    "seriesName": "死神X",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_2013470300",
@@ -15500,7 +16180,8 @@
       "砥石使用高速化": 1
     },
     "defense": 110,
-    "seriesName": "死神X"
+    "seriesName": "死神X",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_2146639452",
@@ -15516,7 +16197,8 @@
       "攻擊": 1
     },
     "defense": 110,
-    "seriesName": "死神X"
+    "seriesName": "死神X",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_2112036444",
@@ -15534,7 +16216,8 @@
       "攻擊": 1
     },
     "defense": 110,
-    "seriesName": "死神X"
+    "seriesName": "死神X",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_1943215708",
@@ -15552,7 +16235,8 @@
       "攻擊": 1
     },
     "defense": 110,
-    "seriesName": "死神X"
+    "seriesName": "死神X",
+    "sourceMonster": "巨甲蟲"
   },
   {
     "id": "armor_2033823423",
@@ -15570,7 +16254,8 @@
       "耐力急速回復": 1
     },
     "defense": 104,
-    "seriesName": "魚鱗X"
+    "seriesName": "魚鱗X",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_2133438143",
@@ -15588,7 +16273,8 @@
       "耐力急速回復": 1
     },
     "defense": 104,
-    "seriesName": "魚鱗X"
+    "seriesName": "魚鱗X",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_2098835135",
@@ -15606,7 +16292,8 @@
       "死裡逃生": 1
     },
     "defense": 104,
-    "seriesName": "魚鱗X"
+    "seriesName": "魚鱗X",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1930014399",
@@ -15624,7 +16311,8 @@
       "死裡逃生": 1
     },
     "defense": 104,
-    "seriesName": "魚鱗X"
+    "seriesName": "魚鱗X",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1928965823",
@@ -15642,7 +16330,8 @@
       "死裡逃生": 1
     },
     "defense": 104,
-    "seriesName": "魚鱗X"
+    "seriesName": "魚鱗X",
+    "sourceMonster": "垂皮龍"
   },
   {
     "id": "armor_1722215987",
@@ -15658,7 +16347,8 @@
       "迴避性能": 2
     },
     "defense": 110,
-    "seriesName": "鍬形X"
+    "seriesName": "鍬形X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_1687612979",
@@ -15676,7 +16366,8 @@
       "龍屬性攻擊強化": 1
     },
     "defense": 110,
-    "seriesName": "鍬形X"
+    "seriesName": "鍬形X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_2055663155",
@@ -15692,7 +16383,8 @@
       "看破": 1
     },
     "defense": 110,
-    "seriesName": "鍬形X"
+    "seriesName": "鍬形X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_2021060147",
@@ -15708,7 +16400,8 @@
       "看破": 1
     },
     "defense": 110,
-    "seriesName": "鍬形X"
+    "seriesName": "鍬形X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_2120674867",
@@ -15726,7 +16419,8 @@
       "迴避性能": 1
     },
     "defense": 110,
-    "seriesName": "鍬形X"
+    "seriesName": "鍬形X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_1735941584",
@@ -15742,7 +16436,8 @@
       "迴避性能": 2
     },
     "defense": 110,
-    "seriesName": "鳳蝶X"
+    "seriesName": "鳳蝶X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_1701338576",
@@ -15760,7 +16455,8 @@
       "龍屬性攻擊強化": 1
     },
     "defense": 110,
-    "seriesName": "鳳蝶X"
+    "seriesName": "鳳蝶X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_2069388752",
@@ -15776,7 +16472,8 @@
       "看破": 1
     },
     "defense": 110,
-    "seriesName": "鳳蝶X"
+    "seriesName": "鳳蝶X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_2034785744",
@@ -15792,7 +16489,8 @@
       "看破": 1
     },
     "defense": 110,
-    "seriesName": "鳳蝶X"
+    "seriesName": "鳳蝶X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_2134400464",
@@ -15810,7 +16508,8 @@
       "迴避性能": 1
     },
     "defense": 110,
-    "seriesName": "鳳蝶X"
+    "seriesName": "鳳蝶X",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_486129265",
@@ -15906,7 +16605,8 @@
       "最愛菇類": 1
     },
     "defense": 104,
-    "seriesName": "公會詩人"
+    "seriesName": "公會詩人",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1989732918",
@@ -15923,7 +16623,8 @@
       "幸運": 1
     },
     "defense": 104,
-    "seriesName": "公會詩人"
+    "seriesName": "公會詩人",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1955129910",
@@ -15941,7 +16642,8 @@
       "幸運": 1
     },
     "defense": 104,
-    "seriesName": "公會詩人"
+    "seriesName": "公會詩人",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1249438262",
@@ -15959,7 +16661,8 @@
       "吹笛名人": 1
     },
     "defense": 104,
-    "seriesName": "公會詩人"
+    "seriesName": "公會詩人",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1214835254",
@@ -15975,7 +16678,8 @@
       "最愛菇類": 1
     },
     "defense": 104,
-    "seriesName": "公會詩人"
+    "seriesName": "公會詩人",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1904368087",
@@ -15991,7 +16695,8 @@
       "最愛菇類": 1
     },
     "defense": 104,
-    "seriesName": "學識"
+    "seriesName": "學識",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_2003982807",
@@ -16008,7 +16713,8 @@
       "幸運": 1
     },
     "defense": 104,
-    "seriesName": "學識"
+    "seriesName": "學識",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1969379799",
@@ -16026,7 +16732,8 @@
       "幸運": 1
     },
     "defense": 104,
-    "seriesName": "學識"
+    "seriesName": "學識",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1263688151",
@@ -16044,7 +16751,8 @@
       "吹笛名人": 1
     },
     "defense": 104,
-    "seriesName": "學識"
+    "seriesName": "學識",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1229085143",
@@ -16060,7 +16768,8 @@
       "最愛菇類": 1
     },
     "defense": 104,
-    "seriesName": "學識"
+    "seriesName": "學識",
+    "sourceMonster": "土砂龍"
   },
   {
     "id": "armor_1739724963",
@@ -16077,7 +16786,8 @@
       "耳塞": 1
     },
     "defense": 108,
-    "seriesName": "守護者"
+    "seriesName": "守護者",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_1705121955",
@@ -16095,7 +16805,8 @@
       "屬性異常狀態的耐性": 1
     },
     "defense": 108,
-    "seriesName": "守護者"
+    "seriesName": "守護者",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_2073172131",
@@ -16114,7 +16825,8 @@
       "耳塞": 1
     },
     "defense": 108,
-    "seriesName": "守護者"
+    "seriesName": "守護者",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_2038569123",
@@ -16133,7 +16845,8 @@
       "屬性異常狀態的耐性": 2
     },
     "defense": 108,
-    "seriesName": "守護者"
+    "seriesName": "守護者",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_2138183843",
@@ -16150,7 +16863,8 @@
       "耳塞": 1
     },
     "defense": 108,
-    "seriesName": "守護者"
+    "seriesName": "守護者",
+    "sourceMonster": "毒妖鳥"
   },
   {
     "id": "armor_515137079",
@@ -16267,7 +16981,8 @@
       "冰屬性攻擊強化": 2
     },
     "defense": 108,
-    "seriesName": "冰牙龍X"
+    "seriesName": "冰牙龍X",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_832258221",
@@ -16285,7 +17000,8 @@
       "精神抖擻": 2
     },
     "defense": 108,
-    "seriesName": "冰牙龍X"
+    "seriesName": "冰牙龍X",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_931872941",
@@ -16303,7 +17019,8 @@
       "看破": 2
     },
     "defense": 108,
-    "seriesName": "冰牙龍X"
+    "seriesName": "冰牙龍X",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_897269933",
@@ -16320,7 +17037,8 @@
       "破壞王": 1
     },
     "defense": 108,
-    "seriesName": "冰牙龍X"
+    "seriesName": "冰牙龍X",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_191578285",
@@ -16338,7 +17056,8 @@
       "冰屬性攻擊強化": 2
     },
     "defense": 108,
-    "seriesName": "冰牙龍X"
+    "seriesName": "冰牙龍X",
+    "sourceMonster": "冰牙龍"
   },
   {
     "id": "armor_730265046",
@@ -16355,7 +17074,8 @@
       "減輕膽怯": 2
     },
     "defense": 110,
-    "seriesName": "禍鎧･真"
+    "seriesName": "禍鎧･真",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_695662038",
@@ -16372,7 +17092,8 @@
       "耳塞": 1
     },
     "defense": 110,
-    "seriesName": "禍鎧･真"
+    "seriesName": "禍鎧･真",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_795276758",
@@ -16389,7 +17110,8 @@
       "裝填擴充": 2
     },
     "defense": 110,
-    "seriesName": "禍鎧･真"
+    "seriesName": "禍鎧･真",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_760673750",
@@ -16405,7 +17127,8 @@
       "耳塞": 1
     },
     "defense": 110,
-    "seriesName": "禍鎧･真"
+    "seriesName": "禍鎧･真",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_591853014",
@@ -16423,7 +17146,8 @@
       "減輕膽怯": 1
     },
     "defense": 110,
-    "seriesName": "禍鎧･真"
+    "seriesName": "禍鎧･真",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_852627596",
@@ -16440,7 +17164,8 @@
       "減輕膽怯": 1
     },
     "defense": 108,
-    "seriesName": "迅龍X"
+    "seriesName": "迅龍X",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_818024588",
@@ -16458,7 +17183,8 @@
       "減輕膽怯": 1
     },
     "defense": 108,
-    "seriesName": "迅龍X"
+    "seriesName": "迅龍X",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_917639308",
@@ -16476,7 +17202,8 @@
       "體術": 2
     },
     "defense": 108,
-    "seriesName": "迅龍X"
+    "seriesName": "迅龍X",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_883036300",
@@ -16493,7 +17220,8 @@
       "減輕膽怯": 1
     },
     "defense": 108,
-    "seriesName": "迅龍X"
+    "seriesName": "迅龍X",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_177344652",
@@ -16510,7 +17238,8 @@
       "體術": 1
     },
     "defense": 108,
-    "seriesName": "迅龍X"
+    "seriesName": "迅龍X",
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_482866150",
@@ -16528,7 +17257,8 @@
       "收刀術": 1
     },
     "defense": 106,
-    "seriesName": "雪鬼獸X"
+    "seriesName": "雪鬼獸X",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_314045414",
@@ -16545,7 +17275,8 @@
       "怨恨": 3
     },
     "defense": 106,
-    "seriesName": "雪鬼獸X"
+    "seriesName": "雪鬼獸X",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_279442406",
@@ -16562,7 +17293,8 @@
       "收刀術": 1
     },
     "defense": 106,
-    "seriesName": "雪鬼獸X"
+    "seriesName": "雪鬼獸X",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_379057126",
@@ -16581,7 +17313,8 @@
       "收刀術": 1
     },
     "defense": 106,
-    "seriesName": "雪鬼獸X"
+    "seriesName": "雪鬼獸X",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_344454118",
@@ -16598,7 +17331,8 @@
       "彈道強化": 1
     },
     "defense": 106,
-    "seriesName": "雪鬼獸X"
+    "seriesName": "雪鬼獸X",
+    "sourceMonster": "雪鬼獸"
   },
   {
     "id": "armor_1340500798",
@@ -16616,7 +17350,8 @@
       "耐震": 1
     },
     "defense": 112,
-    "seriesName": "剛纏獸"
+    "seriesName": "剛纏獸",
+    "sourceMonster": "剛纏獸"
   },
   {
     "id": "armor_1305897790",
@@ -16634,7 +17369,8 @@
       "耐震": 2
     },
     "defense": 112,
-    "seriesName": "剛纏獸"
+    "seriesName": "剛纏獸",
+    "sourceMonster": "剛纏獸"
   },
   {
     "id": "armor_1137077054",
@@ -16652,7 +17388,8 @@
       "集中": 2
     },
     "defense": 112,
-    "seriesName": "剛纏獸"
+    "seriesName": "剛纏獸",
+    "sourceMonster": "剛纏獸"
   },
   {
     "id": "armor_1102474046",
@@ -16670,7 +17407,8 @@
       "精神抖擻": 2
     },
     "defense": 112,
-    "seriesName": "剛纏獸"
+    "seriesName": "剛纏獸",
+    "sourceMonster": "剛纏獸"
   },
   {
     "id": "armor_1202088766",
@@ -16689,7 +17427,8 @@
       "奪取耐力": 2
     },
     "defense": 112,
-    "seriesName": "剛纏獸"
+    "seriesName": "剛纏獸",
+    "sourceMonster": "剛纏獸"
   },
   {
     "id": "armor_1399850249",
@@ -16706,7 +17445,8 @@
       "無傷": 2
     },
     "defense": 108,
-    "seriesName": "將軍蟹"
+    "seriesName": "將軍蟹",
+    "sourceMonster": "將軍蟹"
   },
   {
     "id": "armor_1365247241",
@@ -16723,7 +17463,8 @@
       "看破": 1
     },
     "defense": 108,
-    "seriesName": "將軍蟹"
+    "seriesName": "將軍蟹",
+    "sourceMonster": "將軍蟹"
   },
   {
     "id": "armor_1464861961",
@@ -16741,7 +17482,8 @@
       "貫通彈･貫通箭強化": 1
     },
     "defense": 108,
-    "seriesName": "將軍蟹"
+    "seriesName": "將軍蟹",
+    "sourceMonster": "將軍蟹"
   },
   {
     "id": "armor_1430258953",
@@ -16758,7 +17500,8 @@
       "看破": 2
     },
     "defense": 108,
-    "seriesName": "將軍蟹"
+    "seriesName": "將軍蟹",
+    "sourceMonster": "將軍蟹"
   },
   {
     "id": "armor_724567305",
@@ -16776,7 +17519,8 @@
       "貫通彈･貫通箭強化": 2
     },
     "defense": 108,
-    "seriesName": "將軍蟹"
+    "seriesName": "將軍蟹",
+    "sourceMonster": "將軍蟹"
   },
   {
     "id": "armor_496575367",
@@ -16793,7 +17537,8 @@
       "強化持續": 1
     },
     "defense": 108,
-    "seriesName": "泥翁龍X"
+    "seriesName": "泥翁龍X",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_327754631",
@@ -16809,7 +17554,8 @@
       "強化持續": 1
     },
     "defense": 108,
-    "seriesName": "泥翁龍X"
+    "seriesName": "泥翁龍X",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_293151623",
@@ -16826,7 +17572,8 @@
       "迴避性能": 2
     },
     "defense": 108,
-    "seriesName": "泥翁龍X"
+    "seriesName": "泥翁龍X",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_392766343",
@@ -16844,7 +17591,8 @@
       "彈藥節約": 1
     },
     "defense": 108,
-    "seriesName": "泥翁龍X"
+    "seriesName": "泥翁龍X",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_358163335",
@@ -16862,7 +17610,8 @@
       "彈藥節約": 1
     },
     "defense": 108,
-    "seriesName": "泥翁龍X"
+    "seriesName": "泥翁龍X",
+    "sourceMonster": "泥翁龍"
   },
   {
     "id": "armor_286612512",
@@ -16880,7 +17629,8 @@
       "槍械改良": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_386227232",
@@ -16898,7 +17648,8 @@
       "彈藥節約": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_385178656",
@@ -16914,7 +17665,8 @@
       "耐力急速回復": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_350575648",
@@ -16932,7 +17684,8 @@
       "槍械改良": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1792367648",
@@ -16949,7 +17702,8 @@
       "耐力急速回復": 2
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_334398401",
@@ -16967,7 +17721,8 @@
       "槍械改良": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_299795393",
@@ -16985,7 +17740,8 @@
       "彈藥節約": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_399410113",
@@ -17001,7 +17757,8 @@
       "耐力急速回復": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_364807105",
@@ -17019,7 +17776,8 @@
       "槍械改良": 1
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1806599105",
@@ -17036,7 +17794,8 @@
       "耐力急速回復": 2
     },
     "defense": 108,
-    "seriesName": "妃蜘蛛X"
+    "seriesName": "妃蜘蛛X",
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_409402869",
@@ -17321,7 +18080,8 @@
       "火屬性攻擊強化": 3
     },
     "defense": 112,
-    "seriesName": "熔翁龍"
+    "seriesName": "熔翁龍",
+    "sourceMonster": "熔翁龍"
   },
   {
     "id": "armor_1080634298",
@@ -17338,7 +18098,8 @@
       "火場怪力": 2
     },
     "defense": 112,
-    "seriesName": "熔翁龍"
+    "seriesName": "熔翁龍",
+    "sourceMonster": "熔翁龍"
   },
   {
     "id": "armor_1180249018",
@@ -17355,7 +18116,8 @@
       "火場怪力": 1
     },
     "defense": 112,
-    "seriesName": "熔翁龍"
+    "seriesName": "熔翁龍",
+    "sourceMonster": "熔翁龍"
   },
   {
     "id": "armor_1145646010",
@@ -17372,7 +18134,8 @@
       "防禦強化": 1
     },
     "defense": 112,
-    "seriesName": "熔翁龍"
+    "seriesName": "熔翁龍",
+    "sourceMonster": "熔翁龍"
   },
   {
     "id": "armor_1513696186",
@@ -17389,7 +18152,8 @@
       "怨恨": 1
     },
     "defense": 112,
-    "seriesName": "熔翁龍"
+    "seriesName": "熔翁龍",
+    "sourceMonster": "熔翁龍"
   },
   {
     "id": "armor_1087278052",
@@ -17407,7 +18171,8 @@
       "翔蟲能手": 1
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1186892772",
@@ -17425,7 +18190,8 @@
       "翔蟲能手": 2
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1152289764",
@@ -17443,7 +18209,8 @@
       "槍械改良": 1
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1520339940",
@@ -17459,7 +18226,8 @@
       "爆破屬性強化": 2
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1485736932",
@@ -17477,7 +18245,8 @@
       "爆破異常狀態的耐性": 2
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1101527941",
@@ -17495,7 +18264,8 @@
       "翔蟲能手": 1
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1201142661",
@@ -17513,7 +18283,8 @@
       "翔蟲能手": 2
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1166539653",
@@ -17531,7 +18302,8 @@
       "槍械改良": 1
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1534589829",
@@ -17547,7 +18319,8 @@
       "爆破屬性強化": 2
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1499986821",
@@ -17565,7 +18338,8 @@
       "爆破異常狀態的耐性": 2
     },
     "defense": 112,
-    "seriesName": "熾妃蜘蛛"
+    "seriesName": "熾妃蜘蛛",
+    "sourceMonster": "熾妃蜘蛛"
   },
   {
     "id": "armor_1854946666",
@@ -17844,7 +18618,8 @@
       "滿足感": 1,
       "幸運": 1
     },
-    "defense": 110
+    "defense": 110,
+    "sourceMonster": "妃蜘蛛"
   },
   {
     "id": "armor_1863584969",
@@ -17861,7 +18636,8 @@
       "幸運": 1,
       "體力回復量UP": 1
     },
-    "defense": 110
+    "defense": 110,
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_1828981961",
@@ -17876,7 +18652,8 @@
       "廣域化": 2,
       "體力回復量UP": 1
     },
-    "defense": 110
+    "defense": 110,
+    "sourceMonster": "冰狼龍"
   },
   {
     "id": "armor_1827933385",
@@ -17892,7 +18669,8 @@
       "滿足感": 1,
       "體力回復量UP": 1
     },
-    "defense": 110
+    "defense": 110,
+    "sourceMonster": "人魚龍"
   },
   {
     "id": "armor_1659112649",
@@ -17924,7 +18702,8 @@
     "skills": {
       "減輕膽怯": 1
     },
-    "defense": 110
+    "defense": 110,
+    "sourceMonster": "迅龍"
   },
   {
     "id": "armor_607065756",
@@ -17938,7 +18717,8 @@
     "skills": {
       "減輕膽怯": 2
     },
-    "defense": 110
+    "defense": 110,
+    "sourceMonster": "天狗獸"
   },
   {
     "id": "armor_268407220",
@@ -17956,7 +18736,8 @@
       "特殊射擊強化": 2,
       "迴避性能": 1
     },
-    "defense": 112
+    "defense": 112,
+    "sourceMonster": "熔岩獸"
   },
   {
     "id": "armor_64983476",
@@ -17972,7 +18753,8 @@
       "特殊射擊強化": 1,
       "迴避性能": 1
     },
-    "defense": 112
+    "defense": 112,
+    "sourceMonster": "熔岩獸"
   },
   {
     "id": "armor_240972278",
@@ -17990,7 +18772,8 @@
       "毒屬性強化": 1
     },
     "defense": 112,
-    "seriesName": "翼蛇龍X"
+    "seriesName": "翼蛇龍X",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_206369270",
@@ -18008,7 +18791,8 @@
       "毒屬性強化": 2
     },
     "defense": 112,
-    "seriesName": "翼蛇龍X"
+    "seriesName": "翼蛇龍X",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_37548534",
@@ -18026,7 +18810,8 @@
       "風壓耐性": 2
     },
     "defense": 112,
-    "seriesName": "翼蛇龍X"
+    "seriesName": "翼蛇龍X",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_2945526",
@@ -18043,7 +18828,8 @@
       "毒耐性": 1
     },
     "defense": 112,
-    "seriesName": "翼蛇龍X"
+    "seriesName": "翼蛇龍X",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_102560246",
@@ -18060,7 +18846,8 @@
       "毒耐性": 2
     },
     "defense": 112,
-    "seriesName": "翼蛇龍X"
+    "seriesName": "翼蛇龍X",
+    "sourceMonster": "翼蛇龍"
   },
   {
     "id": "armor_1443546549",
@@ -18078,7 +18865,8 @@
       "體術": 1
     },
     "defense": 114,
-    "seriesName": "泡狐龍X"
+    "seriesName": "泡狐龍X",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_1442497973",
@@ -18095,7 +18883,8 @@
       "體術": 2
     },
     "defense": 114,
-    "seriesName": "泡狐龍X"
+    "seriesName": "泡狐龍X",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_736806325",
@@ -18113,7 +18902,8 @@
       "滿足感": 2
     },
     "defense": 114,
-    "seriesName": "泡狐龍X"
+    "seriesName": "泡狐龍X",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_702203317",
@@ -18131,7 +18921,8 @@
       "體術": 1
     },
     "defense": 114,
-    "seriesName": "泡狐龍X"
+    "seriesName": "泡狐龍X",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_801818037",
@@ -18150,7 +18941,8 @@
       "體術": 1
     },
     "defense": 114,
-    "seriesName": "泡狐龍X"
+    "seriesName": "泡狐龍X",
+    "sourceMonster": "泡狐龍"
   },
   {
     "id": "armor_1030086755",
@@ -18167,7 +18959,8 @@
       "超會心": 1
     },
     "defense": 114,
-    "seriesName": "火龍X"
+    "seriesName": "火龍X",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_861266019",
@@ -18184,7 +18977,8 @@
       "耳塞": 1
     },
     "defense": 114,
-    "seriesName": "火龍X"
+    "seriesName": "火龍X",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_826663011",
@@ -18200,7 +18994,8 @@
       "耳塞": 2
     },
     "defense": 114,
-    "seriesName": "火龍X"
+    "seriesName": "火龍X",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_926277731",
@@ -18217,7 +19012,8 @@
       "超會心": 1
     },
     "defense": 114,
-    "seriesName": "火龍X"
+    "seriesName": "火龍X",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_891674723",
@@ -18235,7 +19031,8 @@
       "耳塞": 2
     },
     "defense": 114,
-    "seriesName": "火龍X"
+    "seriesName": "火龍X",
+    "sourceMonster": "火龍"
   },
   {
     "id": "armor_985868263",
@@ -18252,7 +19049,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 116,
-    "seriesName": "雷狼龍X"
+    "seriesName": "雷狼龍X",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_951265255",
@@ -18271,7 +19069,8 @@
       "雷屬性攻擊強化": 2
     },
     "defense": 116,
-    "seriesName": "雷狼龍X"
+    "seriesName": "雷狼龍X",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_1050879975",
@@ -18288,7 +19087,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 116,
-    "seriesName": "雷狼龍X"
+    "seriesName": "雷狼龍X",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_1016276967",
@@ -18306,7 +19106,8 @@
       "雷屬性攻擊強化": 3
     },
     "defense": 116,
-    "seriesName": "雷狼龍X"
+    "seriesName": "雷狼龍X",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_847456231",
@@ -18323,7 +19124,8 @@
       "翔蟲能手": 1
     },
     "defense": 116,
-    "seriesName": "雷狼龍X"
+    "seriesName": "雷狼龍X",
+    "sourceMonster": "雷狼龍"
   },
   {
     "id": "armor_1044336640",
@@ -18340,7 +19142,8 @@
       "快吃": 1
     },
     "defense": 118,
-    "seriesName": "轟龍X"
+    "seriesName": "轟龍X",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_1009733632",
@@ -18357,7 +19160,8 @@
       "無傷": 1
     },
     "defense": 118,
-    "seriesName": "轟龍X"
+    "seriesName": "轟龍X",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_840912896",
@@ -18375,7 +19179,8 @@
       "通常彈･連射箭強化": 1
     },
     "defense": 118,
-    "seriesName": "轟龍X"
+    "seriesName": "轟龍X",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_806309888",
@@ -18392,7 +19197,8 @@
       "無傷": 1
     },
     "defense": 118,
-    "seriesName": "轟龍X"
+    "seriesName": "轟龍X",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_939479040",
@@ -18409,7 +19215,8 @@
       "通常彈･連射箭強化": 1
     },
     "defense": 118,
-    "seriesName": "轟龍X"
+    "seriesName": "轟龍X",
+    "sourceMonster": "轟龍"
   },
   {
     "id": "armor_1058045985",
@@ -18425,7 +19232,8 @@
       "耐震": 1
     },
     "defense": 118,
-    "seriesName": "角龍X"
+    "seriesName": "角龍X",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_1023442977",
@@ -18441,7 +19249,8 @@
       "攻擊守勢": 1
     },
     "defense": 118,
-    "seriesName": "角龍X"
+    "seriesName": "角龍X",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_1022394401",
@@ -18459,7 +19268,8 @@
       "貫通彈･貫通箭強化": 2
     },
     "defense": 118,
-    "seriesName": "角龍X"
+    "seriesName": "角龍X",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_853573665",
@@ -18476,7 +19286,8 @@
       "耐力急速回復": 2
     },
     "defense": 118,
-    "seriesName": "角龍X"
+    "seriesName": "角龍X",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_818970657",
@@ -18492,7 +19303,8 @@
       "耐震": 2
     },
     "defense": 118,
-    "seriesName": "角龍X"
+    "seriesName": "角龍X",
+    "sourceMonster": "角龍"
   },
   {
     "id": "armor_1562551503",
@@ -18509,7 +19321,8 @@
       "體術": 2
     },
     "defense": 112,
-    "seriesName": "黑蝕龍"
+    "seriesName": "黑蝕龍",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1393730767",
@@ -18526,7 +19339,8 @@
       "體術": 3
     },
     "defense": 112,
-    "seriesName": "黑蝕龍"
+    "seriesName": "黑蝕龍",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1359127759",
@@ -18542,7 +19356,8 @@
       "快吃": 2
     },
     "defense": 112,
-    "seriesName": "黑蝕龍"
+    "seriesName": "黑蝕龍",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1358079183",
@@ -18559,7 +19374,8 @@
       "挑戰者": 1
     },
     "defense": 112,
-    "seriesName": "黑蝕龍"
+    "seriesName": "黑蝕龍",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1457693903",
@@ -18577,7 +19393,8 @@
       "快吃": 1
     },
     "defense": 112,
-    "seriesName": "黑蝕龍"
+    "seriesName": "黑蝕龍",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1505146018",
@@ -18593,7 +19410,8 @@
       "體術": 3
     },
     "defense": 114,
-    "seriesName": "千刃龍"
+    "seriesName": "千刃龍",
+    "sourceMonster": "千刃龍"
   },
   {
     "id": "armor_1604760738",
@@ -18609,7 +19427,8 @@
       "迴避性能": 3
     },
     "defense": 114,
-    "seriesName": "千刃龍"
+    "seriesName": "千刃龍",
+    "sourceMonster": "千刃龍"
   },
   {
     "id": "armor_1570157730",
@@ -18622,7 +19441,8 @@
       "匠": 3
     },
     "defense": 114,
-    "seriesName": "千刃龍"
+    "seriesName": "千刃龍",
+    "sourceMonster": "千刃龍"
   },
   {
     "id": "armor_1401336994",
@@ -18640,7 +19460,8 @@
       "飛簷走壁": 2
     },
     "defense": 114,
-    "seriesName": "千刃龍"
+    "seriesName": "千刃龍",
+    "sourceMonster": "千刃龍"
   },
   {
     "id": "armor_1366733986",
@@ -18656,7 +19477,8 @@
       "迴避距離UP": 2
     },
     "defense": 114,
-    "seriesName": "千刃龍"
+    "seriesName": "千刃龍",
+    "sourceMonster": "千刃龍"
   },
   {
     "id": "armor_1519379523",
@@ -18674,7 +19496,8 @@
       "昏厥耐性": 2
     },
     "defense": 114,
-    "seriesName": "電龍"
+    "seriesName": "電龍",
+    "sourceMonster": "電龍"
   },
   {
     "id": "armor_1484776515",
@@ -18691,7 +19514,8 @@
       "耐力急速回復": 2
     },
     "defense": 114,
-    "seriesName": "電龍"
+    "seriesName": "電龍",
+    "sourceMonster": "電龍"
   },
   {
     "id": "armor_1584391235",
@@ -18709,7 +19533,8 @@
       "昏厥耐性": 1
     },
     "defense": 114,
-    "seriesName": "電龍"
+    "seriesName": "電龍",
+    "sourceMonster": "電龍"
   },
   {
     "id": "armor_1549788227",
@@ -18726,7 +19551,8 @@
       "砥石使用高速化": 2
     },
     "defense": 114,
-    "seriesName": "電龍"
+    "seriesName": "電龍",
+    "sourceMonster": "電龍"
   },
   {
     "id": "armor_1380967491",
@@ -18744,7 +19570,8 @@
       "雷屬性攻擊強化": 3
     },
     "defense": 114,
-    "seriesName": "電龍"
+    "seriesName": "電龍",
+    "sourceMonster": "電龍"
   },
   {
     "id": "armor_1292712729",
@@ -18761,7 +19588,8 @@
       "翔蟲能手": 1
     },
     "defense": 114,
-    "seriesName": "冰狼龍"
+    "seriesName": "冰狼龍",
+    "sourceMonster": "冰狼龍"
   },
   {
     "id": "armor_1291664153",
@@ -18777,7 +19605,8 @@
       "合氣": 1
     },
     "defense": 114,
-    "seriesName": "冰狼龍"
+    "seriesName": "冰狼龍",
+    "sourceMonster": "冰狼龍"
   },
   {
     "id": "armor_1122843417",
@@ -18794,7 +19623,8 @@
       "翔蟲能手": 1
     },
     "defense": 114,
-    "seriesName": "冰狼龍"
+    "seriesName": "冰狼龍",
+    "sourceMonster": "冰狼龍"
   },
   {
     "id": "armor_1088240409",
@@ -18810,7 +19640,8 @@
       "翔蟲能手": 1
     },
     "defense": 114,
-    "seriesName": "冰狼龍"
+    "seriesName": "冰狼龍",
+    "sourceMonster": "冰狼龍"
   },
   {
     "id": "armor_1187855129",
@@ -18828,7 +19659,8 @@
       "合氣": 1
     },
     "defense": 114,
-    "seriesName": "冰狼龍"
+    "seriesName": "冰狼龍",
+    "sourceMonster": "冰狼龍"
   },
   {
     "id": "armor_1234242300",
@@ -18845,7 +19677,8 @@
       "破壞王": 1
     },
     "defense": 116,
-    "seriesName": "棘龍"
+    "seriesName": "棘龍",
+    "sourceMonster": "棘龍"
   },
   {
     "id": "armor_1333857020",
@@ -18861,7 +19694,8 @@
       "破壞王": 2
     },
     "defense": 116,
-    "seriesName": "棘龍"
+    "seriesName": "棘龍",
+    "sourceMonster": "棘龍"
   },
   {
     "id": "armor_1299254012",
@@ -18878,7 +19712,8 @@
       "速射強化": 1
     },
     "defense": 116,
-    "seriesName": "棘龍"
+    "seriesName": "棘龍",
+    "sourceMonster": "棘龍"
   },
   {
     "id": "armor_1130433276",
@@ -18895,7 +19730,8 @@
       "剛刃研磨": 1
     },
     "defense": 116,
-    "seriesName": "棘龍"
+    "seriesName": "棘龍",
+    "sourceMonster": "棘龍"
   },
   {
     "id": "armor_1095830268",
@@ -18913,7 +19749,8 @@
       "毒屬性強化": 3
     },
     "defense": 116,
-    "seriesName": "棘龍"
+    "seriesName": "棘龍",
+    "sourceMonster": "棘龍"
   },
   {
     "id": "armor_290397875",
@@ -19190,7 +20027,8 @@
       "迴避距離UP": 1
     },
     "defense": 112,
-    "seriesName": "端莊"
+    "seriesName": "端莊",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_32681186",
@@ -19208,7 +20046,8 @@
       "迴避距離UP": 2
     },
     "defense": 112,
-    "seriesName": "端莊"
+    "seriesName": "端莊",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_132295906",
@@ -19225,7 +20064,8 @@
       "利刃": 1
     },
     "defense": 112,
-    "seriesName": "端莊"
+    "seriesName": "端莊",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_97692898",
@@ -19242,7 +20082,8 @@
       "利刃": 1
     },
     "defense": 112,
-    "seriesName": "端莊"
+    "seriesName": "端莊",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_465743074",
@@ -19259,7 +20100,8 @@
       "利刃": 1
     },
     "defense": 112,
-    "seriesName": "端莊"
+    "seriesName": "端莊",
+    "sourceMonster": "雌火龍"
   },
   {
     "id": "armor_2066614476",
@@ -19455,7 +20297,8 @@
       "精神抖擻": 1
     },
     "defense": 116,
-    "seriesName": "齊天"
+    "seriesName": "齊天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_966039428",
@@ -19472,7 +20315,8 @@
       "力量解放": 2
     },
     "defense": 116,
-    "seriesName": "齊天"
+    "seriesName": "齊天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1065654148",
@@ -19489,7 +20333,8 @@
       "力量解放": 2
     },
     "defense": 116,
-    "seriesName": "齊天"
+    "seriesName": "齊天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1031051140",
@@ -19506,7 +20351,8 @@
       "精神抖擻": 1
     },
     "defense": 116,
-    "seriesName": "齊天"
+    "seriesName": "齊天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_862230404",
@@ -19525,7 +20371,8 @@
       "減輕膽怯": 2
     },
     "defense": 116,
-    "seriesName": "齊天"
+    "seriesName": "齊天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_597010175",
@@ -19542,7 +20389,8 @@
       "利刃": 1
     },
     "defense": 118,
-    "seriesName": "爆鱗龍X"
+    "seriesName": "爆鱗龍X",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_562407167",
@@ -19560,7 +20408,8 @@
       "利刃": 1
     },
     "defense": 118,
-    "seriesName": "爆鱗龍X"
+    "seriesName": "爆鱗龍X",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_662021887",
@@ -19578,7 +20427,8 @@
       "挑戰者": 2
     },
     "defense": 118,
-    "seriesName": "爆鱗龍X"
+    "seriesName": "爆鱗龍X",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_627418879",
@@ -19596,7 +20446,8 @@
       "利刃": 1
     },
     "defense": 118,
-    "seriesName": "爆鱗龍X"
+    "seriesName": "爆鱗龍X",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_995469055",
@@ -19613,7 +20464,8 @@
       "挑戰者": 1
     },
     "defense": 118,
-    "seriesName": "爆鱗龍X"
+    "seriesName": "爆鱗龍X",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_2140081913",
@@ -19715,7 +20567,8 @@
       "通常彈･連射箭強化": 2
     },
     "defense": 120,
-    "seriesName": "鋼龍X"
+    "seriesName": "鋼龍X",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_446759641",
@@ -19733,7 +20586,8 @@
       "裝填擴充": 2
     },
     "defense": 120,
-    "seriesName": "鋼龍X"
+    "seriesName": "鋼龍X",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_412156633",
@@ -19749,7 +20603,8 @@
       "挑戰者": 2
     },
     "defense": 120,
-    "seriesName": "鋼龍X"
+    "seriesName": "鋼龍X",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_511771353",
@@ -19765,7 +20620,8 @@
       "挑戰者": 3
     },
     "defense": 120,
-    "seriesName": "鋼龍X"
+    "seriesName": "鋼龍X",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_477168345",
@@ -19783,7 +20639,8 @@
       "通常彈･連射箭強化": 1
     },
     "defense": 120,
-    "seriesName": "鋼龍X"
+    "seriesName": "鋼龍X",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_92959486",
@@ -19800,7 +20657,8 @@
       "攻勢": 1
     },
     "defense": 120,
-    "seriesName": "霞龍真"
+    "seriesName": "霞龍真",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_461009662",
@@ -19819,7 +20677,8 @@
       "迴避性能": 3
     },
     "defense": 120,
-    "seriesName": "霞龍真"
+    "seriesName": "霞龍真",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_426406654",
@@ -19837,7 +20696,8 @@
       "迴避性能": 2
     },
     "defense": 120,
-    "seriesName": "霞龍真"
+    "seriesName": "霞龍真",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_526021374",
@@ -19856,7 +20716,8 @@
       "攻勢": 1
     },
     "defense": 120,
-    "seriesName": "霞龍真"
+    "seriesName": "霞龍真",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_491418366",
@@ -19873,7 +20734,8 @@
       "毒屬性強化": 1
     },
     "defense": 120,
-    "seriesName": "霞龍真"
+    "seriesName": "霞龍真",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_107192991",
@@ -19891,7 +20753,8 @@
       "超會心": 1
     },
     "defense": 120,
-    "seriesName": "帝王X"
+    "seriesName": "帝王X",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_72589983",
@@ -19909,7 +20772,8 @@
       "彈道強化": 2
     },
     "defense": 120,
-    "seriesName": "帝王X"
+    "seriesName": "帝王X",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_440640159",
@@ -19926,7 +20790,8 @@
       "超會心": 1
     },
     "defense": 120,
-    "seriesName": "帝王X"
+    "seriesName": "帝王X",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_406037151",
@@ -19942,7 +20807,8 @@
       "看破": 1
     },
     "defense": 120,
-    "seriesName": "帝王X"
+    "seriesName": "帝王X",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_505651871",
@@ -19960,7 +20826,8 @@
       "超會心": 1
     },
     "defense": 120,
-    "seriesName": "帝王X"
+    "seriesName": "帝王X",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_1577325804",
@@ -19976,7 +20843,8 @@
       "轉禍為福": 2
     },
     "defense": 120,
-    "seriesName": "方舟"
+    "seriesName": "方舟",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1576277228",
@@ -19993,7 +20861,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 120,
-    "seriesName": "方舟"
+    "seriesName": "方舟",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1407456492",
@@ -20009,7 +20878,8 @@
       "死裡逃生": 1
     },
     "defense": 120,
-    "seriesName": "方舟"
+    "seriesName": "方舟",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1372853484",
@@ -20026,7 +20896,8 @@
       "彈藥節約": 2
     },
     "defense": 120,
-    "seriesName": "方舟"
+    "seriesName": "方舟",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1472468204",
@@ -20044,7 +20915,8 @@
       "彈藥節約": 1
     },
     "defense": 120,
-    "seriesName": "方舟"
+    "seriesName": "方舟",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1490896013",
@@ -20060,7 +20932,8 @@
       "轉禍為福": 2
     },
     "defense": 120,
-    "seriesName": "友愛"
+    "seriesName": "友愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1590510733",
@@ -20077,7 +20950,8 @@
       "會心擊【屬性】": 1
     },
     "defense": 120,
-    "seriesName": "友愛"
+    "seriesName": "友愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1555907725",
@@ -20093,7 +20967,8 @@
       "死裡逃生": 1
     },
     "defense": 120,
-    "seriesName": "友愛"
+    "seriesName": "友愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1387086989",
@@ -20110,7 +20985,8 @@
       "彈藥節約": 2
     },
     "defense": 120,
-    "seriesName": "友愛"
+    "seriesName": "友愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1352483981",
@@ -20128,7 +21004,8 @@
       "彈藥節約": 1
     },
     "defense": 120,
-    "seriesName": "友愛"
+    "seriesName": "友愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1277938552",
@@ -20145,7 +21022,8 @@
       "翔蟲能手": 2
     },
     "defense": 120,
-    "seriesName": "爵銀龍"
+    "seriesName": "爵銀龍",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1109117816",
@@ -20163,7 +21041,8 @@
       "破壞王": 1
     },
     "defense": 120,
-    "seriesName": "爵銀龍"
+    "seriesName": "爵銀龍",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1074514808",
@@ -20180,7 +21059,8 @@
       "屬性異常狀態的耐性": 1
     },
     "defense": 120,
-    "seriesName": "爵銀龍"
+    "seriesName": "爵銀龍",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1207683960",
@@ -20198,7 +21078,8 @@
       "攻擊": 1
     },
     "defense": 120,
-    "seriesName": "爵銀龍"
+    "seriesName": "爵銀龍",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1173080952",
@@ -20217,7 +21098,8 @@
       "攻擊": 1
     },
     "defense": 120,
-    "seriesName": "爵銀龍"
+    "seriesName": "爵銀龍",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1996376688",
@@ -20581,7 +21463,8 @@
       "集中": 1
     },
     "defense": 114,
-    "seriesName": "歌德X"
+    "seriesName": "歌德X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1791405199",
@@ -20599,7 +21482,8 @@
       "KO術": 1
     },
     "defense": 114,
-    "seriesName": "歌德X"
+    "seriesName": "歌德X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1756802191",
@@ -20617,7 +21501,8 @@
       "KO術": 1
     },
     "defense": 114,
-    "seriesName": "歌德X"
+    "seriesName": "歌德X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1856416911",
@@ -20634,7 +21519,8 @@
       "蓄力大師": 2
     },
     "defense": 114,
-    "seriesName": "歌德X"
+    "seriesName": "歌德X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1821813903",
@@ -20652,7 +21538,8 @@
       "KO術": 1
     },
     "defense": 114,
-    "seriesName": "歌德X"
+    "seriesName": "歌德X",
+    "sourceMonster": "河童蛙"
   },
   {
     "id": "armor_1918601716",
@@ -21912,7 +22799,8 @@
       "毅力": 1
     },
     "defense": 120,
-    "seriesName": "健美"
+    "seriesName": "健美",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1587652306",
@@ -21930,7 +22818,8 @@
       "火場怪力": 3
     },
     "defense": 120,
-    "seriesName": "健美"
+    "seriesName": "健美",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1553049298",
@@ -21947,7 +22836,8 @@
       "毅力": 1
     },
     "defense": 120,
-    "seriesName": "健美"
+    "seriesName": "健美",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1384228562",
@@ -21964,7 +22854,8 @@
       "不屈": 1
     },
     "defense": 120,
-    "seriesName": "健美"
+    "seriesName": "健美",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_396132093",
@@ -22036,7 +22927,8 @@
       "怨恨": 2
     },
     "defense": 126,
-    "seriesName": "冥淵纏鎧憤怒"
+    "seriesName": "冥淵纏鎧憤怒",
+    "sourceMonster": "冥淵龍"
   },
   {
     "id": "armor_1320147679",
@@ -22054,7 +22946,8 @@
       "連擊": 1
     },
     "defense": 126,
-    "seriesName": "冥淵纏鎧憤怒"
+    "seriesName": "冥淵纏鎧憤怒",
+    "sourceMonster": "冥淵龍"
   },
   {
     "id": "armor_1285544671",
@@ -22070,7 +22963,8 @@
       "怨恨": 1
     },
     "defense": 126,
-    "seriesName": "冥淵纏鎧憤怒"
+    "seriesName": "冥淵纏鎧憤怒",
+    "sourceMonster": "冥淵龍"
   },
   {
     "id": "armor_1116723935",
@@ -22086,7 +22980,8 @@
       "連擊": 2
     },
     "defense": 126,
-    "seriesName": "冥淵纏鎧憤怒"
+    "seriesName": "冥淵纏鎧憤怒",
+    "sourceMonster": "冥淵龍"
   },
   {
     "id": "armor_1082120927",
@@ -22104,7 +22999,8 @@
       "怨恨": 1
     },
     "defense": 126,
-    "seriesName": "冥淵纏鎧憤怒"
+    "seriesName": "冥淵纏鎧憤怒",
+    "sourceMonster": "冥淵龍"
   },
   {
     "id": "armor_510825380",
@@ -22122,7 +23018,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_476222372",
@@ -22140,7 +23037,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_307401636",
@@ -22158,7 +23056,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_272798628",
@@ -22176,7 +23075,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_372413348",
@@ -22194,7 +23094,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "龍捲"
+    "seriesName": "龍捲",
+    "sourceMonster": "風神龍"
   },
   {
     "id": "armor_405615482",
@@ -22212,7 +23113,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_505230202",
@@ -22230,7 +23132,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_470627194",
@@ -22248,7 +23151,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_335360890",
@@ -22266,7 +23170,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_300757882",
@@ -22284,7 +23189,8 @@
       "風雷合一": 1
     },
     "defense": 122,
-    "seriesName": "鳴神"
+    "seriesName": "鳴神",
+    "sourceMonster": "雷神龍"
   },
   {
     "id": "armor_612222885",
@@ -22390,7 +23296,8 @@
       "彈藥節約": 2
     },
     "defense": 122,
-    "seriesName": "怒天"
+    "seriesName": "怒天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1379497262",
@@ -22407,7 +23314,8 @@
       "迴避距離UP": 1
     },
     "defense": 122,
-    "seriesName": "怒天"
+    "seriesName": "怒天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1344894254",
@@ -22423,7 +23331,8 @@
       "看破": 2
     },
     "defense": 122,
-    "seriesName": "怒天"
+    "seriesName": "怒天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1444508974",
@@ -22441,7 +23350,8 @@
       "彈藥節約": 1
     },
     "defense": 122,
-    "seriesName": "怒天"
+    "seriesName": "怒天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1409905966",
@@ -22457,7 +23367,8 @@
       "迴避距離UP": 2
     },
     "defense": 122,
-    "seriesName": "怒天"
+    "seriesName": "怒天",
+    "sourceMonster": "金獅子"
   },
   {
     "id": "armor_1144685569",
@@ -22474,7 +23385,8 @@
       "合氣": 1
     },
     "defense": 124,
-    "seriesName": "禍鎧･怨"
+    "seriesName": "禍鎧･怨",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1512735745",
@@ -22491,7 +23403,8 @@
       "翔蟲能手": 2
     },
     "defense": 124,
-    "seriesName": "禍鎧･怨"
+    "seriesName": "禍鎧･怨",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1478132737",
@@ -22509,7 +23422,8 @@
       "合氣": 1
     },
     "defense": 124,
-    "seriesName": "禍鎧･怨"
+    "seriesName": "禍鎧･怨",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1577747457",
@@ -22527,7 +23441,8 @@
       "轉禍為福": 1
     },
     "defense": 124,
-    "seriesName": "禍鎧･怨"
+    "seriesName": "禍鎧･怨",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_1576698881",
@@ -22544,7 +23459,8 @@
       "翔蟲能手": 1
     },
     "defense": 124,
-    "seriesName": "禍鎧･怨"
+    "seriesName": "禍鎧･怨",
+    "sourceMonster": "怨虎龍"
   },
   {
     "id": "armor_2023373161",
@@ -22781,7 +23697,8 @@
       "耳塞": 1
     },
     "defense": 123,
-    "seriesName": "矜持"
+    "seriesName": "矜持",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_1094884187",
@@ -22798,7 +23715,8 @@
       "快吃": 2
     },
     "defense": 123,
-    "seriesName": "矜持"
+    "seriesName": "矜持",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_1194498907",
@@ -22816,7 +23734,8 @@
       "耳塞": 1
     },
     "defense": 123,
-    "seriesName": "矜持"
+    "seriesName": "矜持",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_1159895899",
@@ -22835,7 +23754,8 @@
       "耳塞": 1
     },
     "defense": 123,
-    "seriesName": "矜持"
+    "seriesName": "矜持",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_1527946075",
@@ -22853,7 +23773,8 @@
       "奪取耐力": 3
     },
     "defense": 123,
-    "seriesName": "矜持"
+    "seriesName": "矜持",
+    "sourceMonster": "爆鱗龍"
   },
   {
     "id": "armor_1662998567",
@@ -22871,7 +23792,8 @@
       "連擊": 2
     },
     "defense": 120,
-    "seriesName": "金黃澄月"
+    "seriesName": "金黃澄月",
+    "sourceMonster": "金火龍"
   },
   {
     "id": "armor_1628395559",
@@ -22889,7 +23811,8 @@
       "精靈加護": 3
     },
     "defense": 120,
-    "seriesName": "金黃澄月"
+    "seriesName": "金黃澄月",
+    "sourceMonster": "金火龍"
   },
   {
     "id": "armor_1627346983",
@@ -22908,7 +23831,8 @@
       "連擊": 1
     },
     "defense": 120,
-    "seriesName": "金黃澄月"
+    "seriesName": "金黃澄月",
+    "sourceMonster": "金火龍"
   },
   {
     "id": "armor_1726961703",
@@ -22926,7 +23850,8 @@
       "迴避性能": 2
     },
     "defense": 120,
-    "seriesName": "金黃澄月"
+    "seriesName": "金黃澄月",
+    "sourceMonster": "金火龍"
   },
   {
     "id": "armor_1692358695",
@@ -22944,7 +23869,8 @@
       "體力回復量UP": 2
     },
     "defense": 120,
-    "seriesName": "金黃澄月"
+    "seriesName": "金黃澄月",
+    "sourceMonster": "金火龍"
   },
   {
     "id": "armor_1648748550",
@@ -22963,7 +23889,8 @@
       "風壓耐性": 3
     },
     "defense": 122,
-    "seriesName": "銀白耀日"
+    "seriesName": "銀白耀日",
+    "sourceMonster": "銀火龍"
   },
   {
     "id": "armor_1614145542",
@@ -22982,7 +23909,8 @@
       "火屬性攻擊強化": 3
     },
     "defense": 122,
-    "seriesName": "銀白耀日"
+    "seriesName": "銀白耀日",
+    "sourceMonster": "銀火龍"
   },
   {
     "id": "armor_1713760262",
@@ -23001,7 +23929,8 @@
       "體術": 2
     },
     "defense": 122,
-    "seriesName": "銀白耀日"
+    "seriesName": "銀白耀日",
+    "sourceMonster": "銀火龍"
   },
   {
     "id": "armor_1679157254",
@@ -23020,7 +23949,8 @@
       "體術": 3
     },
     "defense": 122,
-    "seriesName": "銀白耀日"
+    "seriesName": "銀白耀日",
+    "sourceMonster": "銀火龍"
   },
   {
     "id": "armor_2047207430",
@@ -23039,7 +23969,8 @@
       "精神抖擻": 2
     },
     "defense": 122,
-    "seriesName": "銀白耀日"
+    "seriesName": "銀白耀日",
+    "sourceMonster": "銀火龍"
   },
   {
     "id": "armor_1858732005",
@@ -23058,7 +23989,8 @@
       "挑戰者": 3
     },
     "defense": 118,
-    "seriesName": "月光"
+    "seriesName": "月光",
+    "sourceMonster": "月迅龍"
   },
   {
     "id": "armor_1824128997",
@@ -23076,7 +24008,8 @@
       "挑戰者": 2
     },
     "defense": 118,
-    "seriesName": "月光"
+    "seriesName": "月光",
+    "sourceMonster": "月迅龍"
   },
   {
     "id": "armor_1655308261",
@@ -23093,7 +24026,8 @@
       "迴避性能": 3
     },
     "defense": 118,
-    "seriesName": "月光"
+    "seriesName": "月光",
+    "sourceMonster": "月迅龍"
   },
   {
     "id": "armor_1620705253",
@@ -23112,7 +24046,8 @@
       "散彈･擴散箭強化": 2
     },
     "defense": 118,
-    "seriesName": "月光"
+    "seriesName": "月光",
+    "sourceMonster": "月迅龍"
   },
   {
     "id": "armor_1720319973",
@@ -23130,7 +24065,8 @@
       "裝填擴充": 2
     },
     "defense": 118,
-    "seriesName": "月光"
+    "seriesName": "月光",
+    "sourceMonster": "月迅龍"
   },
   {
     "id": "armor_658215403",
@@ -23159,7 +24095,8 @@
       "迴避距離UP": 3
     },
     "defense": 120,
-    "seriesName": "陰陽術者"
+    "seriesName": "陰陽術者",
+    "sourceMonster": "焰狐龍"
   },
   {
     "id": "armor_1498502240",
@@ -23178,7 +24115,8 @@
       "耐力急速回復": 2
     },
     "defense": 120,
-    "seriesName": "陰陽術者"
+    "seriesName": "陰陽術者",
+    "sourceMonster": "焰狐龍"
   },
   {
     "id": "armor_1598116960",
@@ -23197,7 +24135,8 @@
       "耐力急速回復": 1
     },
     "defense": 120,
-    "seriesName": "陰陽術者"
+    "seriesName": "陰陽術者",
+    "sourceMonster": "焰狐龍"
   },
   {
     "id": "armor_1563513952",
@@ -23216,7 +24155,8 @@
       "巧擊": 1
     },
     "defense": 120,
-    "seriesName": "陰陽術者"
+    "seriesName": "陰陽術者",
+    "sourceMonster": "焰狐龍"
   },
   {
     "id": "armor_1394693216",
@@ -23233,7 +24173,8 @@
       "攻擊守勢": 2
     },
     "defense": 120,
-    "seriesName": "陰陽術者"
+    "seriesName": "陰陽術者",
+    "sourceMonster": "焰狐龍"
   },
   {
     "id": "armor_1844481988",
@@ -23251,7 +24192,8 @@
       "彈藥節約": 1
     },
     "defense": 122,
-    "seriesName": "棘茶龍"
+    "seriesName": "棘茶龍",
+    "sourceMonster": "棘茶龍"
   },
   {
     "id": "armor_1675661252",
@@ -23269,7 +24211,8 @@
       "攻擊": 2
     },
     "defense": 122,
-    "seriesName": "棘茶龍"
+    "seriesName": "棘茶龍",
+    "sourceMonster": "棘茶龍"
   },
   {
     "id": "armor_1641058244",
@@ -23288,7 +24231,8 @@
       "彈藥節約": 2
     },
     "defense": 122,
-    "seriesName": "棘茶龍"
+    "seriesName": "棘茶龍",
+    "sourceMonster": "棘茶龍"
   },
   {
     "id": "armor_1740672964",
@@ -23307,7 +24251,8 @@
       "連擊": 1
     },
     "defense": 122,
-    "seriesName": "棘茶龍"
+    "seriesName": "棘茶龍",
+    "sourceMonster": "棘茶龍"
   },
   {
     "id": "armor_1706069956",
@@ -23325,7 +24270,8 @@
       "連擊": 2
     },
     "defense": 122,
-    "seriesName": "棘茶龍"
+    "seriesName": "棘茶龍",
+    "sourceMonster": "棘茶龍"
   },
   {
     "id": "armor_733524129",
@@ -23342,7 +24288,8 @@
       "迴避性能": 1
     },
     "defense": 125,
-    "seriesName": "霞龍醒"
+    "seriesName": "霞龍醒",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_698921121",
@@ -23359,7 +24306,8 @@
       "翔蟲能手": 1
     },
     "defense": 125,
-    "seriesName": "霞龍醒"
+    "seriesName": "霞龍醒",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_798535841",
@@ -23378,7 +24326,8 @@
       "攻勢": 1
     },
     "defense": 125,
-    "seriesName": "霞龍醒"
+    "seriesName": "霞龍醒",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_763932833",
@@ -23395,7 +24344,8 @@
       "攻勢": 1
     },
     "defense": 125,
-    "seriesName": "霞龍醒"
+    "seriesName": "霞龍醒",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_595112097",
@@ -23414,7 +24364,8 @@
       "迴避性能": 2
     },
     "defense": 125,
-    "seriesName": "霞龍醒"
+    "seriesName": "霞龍醒",
+    "sourceMonster": "霞龍"
   },
   {
     "id": "armor_586559913",
@@ -23443,7 +24394,8 @@
       "弱點特效【屬性】": 1
     },
     "defense": 118,
-    "seriesName": "混沌黑蝕"
+    "seriesName": "混沌黑蝕",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1413251076",
@@ -23461,7 +24413,8 @@
       "超會心": 2
     },
     "defense": 118,
-    "seriesName": "混沌黑蝕"
+    "seriesName": "混沌黑蝕",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_707559428",
@@ -23478,7 +24431,8 @@
       "怨恨": 3
     },
     "defense": 118,
-    "seriesName": "混沌黑蝕"
+    "seriesName": "混沌黑蝕",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_672956420",
@@ -23497,7 +24451,8 @@
       "怨恨": 2
     },
     "defense": 118,
-    "seriesName": "混沌黑蝕"
+    "seriesName": "混沌黑蝕",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_772571140",
@@ -23514,7 +24469,8 @@
       "轉禍為福": 3
     },
     "defense": 118,
-    "seriesName": "混沌黑蝕"
+    "seriesName": "混沌黑蝕",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1462104101",
@@ -23532,7 +24488,8 @@
       "弱點特效【屬性】": 1
     },
     "defense": 118,
-    "seriesName": "墮天"
+    "seriesName": "墮天",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1427501093",
@@ -23550,7 +24507,8 @@
       "超會心": 2
     },
     "defense": 118,
-    "seriesName": "墮天"
+    "seriesName": "墮天",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_721809445",
@@ -23567,7 +24525,8 @@
       "怨恨": 3
     },
     "defense": 118,
-    "seriesName": "墮天"
+    "seriesName": "墮天",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_720760869",
@@ -23586,7 +24545,8 @@
       "怨恨": 2
     },
     "defense": 118,
-    "seriesName": "墮天"
+    "seriesName": "墮天",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_686157861",
@@ -23603,7 +24563,8 @@
       "轉禍為福": 3
     },
     "defense": 118,
-    "seriesName": "墮天"
+    "seriesName": "墮天",
+    "sourceMonster": "黑蝕龍"
   },
   {
     "id": "armor_1418846278",
@@ -23621,7 +24582,8 @@
       "翔蟲能手": 3
     },
     "defense": 124,
-    "seriesName": "脈動鋼龍"
+    "seriesName": "脈動鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_713154630",
@@ -23641,7 +24603,8 @@
       "彈藥節約": 2
     },
     "defense": 124,
-    "seriesName": "脈動鋼龍"
+    "seriesName": "脈動鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_678551622",
@@ -23658,7 +24621,8 @@
       "連擊": 2
     },
     "defense": 124,
-    "seriesName": "脈動鋼龍"
+    "seriesName": "脈動鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_778166342",
@@ -23676,7 +24640,8 @@
       "體力回復量UP": 3
     },
     "defense": 124,
-    "seriesName": "脈動鋼龍"
+    "seriesName": "脈動鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_743563334",
@@ -23693,7 +24658,8 @@
       "連擊": 1
     },
     "defense": 124,
-    "seriesName": "脈動鋼龍"
+    "seriesName": "脈動鋼龍",
+    "sourceMonster": "鋼龍"
   },
   {
     "id": "armor_1433096295",
@@ -23711,7 +24677,8 @@
       "看破": 2
     },
     "defense": 124,
-    "seriesName": "脈動帝王"
+    "seriesName": "脈動帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_727404647",
@@ -23729,7 +24696,8 @@
       "看破": 3
     },
     "defense": 124,
-    "seriesName": "脈動帝王"
+    "seriesName": "脈動帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_692801639",
@@ -23748,7 +24716,8 @@
       "看破": 1
     },
     "defense": 124,
-    "seriesName": "脈動帝王"
+    "seriesName": "脈動帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_792416359",
@@ -23766,7 +24735,8 @@
       "彈道強化": 2
     },
     "defense": 124,
-    "seriesName": "脈動帝王"
+    "seriesName": "脈動帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_757813351",
@@ -23786,7 +24756,8 @@
       "火屬性攻擊強化": 2
     },
     "defense": 124,
-    "seriesName": "脈動帝王"
+    "seriesName": "脈動帝王",
+    "sourceMonster": "炎王龍"
   },
   {
     "id": "armor_762970380",
@@ -23815,7 +24786,8 @@
       "裝填擴充": 3
     },
     "defense": 123,
-    "seriesName": "雪崩"
+    "seriesName": "雪崩",
+    "sourceMonster": "冰呪龍"
   },
   {
     "id": "armor_1369032600",
@@ -23833,7 +24805,8 @@
       "收刀術": 3
     },
     "defense": 123,
-    "seriesName": "雪崩"
+    "seriesName": "雪崩",
+    "sourceMonster": "冰呪龍"
   },
   {
     "id": "armor_1468647320",
@@ -23851,7 +24824,8 @@
       "拔刀術【技】": 3
     },
     "defense": 123,
-    "seriesName": "雪崩"
+    "seriesName": "雪崩",
+    "sourceMonster": "冰呪龍"
   },
   {
     "id": "armor_1434044312",
@@ -23869,7 +24843,8 @@
       "集中": 3
     },
     "defense": 123,
-    "seriesName": "雪崩"
+    "seriesName": "雪崩",
+    "sourceMonster": "冰呪龍"
   },
   {
     "id": "armor_728352664",
@@ -23887,7 +24862,8 @@
       "弱點特效【屬性】": 1
     },
     "defense": 123,
-    "seriesName": "雪崩"
+    "seriesName": "雪崩",
+    "sourceMonster": "冰呪龍"
   },
   {
     "id": "armor_1552103353",
@@ -24006,7 +24982,8 @@
       "迴避性能": 5
     },
     "defense": 125,
-    "seriesName": "荒天"
+    "seriesName": "荒天",
+    "sourceMonster": "嵐龍"
   },
   {
     "id": "armor_1398040414",
@@ -24024,7 +25001,8 @@
       "超會心": 1
     },
     "defense": 125,
-    "seriesName": "荒天"
+    "seriesName": "荒天",
+    "sourceMonster": "嵐龍"
   },
   {
     "id": "armor_1363437406",
@@ -24042,7 +25020,8 @@
       "力量解放": 1
     },
     "defense": 125,
-    "seriesName": "荒天"
+    "seriesName": "荒天",
+    "sourceMonster": "嵐龍"
   },
   {
     "id": "armor_1463052126",
@@ -24058,7 +25037,8 @@
       "力量解放": 4
     },
     "defense": 125,
-    "seriesName": "荒天"
+    "seriesName": "荒天",
+    "sourceMonster": "嵐龍"
   },
   {
     "id": "armor_1428449118",
@@ -24075,7 +25055,8 @@
       "超會心": 2
     },
     "defense": 125,
-    "seriesName": "荒天"
+    "seriesName": "荒天",
+    "sourceMonster": "嵐龍"
   },
   {
     "id": "armor_1581111167",
@@ -24092,7 +25073,8 @@
       "堅若磐石": 2
     },
     "defense": 122,
-    "seriesName": "神德"
+    "seriesName": "神德",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1546508159",
@@ -24111,7 +25093,8 @@
       "裝填擴充": 3
     },
     "defense": 122,
-    "seriesName": "神德"
+    "seriesName": "神德",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1377687423",
@@ -24129,7 +25112,8 @@
       "攻擊": 3
     },
     "defense": 122,
-    "seriesName": "神德"
+    "seriesName": "神德",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1343084415",
@@ -24147,7 +25131,8 @@
       "弱點特效": 2
     },
     "defense": 122,
-    "seriesName": "神德"
+    "seriesName": "神德",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1476253567",
@@ -24166,7 +25151,8 @@
       "奮鬥": 1
     },
     "defense": 122,
-    "seriesName": "神德"
+    "seriesName": "神德",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1148995216",
@@ -24183,7 +25169,8 @@
       "堅若磐石": 2
     },
     "defense": 122,
-    "seriesName": "永愛"
+    "seriesName": "永愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1517045392",
@@ -24202,7 +25189,8 @@
       "裝填擴充": 3
     },
     "defense": 122,
-    "seriesName": "永愛"
+    "seriesName": "永愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1482442384",
@@ -24220,7 +25208,8 @@
       "攻擊": 3
     },
     "defense": 122,
-    "seriesName": "永愛"
+    "seriesName": "永愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1582057104",
@@ -24238,7 +25227,8 @@
       "弱點特效": 2
     },
     "defense": 122,
-    "seriesName": "永愛"
+    "seriesName": "永愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1547454096",
@@ -24257,7 +25247,8 @@
       "奮鬥": 1
     },
     "defense": 122,
-    "seriesName": "永愛"
+    "seriesName": "永愛",
+    "sourceMonster": "天迴龍"
   },
   {
     "id": "armor_1595344668",
@@ -24273,7 +25264,8 @@
       "血氣": 3
     },
     "defense": 125,
-    "seriesName": "原初"
+    "seriesName": "原初",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1560741660",
@@ -24291,7 +25283,8 @@
       "連擊": 1
     },
     "defense": 125,
-    "seriesName": "原初"
+    "seriesName": "原初",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1559693084",
@@ -24309,7 +25302,8 @@
       "超會心": 1
     },
     "defense": 125,
-    "seriesName": "原初"
+    "seriesName": "原初",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1390872348",
@@ -24327,7 +25321,8 @@
       "超會心": 1
     },
     "defense": 125,
-    "seriesName": "原初"
+    "seriesName": "原初",
+    "sourceMonster": "爵銀龍"
   },
   {
     "id": "armor_1356269340",
@@ -24345,6 +25340,7 @@
       "破壞王": 3
     },
     "defense": 125,
-    "seriesName": "原初"
+    "seriesName": "原初",
+    "sourceMonster": "爵銀龍"
   }
 ]

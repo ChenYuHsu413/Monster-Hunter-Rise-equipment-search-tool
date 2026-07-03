@@ -80,6 +80,8 @@ export type ArmorPiece = {
   seriesName?: string;
   /** 依稀有度推算的階級標籤：村 / HR / MR。為推算值，非精確任務解放條件。 */
   rankLabel?: string;
+  /** 推測的主要來源怪物（由生產素材推得，同套 5 部位一致，非官方標註）。 */
+  sourceMonster?: string;
 };
 
 /** 屬性 / 狀態異常類型。none 表示無屬性。 */

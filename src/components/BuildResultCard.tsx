@@ -92,6 +92,7 @@ function PartRow({
         <ProvenanceHint
           seriesName={piece.seriesName}
           rankLabel={piece.rankLabel}
+          source={piece.sourceMonster}
         />
         {Object.keys(piece.skills).length > 0 && (
           <div className="truncate text-[11px] text-muted-foreground">

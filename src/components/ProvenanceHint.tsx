@@ -9,17 +9,19 @@ const RANK_BADGE_VARIANT: Record<string, "accent" | "secondary" | "outline"> = {
   村: "outline",
 };
 
-/** 派生小字：系列名 + 階級（依稀有度推算，非精確任務解放條件）。 */
+/** 派生小字：系列名 + 階級（依稀有度推算）+ 來源怪（推測）。 */
 export function ProvenanceHint({
   seriesName,
   rankLabel,
+  source,
   className,
 }: {
   seriesName?: string;
   rankLabel?: string;
+  source?: string;
   className?: string;
 }) {
-  if (!seriesName && !rankLabel) return null;
+  if (!seriesName && !rankLabel && !source) return null;
   return (
     <div className={`flex items-center gap-1 ${className ?? ""}`}>
       {seriesName && (
@@ -35,6 +37,14 @@ export function ProvenanceHint({
         >
           {rankLabel}
         </Badge>
+      )}
+      {source && (
+        <span
+          className="truncate text-[10px] text-muted-foreground/70"
+          title="由生產素材推得的主要來源怪，非官方標註"
+        >
+          · {source}（推測）
+        </span>
       )}
     </div>
   );
