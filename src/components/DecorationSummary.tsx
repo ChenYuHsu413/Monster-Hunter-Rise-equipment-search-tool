@@ -21,8 +21,8 @@ export function DecorationSummary({ decorations }: Props) {
   return (
     <div className="flex flex-wrap gap-1.5">
       {Array.from(counts.entries()).map(([name, info]) => (
-        <Badge key={name} variant="outline" className="gap-1 font-normal">
-          <span className="font-mono text-[10px] text-muted-foreground">
+        <Badge key={name} variant="outline" className="gap-1 px-2 py-0.5 text-[13px] font-normal">
+          <span className="font-mono text-[11px] text-muted-foreground">
             [{info.slotLevel}]
           </span>
           <span>{name}</span>

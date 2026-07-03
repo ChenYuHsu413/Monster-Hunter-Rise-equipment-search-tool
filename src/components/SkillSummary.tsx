@@ -36,10 +36,14 @@ export function SkillSummary({
         else if (preferred?.[name]) variant = "accent";
         const isSpecial = skillByName[name]?.special;
         return (
-          <Badge key={name} variant={variant} className="gap-1">
+          <Badge
+            key={name}
+            variant={variant}
+            className="gap-1 px-2 py-0.5 text-[13px]"
+          >
             <span>{name}</span>
             <span className="font-mono opacity-80">Lv{lvl}</span>
-            {isSpecial && <span className="text-[10px]">★</span>}
+            {isSpecial && <span className="text-[11px]">★</span>}
           </Badge>
         );
       })}

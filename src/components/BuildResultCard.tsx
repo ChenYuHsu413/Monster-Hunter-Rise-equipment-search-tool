@@ -73,18 +73,18 @@ function PartRow({
     <div className="flex items-center gap-2 py-1">
       <Badge
         variant="secondary"
-        className="w-10 shrink-0 justify-center px-1 py-0 text-[10px]"
+        className="w-10 shrink-0 justify-center px-1 py-0 text-[11px]"
       >
         {label}
       </Badge>
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
-          <span className="truncate text-sm">{piece.nameZh}</span>
-          <span className="shrink-0 font-mono text-[10px] text-muted-foreground">
+          <span className="truncate text-[15px]">{piece.nameZh}</span>
+          <span className="shrink-0 font-mono text-[11px] text-muted-foreground">
             {formatSlots(piece.slots)}
           </span>
           {piece.isAugmented && (
-            <Badge variant="accent" className="px-1 py-0 text-[9px]">
+            <Badge variant="accent" className="px-1 py-0 text-[11px]">
               鍊成
             </Badge>
           )}
@@ -95,7 +95,7 @@ function PartRow({
           source={piece.sourceMonster}
         />
         {Object.keys(piece.skills).length > 0 && (
-          <div className="truncate text-[11px] text-muted-foreground">
+          <div className="truncate text-xs text-muted-foreground">
             {Object.entries(piece.skills)
               .map(([n, l]) => `${n} ${l}`)
               .join("・")}
@@ -164,7 +164,7 @@ export function BuildResultCard({
               <span className="font-mono text-lg font-bold">{s.total}</span>
               <span className="text-[11px] text-muted-foreground">總分</span>
             </div>
-            <div className="flex flex-wrap gap-x-2 text-[10px] text-muted-foreground">
+            <div className="flex flex-wrap gap-x-2 text-[11px] text-muted-foreground">
               <span title="必要技能分">必 {s.requiredSkillScore}</span>
               <span title="偏好技能分">偏 {s.preferredSkillScore}</span>
               <span title="剩餘洞位分">洞 {s.slotScore}</span>
@@ -220,7 +220,7 @@ export function BuildResultCard({
           <div className="flex items-center gap-2 py-1">
             <Badge
               variant="secondary"
-              className="w-10 shrink-0 justify-center px-1 py-0 text-[10px]"
+              className="w-11 shrink-0 justify-center px-1 py-0 text-[11px]"
             >
               武器
             </Badge>
@@ -228,18 +228,18 @@ export function BuildResultCard({
               <>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="truncate text-sm">{weapon.nameZh}</span>
+                    <span className="truncate text-[15px]">{weapon.nameZh}</span>
                     {weaponTypeLabel && (
-                      <span className="shrink-0 text-[10px] text-muted-foreground">
+                      <span className="shrink-0 text-[11px] text-muted-foreground">
                         {weaponTypeLabel}
                       </span>
                     )}
-                    <span className="shrink-0 font-mono text-[10px] text-muted-foreground">
+                    <span className="shrink-0 font-mono text-[11px] text-muted-foreground">
                       {formatSlots(weapon.slots)}
                     </span>
                     <Badge
                       variant={result.weaponFixed ? "default" : "accent"}
-                      className="shrink-0 px-1 py-0 text-[9px]"
+                      className="shrink-0 px-1 py-0 text-[11px]"
                     >
                       {result.weaponFixed ? "固定" : "搜尋"}
                     </Badge>
@@ -248,13 +248,13 @@ export function BuildResultCard({
                     seriesName={weaponSeriesLabel(weapon)}
                     rankLabel={weapon.rankLabel}
                   />
-                  <div className="truncate text-[11px] text-muted-foreground">
+                  <div className="truncate text-xs text-muted-foreground">
                     {[formatWeaponStats(weapon), ...formatWeaponSpecial(weapon)].join(
                       "　"
                     )}
                   </div>
                   {formatWeaponSource(weapon) && (
-                    <div className="truncate text-[11px] text-muted-foreground/70">
+                    <div className="truncate text-xs text-muted-foreground/70">
                       {formatWeaponSource(weapon)}
                     </div>
                   )}
@@ -285,7 +285,7 @@ export function BuildResultCard({
                 <span className="flex-1 text-sm text-muted-foreground">
                   （自訂洞數）
                 </span>
-                <span className="font-mono text-[10px] text-muted-foreground">
+                <span className="font-mono text-[11px] text-muted-foreground">
                   {weaponSlotsLabel}
                 </span>
               </>
@@ -304,7 +304,7 @@ export function BuildResultCard({
           <div className="flex items-center gap-2 py-1">
             <Badge
               variant="secondary"
-              className="w-10 shrink-0 justify-center px-1 py-0 text-[10px]"
+              className="w-11 shrink-0 justify-center px-1 py-0 text-[11px]"
             >
               護石
             </Badge>
@@ -313,7 +313,7 @@ export function BuildResultCard({
                 .map(([n, l]) => `${n} ${l}`)
                 .join("・") || "無護石"}
             </span>
-            <span className="font-mono text-[10px] text-muted-foreground">
+            <span className="font-mono text-[11px] text-muted-foreground">
               {formatSlots(result.charm.slots)}
             </span>
           </div>
