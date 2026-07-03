@@ -41,6 +41,10 @@
   * {
     @apply border-border;
   }
+  html {
+    /* 手機展開搜尋條件時，避免瀏覽器 scroll anchoring 把捲動位置往下推。 */
+    overflow-anchor: none;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;

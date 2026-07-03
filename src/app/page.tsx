@@ -127,7 +127,19 @@ export default function Home() {
   const [meta, setMeta] = useState<SearchMeta | null>(null);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-  const [resultLimit, setResultLimit] = useLocalStorage("mhsb.resultLimit", 100);
+  // 顯示上限：手機首訪預設 20、桌機 100；有存過就沿用。（讀 effect 先於寫 effect）
+  const [resultLimit, setResultLimit] = useState(100);
+  useEffect(() => {
+    const stored = window.localStorage.getItem("mhsb.resultLimit");
+    if (stored != null) {
+      setResultLimit(Math.max(1, Math.min(100, Number(stored) || 100)));
+    } else if (window.innerWidth < 1024) {
+      setResultLimit(20);
+    }
+  }, []);
+  useEffect(() => {
+    window.localStorage.setItem("mhsb.resultLimit", String(resultLimit));
+  }, [resultLimit]);
 
   // 收藏 / 比較（存為陣列以利序列化）
   const [favorites, setFavorites] = useLocalStorage<string[]>("mhsb.favorites", []);
@@ -363,6 +375,20 @@ export default function Home() {
       prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
     );
 
+  // 手機版：切換條件面板。展開時捲回頂端，否則條件展開在上方但使用者仍停在結果處，等於沒展開。
+  const toggleConditions = () => {
+    const opening = !conditionsOpen;
+    setConditionsOpen(opening);
+    if (opening && typeof window !== "undefined" && window.innerWidth < 1024) {
+      // 等展開的版面重排完成（double rAF）後再捲到頂，讓條件面板進入視野。
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() =>
+          window.scrollTo({ top: 0, behavior: "smooth" })
+        )
+      );
+    }
+  };
+
   // 自動技能提示（WeaponPicker 顯示）
   const autoHint = (() => {
     if (!currentPreset?.autoRules?.addElementAttackSkill) return null;
@@ -417,7 +443,7 @@ export default function Home() {
       <button
         ref={toggleRef}
         type="button"
-        onClick={() => setConditionsOpen((o) => !o)}
+        onClick={toggleConditions}
         className="sticky top-0 z-20 flex shrink-0 items-center justify-between border-b border-border bg-background px-4 py-2.5 text-sm font-medium lg:hidden"
       >
         <span className="flex items-center gap-2">
