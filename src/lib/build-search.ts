@@ -110,6 +110,7 @@ export function searchBuilds(
     weaponSearchMode,
     fixedWeaponId,
     autoRules,
+    elementFilter,
   } = normalizeRequest(request);
 
   // 護石：固定護石即使用者輸入的護石，兩者在第一版等價
@@ -126,6 +127,7 @@ export function searchBuilds(
     excludedWeaponIds: excludedItems.weaponIds,
     preset: { requiredSkills, preferredSkills, skillWeights },
     mode: searchMode,
+    elementFilter,
   });
   // 後援：無任何武器候選（無資料或全被排除）時，退回舊版手動洞數
   const weaponCandidates: (Weapon | undefined)[] =
@@ -298,6 +300,7 @@ function normalizeRequest(req: BuildSearchRequest) {
       req.weaponSearchMode ?? (fixedWeaponId ? "fixed" : "search"),
     fixedWeaponId,
     autoRules: req.autoRules,
+    elementFilter: req.elementFilter,
   };
 }
 

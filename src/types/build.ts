@@ -97,6 +97,9 @@ export type ElementType =
   | "blast"
   | "none";
 
+/** 武器屬性篩選（只含五屬性；狀態異常與無屬性不列入）。 */
+export type WeaponElementFilter = "fire" | "water" | "thunder" | "ice" | "dragon";
+
 export type Weapon = {
   id: string;
   nameZh: string;
@@ -269,6 +272,8 @@ export type BuildSearchRequest = {
   fixedWeaponId?: string;
   /** preset 的自動規則（search 模式下由搜尋引擎逐武器套用）。 */
   autoRules?: PresetAutoRules;
+  /** 武器屬性篩選（僅五屬性；search 模式縮小候選池，未指定＝不限）。 */
+  elementFilter?: WeaponElementFilter;
   /** @deprecated 舊版手動武器洞數。僅在武器候選池為空時作為後援。 */
   weaponSlots?: number[];
   charm: Charm;

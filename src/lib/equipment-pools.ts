@@ -5,6 +5,7 @@ import type {
   FixedParts,
   SkillMap,
   Weapon,
+  WeaponElementFilter,
   WeaponSearchMode,
 } from "@/types/build";
 import { ARMOR_PARTS } from "@/types/build";
@@ -211,6 +212,8 @@ export function buildWeaponPool(opts: {
   excludedWeaponIds: string[];
   preset: { requiredSkills: SkillMap; preferredSkills: SkillMap; skillWeights: SkillMap };
   mode: "fast" | "exact" | "greedy";
+  /** 屬性篩選（僅五屬性）：search 模式只保留該屬性武器。未指定＝不限。 */
+  elementFilter?: WeaponElementFilter;
 }): Weapon[] {
   const {
     weapons,
@@ -222,6 +225,7 @@ export function buildWeaponPool(opts: {
     excludedWeaponIds,
     preset,
     mode,
+    elementFilter,
   } = opts;
 
   if (weaponSearchMode === "fixed") {
@@ -232,7 +236,10 @@ export function buildWeaponPool(opts: {
 
   const excluded = new Set(excludedWeaponIds);
   const candidates = weapons.filter(
-    (w) => w.weaponType === weaponType && !excluded.has(w.id)
+    (w) =>
+      w.weaponType === weaponType &&
+      !excluded.has(w.id) &&
+      (!elementFilter || w.element?.type === elementFilter)
   );
   const cap = mode === "greedy" ? 2 : mode === "fast" ? 3 : 4;
   return candidates

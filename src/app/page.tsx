@@ -27,13 +27,15 @@ import { searchBuilds, createSearchDeps, type SearchMeta } from "@/lib/build-sea
 import { parseSlotString } from "@/lib/slot-utils";
 import { useLocalStorage } from "@/lib/use-local-storage";
 import {
+  elementSkillMap,
   mergeMaxSkills,
   resolveAutoSkills,
   resolvePresetSkills,
 } from "@/lib/preset-resolver";
+import { ELEMENT_LABELS } from "@/lib/weapon-utils";
 
 import { WeaponSelector } from "@/components/WeaponSelector";
-import { WeaponPicker } from "@/components/WeaponPicker";
+import { WeaponPicker, type ElementFilterValue } from "@/components/WeaponPicker";
 import { BuildPresetSelector } from "@/components/BuildPresetSelector";
 import { SearchModeSelector } from "@/components/SearchModeSelector";
 import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
@@ -95,6 +97,11 @@ export default function Home() {
   );
   // 固定武器 id，"" 表示未選（localStorage 不便存 undefined）。
   const [fixedWeaponId, setFixedWeaponId] = useLocalStorage("mhsb.fixedWeaponId", "");
+  // 武器屬性篩選（目前僅雙刀啟用）。"all" 代表不限。
+  const [elementFilter, setElementFilter] = useLocalStorage<ElementFilterValue>(
+    "mhsb.elementFilter",
+    "all"
+  );
   /** 目前套用在技能編輯器中的自動技能（依 preset autoRules 與固定武器屬性）。 */
   const [autoSkills, setAutoSkills] = useLocalStorage<SkillMap>("mhsb.autoSkills", {});
 
@@ -158,6 +165,13 @@ export default function Home() {
     [gameData, weaponType]
   );
   const currentPreset = getPreset(presetId);
+  // 來源怪兩層下拉：全武器類型皆啟用。
+  // 屬性篩選：弩槍（輕弩/重弩）非屬性武器（無五屬性資料），故排除；其餘 12 類啟用。
+  const elementFilterEnabled =
+    weaponType !== "light-bowgun" && weaponType !== "heavy-bowgun";
+  const activeElementFilter: ElementFilterValue = elementFilterEnabled
+    ? elementFilter
+    : "all";
   const pickedWeapon: Weapon | undefined =
     weaponSearchMode === "fixed" && fixedWeaponId
       ? weaponById[fixedWeaponId]
@@ -202,6 +216,7 @@ export default function Home() {
 
   const changeWeapon = (w: string) => {
     setWeaponType(w);
+    setElementFilter("all");
     setFixedWeaponId("");
     setFixedParts((prev) => {
       const next = { ...prev };
@@ -259,6 +274,8 @@ export default function Home() {
       // fixed 模式的自動技能已在編輯器中；search 模式由搜尋引擎逐武器套用
       autoRules:
         weaponSearchMode === "search" ? currentPreset?.autoRules : undefined,
+      elementFilter:
+        activeElementFilter !== "all" ? activeElementFilter : undefined,
       charm: buildCharm(),
       fixedParts,
       excludedItems,
@@ -399,6 +416,10 @@ export default function Home() {
         .map(([n, l]) => `${n} Lv${l}`)
         .join("、")}`;
     }
+    if (activeElementFilter !== "all") {
+      const skill = elementSkillMap[activeElementFilter];
+      return `已篩選${ELEMENT_LABELS[activeElementFilter]}屬性武器，搜尋時將自動加入：${skill} Lv${currentPreset.autoRules.elementAttackLevel ?? 5}。`;
+    }
     return "搜尋時將依各候選武器屬性自動加入對應的屬性攻擊強化。";
   })();
 
@@ -483,6 +504,10 @@ export default function Home() {
                 fixedWeaponId={fixedWeaponId}
                 onPickWeapon={pickWeapon}
                 autoHint={autoHint}
+                enableElementFilter={elementFilterEnabled}
+                elementFilter={activeElementFilter}
+                onElementFilterChange={setElementFilter}
+                groupBySource
               />
               <BuildPresetSelector
                 presets={presets}
