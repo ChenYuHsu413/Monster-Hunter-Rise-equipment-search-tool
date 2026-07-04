@@ -19,6 +19,8 @@ export type ScoreInput = {
   fixedParts: FixedParts;
   skillMax: Record<string, number>;
   skillIsSpecial: Record<string, boolean>;
+  /** 屬性流武器屬性加分（由搜尋端依 preferElement 與武器屬性值算好帶入）。預設 0。 */
+  elementScore?: number;
 };
 
 /**
@@ -36,6 +38,7 @@ export function scoreBuild(input: ScoreInput): BuildScore {
     fixedParts,
     skillIsSpecial,
   } = input;
+  const elementScore = input.elementScore ?? 0;
 
   // 必要技能：達成給穩定基礎分（依實際達成等級）
   let requiredSkillScore = 0;
@@ -80,7 +83,8 @@ export function scoreBuild(input: ScoreInput): BuildScore {
     slotScore +
     penaltyScore +
     specialSkillScore +
-    fixedBonus;
+    fixedBonus +
+    elementScore;
 
   return {
     total: Math.round(total),
@@ -89,5 +93,6 @@ export function scoreBuild(input: ScoreInput): BuildScore {
     slotScore: Math.round(slotScore),
     penaltyScore: Math.round(penaltyScore),
     specialSkillScore: Math.round(specialSkillScore),
+    elementScore: Math.round(elementScore),
   };
 }

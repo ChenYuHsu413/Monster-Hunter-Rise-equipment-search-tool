@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { ProvenanceHint } from "./ProvenanceHint";
+import { RarityBadge } from "./RarityBadge";
 import { formatSlots } from "@/lib/slot-utils";
 import {
   formatWeaponSource,
@@ -207,6 +208,7 @@ export function WeaponPicker({
                       <SelectItem key={w.id} value={w.id}>
                         <span className="flex items-center gap-1.5">
                           {w.nameZh}
+                          <RarityBadge rarity={w.rarity} />
                           {w.rankLabel && (
                             <span className="text-[10px] text-muted-foreground">
                               {w.rankLabel}
@@ -229,6 +231,7 @@ export function WeaponPicker({
                   <SelectItem key={w.id} value={w.id}>
                     <span className="flex items-center gap-1.5">
                       {w.nameZh}
+                      <RarityBadge rarity={w.rarity} />
                       {w.rankLabel && (
                         <span className="text-[10px] text-muted-foreground">
                           {w.rankLabel}
@@ -252,6 +255,7 @@ export function WeaponPicker({
               <ProvenanceHint
                 seriesName={weaponSeriesLabel(picked)}
                 rankLabel={picked.rankLabel}
+                rarity={picked.rarity}
               />
               <p className="text-[11px] text-muted-foreground">
                 {formatWeaponStats(picked)}

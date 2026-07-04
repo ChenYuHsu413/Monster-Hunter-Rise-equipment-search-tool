@@ -212,16 +212,40 @@ export type PresetAutoRules = {
   elementAttackLevel?: number;
 };
 
+/** preset 進度階段：初心（剛進 MR）→ 拓荒（MR 前期）→ 進階（中期）→ 畢業（TU5 終盤 meta）。 */
+export type PresetTier = "初心" | "拓荒" | "進階" | "畢業";
+
+export const PRESET_TIER_ORDER: PresetTier[] = ["初心", "拓荒", "進階", "畢業"];
+
+/**
+ * 各階段允許的防具 rarity 上限（取得門檻代理指標）。
+ * MR 防具為 rarity 8（早期）/9（中期，含天迴龍 MR5）/10（終盤）。
+ * 初心限 ≤8 以排除天迴龍等 MR5+ 裝；進階/畢業不設限（≤10）。
+ * 註：Kiranico 無精確「MR 第幾星解放」資料，此為 rarity 推算的近似值。
+ */
+export const TIER_MAX_RARITY: Record<PresetTier, number> = {
+  初心: 8,
+  拓荒: 9,
+  進階: 10,
+  畢業: 10,
+};
+
 export type BuildPreset = {
   id: string;
   nameZh: string;
   weaponType: string;
+  /** 進度階段分類（用於流派清單分組）。未標示者視為未分類。 */
+  tier?: PresetTier;
+  /** 屬攻武器流派：search 模式挑候選武器時以屬性值優先（與 autoRules 解耦，物理向初心屬性武器亦可開）。 */
+  preferElement?: boolean;
   description: string;
   requiredSkills: SkillMap;
   preferredSkills: SkillMap;
   avoidSkills: SkillMap;
   skillWeights: SkillMap;
   autoRules?: PresetAutoRules;
+  /** 套用時一併帶入的保留洞位（例如屬性模板預留 Lv3+Lv2 給屬性攻擊珠）。未指定則不改動現有保留洞位。 */
+  reservedSlots?: Partial<ReservedSlots>;
   tags: string[];
 };
 
@@ -274,6 +298,10 @@ export type BuildSearchRequest = {
   autoRules?: PresetAutoRules;
   /** 武器屬性篩選（僅五屬性；search 模式縮小候選池，未指定＝不限）。 */
   elementFilter?: WeaponElementFilter;
+  /** 裝備 rarity 上限（依 preset 階段限制取得門檻，同時套用於防具與 search 模式武器；未指定＝不限）。固定部位/武器不受限。 */
+  maxRarity?: number;
+  /** 屬攻武器流派：候選武器評分以屬性值優先。未指定時退回依 autoRules 推斷。 */
+  preferElement?: boolean;
   /** @deprecated 舊版手動武器洞數。僅在武器候選池為空時作為後援。 */
   weaponSlots?: number[];
   charm: Charm;
@@ -310,6 +338,8 @@ export type BuildScore = {
   slotScore: number;
   penaltyScore: number;
   specialSkillScore: number;
+  /** 屬性流：武器屬性值加分（屬攻優先，延伸到最終排序）。非屬性流為 0。 */
+  elementScore: number;
 };
 
 export type BuildResult = {

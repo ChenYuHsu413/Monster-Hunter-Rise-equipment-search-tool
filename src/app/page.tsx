@@ -7,12 +7,12 @@ import type {
   BuildResult,
   BuildSearchRequest,
   Charm,
+  ElementType,
   FixedParts,
   ExcludedItems,
   ReservedSlots,
   SearchMode,
   SkillMap,
-  Weapon,
   WeaponSearchMode,
 } from "@/types/build";
 import {
@@ -22,6 +22,7 @@ import {
   getPreset,
   presetsForWeapon,
 } from "@/lib/data";
+import { TIER_MAX_RARITY } from "@/types/build";
 import { loadGameData, type GameData } from "@/lib/game-data";
 import { searchBuilds, createSearchDeps, type SearchMeta } from "@/lib/build-search";
 import { parseSlotString } from "@/lib/slot-utils";
@@ -29,7 +30,7 @@ import { useLocalStorage } from "@/lib/use-local-storage";
 import {
   elementSkillMap,
   mergeMaxSkills,
-  resolveAutoSkills,
+  resolveAutoSkillsFromElement,
   resolvePresetSkills,
 } from "@/lib/preset-resolver";
 import { ELEMENT_LABELS } from "@/lib/weapon-utils";
@@ -42,6 +43,7 @@ import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
 import { CharmInput, type CharmRow } from "@/components/CharmInput";
 import { ReservedSlotsInput } from "@/components/ReservedSlotsInput";
 import { FixedPartsPanel } from "@/components/FixedPartsPanel";
+import { ArmorLockPanel } from "@/components/ArmorLockPanel";
 import { AugmentedArmorEditor } from "@/components/AugmentedArmorEditor";
 import { BuildResultCard } from "@/components/BuildResultCard";
 import { EmptyState } from "@/components/EmptyState";
@@ -172,10 +174,12 @@ export default function Home() {
   const activeElementFilter: ElementFilterValue = elementFilterEnabled
     ? elementFilter
     : "all";
-  const pickedWeapon: Weapon | undefined =
-    weaponSearchMode === "fixed" && fixedWeaponId
-      ? weaponById[fixedWeaponId]
-      : undefined;
+
+  // 已排除的裝備/武器 id 集合（供結果卡片標示排除狀態）
+  const excludedIds = useMemo(
+    () => new Set([...excludedItems.armorIds, ...excludedItems.weaponIds]),
+    [excludedItems]
+  );
 
   // 合併鍊成防具的 armorById（供固定面板顯示名稱）
   const armorById = useMemo(() => {
@@ -184,26 +188,48 @@ export default function Home() {
     return m;
   }, [gameData, augments]);
 
-  /** 以 preset（+ 目前固定武器）重設技能編輯器。 */
-  const applyPreset = (id: string, weapon?: Weapon) => {
+  /**
+   * 目前用於自動技能的「屬性來源」：
+   * fixed 模式取固定武器屬性；search 模式取屬性篩選（未篩選則無）。
+   * 可傳入 override 以配合尚未套用的 state（React 更新為非同步）。
+   */
+  const autoElementType = (
+    mode: WeaponSearchMode = weaponSearchMode,
+    weaponId: string = fixedWeaponId,
+    filter: ElementFilterValue = activeElementFilter
+  ): ElementType | undefined => {
+    if (mode === "fixed")
+      return weaponId ? weaponById[weaponId]?.element?.type : undefined;
+    return filter !== "all" ? (filter as ElementType) : undefined;
+  };
+
+  /** 以 preset 重設技能編輯器；一併帶入 autoRules 屬性技能與 preset 的保留洞位。 */
+  const applyPreset = (id: string, elementType?: ElementType) => {
     setPresetId(id);
     const p = getPreset(id);
     if (!p) return;
-    const resolved = resolvePresetSkills(p, weapon);
+    const resolved = resolvePresetSkills(p, elementType);
     setRequired(resolved.requiredSkills);
     setPreferred(resolved.preferredSkills);
     setAvoid(resolved.avoidSkills);
     setWeights(resolved.skillWeights);
     setAutoSkills(resolved.autoAddedSkills);
+    // 一律重設保留洞位：preset 有指定則帶入，否則歸零（避免上一個模板的保留洞位殘留）。
+    setReservedSlots({
+      4: p.reservedSlots?.[4] ?? 0,
+      3: p.reservedSlots?.[3] ?? 0,
+      2: p.reservedSlots?.[2] ?? 0,
+      1: p.reservedSlots?.[1] ?? 0,
+    });
   };
 
   /**
-   * 武器（或模式）變更時，只重算自動技能：
-   * 移除舊自動技能（若使用者未改動其等級），併入新武器對應的自動技能，保留其他手動編輯。
+   * 屬性來源（固定武器 / 屬性篩選 / 模式）變更時，只重算自動技能：
+   * 移除舊自動技能（若使用者未改動其等級），併入新的屬性技能，保留其他手動編輯。
    */
-  const reapplyAutoSkills = (weapon: Weapon | undefined) => {
+  const reapplyAutoSkills = (elementType: ElementType | undefined) => {
     const p = getPreset(presetId);
-    const newAuto = resolveAutoSkills(p?.autoRules, weapon);
+    const newAuto = resolveAutoSkillsFromElement(p?.autoRules, elementType);
     setRequired((prev) => {
       const next = { ...prev };
       for (const [k, v] of Object.entries(autoSkills)) {
@@ -212,6 +238,12 @@ export default function Home() {
       return mergeMaxSkills(next, newAuto);
     });
     setAutoSkills(newAuto);
+  };
+
+  /** 屬性篩選變更：更新篩選並重算自動技能（search 模式下依新篩選帶入屬性攻擊強化）。 */
+  const changeElementFilter = (v: ElementFilterValue) => {
+    setElementFilter(v);
+    reapplyAutoSkills(autoElementType(weaponSearchMode, fixedWeaponId, v));
   };
 
   const changeWeapon = (w: string) => {
@@ -235,20 +267,20 @@ export default function Home() {
         delete next.weapon;
         return next;
       });
-      reapplyAutoSkills(undefined);
+      reapplyAutoSkills(autoElementType("search"));
     } else {
       const w = fixedWeaponId ? weaponById[fixedWeaponId] : undefined;
       if (w) {
         setFixedParts((prev) => ({ ...prev, weapon: w.id }));
       }
-      reapplyAutoSkills(w);
+      reapplyAutoSkills(w?.element?.type);
     }
   };
 
   const pickWeapon = (id: string) => {
     setFixedWeaponId(id);
     setFixedParts((prev) => ({ ...prev, weapon: id }));
-    reapplyAutoSkills(weaponById[id]);
+    reapplyAutoSkills(weaponById[id]?.element?.type);
   };
 
   const buildCharm = (): Charm => {
@@ -276,6 +308,10 @@ export default function Home() {
         weaponSearchMode === "search" ? currentPreset?.autoRules : undefined,
       elementFilter:
         activeElementFilter !== "all" ? activeElementFilter : undefined,
+      maxRarity: currentPreset?.tier
+        ? TIER_MAX_RARITY[currentPreset.tier]
+        : undefined,
+      preferElement: currentPreset?.preferElement,
       charm: buildCharm(),
       fixedParts,
       excludedItems,
@@ -317,6 +353,7 @@ export default function Home() {
     setFixedParts((prev) => ({ ...prev, [part]: id }));
 
   const excludeArmor = (id: string) => {
+    const already = excludedItems.armorIds.includes(id);
     setExcludedItems((prev) =>
       prev.armorIds.includes(id)
         ? prev
@@ -330,6 +367,10 @@ export default function Home() {
       }
       return next;
     });
+    if (!already) {
+      const name = armorById[id]?.nameZh ?? "此裝備";
+      showToast(`已排除「${name}」，重新搜尋後生效`);
+    }
   };
 
   const clearFixed = (key: ArmorPart | "weapon" | "charm") => {
@@ -341,7 +382,7 @@ export default function Home() {
     if (key === "weapon") {
       setFixedWeaponId("");
       setWeaponSearchMode("search");
-      reapplyAutoSkills(undefined);
+      reapplyAutoSkills(autoElementType("search"));
     }
   };
 
@@ -350,10 +391,11 @@ export default function Home() {
     setWeaponSearchMode("fixed");
     setFixedWeaponId(id);
     setFixedParts((prev) => ({ ...prev, weapon: id }));
-    reapplyAutoSkills(weaponById[id]);
+    reapplyAutoSkills(weaponById[id]?.element?.type);
   };
 
   const excludeWeapon = (id: string) => {
+    const already = excludedItems.weaponIds.includes(id);
     setExcludedItems((prev) =>
       prev.weaponIds.includes(id)
         ? prev
@@ -361,6 +403,10 @@ export default function Home() {
     );
     if (fixedWeaponId === id) {
       clearFixed("weapon");
+    }
+    if (!already) {
+      const name = weaponById[id]?.nameZh ?? "此武器";
+      showToast(`已排除「${name}」，重新搜尋後生效`);
     }
   };
 
@@ -506,13 +552,13 @@ export default function Home() {
                 autoHint={autoHint}
                 enableElementFilter={elementFilterEnabled}
                 elementFilter={activeElementFilter}
-                onElementFilterChange={setElementFilter}
+                onElementFilterChange={changeElementFilter}
                 groupBySource
               />
               <BuildPresetSelector
                 presets={presets}
                 value={presetId}
-                onChange={(id) => applyPreset(id, pickedWeapon)}
+                onChange={(id) => applyPreset(id, autoElementType())}
               />
             </CardContent>
           </Card>
@@ -563,14 +609,23 @@ export default function Home() {
                 </TabsContent>
 
                 <TabsContent value="locks" className="space-y-4 pt-2">
-                  <FixedPartsPanel
+                  <ArmorLockPanel
+                    allArmors={allArmors}
+                    loading={!gameData}
                     fixedParts={fixedParts}
-                    excludedItems={excludedItems}
-                    armorById={armorById}
-                    weaponById={weaponById}
-                    onClearFixed={clearFixed}
-                    onRemoveExcluded={removeExcluded}
+                    onFix={fixArmor}
+                    onClear={clearFixed}
                   />
+                  <div className="border-t border-border pt-3">
+                    <FixedPartsPanel
+                      fixedParts={fixedParts}
+                      excludedItems={excludedItems}
+                      armorById={armorById}
+                      weaponById={weaponById}
+                      onClearFixed={clearFixed}
+                      onRemoveExcluded={removeExcluded}
+                    />
+                  </div>
                   <div className="space-y-1.5 border-t border-border pt-3">
                     <Label className="text-xs text-muted-foreground">
                       傀異鍊成（自訂防具）
@@ -679,6 +734,7 @@ export default function Home() {
                     avoidSkills={avoid}
                     reservedSlots={reservedSlots}
                     fixedParts={fixedParts}
+                    excludedIds={excludedIds}
                     isFavorite={favorites.includes(r.id)}
                     isCompared={compared.includes(r.id)}
                     onFixArmor={fixArmor}

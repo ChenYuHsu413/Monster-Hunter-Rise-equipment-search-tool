@@ -16,6 +16,7 @@ import { Separator } from "@/components/ui/separator";
 import { SkillSummary } from "./SkillSummary";
 import { DecorationSummary } from "./DecorationSummary";
 import { ProvenanceHint } from "./ProvenanceHint";
+import { WeaponIcon, ArmorIcon } from "./EquipmentIcon";
 import { formatSlots } from "@/lib/slot-utils";
 import {
   formatWeaponSource,
@@ -45,6 +46,8 @@ type Props = {
   avoidSkills: SkillMap;
   reservedSlots: ReservedSlots;
   fixedParts: FixedParts;
+  /** 已排除的裝備/武器 id 集合（用於卡片上顯示排除狀態）。 */
+  excludedIds: Set<string>;
   isFavorite: boolean;
   isCompared: boolean;
   onFixArmor: (part: ArmorPart, id: string) => void;
@@ -57,29 +60,37 @@ type Props = {
 };
 
 function PartRow({
+  part,
   label,
   piece,
   fixed,
+  excluded,
   onFix,
   onExclude,
 }: {
+  part: ArmorPart;
   label: string;
   piece: ArmorPiece;
   fixed: boolean;
+  excluded: boolean;
   onFix: () => void;
   onExclude: () => void;
 }) {
   return (
-    <div className="flex items-center gap-2 py-1">
-      <Badge
-        variant="secondary"
-        className="w-10 shrink-0 justify-center px-1 py-0 text-[11px]"
-      >
-        {label}
-      </Badge>
+    <div className={cn("flex items-center gap-2 py-1", excluded && "opacity-50")}>
+      <ArmorIcon
+        part={part}
+        rarity={piece.rarity}
+        className="h-8 w-8"
+        title={label}
+      />
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
-          <span className="truncate text-[15px]">{piece.nameZh}</span>
+          <span
+            className={cn("truncate text-[15px]", excluded && "line-through")}
+          >
+            {piece.nameZh}
+          </span>
           <span className="shrink-0 font-mono text-[11px] text-muted-foreground">
             {formatSlots(piece.slots)}
           </span>
@@ -88,10 +99,16 @@ function PartRow({
               鍊成
             </Badge>
           )}
+          {excluded && (
+            <Badge variant="destructive" className="px-1 py-0 text-[10px]">
+              已排除
+            </Badge>
+          )}
         </div>
         <ProvenanceHint
           seriesName={piece.seriesName}
           rankLabel={piece.rankLabel}
+          rarity={piece.rarity}
           source={piece.sourceMonster}
         />
         {Object.keys(piece.skills).length > 0 && (
@@ -113,11 +130,14 @@ function PartRow({
           <Lock className="h-3.5 w-3.5" />
         </Button>
         <Button
-          variant="ghost"
+          variant={excluded ? "destructive" : "ghost"}
           size="icon"
-          className="h-7 w-7 text-muted-foreground hover:text-destructive"
+          className={cn(
+            "h-7 w-7",
+            !excluded && "text-muted-foreground hover:text-destructive"
+          )}
           onClick={onExclude}
-          title="排除此裝備"
+          title={excluded ? "已排除（重新搜尋後生效）" : "排除此裝備"}
         >
           <Ban className="h-3.5 w-3.5" />
         </Button>
@@ -134,6 +154,7 @@ export function BuildResultCard({
   preferredSkills,
   avoidSkills,
   fixedParts,
+  excludedIds,
   isFavorite,
   isCompared,
   onFixArmor,
@@ -147,6 +168,7 @@ export function BuildResultCard({
   const s = result.score;
   const missing = Object.entries(result.missingRequiredSkills);
   const weapon = result.weapon;
+  const weaponExcluded = weapon ? excludedIds.has(weapon.id) : false;
   const weaponTypeLabel = weapon
     ? weaponTypes.find((t) => t.id === weapon.weaponType)?.nameZh
     : undefined;
@@ -168,6 +190,11 @@ export function BuildResultCard({
               <span title="必要技能分">必 {s.requiredSkillScore}</span>
               <span title="偏好技能分">偏 {s.preferredSkillScore}</span>
               <span title="剩餘洞位分">洞 {s.slotScore}</span>
+              {s.elementScore > 0 && (
+                <span title="武器屬性值分（屬攻優先）" className="text-sky-400">
+                  屬 {s.elementScore}
+                </span>
+              )}
               {s.specialSkillScore > 0 && (
                 <span title="特殊技能分" className="text-accent">
                   特 {s.specialSkillScore}
@@ -218,17 +245,37 @@ export function BuildResultCard({
         {/* 裝備部位 */}
         <div className="divide-y divide-border/50">
           <div className="flex items-center gap-2 py-1">
-            <Badge
-              variant="secondary"
-              className="w-11 shrink-0 justify-center px-1 py-0 text-[11px]"
-            >
-              武器
-            </Badge>
+            {weapon ? (
+              <WeaponIcon
+                type={weapon.weaponType}
+                className="h-8 w-8 text-foreground/80"
+                title="武器"
+              />
+            ) : (
+              <Badge
+                variant="secondary"
+                className="w-11 shrink-0 justify-center px-1 py-0 text-[11px]"
+              >
+                武器
+              </Badge>
+            )}
             {weapon ? (
               <>
-                <div className="min-w-0 flex-1">
+                <div className={cn("min-w-0 flex-1", weaponExcluded && "opacity-50")}>
                   <div className="flex items-center gap-1.5">
-                    <span className="truncate text-[15px]">{weapon.nameZh}</span>
+                    <span
+                      className={cn(
+                        "truncate text-[15px]",
+                        weaponExcluded && "line-through"
+                      )}
+                    >
+                      {weapon.nameZh}
+                    </span>
+                    {weaponExcluded && (
+                      <Badge variant="destructive" className="px-1 py-0 text-[10px]">
+                        已排除
+                      </Badge>
+                    )}
                     {weaponTypeLabel && (
                       <span className="shrink-0 text-[11px] text-muted-foreground">
                         {weaponTypeLabel}
@@ -247,6 +294,7 @@ export function BuildResultCard({
                   <ProvenanceHint
                     seriesName={weaponSeriesLabel(weapon)}
                     rankLabel={weapon.rankLabel}
+                    rarity={weapon.rarity}
                   />
                   <div className="truncate text-xs text-muted-foreground">
                     {[formatWeaponStats(weapon), ...formatWeaponSpecial(weapon)].join(
@@ -270,11 +318,17 @@ export function BuildResultCard({
                     <Lock className="h-3.5 w-3.5" />
                   </Button>
                   <Button
-                    variant="ghost"
+                    variant={weaponExcluded ? "destructive" : "ghost"}
                     size="icon"
-                    className="h-7 w-7 text-muted-foreground hover:text-destructive"
+                    className={cn(
+                      "h-7 w-7",
+                      !weaponExcluded &&
+                        "text-muted-foreground hover:text-destructive"
+                    )}
                     onClick={() => onExcludeWeapon(weapon.id)}
-                    title="排除此武器"
+                    title={
+                      weaponExcluded ? "已排除（重新搜尋後生效）" : "排除此武器"
+                    }
                   >
                     <Ban className="h-3.5 w-3.5" />
                   </Button>
@@ -294,9 +348,11 @@ export function BuildResultCard({
           {ARMOR_PARTS.map((part) => (
             <PartRow
               key={part}
+              part={part}
               label={ARMOR_PART_LABELS[part]}
               piece={result.armor[part]}
               fixed={fixedParts[part] === result.armor[part].id}
+              excluded={excludedIds.has(result.armor[part].id)}
               onFix={() => onFixArmor(part, result.armor[part].id)}
               onExclude={() => onExcludeArmor(result.armor[part].id)}
             />

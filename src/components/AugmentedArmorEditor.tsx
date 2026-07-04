@@ -15,6 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { formatSlots, parseSlotString } from "@/lib/slot-utils";
+import { RarityBadge } from "./RarityBadge";
 import { Plus, X, Wand2 } from "lucide-react";
 
 type SkillRow = { name: string; level: number };
@@ -105,7 +106,10 @@ export function AugmentedArmorEditor({
           <SelectContent>
             {allArmors.map((a) => (
               <SelectItem key={a.id} value={a.id}>
-                [{ARMOR_PART_LABELS[a.part]}] {a.nameZh}
+                <span className="inline-flex items-center gap-1">
+                  [{ARMOR_PART_LABELS[a.part]}] {a.nameZh}
+                  <RarityBadge rarity={a.rarity} />
+                </span>
               </SelectItem>
             ))}
           </SelectContent>

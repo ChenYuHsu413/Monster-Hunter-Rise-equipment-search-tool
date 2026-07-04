@@ -88,6 +88,10 @@ export type SearchOutput = {
 const INTERNAL_BUFFER = 500;
 /** 防止資料變大後組合爆炸的硬上限。 */
 const MAX_COMBOS = 300000;
+/** 五屬性集合（屬性流武器屬性加分用）。 */
+const FIVE_ELEMENTS = new Set(["fire", "water", "thunder", "ice", "dragon"]);
+/** 屬性流：武器屬性值計入配裝總分的權重（讓屬攻優先延伸到最終排序）。 */
+const ELEMENT_SCORE_WEIGHT = 3;
 
 export function searchBuilds(
   request: BuildSearchRequest,
@@ -113,6 +117,10 @@ export function searchBuilds(
     elementFilter,
   } = normalizeRequest(request);
 
+  // 屬性流：候選武器與最終排序皆以屬性值優先
+  const preferElement =
+    request.preferElement ?? !!autoRules?.addElementAttackSkill;
+
   // 護石：固定護石即使用者輸入的護石，兩者在第一版等價
   const effectiveCharm: Charm = fixedParts.charm ?? charm;
 
@@ -128,14 +136,20 @@ export function searchBuilds(
     preset: { requiredSkills, preferredSkills, skillWeights },
     mode: searchMode,
     elementFilter,
+    preferElement,
+    maxRarity: request.maxRarity,
   });
   // 後援：無任何武器候選（無資料或全被排除）時，退回舊版手動洞數
   const weaponCandidates: (Weapon | undefined)[] =
     weaponPool.length > 0 ? weaponPool : [undefined];
   const weaponFixed = weaponSearchMode === "fixed";
 
-  // 防具基礎池：分組 → 排除 → 固定（依武器逐次裁切，因 autoRules 會改變相關技能）
-  const basePools0 = buildEquipmentPools(deps.armors, excludedItems);
+  // 防具基礎池：分組（依 rarity 上限限制取得門檻）→ 排除 → 固定
+  const basePools0 = buildEquipmentPools(
+    deps.armors,
+    excludedItems,
+    request.maxRarity
+  );
   const basePools = applyFixedParts(basePools0, fixedParts, deps.armorById);
 
   const candidatesPerPart: Record<string, number> = {};
@@ -148,6 +162,12 @@ export function searchBuilds(
     // 依武器屬性套用自動技能（硬條件：併入必要技能）
     const autoSkills = resolveAutoSkills(autoRules, weapon);
     const effRequired = mergeMaxSkills(requiredSkills, autoSkills);
+
+    // 屬性流：此武器的屬性值加分（併入配裝總分，讓屬攻優先延伸到最終排序）
+    const weaponElementScore =
+      preferElement && weapon?.element && FIVE_ELEMENTS.has(weapon.element.type)
+        ? weapon.element.value * ELEMENT_SCORE_WEIGHT
+        : 0;
 
     const pools = prunePools(
       basePools,
@@ -221,6 +241,7 @@ export function searchBuilds(
                 fixedParts,
                 skillMax: deps.skillMax,
                 skillIsSpecial: deps.skillIsSpecial,
+                elementScore: weaponElementScore,
               });
 
               const result: BuildResult = {

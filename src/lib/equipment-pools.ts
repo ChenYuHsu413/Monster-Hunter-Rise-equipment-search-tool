@@ -11,10 +11,15 @@ import type {
 import { ARMOR_PARTS } from "@/types/build";
 import { slotValue } from "./slot-utils";
 
-/** 依部位分組所有防具，並套用排除清單。 */
+/**
+ * 依部位分組所有防具，並套用排除清單。
+ * maxRarity 給定時，濾除 rarity 超過上限的防具（依 preset 階段限制取得門檻）；
+ * 固定部位在 applyFixedParts 直接以 id 帶入，不受此上限影響。
+ */
 export function buildEquipmentPools(
   armors: ArmorPiece[],
-  excluded?: ExcludedItems
+  excluded?: ExcludedItems,
+  maxRarity?: number
 ): EquipmentPools {
   const excludeSet = new Set(excluded?.armorIds ?? []);
   const pools = {
@@ -26,6 +31,7 @@ export function buildEquipmentPools(
   } as EquipmentPools;
   for (const a of armors) {
     if (excludeSet.has(a.id)) continue;
+    if (maxRarity != null && (a.rarity ?? 0) > maxRarity) continue;
     if (pools[a.part]) pools[a.part].push(a);
   }
   return pools;
@@ -176,15 +182,21 @@ export function prunePools(
   return out;
 }
 
+/** 五屬性集合（屬性流武器評分用）。 */
+const FIVE_ELEMENTS = new Set(["fire", "water", "thunder", "ice", "dragon"]);
+
 /**
  * 單把武器對某流派的啟發式分數（search 模式候選排序用）。
  * 攻擊/會心/洞位/自帶技能相關度綜合。
+ * preferElement=true（屬性流 preset）時：以屬性值為主要排序依據（屬攻優先），
+ * 並將無屬性/狀態異常武器大幅降權（屬性流用不到）。
  */
 export function scoreWeaponForPreset(
   weapon: Weapon,
   required: SkillMap,
   preferred: SkillMap,
-  weights: SkillMap
+  weights: SkillMap,
+  preferElement = false
 ): number {
   let score = weapon.attack / 10 + weapon.affinity / 5;
   score += slotValue(weapon.slots) * 3;
@@ -192,6 +204,11 @@ export function scoreWeaponForPreset(
   for (const [skill, lvl] of Object.entries(weapon.skills ?? {})) {
     if (required[skill]) score += lvl * 12;
     if (preferred[skill]) score += lvl * (weights[skill] ?? 1) * 4;
+  }
+  if (preferElement) {
+    const el = weapon.element;
+    if (el && FIVE_ELEMENTS.has(el.type)) score += el.value * 2;
+    else score -= 200; // 屬性流不推薦無屬性/狀態異常武器
   }
   return score;
 }
@@ -214,6 +231,10 @@ export function buildWeaponPool(opts: {
   mode: "fast" | "exact" | "greedy";
   /** 屬性篩選（僅五屬性）：search 模式只保留該屬性武器。未指定＝不限。 */
   elementFilter?: WeaponElementFilter;
+  /** 屬性流 preset：候選排序以屬性值優先。 */
+  preferElement?: boolean;
+  /** 裝備 rarity 上限（依 preset 階段限制取得門檻）。固定武器不受限。 */
+  maxRarity?: number;
 }): Weapon[] {
   const {
     weapons,
@@ -226,6 +247,8 @@ export function buildWeaponPool(opts: {
     preset,
     mode,
     elementFilter,
+    preferElement,
+    maxRarity,
   } = opts;
 
   if (weaponSearchMode === "fixed") {
@@ -239,7 +262,8 @@ export function buildWeaponPool(opts: {
     (w) =>
       w.weaponType === weaponType &&
       !excluded.has(w.id) &&
-      (!elementFilter || w.element?.type === elementFilter)
+      (!elementFilter || w.element?.type === elementFilter) &&
+      (maxRarity == null || (w.rarity ?? 0) <= maxRarity)
   );
   const cap = mode === "greedy" ? 2 : mode === "fast" ? 3 : 4;
   return candidates
@@ -249,7 +273,8 @@ export function buildWeaponPool(opts: {
         w,
         preset.requiredSkills,
         preset.preferredSkills,
-        preset.skillWeights
+        preset.skillWeights,
+        preferElement
       ),
     }))
     .sort((a, b) => b.score - a.score)

@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { RarityBadge } from "./RarityBadge";
 
 /** 階級標籤配色：MR 較搶眼、HR 中性、村莊偏暗，方便一眼掃出裝備來源檔次。 */
 const RANK_BADGE_VARIANT: Record<string, "accent" | "secondary" | "outline"> = {
@@ -9,19 +10,21 @@ const RANK_BADGE_VARIANT: Record<string, "accent" | "secondary" | "outline"> = {
   村: "outline",
 };
 
-/** 派生小字：系列名 + 階級（依稀有度推算）+ 來源怪（推測）。 */
+/** 派生小字：系列名 + 稀有度 + 階級（依稀有度推算）+ 來源怪（推測）。 */
 export function ProvenanceHint({
   seriesName,
   rankLabel,
+  rarity,
   source,
   className,
 }: {
   seriesName?: string;
   rankLabel?: string;
+  rarity?: number;
   source?: string;
   className?: string;
 }) {
-  if (!seriesName && !rankLabel && !source) return null;
+  if (!seriesName && !rankLabel && rarity == null && !source) return null;
   return (
     <div className={`flex items-center gap-1 ${className ?? ""}`}>
       {seriesName && (
@@ -29,6 +32,7 @@ export function ProvenanceHint({
           {seriesName}
         </span>
       )}
+      {rarity != null && <RarityBadge rarity={rarity} />}
       {rankLabel && (
         <Badge
           variant={RANK_BADGE_VARIANT[rankLabel] ?? "outline"}

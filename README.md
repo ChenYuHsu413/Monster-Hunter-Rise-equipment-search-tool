@@ -5,7 +5,10 @@
 ## 功能
 
 - 武器系統:固定指定武器,或讓系統從同類型武器中搜尋;武器的洞數/攻擊/會心/屬性/自帶技能皆納入計算;全 14 種武器類型均為 Kiranico 真實資料
-- 武器流派 preset(15 套,涵蓋太刀/大劍/片手劍/雙刀/輕弩/弓),選取自動帶入推薦技能
+- 武器流派 preset(31 套,涵蓋太刀/大劍/片手劍/雙刀/輕弩/弓;太刀四階含屬性居合變體、雙刀初心/拓荒含物理/屬性雙取向),依進度分四階段:初心(剛進大師位 MR1~3)/拓荒(MR 前期)/進階(中期)/畢業(TU5 終盤 meta),流派清單依階段分組,選取自動帶入推薦技能
+- 階段限裝(取得門檻代理):初心/拓荒依 rarity 上限同時限制防具池與 search 武器候選(初心 ≤8 排除天迴龍等 MR5+ 裝、拓荒 ≤9、進階/畢業不限),讓早期階段實際搜到早期裝備與武器;固定部位/武器不受限。因 Kiranico 無精確 MR 解放資料,以 rarity 近似
+- 全裝備/武器顯示稀有度:結果卡、武器選擇器、防具鎖定面板等處皆標「稀N」(rarity 1~10,資料 100% 完整)
+- 屬性流武器推薦「屬攻優先」:屬性 preset(有 autoRules)在 search 模式挑候選武器時以屬性值為主要排序,無屬性/狀態異常武器大幅降權
 - 屬性自動技能:屬性雙刀/屬性弓等 preset 依武器屬性自動加入對應「○屬性攻擊強化」(硬條件)
 - 武器屬性篩選:全武器類型(弩槍除外,無屬性)可依屬性(火/水/雷/冰/龍)篩選候選;搜尋模式同步只挑該屬性武器,搭配屬性 preset 時自動帶入對應屬性強化
 - 來源怪兩層下拉(全 14 類):固定模式改用「來源怪(派生大分類)→ 該系列各階段武器」兩層選單;無來源(村莊/礦石混合素材)歸「其他」分類
@@ -41,7 +44,7 @@ src/
 │   ├── decorations.json    #   裝飾珠 243 顆（含 4 級洞）
 │   ├── skills.json         #   147 個技能與上限、特殊標記
 │   ├── weaponTypes.json    #   14 種武器（全數 supported: true）
-│   └── buildPresets.json   #   15 個武器流派 preset（6 武器類型已有 preset，含 autoRules；其餘 8 類已有真實武器資料，尚待補 preset）
+│   └── buildPresets.json   #   31 個武器流派 preset（6 武器 × 初心/拓荒/進階/畢業四階，太刀四階含屬性變體、雙刀初心/拓荒含物理/屬性雙取向；含 tier/preferElement/autoRules；其餘 8 類已有真實武器資料，尚待補 preset）
 ├── lib/                    # 純函式邏輯層（無 React 相依，方便測試）
 │   ├── data.ts             #   小型資料（技能/珠子/武器類型/preset）+ 衍生索引
 │   ├── game-data.ts        #   防具/武器大資料的延遲載入（不進首屏 bundle）
@@ -106,3 +109,5 @@ node scripts/import-kiranico.mjs   # 重新抓取並覆寫 src/data/{armors,deco
 ## 資料致謝
 
 遊戲資料來源:[Kiranico — Monster Hunter Rise: Sunbreak](https://mhrise.kiranico.com/)。本專案為個人非商業用途的配裝工具。《Monster Hunter Rise: Sunbreak》© CAPCOM。
+
+武器/防具部位圖示:[OthelloRhin/MHW_Icons_SVG](https://github.com/OthelloRhin/MHW_Icons_SVG)(MIT License, © 2020 Thibault "Othello" BENOIT);已改為 `currentColor` 供依稀有度上色(依破曉 rarity 配色),「腰」沿用 repo 的 Hunter/Torso 圖示。

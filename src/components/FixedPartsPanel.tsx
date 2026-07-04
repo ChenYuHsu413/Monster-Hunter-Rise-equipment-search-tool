@@ -11,6 +11,7 @@ import { ARMOR_PARTS, ARMOR_PART_LABELS } from "@/types/build";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Lock, X, Ban } from "lucide-react";
+import { RarityBadge } from "./RarityBadge";
 
 type Props = {
   fixedParts: FixedParts;
@@ -33,14 +34,15 @@ export function FixedPartsPanel({
   onClearFixed,
   onRemoveExcluded,
 }: Props) {
-  const fixedRows: { key: ArmorPart | "weapon"; label: string; name: string }[] =
-    [];
+  const fixedRows: {
+    key: ArmorPart | "weapon";
+    label: string;
+    name: string;
+    rarity?: number;
+  }[] = [];
   if (fixedParts.weapon && weaponById[fixedParts.weapon]) {
-    fixedRows.push({
-      key: "weapon",
-      label: "武器",
-      name: weaponById[fixedParts.weapon].nameZh,
-    });
+    const w = weaponById[fixedParts.weapon];
+    fixedRows.push({ key: "weapon", label: "武器", name: w.nameZh, rarity: w.rarity });
   }
   for (const part of ARMOR_PARTS) {
     const id = fixedParts[part];
@@ -49,6 +51,7 @@ export function FixedPartsPanel({
         key: part,
         label: ARMOR_PART_LABELS[part],
         name: armorById[id].nameZh,
+        rarity: armorById[id].rarity,
       });
     }
   }
@@ -73,6 +76,7 @@ export function FixedPartsPanel({
                 <span className="flex items-center gap-2 text-sm">
                   <Badge className="px-1.5 py-0 text-[10px]">{r.label}</Badge>
                   {r.name}
+                  <RarityBadge rarity={r.rarity} />
                 </span>
                 <Button
                   variant="ghost"

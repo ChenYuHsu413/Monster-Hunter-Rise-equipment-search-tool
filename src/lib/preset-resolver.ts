@@ -27,20 +27,27 @@ export function mergeMaxSkills(base: SkillMap, add: SkillMap): SkillMap {
 }
 
 /**
- * 依 autoRules 與武器屬性計算要自動加入的技能。
- * 只有五屬性（fire/water/thunder/ice/dragon）會觸發；
- * none 與狀態異常（poison/paralysis/sleep/blast）不加入。
+ * 依 autoRules 與「屬性類型」計算要自動加入的技能。
+ * 屬性來源可為固定武器的屬性，或使用者的屬性篩選（search 模式）。
+ * 只有五屬性（fire/water/thunder/ice/dragon）會觸發；none 與狀態異常不加入。
  */
-export function resolveAutoSkills(
+export function resolveAutoSkillsFromElement(
   autoRules: PresetAutoRules | undefined,
-  weapon: Weapon | undefined
+  type: ElementType | undefined
 ): SkillMap {
   if (!autoRules?.addElementAttackSkill) return {};
-  const type = weapon?.element?.type;
   if (!type) return {};
   const skill = elementSkillMap[type];
   if (!skill) return {};
   return { [skill]: autoRules.elementAttackLevel ?? 5 };
+}
+
+/** 依 autoRules 與武器屬性計算自動技能（resolveAutoSkillsFromElement 的武器版）。 */
+export function resolveAutoSkills(
+  autoRules: PresetAutoRules | undefined,
+  weapon: Weapon | undefined
+): SkillMap {
+  return resolveAutoSkillsFromElement(autoRules, weapon?.element?.type);
 }
 
 /**
@@ -51,9 +58,9 @@ export function resolveAutoSkills(
  */
 export function resolvePresetSkills(
   preset: BuildPreset,
-  weapon?: Weapon
+  elementType?: ElementType
 ): ResolvedSkillConditions {
-  const auto = resolveAutoSkills(preset.autoRules, weapon);
+  const auto = resolveAutoSkillsFromElement(preset.autoRules, elementType);
   return {
     requiredSkills: mergeMaxSkills({ ...preset.requiredSkills }, auto),
     preferredSkills: { ...preset.preferredSkills },
