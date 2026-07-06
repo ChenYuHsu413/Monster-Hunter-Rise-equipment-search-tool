@@ -1,11 +1,12 @@
 # 魔物獵人 Rise：破曉配裝搜尋器 · Sunbreak Build Finder
 
-本專案是一個《Monster Hunter Rise: Sunbreak》配裝搜尋工具,目標是支援全武器的技能條件搜尋、固定部位、排除裝備、保留洞位與裝飾珠自動配置。防具/珠子/技能為真實破曉 TU5 資料。無後端,資料使用本地 JSON,搜尋邏輯為純 TypeScript utility(可獨立測試)。
+本專案是一個《Monster Hunter Rise: Sunbreak》配裝搜尋工具,目標是支援全武器的技能條件搜尋、固定部位、排除裝備、保留洞位與裝飾珠自動配置。排名採 **EFR（有效攻擊力／期望傷害）模型**,並可依流派分階在「傷害向 / 舒適向」之間切換。防具/珠子/技能/武器(含斬味、屬性耐性)為真實破曉 TU5 資料。無後端,資料使用本地 JSON,搜尋與評分邏輯為純 TypeScript utility(可獨立測試)。
 
 ## 功能
 
 - 武器系統:固定指定武器,或讓系統從同類型武器中搜尋;武器的洞數/攻擊/會心/屬性/自帶技能皆納入計算;全 14 種武器類型均為 Kiranico 真實資料
-- 武器流派 preset(31 套,涵蓋太刀/大劍/片手劍/雙刀/輕弩/弓;太刀四階含屬性居合變體、雙刀初心/拓荒含物理/屬性雙取向),依進度分四階段:初心(剛進大師位 MR1~3)/拓荒(MR 前期)/進階(中期)/畢業(TU5 終盤 meta),流派清單依階段分組,選取自動帶入推薦技能
+- 武器流派 preset(35 套,涵蓋太刀/大劍/片手劍/雙刀/輕弩/弓),依進度分四階段:初心(剛進大師位 MR1~3)/拓荒(MR 前期)/進階(中期)/畢業(TU5 終盤 meta),選取自動帶入推薦技能。**畢業拆多取向**:太刀/雙刀各有傷害向、舒適向、屬性向與第二傷害變體(太刀寒氣居合、雙刀挑戰連擊);對齊 Game8 破曉 meta 者標註 `Game8` 標籤。流派選擇為**依階段分組的下拉選單**,選中即顯示描述與標籤
+- 分階評分權重:每個 preset 依 tier 帶入傷害/舒適/彈性權重(`TIER_SCORE_PROFILE`,畢業預設傷害向、初心舒適向),preset 可用 `scoreProfile` 覆寫(如「畢業舒適」)
 - 階段限裝(取得門檻代理):初心/拓荒依 rarity 上限同時限制防具池與 search 武器候選(初心 ≤8 排除天迴龍等 MR5+ 裝、拓荒 ≤9、進階/畢業不限),讓早期階段實際搜到早期裝備與武器;固定部位/武器不受限。因 Kiranico 無精確 MR 解放資料,以 rarity 近似
 - 圖示化結果卡:武器與防具部位改用 SVG 圖示(內嵌 MHW MIT 圖示;武器中性色、防具依稀有度上色);稀有度以《破曉》遊戲配色的彩色「RARE N」徽章顯示於結果卡、武器選擇器、防具鎖定面板等處(rarity 1~10,資料 100% 完整)
 - 屬性流武器推薦「屬攻優先」:屬性 preset(有 autoRules)在 search 模式挑候選武器時以屬性值為主要排序,無屬性/狀態異常武器大幅降權
@@ -13,11 +14,13 @@
 - 武器屬性篩選:全武器類型(弩槍除外,無屬性)可依屬性(火/水/雷/冰/龍)篩選候選;搜尋模式同步只挑該屬性武器,搭配屬性 preset 時自動帶入對應屬性強化
 - 來源怪兩層下拉(全 14 類):固定模式改用「來源怪(派生大分類)→ 該系列各階段武器」兩層選單;無來源(村莊/礦石混合素材)歸「其他」分類
 - 派生小字提示:防具/武器旁標示系列名與階級(村/HR/MR,依稀有度推算)
-- 手動調整必要 / 偏好 / 排除技能;護石、武器洞數、保留洞位輸入
+- 手動調整必要 / 偏好 / 排除技能;技能下拉將**套裝技能**(風紋一致/雷紋一致/風雷合一/○之恩惠)獨立分組並標記,方便挑選
+- 防禦力 / 屬性耐性(火水雷冰龍)下限過濾:以 5 件防具的基礎防禦與耐性總和為硬條件,空白欄位不設限
+- 護石庫:儲存多顆護石、一鍵套用、去重、刪除(localStorage)
 - 固定 / 排除指定裝備與武器(可從搜尋結果卡片一鍵操作後再搜)
 - 簡化版傀異鍊成(直接輸入鍊成後技能與洞數)
-- 三種搜尋模式(快速 / 完整 / 推薦)、自動補裝飾珠、評分排序、顯示前 100 套
-- 結果卡片:分數細項、技能摘要、珠子配置、剩餘/保留洞位、複製配裝摘要
+- 三種搜尋模式(快速 / 完整 / 推薦)、自動補裝飾珠、**EFR 傷害評分排序**、顯示前 100 套
+- 結果卡片:EFR 傷害/舒適/彈性分項、技能摘要、珠子配置、防禦與屬性耐性總和、剩餘/保留洞位、**可追加技能建議**(依剩餘洞位推算還能塞哪些珠)、複製配裝摘要
 
 ## 技術
 
@@ -39,12 +42,12 @@ npm run start   # 執行生產版本
 src/
 ├── types/build.ts          # 全部核心型別（不寫死特定武器，只以 weaponType 字串區分）
 ├── data/                   # 本地 JSON 資料（由 Kiranico 匯入）
-│   ├── armors.json         #   全防具 1591 件（RARE1-10，含破曉 TU5 全系列）
-│   ├── weapons.json        #   全武器 3953 把（14 類全開放，含 Kiranico 真實數值/屬性/瓶種等）
+│   ├── armors.json         #   全防具 1591 件（RARE1-10，含防禦力與五屬性耐性 elementRes）
+│   ├── weapons.json        #   全武器 3953 把（含斬味 sharpness base/max；一物件一行 compact 格式）
 │   ├── decorations.json    #   裝飾珠 243 顆（含 4 級洞）
 │   ├── skills.json         #   147 個技能與上限、特殊標記
 │   ├── weaponTypes.json    #   14 種武器（全數 supported: true）
-│   └── buildPresets.json   #   31 個武器流派 preset（6 武器 × 初心/拓荒/進階/畢業四階，太刀四階含屬性變體、雙刀初心/拓荒含物理/屬性雙取向；含 tier/preferElement/autoRules；其餘 8 類已有真實武器資料，尚待補 preset）
+│   └── buildPresets.json   #   35 個武器流派 preset（含 tier/preferElement/autoRules/scoreProfile；太刀/雙刀畢業含傷害/舒適/屬性多取向；其餘 8 類已有真實武器資料，尚待補 preset）
 ├── lib/                    # 純函式邏輯層（無 React 相依，方便測試）
 │   ├── data.ts             #   小型資料（技能/珠子/武器類型/preset）+ 衍生索引
 │   ├── game-data.ts        #   防具/武器大資料的延遲載入（不進首屏 bundle）
@@ -52,8 +55,10 @@ src/
 │   ├── slot-utils.ts       #   洞位：normalize / parse / place / canFit
 │   ├── skill-calculator.ts #   技能累加、gap、上限截斷
 │   ├── decoration-solver.ts#   自動補珠（必要→保留洞位→偏好）
+│   ├── suggest-skills.ts   #   由剩餘洞位推算「可追加技能」建議
 │   ├── equipment-pools.ts  #   候選池、固定/排除、單件評分、模式裁切
-│   ├── score-build.ts      #   scoreBuild()（分數細項）
+│   ├── efr.ts              #   EFR 傷害模型（有效攻擊×斬味×期望會心＋屬性）
+│   ├── score-build.ts      #   scoreBuild()（EFR 傷害 + 舒適 + 彈性，依 scoreProfile 分階加權）
 │   └── build-search.ts     #   searchBuilds() / formatBuildResult()
 ├── components/             # UI 元件（每個獨立、可組合）
 └── app/page.tsx            # 主 Dashboard 頁面
@@ -73,7 +78,9 @@ src/
 防具 / 武器 / 裝飾珠 / 技能為**真實破曉 TU5（Ver16）正體中文資料**,由 [Kiranico](https://mhrise.kiranico.com/zh-Hant) 匯入:
 
 ```bash
-node scripts/import-kiranico.mjs   # 重新抓取並覆寫 src/data/{armors,decorations,skills,weapons}.json
+node scripts/import-kiranico.mjs         # 重新抓取並覆寫 src/data/{armors,decorations,skills,weapons}.json
+node scripts/add-armor-resistances.mjs   # 只補防具五屬性耐性 elementRes，併回 armors.json（其他檔不動）
+node scripts/add-weapon-sharpness.mjs     # 只補武器斬味 sharpness，逐武器詳細頁抓取後併回 weapons.json（並發＋可續跑）
 ```
 
 - 防具部位（頭/身/手/腰/腳）Kiranico 未文字標註,由 `import-kiranico.mjs` 以「後綴／【】token 關鍵字 + 系列內位置游標」混合判定(涵蓋主題命名系列如冥淵/脈動鋼龍)。
@@ -81,6 +88,7 @@ node scripts/import-kiranico.mjs   # 重新抓取並覆寫 src/data/{armors,deco
 - Kiranico 官方譯名與坊間略有差異(例:納刀術→**收刀術**、翔蟲使→**翔蟲能手**、業物→**利刃**、冰氣鍊成→**寒氣鍊成**),preset 已對齊官方譯名。
 - 武器屬性代碼 1-5（火/水/雷/冰/龍）已以武器名稱交叉驗證（例如「王刀雷切」= 雷）；6-9（毒/睡眠/麻痺/爆破）採用資料排序慣例，信心度較低但不影響搜尋硬條件（僅五屬性觸發 autoRules），純屬顯示用途。
 - 弩槍（輕弩/重弩）的彈藥表因巢狀表格結構複雜，本次未解析（`ammo` 欄位留空）；其餘武器類型的攻擊/會心/屬性/洞位/百龍洞/砲擊型/瓶種/獵蟲等級/弓塗料皆已解析。
+- **屬性耐性與斬味**在 Kiranico 列表頁不提供（斬味僅在個別武器詳細頁以 SVG 色塊呈現），故拆成兩支獨立合併腳本(`add-armor-resistances.mjs` / `add-weapon-sharpness.mjs`)只補對應欄位、不重跑全流程。斬味以 7 段色帶 `{base, max}`（匠 0 與最大匠）儲存；弩/弓無斬味故省略。EFR 依配裝的「匠」等級在 base↔max 間插值決定生效斬味色。
 
 > 搜尋為相關度裁切後的組合搜尋(全 DB 每部位 300+ 件無法暴力枚舉):各模式先濾除無關裝備、依 preset 相關度取每部位前 N 名(greedy 7 / fast 9 / exact 12,武器候選數 >1 時再縮小)再枚舉補珠評分。結果為高品質啟發解,非保證全域最佳。
 
@@ -94,17 +102,17 @@ node scripts/import-kiranico.mjs   # 重新抓取並覆寫 src/data/{armors,deco
 
 ## 效能與持久化
 
-- **延遲載入**:防具(428K)+ 武器(1.4M)資料不打進首屏 bundle,改由 `game-data.ts` 以動態 import 拆成獨立 chunk,掛載後於背景載入。首屏 JS 從 ~295KB 降到 ~152KB;大資料只在使用者操作時載一次並快取。
+- **延遲載入**:防具(~640K,含耐性)+ 武器(~1.3M,含斬味,一物件一行 compact)資料不打進首屏 bundle,改由 `game-data.ts` 以動態 import 拆成獨立 chunk,掛載後於背景載入;大資料只在使用者操作時載一次並快取。武器 JSON 採 compact 一物件一行,避免斬味數字陣列被 indent 垂直爆炸撐大檔案(縮排格式下曾達 2.3M)。
 - **無後端 / 無 DB**:遊戲資料是唯讀靜態 JSON(CDN 快取),搜尋跑在前端;不需要資料庫。
-- **localStorage 持久化**:武器/流派/搜尋模式、必要·偏好·排除技能、護石、保留洞位、固定/排除清單、傀異鍊成、收藏/比較清單皆存 localStorage(`mhsb.*` 前綴),重整後自動還原。使用者資料量小,localStorage 足夠,無需帳號或後端儲存。
+- **localStorage 持久化**:武器/流派/搜尋模式、必要·偏好·排除技能、護石、護石庫、保留洞位、防禦/屬性耐性下限、顯示上限、固定/排除清單、傀異鍊成、收藏/比較清單皆存 localStorage(`mhsb.*` 前綴),重整後自動還原。使用者資料量小,localStorage 足夠,無需帳號或後端儲存。
 
 ## 擴充方向
 
-- 新流派：8 種武器類型（大錘/狩獵笛/長槍/銃槍/斬擊斧/盾斧/操蟲棍/重弩）已有真實武器資料，僅缺 `buildPresets.json` 流派 preset；補上即可搜尋。
+- 新流派：8 種武器類型（大錘/狩獵笛/長槍/銃槍/斬擊斧/盾斧/操蟲棍/重弩）已有真實武器資料，僅缺 `buildPresets.json` 流派 preset；補上即可搜尋。Game8 meta preset 目前只做太刀/雙刀，可擴到其他武器。
+- EFR 模型：尚未建模 寒氣鍊成/業鎧【修羅】等 raw 乘數技能；條件技能觸發率統一 `CONDITIONAL_UPTIME = 0.75`、弱點特效假設命中弱點，可隨實測手感微調（見 `efr.ts`）。候選武器池（`buildWeaponPool` 取候選數）偏窄，可放寬增加多樣性。
 - 精確任務解放條件：目前階級標籤為稀有度推算值，如需精確「第幾星緊急任務解放」，需另外建立任務/怪物解放資料並與系列名比對。
 - 弩槍彈藥表：`Weapon.ammo` 型別已定義，解析邏輯待補（巢狀表格結構較複雜）。
 - `data.ts` 是唯一資料來源，可替換為 DB。
-- 已預留：護石收藏、裝備庫存、收藏／比較的持久化。
 
 ## 資料致謝
 
