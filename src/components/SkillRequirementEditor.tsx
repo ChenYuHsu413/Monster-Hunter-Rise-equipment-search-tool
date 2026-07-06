@@ -8,14 +8,36 @@ import { Badge } from "@/components/ui/badge";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 import { X, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SET_SKILLS } from "@/lib/data";
 
 type Variant = "required" | "preferred" | "avoid";
+
+/** 下拉選項的單列渲染（含特殊/套裝標記）。 */
+function SkillOption({ s }: { s: Skill }) {
+  return (
+    <span className="flex items-center gap-2">
+      {s.name}
+      {SET_SKILLS.has(s.name) && (
+        <Badge variant="secondary" className="px-1 py-0 text-[9px]">
+          套裝
+        </Badge>
+      )}
+      {s.special && (
+        <Badge variant="accent" className="px-1 py-0 text-[9px]">
+          特殊
+        </Badge>
+      )}
+    </span>
+  );
+}
 
 const VARIANT_META: Record<
   Variant,
@@ -55,6 +77,13 @@ function SkillListEditor({
     const present = new Set(Object.keys(value));
     return allSkills.filter((s) => !present.has(s.name));
   }, [allSkills, value]);
+  // 套裝技能獨立成一組（靠系列件數觸發，方便使用者辨識與挑選）。
+  const [setGroup, normalGroup] = useMemo(() => {
+    const set: Skill[] = [];
+    const normal: Skill[] = [];
+    for (const s of available) (SET_SKILLS.has(s.name) ? set : normal).push(s);
+    return [set, normal];
+  }, [available]);
 
   const setLevel = (name: string, lvl: number) =>
     onChange({ ...value, [name]: lvl });
@@ -117,18 +146,30 @@ function SkillListEditor({
           </span>
         </SelectTrigger>
         <SelectContent>
-          {available.map((s) => (
-            <SelectItem key={s.name} value={s.name}>
-              <span className="flex items-center gap-2">
-                {s.name}
-                {s.special && (
-                  <Badge variant="accent" className="px-1 py-0 text-[9px]">
-                    特殊
-                  </Badge>
-                )}
-              </span>
-            </SelectItem>
-          ))}
+          {setGroup.length > 0 && (
+            <SelectGroup>
+              <SelectLabel className="text-muted-foreground">
+                套裝技能（靠系列件數）
+              </SelectLabel>
+              {setGroup.map((s) => (
+                <SelectItem key={s.name} value={s.name}>
+                  <SkillOption s={s} />
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          )}
+          <SelectGroup>
+            {setGroup.length > 0 && (
+              <SelectLabel className="text-muted-foreground">
+                一般技能
+              </SelectLabel>
+            )}
+            {normalGroup.map((s) => (
+              <SelectItem key={s.name} value={s.name}>
+                <SkillOption s={s} />
+              </SelectItem>
+            ))}
+          </SelectGroup>
         </SelectContent>
       </Select>
     </div>

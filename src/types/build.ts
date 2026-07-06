@@ -100,6 +100,22 @@ export type ElementType =
 /** 武器屬性篩選（只含五屬性；狀態異常與無屬性不列入）。 */
 export type WeaponElementFilter = "fire" | "water" | "thunder" | "ice" | "dragon";
 
+/** 五屬性耐性鍵（防具耐性過濾與總和顯示用）。 */
+export type ElementResistanceKey =
+  | "fire"
+  | "water"
+  | "thunder"
+  | "ice"
+  | "dragon";
+
+export const ELEMENT_RES_KEYS: ElementResistanceKey[] = [
+  "fire",
+  "water",
+  "thunder",
+  "ice",
+  "dragon",
+];
+
 export type Weapon = {
   id: string;
   nameZh: string;
@@ -298,6 +314,10 @@ export type BuildSearchRequest = {
   autoRules?: PresetAutoRules;
   /** 武器屬性篩選（僅五屬性；search 模式縮小候選池，未指定＝不限）。 */
   elementFilter?: WeaponElementFilter;
+  /** 最低防禦力（5 件防具基礎防禦總和）。未指定或 ≤0＝不限。 */
+  minDefense?: number;
+  /** 各屬性耐性下限（5 件防具總和）。只檢查有指定的屬性；未指定的屬性＝不限。 */
+  minResistances?: Partial<Record<ElementResistanceKey, number>>;
   /** 裝備 rarity 上限（依 preset 階段限制取得門檻，同時套用於防具與 search 模式武器；未指定＝不限）。固定部位/武器不受限。 */
   maxRarity?: number;
   /** 屬攻武器流派：候選武器評分以屬性值優先。未指定時退回依 autoRules 推斷。 */
@@ -357,6 +377,10 @@ export type BuildResult = {
   finalSkills: SkillMap;
   /** 補完珠子後仍剩下的洞（依等級展開，例如 [3,1]）。 */
   remainingSlots: number[];
+  /** 5 件防具基礎防禦總和（顯示用；不含武器/護石）。 */
+  totalDefense: number;
+  /** 5 件防具各屬性耐性總和（顯示用，可為負）。 */
+  totalResistances: Record<ElementResistanceKey, number>;
   score: BuildScore;
   /** 未能補滿的必要技能（技能 → 還缺幾級）。理論上搜尋結果不含缺口，但保留欄位供 debug/greedy。 */
   missingRequiredSkills: SkillMap;

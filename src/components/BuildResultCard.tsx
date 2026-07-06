@@ -1,14 +1,20 @@
 "use client";
 
+import { useMemo } from "react";
 import type {
   ArmorPart,
   ArmorPiece,
   BuildResult,
+  ElementResistanceKey,
   FixedParts,
   ReservedSlots,
   SkillMap,
 } from "@/types/build";
-import { ARMOR_PARTS, ARMOR_PART_LABELS } from "@/types/build";
+import {
+  ARMOR_PARTS,
+  ARMOR_PART_LABELS,
+  ELEMENT_RES_KEYS,
+} from "@/types/build";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -24,7 +30,8 @@ import {
   formatWeaponStats,
   weaponSeriesLabel,
 } from "@/lib/weapon-utils";
-import { weaponTypes } from "@/lib/data";
+import { weaponTypes, decorationsBySkill, skillMax } from "@/lib/data";
+import { suggestAddableSkills } from "@/lib/suggest-skills";
 import {
   Lock,
   Ban,
@@ -34,6 +41,7 @@ import {
   CheckCircle2,
   Gem,
   Sparkles,
+  Plus,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -57,6 +65,14 @@ type Props = {
   onCopy: (summary: string) => void;
   onToggleFavorite: (id: string) => void;
   onToggleCompare: (id: string) => void;
+};
+
+const RES_LABELS: Record<ElementResistanceKey, string> = {
+  fire: "火",
+  water: "水",
+  thunder: "雷",
+  ice: "冰",
+  dragon: "龍",
 };
 
 function PartRow({
@@ -173,6 +189,18 @@ export function BuildResultCard({
     ? weaponTypes.find((t) => t.id === weapon.weaponType)?.nameZh
     : undefined;
   const autoEntries = Object.entries(result.autoSkills ?? {});
+  // 追加技能建議：用此配裝的剩餘洞位推算還能塞哪些珠（擇一）。
+  const addable = useMemo(
+    () =>
+      suggestAddableSkills(
+        result.remainingSlots,
+        result.finalSkills,
+        decorationsBySkill,
+        skillMax,
+        6
+      ),
+    [result.remainingSlots, result.finalSkills]
+  );
 
   return (
     <Card className="overflow-hidden">
@@ -415,6 +443,33 @@ export function BuildResultCard({
           </div>
         )}
 
+        {/* 防禦 / 屬性耐性（5 件防具總和） */}
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+          <span>
+            防禦{" "}
+            <span className="font-mono text-foreground">
+              {result.totalDefense}
+            </span>
+          </span>
+          <span className="flex items-center gap-1.5 font-mono">
+            {ELEMENT_RES_KEYS.map((k) => {
+              const v = result.totalResistances[k];
+              return (
+                <span
+                  key={k}
+                  className={cn(
+                    v < 0 && "text-destructive",
+                    v > 0 && "text-emerald-400"
+                  )}
+                >
+                  {RES_LABELS[k]}
+                  {v >= 0 ? `+${v}` : v}
+                </span>
+              );
+            })}
+          </span>
+        </div>
+
         {/* 洞位狀態 */}
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
           <span className="text-muted-foreground">
@@ -435,6 +490,27 @@ export function BuildResultCard({
             {result.meetsReservedSlots ? "符合保留洞位" : "不符保留洞位"}
           </span>
         </div>
+
+        {/* 追加技能建議（用剩餘洞，擇一） */}
+        {addable.length > 0 && (
+          <div className="space-y-1">
+            <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+              <Plus className="h-3.5 w-3.5" /> 可追加技能（擇一，用剩餘洞）
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {addable.map((a) => (
+                <Badge
+                  key={a.skillName}
+                  variant="outline"
+                  className="gap-1 px-2 py-0.5 text-[12px]"
+                >
+                  <span>{a.skillName}</span>
+                  <span className="font-mono opacity-70">+{a.addLevels}</span>
+                </Badge>
+              ))}
+            </div>
+          </div>
+        )}
       </CardContent>
     </Card>
   );

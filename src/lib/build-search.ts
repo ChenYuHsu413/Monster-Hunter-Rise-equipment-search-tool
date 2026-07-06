@@ -115,7 +115,15 @@ export function searchBuilds(
     fixedWeaponId,
     autoRules,
     elementFilter,
+    minDefense,
+    minResistances,
   } = normalizeRequest(request);
+
+  // 防禦/耐性過濾：只在有設定時才作用。耐性只檢查使用者有指定的屬性。
+  const resFilter = Object.entries(minResistances) as [
+    keyof typeof minResistances,
+    number
+  ][];
 
   // 屬性流：候選武器與最終排序皆以屬性值優先
   const preferElement =
@@ -207,6 +215,36 @@ export function searchBuilds(
               }
               const pieces: ArmorPiece[] = [head, chest, arms, waist, legs];
 
+              // 防禦/耐性：由 5 件防具加總，與珠子無關，故在昂貴的解算前先過濾。
+              let totalDefense = 0;
+              const totalResistances = {
+                fire: 0,
+                water: 0,
+                thunder: 0,
+                ice: 0,
+                dragon: 0,
+              };
+              for (const p of pieces) {
+                totalDefense += p.defense ?? 0;
+                const er = p.elementRes;
+                if (er) {
+                  totalResistances.fire += er.fire;
+                  totalResistances.water += er.water;
+                  totalResistances.thunder += er.thunder;
+                  totalResistances.ice += er.ice;
+                  totalResistances.dragon += er.dragon;
+                }
+              }
+              if (minDefense > 0 && totalDefense < minDefense) continue;
+              let resOk = true;
+              for (const [key, min] of resFilter) {
+                if (totalResistances[key] < min) {
+                  resOk = false;
+                  break;
+                }
+              }
+              if (!resOk) continue;
+
               const armorSkills = calculateSkills(pieces, undefined);
               const currentSkills = mergeSkills(armorSkills, baseSkills);
               const slots = collectSlots(pieces, effectiveCharm, weaponSlots);
@@ -252,6 +290,8 @@ export function searchBuilds(
                 decorations: solve.assignments,
                 finalSkills,
                 remainingSlots: solve.remainingSlots,
+                totalDefense,
+                totalResistances,
                 score,
                 missingRequiredSkills: {},
                 meetsReservedSlots: true,
@@ -316,6 +356,8 @@ function normalizeRequest(req: BuildSearchRequest) {
     reservedSlots: req.reservedSlots ?? { 4: 0, 3: 0, 2: 0, 1: 0 },
     searchMode: req.searchMode ?? "fast",
     resultLimit: req.resultLimit ?? 100,
+    minDefense: req.minDefense ?? 0,
+    minResistances: req.minResistances ?? {},
     // 相容舊請求：未指定模式時，有固定武器視為 fixed，否則 search
     weaponSearchMode:
       req.weaponSearchMode ?? (fixedWeaponId ? "fixed" : "search"),
@@ -351,6 +393,11 @@ export function formatBuildResult(build: BuildResult): string {
     .join("、");
   lines.push(
     `護石：${charmSkills || "無"}（${formatSlots(build.charm.slots)}）`
+  );
+
+  const r = build.totalResistances;
+  lines.push(
+    `防禦：${build.totalDefense}　耐性：火${r.fire} 水${r.water} 雷${r.thunder} 冰${r.ice} 龍${r.dragon}`
   );
 
   const topSkills = Object.entries(build.finalSkills)

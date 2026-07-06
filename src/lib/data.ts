@@ -23,6 +23,20 @@ export const skills = skillsRaw as unknown as Skill[];
 export const weaponTypes = weaponTypesRaw as unknown as WeaponType[];
 export const buildPresets = presetsRaw as unknown as BuildPreset[];
 
+/**
+ * 套裝（系列）技能：靠穿戴同系列防具件數累加觸發，而非單件給滿。
+ * 風紋一致/雷紋一致/風雷合一 無對應珠子（只能靠防具）；霞皮/鋼殼/炎鱗之恩惠
+ * 在 Sunbreak 另有對應珠（霞皮珠等），故仍可由珠子補足。此集合僅供 UI 分類辨識。
+ */
+export const SET_SKILLS = new Set<string>([
+  "風紋一致",
+  "雷紋一致",
+  "風雷合一",
+  "霞皮之恩惠",
+  "鋼殼之恩惠",
+  "炎鱗之恩惠",
+]);
+
 /** 技能名稱 → 最大等級。未列出的技能預設上限 7。 */
 export const skillMax: Record<string, number> = Object.fromEntries(
   skills.map((s) => [s.name, s.maxLevel])

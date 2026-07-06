@@ -7,6 +7,7 @@ import type {
   BuildResult,
   BuildSearchRequest,
   Charm,
+  ElementResistanceKey,
   ElementType,
   FixedParts,
   ExcludedItems,
@@ -41,7 +42,13 @@ import { BuildPresetSelector } from "@/components/BuildPresetSelector";
 import { SearchModeSelector } from "@/components/SearchModeSelector";
 import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
 import { CharmInput, type CharmRow } from "@/components/CharmInput";
+import {
+  CharmLibrary,
+  charmLabel,
+  type SavedCharm,
+} from "@/components/CharmLibrary";
 import { ReservedSlotsInput } from "@/components/ReservedSlotsInput";
+import { DefenseResInput } from "@/components/DefenseResInput";
 import { FixedPartsPanel } from "@/components/FixedPartsPanel";
 import { ArmorLockPanel } from "@/components/ArmorLockPanel";
 import { AugmentedArmorEditor } from "@/components/AugmentedArmorEditor";
@@ -116,12 +123,23 @@ export default function Home() {
   // ---- 護石 / 保留洞位 ----
   const [charmRows, setCharmRows] = useLocalStorage<CharmRow[]>("mhsb.charmRows", EMPTY_CHARM_ROWS);
   const [charmSlotsStr, setCharmSlotsStr] = useLocalStorage("mhsb.charmSlots", "2-1-0");
+  // 護石庫：儲存多顆護石，一鍵套用（純本地）。
+  const [charmLibrary, setCharmLibrary] = useLocalStorage<SavedCharm[]>(
+    "mhsb.charmLibrary",
+    []
+  );
   const [reservedSlots, setReservedSlots] = useLocalStorage<ReservedSlots>("mhsb.reserved", {
     4: 0,
     3: 0,
     2: 0,
     1: 0,
   });
+
+  // ---- 防禦 / 屬性耐性下限（硬性條件；空＝不限）----
+  const [minDefense, setMinDefense] = useLocalStorage("mhsb.minDefense", 0);
+  const [minResistances, setMinResistances] = useLocalStorage<
+    Partial<Record<ElementResistanceKey, number>>
+  >("mhsb.minResistances", {});
 
   // ---- 固定 / 排除 / 鍊成 ----
   const [fixedParts, setFixedParts] = useLocalStorage<FixedParts>("mhsb.fixedParts", {});
@@ -291,6 +309,33 @@ export default function Home() {
     return { skills: skillMap, slots: parseSlotString(charmSlotsStr) };
   };
 
+  // ---- 護石庫 ----
+  const charmHasContent =
+    charmRows.some((r) => r.name) || parseSlotString(charmSlotsStr).length > 0;
+  const saveCharm = () => {
+    const entry: SavedCharm = {
+      id: `charm_${Date.now()}`,
+      rows: charmRows.map((r) => ({ ...r })),
+      slots: charmSlotsStr,
+    };
+    setCharmLibrary((prev) => {
+      // 相同內容（標籤一致）不重複儲存
+      if (prev.some((c) => charmLabel(c) === charmLabel(entry))) {
+        showToast("護石庫已有相同護石");
+        return prev;
+      }
+      showToast("已儲存到護石庫");
+      return [entry, ...prev];
+    });
+  };
+  const loadCharm = (c: SavedCharm) => {
+    setCharmRows(c.rows.map((r) => ({ ...r })));
+    setCharmSlotsStr(c.slots);
+    showToast("已套用護石");
+  };
+  const deleteCharm = (id: string) =>
+    setCharmLibrary((prev) => prev.filter((c) => c.id !== id));
+
   const runSearch = async () => {
     setLoading(true);
     setHasSearched(true);
@@ -308,6 +353,9 @@ export default function Home() {
         weaponSearchMode === "search" ? currentPreset?.autoRules : undefined,
       elementFilter:
         activeElementFilter !== "all" ? activeElementFilter : undefined,
+      minDefense: minDefense > 0 ? minDefense : undefined,
+      minResistances:
+        Object.keys(minResistances).length > 0 ? minResistances : undefined,
       maxRarity: currentPreset?.tier
         ? TIER_MAX_RARITY[currentPreset.tier]
         : undefined,
@@ -596,6 +644,13 @@ export default function Home() {
                       onChangeSlots={setCharmSlotsStr}
                       allSkills={allSkills}
                     />
+                    <CharmLibrary
+                      library={charmLibrary}
+                      canSave={charmHasContent}
+                      onSave={saveCharm}
+                      onLoad={loadCharm}
+                      onDelete={deleteCharm}
+                    />
                   </div>
                   <div className="space-y-1.5">
                     <Label className="text-xs text-muted-foreground">
@@ -604,6 +659,17 @@ export default function Home() {
                     <ReservedSlotsInput
                       value={reservedSlots}
                       onChange={setReservedSlots}
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label className="text-xs text-muted-foreground">
+                      防禦 / 屬性耐性
+                    </Label>
+                    <DefenseResInput
+                      minDefense={minDefense}
+                      minResistances={minResistances}
+                      onChangeMinDefense={setMinDefense}
+                      onChangeMinResistances={setMinResistances}
                     />
                   </div>
                 </TabsContent>
