@@ -91,10 +91,13 @@ export function scoreBuild(input: ScoreInput): BuildScore {
   }
   preferredSkillScore *= profile.comfort;
 
-  // ---- 特殊技能：與偏好清單解耦，只要最終技能出現即計（不論是否列偏好）----
+  // ---- 特殊技能：與偏好清單解耦，只要最終技能出現即計。----
+  // 傷害相關特殊技能（狂化/伏魔等）已在 EFR 內計傷；此處僅當 utility 加分，
+  // 故同樣依 comfort 權重縮放，避免污染「傷害最大」profile 的排名。
   for (const [skill, lvl] of Object.entries(finalSkills)) {
     if (lvl > 0 && skillIsSpecial[skill]) specialSkillScore += lvl * 15;
   }
+  specialSkillScore *= profile.comfort;
 
   // ---- 彈性：剩餘洞位（非線性）----
   const slotScore = slotFlexValue(remainingSlots) * 3 * profile.slot;

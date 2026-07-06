@@ -268,9 +268,10 @@ export type ScoreProfile = {
  */
 export const TIER_SCORE_PROFILE: Record<PresetTier, ScoreProfile> = {
   初心: { damage: 0.15, comfort: 1.0, slot: 1.0 },
-  拓荒: { damage: 0.35, comfort: 1.0, slot: 0.8 },
-  進階: { damage: 0.7, comfort: 0.6, slot: 0.5 },
-  畢業: { damage: 1.0, comfort: 0.35, slot: 0.3 },
+  拓荒: { damage: 0.4, comfort: 0.9, slot: 0.7 },
+  進階: { damage: 0.8, comfort: 0.45, slot: 0.35 },
+  // 畢業預設為傷害向：舒適/彈性壓低，讓最高 EFR 配裝真正排榜首。
+  畢業: { damage: 1.0, comfort: 0.15, slot: 0.15 },
 };
 
 /** 無 tier 時的保底權重。 */
