@@ -2,7 +2,6 @@
 
 import type { Skill } from "@/types/build";
 import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -13,6 +12,15 @@ import {
 
 /** 護石輸入的表單值：最多 3 個技能列 + 洞數字串。 */
 export type CharmRow = { name: string; level: number };
+
+/** 護石洞數所有組合（3 洞，各 0~3 級，非遞增），例如 "2-1-0"。 */
+const CHARM_SLOT_OPTIONS: string[] = (() => {
+  const opts: string[] = [];
+  for (let a = 0; a <= 3; a++)
+    for (let b = 0; b <= a; b++)
+      for (let c = 0; c <= b; c++) opts.push(`${a}-${b}-${c}`);
+  return opts;
+})();
 
 type Props = {
   rows: CharmRow[]; // 固定長度 3（空列 name = ""）
@@ -91,15 +99,21 @@ export function CharmInput({
         <span className="w-10 shrink-0 text-[11px] text-muted-foreground">
           洞數
         </span>
-        <Input
-          value={slotsStr}
-          onChange={(e) => onChangeSlots(e.target.value)}
-          placeholder="例如 2-1-0"
-          className="h-8 font-mono"
-        />
+        <Select value={slotsStr} onValueChange={onChangeSlots}>
+          <SelectTrigger className="h-8 flex-1 font-mono">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {CHARM_SLOT_OPTIONS.map((o) => (
+              <SelectItem key={o} value={o} className="font-mono">
+                {o === "0-0-0" ? "無洞（0-0-0）" : o}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
       <Label className="block text-[11px] text-muted-foreground">
-        沒有護石可留空技能、洞數填 0-0-0。
+        沒有護石可留空技能、洞數選 0-0-0。
       </Label>
     </div>
   );
