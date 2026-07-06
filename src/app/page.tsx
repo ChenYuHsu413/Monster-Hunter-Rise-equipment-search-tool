@@ -126,7 +126,7 @@ export default function Home() {
 
   // ---- 護石 / 保留洞位 ----
   const [charmRows, setCharmRows] = useLocalStorage<CharmRow[]>("mhsb.charmRows", EMPTY_CHARM_ROWS);
-  const [charmSlotsStr, setCharmSlotsStr] = useLocalStorage("mhsb.charmSlots", "2-1-0");
+  const [charmSlotsStr, setCharmSlotsStr] = useLocalStorage("mhsb.charmSlots", "0-0-0");
   // 護石庫：儲存多顆護石，一鍵套用（純本地）。
   const [charmLibrary, setCharmLibrary] = useLocalStorage<SavedCharm[]>(
     "mhsb.charmLibrary",
