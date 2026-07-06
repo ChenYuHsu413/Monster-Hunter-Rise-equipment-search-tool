@@ -215,11 +215,13 @@ export function BuildResultCard({
               <span className="text-[11px] text-muted-foreground">總分</span>
             </div>
             <div className="flex flex-wrap gap-x-2 text-[11px] text-muted-foreground">
-              <span title="必要技能分">必 {s.requiredSkillScore}</span>
-              <span title="偏好技能分">偏 {s.preferredSkillScore}</span>
-              <span title="剩餘洞位分">洞 {s.slotScore}</span>
+              <span title="EFR 傷害分（武器面板＋傷害技能）" className="text-orange-400">
+                傷 {s.damageScore}
+              </span>
+              <span title="偏好（舒適）技能分">偏 {s.preferredSkillScore}</span>
+              <span title="剩餘洞位（彈性）分">洞 {s.slotScore}</span>
               {s.elementScore > 0 && (
-                <span title="武器屬性值分（屬攻優先）" className="text-sky-400">
+                <span title="屬性有效傷害（EFR 屬性部分）" className="text-sky-400">
                   屬 {s.elementScore}
                 </span>
               )}

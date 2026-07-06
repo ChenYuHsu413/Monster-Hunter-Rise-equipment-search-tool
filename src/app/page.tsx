@@ -23,7 +23,11 @@ import {
   getPreset,
   presetsForWeapon,
 } from "@/lib/data";
-import { TIER_MAX_RARITY } from "@/types/build";
+import {
+  TIER_MAX_RARITY,
+  TIER_SCORE_PROFILE,
+  DEFAULT_SCORE_PROFILE,
+} from "@/types/build";
 import { loadGameData, type GameData } from "@/lib/game-data";
 import { searchBuilds, createSearchDeps, type SearchMeta } from "@/lib/build-search";
 import { parseSlotString } from "@/lib/slot-utils";
@@ -360,6 +364,11 @@ export default function Home() {
         ? TIER_MAX_RARITY[currentPreset.tier]
         : undefined,
       preferElement: currentPreset?.preferElement,
+      scoreProfile:
+        currentPreset?.scoreProfile ??
+        (currentPreset?.tier
+          ? TIER_SCORE_PROFILE[currentPreset.tier]
+          : DEFAULT_SCORE_PROFILE),
       charm: buildCharm(),
       fixedParts,
       excludedItems,

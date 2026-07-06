@@ -129,11 +129,13 @@ export type Weapon = {
     type: ElementType;
     value: number;
   };
+  /**
+   * 斬味色帶，各段長度依序為 [紅,橙,黃,綠,藍,白,紫]。
+   * base = 匠 0；max = 最大匠。弩/弓等無斬味武器省略此欄。
+   */
   sharpness?: {
-    purple?: number;
-    white?: number;
-    blue?: number;
-    green?: number;
+    base: number[];
+    max: number[];
   };
   /** 百龍洞等級（顯示用，不參與裝飾珠洞位計算）。 */
   rampageSlot?: number;
@@ -246,12 +248,46 @@ export const TIER_MAX_RARITY: Record<PresetTier, number> = {
   畢業: 10,
 };
 
+/**
+ * 排名權重分配：傷害(EFR) / 舒適(偏好技能) / 彈性(剩餘洞) 三者的相對比重。
+ * 由 preset 指定；未指定時依 tier 取 TIER_SCORE_PROFILE 預設。
+ */
+export type ScoreProfile = {
+  /** EFR 傷害指標權重。 */
+  damage: number;
+  /** 偏好（舒適/泛用）技能分權重。 */
+  comfort: number;
+  /** 剩餘洞位（彈性）分權重。 */
+  slot: number;
+};
+
+/**
+ * 各階段的預設權重：越後期越重傷害，越前期越重舒適與彈性。
+ * 畢業預設為傷害向；「畢業-舒適」類 preset 可自帶 scoreProfile 覆寫。
+ * 這些是校準起點，之後以 R1 等參考配裝微調。
+ */
+export const TIER_SCORE_PROFILE: Record<PresetTier, ScoreProfile> = {
+  初心: { damage: 0.15, comfort: 1.0, slot: 1.0 },
+  拓荒: { damage: 0.35, comfort: 1.0, slot: 0.8 },
+  進階: { damage: 0.7, comfort: 0.6, slot: 0.5 },
+  畢業: { damage: 1.0, comfort: 0.35, slot: 0.3 },
+};
+
+/** 無 tier 時的保底權重。 */
+export const DEFAULT_SCORE_PROFILE: ScoreProfile = {
+  damage: 0.5,
+  comfort: 0.8,
+  slot: 0.6,
+};
+
 export type BuildPreset = {
   id: string;
   nameZh: string;
   weaponType: string;
   /** 進度階段分類（用於流派清單分組）。未標示者視為未分類。 */
   tier?: PresetTier;
+  /** 排名權重覆寫（例如「畢業-舒適」）。未指定則依 tier 取預設。 */
+  scoreProfile?: ScoreProfile;
   /** 屬攻武器流派：search 模式挑候選武器時以屬性值優先（與 autoRules 解耦，物理向初心屬性武器亦可開）。 */
   preferElement?: boolean;
   description: string;
@@ -320,8 +356,10 @@ export type BuildSearchRequest = {
   minResistances?: Partial<Record<ElementResistanceKey, number>>;
   /** 裝備 rarity 上限（依 preset 階段限制取得門檻，同時套用於防具與 search 模式武器；未指定＝不限）。固定部位/武器不受限。 */
   maxRarity?: number;
-  /** 屬攻武器流派：候選武器評分以屬性值優先。未指定時退回依 autoRules 推斷。 */
+  /** 屬攻武器流派：候選武器評分以屬性值優先；EFR 排名納入屬性傷害。未指定時退回依 autoRules 推斷。 */
   preferElement?: boolean;
+  /** 排名權重（傷害/舒適/彈性）。未指定時由呼叫端依 preset tier 帶入或用 DEFAULT_SCORE_PROFILE。 */
+  scoreProfile?: ScoreProfile;
   /** @deprecated 舊版手動武器洞數。僅在武器候選池為空時作為後援。 */
   weaponSlots?: number[];
   charm: Charm;
@@ -353,12 +391,14 @@ export type DecorationAssignment = {
 
 export type BuildScore = {
   total: number;
+  /** EFR 傷害分（已乘 profile.damage 權重）。取代舊的武器物理隱形問題。 */
+  damageScore: number;
   requiredSkillScore: number;
   preferredSkillScore: number;
   slotScore: number;
   penaltyScore: number;
   specialSkillScore: number;
-  /** 屬性流：武器屬性值加分（屬攻優先，延伸到最終排序）。非屬性流為 0。 */
+  /** 屬性有效傷害（EFR 屬性部分，顯示用）。非屬性武器為 0。 */
   elementScore: number;
 };
 

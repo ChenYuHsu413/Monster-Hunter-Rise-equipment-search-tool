@@ -1,0 +1,172 @@
+import type { SkillMap, Weapon } from "@/types/build";
+
+/**
+ * EFR（Effective Raw / 期望傷害）近似模型。
+ *
+ * 用途：在「同一武器種類內」為配裝排序提供客觀傷害指標，取代人工權重。
+ * 只算相對值，故略去招式倍率（motion value）與肉質——這些對同武器種類是常數。
+ * 攻擊力採 Kiranico 顯示值（膨脹後）；因搜尋一律同武器種類比較，顯示值即可比。
+ *
+ * 假設（依使用者決定）：
+ * - 弱點特效等「命中弱點才生效」的技能：假設命中弱點，計滿。
+ * - 條件型技能（挑戰者/力量解放/火場怪力/拔刀術…）：全效果 × 統一觸發率（預設 0.75）。
+ *
+ * 數值來源：Kiranico 破曉（Ver16/TU5）技能逐級說明。
+ */
+
+/** 斬味段索引：0紅 1橙 2黃 3綠 4藍 5白 6紫。 */
+const RAW_SHARP_MULT = [0.5, 0.75, 1.0, 1.05, 1.2, 1.32, 1.39];
+const ELEM_SHARP_MULT = [0.25, 0.5, 0.75, 1.0, 1.0625, 1.15, 1.25];
+const SHARP_COLOR_ZH = ["紅", "橙", "黃", "綠", "藍", "白", "紫"];
+
+// ---- 無條件傷害技能（依等級索引，index 0 = 未持有）----
+const ATTACK_FLAT = [0, 3, 6, 9, 7, 8, 9, 10];
+const ATTACK_PCT = [0, 0, 0, 0, 0.05, 0.06, 0.08, 0.1];
+const CRIT_EYE_AFF = [0, 5, 10, 15, 20, 25, 30, 40];
+const WEX_AFF = [0, 15, 30, 50];
+const CRIT_BOOST_DMG = [1.25, 1.3, 1.35, 1.4]; // 會心傷害倍率
+const CRIT_ELEM_MULT = [1, 1.05, 1.1, 1.15];
+const ELEM_ATK_FLAT = [0, 2, 3, 4, 4, 4];
+const ELEM_ATK_PCT = [0, 0, 0, 0.05, 0.1, 0.2];
+
+// ---- 條件型傷害技能（× 觸發率）----
+const AGITATOR_ATK = [0, 4, 8, 12, 16, 20];
+const AGITATOR_AFF = [0, 3, 5, 7, 10, 15];
+const MAX_MIGHT_AFF = [0, 10, 20, 30, 40, 50];
+const RESENT_ATK_MULT = [0, 0, 0.05, 0.05, 0.1, 0.3]; // 火場怪力攻擊%（Lv1 無攻擊加成）
+const DRAW_TECH_AFF = [0, 10, 20, 40]; // 拔刀術【技】
+const DRAW_POWER_FLAT = [0, 3, 5, 7]; // 拔刀術【力】
+
+const at = (arr: number[], lv: number) =>
+  arr[Math.max(0, Math.min(lv, arr.length - 1))];
+
+export type EfrInput = {
+  weapon: Weapon;
+  /** 最終技能（補珠後、已截斷至上限）。 */
+  skills: SkillMap;
+  /** 條件技能觸發率，預設 0.75。 */
+  conditionalUptime?: number;
+  /** 是否假設命中弱點（弱點特效），預設 true。 */
+  assumeWeakpoint?: boolean;
+};
+
+export type EfrResult = {
+  /** 物理有效傷害指標。 */
+  raw: number;
+  /** 屬性有效傷害指標（無屬性為 0）。 */
+  element: number;
+  /** 綜合指標（物理 + 屬性；屬性以較小係數併入，供屬性流排序）。 */
+  total: number;
+  /** 有效攻擊力（套技能後、乘斬味/會心前）。 */
+  effAttack: number;
+  /** 有效會心率（%，可為負）。 */
+  effAffinity: number;
+  /** 期望會心倍率。 */
+  critMult: number;
+  /** 生效斬味色（中文）與其物理乘數。 */
+  sharpColor: string;
+  sharpMult: number;
+};
+
+/** 依匠等級推算目前生效的斬味段索引（在 base↔max 間依總長插值）。 */
+function activeSharpIndex(
+  sharpness: { base: number[]; max: number[] } | undefined,
+  handicraftLv: number
+): number {
+  if (!sharpness) return 2; // 無斬味資料（弩/弓）→ 視為黃(1.0) 中性
+  const { base, max } = sharpness;
+  const sum = (a: number[]) => a.reduce((s, v) => s + v, 0);
+  const baseTotal = sum(base);
+  const maxTotal = sum(max);
+  const reach =
+    baseTotal + (Math.min(handicraftLv, 5) / 5) * (maxTotal - baseTotal);
+  let cum = 0;
+  let last = 2;
+  for (let i = 0; i < 7; i++) {
+    if (max[i] > 0) {
+      cum += max[i];
+      last = i;
+      if (reach <= cum + 1e-6) return i;
+    }
+  }
+  return last;
+}
+
+/** 期望會心倍率：正會心以會心傷害計，負會心以 0.75×（−25%）計。 */
+function expectedCritMult(affinity: number, critDmg: number): number {
+  const a = Math.min(affinity, 100) / 100;
+  if (a >= 0) return 1 + a * (critDmg - 1);
+  return 1 + a * 0.25; // a 為負 → 降低
+}
+
+/** 計算一套配裝（武器 + 最終技能）的 EFR。 */
+export function computeEfr(input: EfrInput): EfrResult {
+  const { weapon, skills } = input;
+  const uptime = input.conditionalUptime ?? 0.75;
+  const weakpoint = input.assumeWeakpoint ?? true;
+  const lv = (name: string) => skills[name] ?? 0;
+
+  // ---- 攻擊力 ----
+  const base = weapon.attack;
+  let pct = at(ATTACK_PCT, lv("攻擊"));
+  let flat = at(ATTACK_FLAT, lv("攻擊"));
+  // 條件型攻擊
+  flat += at(AGITATOR_ATK, lv("挑戰者")) * uptime;
+  flat += at(DRAW_POWER_FLAT, lv("拔刀術【力】")) * uptime;
+  pct += at(RESENT_ATK_MULT, lv("火場怪力")) * uptime;
+  const effAttack = base * (1 + pct) + flat;
+
+  // ---- 會心率 ----
+  let aff = weapon.affinity;
+  aff += at(CRIT_EYE_AFF, lv("看破"));
+  if (weakpoint) aff += at(WEX_AFF, lv("弱點特效"));
+  aff += at(AGITATOR_AFF, lv("挑戰者")) * uptime;
+  aff += at(MAX_MIGHT_AFF, lv("力量解放")) * uptime;
+  aff += at(DRAW_TECH_AFF, lv("拔刀術【技】")) * uptime;
+
+  const critDmg = at(CRIT_BOOST_DMG, lv("超會心"));
+  const critMult = expectedCritMult(aff, critDmg);
+
+  // ---- 斬味 ----
+  const sharpIdx = activeSharpIndex(weapon.sharpness, lv("匠"));
+  const sharpMult = RAW_SHARP_MULT[sharpIdx];
+
+  const raw = effAttack * sharpMult * critMult;
+
+  // ---- 屬性 ----
+  let element = 0;
+  if (weapon.element && weapon.element.value > 0) {
+    const elType = weapon.element.type;
+    const elSkill: Record<string, string> = {
+      fire: "火屬性攻擊強化",
+      water: "水屬性攻擊強化",
+      thunder: "雷屬性攻擊強化",
+      ice: "冰屬性攻擊強化",
+      dragon: "龍屬性攻擊強化",
+    };
+    const skillName = elSkill[elType];
+    const elLv = skillName ? lv(skillName) : 0;
+    const elBase =
+      weapon.element.value * (1 + at(ELEM_ATK_PCT, elLv)) + at(ELEM_ATK_FLAT, elLv);
+    const elSharp = ELEM_SHARP_MULT[sharpIdx];
+    // 會心擊【屬性】：會心時屬性傷害提升 → 期望屬性會心倍率
+    const critElem = at(CRIT_ELEM_MULT, lv("會心擊【屬性】"));
+    const aPos = Math.max(0, Math.min(aff, 100)) / 100;
+    const elCritMult = 1 + aPos * (critElem - 1);
+    element = elBase * elSharp * elCritMult;
+  }
+
+  // 屬性以較小係數併入綜合指標（物理仍為主；屬性流由 preset 端調整權重）
+  const total = raw + element * 4.0;
+
+  return {
+    raw,
+    element,
+    total,
+    effAttack,
+    effAffinity: aff,
+    critMult,
+    sharpColor: SHARP_COLOR_ZH[sharpIdx],
+    sharpMult,
+  };
+}

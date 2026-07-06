@@ -7,7 +7,7 @@ import type {
   SkillMap,
   Weapon,
 } from "@/types/build";
-import { ARMOR_PARTS, ARMOR_PART_LABELS } from "@/types/build";
+import { ARMOR_PARTS, ARMOR_PART_LABELS, DEFAULT_SCORE_PROFILE } from "@/types/build";
 import {
   decorationsBySkill as defaultDecosBySkill,
   skillMax as defaultSkillMax,
@@ -88,10 +88,8 @@ export type SearchOutput = {
 const INTERNAL_BUFFER = 500;
 /** 防止資料變大後組合爆炸的硬上限。 */
 const MAX_COMBOS = 300000;
-/** 五屬性集合（屬性流武器屬性加分用）。 */
-const FIVE_ELEMENTS = new Set(["fire", "water", "thunder", "ice", "dragon"]);
-/** 屬性流：武器屬性值計入配裝總分的權重（讓屬攻優先延伸到最終排序）。 */
-const ELEMENT_SCORE_WEIGHT = 3;
+/** 條件技能觸發率（傳入 EFR；校準時可調）。 */
+const CONDITIONAL_UPTIME = 0.75;
 
 export function searchBuilds(
   request: BuildSearchRequest,
@@ -117,6 +115,7 @@ export function searchBuilds(
     elementFilter,
     minDefense,
     minResistances,
+    scoreProfile,
   } = normalizeRequest(request);
 
   // 防禦/耐性過濾：只在有設定時才作用。耐性只檢查使用者有指定的屬性。
@@ -170,12 +169,6 @@ export function searchBuilds(
     // 依武器屬性套用自動技能（硬條件：併入必要技能）
     const autoSkills = resolveAutoSkills(autoRules, weapon);
     const effRequired = mergeMaxSkills(requiredSkills, autoSkills);
-
-    // 屬性流：此武器的屬性值加分（併入配裝總分，讓屬攻優先延伸到最終排序）
-    const weaponElementScore =
-      preferElement && weapon?.element && FIVE_ELEMENTS.has(weapon.element.type)
-        ? weapon.element.value * ELEMENT_SCORE_WEIGHT
-        : 0;
 
     const pools = prunePools(
       basePools,
@@ -279,7 +272,10 @@ export function searchBuilds(
                 fixedParts,
                 skillMax: deps.skillMax,
                 skillIsSpecial: deps.skillIsSpecial,
-                elementScore: weaponElementScore,
+                weapon,
+                scoreProfile,
+                preferElement,
+                conditionalUptime: CONDITIONAL_UPTIME,
               });
 
               const result: BuildResult = {
@@ -364,6 +360,7 @@ function normalizeRequest(req: BuildSearchRequest) {
     fixedWeaponId,
     autoRules: req.autoRules,
     elementFilter: req.elementFilter,
+    scoreProfile: req.scoreProfile ?? DEFAULT_SCORE_PROFILE,
   };
 }
 
