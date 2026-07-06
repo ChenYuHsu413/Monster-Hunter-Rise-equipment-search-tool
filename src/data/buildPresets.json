@@ -40,12 +40,12 @@
     "nameZh": "畢業狂化奮鬥太刀",
     "weaponType": "long-sword",
     "tier": "畢業",
-    "description": "TU5 終盤 meta：狂化補滿會心＋奮鬥拉攻擊倍率，剛心穩定斬味，業鎧修羅堆極限輸出。高風險高回報。",
+    "description": "TU5 終盤 meta：狂化補滿會心＋奮鬥拉攻擊倍率，剛心穩定斬味，業鎧修羅堆極限輸出。高風險高回報。（畢業-傷害，參考 Game8 破曉 meta）",
     "requiredSkills": { "狂化": 1, "奮鬥": 2, "超會心": 3, "弱點特效": 3 },
     "preferredSkills": { "攻擊": 5, "剛心": 2, "無傷": 3, "達人藝": 3, "逆襲": 3, "業鎧【修羅】": 1 },
     "avoidSkills": { "伏魔響命": 1 },
     "skillWeights": { "業鎧【修羅】": 2.0, "奮鬥": 1.8, "狂化": 1.5, "逆襲": 1.3, "達人藝": 1.3, "剛心": 1.2, "攻擊": 1.1, "無傷": 1.0 },
-    "tags": ["畢業", "狂化", "奮鬥"]
+    "tags": ["畢業", "傷害", "狂化", "Game8"]
   },
   {
     "id": "ls-advanced-element",
@@ -67,13 +67,26 @@
     "weaponType": "long-sword",
     "preferElement": true,
     "tier": "畢業",
-    "description": "TU5 屬性太刀畢業：會心擊【屬性】＋屬性攻擊強化滿載，天衣無縫維持斬味與續戰，對高屬性弱點的怪其屬性輸出可勝過物理狂化流。",
+    "description": "TU5 屬性太刀畢業：會心擊【屬性】＋屬性攻擊強化滿載，天衣無縫維持斬味與續戰，對高屬性弱點的怪其屬性輸出可勝過物理狂化流。（參考 Game8 破曉 meta）",
     "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3, "超會心": 3 },
     "preferredSkills": { "攻擊": 5, "看破": 4, "達人藝": 3, "弱點特效【屬性】": 2, "天衣無縫": 3, "收刀術": 3 },
     "avoidSkills": { "伏魔響命": 1 },
     "skillWeights": { "會心擊【屬性】": 1.5, "弱點特效【屬性】": 1.3, "天衣無縫": 1.3, "達人藝": 1.2, "攻擊": 1.1, "看破": 1.0, "收刀術": 0.9 },
     "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "屬性", "會心擊屬性"]
+    "tags": ["畢業", "屬性", "會心擊屬性", "Game8"]
+  },
+  {
+    "id": "ls-endgame-comfort",
+    "nameZh": "畢業舒適太刀",
+    "weaponType": "long-sword",
+    "tier": "畢業",
+    "scoreProfile": { "damage": 0.55, "comfort": 1.0, "slot": 0.8 },
+    "description": "達人藝會心舒適流：不碰狂化／伏魔等紅槽風險技能，靠看破＋弱點＋超會心＋達人藝維持穩定會心與斬味，精神抖擻／剛心提升容錯。傷害略讓於狂化流，但好操作、續戰穩。",
+    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
+    "preferredSkills": { "攻擊": 5, "看破": 5, "達人藝": 3, "匠": 3, "收刀術": 3, "精神抖擻": 3, "剛心": 2, "迴避距離UP": 2 },
+    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
+    "skillWeights": { "達人藝": 1.3, "看破": 1.2, "攻擊": 1.1, "精神抖擻": 1.1, "剛心": 1.0, "匠": 1.0, "收刀術": 0.9, "迴避距離UP": 0.8 },
+    "tags": ["畢業", "舒適", "會心", "泛用"]
   },
   {
     "id": "ls-initiate-element",
@@ -248,13 +261,28 @@
     "weaponType": "dual-blades",
     "preferElement": true,
     "tier": "畢業",
-    "description": "TU5 屬性雙刀畢業上限組：龍氣轉換把龍病轉成屬性強化，天衣無縫維持無耐力鬼人亂舞，屬性上限最高。",
+    "description": "TU5 屬性雙刀畢業上限組：龍氣轉換把龍病轉成屬性強化，天衣無縫維持無耐力鬼人亂舞，屬性上限最高。（畢業-傷害，參考 Game8 破曉 meta）",
     "requiredSkills": { "龍氣轉換": 1, "天衣無縫": 3, "會心擊【屬性】": 3, "弱點特效": 3 },
     "preferredSkills": { "超會心": 3, "力量解放": 3, "精神抖擻": 3, "迅疾吐納": 1, "轉禍為福": 2, "弱點特效【屬性】": 2 },
     "avoidSkills": { "伏魔響命": 1 },
     "skillWeights": { "龍氣轉換": 1.8, "天衣無縫": 1.5, "會心擊【屬性】": 1.4, "力量解放": 1.3, "弱點特效【屬性】": 1.3, "迅疾吐納": 1.2, "轉禍為福": 1.1, "超會心": 1.1, "精神抖擻": 0.9 },
     "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "龍氣轉換", "屬性"]
+    "tags": ["畢業", "傷害", "屬性", "Game8"]
+  },
+  {
+    "id": "db-endgame-comfort",
+    "nameZh": "畢業舒適雙刀",
+    "weaponType": "dual-blades",
+    "preferElement": true,
+    "tier": "畢業",
+    "scoreProfile": { "damage": 0.55, "comfort": 1.0, "slot": 0.8 },
+    "description": "屬性雙刀舒適流：保留會心擊【屬性】的屬性暴擊主軸，但不吃龍氣轉換／伏魔等高風險技能，改用精神抖擻、泡沫之舞、體術提升容錯與鬼人步機動。依武器屬性自動加屬性強化。",
+    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
+    "preferredSkills": { "超會心": 3, "看破": 4, "達人藝": 3, "精神抖擻": 3, "泡沫之舞": 3, "剛心": 2, "體術": 3, "弱點特效【屬性】": 2 },
+    "avoidSkills": { "伏魔響命": 1, "龍氣轉換": 1 },
+    "skillWeights": { "會心擊【屬性】": 1.4, "弱點特效【屬性】": 1.2, "達人藝": 1.2, "看破": 1.1, "精神抖擻": 1.1, "泡沫之舞": 1.0, "超會心": 1.0, "剛心": 1.0, "體術": 0.8 },
+    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
+    "tags": ["畢業", "舒適", "屬性", "泛用"]
   },
   {
     "id": "db-initiate-element",
