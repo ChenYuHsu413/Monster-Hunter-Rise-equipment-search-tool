@@ -102,6 +102,23 @@ function monsterOverrideFor(nameZh) {
 }
 
 /**
+ * 逐件人工覆寫（最後套用，蓋過所有推導）。社群驗證過的完整條目。
+ * 用於單件推導攔不住的複合案例——目前主要是「強化樹門檻傳播」缺口：
+ * 本階素材門檻低、但前一階武器的門檻更高（強化鏈繞不過去）。
+ */
+const MANUAL_ENTRY_OVERRIDES = {
+  // 素材為金/銀火龍（MR10），但唯一取得路徑是強化雌雄雙炎劍，
+  // 而雙炎劍需 A4★ 傀異素材（MR50）。樹：雌雄雙劍改→雙炎劍→金銀龍對劍（無分岔）。
+  金銀龍對劍: {
+    mr: 50,
+    note: "需先強化雌雄雙炎劍（A4★傀異素材）",
+    mon: "金火龍",
+    c: "confirmed",
+    src: "manual-verified",
+  },
+};
+
+/**
  * rarity → 里程碑近似映射（unverified 後備）。
  * 沿用 rankByRarity 的三段劃分再細分：R1-3 村/低位、R4-7 上位、R8-10 MR。
  */
@@ -381,6 +398,17 @@ async function main() {
   if (unknownMats.size) {
     console.warn(`  ⚠ 未知傀異素材（以 A5+ 保守處理）：${[...unknownMats].join("、")}`);
   }
+
+  // 逐件人工覆寫（最後套用）
+  let manualApplied = 0;
+  for (const item of [...armors, ...weapons]) {
+    const o = MANUAL_ENTRY_OVERRIDES[item.nameZh];
+    if (o) {
+      entries[item.id] = { ...o };
+      manualApplied++;
+    }
+  }
+  if (manualApplied) console.log(`→ 逐件人工覆寫：${manualApplied} 件`);
 
   const stat = { confirmed: 0, inferred: 0, unverified: 0 };
   for (const e of Object.values(entries)) stat[e.c]++;

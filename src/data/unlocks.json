@@ -13675,9 +13675,11 @@
    "src": "anomaly-material"
   },
   "weapon_1830653396": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "需先強化雌雄雙炎劍（A4★傀異素材）",
+   "mon": "金火龍",
+   "c": "confirmed",
+   "src": "manual-verified"
   },
   "weapon_810317534": {
    "m": 4,
