@@ -8755,94 +8755,94 @@
    "src": "quest-star"
   },
   "armor_510825380": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_476222372": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_307401636": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_272798628": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_372413348": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_405615482": {
-   "m": 6,
+   "mr": 30,
    "mon": "百龍之源雷神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_505230202": {
-   "m": 6,
+   "mr": 30,
    "mon": "百龍之源雷神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_470627194": {
-   "m": 6,
+   "mr": 30,
    "mon": "百龍之源雷神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_335360890": {
-   "m": 6,
+   "mr": 30,
    "mon": "百龍之源雷神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_300757882": {
-   "m": 6,
+   "mr": 30,
    "mon": "百龍之源雷神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_612222885": {
-   "m": 6,
+   "mr": 10,
    "mon": "秘紅赫耀的天彗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_980273061": {
-   "m": 6,
+   "mr": 10,
    "mon": "秘紅赫耀的天彗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_945670053": {
-   "m": 6,
+   "mr": 10,
    "mon": "秘紅赫耀的天彗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1045284773": {
-   "m": 6,
+   "mr": 10,
    "mon": "秘紅赫耀的天彗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1010681765": {
-   "m": 6,
+   "mr": 10,
    "mon": "秘紅赫耀的天彗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1548317998": {
    "mr": 50,
@@ -10832,10 +10832,10 @@
    "src": "rarity-approx"
   },
   "weapon_1329834674": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1190313000": {
    "h": 7,
@@ -10850,10 +10850,10 @@
    "src": "quest-star"
   },
   "weapon_1258179184": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_421459356": {
    "h": 8,
@@ -12598,10 +12598,10 @@
    "src": "quest-star"
   },
   "weapon_1265785303": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1363594547": {
    "h": 7,
@@ -12616,10 +12616,10 @@
    "src": "quest-star"
   },
   "weapon_1965881749": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_207963211": {
    "h": 8,
@@ -14101,10 +14101,10 @@
    "src": "rarity-approx"
   },
   "weapon_1596001020": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_522982570": {
    "h": 8,
@@ -14149,10 +14149,10 @@
    "src": "quest-star"
   },
   "weapon_1150175856": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_360719805": {
    "h": 8,
@@ -15966,10 +15966,10 @@
    "src": "rarity-approx"
   },
   "weapon_1894648012": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1350306999": {
    "h": 7,
@@ -15984,10 +15984,10 @@
    "src": "quest-star"
   },
   "weapon_2085308480": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_208399340": {
    "h": 8,
@@ -17700,10 +17700,10 @@
    "src": "quest-star"
   },
   "weapon_1231182295": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1164346255": {
    "h": 7,
@@ -17718,10 +17718,10 @@
    "src": "quest-star"
   },
   "weapon_1245415924": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_53392488": {
    "h": 8,
@@ -19282,10 +19282,10 @@
    "src": "rarity-approx"
   },
   "weapon_1489218226": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_646995358": {
    "h": 7,
@@ -19300,10 +19300,10 @@
    "src": "quest-star"
   },
   "weapon_1143532086": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_488379562": {
    "h": 8,
@@ -20948,10 +20948,10 @@
    "src": "quest-star"
   },
   "weapon_1302837777": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1489157160": {
    "h": 7,
@@ -20966,10 +20966,10 @@
    "src": "quest-star"
   },
   "weapon_1225587093": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_4539467": {
    "h": 8,
@@ -22634,10 +22634,10 @@
    "src": "quest-star"
   },
   "weapon_1510636189": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_654687704": {
    "h": 7,
@@ -22652,10 +22652,10 @@
    "src": "quest-star"
   },
   "weapon_1199028753": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_96986121": {
    "h": 8,
@@ -24285,10 +24285,10 @@
    "src": "quest-star"
   },
   "weapon_1190374066": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1420913905": {
    "h": 7,
@@ -24303,10 +24303,10 @@
    "src": "quest-star"
   },
   "weapon_1113123382": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_39578604": {
    "h": 8,
@@ -25840,10 +25840,10 @@
    "src": "quest-star"
   },
   "weapon_688388997": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_681581674": {
    "h": 7,
@@ -25858,10 +25858,10 @@
    "src": "quest-star"
   },
   "weapon_1420991323": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1691551463": {
    "h": 8,
@@ -27474,10 +27474,10 @@
    "src": "rarity-approx"
   },
   "weapon_1364618046": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_626625983": {
    "h": 7,
@@ -27492,10 +27492,10 @@
    "src": "quest-star"
   },
   "weapon_1392577276": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1782158674": {
    "h": 8,
@@ -29230,10 +29230,10 @@
    "src": "quest-star"
   },
   "weapon_1478465963": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_995638480": {
    "h": 7,
@@ -29248,10 +29248,10 @@
    "src": "quest-star"
   },
   "weapon_1539979625": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_333179884": {
    "h": 8,
@@ -30799,10 +30799,10 @@
    "src": "quest-star"
   },
   "weapon_694930296": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_939720028": {
    "h": 7,
@@ -30817,10 +30817,10 @@
    "src": "quest-star"
   },
   "weapon_723938110": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_2024998631": {
    "h": 8,
@@ -32359,10 +32359,10 @@
    "src": "rarity-approx"
   },
   "weapon_759520199": {
-   "m": 6,
+   "mr": 20,
    "mon": "風神龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1700206170": {
    "h": 8,
@@ -32407,10 +32407,10 @@
    "src": "quest-star"
   },
   "weapon_715299675": {
-   "m": 5,
+   "mr": 30,
    "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_2103822179": {
    "h": 8,
