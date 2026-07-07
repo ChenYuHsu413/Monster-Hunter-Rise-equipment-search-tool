@@ -82,6 +82,9 @@ const NAME_MONSTER_OVERRIDES = [
   // 僅「鳴神○○真」是百龍之源（Allmother）裝：基底鳴神/雷鳴神武器屬一般雷神龍。
   [/^鳴神.*真$/, "百龍之源雷神龍"],
   [/赫耀/, "秘紅赫耀的天彗龍"], // 基底 R7 赫耀（集8★）與 R10 赫耀・真（M6）；・曆已被上面攔截
+  [/原初/, "原初爵銀龍"], // 原初頭盔等（Bonus Update，MR10）；一般爵銀龍裝不含「原初」
+  [/怒天/, "激昂金獅子"], // 怒天系列；一般金獅子 MR 裝為齊天・真
+  [/矜持/, "紅蓮爆鱗龍"], // 矜持（Pride）系列；一般爆鱗龍 MR 裝為爆鱗龍X
 ];
 
 function monsterOverrideFor(nameZh) {
@@ -107,6 +110,71 @@ const RARITY_FALLBACK = {
   9: { m: 3 },
   10: { m: 5 },
 };
+
+/**
+ * 傀異素材 → 解放門檻（Game8 傀異任務指南確認的遊戲常數）。
+ * A1-A4 為明確 MR 門檻；A5+ 由傀異研究等級把關（無對應 MR 軸），
+ * 記為 MR50 下限並以 note 標註研究等級需求（誠實標註，不假裝精確）。
+ */
+const AFFLICTED_TIERS = [
+  [/傀異化之[骨皮]/, 10, null], // A1
+  [/傀異化(血液|龍骨)/, 20, null], // A2
+  [/傀異化(甲殼|鱗片)/, 30, null], // A3
+  [/傀異化之[牙爪]/, 50, null], // A4
+  [/傀異化凶[骨角鱗]/, 50, "另需傀異研究 Lv81+（A5★素材）"],
+  [/傀異化凶[殼爪]/, 50, "另需傀異研究 Lv111+（A6★素材）"],
+  [/傀異化凶(翼|龍血|牙)/, 50, "另需傀異研究 Lv181+（A7★素材）"],
+  [/傀異調查票劵/, 10, "另需傀異調查任務"], // 調查任務產物（活動/趣味武器常用）
+];
+/** 未知傀異素材的保守後備（並列印警告供補表）。 */
+const AFFLICTED_FALLBACK = [50, "另需傀異研究等級（A5★+ 素材）"];
+
+/** 一段素材清單的傀異門檻：[mr 門檻, note]；無傀異素材回傳 [0, null]。 */
+function afflictedGate(materialNames, warnSet) {
+  let mr = 0;
+  let note = null;
+  let noteRank = -1; // note 取最高研究等級素材者（依 AFFLICTED_TIERS 順序）
+  for (const name of materialNames) {
+    if (!name.includes("傀異")) continue;
+    const idx = AFFLICTED_TIERS.findIndex(([re]) => re.test(name));
+    const [gate, tierNote] =
+      idx >= 0 ? [AFFLICTED_TIERS[idx][1], AFFLICTED_TIERS[idx][2]] : AFFLICTED_FALLBACK;
+    if (idx < 0) warnSet?.add(name);
+    if (gate > mr) mr = gate;
+    const rank = idx >= 0 ? idx : 99;
+    if (tierNote && rank > noteRank) {
+      note = tierNote;
+      noteRank = rank;
+    }
+  }
+  return [mr, note];
+}
+
+/** 併發跑 items，同時最多 limit 個（同 import-kiranico）。 */
+async function mapConcurrent(items, limit, fn, onProgress) {
+  const results = new Array(items.length);
+  let idx = 0;
+  let done = 0;
+  async function worker() {
+    while (idx < items.length) {
+      const cur = idx++;
+      results[cur] = await fn(items[cur], cur);
+      done++;
+      if (onProgress && done % 250 === 0) onProgress(done, items.length);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return results;
+}
+
+/** 詳細頁某區段（startLabel 起、endLabel 止）內的素材名清單。 */
+function sectionMaterials(html, startLabel, endLabel) {
+  const s = html.indexOf(startLabel);
+  if (s < 0) return [];
+  const end = endLabel ? html.indexOf(endLabel, s) : -1;
+  const seg = html.slice(s, end < 0 ? s + 6000 : end);
+  return [...seg.matchAll(/data\/items\/\d+">([^<]+)</g)].map((m) => m[1].trim());
+}
 
 async function fetchText(url, tries = 3) {
   for (let i = 0; i < tries; i++) {
@@ -247,12 +315,68 @@ async function main() {
   }
 
   const entries = {};
-  const stat = { confirmed: 0, inferred: 0, unverified: 0 };
   for (const item of [...armors, ...weapons]) {
-    const e = unlockEntry(item, tracks);
-    entries[item.id] = e;
-    stat[e.c === "confirmed" ? "confirmed" : e.c === "inferred" ? "inferred" : "unverified"]++;
+    entries[item.id] = unlockEntry(item, tracks);
   }
+
+  // ---- 傀異素材門檻（詳細頁掃描）----
+  // R9+ 的 MR 裝備（confirmed 除外：TU 常數已是權威門檻）逐件抓詳細頁，
+  // 解析生產/強化素材。武器「生產」「強化」為兩條取得路徑，任一路徑
+  // 不需傀異素材即可取得 → 取各路徑門檻的最小值；門檻 0 表示不受傀異限制。
+  const candidates = [...armors, ...weapons].filter((x) => {
+    const e = entries[x.id];
+    return x.rankLabel === "MR" && (x.rarity ?? 0) >= 9 && e.c !== "confirmed";
+  });
+  console.log(`→ 傀異素材門檻掃描（R9+ MR 非 confirmed，共 ${candidates.length} 件詳細頁）`);
+  const unknownMats = new Set();
+  let gated = 0;
+  let fetchFailed = 0;
+  await mapConcurrent(
+    candidates,
+    10,
+    async (x) => {
+      const kind = x.id.startsWith("armor_") ? "armors" : "weapons";
+      const numId = x.id.replace(/^(armor|weapon)_/, "");
+      let html;
+      try {
+        html = await fetchText(`${BASE}/${kind}/${numId}`, 2);
+      } catch {
+        fetchFailed++;
+        return;
+      }
+      const forge = sectionMaterials(html, "生產素材", "強化素材");
+      const upgrade = kind === "weapons" ? sectionMaterials(html, "強化素材") : [];
+      const paths = [forge, upgrade].filter((p) => p.length > 0);
+      if (paths.length === 0) return;
+      let best = Infinity;
+      let bestNote = null;
+      for (const p of paths) {
+        const [mr, note] = afflictedGate(p, unknownMats);
+        if (mr < best) {
+          best = mr;
+          bestNote = note;
+        }
+      }
+      if (best === 0 || best === Infinity) return; // 存在不需傀異素材的路徑
+      const e = entries[x.id];
+      entries[x.id] = {
+        mr: best,
+        ...(bestNote ? { note: bestNote } : {}),
+        ...(e.mon ? { mon: e.mon } : {}),
+        c: "inferred",
+        src: "anomaly-material",
+      };
+      gated++;
+    },
+    (done, total) => console.log(`  ...${done}/${total}`)
+  );
+  console.log(`  完成：${gated} 件套用傀異門檻，${fetchFailed} 件抓取失敗`);
+  if (unknownMats.size) {
+    console.warn(`  ⚠ 未知傀異素材（以 A5+ 保守處理）：${[...unknownMats].join("、")}`);
+  }
+
+  const stat = { confirmed: 0, inferred: 0, unverified: 0 };
+  for (const e of Object.values(entries)) stat[e.c]++;
 
   const total = armors.length + weapons.length;
   const pct = (n) => `${((100 * n) / total).toFixed(1)}%`;
@@ -262,7 +386,7 @@ async function main() {
   const out = {
     meta: {
       source: "Kiranico 任務清單（村/集會所初階/進階/Master）× 裝備 sourceMonster 推導；TU 門檻為 Game8 確認之遊戲常數",
-      fields: "v=村★ h=集會所★(1-3低位/4-8上位) m=Master★(MR章節) mr=MR等級門檻 mon=推導來源魔物 c=信心度 src=推導方式",
+      fields: "v=村★ h=集會所★(1-3低位/4-8上位) m=Master★(MR章節) mr=MR等級門檻 note=附加條件(傀異研究等級) mon=推導來源魔物 c=信心度 src=推導方式",
       semantics: "多軸並存時任一軸達標即可製作",
     },
     monsters: {

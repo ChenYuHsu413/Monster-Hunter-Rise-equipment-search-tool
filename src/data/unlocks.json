@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "Kiranico 任務清單（村/集會所初階/進階/Master）× 裝備 sourceMonster 推導；TU 門檻為 Game8 確認之遊戲常數",
-  "fields": "v=村★ h=集會所★(1-3低位/4-8上位) m=Master★(MR章節) mr=MR等級門檻 mon=推導來源魔物 c=信心度 src=推導方式",
+  "fields": "v=村★ h=集會所★(1-3低位/4-8上位) m=Master★(MR章節) mr=MR等級門檻 note=附加條件(傀異研究等級) mon=推導來源魔物 c=信心度 src=推導方式",
   "semantics": "多軸並存時任一軸達標即可製作"
  },
  "monsters": {
@@ -8845,34 +8845,34 @@
    "src": "quest-star"
   },
   "armor_1548317998": {
-   "m": 5,
-   "mon": "金獅子",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 50,
+   "mon": "激昂金獅子",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1379497262": {
-   "m": 5,
-   "mon": "金獅子",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 50,
+   "mon": "激昂金獅子",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1344894254": {
-   "m": 5,
-   "mon": "金獅子",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 50,
+   "mon": "激昂金獅子",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1444508974": {
-   "m": 5,
-   "mon": "金獅子",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 50,
+   "mon": "激昂金獅子",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1409905966": {
-   "m": 5,
-   "mon": "金獅子",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 50,
+   "mon": "激昂金獅子",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1144685569": {
    "mr": 100,
@@ -8975,34 +8975,34 @@
    "src": "rarity-approx"
   },
   "armor_1129487195": {
-   "m": 5,
-   "mon": "爆鱗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "紅蓮爆鱗龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1094884187": {
-   "m": 5,
-   "mon": "爆鱗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "紅蓮爆鱗龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1194498907": {
-   "m": 5,
-   "mon": "爆鱗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "紅蓮爆鱗龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1159895899": {
-   "m": 5,
-   "mon": "爆鱗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "紅蓮爆鱗龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1527946075": {
-   "m": 5,
-   "mon": "爆鱗龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "紅蓮爆鱗龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1662998567": {
    "mr": 10,
@@ -9475,34 +9475,34 @@
    "src": "quest-star"
   },
   "armor_1595344668": {
-   "m": 5,
-   "mon": "爵銀龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "原初爵銀龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1560741660": {
-   "m": 5,
-   "mon": "爵銀龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "原初爵銀龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1559693084": {
-   "m": 5,
-   "mon": "爵銀龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "原初爵銀龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1390872348": {
-   "m": 5,
-   "mon": "爵銀龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "原初爵銀龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1356269340": {
-   "m": 5,
-   "mon": "爵銀龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "原初爵銀龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_184112174": {
    "v": 1,
@@ -9581,9 +9581,9 @@
    "src": "quest-star"
   },
   "weapon_1967693636": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_343256722": {
    "m": 5,
@@ -9635,10 +9635,10 @@
    "src": "quest-star"
   },
   "weapon_1910271803": {
-   "m": 3,
+   "mr": 50,
    "mon": "雪鬼獸",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1750804397": {
    "v": 5,
@@ -9672,9 +9672,9 @@
    "src": "quest-star"
   },
   "weapon_2086698654": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2100932287": {
    "mr": 10,
@@ -9732,9 +9732,9 @@
    "src": "quest-star"
   },
   "weapon_1683066353": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_302454362": {
    "v": 6,
@@ -9768,9 +9768,9 @@
    "src": "quest-star"
   },
   "weapon_1625660756": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1979425349": {
    "v": 3,
@@ -9805,10 +9805,10 @@
    "src": "quest-star"
   },
   "weapon_1667853579": {
-   "m": 2,
+   "mr": 20,
    "mon": "奇怪龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_757534375": {
    "v": 1,
@@ -9837,9 +9837,9 @@
    "src": "quest-star"
   },
   "weapon_1831079113": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1888465464": {
    "v": 2,
@@ -9868,9 +9868,9 @@
    "src": "quest-star"
   },
   "weapon_1758899343": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1842829262": {
    "v": 5,
@@ -9904,9 +9904,9 @@
    "src": "quest-star"
   },
   "weapon_1801108578": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_313810487": {
    "mr": 10,
@@ -9946,9 +9946,9 @@
    "src": "quest-star"
   },
   "weapon_401507265": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_281539558": {
    "m": 3,
@@ -9963,9 +9963,9 @@
    "src": "quest-star"
   },
   "weapon_309498788": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_480689128": {
    "v": 1,
@@ -10016,9 +10016,9 @@
    "src": "quest-star"
   },
   "weapon_486957851": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_534762296": {
    "m": 4,
@@ -10033,9 +10033,9 @@
    "src": "quest-star"
   },
   "weapon_428503806": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_224020955": {
    "h": 2,
@@ -10069,9 +10069,9 @@
    "src": "quest-star"
   },
   "weapon_69091933": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1930658207": {
    "v": 4,
@@ -10106,9 +10106,9 @@
    "src": "quest-star"
   },
   "weapon_10637872": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1723822260": {
    "v": 4,
@@ -10143,9 +10143,9 @@
    "src": "quest-star"
   },
   "weapon_53879191": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_202346932": {
    "m": 4,
@@ -10160,9 +10160,9 @@
    "src": "quest-star"
   },
   "weapon_263860554": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_699080218": {
    "v": 3,
@@ -10197,9 +10197,9 @@
    "src": "quest-star"
   },
   "weapon_172884265": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1413410297": {
    "v": 3,
@@ -10234,9 +10234,9 @@
    "src": "quest-star"
   },
   "weapon_919736460": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_77056707": {
    "v": 1,
@@ -10287,9 +10287,9 @@
    "src": "quest-star"
   },
   "weapon_828760163": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_843010048": {
    "m": 1,
@@ -10304,9 +10304,9 @@
    "src": "quest-star"
   },
   "weapon_1038743494": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1052977127": {
    "m": 3,
@@ -10321,9 +10321,9 @@
    "src": "quest-star"
   },
   "weapon_947767205": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_61843973": {
    "h": 4,
@@ -10346,9 +10346,9 @@
    "src": "rarity-approx"
   },
   "weapon_989976344": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_635111225": {
    "m": 4,
@@ -10363,9 +10363,9 @@
    "src": "quest-star"
   },
   "weapon_664119039": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2049663185": {
    "h": 5,
@@ -10397,9 +10397,9 @@
    "src": "quest-star"
   },
   "weapon_572110418": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_754116211": {
    "m": 4,
@@ -10413,9 +10413,9 @@
    "src": "rarity-approx"
   },
   "weapon_783124017": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_371215952": {
    "mr": 10,
@@ -10452,9 +10452,9 @@
    "src": "rarity-approx"
   },
   "weapon_691115412": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_351221504": {
    "h": 6,
@@ -10481,9 +10481,9 @@
    "src": "quest-star"
   },
   "weapon_1424766378": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_284802673": {
    "mr": 10,
@@ -10522,9 +10522,9 @@
    "src": "rarity-approx"
   },
   "weapon_1466959113": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_213558453": {
    "v": 3,
@@ -10551,9 +10551,9 @@
    "src": "rarity-approx"
   },
   "weapon_1361224911": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1631797355": {
    "v": 5,
@@ -10587,9 +10587,9 @@
    "src": "quest-star"
   },
   "weapon_1572254882": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_393414375": {
    "v": 5,
@@ -10617,9 +10617,9 @@
    "src": "quest-star"
   },
   "weapon_1600214112": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1323549443": {
    "v": 3,
@@ -10654,9 +10654,9 @@
    "src": "quest-star"
   },
   "weapon_1542806471": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1154386916": {
    "m": 3,
@@ -10671,9 +10671,9 @@
    "src": "quest-star"
   },
   "weapon_1182346170": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1113584556": {
    "v": 2,
@@ -10702,9 +10702,9 @@
    "src": "quest-star"
   },
   "weapon_1076611960": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1398197555": {
    "v": 5,
@@ -10757,9 +10757,9 @@
    "src": "quest-star"
   },
   "weapon_2119489839": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2133723340": {
    "m": 5,
@@ -10982,9 +10982,10 @@
    "src": "quest-star"
   },
   "weapon_1701623905": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_580075200": {
    "v": 2,
@@ -11011,9 +11012,10 @@
    "src": "quest-star"
   },
   "weapon_1730107431": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1013151860": {
    "h": 4,
@@ -11039,9 +11041,10 @@
    "src": "quest-star"
   },
   "weapon_1657405413": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_955729963": {
    "v": 3,
@@ -11067,9 +11070,10 @@
    "src": "quest-star"
   },
   "weapon_1820630971": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_997941134": {
    "h": 4,
@@ -11094,9 +11098,10 @@
    "src": "quest-star"
   },
   "weapon_1849114489": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1862823710": {
    "m": 5,
@@ -11105,14 +11110,14 @@
    "src": "quest-star"
   },
   "weapon_1790643932": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1805418237": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_923154672": {
    "h": 4,
@@ -11236,9 +11241,9 @@
    "src": "quest-star"
   },
   "weapon_1262001988": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_408134303": {
    "m": 5,
@@ -11290,9 +11295,9 @@
    "src": "quest-star"
   },
   "weapon_2009886523": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_384417393": {
    "mr": 10,
@@ -11332,9 +11337,9 @@
    "src": "quest-star"
   },
   "weapon_1917877918": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1932111551": {
    "mr": 10,
@@ -11374,9 +11379,9 @@
    "src": "quest-star"
   },
   "weapon_2143141394": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2023157299": {
    "m": 2,
@@ -11391,9 +11396,9 @@
    "src": "quest-star"
   },
   "weapon_2051116529": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_448370002": {
    "v": 5,
@@ -11421,9 +11426,9 @@
    "src": "quest-star"
   },
   "weapon_1711025591": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1881821694": {
    "v": 3,
@@ -11452,9 +11457,9 @@
    "src": "quest-star"
   },
   "weapon_1739509109": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2092835165": {
    "v": 3,
@@ -11487,9 +11492,9 @@
    "src": "rarity-approx"
   },
   "weapon_1647500584": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1662258377": {
    "m": 3,
@@ -11504,9 +11509,9 @@
    "src": "quest-star"
   },
   "weapon_1858514063": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_88958257": {
    "v": 6,
@@ -11540,9 +11545,9 @@
    "src": "quest-star"
   },
   "weapon_1766505570": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_326101897": {
    "v": 1,
@@ -11575,9 +11580,9 @@
    "src": "quest-star"
   },
   "weapon_366904257": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_381154278": {
    "m": 4,
@@ -11592,9 +11597,9 @@
    "src": "quest-star"
   },
   "weapon_274895780": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_282846250": {
    "v": 1,
@@ -11645,9 +11650,9 @@
    "src": "quest-star"
   },
   "weapon_528118526": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1973830171": {
    "h": 5,
@@ -11674,9 +11679,9 @@
    "src": "rarity-approx"
   },
   "weapon_82293362": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_70412929": {
    "h": 4,
@@ -11705,9 +11710,9 @@
    "src": "rarity-approx"
   },
   "weapon_124486097": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1659756585": {
    "v": 4,
@@ -11739,9 +11744,9 @@
    "src": "rarity-approx"
   },
   "weapon_67080628": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_506824191": {
    "v": 5,
@@ -11769,9 +11774,9 @@
    "src": "quest-star"
   },
   "weapon_229257546": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1785048722": {
    "mr": 10,
@@ -11812,9 +11817,9 @@
    "src": "quest-star"
   },
   "weapon_138281257": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_545472192": {
    "v": 3,
@@ -11849,9 +11854,9 @@
    "src": "quest-star"
   },
   "weapon_885133452": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2077622423": {
    "v": 3,
@@ -11886,10 +11891,10 @@
    "src": "quest-star"
   },
   "weapon_928374883": {
-   "m": 2,
+   "mr": 20,
    "mon": "奇怪龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1225945764": {
    "v": 1,
@@ -11917,9 +11922,9 @@
    "src": "quest-star"
   },
   "weapon_822116385": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_13007460": {
    "v": 1,
@@ -11968,9 +11973,9 @@
    "src": "quest-star"
   },
   "weapon_1033148292": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1047381925": {
    "m": 1,
@@ -11984,9 +11989,9 @@
    "src": "quest-star"
   },
   "weapon_941123451": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1836185484": {
    "h": 5,
@@ -12018,9 +12023,9 @@
    "src": "quest-star"
   },
   "weapon_615282398": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1799298739": {
    "mr": 10,
@@ -12040,9 +12045,9 @@
    "src": "rarity-approx"
   },
   "weapon_657475261": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1770815229": {
    "mr": 10,
@@ -12079,9 +12084,9 @@
    "src": "quest-star"
   },
   "weapon_600069648": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_748521009": {
    "m": 4,
@@ -12096,9 +12101,9 @@
    "src": "quest-star"
   },
   "weapon_776480247": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2135044400": {
    "v": 3,
@@ -12133,9 +12138,9 @@
    "src": "quest-star"
   },
   "weapon_719074730": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_30504084": {
    "v": 6,
@@ -12168,9 +12173,9 @@
    "src": "quest-star"
   },
   "weapon_1432356105": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1588333751": {
    "v": 2,
@@ -12223,9 +12228,9 @@
    "src": "quest-star"
   },
   "weapon_1374950636": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_707718649": {
    "v": 6,
@@ -12259,10 +12264,10 @@
    "src": "quest-star"
   },
   "weapon_1551885379": {
-   "m": 3,
+   "mr": 50,
    "mon": "雪鬼獸",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_637480813": {
    "v": 1,
@@ -12291,9 +12296,9 @@
    "src": "rarity-approx"
   },
   "weapon_1579844609": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1717178442": {
    "v": 2,
@@ -12322,9 +12327,9 @@
    "src": "rarity-approx"
   },
   "weapon_1508203463": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1496325226": {
    "v": 2,
@@ -12360,9 +12365,9 @@
    "src": "quest-star"
   },
   "weapon_1536686981": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1317954241": {
    "h": 4,
@@ -12388,9 +12393,9 @@
    "src": "rarity-approx"
   },
   "weapon_1161993051": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1288946435": {
    "v": 2,
@@ -12412,9 +12417,9 @@
    "src": "rarity-approx"
   },
   "weapon_1090337561": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1198949263": {
    "v": 2,
@@ -12433,9 +12438,9 @@
    "src": "rarity-approx"
   },
   "weapon_1118821087": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1155709992": {
    "v": 1,
@@ -12464,9 +12469,9 @@
    "src": "rarity-approx"
   },
   "weapon_1280998045": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_798694938": {
    "v": 5,
@@ -12519,9 +12524,9 @@
    "src": "quest-star"
   },
   "weapon_2026416258": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2040666275": {
    "m": 5,
@@ -12722,9 +12727,10 @@
    "src": "quest-star"
   },
   "weapon_1742770116": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1055344683": {
    "v": 1,
@@ -12749,9 +12755,10 @@
    "src": "rarity-approx"
   },
   "weapon_1637035930": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_445106883": {
    "h": 6,
@@ -12769,9 +12776,10 @@
    "src": "rarity-approx"
   },
   "weapon_1666043736": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1814511481": {
    "m": 2,
@@ -12780,14 +12788,14 @@
    "src": "quest-star"
   },
   "weapon_1876025151": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1756040924": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_830081111": {
    "h": 4,
@@ -12911,9 +12919,9 @@
    "src": "quest-star"
   },
   "weapon_1087938372": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1102172005": {
    "m": 5,
@@ -12965,9 +12973,9 @@
    "src": "quest-star"
   },
   "weapon_1293881081": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1341161118": {
    "m": 4,
@@ -12982,9 +12990,9 @@
    "src": "quest-star"
   },
   "weapon_1221177023": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1675916932": {
    "v": 5,
@@ -13012,9 +13020,9 @@
    "src": "quest-star"
   },
   "weapon_1250184829": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1989988598": {
    "v": 4,
@@ -13047,9 +13055,9 @@
    "src": "quest-star"
   },
   "weapon_1963482576": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1171849863": {
    "v": 2,
@@ -13078,9 +13086,9 @@
    "src": "quest-star"
   },
   "weapon_1891302806": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1334112700": {
    "v": 3,
@@ -13115,10 +13123,10 @@
    "src": "quest-star"
   },
   "weapon_1934544245": {
-   "m": 2,
+   "mr": 20,
    "mon": "奇怪龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1820058666": {
    "v": 1,
@@ -13167,9 +13175,9 @@
    "src": "rarity-approx"
   },
   "weapon_2144525608": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1852327547": {
    "v": 6,
@@ -13203,9 +13211,9 @@
    "src": "quest-star"
   },
   "weapon_2053549199": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1691129666": {
    "v": 5,
@@ -13239,9 +13247,9 @@
    "src": "quest-star"
   },
   "weapon_1726659682": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1740893187": {
    "mr": 10,
@@ -13280,9 +13288,9 @@
    "src": "quest-star"
   },
   "weapon_1649931238": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1080889978": {
    "v": 3,
@@ -13311,9 +13319,9 @@
    "src": "quest-star"
   },
   "weapon_1812108196": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_432257528": {
    "v": 3,
@@ -13343,9 +13351,9 @@
    "src": "quest-star"
   },
   "weapon_1754686235": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1768936248": {
    "m": 4,
@@ -13360,9 +13368,9 @@
    "src": "quest-star"
   },
   "weapon_1796895486": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2016970735": {
    "v": 5,
@@ -13396,9 +13404,9 @@
    "src": "quest-star"
   },
   "weapon_397296221": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1757949418": {
    "mr": 10,
@@ -13436,9 +13444,9 @@
    "src": "rarity-approx"
   },
   "weapon_305287728": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1804860268": {
    "v": 1,
@@ -13470,9 +13478,9 @@
    "src": "quest-star"
   },
   "weapon_424292682": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1589715789": {
    "h": 4,
@@ -13499,9 +13507,9 @@
    "src": "quest-star"
   },
   "weapon_453300488": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2108993544": {
    "v": 5,
@@ -13534,9 +13542,9 @@
    "src": "rarity-approx"
   },
   "weapon_126394607": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_72845663": {
    "v": 1,
@@ -13584,9 +13592,9 @@
    "src": "rarity-approx"
   },
   "weapon_35434562": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_217440355": {
    "m": 4,
@@ -13601,9 +13609,9 @@
    "src": "quest-star"
   },
   "weapon_245399585": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_259651526": {
    "m": 1,
@@ -13618,10 +13626,10 @@
    "src": "quest-star"
   },
   "weapon_154441604": {
-   "m": 1,
+   "mr": 20,
    "mon": "大名蟹",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_168675237": {
    "m": 3,
@@ -13635,9 +13643,9 @@
    "src": "rarity-approx"
   },
   "weapon_901277563": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1733322529": {
    "h": 6,
@@ -13662,9 +13670,9 @@
    "src": "quest-star"
   },
   "weapon_929761081": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1830653396": {
    "m": 5,
@@ -13683,9 +13691,9 @@
    "src": "rarity-approx"
   },
   "weapon_872355484": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1816419895": {
    "mr": 10,
@@ -13724,9 +13732,9 @@
    "src": "rarity-approx"
   },
   "weapon_1048766067": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1242087699": {
    "h": 5,
@@ -13757,9 +13765,9 @@
    "src": "rarity-approx"
   },
   "weapon_957806038": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1897963605": {
    "v": 4,
@@ -13793,9 +13801,9 @@
    "src": "quest-star"
   },
   "weapon_630900149": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_57632913": {
    "v": 5,
@@ -13828,9 +13836,9 @@
    "src": "rarity-approx"
   },
   "weapon_1449036772": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1290854873": {
    "v": 2,
@@ -13862,9 +13870,9 @@
    "src": "quest-star"
   },
   "weapon_539940200": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_553649417": {
    "m": 3,
@@ -13879,9 +13887,9 @@
    "src": "quest-star"
   },
   "weapon_749905103": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_590622077": {
    "v": 4,
@@ -13915,9 +13923,9 @@
    "src": "quest-star"
   },
   "weapon_793162914": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_673178691": {
    "m": 3,
@@ -13932,9 +13940,9 @@
    "src": "quest-star"
   },
   "weapon_734692353": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1498755872": {
    "v": 2,
@@ -13963,9 +13971,9 @@
    "src": "quest-star"
   },
   "weapon_1342778298": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_800603344": {
    "v": 5,
@@ -14018,9 +14026,9 @@
    "src": "quest-star"
   },
   "weapon_1239734575": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1253968076": {
    "m": 5,
@@ -14271,9 +14279,10 @@
    "src": "rarity-approx"
   },
   "weapon_1895610465": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_965246532": {
    "v": 2,
@@ -14300,9 +14309,10 @@
    "src": "quest-star"
   },
   "weapon_1924093991": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_605834811": {
    "v": 2,
@@ -14330,9 +14340,10 @@
    "src": "quest-star"
   },
   "weapon_2100506522": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_371706563": {
    "v": 6,
@@ -14357,9 +14368,10 @@
    "src": "rarity-approx"
   },
   "weapon_2056810270": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_313252518": {
    "v": 6,
@@ -14387,9 +14399,10 @@
    "src": "quest-star"
   },
   "weapon_1682640604": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_846241538": {
    "v": 3,
@@ -14415,9 +14428,10 @@
    "src": "rarity-approx"
   },
   "weapon_1711648402": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_115946329": {
    "m": 3,
@@ -14426,9 +14440,10 @@
    "src": "quest-star"
   },
   "weapon_130179966": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1625235123": {
    "m": 4,
@@ -14437,14 +14452,14 @@
    "src": "quest-star"
   },
   "weapon_1653194353": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1667427862": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_889937806": {
    "h": 4,
@@ -14566,9 +14581,9 @@
    "src": "quest-star"
   },
   "weapon_1292410692": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1919348275": {
    "m": 5,
@@ -14614,9 +14629,9 @@
    "src": "quest-star"
   },
   "weapon_1220230938": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_666402372": {
    "v": 3,
@@ -14650,9 +14665,9 @@
    "src": "quest-star"
   },
   "weapon_1263472377": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1199911712": {
    "v": 2,
@@ -14681,9 +14696,9 @@
    "src": "quest-star"
   },
   "weapon_1996074687": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_298056556": {
    "v": 1,
@@ -14716,9 +14731,9 @@
    "src": "rarity-approx"
   },
   "weapon_1905114642": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1882767635": {
    "v": 3,
@@ -14751,9 +14766,9 @@
    "src": "rarity-approx"
   },
   "weapon_2144087479": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2135990357": {
    "v": 4,
@@ -14781,9 +14796,9 @@
    "src": "quest-star"
   },
   "weapon_2038353269": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_694431101": {
    "v": 6,
@@ -14817,9 +14832,9 @@
    "src": "quest-star"
   },
   "weapon_1677909288": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1726221513": {
    "m": 4,
@@ -14834,9 +14849,9 @@
    "src": "quest-star"
   },
   "weapon_1740471534": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1789649962": {
    "v": 1,
@@ -14886,9 +14901,9 @@
    "src": "quest-star"
   },
   "weapon_1859476512": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_507786512": {
    "v": 6,
@@ -14922,9 +14937,9 @@
    "src": "quest-star"
   },
   "weapon_1767449479": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_345523835": {
    "v": 5,
@@ -14958,9 +14973,9 @@
    "src": "quest-star"
   },
   "weapon_367866746": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_382100251": {
    "mr": 10,
@@ -15000,9 +15015,9 @@
    "src": "quest-star"
   },
   "weapon_290091774": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_532851938": {
    "mr": 10,
@@ -15039,9 +15054,9 @@
    "src": "rarity-approx"
   },
   "weapon_501105245": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1226891737": {
    "v": 3,
@@ -15070,9 +15085,9 @@
    "src": "quest-star"
   },
   "weapon_529064467": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_475515587": {
    "h": 4,
@@ -15102,9 +15117,9 @@
    "src": "rarity-approx"
   },
   "weapon_438104566": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_83239319": {
    "m": 4,
@@ -15119,9 +15134,9 @@
    "src": "quest-star"
   },
   "weapon_111198549": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2078584840": {
    "v": 4,
@@ -15153,9 +15168,9 @@
    "src": "rarity-approx"
   },
   "weapon_20238600": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_470813996": {
    "mr": 10,
@@ -15175,9 +15190,9 @@
    "src": "rarity-approx"
   },
   "weapon_230203631": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_308637038": {
    "mr": 10,
@@ -15210,9 +15225,9 @@
    "src": "quest-star"
   },
   "weapon_258687149": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_322886927": {
    "mr": 10,
@@ -15269,9 +15284,9 @@
    "src": "quest-star"
   },
   "weapon_201281536": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_886079521": {
    "m": 4,
@@ -15286,9 +15301,9 @@
    "src": "quest-star"
   },
   "weapon_914565095": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_929339268": {
    "m": 1,
@@ -15303,9 +15318,9 @@
    "src": "quest-star"
   },
   "weapon_823605082": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1837131553": {
    "v": 5,
@@ -15339,9 +15354,9 @@
    "src": "quest-star"
   },
   "weapon_1033570105": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1718126575": {
    "v": 4,
@@ -15376,9 +15391,9 @@
    "src": "quest-star"
   },
   "weapon_942610076": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1318916730": {
    "v": 2,
@@ -15407,9 +15422,9 @@
    "src": "quest-star"
   },
   "weapon_1004123730": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1156653901": {
    "v": 2,
@@ -15437,9 +15452,9 @@
    "src": "quest-star"
   },
   "weapon_630478352": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_460302853": {
    "v": 1,
@@ -15492,9 +15507,9 @@
    "src": "quest-star"
   },
   "weapon_538453495": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2093797622": {
    "h": 5,
@@ -15526,9 +15541,9 @@
    "src": "quest-star"
   },
   "weapon_749483434": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1574521867": {
    "h": 4,
@@ -15559,9 +15574,9 @@
    "src": "quest-star"
   },
   "weapon_791676169": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_575426107": {
    "v": 4,
@@ -15596,9 +15611,9 @@
    "src": "quest-star"
   },
   "weapon_734270700": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1419592845": {
    "m": 3,
@@ -15612,9 +15627,9 @@
    "src": "rarity-approx"
   },
   "weapon_1448076355": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1974792636": {
    "v": 3,
@@ -15648,9 +15663,9 @@
    "src": "quest-star"
   },
   "weapon_1389622310": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1404394439": {
    "m": 3,
@@ -15665,9 +15680,9 @@
    "src": "quest-star"
   },
   "weapon_1567095685": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1483559918": {
    "v": 2,
@@ -15696,9 +15711,9 @@
    "src": "quest-star"
   },
   "weapon_1595054939": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_993292001": {
    "v": 2,
@@ -15727,9 +15742,9 @@
    "src": "quest-star"
   },
   "weapon_1523399449": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_133413368": {
    "h": 4,
@@ -15754,9 +15769,9 @@
    "src": "rarity-approx"
   },
   "weapon_1162939132": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1177189021": {
    "m": 1,
@@ -15771,9 +15786,9 @@
    "src": "quest-star"
   },
   "weapon_1105533523": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1119767152": {
    "m": 3,
@@ -15788,9 +15803,9 @@
    "src": "quest-star"
   },
   "weapon_1281944118": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_204613917": {
    "h": 5,
@@ -15822,9 +15837,9 @@
    "src": "quest-star"
   },
   "weapon_1238772106": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_785407390": {
    "v": 5,
@@ -15877,9 +15892,9 @@
    "src": "quest-star"
   },
   "weapon_1637998399": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1652231900": {
    "m": 5,
@@ -16140,9 +16155,10 @@
    "src": "rarity-approx"
   },
   "weapon_1771236886": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_859529102": {
    "v": 3,
@@ -16168,9 +16184,10 @@
    "src": "quest-star"
   },
   "weapon_338099701": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_385363434": {
    "m": 5,
@@ -16179,14 +16196,14 @@
    "src": "quest-star"
   },
   "weapon_279629224": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_294403401": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_937302026": {
    "h": 4,
@@ -16320,9 +16337,9 @@
    "src": "quest-star"
   },
   "weapon_1227398980": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1241632613": {
    "m": 5,
@@ -16374,9 +16391,9 @@
    "src": "quest-star"
   },
   "weapon_2003767033": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1883274910": {
    "mr": 10,
@@ -16415,9 +16432,9 @@
    "src": "rarity-approx"
   },
   "weapon_2094288509": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1582214261": {
    "v": 6,
@@ -16451,9 +16468,9 @@
    "src": "quest-star"
   },
   "weapon_2136497616": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2016513521": {
    "m": 4,
@@ -16468,9 +16485,9 @@
    "src": "quest-star"
   },
   "weapon_2030763414": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_793099736": {
    "v": 4,
@@ -16504,9 +16521,9 @@
    "src": "quest-star"
   },
   "weapon_1704906101": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1718631786": {
    "m": 2,
@@ -16521,9 +16538,9 @@
    "src": "quest-star"
   },
   "weapon_1612897576": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1239130693": {
    "v": 2,
@@ -16551,9 +16568,9 @@
    "src": "quest-star"
   },
   "weapon_1675459822": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_305224622": {
    "v": 2,
@@ -16586,9 +16603,9 @@
    "src": "quest-star"
   },
   "weapon_1851870285": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_382460970": {
    "v": 1,
@@ -16638,9 +16655,9 @@
    "src": "quest-star"
   },
   "weapon_360260487": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_516238093": {
    "h": 5,
@@ -16671,9 +16688,9 @@
    "src": "rarity-approx"
   },
   "weapon_1794464800": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_68605142": {
    "v": 6,
@@ -16707,9 +16724,9 @@
    "src": "quest-star"
   },
   "weapon_269300602": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1800603367": {
    "v": 5,
@@ -16743,9 +16760,9 @@
    "src": "quest-star"
   },
   "weapon_479265497": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1758410496": {
    "v": 4,
@@ -16778,9 +16795,9 @@
    "src": "rarity-approx"
   },
   "weapon_522523324": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1953477176": {
    "v": 3,
@@ -16809,9 +16826,9 @@
    "src": "quest-star"
   },
   "weapon_450343538": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_98372167": {
    "h": 4,
@@ -16839,9 +16856,9 @@
    "src": "rarity-approx"
   },
   "weapon_89883089": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1297601254": {
    "v": 2,
@@ -16870,9 +16887,9 @@
    "src": "quest-star"
   },
   "weapon_118890903": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_734629311": {
    "v": 4,
@@ -16907,9 +16924,9 @@
    "src": "quest-star"
   },
   "weapon_60436810": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_208888171": {
    "m": 3,
@@ -16924,9 +16941,9 @@
    "src": "quest-star"
   },
   "weapon_237895977": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2114674897": {
    "v": 3,
@@ -16961,10 +16978,10 @@
    "src": "quest-star"
   },
   "weapon_179441804": {
-   "m": 2,
+   "mr": 20,
    "mon": "奇怪龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_424229600": {
    "v": 1,
@@ -16998,9 +17015,9 @@
    "src": "quest-star"
   },
   "weapon_893771875": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_908021760": {
    "m": 4,
@@ -17015,9 +17032,9 @@
    "src": "quest-star"
   },
   "weapon_835319750": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_34847224": {
    "v": 1,
@@ -17083,9 +17100,9 @@
    "src": "quest-star"
   },
   "weapon_954324760": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_245860703": {
    "v": 6,
@@ -17117,9 +17134,9 @@
    "src": "quest-star"
   },
   "weapon_997566207": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_849553383": {
    "m": 3,
@@ -17134,9 +17151,9 @@
    "src": "quest-star"
   },
   "weapon_1012778917": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_609162908": {
    "m": 4,
@@ -17151,9 +17168,9 @@
    "src": "quest-star"
   },
   "weapon_670676562": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1639405518": {
    "h": 5,
@@ -17185,9 +17202,9 @@
    "src": "quest-star"
   },
   "weapon_579700273": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1815816109": {
    "v": 4,
@@ -17233,9 +17250,9 @@
    "src": "quest-star"
   },
   "weapon_741877239": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1870429949": {
    "mr": 10,
@@ -17255,9 +17272,9 @@
    "src": "rarity-approx"
   },
   "weapon_684471722": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1855655644": {
    "mr": 10,
@@ -17303,10 +17320,10 @@
    "src": "quest-star"
   },
   "weapon_726664457": {
-   "m": 3,
+   "mr": 50,
    "mon": "雪鬼獸",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_428000627": {
    "v": 5,
@@ -17334,9 +17351,9 @@
    "src": "quest-star"
   },
   "weapon_1426236623": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2057269428": {
    "v": 2,
@@ -17364,9 +17381,9 @@
    "src": "rarity-approx"
   },
   "weapon_1354581133": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1895006623": {
    "v": 2,
@@ -17399,9 +17416,9 @@
    "src": "quest-star"
   },
   "weapon_1396790368": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1545241601": {
    "m": 3,
@@ -17416,9 +17433,9 @@
    "src": "quest-star"
   },
   "weapon_1607818183": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_749842021": {
    "v": 1,
@@ -17447,9 +17464,9 @@
    "src": "quest-star"
   },
   "weapon_1502083973": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_401020506": {
    "v": 5,
@@ -17483,9 +17500,9 @@
    "src": "quest-star"
   },
   "weapon_1141623672": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1764695731": {
    "mr": 10,
@@ -17526,9 +17543,9 @@
    "src": "quest-star"
   },
   "weapon_1084218079": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1448975634": {
    "v": 5,
@@ -17581,9 +17598,9 @@
    "src": "quest-star"
   },
   "weapon_2126030978": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2140280995": {
    "m": 5,
@@ -17627,9 +17644,9 @@
    "src": "rarity-approx"
   },
   "weapon_1323190896": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_172395426": {
    "h": 7,
@@ -17835,9 +17852,10 @@
    "src": "quest-star"
   },
   "weapon_1708167108": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_616603394": {
    "v": 2,
@@ -17869,9 +17887,10 @@
    "src": "rarity-approx"
   },
   "weapon_1736650650": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_539876998": {
    "v": 2,
@@ -17898,9 +17917,10 @@
    "src": "quest-star"
   },
   "weapon_1631440728": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1645690745": {
    "m": 1,
@@ -17908,14 +17928,14 @@
    "src": "rarity-approx"
   },
   "weapon_1827172126": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1841422143": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1020741675": {
    "h": 4,
@@ -18037,9 +18057,9 @@
    "src": "quest-star"
   },
   "weapon_1187553092": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1201786725": {
    "m": 5,
@@ -18091,9 +18111,9 @@
    "src": "quest-star"
   },
   "weapon_1125060345": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1306558110": {
    "mr": 10,
@@ -18131,9 +18151,9 @@
    "src": "rarity-approx"
   },
   "weapon_1215581821": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1229831698": {
    "m": 3,
@@ -18147,9 +18167,9 @@
    "src": "quest-star"
   },
   "weapon_1962434000": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1241039123": {
    "v": 4,
@@ -18178,9 +18198,9 @@
    "src": "quest-star"
   },
   "weapon_1990917526": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1641313924": {
    "v": 5,
@@ -18207,9 +18227,9 @@
    "src": "quest-star"
   },
   "weapon_1885707604": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1555112781": {
    "v": 2,
@@ -18237,9 +18257,9 @@
    "src": "quest-star"
   },
   "weapon_1913666922": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1817724539": {
    "v": 6,
@@ -18271,9 +18291,9 @@
    "src": "rarity-approx"
   },
   "weapon_2124680393": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1997578325": {
    "v": 4,
@@ -18307,9 +18327,9 @@
    "src": "quest-star"
   },
   "weapon_2032671916": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_811638530": {
    "v": 4,
@@ -18342,9 +18362,9 @@
    "src": "rarity-approx"
   },
   "weapon_1706290179": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1721064480": {
    "m": 3,
@@ -18359,9 +18379,9 @@
    "src": "quest-star"
   },
   "weapon_1615328230": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1814477800": {
    "v": 1,
@@ -18410,9 +18430,9 @@
    "src": "rarity-approx"
   },
   "weapon_1825293125": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1840067450": {
    "m": 4,
@@ -18427,9 +18447,9 @@
    "src": "quest-star"
   },
   "weapon_1868550968": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1748042457": {
    "m": 4,
@@ -18444,9 +18464,9 @@
    "src": "quest-star"
   },
   "weapon_1810080415": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2116585455": {
    "h": 6,
@@ -18478,9 +18498,9 @@
    "src": "quest-star"
   },
   "weapon_376943218": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1661832660": {
    "mr": 10,
@@ -18520,9 +18540,9 @@
    "src": "quest-star"
   },
   "weapon_318472657": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1940172808": {
    "h": 6,
@@ -18555,9 +18575,9 @@
    "src": "quest-star"
   },
   "weapon_495948212": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1955385590": {
    "v": 4,
@@ -18592,9 +18612,9 @@
    "src": "quest-star"
   },
   "weapon_403923307": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1632824854": {
    "mr": 10,
@@ -18614,9 +18634,9 @@
    "src": "rarity-approx"
   },
   "weapon_78082254": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1618591345": {
    "mr": 10,
@@ -18657,9 +18677,9 @@
    "src": "quest-star"
   },
   "weapon_120275117": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_903647151": {
    "v": 3,
@@ -18692,9 +18712,9 @@
    "src": "rarity-approx"
   },
   "weapon_62869504": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_155762632": {
    "v": 1,
@@ -18722,9 +18742,9 @@
    "src": "quest-star"
   },
   "weapon_225048518": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1539900039": {
    "v": 3,
@@ -18759,9 +18779,9 @@
    "src": "quest-star"
   },
   "weapon_167626661": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_181876570": {
    "m": 3,
@@ -18776,9 +18796,9 @@
    "src": "quest-star"
   },
   "weapon_880924440": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1770257260": {
    "v": 1,
@@ -18821,9 +18841,9 @@
    "src": "quest-star"
   },
   "weapon_566850862": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_837752476": {
    "m": 1,
@@ -18837,9 +18857,9 @@
    "src": "quest-star"
   },
   "weapon_865711698": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1014163059": {
    "m": 4,
@@ -18854,9 +18874,9 @@
    "src": "quest-star"
   },
   "weapon_1043170865": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1760318942": {
    "h": 7,
@@ -18888,9 +18908,9 @@
    "src": "rarity-approx"
   },
   "weapon_984716692": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_603823378": {
    "h": 4,
@@ -18922,9 +18942,9 @@
    "src": "rarity-approx"
   },
   "weapon_625304907": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1698719521": {
    "v": 5,
@@ -18952,9 +18972,9 @@
    "src": "quest-star"
   },
   "weapon_595858668": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1598370592": {
    "v": 3,
@@ -18983,9 +19003,9 @@
    "src": "quest-star"
   },
   "weapon_758559906": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1122034137": {
    "v": 3,
@@ -19020,10 +19040,10 @@
    "src": "quest-star"
   },
   "weapon_700089345": {
-   "m": 2,
+   "mr": 20,
    "mon": "奇怪龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_780233969": {
    "v": 2,
@@ -19075,9 +19095,9 @@
    "src": "quest-star"
   },
   "weapon_1414433764": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1436109835": {
    "v": 2,
@@ -19103,9 +19123,9 @@
    "src": "rarity-approx"
   },
   "weapon_1475947450": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_689273940": {
    "v": 1,
@@ -19132,9 +19152,9 @@
    "src": "quest-star"
   },
   "weapon_1370213240": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1022652129": {
    "v": 5,
@@ -19187,9 +19207,9 @@
    "src": "quest-star"
   },
   "weapon_1233615085": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1247324290": {
    "m": 5,
@@ -19446,9 +19466,10 @@
    "src": "quest-star"
   },
   "weapon_1903202244": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_114006322": {
    "v": 2,
@@ -19480,9 +19501,10 @@
    "src": "rarity-approx"
   },
   "weapon_2080677819": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_247769109": {
    "v": 3,
@@ -19508,9 +19530,10 @@
    "src": "quest-star"
   },
   "weapon_2022207262": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_440895839": {
    "v": 3,
@@ -19536,9 +19559,10 @@
    "src": "rarity-approx"
   },
   "weapon_2050690780": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2065465085": {
    "m": 3,
@@ -19546,14 +19570,14 @@
    "src": "rarity-approx"
   },
   "weapon_1724849843": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1738559056": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_517622235": {
    "h": 4,
@@ -19675,9 +19699,9 @@
    "src": "quest-star"
   },
   "weapon_1327013700": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1240584037": {
    "m": 5,
@@ -19729,10 +19753,10 @@
    "src": "quest-star"
   },
   "weapon_1969164025": {
-   "m": 3,
+   "mr": 50,
    "mon": "雪鬼獸",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1871734561": {
    "v": 5,
@@ -19766,9 +19790,9 @@
    "src": "quest-star"
   },
   "weapon_1910709852": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1925467773": {
    "mr": 10,
@@ -19803,9 +19827,9 @@
    "src": "quest-star"
   },
   "weapon_2088169011": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_714276188": {
    "v": 3,
@@ -19838,9 +19862,9 @@
    "src": "rarity-approx"
   },
   "weapon_2029714838": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_581021285": {
    "v": 2,
@@ -19869,9 +19893,9 @@
    "src": "quest-star"
   },
   "weapon_2058722644": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_865648584": {
    "v": 1,
@@ -19896,9 +19920,9 @@
    "src": "rarity-approx"
   },
   "weapon_1684028778": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_347857962": {
    "v": 1,
@@ -19946,9 +19970,9 @@
    "src": "rarity-approx"
   },
   "weapon_1626606793": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_451664550": {
    "h": 4,
@@ -19976,9 +20000,9 @@
    "src": "rarity-approx"
   },
   "weapon_1817267277": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1831517282": {
    "m": 4,
@@ -19992,9 +20016,9 @@
    "src": "rarity-approx"
   },
   "weapon_1759861792": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2036375637": {
    "h": 5,
@@ -20020,9 +20044,9 @@
    "src": "quest-star"
   },
   "weapon_339907492": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1661769538": {
    "v": 5,
@@ -20056,9 +20080,9 @@
    "src": "quest-star"
   },
   "weapon_282485531": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_372702709": {
    "mr": 10,
@@ -20098,9 +20122,9 @@
    "src": "quest-star"
   },
   "weapon_324694782": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1618511855": {
    "v": 4,
@@ -20134,9 +20158,9 @@
    "src": "quest-star"
   },
   "weapon_535708253": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_758496728": {
    "v": 3,
@@ -20175,9 +20199,9 @@
    "src": "rarity-approx"
   },
   "weapon_443699760": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1261494745": {
    "v": 3,
@@ -20212,9 +20236,9 @@
    "src": "quest-star"
   },
   "weapon_84287895": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_332659564": {
    "h": 4,
@@ -20244,9 +20268,9 @@
    "src": "quest-star"
   },
   "weapon_25833802": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_40067435": {
    "m": 4,
@@ -20261,9 +20285,9 @@
    "src": "quest-star"
   },
   "weapon_203292969": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1917370643": {
    "v": 4,
@@ -20297,9 +20321,9 @@
    "src": "quest-star"
   },
   "weapon_144838796": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_510118595": {
    "v": 1,
@@ -20328,9 +20352,9 @@
    "src": "rarity-approx"
   },
   "weapon_188080227": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_244216": {
    "v": 1,
@@ -20382,9 +20406,9 @@
    "src": "quest-star"
   },
   "weapon_843958181": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_858208090": {
    "m": 1,
@@ -20399,9 +20423,9 @@
    "src": "quest-star"
   },
   "weapon_1053939480": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1068173113": {
    "m": 3,
@@ -20416,9 +20440,9 @@
    "src": "quest-star"
   },
   "weapon_962963199": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_289166814": {
    "h": 7,
@@ -20451,9 +20475,9 @@
    "src": "quest-star"
   },
   "weapon_636073554": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1710534664": {
    "v": 4,
@@ -20487,9 +20511,9 @@
    "src": "quest-star"
   },
   "weapon_545097265": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2128400630": {
    "v": 4,
@@ -20522,9 +20546,9 @@
    "src": "rarity-approx"
   },
   "weapon_587306388": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1780774532": {
    "v": 5,
@@ -20552,9 +20576,9 @@
    "src": "quest-star"
   },
   "weapon_784086442": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_344219191": {
    "mr": 10,
@@ -20574,9 +20598,9 @@
    "src": "rarity-approx"
   },
   "weapon_692061449": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1805839894": {
    "mr": 10,
@@ -20617,9 +20641,9 @@
    "src": "quest-star"
   },
   "weapon_1439962348": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1454195853": {
    "m": 3,
@@ -20634,9 +20658,9 @@
    "src": "quest-star"
   },
   "weapon_1348461635": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1100296992": {
    "v": 2,
@@ -20662,10 +20686,10 @@
    "src": "rarity-approx"
   },
   "weapon_1376420865": {
-   "m": 5,
+   "mr": 10,
    "mon": "原角龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_499131837": {
    "v": 6,
@@ -20698,9 +20722,9 @@
    "src": "rarity-approx"
   },
   "weapon_1587448804": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1276707463": {
    "v": 3,
@@ -20728,9 +20752,9 @@
    "src": "quest-star"
   },
   "weapon_1481190330": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_380126843": {
    "v": 5,
@@ -20758,9 +20782,9 @@
    "src": "quest-star"
   },
   "weapon_1543228280": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1143993260": {
    "v": 2,
@@ -20793,9 +20817,9 @@
    "src": "quest-star"
   },
   "weapon_1183832799": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1428606259": {
    "v": 5,
@@ -20848,9 +20872,9 @@
    "src": "quest-star"
   },
   "weapon_2091427970": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2105677987": {
    "m": 5,
@@ -21071,9 +21095,9 @@
    "src": "quest-star"
   },
   "weapon_1791606385": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1043107759": {
    "v": 2,
@@ -21099,9 +21123,10 @@
    "src": "rarity-approx"
   },
   "weapon_1687814117": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_984653570": {
    "v": 2,
@@ -21132,9 +21157,10 @@
    "src": "rarity-approx"
   },
   "weapon_1716821947": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_639491718": {
    "v": 2,
@@ -21160,9 +21186,10 @@
    "src": "rarity-approx"
   },
   "weapon_1658351390": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1672601407": {
    "m": 3,
@@ -21170,14 +21197,14 @@
    "src": "rarity-approx"
   },
   "weapon_1835826941": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1850060434": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_909342836": {
    "h": 4,
@@ -21300,9 +21327,9 @@
    "src": "quest-star"
   },
   "weapon_1122541380": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1136775013": {
    "m": 5,
@@ -21354,9 +21381,9 @@
    "src": "quest-star"
   },
   "weapon_1328484089": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1207991966": {
    "mr": 10,
@@ -21396,9 +21423,9 @@
    "src": "quest-star"
   },
   "weapon_1955876477": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1732017917": {
    "mr": 10,
@@ -21418,9 +21445,9 @@
    "src": "rarity-approx"
   },
   "weapon_1998085584": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1703010111": {
    "mr": 10,
@@ -21452,9 +21479,9 @@
    "src": "quest-star"
   },
   "weapon_1925905814": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1717243612": {
    "mr": 10,
@@ -21486,9 +21513,9 @@
    "src": "rarity-approx"
   },
   "weapon_2089131348": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1781196345": {
    "v": 5,
@@ -21516,9 +21543,9 @@
    "src": "quest-star"
   },
   "weapon_2117090666": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2081034314": {
    "v": 4,
@@ -21552,9 +21579,9 @@
    "src": "quest-star"
   },
   "weapon_2059668681": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1763699593": {
    "v": 1,
@@ -21604,9 +21631,9 @@
    "src": "rarity-approx"
   },
   "weapon_1699224748": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1713458253": {
    "m": 4,
@@ -21621,9 +21648,9 @@
    "src": "quest-star"
   },
   "weapon_1641278467": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_363068268": {
    "h": 7,
@@ -21655,9 +21682,9 @@
    "src": "rarity-approx"
   },
   "weapon_1818751974": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1832461191": {
    "m": 4,
@@ -21672,9 +21699,9 @@
    "src": "quest-star"
   },
   "weapon_1760281413": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1995583792": {
    "h": 5,
@@ -21707,9 +21734,9 @@
    "src": "quest-star"
   },
   "weapon_1803539256": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_289588595": {
    "v": 6,
@@ -21742,9 +21769,9 @@
    "src": "rarity-approx"
   },
   "weapon_1806802315": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_896057288": {
    "v": 3,
@@ -21784,9 +21811,9 @@
    "src": "quest-star"
   },
   "weapon_297681501": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1029295907": {
    "v": 6,
@@ -21820,9 +21847,9 @@
    "src": "quest-star"
   },
   "weapon_474108464": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_488341969": {
    "m": 4,
@@ -21837,9 +21864,9 @@
    "src": "quest-star"
   },
   "weapon_536670710": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1339707902": {
    "v": 3,
@@ -21874,10 +21901,10 @@
    "src": "quest-star"
   },
   "weapon_444645717": {
-   "m": 2,
+   "mr": 20,
    "mon": "奇怪龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1248731485": {
    "v": 4,
@@ -21910,9 +21937,9 @@
    "src": "rarity-approx"
   },
   "weapon_85250312": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1385348136": {
    "v": 2,
@@ -21944,9 +21971,9 @@
    "src": "rarity-approx"
   },
   "weapon_26779887": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2023612457": {
    "v": 4,
@@ -21980,9 +22007,9 @@
    "src": "quest-star"
   },
   "weapon_55263405": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_272091843": {
    "v": 1,
@@ -22029,9 +22056,9 @@
    "src": "rarity-approx"
   },
   "weapon_266293248": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_145784865": {
    "m": 4,
@@ -22046,9 +22073,9 @@
    "src": "quest-star"
   },
   "weapon_174270439": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_189044612": {
    "m": 1,
@@ -22063,9 +22090,9 @@
    "src": "quest-star"
   },
   "weapon_922171226": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1619998464": {
    "h": 6,
@@ -22098,9 +22125,9 @@
    "src": "quest-star"
   },
   "weapon_830146361": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1659838131": {
    "mr": 10,
@@ -22147,9 +22174,9 @@
    "src": "quest-star"
   },
   "weapon_1007621788": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1129726491": {
    "v": 3,
@@ -22184,10 +22211,10 @@
    "src": "quest-star"
   },
   "weapon_949151347": {
-   "m": 1,
+   "mr": 20,
    "mon": "土砂龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_381613468": {
    "v": 6,
@@ -22221,9 +22248,9 @@
    "src": "quest-star"
   },
   "weapon_992409046": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1610609580": {
    "v": 2,
@@ -22257,9 +22284,9 @@
    "src": "quest-star"
   },
   "weapon_665503157": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1206452871": {
    "v": 3,
@@ -22298,9 +22325,9 @@
    "src": "quest-star"
   },
   "weapon_574543208": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_588252425": {
    "m": 3,
@@ -22315,9 +22342,9 @@
    "src": "quest-star"
   },
   "weapon_784508111": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_744684892": {
    "v": 1,
@@ -22369,9 +22396,9 @@
    "src": "quest-star"
   },
   "weapon_693548194": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_707781699": {
    "m": 4,
@@ -22386,9 +22413,9 @@
    "src": "quest-star"
   },
   "weapon_1440384001": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1443802229": {
    "h": 4,
@@ -22415,9 +22442,9 @@
    "src": "rarity-approx"
   },
   "weapon_1469406151": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_687263027": {
    "v": 2,
@@ -22446,9 +22473,9 @@
    "src": "quest-star"
   },
   "weapon_1363671941": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_729472150": {
    "v": 2,
@@ -22476,9 +22503,9 @@
    "src": "quest-star"
   },
   "weapon_1559403355": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_852885324": {
    "v": 5,
@@ -22531,9 +22558,9 @@
    "src": "quest-star"
   },
   "weapon_1226008846": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1274337583": {
    "m": 5,
@@ -22765,9 +22792,10 @@
    "src": "quest-star"
   },
   "weapon_1896659041": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_240179382": {
    "h": 5,
@@ -22792,9 +22820,10 @@
    "src": "rarity-approx"
   },
   "weapon_2106625988": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_182757397": {
    "v": 2,
@@ -22820,9 +22849,10 @@
    "src": "rarity-approx"
   },
   "weapon_2135109530": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2015666107": {
    "m": 4,
@@ -22831,14 +22861,14 @@
    "src": "quest-star"
   },
   "weapon_2077704057": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1688760094": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_107448671": {
    "h": 4,
@@ -22960,9 +22990,9 @@
    "src": "quest-star"
   },
   "weapon_1291362116": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1305595749": {
    "m": 5,
@@ -23014,9 +23044,9 @@
    "src": "quest-star"
   },
   "weapon_1228869369": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1242594974": {
    "mr": 10,
@@ -23057,9 +23087,9 @@
    "src": "quest-star"
   },
   "weapon_1975721564": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1856618097": {
    "mr": 10,
@@ -23099,9 +23129,9 @@
    "src": "quest-star"
   },
   "weapon_1884745267": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1898470864": {
    "m": 2,
@@ -23116,9 +23146,9 @@
    "src": "quest-star"
   },
   "weapon_2094726550": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1165308704": {
    "v": 2,
@@ -23144,9 +23174,9 @@
    "src": "rarity-approx"
   },
   "weapon_2123734356": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1326506457": {
    "v": 3,
@@ -23181,10 +23211,10 @@
    "src": "quest-star"
   },
   "weapon_2031709451": {
-   "m": 2,
+   "mr": 20,
    "mon": "奇怪龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1344187509": {
    "v": 2,
@@ -23213,9 +23243,9 @@
    "src": "quest-star"
   },
   "weapon_1691618505": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2058215465": {
    "v": 4,
@@ -23255,10 +23285,10 @@
    "src": "rarity-approx"
   },
   "weapon_1733827756": {
-   "m": 3,
+   "mr": 50,
    "mon": "冰牙龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_306694851": {
    "v": 1,
@@ -23305,9 +23335,9 @@
    "src": "rarity-approx"
   },
   "weapon_1675881475": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1824873504": {
    "m": 4,
@@ -23322,9 +23352,9 @@
    "src": "quest-star"
   },
   "weapon_1853354982": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1939210391": {
    "h": 5,
@@ -23357,9 +23387,9 @@
    "src": "quest-star"
   },
   "weapon_1794884421": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2115637322": {
    "h": 5,
@@ -23392,9 +23422,9 @@
    "src": "quest-star"
   },
   "weapon_361747256": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1870851606": {
    "mr": 10,
@@ -23414,9 +23444,9 @@
    "src": "rarity-approx"
   },
   "weapon_269722271": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1842368080": {
    "mr": 10,
@@ -23453,9 +23483,9 @@
    "src": "quest-star"
   },
   "weapon_480752242": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1798302601": {
    "v": 5,
@@ -23487,9 +23517,9 @@
    "src": "rarity-approx"
   },
   "weapon_522944977": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_403501558": {
    "m": 4,
@@ -23504,9 +23534,9 @@
    "src": "quest-star"
   },
   "weapon_465539508": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_397671276": {
    "h": 7,
@@ -23537,9 +23567,9 @@
    "src": "quest-star"
   },
   "weapon_105079147": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_765038015": {
    "v": 6,
@@ -23573,9 +23603,9 @@
    "src": "quest-star"
   },
   "weapon_47673550": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_61382895": {
    "m": 4,
@@ -23590,9 +23620,9 @@
    "src": "quest-star"
   },
   "weapon_209850508": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_958688993": {
    "v": 3,
@@ -23633,9 +23663,9 @@
    "src": "quest-star"
   },
   "weapon_253091939": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1284313722": {
    "v": 3,
@@ -23670,9 +23700,9 @@
    "src": "quest-star"
   },
   "weapon_194639814": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1554168872": {
    "v": 2,
@@ -23703,9 +23733,9 @@
    "src": "quest-star"
   },
   "weapon_908969893": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_425699845": {
    "v": 1,
@@ -23752,9 +23782,9 @@
    "src": "rarity-approx"
   },
   "weapon_850515736": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_864749369": {
    "m": 4,
@@ -23769,9 +23799,9 @@
    "src": "quest-star"
   },
   "weapon_1027974911": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1042224796": {
    "m": 1,
@@ -23786,9 +23816,9 @@
    "src": "quest-star"
   },
   "weapon_969520722": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1712007085": {
    "h": 6,
@@ -23821,9 +23851,9 @@
    "src": "quest-star"
   },
   "weapon_610108977": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_295708093": {
    "v": 6,
@@ -23857,9 +23887,9 @@
    "src": "quest-star"
   },
   "weapon_551654804": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_473183504": {
    "h": 7,
@@ -23891,9 +23921,9 @@
    "src": "quest-star"
   },
   "weapon_288283919": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1269100988": {
    "v": 2,
@@ -23922,9 +23952,9 @@
    "src": "quest-star"
   },
   "weapon_743363944": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1654601472": {
    "v": 5,
@@ -23958,9 +23988,9 @@
    "src": "quest-star"
   },
   "weapon_684893391": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1765641684": {
    "mr": 10,
@@ -24007,9 +24037,9 @@
    "src": "quest-star"
   },
   "weapon_728151202": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1106838151": {
    "v": 3,
@@ -24043,9 +24073,9 @@
    "src": "quest-star"
   },
   "weapon_1474987009": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1355019302": {
    "m": 3,
@@ -24060,9 +24090,9 @@
    "src": "quest-star"
   },
   "weapon_1384025060": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_354178526": {
    "v": 5,
@@ -24090,9 +24120,9 @@
    "src": "quest-star"
   },
   "weapon_1546202042": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1477440428": {
    "v": 2,
@@ -24126,9 +24156,9 @@
    "src": "quest-star"
   },
   "weapon_1608239992": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_555072984": {
    "v": 5,
@@ -24181,9 +24211,9 @@
    "src": "quest-star"
   },
   "weapon_2008512749": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1888004226": {
    "m": 5,
@@ -24437,9 +24467,10 @@
    "src": "quest-star"
   },
   "weapon_2141228996": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_930660296": {
    "h": 4,
@@ -24462,9 +24493,10 @@
    "src": "rarity-approx"
   },
   "weapon_2050269115": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_839684015": {
    "v": 3,
@@ -24493,9 +24525,10 @@
    "src": "quest-star"
   },
   "weapon_1709653881": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1049665282": {
    "v": 2,
@@ -24522,9 +24555,10 @@
    "src": "rarity-approx"
   },
   "weapon_1737613119": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1617628892": {
    "m": 5,
@@ -24533,14 +24567,14 @@
    "src": "quest-star"
   },
   "weapon_1646636690": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1828658867": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_261056657": {
    "h": 4,
@@ -24663,9 +24697,9 @@
    "src": "quest-star"
   },
   "weapon_1521000260": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1535233893": {
    "m": 5,
@@ -24717,9 +24751,9 @@
    "src": "quest-star"
   },
   "weapon_1089408761": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1968213956": {
    "mr": 10,
@@ -24739,9 +24773,9 @@
    "src": "rarity-approx"
   },
   "weapon_1131617884": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1954502695": {
    "mr": 10,
@@ -24787,9 +24821,9 @@
    "src": "quest-star"
   },
   "weapon_1309077043": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1899452366": {
    "v": 5,
@@ -24817,9 +24851,9 @@
    "src": "quest-star"
   },
   "weapon_1236372977": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_861437508": {
    "v": 3,
@@ -24852,9 +24886,9 @@
    "src": "rarity-approx"
   },
   "weapon_1950719316": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1604911751": {
    "v": 4,
@@ -24889,9 +24923,9 @@
    "src": "quest-star"
   },
   "weapon_1892248843": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_621030781": {
    "v": 6,
@@ -24925,10 +24959,10 @@
    "src": "quest-star"
   },
   "weapon_1935506670": {
-   "m": 3,
+   "mr": 50,
    "mon": "雪鬼獸",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1716249642": {
    "v": 1,
@@ -24978,9 +25012,9 @@
    "src": "quest-star"
   },
   "weapon_2145471565": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2025503842": {
    "m": 4,
@@ -24995,9 +25029,9 @@
    "src": "quest-star"
   },
   "weapon_2054511648": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1835268972": {
    "h": 6,
@@ -25028,9 +25062,9 @@
    "src": "quest-star"
   },
   "weapon_1727603591": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1741853604": {
    "m": 4,
@@ -25045,9 +25079,9 @@
    "src": "quest-star"
   },
   "weapon_1636643706": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_562576592": {
    "h": 7,
@@ -25080,9 +25114,9 @@
    "src": "quest-star"
   },
   "weapon_1813054169": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1860858622": {
    "m": 4,
@@ -25097,9 +25131,9 @@
    "src": "quest-star"
   },
   "weapon_1755648700": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2109417389": {
    "v": 6,
@@ -25133,9 +25167,9 @@
    "src": "quest-star"
   },
   "weapon_1797841427": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1243574452": {
    "v": 5,
@@ -25169,9 +25203,9 @@
    "src": "quest-star"
   },
   "weapon_398258678": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_278274455": {
    "mr": 10,
@@ -25211,9 +25245,9 @@
    "src": "quest-star"
   },
   "weapon_320483658": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_819228385": {
    "v": 2,
@@ -25242,9 +25276,9 @@
    "src": "quest-star"
   },
   "weapon_517263624": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1334534353": {
    "v": 5,
@@ -25278,9 +25312,9 @@
    "src": "quest-star"
   },
   "weapon_425238767": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1910808507": {
    "mr": 10,
@@ -25333,9 +25367,9 @@
    "src": "rarity-approx"
   },
   "weapon_99397698": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_113631331": {
    "m": 4,
@@ -25350,9 +25384,9 @@
    "src": "quest-star"
   },
   "weapon_7372833": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_21624774": {
    "m": 3,
@@ -25366,9 +25400,9 @@
    "src": "rarity-approx"
   },
   "weapon_50632580": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1394946848": {
    "h": 5,
@@ -25399,9 +25433,9 @@
    "src": "quest-star"
   },
   "weapon_260597627": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1990410347": {
    "v": 5,
@@ -25429,9 +25463,9 @@
    "src": "quest-star"
   },
   "weapon_154863417": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1982463973": {
    "mr": 10,
@@ -25470,9 +25504,9 @@
    "src": "rarity-approx"
   },
   "weapon_902764188": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_916473533": {
    "m": 3,
@@ -25486,9 +25520,9 @@
    "src": "rarity-approx"
   },
   "weapon_810739315": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_386902533": {
    "v": 2,
@@ -25520,9 +25554,9 @@
    "src": "quest-star"
   },
   "weapon_1021769174": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_328448504": {
    "h": 4,
@@ -25553,9 +25587,9 @@
    "src": "quest-star"
   },
   "weapon_1063962037": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1410159598": {
    "v": 3,
@@ -25590,10 +25624,10 @@
    "src": "quest-star"
   },
   "weapon_958752075": {
-   "m": 1,
+   "mr": 20,
    "mon": "土砂龍",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1006556520": {
    "m": 3,
@@ -25608,9 +25642,9 @@
    "src": "quest-star"
   },
   "weapon_631862574": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2018457344": {
    "h": 7,
@@ -25642,9 +25676,9 @@
    "src": "rarity-approx"
   },
   "weapon_2058297011": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1351689037": {
    "v": 4,
@@ -25677,9 +25711,9 @@
    "src": "rarity-approx"
   },
   "weapon_602924099": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_980442526": {
    "v": 5,
@@ -25732,9 +25766,9 @@
    "src": "quest-star"
   },
   "weapon_1476979254": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1524783575": {
    "m": 5,
@@ -25956,9 +25990,10 @@
    "src": "quest-star"
   },
   "weapon_1193331016": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_220774344": {
    "v": 2,
@@ -25985,9 +26020,10 @@
    "src": "rarity-approx"
   },
   "weapon_1121151246": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_163352495": {
    "v": 2,
@@ -26015,9 +26051,10 @@
    "src": "rarity-approx"
   },
   "weapon_1284376780": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_876650242": {
    "v": 2,
@@ -26042,9 +26079,10 @@
    "src": "rarity-approx"
   },
   "weapon_1312336002": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1326586019": {
    "m": 2,
@@ -26053,14 +26091,14 @@
    "src": "quest-star"
   },
   "weapon_1254930529": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1269164038": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_88041617": {
    "h": 4,
@@ -26184,9 +26222,9 @@
    "src": "quest-star"
   },
   "weapon_1152950084": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1167183717": {
    "m": 5,
@@ -26238,9 +26276,9 @@
    "src": "quest-star"
   },
   "weapon_1124011769": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2121821982": {
    "mr": 10,
@@ -26280,9 +26318,9 @@
    "src": "quest-star"
   },
   "weapon_1300438620": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1315196541": {
    "mr": 10,
@@ -26322,9 +26360,9 @@
    "src": "rarity-approx"
   },
   "weapon_1256742352": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1270975985": {
    "m": 3,
@@ -26338,9 +26376,9 @@
    "src": "rarity-approx"
   },
   "weapon_1971072439": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1663153688": {
    "v": 6,
@@ -26374,9 +26412,9 @@
    "src": "quest-star"
   },
   "weapon_1879063914": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_883294028": {
    "v": 3,
@@ -26410,9 +26448,9 @@
    "src": "quest-star"
   },
   "weapon_2090077385": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1827662729": {
    "v": 1,
@@ -26459,9 +26497,9 @@
    "src": "rarity-approx"
   },
   "weapon_2132286636": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2045856845": {
    "m": 4,
@@ -26476,9 +26514,9 @@
    "src": "quest-star"
   },
   "weapon_2074340355": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1686461472": {
    "m": 4,
@@ -26493,9 +26531,9 @@
    "src": "quest-star"
   },
   "weapon_1714942950": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1678366406": {
    "h": 6,
@@ -26522,9 +26560,9 @@
    "src": "quest-star"
   },
   "weapon_1642238884": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2093862744": {
    "mr": 10,
@@ -26561,9 +26599,9 @@
    "src": "quest-star"
   },
   "weapon_1819697947": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1220686128": {
    "v": 4,
@@ -26597,9 +26635,9 @@
    "src": "quest-star"
   },
   "weapon_1761243902": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1775477407": {
    "m": 4,
@@ -26613,9 +26651,9 @@
    "src": "rarity-approx"
   },
   "weapon_1804485213": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1945411515": {
    "mr": 10,
@@ -26656,9 +26694,9 @@
    "src": "quest-star"
   },
   "weapon_356049427": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1519547044": {
    "v": 3,
@@ -26687,9 +26725,9 @@
    "src": "quest-star"
   },
   "weapon_283869649": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2010779722": {
    "v": 4,
@@ -26724,9 +26762,9 @@
    "src": "quest-star"
   },
   "weapon_327127476": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1578001089": {
    "v": 2,
@@ -26754,9 +26792,9 @@
    "src": "quest-star"
   },
   "weapon_489304394": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1869871980": {
    "v": 1,
@@ -26804,9 +26842,9 @@
    "src": "rarity-approx"
   },
   "weapon_431882537": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_446132430": {
    "m": 4,
@@ -26821,9 +26859,9 @@
    "src": "quest-star"
   },
   "weapon_71438476": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_85672109": {
    "m": 1,
@@ -26838,9 +26876,9 @@
    "src": "quest-star"
   },
   "weapon_14016611": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_378264230": {
    "h": 4,
@@ -26871,9 +26909,9 @@
    "src": "quest-star"
   },
   "weapon_56227782": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1874167295": {
    "h": 7,
@@ -26905,9 +26943,9 @@
    "src": "rarity-approx"
   },
   "weapon_1660784084": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1919803433": {
    "v": 5,
@@ -26941,9 +26979,9 @@
    "src": "quest-star"
   },
   "weapon_160982907": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1044491877": {
    "v": 6,
@@ -26977,10 +27015,10 @@
    "src": "quest-star"
   },
   "weapon_875329246": {
-   "m": 3,
+   "mr": 50,
    "mon": "雪鬼獸",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1279140189": {
    "v": 4,
@@ -27014,9 +27052,9 @@
    "src": "quest-star"
   },
   "weapon_816858813": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1263927447": {
    "v": 4,
@@ -27048,9 +27086,9 @@
    "src": "rarity-approx"
   },
   "weapon_860116496": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1160135195": {
    "v": 3,
@@ -27085,9 +27123,9 @@
    "src": "quest-star"
   },
   "weapon_1070081527": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_950113684": {
    "m": 3,
@@ -27102,9 +27140,9 @@
    "src": "quest-star"
   },
   "weapon_979121578": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1620944549": {
    "v": 5,
@@ -27132,9 +27170,9 @@
    "src": "quest-star"
   },
   "weapon_604951912": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1400542050": {
    "v": 2,
@@ -27166,9 +27204,9 @@
    "src": "quest-star"
   },
   "weapon_546481359": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_583454003": {
    "v": 2,
@@ -27221,9 +27259,9 @@
    "src": "quest-star"
   },
   "weapon_589739170": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1358332815": {
    "h": 4,
@@ -27250,9 +27288,9 @@
    "src": "quest-star"
   },
   "weapon_785470560": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_702458997": {
    "v": 2,
@@ -27279,9 +27317,9 @@
    "src": "quest-star"
   },
   "weapon_679736358": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1415756840": {
    "v": 2,
@@ -27307,9 +27345,9 @@
    "src": "rarity-approx"
   },
   "weapon_708742116": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_868081286": {
    "v": 5,
@@ -27362,9 +27400,9 @@
    "src": "quest-star"
   },
   "weapon_1185741205": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1199974794": {
    "m": 5,
@@ -27566,9 +27604,10 @@
    "src": "quest-star"
   },
   "weapon_1318979788": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2152630": {
    "v": 2,
@@ -27602,9 +27641,10 @@
    "src": "quest-star"
   },
   "weapon_1226971299": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_94161107": {
    "h": 4,
@@ -27631,9 +27671,10 @@
    "src": "quest-star"
   },
   "weapon_1974855686": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1989105703": {
    "m": 3,
@@ -27642,14 +27683,14 @@
    "src": "quest-star"
   },
   "weapon_1882849253": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1897082778": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_406292831": {
    "h": 4,
@@ -27773,9 +27814,9 @@
    "src": "quest-star"
   },
   "weapon_1551408964": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1565642597": {
    "m": 5,
@@ -27826,9 +27867,9 @@
    "src": "quest-star"
   },
   "weapon_1522470649": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1536196254": {
    "m": 4,
@@ -27842,9 +27883,9 @@
    "src": "rarity-approx"
   },
   "weapon_1147776703": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1629496765": {
    "v": 5,
@@ -27878,9 +27919,9 @@
    "src": "quest-star"
   },
   "weapon_1090371090": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1104604723": {
    "mr": 10,
@@ -27920,9 +27961,9 @@
    "src": "quest-star"
   },
   "weapon_1281031574": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1295789495": {
    "m": 2,
@@ -27937,9 +27978,9 @@
    "src": "quest-star"
   },
   "weapon_1223609717": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1721521630": {
    "v": 5,
@@ -27973,9 +28014,9 @@
    "src": "quest-star"
   },
   "weapon_1265818920": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1760382112": {
    "mr": 10,
@@ -28020,9 +28061,9 @@
    "src": "rarity-approx"
   },
   "weapon_1980148879": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1900398435": {
    "v": 4,
@@ -28060,9 +28101,9 @@
    "src": "rarity-approx"
   },
   "weapon_1921694818": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1529147836": {
    "v": 2,
@@ -28090,9 +28131,9 @@
    "src": "quest-star"
   },
   "weapon_2084920352": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1544360570": {
    "v": 2,
@@ -28121,9 +28162,9 @@
    "src": "quest-star"
   },
   "weapon_2146956262": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1731459948": {
    "v": 1,
@@ -28174,9 +28215,9 @@
    "src": "rarity-approx"
   },
   "weapon_2054931269": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2069705594": {
    "m": 4,
@@ -28191,9 +28232,9 @@
    "src": "quest-star"
   },
   "weapon_1695535928": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1674037955": {
    "h": 5,
@@ -28224,9 +28265,9 @@
    "src": "rarity-approx"
   },
   "weapon_1651839676": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2073492981": {
    "m": 1,
@@ -28241,9 +28282,9 @@
    "src": "quest-star"
   },
   "weapon_1698798987": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1689250697": {
    "h": 4,
@@ -28275,9 +28316,9 @@
    "src": "quest-star"
   },
   "weapon_1861804563": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1876054576": {
    "m": 4,
@@ -28292,9 +28333,9 @@
    "src": "quest-star"
   },
   "weapon_1770844662": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_834424379": {
    "v": 6,
@@ -28328,9 +28369,9 @@
    "src": "quest-star"
   },
   "weapon_336642389": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_384446794": {
    "m": 4,
@@ -28345,9 +28386,9 @@
    "src": "quest-star"
   },
   "weapon_398680427": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1991374732": {
    "v": 4,
@@ -28382,9 +28423,9 @@
    "src": "quest-star"
   },
   "weapon_307720398": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1832037602": {
    "mr": 10,
@@ -28404,9 +28445,9 @@
    "src": "rarity-approx"
   },
   "weapon_517685421": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1669336364": {
    "mr": 10,
@@ -28439,9 +28480,9 @@
    "src": "quest-star"
   },
   "weapon_412475491": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1817803981": {
    "mr": 10,
@@ -28475,9 +28516,9 @@
    "src": "quest-star"
   },
   "weapon_440434721": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1335496778": {
    "v": 3,
@@ -28511,9 +28552,9 @@
    "src": "rarity-approx"
   },
   "weapon_114595716": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1793042949": {
    "v": 1,
@@ -28567,9 +28608,9 @@
    "src": "quest-star"
   },
   "weapon_22570875": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_36820760": {
    "m": 4,
@@ -28584,9 +28625,9 @@
    "src": "quest-star"
   },
   "weapon_233600734": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_247834367": {
    "m": 1,
@@ -28601,9 +28642,9 @@
    "src": "quest-star"
   },
   "weapon_141575869": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_155825746": {
    "m": 3,
@@ -28617,9 +28658,9 @@
    "src": "rarity-approx"
   },
   "weapon_184833552": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_348918954": {
    "v": 6,
@@ -28652,9 +28693,9 @@
    "src": "quest-star"
   },
   "weapon_931669495": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_391635977": {
    "h": 7,
@@ -28686,9 +28727,9 @@
    "src": "rarity-approx"
   },
   "weapon_325215102": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1748501751": {
    "v": 5,
@@ -28716,9 +28757,9 @@
    "src": "quest-star"
   },
   "weapon_1022715211": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1244520489": {
    "v": 4,
@@ -28752,9 +28793,9 @@
    "src": "quest-star"
   },
   "weapon_1050674441": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2047362683": {
    "v": 5,
@@ -28788,9 +28829,9 @@
    "src": "quest-star"
   },
   "weapon_959714540": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1111281910": {
    "v": 3,
@@ -28829,9 +28870,9 @@
    "src": "quest-star"
   },
   "weapon_633332803": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_647058528": {
    "m": 3,
@@ -28846,9 +28887,9 @@
    "src": "quest-star"
   },
   "weapon_541324326": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1485890009": {
    "v": 2,
@@ -28875,9 +28916,9 @@
    "src": "rarity-approx"
   },
   "weapon_603884516": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_549813332": {
    "v": 2,
@@ -28924,9 +28965,9 @@
    "src": "quest-star"
   },
   "weapon_766061498": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_803034094": {
    "v": 3,
@@ -28953,9 +28994,9 @@
    "src": "rarity-approx"
   },
   "weapon_794545016": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_592006155": {
    "v": 3,
@@ -28990,9 +29031,9 @@
    "src": "quest-star"
   },
   "weapon_737139423": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_711009101": {
    "v": 2,
@@ -29027,9 +29068,9 @@
    "src": "quest-star"
   },
   "weapon_1450420914": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_891846212": {
    "v": 5,
@@ -29082,9 +29123,9 @@
    "src": "quest-star"
   },
   "weapon_1327534020": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1241120741": {
    "m": 5,
@@ -29130,9 +29171,10 @@
    "src": "quest-star"
   },
   "weapon_1569425908": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_452184870": {
    "h": 7,
@@ -29338,9 +29380,10 @@
    "src": "quest-star"
   },
   "weapon_1997659967": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_74754069": {
    "v": 2,
@@ -29368,9 +29411,10 @@
    "src": "rarity-approx"
   },
   "weapon_1926004477": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_16302024": {
    "v": 2,
@@ -29397,9 +29441,10 @@
    "src": "quest-star"
   },
   "weapon_2088705715": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_59543471": {
    "v": 3,
@@ -29427,9 +29472,10 @@
    "src": "quest-star"
   },
   "weapon_2116664945": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_235970306": {
    "v": 2,
@@ -29457,9 +29503,10 @@
    "src": "quest-star"
   },
   "weapon_2059242964": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1713032616": {
    "m": 4,
@@ -29468,14 +29515,14 @@
    "src": "quest-star"
   },
   "weapon_1641377134": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1655627023": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_477862194": {
    "h": 4,
@@ -29610,9 +29657,9 @@
    "src": "quest-star"
   },
   "weapon_1586011972": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1600245605": {
    "m": 5,
@@ -29664,9 +29711,9 @@
    "src": "quest-star"
   },
   "weapon_1154420473": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1250115691": {
    "v": 5,
@@ -29700,9 +29747,9 @@
    "src": "quest-star"
   },
   "weapon_1196629596": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1077169789": {
    "mr": 10,
@@ -29748,9 +29795,9 @@
    "src": "quest-star"
   },
   "weapon_1287151056": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1506783800": {
    "v": 4,
@@ -29784,9 +29831,9 @@
    "src": "quest-star"
   },
   "weapon_1330392503": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1866640610": {
    "mr": 10,
@@ -29806,9 +29853,9 @@
    "src": "rarity-approx"
   },
   "weapon_1271938410": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1898045247": {
    "mr": 10,
@@ -29847,9 +29894,9 @@
    "src": "quest-star"
   },
   "weapon_1986268361": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_746593386": {
    "v": 2,
@@ -29878,9 +29925,9 @@
    "src": "quest-star"
   },
   "weapon_1880534159": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1964464078": {
    "v": 5,
@@ -29908,9 +29955,9 @@
    "src": "quest-star"
   },
   "weapon_1942047821": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2049696810": {
    "v": 1,
@@ -29958,9 +30005,9 @@
    "src": "rarity-approx"
   },
   "weapon_2133754817": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2013787110": {
    "m": 4,
@@ -29975,9 +30022,9 @@
    "src": "quest-star"
   },
   "weapon_2075300772": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1131110609": {
    "h": 6,
@@ -30010,9 +30057,9 @@
    "src": "quest-star"
   },
   "weapon_1730138936": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1723853705": {
    "v": 2,
@@ -30041,9 +30088,9 @@
    "src": "rarity-approx"
   },
   "weapon_1671668383": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1820660412": {
    "m": 4,
@@ -30058,9 +30105,9 @@
    "src": "quest-star"
   },
   "weapon_1849143922": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1564189253": {
    "v": 4,
@@ -30089,9 +30136,9 @@
    "src": "quest-star"
   },
   "weapon_1790673361": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_731902892": {
    "h": 2,
@@ -30124,9 +30171,9 @@
    "src": "rarity-approx"
   },
   "weapon_357536180": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_371245397": {
    "m": 3,
@@ -30141,9 +30188,9 @@
    "src": "quest-star"
   },
   "weapon_299065707": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1445184259": {
    "v": 4,
@@ -30176,9 +30223,9 @@
    "src": "rarity-approx"
   },
   "weapon_476541134": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_17350600": {
    "v": 2,
@@ -30211,9 +30258,9 @@
    "src": "rarity-approx"
   },
   "weapon_504500364": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_854269466": {
    "h": 7,
@@ -30246,9 +30293,9 @@
    "src": "quest-star"
   },
   "weapon_447078499": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_461328384": {
    "m": 3,
@@ -30262,9 +30309,9 @@
    "src": "quest-star"
   },
   "weapon_72384545": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1842858691": {
    "v": 1,
@@ -30316,9 +30363,9 @@
    "src": "quest-star"
   },
   "weapon_14980996": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_29214629": {
    "m": 4,
@@ -30333,9 +30380,9 @@
    "src": "quest-star"
   },
   "weapon_57173883": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_570166455": {
    "v": 3,
@@ -30363,9 +30410,9 @@
    "src": "quest-star"
   },
   "weapon_219875129": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2083469056": {
    "h": 7,
@@ -30397,9 +30444,9 @@
    "src": "rarity-approx"
   },
   "weapon_1719152106": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1088917874": {
    "v": 4,
@@ -30432,9 +30479,9 @@
    "src": "rarity-approx"
   },
   "weapon_190428754": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_627588304": {
    "v": 1,
@@ -30461,10 +30508,10 @@
    "src": "quest-star"
   },
   "weapon_938313265": {
-   "m": 5,
+   "mr": 10,
    "mon": "精靈鹿",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_818345430": {
    "m": 1,
@@ -30479,9 +30526,9 @@
    "src": "quest-star"
   },
   "weapon_846304660": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_860538293": {
    "m": 3,
@@ -30495,9 +30542,9 @@
    "src": "rarity-approx"
   },
   "weapon_1023763787": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1342140596": {
    "v": 5,
@@ -30531,9 +30578,9 @@
    "src": "quest-star"
   },
   "weapon_965309742": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2094825213": {
    "mr": 10,
@@ -30574,9 +30621,9 @@
    "src": "quest-star"
   },
   "weapon_605897869": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_653702306": {
    "m": 2,
@@ -30591,9 +30638,9 @@
    "src": "quest-star"
   },
   "weapon_547443808": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_789308361": {
    "v": 2,
@@ -30621,9 +30668,9 @@
    "src": "quest-star"
   },
   "weapon_575927334": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_912723623": {
    "v": 5,
@@ -30676,9 +30723,9 @@
    "src": "quest-star"
   },
   "weapon_1484585365": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1498818954": {
    "m": 5,
@@ -30904,9 +30951,10 @@
    "src": "quest-star"
   },
   "weapon_1200937263": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_468768950": {
    "v": 3,
@@ -30931,9 +30979,10 @@
    "src": "rarity-approx"
   },
   "weapon_1095203053": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_483981692": {
    "h": 5,
@@ -30959,9 +31008,10 @@
    "src": "rarity-approx"
   },
   "weapon_1305167936": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_527222995": {
    "h": 4,
@@ -30986,9 +31036,10 @@
    "src": "quest-star"
   },
   "weapon_1214208039": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1990053720": {
    "m": 1,
@@ -31003,9 +31054,9 @@
    "src": "quest-star"
   },
   "weapon_1883795230": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1227919300": {
    "m": 1,
@@ -31013,14 +31064,14 @@
    "src": "rarity-approx"
   },
   "weapon_1961045914": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1975820219": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_393460216": {
    "h": 4,
@@ -31144,9 +31195,9 @@
    "src": "quest-star"
   },
   "weapon_1486397252": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1500630885": {
    "m": 5,
@@ -31198,9 +31249,9 @@
    "src": "quest-star"
   },
   "weapon_1189023481": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2010423227": {
    "mr": 10,
@@ -31238,9 +31289,9 @@
    "src": "quest-star"
   },
   "weapon_1097014876": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1111772797": {
    "m": 4,
@@ -31255,9 +31306,9 @@
    "src": "quest-star"
   },
   "weapon_1126022674": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_23992330": {
    "v": 4,
@@ -31291,9 +31342,9 @@
    "src": "quest-star"
   },
   "weapon_1335987697": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1216019862": {
    "m": 2,
@@ -31308,9 +31359,9 @@
    "src": "quest-star"
   },
   "weapon_1245027668": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_571215031": {
    "v": 2,
@@ -31348,9 +31399,9 @@
    "src": "quest-star"
   },
   "weapon_1991863563": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_795429899": {
    "v": 1,
@@ -31385,9 +31436,9 @@
    "src": "quest-star"
   },
   "weapon_1886653641": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_662191312": {
    "v": 3,
@@ -31422,9 +31473,9 @@
    "src": "quest-star"
   },
   "weapon_1915137167": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_142999372": {
    "v": 6,
@@ -31464,10 +31515,10 @@
    "src": "quest-star"
   },
   "weapon_2125118562": {
-   "m": 3,
+   "mr": 50,
    "mon": "雪鬼獸",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1681646634": {
    "v": 1,
@@ -31517,9 +31568,9 @@
    "src": "quest-star"
   },
   "weapon_2034140097": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_2048390118": {
    "m": 4,
@@ -31534,9 +31585,9 @@
    "src": "quest-star"
   },
   "weapon_1707250596": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1721484101": {
    "m": 4,
@@ -31551,9 +31602,9 @@
    "src": "quest-star"
   },
   "weapon_1616274203": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1955807339": {
    "v": 5,
@@ -31581,9 +31632,9 @@
    "src": "quest-star"
   },
   "weapon_1644233433": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_904085184": {
    "v": 6,
@@ -31616,9 +31667,9 @@
    "src": "quest-star"
   },
   "weapon_1855263420": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1869496925": {
    "m": 4,
@@ -31633,9 +31684,9 @@
    "src": "quest-star"
   },
   "weapon_1749529202": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1423344527": {
    "v": 2,
@@ -31664,9 +31715,9 @@
    "src": "rarity-approx"
   },
   "weapon_1811042864": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1299931345": {
    "v": 5,
@@ -31700,9 +31751,9 @@
    "src": "quest-star"
   },
   "weapon_377889175": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_392139188": {
    "mr": 10,
@@ -31742,9 +31793,9 @@
    "src": "quest-star"
   },
   "weapon_285880650": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1180926367": {
    "h": 6,
@@ -31777,9 +31828,9 @@
    "src": "quest-star"
   },
   "weapon_511144142": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1598792261": {
    "v": 4,
@@ -31813,9 +31864,9 @@
    "src": "quest-star"
   },
   "weapon_452673709": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1947860965": {
    "mr": 10,
@@ -31835,9 +31886,9 @@
    "src": "rarity-approx"
   },
   "weapon_93278208": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1248811047": {
    "mr": 10,
@@ -31893,9 +31944,9 @@
    "src": "quest-star"
   },
   "weapon_1255399": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_49584004": {
    "m": 4,
@@ -31910,9 +31961,9 @@
    "src": "quest-star"
   },
   "weapon_212285274": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_225994619": {
    "m": 1,
@@ -31927,10 +31978,10 @@
    "src": "quest-star"
   },
   "weapon_254478137": {
-   "m": 1,
+   "mr": 20,
    "mon": "大名蟹",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1339770944": {
    "m": 1,
@@ -31945,10 +31996,10 @@
    "src": "quest-star"
   },
   "weapon_1234561030": {
-   "m": 1,
+   "mr": 10,
    "mon": "巨甲蟲",
    "c": "inferred",
-   "src": "quest-star"
+   "src": "anomaly-material"
   },
   "weapon_1465553762": {
    "h": 5,
@@ -31981,9 +32032,9 @@
    "src": "quest-star"
   },
   "weapon_197072540": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1208971444": {
    "v": 5,
@@ -32011,9 +32062,9 @@
    "src": "quest-star"
   },
   "weapon_896120402": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1262522308": {
    "mr": 10,
@@ -32053,9 +32104,9 @@
    "src": "quest-star"
   },
   "weapon_838698545": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1408131777": {
    "v": 4,
@@ -32089,9 +32140,9 @@
    "src": "quest-star"
   },
   "weapon_1015125396": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1999067086": {
    "h": 7,
@@ -32124,9 +32175,9 @@
    "src": "quest-star"
   },
   "weapon_1058366795": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_619982205": {
    "v": 3,
@@ -32161,9 +32212,9 @@
    "src": "quest-star"
   },
   "weapon_999912750": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 20,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_611493071": {
    "m": 3,
@@ -32178,9 +32229,9 @@
    "src": "quest-star"
   },
   "weapon_640500877": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_233959401": {
    "v": 5,
@@ -32233,9 +32284,9 @@
    "src": "quest-star"
   },
   "weapon_1610148406": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1490180567": {
    "m": 5,
@@ -32490,9 +32541,10 @@
    "src": "rarity-approx"
   },
   "weapon_1206532457": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_427608275": {
    "v": 3,
@@ -32520,9 +32572,10 @@
    "src": "quest-star"
   },
   "weapon_1101322543": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 30,
+   "note": "另需傀異調查任務",
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1115556044": {
    "m": 3,
@@ -32531,14 +32584,14 @@
    "src": "quest-star"
   },
   "weapon_1277732994": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_1291983011": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 50,
+   "c": "inferred",
+   "src": "anomaly-material"
   },
   "weapon_293845496": {
    "h": 4,

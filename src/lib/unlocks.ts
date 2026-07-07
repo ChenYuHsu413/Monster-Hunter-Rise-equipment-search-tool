@@ -14,8 +14,10 @@ export type UnlockEntry = {
   h?: number;
   /** Master 集會所任務★（MR 劇情章節，1-6）。 */
   m?: number;
-  /** MR 等級門檻（10+，TU 魔物）。 */
+  /** MR 等級門檻（10+，TU 魔物或傀異素材等級）。 */
   mr?: number;
+  /** 附加條件說明（如 A5★+ 素材的傀異研究等級需求，MR 軸無法表達的部分）。 */
+  note?: string;
   /** 推導來源魔物（顯示/除錯用）。 */
   mon?: string;
   /** 信心度：confirmed（遊戲常數）/ inferred（任務星級推導）/ unverified（rarity 近似）。 */
@@ -75,7 +77,8 @@ export function describeUnlock(entry: UnlockEntry | undefined): string {
     parts.push(`集會所${entry.h}★${entry.h >= 4 ? "（上位）" : ""}`);
   if (entry.m != null) parts.push(`MR 劇情第${entry.m}章`);
   if (entry.mr != null) parts.push(`MR${entry.mr} 以上`);
-  return parts.length ? parts.join(" 或 ") : "無資料";
+  const base = parts.length ? parts.join(" 或 ") : "無資料";
+  return entry.note ? `${base}（${entry.note}）` : base;
 }
 
 /** 裝備 id → Kiranico 詳細頁連結（素材細節查詢用）。 */
