@@ -241,6 +241,17 @@ async function fetchText(url, tries = 3) {
   throw new Error(`failed: ${url}`);
 }
 
+/** 詳細頁磁碟快取（scripts/.kiranico-cache/，已 gitignore）：全量掃描 5544 頁，重跑免重抓。 */
+const CACHE_DIR = path.join(__dirname, ".kiranico-cache");
+fs.mkdirSync(CACHE_DIR, { recursive: true });
+async function fetchTextCached(url, key, tries = 2) {
+  const file = path.join(CACHE_DIR, key + ".html");
+  if (fs.existsSync(file)) return fs.readFileSync(file, "utf8");
+  const html = await fetchText(url, tries);
+  fs.writeFileSync(file, html);
+  return html;
+}
+
 /** 同 import-kiranico：抓大型 + 小型魔物名單，依名稱長度遞減排序。 */
 async function fetchMonsterNames() {
   const names = new Set();
@@ -370,34 +381,39 @@ async function main() {
     entries[item.id] = unlockEntry(item, tracks);
   }
 
-  // ---- 傀異素材門檻（詳細頁掃描）----
-  // R9+ 的 MR 裝備（confirmed 除外：TU 常數已是權威門檻）逐件抓詳細頁，
-  // 解析生產/強化素材。武器「生產」「強化」為兩條取得路徑，任一路徑
-  // 不需傀異素材即可取得 → 取各路徑門檻的最小值；門檻 0 表示不受傀異限制。
-  const candidates = [...armors, ...weapons].filter((x) => {
-    const e = entries[x.id];
-    return x.rankLabel === "MR" && (x.rarity ?? 0) >= 9 && e.c !== "confirmed";
-  });
-  console.log(`→ 傀異素材門檻掃描（R9+ MR 非 confirmed，共 ${candidates.length} 件詳細頁）`);
+  // ---- 全量素材掃描（詳細頁，磁碟快取）----
+  // 每件裝備解析生產/強化素材。三種用途：
+  // (1) 傀異素材門檻：MR 非 confirmed 者，素材含傀異素材則依等級表設 MR 門檻。
+  //     武器「生產」「強化」為兩條取得路徑，任一路徑不需傀異素材即可取得
+  //     → 取各路徑門檻的最小值；門檻 0 表示不受傀異限制。
+  // (2) 來源補判：仍為 rarity 近似者以素材重新歸屬主導魔物再取星級。
+  // (3) 素材時期自舉（掃描後）：以可信條目反推每種素材的取得期，
+  //     回填只用通用素材（礦石/骨等）的 rarity 近似條目。
+  const allItems = [...armors, ...weapons];
+  const itemMats = new Map(); // id -> {forge, upgrade}
+  console.log(`→ 全量素材掃描（${allItems.length} 件詳細頁，快取於 scripts/.kiranico-cache）`);
   const unknownMats = new Set();
   let gated = 0;
   let sourced = 0;
   let fetchFailed = 0;
   await mapConcurrent(
-    candidates,
+    allItems,
     10,
     async (x) => {
       const kind = x.id.startsWith("armor_") ? "armors" : "weapons";
       const numId = x.id.replace(/^(armor|weapon)_/, "");
       let html;
       try {
-        html = await fetchText(`${BASE}/${kind}/${numId}`, 2);
+        html = await fetchTextCached(`${BASE}/${kind}/${numId}`, x.id);
       } catch {
         fetchFailed++;
         return;
       }
       const forge = sectionMaterials(html, "生產素材", "強化素材");
       const upgrade = kind === "weapons" ? sectionMaterials(html, "強化素材") : [];
+      itemMats.set(x.id, { forge, upgrade });
+      // (1)(2) 僅適用 MR 非 confirmed
+      if (x.rankLabel !== "MR" || entries[x.id].c === "confirmed") return;
       const paths = [forge, upgrade].filter((p) => p.length > 0);
       if (paths.length === 0) return;
       let best = Infinity;
@@ -455,6 +471,70 @@ async function main() {
   if (unknownMats.size) {
     console.warn(`  ⚠ 未知傀異素材（以 A5+ 保守處理）：${[...unknownMats].join("、")}`);
   }
+
+  // ---- 素材時期自舉 ----
+  // 素材取得期 = 各軸上「用到它的可信裝備門檻」最小值（裝備做得出 ⟹ 素材拿得到）。
+  // MR 以標量比較：m1-6 → 1..6、mr → (mr-10)/10+7（可雙向還原）。
+  // rarity 近似條目改以「其素材取得期的最大值」推導；任一素材無資料則放棄
+  // （寧缺勿假）。階級下限夾制：HR ≥ h4、MR ≥ m1（工房本身受階級把關）。
+  const toScalar = (e) => (e.m != null ? e.m : e.mr != null ? (e.mr - 10) / 10 + 7 : null);
+  const avail = new Map();
+  for (const x of allItems) {
+    const e = entries[x.id];
+    if (e.src === "rarity-approx") continue;
+    const mats = itemMats.get(x.id);
+    if (!mats) continue;
+    const s = toScalar(e);
+    for (const n of new Set([...mats.forge, ...mats.upgrade].map((m) => m.name))) {
+      const a = avail.get(n) ?? {};
+      if (e.v != null) a.v = Math.min(a.v ?? Infinity, e.v);
+      if (e.h != null) a.h = Math.min(a.h ?? Infinity, e.h);
+      if (s != null) a.s = Math.min(a.s ?? Infinity, s);
+      avail.set(n, a);
+    }
+  }
+  let tiered = 0;
+  for (const x of allItems) {
+    const e = entries[x.id];
+    if (e.src !== "rarity-approx") continue;
+    const mats = itemMats.get(x.id);
+    if (!mats) continue;
+    const path = mats.forge.length > 0 ? mats.forge : mats.upgrade;
+    if (path.length === 0) continue;
+    const names = [...new Set(path.map((m) => m.name))];
+    const axes = { v: -Infinity, h: -Infinity, s: -Infinity };
+    const ok = { v: true, h: true, s: true };
+    for (const n of names) {
+      const a = avail.get(n);
+      for (const k of ["v", "h", "s"]) {
+        if (!a || a[k] == null) ok[k] = false;
+        else axes[k] = Math.max(axes[k], a[k]);
+      }
+    }
+    let ne = null;
+    if (x.rankLabel === "MR") {
+      if (ok.s) {
+        const s = Math.max(axes.s, 1);
+        ne = s <= 6 ? { m: Math.round(s) } : { mr: Math.round((s - 7) * 10 + 10) };
+      }
+    } else if (x.rankLabel === "HR") {
+      if (ok.h) ne = { h: Math.max(axes.h, 4) };
+    } else if (ok.v || ok.h) {
+      ne = {
+        ...(ok.v ? { v: axes.v } : {}),
+        ...(ok.h ? { h: axes.h } : {}),
+      };
+    }
+    if (!ne) continue;
+    entries[x.id] = {
+      ...ne,
+      ...(e.mon ? { mon: e.mon } : {}),
+      c: "inferred",
+      src: "material-tier",
+    };
+    tiered++;
+  }
+  console.log(`→ 素材時期自舉：${tiered} 件補判`);
 
   // 人工驗證通過的推導條目 → 升 confirmed（值不變）
   let verifiedApplied = 0;

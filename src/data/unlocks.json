@@ -263,81 +263,81 @@
    "src": "quest-star"
   },
   "armor_413580264": {
-   "v": 1,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_513194984": {
-   "v": 1,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_478591976": {
-   "v": 1,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_309771240": {
-   "v": 1,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_275168232": {
-   "v": 1,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_441539502": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_406936494": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_506551214": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_471948206": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_303127470": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_67369836": {
-   "v": 1,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_468974444": {
-   "v": 1,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_434371436": {
    "v": 1,
@@ -352,10 +352,10 @@
    "src": "rarity-approx"
   },
   "armor_499383148": {
-   "v": 1,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1286427630": {
    "v": 1,
@@ -495,32 +495,32 @@
   "armor_9947843": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_109562563": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_74959555": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_443009731": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_408406723": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_37907073": {
    "h": 2,
@@ -553,48 +553,45 @@
    "src": "quest-star"
   },
   "armor_248937060": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_214334052": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_45513316": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_10910308": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_110525028": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_171162104": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_136559096": {
-   "v": 2,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_236173816": {
    "v": 2,
@@ -604,18 +601,18 @@
    "src": "rarity-approx"
   },
   "armor_201570808": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_66304504": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_904812990": {
    "v": 2,
@@ -721,23 +718,23 @@
    "src": "quest-star"
   },
   "armor_975050762": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_940447754": {
-   "v": 2,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1073616906": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1039013898": {
    "v": 3,
@@ -756,92 +753,91 @@
   "armor_633913288": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1001963464": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_967360456": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1066975176": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1032372168": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_662396814": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_627793806": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_995843982": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_961240974": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1060855694": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_737705540": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_703102532": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_802717252": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_768114244": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_599293508": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1466285528": {
    "v": 4,
@@ -984,11 +980,10 @@
    "src": "quest-star"
   },
   "armor_1256440579": {
-   "v": 2,
-   "h": 1,
+   "h": 4,
    "mon": "丸鳥",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1956537025": {
    "v": 2,
@@ -1087,11 +1082,11 @@
    "src": "quest-star"
   },
   "armor_2103501273": {
-   "v": 2,
-   "h": 1,
+   "v": 6,
+   "h": 3,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2131984799": {
    "v": 2,
@@ -1101,32 +1096,32 @@
    "src": "rarity-approx"
   },
   "armor_2097381791": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2096333215": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1927512479": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1892909471": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2025726301": {
    "v": 3,
@@ -1150,53 +1145,53 @@
    "src": "quest-star"
   },
   "armor_2053685523": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2118697235": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1714118865": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1679515857": {
-   "v": 2,
+   "v": 3,
    "h": 1,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2047566033": {
-   "v": 2,
+   "v": 3,
    "h": 1,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2046517457": {
-   "v": 2,
+   "v": 3,
    "h": 1,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2146132177": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1833123947": {
    "v": 4,
@@ -1557,32 +1552,31 @@
   "armor_651930232": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_617327224": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_985377400": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_950774392": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1050389112": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_142678586": {
    "v": 3,
@@ -1620,184 +1614,184 @@
    "src": "rarity-approx"
   },
   "armor_827038002": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_926652722": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_892049714": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_186358066": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_151755058": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_856045808": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_854997232": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_820394224": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_920008944": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_885405936": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_557186892": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_656801612": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_622198604": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_990248780": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_989200204": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_752918274": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_584097538": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_549494530": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_649109250": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_614506242": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_781401792": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_746798784": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_577978048": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_543375040": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_642989760": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_676191878": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_775806598": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_741203590": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_572382854": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_537779846": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1437277722": {
    "v": 3,
@@ -2117,8 +2111,8 @@
   "armor_816573420": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_964586212": {
    "v": 5,
@@ -2426,28 +2420,28 @@
   },
   "armor_455773007": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_421169999": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_520784719": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_519736143": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_485133135": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_115682061": {
    "h": 4,
@@ -2481,58 +2475,58 @@
   },
   "armor_23673568": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_123288288": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_88685280": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_456735456": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_422132448": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_52157094": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_17554086": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_16505510": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_116120230": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_81517222": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_960800789": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1060415509": {
    "h": 4,
@@ -2542,8 +2536,8 @@
   },
   "armor_620185643": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_988235819": {
    "h": 4,
@@ -2553,8 +2547,8 @@
   },
   "armor_953632811": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1053247531": {
    "h": 5,
@@ -2569,64 +2563,64 @@
    "src": "quest-star"
   },
   "armor_648146921": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_613543913": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_981594089": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_946991081": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1046605801": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_542937007": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_642551727": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_607948719": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_975998895": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_941395887": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1407815103": {
    "h": 4,
@@ -3104,53 +3098,53 @@
   },
   "armor_666704409": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_632101401": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1000151577": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_965548569": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1065163289": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_129932066": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_95329058": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_463379234": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_428776226": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_528390946": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_263170565": {
    "h": 6,
@@ -3185,8 +3179,8 @@
   "armor_156912091": {
    "h": 5,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_256526811": {
    "h": 5,
@@ -3197,8 +3191,8 @@
   "armor_221923803": {
    "h": 5,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_53103067": {
    "h": 5,
@@ -3213,16 +3207,16 @@
    "src": "rarity-approx"
   },
   "armor_185919897": {
-   "h": 5,
+   "h": 6,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_151316889": {
-   "h": 5,
+   "h": 6,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_150268313": {
    "h": 5,
@@ -3231,16 +3225,16 @@
    "src": "rarity-approx"
   },
   "armor_249883033": {
-   "h": 5,
+   "h": 6,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_215280025": {
-   "h": 5,
+   "h": 6,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_919046495": {
    "h": 5,
@@ -3318,129 +3312,129 @@
    "src": "rarity-approx"
   },
   "armor_571420525": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_570371949": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_669986669": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_635383661": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1003433837": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_767151907": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_598331171": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_563728163": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_663342883": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_628739875": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_796159713": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_761556705": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_592735969": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_558132961": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_657747681": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_690425511": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_790040231": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_755437223": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_754388647": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_585567911": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1423027813": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_717336165": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_682733157": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_782347877": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_747744869": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1346301433": {
    "h": 5,
@@ -3511,26 +3505,26 @@
   "armor_2145710524": {
    "h": 5,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2111107516": {
-   "h": 5,
+   "h": 6,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1942286780": {
-   "h": 5,
+   "h": 6,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1907683772": {
    "h": 5,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2067935536": {
    "h": 6,
@@ -3738,58 +3732,58 @@
   },
   "armor_770935218": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_841795795": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_807192787": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_906807507": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_905758931": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_200067283": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1038051473": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_869230737": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_834627729": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_934242449": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_899639441": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1452035643": {
    "h": 4,
@@ -4204,14 +4198,14 @@
    "src": "quest-star"
   },
   "armor_785709395": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_751106387": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_582285651": {
    "h": 6,
@@ -4520,28 +4514,28 @@
   },
   "armor_234687047": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_65866311": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_31263303": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_130878023": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_96275015": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1195383914": {
    "h": 8,
@@ -4845,8 +4839,8 @@
   },
   "armor_831347597": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_859831107": {
    "h": 7,
@@ -4915,8 +4909,8 @@
   },
   "armor_1364758402": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_216276099": {
    "h": 7,
@@ -4946,112 +4940,114 @@
   "armor_2006843270": {
    "m": 1,
    "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1972240262": {
    "m": 1,
    "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1266548614": {
    "m": 1,
    "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1231945606": {
    "m": 1,
    "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1331560326": {
    "m": 1,
    "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1886859175": {
    "m": 1,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1986473895": {
-   "m": 1,
+   "m": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1951870887": {
    "m": 1,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1246179239": {
-   "m": 1,
+   "m": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1211576231": {
-   "m": 1,
+   "m": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1900584772": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2000199492": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1965596484": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1259904836": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1225301828": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1914818405": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1880215397": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1979830117": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1978781541": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1273089893": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2111598395": {
    "m": 1,
@@ -5080,28 +5076,28 @@
   },
   "armor_1429312916": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_723621268": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_689018260": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_788632980": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_787584404": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_121967292": {
    "m": 1,
@@ -5303,63 +5299,63 @@
   },
   "armor_467653432": {
    "m": 1,
-   "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "鐮鼬龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_433050424": {
    "m": 1,
-   "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "鐮鼬龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_532665144": {
    "m": 1,
-   "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "鐮鼬龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_498062136": {
    "m": 1,
-   "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "鐮鼬龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_329241400": {
    "m": 1,
-   "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "鐮鼬龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_196751690": {
    "m": 1,
-   "mon": "眠狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "眠狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_162148682": {
    "m": 1,
-   "mon": "眠狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "眠狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_261763402": {
    "m": 1,
-   "mon": "眠狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "眠狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_227160394": {
    "m": 1,
-   "mon": "眠狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "眠狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_58339658": {
    "m": 1,
-   "mon": "眠狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "眠狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_626472794": {
    "m": 1,
@@ -5393,33 +5389,33 @@
   },
   "armor_182501717": {
    "m": 1,
-   "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "毒狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_147898709": {
    "m": 1,
-   "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "毒狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_247513429": {
    "m": 1,
-   "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "毒狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_212910421": {
    "m": 1,
-   "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "毒狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_44089685": {
    "m": 1,
-   "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "毒狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_882073963": {
    "m": 1,
@@ -5663,28 +5659,30 @@
   },
   "armor_2125848280": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2091245272": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1922424536": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1887821528": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "毒狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1987436248": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1826987348": {
    "m": 1,
@@ -5748,8 +5746,8 @@
   },
   "armor_1630207382": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1729822102": {
    "m": 1,
@@ -5758,9 +5756,9 @@
    "src": "quest-star"
   },
   "armor_1644965303": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1643916727": {
    "m": 2,
@@ -5769,9 +5767,9 @@
    "src": "quest-star"
   },
   "armor_1743531447": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1708928439": {
    "m": 2,
@@ -5786,29 +5784,32 @@
    "src": "quest-star"
   },
   "armor_1811774702": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1777171694": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1876786414": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "河童蛙",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1842183406": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1673362670": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "咬魚",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2019589790": {
    "m": 4,
@@ -5842,53 +5843,61 @@
   },
   "armor_1725474946": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "盾蟹",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1690871938": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "水生獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2058922114": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "傘鳥",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2024319106": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "河童蛙",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2123933826": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_304107088": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "傘鳥",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_269504080": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "天狗獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_369118800": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_368070224": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "飛雷龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1809862224": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1634515041": {
    "m": 2,
@@ -6269,33 +6278,34 @@
   },
   "armor_759187133": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2096840474": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1928019738": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1893416730": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1993031450": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "眠狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1958428442": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1615957489": {
    "m": 2,
@@ -6329,53 +6339,61 @@
   },
   "armor_1693732477": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2061782653": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2027179645": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "臣蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2126794365": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "臣蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2092191357": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1707982354": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2076032530": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2041429522": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "臣蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2141044242": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "臣蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2106441234": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2048073308": {
    "m": 1,
@@ -6408,16 +6426,16 @@
    "src": "quest-star"
   },
   "armor_2033823423": {
-   "m": 1,
+   "m": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2133438143": {
-   "m": 1,
+   "m": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2098835135": {
    "m": 1,
@@ -6432,10 +6450,10 @@
    "src": "rarity-approx"
   },
   "armor_1928965823": {
-   "m": 1,
+   "m": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1722215987": {
    "m": 2,
@@ -6499,28 +6517,32 @@
   },
   "armor_486129265": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "河童蛙",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_317308529": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "土砂龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_282705521": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_382320241": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "岩龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_347717233": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1890118198": {
    "m": 1,
@@ -6619,28 +6641,33 @@
   },
   "armor_1357657514": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "大名蟹",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1457272234": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "mon": "剛纏獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1422669226": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "天狗獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_716977578": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "天狗獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_682374570": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "大名蟹",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_866861229": {
    "m": 3,
@@ -7152,9 +7179,9 @@
    "src": "material-source"
   },
   "armor_1716534634": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1869180171": {
    "m": 3,
@@ -7241,9 +7268,9 @@
    "src": "quest-star"
   },
   "armor_1659112649": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_641668764": {
    "m": 3,
@@ -7258,16 +7285,16 @@
    "src": "quest-star"
   },
   "armor_268407220": {
-   "m": 3,
+   "m": 4,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_64983476": {
-   "m": 3,
+   "m": 4,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_240972278": {
    "m": 3,
@@ -7751,23 +7778,23 @@
   },
   "armor_1678211309": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2079815917": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2045212909": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2144827629": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2110224621": {
    "m": 3,
@@ -8203,8 +8230,8 @@
   },
   "armor_1883998708": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_1983613428": {
    "m": 4,
@@ -8980,9 +9007,9 @@
    "src": "material-source"
   },
   "armor_2122987881": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2088384873": {
    "m": 5,
@@ -9009,9 +9036,9 @@
    "src": "material-source"
   },
   "armor_2137221390": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "armor_2102618382": {
    "m": 5,
@@ -9617,8 +9644,8 @@
   "weapon_180848991": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_194574716": {
    "h": 2,
@@ -9762,19 +9789,19 @@
   "weapon_508648366": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_522881871": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_402914156": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1232589542": {
    "v": 3,
@@ -9919,11 +9946,11 @@
    "src": "anomaly-material"
   },
   "weapon_1888465464": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1902174681": {
    "v": 3,
@@ -9933,10 +9960,10 @@
    "src": "rarity-approx"
   },
   "weapon_1916424702": {
-   "h": 5,
+   "h": 4,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1878883566": {
    "m": 3,
@@ -10047,26 +10074,26 @@
   "weapon_480689128": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_494922633": {
-   "v": 1,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
-  },
-  "weapon_317449258": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
+  },
+  "weapon_317449258": {
+   "v": 1,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_332221387": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_451226381": {
    "h": 5,
@@ -10318,26 +10345,26 @@
   "weapon_77056707": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_90782432": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_105015937": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_119265958": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_33360455": {
    "v": 6,
@@ -10354,8 +10381,8 @@
   },
   "weapon_933970093": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_814526530": {
    "m": 2,
@@ -10404,23 +10431,23 @@
   },
   "weapon_61843973": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_209787450": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_962017114": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_975726459": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_989976344": {
    "mr": 20,
@@ -10452,8 +10479,8 @@
   },
   "weapon_2064437494": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1709572247": {
    "h": 7,
@@ -10485,9 +10512,9 @@
    "src": "quest-star"
   },
   "weapon_768890384": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_783124017": {
    "mr": 50,
@@ -10513,9 +10540,9 @@
    "src": "quest-star"
   },
   "weapon_2035429680": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_797373910": {
    "m": 2,
@@ -10524,9 +10551,9 @@
    "src": "quest-star"
   },
   "weapon_676865527": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_691115412": {
    "mr": 30,
@@ -10595,8 +10622,8 @@
   },
   "weapon_1453249896": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1466959113": {
    "mr": 50,
@@ -10899,14 +10926,14 @@
    "src": "quest-star"
   },
   "weapon_1530928234": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1142508555": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1329834674": {
    "mr": 20,
@@ -10963,9 +10990,9 @@
    "src": "quest-star"
   },
   "weapon_94553459": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1985710580": {
    "m": 5,
@@ -10975,8 +11002,8 @@
   },
   "weapon_2000484757": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_109327632": {
    "h": 8,
@@ -11003,19 +11030,19 @@
    "src": "quest-star"
   },
   "weapon_1085101038": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1099334543": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1942014280": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2061019266": {
    "m": 6,
@@ -11049,8 +11076,8 @@
   },
   "weapon_565825315": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1686849600": {
    "m": 2,
@@ -11067,8 +11094,8 @@
   "weapon_580075200": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_594833121": {
    "v": 4,
@@ -11078,9 +11105,9 @@
    "src": "quest-star"
   },
   "weapon_743300742": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1715857414": {
    "m": 2,
@@ -11095,15 +11122,15 @@
    "src": "anomaly-material"
   },
   "weapon_1013151860": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1027909653": {
    "h": 5,
    "mon": "咬魚",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1042159626": {
    "h": 6,
@@ -11124,15 +11151,15 @@
    "src": "anomaly-material"
   },
   "weapon_955729963": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_969457608": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_983691241": {
    "h": 6,
@@ -11153,20 +11180,20 @@
    "src": "anomaly-material"
   },
   "weapon_997941134": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_610045871": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_624295756": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1834864472": {
    "m": 1,
@@ -11276,15 +11303,15 @@
   "weapon_188455218": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_874301651": {
-   "v": 2,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_922106096": {
    "v": 6,
@@ -11296,8 +11323,8 @@
   "weapon_936339601": {
    "h": 4,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_815847606": {
    "h": 5,
@@ -11546,10 +11573,10 @@
    "src": "quest-star"
   },
   "weapon_2107085170": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2120794387": {
    "h": 5,
@@ -11564,9 +11591,9 @@
    "src": "quest-star"
   },
   "weapon_1633250571": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1647500584": {
    "mr": 20,
@@ -11627,10 +11654,10 @@
    "src": "anomaly-material"
   },
   "weapon_326101897": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_474045358": {
    "v": 2,
@@ -11640,9 +11667,9 @@
    "src": "quest-star"
   },
   "weapon_488278863": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1780739075": {
    "m": 1,
@@ -11681,20 +11708,20 @@
   "weapon_282846250": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_297618379": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_311868392": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_536083308": {
    "v": 5,
@@ -11705,8 +11732,8 @@
   },
   "weapon_416623373": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_430873378": {
    "h": 6,
@@ -11762,18 +11789,18 @@
   },
   "weapon_70412929": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_84662950": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_132975175": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_96002579": {
    "m": 1,
@@ -11782,9 +11809,9 @@
    "src": "quest-star"
   },
   "weapon_110252592": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_124486097": {
    "mr": 30,
@@ -11805,9 +11832,9 @@
    "src": "quest-star"
   },
   "weapon_1821935599": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_5042678": {
    "m": 2,
@@ -11817,8 +11844,8 @@
   },
   "weapon_19276183": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_67080628": {
    "mr": 30,
@@ -11974,10 +12001,10 @@
    "src": "anomaly-material"
   },
   "weapon_1225945764": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1273733701": {
    "v": 2,
@@ -12006,31 +12033,31 @@
   "weapon_13007460": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_27240965": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_40966714": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_55200219": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_203667960": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_218425753": {
    "h": 6,
@@ -12040,8 +12067,8 @@
   },
   "weapon_869922758": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1018374119": {
    "m": 3,
@@ -12055,9 +12082,9 @@
    "src": "anomaly-material"
   },
   "weapon_1047381925": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1061631834": {
    "m": 3,
@@ -12083,9 +12110,9 @@
    "src": "quest-star"
   },
   "weapon_1865193282": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_988927768": {
    "m": 2,
@@ -12117,9 +12144,9 @@
    "src": "quest-star"
   },
   "weapon_643765916": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_657475261": {
    "mr": 50,
@@ -12151,8 +12178,8 @@
   },
   "weapon_537507410": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_585295475": {
    "m": 4,
@@ -12233,9 +12260,9 @@
    "src": "quest-star"
   },
   "weapon_59511978": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_733308235": {
    "m": 4,
@@ -12255,11 +12282,10 @@
    "src": "anomaly-material"
   },
   "weapon_1588333751": {
-   "v": 2,
-   "h": 1,
+   "h": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1602583636": {
    "v": 6,
@@ -12369,8 +12395,8 @@
   "weapon_1565611104": {
    "m": 1,
    "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1579844609": {
    "mr": 10,
@@ -12378,11 +12404,11 @@
    "src": "anomaly-material"
   },
   "weapon_1717178442": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1731412075": {
    "v": 6,
@@ -12398,10 +12424,10 @@
    "src": "quest-star"
   },
   "weapon_1594094630": {
-   "m": 3,
+   "m": 4,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1508203463": {
    "mr": 50,
@@ -12432,8 +12458,8 @@
   "weapon_1140495202": {
    "h": 4,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1522437092": {
    "m": 1,
@@ -12459,15 +12485,15 @@
    "src": "quest-star"
   },
   "weapon_1211695751": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1147743162": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1161993051": {
    "mr": 20,
@@ -12484,14 +12510,14 @@
   "weapon_1303720736": {
    "h": 5,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1176226680": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1090337561": {
    "mr": 20,
@@ -12499,20 +12525,20 @@
    "src": "anomaly-material"
   },
   "weapon_1198949263": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1078981548": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1104571198": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1118821087": {
    "mr": 20,
@@ -12536,14 +12562,14 @@
   "weapon_1184715758": {
    "h": 4,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1132530428": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1280998045": {
    "mr": 10,
@@ -12637,8 +12663,8 @@
   },
   "weapon_192764813": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1237826065": {
    "m": 5,
@@ -12648,8 +12674,8 @@
   },
   "weapon_1251535414": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1681254406": {
    "m": 5,
@@ -12664,9 +12690,9 @@
    "src": "quest-star"
   },
   "weapon_1469328765": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1349360914": {
    "h": 8,
@@ -12729,9 +12755,9 @@
    "src": "quest-star"
   },
   "weapon_149509166": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1921661289": {
    "m": 5,
@@ -12746,19 +12772,19 @@
    "src": "quest-star"
   },
   "weapon_1559325937": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1573575830": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2084886831": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2069674081": {
    "m": 6,
@@ -12788,8 +12814,8 @@
   "weapon_978096047": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_992345932": {
    "h": 5,
@@ -12816,15 +12842,15 @@
    "src": "rarity-approx"
   },
   "weapon_1069072328": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_949088233": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1622802405": {
    "m": 1,
@@ -12838,19 +12864,19 @@
    "src": "anomaly-material"
   },
   "weapon_445106883": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_458832608": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1651810235": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1666043736": {
    "mr": 30,
@@ -12876,8 +12902,8 @@
   },
   "weapon_830081111": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_844331124": {
    "h": 5,
@@ -12954,8 +12980,8 @@
   "weapon_148154389": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_162404362": {
    "v": 1,
@@ -13116,8 +13142,8 @@
   },
   "weapon_1884254388": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1264434706": {
    "m": 3,
@@ -13137,11 +13163,11 @@
    "src": "anomaly-material"
   },
   "weapon_1171849863": {
-   "v": 2,
+   "v": 3,
    "h": 1,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1186099876": {
    "v": 4,
@@ -13208,20 +13234,20 @@
   "weapon_1820058666": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1834830795": {
-   "v": 2,
+   "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1849080808": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1863314313": {
    "v": 5,
@@ -13232,24 +13258,24 @@
   },
   "weapon_1776376750": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1790610255": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2082487658": {
    "m": 1,
    "mon": "鐮鼬龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2130275595": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2144525608": {
    "mr": 10,
@@ -13348,9 +13374,9 @@
    "src": "quest-star"
   },
   "weapon_575864156": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1621449760": {
    "m": 1,
@@ -13401,25 +13427,25 @@
    "src": "anomaly-material"
   },
   "weapon_432257528": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_447015321": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_461265342": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1859896133": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1874670458": {
    "m": 3,
@@ -13492,16 +13518,16 @@
    "src": "tu-mr-const"
   },
   "weapon_490711557": {
-   "v": 2,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_504437306": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_418007515": {
    "h": 5,
@@ -13516,9 +13542,9 @@
    "src": "rarity-approx"
   },
   "weapon_291037715": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_305287728": {
    "mr": 20,
@@ -13526,21 +13552,21 @@
    "src": "anomaly-material"
   },
   "weapon_1804860268": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_343223053": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_357473058": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_530551220": {
    "m": 4,
@@ -13614,9 +13640,9 @@
    "src": "quest-star"
   },
   "weapon_112685262": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_126394607": {
    "mr": 30,
@@ -13626,26 +13652,26 @@
   "weapon_72845663": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_86571388": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_100804893": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_14391602": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_29149395": {
    "h": 4,
@@ -13655,18 +13681,18 @@
   },
   "weapon_43399408": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_6426764": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_20660397": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_35434562": {
    "mr": 10,
@@ -13716,8 +13742,8 @@
   },
   "weapon_887568218": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_901277563": {
    "mr": 30,
@@ -13732,13 +13758,13 @@
   },
   "weapon_1613354694": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1627588327": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_915527448": {
    "m": 4,
@@ -13765,9 +13791,9 @@
    "src": "quest-star"
   },
   "weapon_824551167": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_872355484": {
    "mr": 50,
@@ -13807,8 +13833,8 @@
   },
   "weapon_1034532434": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1048766067": {
    "mr": 50,
@@ -13822,9 +13848,9 @@
    "src": "quest-star"
   },
   "weapon_1960980784": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1975214289": {
    "h": 7,
@@ -13839,9 +13865,9 @@
    "src": "quest-star"
   },
   "weapon_943556145": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_957806038": {
    "mr": 30,
@@ -13906,13 +13932,13 @@
   },
   "weapon_1420031014": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1434803143": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1449036772": {
    "mr": 10,
@@ -13920,10 +13946,10 @@
    "src": "anomaly-material"
   },
   "weapon_1290854873": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1305104894": {
    "h": 4,
@@ -13933,8 +13959,8 @@
   },
   "weapon_1319338399": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_645674410": {
    "m": 1,
@@ -14170,14 +14196,14 @@
    "src": "quest-star"
   },
   "weapon_1470712843": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1350745128": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1596001020": {
    "mr": 20,
@@ -14258,9 +14284,9 @@
    "src": "quest-star"
   },
   "weapon_389203315": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_269759760": {
    "h": 8,
@@ -14276,8 +14302,8 @@
   },
   "weapon_1120729493": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_317547825": {
    "h": 8,
@@ -14304,19 +14330,19 @@
    "src": "quest-star"
   },
   "weapon_1393984399": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1576006572": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1297140040": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1953015938": {
    "m": 6,
@@ -14337,14 +14363,14 @@
    "src": "tu-mr-const"
   },
   "weapon_1023700705": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1071505030": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_951520935": {
    "h": 7,
@@ -14372,8 +14398,8 @@
   },
   "weapon_979480165": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_993730074": {
    "h": 7,
@@ -14401,10 +14427,10 @@
    "src": "quest-star"
   },
   "weapon_653639128": {
-   "h": 4,
+   "h": 5,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_667872761": {
    "h": 7,
@@ -14433,18 +14459,18 @@
   },
   "weapon_284768992": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_299002497": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2115280827": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2056810270": {
    "mr": 50,
@@ -14503,8 +14529,8 @@
   },
   "weapon_1697414909": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1711648402": {
    "mr": 10,
@@ -14542,8 +14568,8 @@
   },
   "weapon_889937806": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_938250159": {
    "h": 5,
@@ -14620,8 +14646,8 @@
   "weapon_161441937": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_175167670": {
    "v": 4,
@@ -14632,8 +14658,8 @@
   "weapon_189401175": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_874739828": {
    "h": 4,
@@ -14780,10 +14806,10 @@
    "src": "anomaly-material"
   },
   "weapon_298056556": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_312814349": {
    "v": 4,
@@ -14806,8 +14832,8 @@
   },
   "weapon_1890864765": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1905114642": {
    "mr": 20,
@@ -14824,8 +14850,8 @@
   "weapon_1897017648": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1944805585": {
    "h": 5,
@@ -14857,10 +14883,10 @@
    "src": "quest-star"
   },
   "weapon_2016022602": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2030256235": {
    "h": 5,
@@ -14935,20 +14961,20 @@
   "weapon_1789649962": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1804422091": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_342277096": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_417061542": {
    "v": 5,
@@ -14959,13 +14985,13 @@
   },
   "weapon_431819335": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_446069348": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1662696546": {
    "m": 4,
@@ -15105,10 +15131,10 @@
    "src": "tu-mr-const"
   },
   "weapon_356510601": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_370236334": {
    "h": 6,
@@ -15117,9 +15143,9 @@
    "src": "quest-star"
   },
   "weapon_283806543": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_304325279": {
    "m": 2,
@@ -15128,9 +15154,9 @@
    "src": "quest-star"
   },
   "weapon_319099580": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_501105245": {
    "mr": 20,
@@ -15170,8 +15196,8 @@
   },
   "weapon_475515587": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_489241312": {
    "h": 4,
@@ -15181,8 +15207,8 @@
   },
   "weapon_503474817": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_409096752": {
    "m": 1,
@@ -15191,9 +15217,9 @@
    "src": "quest-star"
   },
   "weapon_423330257": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_438104566": {
    "mr": 20,
@@ -15232,8 +15258,8 @@
   },
   "weapon_1704417230": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_125448522": {
    "m": 2,
@@ -15242,9 +15268,9 @@
    "src": "quest-star"
   },
   "weapon_5464427": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_20238600": {
    "mr": 30,
@@ -15264,9 +15290,9 @@
    "src": "quest-star"
   },
   "weapon_216494286": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_230203631": {
    "mr": 50,
@@ -15317,14 +15343,14 @@
   "weapon_28203454": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_42436959": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_56162684": {
    "v": 2,
@@ -15353,8 +15379,8 @@
   },
   "weapon_139243586": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_153477219": {
    "m": 3,
@@ -15475,18 +15501,18 @@
    "src": "anomaly-material"
   },
   "weapon_1318916730": {
-   "v": 2,
+   "v": 3,
    "h": 1,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1333150235": {
-   "v": 3,
+   "v": 4,
    "h": 2,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1213182520": {
    "h": 4,
@@ -15513,10 +15539,10 @@
    "src": "quest-star"
   },
   "weapon_1170903906": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1185137411": {
    "h": 4,
@@ -15538,14 +15564,14 @@
   "weapon_460302853": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_71375418": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_85608923": {
    "v": 3,
@@ -15562,10 +15588,10 @@
    "src": "quest-star"
   },
   "weapon_1674954595": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 6,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1823422208": {
    "h": 6,
@@ -15598,8 +15624,8 @@
   },
   "weapon_2108031127": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2122281140": {
    "h": 7,
@@ -15637,14 +15663,14 @@
   },
   "weapon_1603003337": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_763716939": {
    "m": 1,
    "mon": "雪鹿",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_777966952": {
    "m": 3,
@@ -15702,8 +15728,8 @@
   },
   "weapon_1433842850": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1448076355": {
    "mr": 50,
@@ -15718,10 +15744,10 @@
    "src": "quest-star"
   },
   "weapon_1989026141": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2003276146": {
    "h": 5,
@@ -15839,13 +15865,13 @@
   },
   "weapon_1537633086": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1149229791": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1162939132": {
    "mr": 10,
@@ -15893,9 +15919,9 @@
    "src": "quest-star"
   },
   "weapon_218863922": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_267176147": {
    "h": 8,
@@ -16000,9 +16026,9 @@
    "src": "quest-star"
   },
   "weapon_45700142": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_59947983": {
    "h": 7,
@@ -16035,14 +16061,14 @@
    "src": "quest-star"
   },
   "weapon_1455516913": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1469766806": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1894648012": {
    "mr": 20,
@@ -16171,19 +16197,19 @@
    "src": "quest-star"
   },
   "weapon_1378790517": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1392516202": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1696452440": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1815457426": {
    "m": 6,
@@ -16219,8 +16245,8 @@
   },
   "weapon_964284195": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_978534080": {
    "h": 6,
@@ -16229,9 +16255,9 @@
    "src": "quest-star"
   },
   "weapon_1876971088": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1771236886": {
    "mr": 20,
@@ -16252,9 +16278,9 @@
    "src": "quest-star"
   },
   "weapon_1056309068": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1786011191": {
    "m": 5,
@@ -16286,8 +16312,8 @@
   },
   "weapon_937302026": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_817317931": {
    "h": 5,
@@ -16318,9 +16344,9 @@
    "src": "rarity-approx"
   },
   "weapon_879049415": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_893283044": {
    "h": 7,
@@ -16374,8 +16400,8 @@
   "weapon_915462326": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_929695831": {
    "v": 2,
@@ -16392,10 +16418,10 @@
    "src": "quest-star"
   },
   "weapon_824485909": {
-   "h": 4,
+   "h": 5,
    "mon": "咬魚",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_872290314": {
    "h": 5,
@@ -16506,9 +16532,9 @@
    "src": "quest-star"
   },
   "weapon_1945312860": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2094288509": {
    "mr": 10,
@@ -16622,23 +16648,23 @@
    "src": "anomaly-material"
   },
   "weapon_1239130693": {
-   "v": 2,
+   "v": 3,
    "h": 1,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1253905018": {
    "v": 3,
    "h": 2,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1268138523": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1627655369": {
    "m": 1,
@@ -16652,10 +16678,10 @@
    "src": "anomaly-material"
   },
   "weapon_305224622": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_319458127": {
    "h": 4,
@@ -16689,20 +16715,20 @@
   "weapon_382460970": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_397233099": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_277265384": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_291498889": {
    "v": 5,
@@ -16713,13 +16739,13 @@
   },
   "weapon_6363706": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_20597211": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1808696257": {
    "m": 4,
@@ -16739,9 +16765,9 @@
    "src": "anomaly-material"
   },
   "weapon_516238093": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_530488098": {
    "h": 6,
@@ -16763,8 +16789,8 @@
   },
   "weapon_1746136067": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1794464800": {
    "mr": 20,
@@ -16851,10 +16877,10 @@
    "src": "quest-star"
   },
   "weapon_1772119841": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1786369734": {
    "h": 6,
@@ -16870,8 +16896,8 @@
   },
   "weapon_507749023": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_522523324": {
    "mr": 50,
@@ -16911,28 +16937,28 @@
   },
   "weapon_98372167": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_112622180": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_126855685": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_464052755": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_75649584": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_89883089": {
    "mr": 20,
@@ -17063,10 +17089,10 @@
    "src": "anomaly-material"
   },
   "weapon_424229600": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_438463105": {
    "v": 2,
@@ -17118,36 +17144,35 @@
   "weapon_34847224": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_217377177": {
-   "v": 1,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
-  },
-  "weapon_231627198": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
+  },
+  "weapon_231627198": {
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_153852210": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_168610003": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_887503088": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_10134709": {
    "h": 7,
@@ -17156,9 +17181,9 @@
    "src": "quest-star"
   },
   "weapon_24908970": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_39142475": {
    "h": 7,
@@ -17191,9 +17216,9 @@
    "src": "quest-star"
   },
   "weapon_259586428": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_139602205": {
    "h": 7,
@@ -17203,8 +17228,8 @@
   },
   "weapon_968558393": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_983332574": {
    "m": 4,
@@ -17265,8 +17290,8 @@
   },
   "weapon_1667364748": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_550692467": {
    "m": 2,
@@ -17313,8 +17338,8 @@
   },
   "weapon_533734845": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_413766994": {
    "h": 6,
@@ -17346,9 +17371,9 @@
    "src": "quest-star"
   },
   "weapon_803915189": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_684471722": {
    "mr": 50,
@@ -17435,11 +17460,11 @@
    "src": "anomaly-material"
   },
   "weapon_2057269428": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2070978645": {
    "v": 5,
@@ -17456,8 +17481,8 @@
   },
   "weapon_1474565356": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1354581133": {
    "mr": 50,
@@ -17465,16 +17490,16 @@
    "src": "anomaly-material"
   },
   "weapon_1895006623": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1909780924": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1924014429": {
    "h": 5,
@@ -17702,8 +17727,8 @@
   "weapon_1120125699": {
    "h": 4,
    "mon": "丸鳥",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1134900000": {
    "h": 5,
@@ -17719,8 +17744,8 @@
   "weapon_1275402835": {
    "m": 3,
    "mon": "丸鳥",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1323190896": {
    "mr": 50,
@@ -17734,14 +17759,14 @@
    "src": "quest-star"
   },
   "weapon_186645315": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_904997728": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1337440785": {
    "m": 5,
@@ -17768,9 +17793,9 @@
    "src": "quest-star"
   },
   "weapon_1537991625": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1150112750": {
    "h": 7,
@@ -17875,19 +17900,19 @@
    "src": "quest-star"
   },
   "weapon_1192305485": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1105892194": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1916066095": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2035071073": {
    "m": 6,
@@ -17920,9 +17945,9 @@
    "src": "quest-star"
   },
   "weapon_1005530989": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1694455847": {
    "m": 1,
@@ -17937,10 +17962,10 @@
    "src": "anomaly-material"
   },
   "weapon_616603394": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_630837027": {
    "v": 6,
@@ -17951,8 +17976,8 @@
   },
   "weapon_645086912": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_659844833": {
    "h": 6,
@@ -17961,9 +17986,9 @@
    "src": "quest-star"
   },
   "weapon_1722417125": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1736650650": {
    "mr": 20,
@@ -17978,10 +18003,10 @@
    "src": "rarity-approx"
   },
   "weapon_554110631": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_601390660": {
    "h": 6,
@@ -18003,8 +18028,8 @@
   },
   "weapon_1645690745": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1827172126": {
    "mr": 50,
@@ -18018,8 +18043,8 @@
   },
   "weapon_1020741675": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1034469320": {
    "h": 5,
@@ -18095,8 +18120,8 @@
   "weapon_278649510": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_293407303": {
    "h": 2,
@@ -18112,10 +18137,10 @@
    "src": "quest-star"
   },
   "weapon_321890821": {
-   "h": 4,
+   "h": 5,
    "mon": "咬魚",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_469834298": {
    "h": 5,
@@ -18225,9 +18250,9 @@
    "src": "quest-star"
   },
   "weapon_1335041628": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1215581821": {
    "mr": 50,
@@ -18235,9 +18260,9 @@
    "src": "anomaly-material"
   },
   "weapon_1229831698": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1244065331": {
    "m": 4,
@@ -18295,9 +18320,9 @@
    "src": "quest-star"
   },
   "weapon_1669797466": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2005675447": {
    "m": 4,
@@ -18320,8 +18345,8 @@
   "weapon_1569362786": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1583596291": {
    "h": 4,
@@ -18354,9 +18379,9 @@
    "src": "quest-star"
   },
   "weapon_1846208057": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2095672587": {
    "m": 4,
@@ -18365,9 +18390,9 @@
    "src": "quest-star"
   },
   "weapon_2109922600": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2124680393": {
    "mr": 50,
@@ -18418,10 +18443,10 @@
    "src": "quest-star"
   },
   "weapon_825872163": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 6,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_840122048": {
    "h": 6,
@@ -18436,9 +18461,9 @@
    "src": "quest-star"
   },
   "weapon_1692056674": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1706290179": {
    "mr": 30,
@@ -18465,8 +18490,8 @@
   "weapon_1814477800": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1862265737": {
    "v": 2,
@@ -18475,16 +18500,16 @@
    "src": "quest-star"
   },
   "weapon_1651237930": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1666010059": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1875991470": {
    "h": 4,
@@ -18500,13 +18525,13 @@
   },
   "weapon_1629037447": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1676841892": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1825293125": {
    "mr": 10,
@@ -18554,9 +18579,9 @@
    "src": "quest-star"
   },
   "weapon_2130835340": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2044405677": {
    "h": 8,
@@ -18708,9 +18733,9 @@
    "src": "quest-star"
   },
   "weapon_466485545": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_78082254": {
    "mr": 50,
@@ -18787,8 +18812,8 @@
   },
   "weapon_48619619": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_62869504": {
    "mr": 20,
@@ -18796,10 +18821,10 @@
    "src": "anomaly-material"
   },
   "weapon_155762632": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_169996265": {
    "v": 2,
@@ -18886,10 +18911,10 @@
    "src": "rarity-approx"
   },
   "weapon_1785015053": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1799265058": {
    "v": 3,
@@ -18904,14 +18929,14 @@
    "src": "quest-star"
   },
   "weapon_384383712": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_639554920": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_552600841": {
    "m": 3,
@@ -18925,9 +18950,9 @@
    "src": "anomaly-material"
   },
   "weapon_837752476": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_851461821": {
    "m": 3,
@@ -18983,8 +19008,8 @@
   },
   "weapon_970466807": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_984716692": {
    "mr": 50,
@@ -19010,15 +19035,15 @@
    "src": "quest-star"
   },
   "weapon_998950325": {
-   "m": 1,
+   "m": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_611071402": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_625304907": {
    "mr": 10,
@@ -19139,10 +19164,10 @@
    "src": "quest-star"
   },
   "weapon_675024055": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1345147886": {
    "h": 4,
@@ -19151,21 +19176,21 @@
    "src": "rarity-approx"
   },
   "weapon_1359381391": {
-   "h": 5,
+   "h": 4,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1407185836": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_714339366": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_729111495": {
    "m": 3,
@@ -19185,21 +19210,21 @@
    "src": "rarity-approx"
   },
   "weapon_1450359848": {
-   "h": 5,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1464591305": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1428683653": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1475947450": {
    "mr": 20,
@@ -19213,10 +19238,10 @@
    "src": "rarity-approx"
   },
   "weapon_737062005": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1421876330": {
    "h": 4,
@@ -19351,14 +19376,14 @@
    "src": "quest-star"
   },
   "weapon_619036120": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_633269753": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1489218226": {
    "mr": 20,
@@ -19487,19 +19512,19 @@
    "src": "quest-star"
   },
   "weapon_541261148": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_556019069": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1324574990": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1946896448": {
    "m": 6,
@@ -19557,27 +19582,27 @@
    "src": "rarity-approx"
   },
   "weapon_128764115": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_8796400": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_23029905": {
-   "h": 6,
+   "h": 7,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1917452261": {
-   "m": 1,
+   "m": 3,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2080677819": {
    "mr": 30,
@@ -19586,10 +19611,10 @@
    "src": "anomaly-material"
   },
   "weapon_247769109": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_262019082": {
    "v": 4,
@@ -19598,9 +19623,9 @@
    "src": "quest-star"
   },
   "weapon_142034987": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2128465752": {
    "m": 4,
@@ -19621,9 +19646,9 @@
    "src": "rarity-approx"
   },
   "weapon_454621564": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_99756317": {
    "h": 5,
@@ -19645,8 +19670,8 @@
   },
   "weapon_2065465085": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1724849843": {
    "mr": 50,
@@ -19660,8 +19685,8 @@
   },
   "weapon_517622235": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_531872248": {
    "h": 5,
@@ -19737,8 +19762,8 @@
   "weapon_167561427": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_181811440": {
    "v": 3,
@@ -19896,8 +19921,8 @@
   "weapon_1903661426": {
    "h": 4,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1939717650": {
    "m": 3,
@@ -19937,8 +19962,8 @@
   },
   "weapon_2116128241": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2029714838": {
    "mr": 20,
@@ -19977,26 +20002,26 @@
    "src": "anomaly-material"
   },
   "weapon_865648584": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1014099945": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1028349838": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2072956277": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1684028778": {
    "mr": 10,
@@ -20006,20 +20031,20 @@
   "weapon_347857962": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_362630091": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_376880104": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_391113609": {
    "v": 5,
@@ -20030,23 +20055,23 @@
   },
   "weapon_270621614": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_318409551": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1698262283": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1712512296": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1626606793": {
    "mr": 10,
@@ -20059,24 +20084,24 @@
    "src": "rarity-approx"
   },
   "weapon_466422343": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_78019172": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1640856814": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1655090319": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1817267277": {
    "mr": 10,
@@ -20090,9 +20115,9 @@
    "src": "quest-star"
   },
   "weapon_1845750787": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1759861792": {
    "mr": 50,
@@ -20106,9 +20131,9 @@
    "src": "quest-star"
   },
   "weapon_2050625610": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2064859243": {
    "h": 8,
@@ -20263,8 +20288,8 @@
   },
   "weapon_700026303": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_415740530": {
    "m": 1,
@@ -20273,9 +20298,9 @@
    "src": "quest-star"
   },
   "weapon_429449747": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_443699760": {
    "mr": 20,
@@ -20321,13 +20346,13 @@
   },
   "weapon_332659564": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_481635085": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_495885090": {
    "h": 6,
@@ -20337,8 +20362,8 @@
   },
   "weapon_132092340": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_11583829": {
    "m": 3,
@@ -20438,20 +20463,20 @@
   "weapon_244216": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_48556441": {
-   "v": 1,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
-  },
-  "weapon_62806462": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
+  },
+  "weapon_62806462": {
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_211257695": {
    "v": 5,
@@ -20620,9 +20645,9 @@
    "src": "quest-star"
   },
   "weapon_573056503": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_587306388": {
    "mr": 30,
@@ -20672,9 +20697,9 @@
    "src": "quest-star"
   },
   "weapon_678352232": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_692061449": {
    "mr": 50,
@@ -20742,15 +20767,14 @@
    "src": "anomaly-material"
   },
   "weapon_1100296992": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1114530497": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1128780518": {
    "h": 5,
@@ -20761,8 +20785,8 @@
   "weapon_1362187360": {
    "m": 1,
    "mon": "冠突龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1376420865": {
    "mr": 10,
@@ -20797,8 +20821,8 @@
   },
   "weapon_1573215175": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1587448804": {
    "mr": 50,
@@ -20815,8 +20839,8 @@
   "weapon_1324511908": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1338745413": {
    "h": 4,
@@ -20881,13 +20905,13 @@
   },
   "weapon_1205506914": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1085522691": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1155349273": {
    "m": 1,
@@ -21016,9 +21040,9 @@
    "src": "quest-star"
   },
   "weapon_1561336938": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1609124875": {
    "h": 8,
@@ -21129,19 +21153,19 @@
    "src": "quest-star"
   },
   "weapon_1518162926": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1532396431": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1881463087": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2134685793": {
    "m": 6,
@@ -21187,8 +21211,8 @@
   "weapon_1057357644": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_970927981": {
    "h": 6,
@@ -21198,8 +21222,8 @@
   },
   "weapon_2062506023": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1687814117": {
    "mr": 20,
@@ -21208,10 +21232,10 @@
    "src": "anomaly-material"
   },
   "weapon_984653570": {
-   "v": 2,
+   "v": 3,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_998887203": {
    "v": 4,
@@ -21221,8 +21245,8 @@
   },
   "weapon_610483904": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_625241825": {
    "h": 5,
@@ -21232,8 +21256,8 @@
   },
   "weapon_1702047642": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1716821947": {
    "mr": 20,
@@ -21242,10 +21266,10 @@
    "src": "anomaly-material"
   },
   "weapon_639491718": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_553062055": {
    "v": 4,
@@ -21255,14 +21279,14 @@
    "src": "quest-star"
   },
   "weapon_566787652": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1731055448": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1658351390": {
    "mr": 20,
@@ -21272,8 +21296,8 @@
   },
   "weapon_1672601407": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1835826941": {
    "mr": 50,
@@ -21366,14 +21390,14 @@
   "weapon_404822586": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_452610523": {
-   "v": 2,
+   "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_466860536": {
    "v": 6,
@@ -21384,8 +21408,8 @@
   },
   "weapon_78965145": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_93215166": {
    "h": 5,
@@ -21519,9 +21543,9 @@
    "src": "quest-star"
   },
   "weapon_1984359987": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1998085584": {
    "mr": 50,
@@ -21547,9 +21571,9 @@
    "src": "quest-star"
   },
   "weapon_1766962712": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1911655921": {
    "m": 4,
@@ -21569,10 +21593,10 @@
    "src": "tu-mr-const"
   },
   "weapon_1533358880": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1144939201": {
    "v": 4,
@@ -21583,13 +21607,13 @@
   },
   "weapon_1159189222": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1940663735": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2089131348": {
    "mr": 10,
@@ -21665,20 +21689,19 @@
   "weapon_1763699593": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1810979758": {
-   "v": 1,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_348818255": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1854661674": {
    "v": 5,
@@ -21694,9 +21717,9 @@
    "src": "quest-star"
   },
   "weapon_1749466088": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2073918702": {
    "m": 1,
@@ -21706,8 +21729,8 @@
   },
   "weapon_1685499023": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1699224748": {
    "mr": 10,
@@ -21757,8 +21780,8 @@
   },
   "weapon_1670284225": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1818751974": {
    "mr": 20,
@@ -21844,8 +21867,8 @@
   },
   "weapon_355103486": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1806802315": {
    "mr": 50,
@@ -21874,8 +21897,8 @@
   },
   "weapon_838635439": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_369336991": {
    "m": 1,
@@ -22011,9 +22034,9 @@
    "src": "quest-star"
   },
   "weapon_70476139": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_85250312": {
    "mr": 10,
@@ -22046,8 +22069,8 @@
   },
   "weapon_133038377": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_26779887": {
    "mr": 10,
@@ -22093,8 +22116,8 @@
   "weapon_272091843": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_285817568": {
    "v": 1,
@@ -22103,16 +22126,15 @@
    "src": "rarity-approx"
   },
   "weapon_333605505": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_482073254": {
    "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_496831047": {
    "h": 4,
@@ -22121,18 +22143,18 @@
   },
   "weapon_511081060": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_204255298": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_218488931": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_266293248": {
    "mr": 10,
@@ -22339,10 +22361,10 @@
    "src": "quest-star"
   },
   "weapon_1490101069": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1504351074": {
    "h": 4,
@@ -22387,9 +22409,9 @@
    "src": "quest-star"
   },
   "weapon_1115492986": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_546059690": {
    "m": 1,
@@ -22439,10 +22461,10 @@
    "src": "quest-star"
   },
   "weapon_773692690": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_971890310": {
    "h": 7,
@@ -22515,10 +22537,10 @@
    "src": "quest-star"
   },
   "weapon_1454634022": {
-   "m": 1,
+   "m": 2,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1469406151": {
    "mr": 20,
@@ -22540,10 +22562,10 @@
    "src": "quest-star"
   },
   "weapon_715222257": {
-   "h": 5,
+   "h": 4,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1349422052": {
    "m": 2,
@@ -22566,14 +22588,14 @@
   "weapon_1415318711": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1429568596": {
-   "h": 4,
+   "h": 6,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1377381306": {
    "m": 2,
@@ -22702,9 +22724,9 @@
    "src": "quest-star"
   },
   "weapon_625679898": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_640437819": {
    "h": 7,
@@ -22749,9 +22771,9 @@
    "src": "quest-star"
   },
   "weapon_124959695": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1170545235": {
    "m": 5,
@@ -22814,19 +22836,19 @@
    "src": "quest-star"
   },
   "weapon_581983646": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_596217279": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1318033835": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1973909741": {
    "m": 6,
@@ -22847,10 +22869,10 @@
    "src": "tu-mr-const"
   },
   "weapon_63752403": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_212220144": {
    "v": 5,
@@ -22860,9 +22882,9 @@
    "src": "quest-star"
   },
   "weapon_226453649": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2001868963": {
    "m": 2,
@@ -22895,8 +22917,8 @@
   },
   "weapon_1944446982": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2106625988": {
    "mr": 20,
@@ -22919,13 +22941,13 @@
   },
   "weapon_882329643": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2120876005": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2135109530": {
    "mr": 20,
@@ -22951,8 +22973,8 @@
   },
   "weapon_107448671": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_121174396": {
    "h": 5,
@@ -23029,8 +23051,8 @@
   "weapon_21559676": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_35793181": {
    "v": 3,
@@ -23047,8 +23069,8 @@
   },
   "weapon_232573139": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_246823152": {
    "h": 6,
@@ -23230,10 +23252,10 @@
    "src": "anomaly-material"
   },
   "weapon_1165308704": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1179542209": {
    "v": 6,
@@ -23244,13 +23266,13 @@
   },
   "weapon_1193792230": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2109484471": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2123734356": {
    "mr": 10,
@@ -23360,8 +23382,8 @@
   },
   "weapon_1720102031": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1733827756": {
    "mr": 50,
@@ -23372,46 +23394,46 @@
   "weapon_306694851": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_320420576": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_502426241": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1755046954": {
    "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1769819083": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1784069096": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1613843533": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1628093538": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1675881475": {
    "mr": 10,
@@ -23518,9 +23540,9 @@
    "src": "quest-star"
   },
   "weapon_389706494": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_269722271": {
    "mr": 50,
@@ -23535,8 +23557,8 @@
   },
   "weapon_516676262": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_531434055": {
    "h": 5,
@@ -23552,8 +23574,8 @@
   },
   "weapon_318051004": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_332284509": {
    "m": 2,
@@ -23581,19 +23603,19 @@
    "src": "quest-star"
   },
   "weapon_383421263": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_494461459": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_508711472": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_522944977": {
    "mr": 10,
@@ -23630,14 +23652,14 @@
    "src": "quest-star"
   },
   "weapon_292461346": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_76595541": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_90845514": {
    "m": 3,
@@ -23792,18 +23814,18 @@
   "weapon_1568400329": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1583174638": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1597408143": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_879962087": {
    "m": 1,
@@ -23819,46 +23841,46 @@
   "weapon_425699845": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_439425594": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_453659099": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_98810360": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_113568153": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_127818174": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_923219802": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_836265851": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_850515736": {
    "mr": 10,
@@ -23978,8 +24000,8 @@
   },
   "weapon_487417137": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_535221462": {
    "h": 8,
@@ -24021,8 +24043,8 @@
   "weapon_1968673138": {
    "h": 4,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_594896203": {
    "m": 3,
@@ -24128,10 +24150,10 @@
    "src": "quest-star"
   },
   "weapon_1121088164": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1135321669": {
    "h": 5,
@@ -24224,9 +24246,9 @@
    "src": "quest-star"
   },
   "weapon_1150534403": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1560451931": {
    "m": 1,
@@ -24326,8 +24348,8 @@
   },
   "weapon_25344975": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1530989308": {
    "m": 5,
@@ -24337,8 +24359,8 @@
   },
   "weapon_1142586013": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1931262049": {
    "m": 5,
@@ -24353,9 +24375,9 @@
    "src": "quest-star"
   },
   "weapon_688311603": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_735591632": {
    "h": 8,
@@ -24454,9 +24476,9 @@
    "src": "quest-star"
   },
   "weapon_1338386826": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1218419115": {
    "m": 5,
@@ -24489,19 +24511,19 @@
    "src": "quest-star"
   },
   "weapon_1449921719": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1464171604": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1260611854": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1916487744": {
    "m": 6,
@@ -24535,9 +24557,9 @@
    "src": "quest-star"
   },
   "weapon_916932651": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2113267718": {
    "m": 1,
@@ -24552,24 +24574,24 @@
    "src": "anomaly-material"
   },
   "weapon_930660296": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_810676201": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_824926094": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2021261285": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2050269115": {
    "mr": 10,
@@ -24617,10 +24639,10 @@
    "src": "quest-star"
   },
   "weapon_1063898915": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_943931072": {
    "h": 5,
@@ -24630,8 +24652,8 @@
   },
   "weapon_1723363102": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1737613119": {
    "mr": 20,
@@ -24657,8 +24679,8 @@
   },
   "weapon_261056657": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_140564662": {
    "h": 5,
@@ -24735,8 +24757,8 @@
   "weapon_418969980": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_433203485": {
    "v": 2,
@@ -24847,9 +24869,9 @@
    "src": "quest-star"
   },
   "weapon_1117367999": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1131617884": {
    "mr": 50,
@@ -24878,8 +24900,8 @@
   },
   "weapon_1096085948": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1110319453": {
    "h": 6,
@@ -24961,8 +24983,8 @@
   },
   "weapon_1265380791": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1950719316": {
    "mr": 20,
@@ -25046,20 +25068,20 @@
   "weapon_1716249642": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1731021771": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1611054056": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1658841993": {
    "v": 5,
@@ -25070,8 +25092,8 @@
   },
   "weapon_1672567726": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1821018959": {
    "h": 5,
@@ -25081,8 +25103,8 @@
   },
   "weapon_2083957903": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2097683628": {
    "m": 3,
@@ -25119,9 +25141,9 @@
    "src": "quest-star"
   },
   "weapon_1850026765": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1864276770": {
    "h": 6,
@@ -25130,9 +25152,9 @@
    "src": "quest-star"
   },
   "weapon_2068743105": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1680339942": {
    "m": 4,
@@ -25300,10 +25322,10 @@
    "src": "quest-star"
   },
   "weapon_1306050835": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 6,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1320300848": {
    "h": 6,
@@ -25404,46 +25426,45 @@
   "weapon_343661222": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_358419015": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_372669028": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1777846979": {
-   "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1791572704": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1805806209": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_439488652": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_453722285": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_99397698": {
    "mr": 10,
@@ -25475,8 +25496,8 @@
   },
   "weapon_35858407": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_50632580": {
    "mr": 30,
@@ -25490,14 +25511,14 @@
    "src": "quest-star"
   },
   "weapon_1576952513": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1591202534": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_232638373": {
    "m": 2,
@@ -25560,10 +25581,10 @@
    "src": "quest-star"
   },
   "weapon_952483288": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 6,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_966716921": {
    "h": 6,
@@ -25578,9 +25599,9 @@
    "src": "quest-star"
   },
   "weapon_888514303": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_902764188": {
    "mr": 30,
@@ -25595,8 +25616,8 @@
   },
   "weapon_930723410": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_810739315": {
    "mr": 50,
@@ -25604,10 +25625,10 @@
    "src": "anomaly-material"
   },
   "weapon_386902533": {
-   "v": 2,
+   "v": 3,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_299964986": {
    "h": 4,
@@ -25617,8 +25638,8 @@
   },
   "weapon_314198491": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_825513488": {
    "m": 1,
@@ -25638,9 +25659,9 @@
    "src": "anomaly-material"
   },
   "weapon_328448504": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_477424025": {
    "h": 5,
@@ -25656,8 +25677,8 @@
   },
   "weapon_1035478519": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1049728404": {
    "m": 2,
@@ -25751,8 +25772,8 @@
   },
   "weapon_660870380": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2058297011": {
    "mr": 50,
@@ -25785,9 +25806,9 @@
    "src": "quest-star"
   },
   "weapon_555136162": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_602924099": {
    "mr": 10,
@@ -25881,8 +25902,8 @@
   },
   "weapon_1839564287": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_794123207": {
    "m": 5,
@@ -25892,8 +25913,8 @@
   },
   "weapon_674139108": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1165371786": {
    "m": 5,
@@ -25908,9 +25929,9 @@
    "src": "quest-star"
   },
   "weapon_787840084": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_802073717": {
    "h": 8,
@@ -25973,9 +25994,9 @@
    "src": "quest-star"
   },
   "weapon_1734809178": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1344264927": {
    "m": 5,
@@ -25985,8 +26006,8 @@
   },
   "weapon_1391528700": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1614300795": {
    "h": 8,
@@ -26013,19 +26034,19 @@
    "src": "quest-star"
   },
   "weapon_710065192": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_724296649": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1569004115": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1151138197": {
    "m": 6,
@@ -26089,9 +26110,9 @@
    "src": "quest-star"
   },
   "weapon_148594574": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1106917737": {
    "m": 1,
@@ -26126,8 +26147,8 @@
   "weapon_1135925551": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1284376780": {
    "mr": 30,
@@ -26153,9 +26174,9 @@
    "src": "rarity-approx"
   },
   "weapon_1298626797": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1312336002": {
    "mr": 30,
@@ -26260,14 +26281,13 @@
   "weapon_334567994": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_483019227": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_497269240": {
    "v": 6,
@@ -26277,10 +26297,10 @@
    "src": "quest-star"
   },
   "weapon_512027033": {
-   "h": 4,
+   "h": 5,
    "mon": "咬魚",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_526277054": {
    "h": 5,
@@ -26434,9 +26454,9 @@
    "src": "quest-star"
   },
   "weapon_1209462323": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1256742352": {
    "mr": 30,
@@ -26451,8 +26471,8 @@
   },
   "weapon_1956314518": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1971072439": {
    "mr": 50,
@@ -26534,46 +26554,46 @@
   "weapon_1827662729": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1841388462": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1855621967": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1616634922": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 2,
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1631407051": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1645657064": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2104327406": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2118560911": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2132286636": {
    "mr": 10,
@@ -26651,13 +26671,13 @@
   },
   "weapon_1101681150": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1115914655": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1130688956": {
    "h": 4,
@@ -26725,9 +26745,9 @@
    "src": "quest-star"
   },
   "weapon_1790251708": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1804485213": {
    "mr": 50,
@@ -26878,20 +26898,20 @@
   "weapon_1869871980": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1750412045": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1764662050": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1778895555": {
    "v": 5,
@@ -26902,23 +26922,23 @@
   },
   "weapon_349780704": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_364014209": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_503538027": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_417648904": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_431882537": {
    "mr": 10,
@@ -26961,13 +26981,13 @@
   },
   "weapon_378264230": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_393022023": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_273054308": {
    "h": 7,
@@ -27018,8 +27038,8 @@
   },
   "weapon_219453316": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1660784084": {
    "mr": 50,
@@ -27149,9 +27169,9 @@
    "src": "quest-star"
   },
   "weapon_1962975317": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_831108690": {
    "m": 3,
@@ -27161,8 +27181,8 @@
   },
   "weapon_845342323": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_860116496": {
    "mr": 50,
@@ -27263,18 +27283,18 @@
   "weapon_1548993283": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1563767584": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_652215561": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_666465582": {
    "m": 3,
@@ -27349,10 +27369,10 @@
    "src": "rarity-approx"
   },
   "weapon_1372582828": {
-   "h": 5,
+   "h": 4,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1386292045": {
    "h": 7,
@@ -27386,8 +27406,8 @@
   },
   "weapon_730418187": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_799704065": {
    "m": 1,
@@ -27409,8 +27429,8 @@
   },
   "weapon_1429988297": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1444762606": {
    "h": 6,
@@ -27420,8 +27440,8 @@
   },
   "weapon_694508487": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_708742116": {
    "mr": 20,
@@ -27527,8 +27547,8 @@
   },
   "weapon_1350384409": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1107966313": {
    "m": 5,
@@ -27543,14 +27563,14 @@
    "src": "quest-star"
   },
   "weapon_1001319929": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_612392350": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1364618046": {
    "mr": 20,
@@ -27625,19 +27645,19 @@
    "src": "quest-star"
   },
   "weapon_655633789": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_569220370": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1511582262": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1093716296": {
    "m": 6,
@@ -27703,9 +27723,9 @@
    "src": "quest-star"
   },
   "weapon_64190580": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_213166101": {
    "h": 7,
@@ -27852,14 +27872,14 @@
   "weapon_373615001": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_387865022": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_301435231": {
    "v": 6,
@@ -27957,9 +27977,9 @@
    "src": "quest-star"
   },
   "weapon_251617614": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1147776703": {
    "mr": 50,
@@ -28125,8 +28145,8 @@
   },
   "weapon_2033653338": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1951665353": {
    "m": 2,
@@ -28135,9 +28155,9 @@
    "src": "quest-star"
   },
   "weapon_1965915374": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1980148879": {
    "mr": 30,
@@ -28152,10 +28172,10 @@
    "src": "quest-star"
   },
   "weapon_1914648320": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2096129825": {
    "h": 6,
@@ -28164,9 +28184,9 @@
    "src": "quest-star"
   },
   "weapon_2110379718": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1893211308": {
    "m": 3,
@@ -28176,8 +28196,8 @@
   },
   "weapon_1907444813": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1921694818": {
    "mr": 50,
@@ -28185,23 +28205,23 @@
    "src": "anomaly-material"
   },
   "weapon_1529147836": {
-   "v": 2,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1174282589": {
-   "v": 2,
-   "h": 1,
+   "v": 4,
+   "h": 2,
    "mon": "毒狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1188532594": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1935928323": {
    "m": 1,
@@ -28248,20 +28268,20 @@
   "weapon_1731459948": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1612000013": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1659804450": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2015093802": {
    "v": 4,
@@ -28283,15 +28303,15 @@
    "src": "quest-star"
   },
   "weapon_2026447751": {
-   "m": 1,
+   "m": 2,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2040697764": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2054931269": {
    "mr": 10,
@@ -28317,8 +28337,8 @@
   },
   "weapon_1674037955": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1821981408": {
    "h": 8,
@@ -28339,9 +28359,9 @@
    "src": "quest-star"
   },
   "weapon_1622831870": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1651839676": {
    "mr": 20,
@@ -28379,8 +28399,8 @@
   },
   "weapon_1717209935": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1666073181": {
    "m": 1,
@@ -28519,9 +28539,9 @@
    "src": "quest-star"
   },
   "weapon_469897356": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_517685421": {
    "mr": 50,
@@ -28577,10 +28597,10 @@
    "src": "quest-star"
   },
   "weapon_1082274096": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1096507601": {
    "h": 4,
@@ -28626,9 +28646,9 @@
    "src": "quest-star"
   },
   "weapon_99821543": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_114595716": {
    "mr": 20,
@@ -28638,8 +28658,8 @@
   "weapon_1793042949": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1806768698": {
    "v": 1,
@@ -28649,11 +28669,11 @@
    "src": "quest-star"
   },
   "weapon_344607195": {
-   "v": 2,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1850464934": {
    "v": 5,
@@ -28677,8 +28697,8 @@
   "weapon_128829349": {
    "m": 1,
    "mon": "凶豺龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_8861530": {
    "m": 3,
@@ -28733,8 +28753,8 @@
   },
   "weapon_170059379": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_184833552": {
    "mr": 30,
@@ -28755,9 +28775,9 @@
    "src": "quest-star"
   },
   "weapon_377402472": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_903710257": {
    "m": 4,
@@ -28802,8 +28822,8 @@
   },
   "weapon_825935285": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_325215102": {
    "mr": 50,
@@ -28933,14 +28953,15 @@
    "src": "quest-star"
   },
   "weapon_1321246805": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 7,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_973948045": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "水生獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "weapon_619099298": {
    "m": 3,
@@ -28990,9 +29011,9 @@
   },
   "weapon_556096455": {
    "m": 1,
-   "mon": "眠狗龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "眠狗龍王",
+   "c": "inferred",
+   "src": "material-source"
   },
   "weapon_603884516": {
    "mr": 10,
@@ -29014,10 +29035,10 @@
    "src": "quest-star"
   },
   "weapon_577772650": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1458909984": {
    "h": 4,
@@ -29049,16 +29070,16 @@
    "src": "anomaly-material"
   },
   "weapon_803034094": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_683049871": {
-   "h": 5,
+   "h": 4,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_697299884": {
    "h": 6,
@@ -29067,10 +29088,10 @@
    "src": "quest-star"
   },
   "weapon_780311387": {
-   "m": 1,
+   "m": 2,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_794545016": {
    "mr": 20,
@@ -29085,23 +29106,23 @@
    "src": "quest-star"
   },
   "weapon_740473896": {
-   "v": 3,
-   "h": 2,
+   "v": 5,
+   "h": 3,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_788259785": {
    "h": 4,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_675101465": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_689335102": {
    "m": 2,
@@ -29129,16 +29150,16 @@
    "src": "quest-star"
   },
   "weapon_1410581251": {
-   "h": 5,
+   "h": 4,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1421937404": {
    "m": 1,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1436187293": {
    "m": 2,
@@ -29298,9 +29319,9 @@
    "src": "quest-star"
   },
   "weapon_967679250": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_981912883": {
    "h": 8,
@@ -29363,9 +29384,9 @@
    "src": "quest-star"
   },
   "weapon_510655299": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1194817773": {
    "m": 5,
@@ -29404,19 +29425,19 @@
    "src": "quest-star"
   },
   "weapon_621468822": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_669781175": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1285339233": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1270128571": {
    "m": 6,
@@ -29485,9 +29506,9 @@
    "src": "quest-star"
   },
   "weapon_1911230172": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1926004477": {
    "mr": 50,
@@ -29503,9 +29524,9 @@
   },
   "weapon_30535657": {
    "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 1,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_44785550": {
    "h": 5,
@@ -29535,8 +29556,8 @@
   "weapon_208011084": {
    "v": 3,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_222244717": {
    "h": 4,
@@ -29605,8 +29626,8 @@
   },
   "weapon_477862194": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_492619987": {
    "h": 5,
@@ -29644,8 +29665,8 @@
   },
   "weapon_63326782": {
    "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_844492837": {
    "m": 5,
@@ -29694,8 +29715,8 @@
   "weapon_1765608007": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1779858020": {
    "v": 1,
@@ -29927,9 +29948,9 @@
    "src": "quest-star"
   },
   "weapon_1258212725": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1271938410": {
    "mr": 50,
@@ -30041,14 +30062,14 @@
   "weapon_2049696810": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2064468939": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1709620200": {
    "v": 5,
@@ -30065,23 +30086,23 @@
   },
   "weapon_1646603021": {
    "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1828625186": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2090515554": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2104749059": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2133754817": {
    "mr": 10,
@@ -30141,30 +30162,30 @@
    "src": "anomaly-material"
   },
   "weapon_1723853705": {
-   "v": 2,
+   "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1737579438": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1617595215": {
-   "h": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1643184857": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1657434878": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1671668383": {
    "mr": 10,
@@ -30246,8 +30267,8 @@
   },
   "weapon_343286167": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_357536180": {
    "mr": 20,
@@ -30279,10 +30300,10 @@
    "src": "quest-star"
   },
   "weapon_1459958560": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1373528769": {
    "h": 5,
@@ -30297,9 +30318,9 @@
    "src": "quest-star"
   },
   "weapon_328073513": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_476541134": {
    "mr": 10,
@@ -30322,8 +30343,8 @@
   },
   "weapon_213606286": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_228364207": {
    "h": 4,
@@ -30333,8 +30354,8 @@
   },
   "weapon_490250479": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_504500364": {
    "mr": 10,
@@ -30377,9 +30398,9 @@
    "src": "anomaly-material"
   },
   "weapon_461328384": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1675980142": {
    "m": 4,
@@ -30395,15 +30416,15 @@
   "weapon_1842858691": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1856584416": {
-   "v": 2,
-   "h": 1,
+   "v": 3,
+   "h": 2,
    "mon": "垂皮龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1870817921": {
    "h": 2,
@@ -30519,8 +30540,8 @@
   },
   "weapon_148219647": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1719152106": {
    "mr": 50,
@@ -30553,9 +30574,9 @@
    "src": "quest-star"
   },
   "weapon_176178877": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_190428754": {
    "mr": 30,
@@ -30617,8 +30638,8 @@
   },
   "weapon_1009530282": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1023763787": {
    "mr": 30,
@@ -30729,10 +30750,10 @@
    "src": "quest-star"
   },
   "weapon_703419374": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 4,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_717652879": {
    "h": 4,
@@ -30867,9 +30888,9 @@
    "src": "quest-star"
   },
   "weapon_1045454238": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1059687871": {
    "h": 8,
@@ -30932,9 +30953,9 @@
    "src": "quest-star"
   },
   "weapon_2068256346": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1350806194": {
    "m": 5,
@@ -30944,8 +30965,8 @@
   },
   "weapon_1365580371": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1679312507": {
    "h": 8,
@@ -30972,19 +30993,19 @@
    "src": "quest-star"
   },
   "weapon_1002282258": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_613862707": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1575545398": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1526778184": {
    "m": 6,
@@ -31036,10 +31057,10 @@
    "src": "anomaly-material"
   },
   "weapon_468768950": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 5,
+   "h": 3,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_80349271": {
    "h": 5,
@@ -31049,13 +31070,13 @@
   },
   "weapon_94599284": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1080953036": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1095203053": {
    "mr": 50,
@@ -31072,8 +31093,8 @@
   "weapon_498215197": {
    "h": 5,
    "mon": "飛甲蟲",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_512465202": {
    "h": 6,
@@ -31083,8 +31104,8 @@
   },
   "weapon_1290934435": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1305167936": {
    "mr": 30,
@@ -31105,8 +31126,8 @@
   },
   "weapon_421488785": {
    "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1334175750": {
    "m": 4,
@@ -31138,9 +31159,9 @@
    "src": "anomaly-material"
   },
   "weapon_1227919300": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1961045914": {
    "mr": 50,
@@ -31233,15 +31254,15 @@
   "weapon_1800211015": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_338066020": {
-   "v": 2,
-   "h": 1,
+   "v": 6,
+   "h": 3,
    "mon": "野豬",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_385853957": {
    "v": 6,
@@ -31251,9 +31272,9 @@
    "src": "quest-star"
   },
   "weapon_399579706": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 6,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_279595483": {
    "h": 4,
@@ -31351,9 +31372,9 @@
    "src": "quest-star"
   },
   "weapon_841068133": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1202749086": {
    "m": 3,
@@ -31443,10 +31464,10 @@
    "src": "anomaly-material"
   },
   "weapon_571215031": {
-   "v": 2,
-   "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "v": 3,
+   "h": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_753237076": {
    "v": 4,
@@ -31457,8 +31478,8 @@
   },
   "weapon_767470709": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_781196394": {
    "h": 5,
@@ -31467,9 +31488,9 @@
    "src": "quest-star"
   },
   "weapon_1259261301": {
-   "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1977630058": {
    "m": 3,
@@ -31483,17 +31504,17 @@
    "src": "anomaly-material"
   },
   "weapon_795429899": {
-   "v": 1,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_675462184": {
-   "v": 2,
+   "v": 3,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_689693641": {
    "v": 5,
@@ -31505,8 +31526,8 @@
   "weapon_738022382": {
    "h": 4,
    "mon": "翼蛇龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2006113576": {
    "m": 3,
@@ -31602,20 +31623,20 @@
   "weapon_1681646634": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1696418763": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1744223208": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1624238985": {
    "v": 5,
@@ -31625,9 +31646,9 @@
    "src": "quest-star"
   },
   "weapon_1637964718": {
-   "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1652198223": {
    "h": 6,
@@ -31637,8 +31658,8 @@
   },
   "weapon_2139352067": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_2019908640": {
    "m": 3,
@@ -31724,8 +31745,8 @@
   },
   "weapon_918843105": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_933092998": {
    "h": 7,
@@ -31768,18 +31789,18 @@
    "src": "anomaly-material"
   },
   "weapon_1423344527": {
-   "v": 2,
-   "h": 1,
+   "v": 5,
+   "h": 3,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1437594540": {
-   "v": 3,
-   "h": 2,
+   "v": 6,
+   "h": 3,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1451303757": {
    "h": 6,
@@ -31788,10 +31809,10 @@
    "src": "quest-star"
   },
   "weapon_1763238419": {
-   "m": 3,
+   "m": 4,
    "mon": "熔岩獸",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1811042864": {
    "mr": 50,
@@ -31848,10 +31869,10 @@
    "src": "quest-star"
   },
   "weapon_114952279": {
-   "v": 2,
+   "v": 3,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_129202292": {
    "h": 4,
@@ -31960,9 +31981,9 @@
    "src": "quest-star"
   },
   "weapon_79028323": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_93278208": {
    "mr": 50,
@@ -31978,43 +31999,43 @@
   "weapon_1666448236": {
    "v": 1,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1815423757": {
-   "v": 1,
+   "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1829673762": {
    "v": 2,
    "h": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1877461699": {
    "v": 3,
    "h": 2,
    "mon": "咬魚",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1756969696": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1771203201": {
    "h": 5,
    "mon": "咬魚",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_106987553": {
    "m": 1,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_121239494": {
    "m": 2,
@@ -32195,10 +32216,10 @@
    "src": "quest-star"
   },
   "weapon_1556599526": {
-   "v": 3,
+   "v": 4,
    "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1570308743": {
    "h": 5,
@@ -32428,14 +32449,14 @@
    "src": "quest-star"
   },
   "weapon_1037848123": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1052098008": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_759520199": {
    "mr": 20,
@@ -32564,19 +32585,19 @@
    "src": "quest-star"
   },
   "weapon_960073151": {
-   "h": 6,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_974323036": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1400183379": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 10,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1519188373": {
    "m": 6,
@@ -32605,8 +32626,8 @@
   },
   "weapon_532818205": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_412850482": {
    "h": 6,
@@ -32615,9 +32636,9 @@
    "src": "quest-star"
   },
   "weapon_1145018795": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_1206532457": {
    "mr": 50,
@@ -32626,17 +32647,15 @@
    "src": "anomaly-material"
   },
   "weapon_427608275": {
-   "v": 3,
-   "h": 2,
+   "h": 5,
    "mon": "咬魚",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_441858288": {
-   "v": 3,
-   "h": 2,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 5,
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_456091793": {
    "h": 5,
@@ -32674,8 +32693,8 @@
   },
   "weapon_293845496": {
    "h": 4,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "c": "inferred",
+   "src": "material-tier"
   },
   "weapon_308603289": {
    "h": 5,

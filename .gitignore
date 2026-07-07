@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Kiranico 詳細頁快取（import-unlocks.mjs 全量掃描用）
+scripts/.kiranico-cache/
