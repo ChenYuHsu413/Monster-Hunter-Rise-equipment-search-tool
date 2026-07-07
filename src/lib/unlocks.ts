@@ -56,6 +56,35 @@ export function loadUnlocks(): Promise<UnlockData> {
   return inflight;
 }
 
+/** 信心度 → 顯示標籤（引導模式徽章用）。 */
+export const CONFIDENCE_LABELS: Record<UnlockEntry["c"], string> = {
+  confirmed: "已確認",
+  inferred: "推導",
+  unverified: "未驗證",
+};
+
+/**
+ * 解放條件的白話描述（多軸以「或」相連，任一達成即可製作）。
+ * 例：「村莊5★ 或 集會所3★」「MR 劇情第4章」「MR50 以上」。
+ */
+export function describeUnlock(entry: UnlockEntry | undefined): string {
+  if (!entry) return "無資料";
+  const parts: string[] = [];
+  if (entry.v != null) parts.push(`村莊${entry.v}★`);
+  if (entry.h != null)
+    parts.push(`集會所${entry.h}★${entry.h >= 4 ? "（上位）" : ""}`);
+  if (entry.m != null) parts.push(`MR 劇情第${entry.m}章`);
+  if (entry.mr != null) parts.push(`MR${entry.mr} 以上`);
+  return parts.length ? parts.join(" 或 ") : "無資料";
+}
+
+/** 裝備 id → Kiranico 詳細頁連結（素材細節查詢用）。 */
+export function kiranicoUrl(id: string): string | undefined {
+  const m = id.match(/^(armor|weapon)_(\d+)$/);
+  if (!m) return undefined;
+  return `https://mhrise.kiranico.com/zh-Hant/data/${m[1]}s/${m[2]}`;
+}
+
 /**
  * 以玩家進度判定裝備是否已解放可製作。
  * 任一軸達標即可（素材在哪條線打到都能做裝）；無條目時不擋

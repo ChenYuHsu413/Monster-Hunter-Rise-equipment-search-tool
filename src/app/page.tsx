@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import type {
   ArmorPart,
   ArmorPiece,
@@ -67,6 +68,7 @@ import { Input } from "@/components/ui/input";
 import {
   Search,
   Swords,
+  Compass,
   Loader2,
   Check,
   AlertTriangle,
@@ -544,6 +546,12 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-center gap-3">
+          <Link href="/guide">
+            <Button variant="outline" size="sm" className="gap-1.5">
+              <Compass className="h-4 w-4" />
+              新手引導
+            </Button>
+          </Link>
           <div className="w-[260px]">
             <SearchModeSelector value={searchMode} onChange={setSearchMode} />
           </div>
