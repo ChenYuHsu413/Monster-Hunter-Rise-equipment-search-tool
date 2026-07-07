@@ -9329,34 +9329,34 @@
    "src": "tu-mr-const"
   },
   "armor_1462104101": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1427501093": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_721809445": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_720760869": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_686157861": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1418846278": {
    "mr": 120,
@@ -9519,64 +9519,64 @@
    "src": "tu-mr-const"
   },
   "armor_1581111167": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1546508159": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1377687423": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1343084415": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1476253567": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1148995216": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1517045392": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1482442384": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1582057104": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1547454096": {
-   "m": 5,
-   "mon": "天迴龍",
+   "mr": 180,
+   "mon": "天迴龍（傀異克服）",
    "c": "confirmed",
-   "src": "quest-star+verified"
+   "src": "tu-mr-const"
   },
   "armor_1595344668": {
    "mr": 10,
