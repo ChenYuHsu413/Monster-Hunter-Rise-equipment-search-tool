@@ -336,6 +336,21 @@ export type ReservedSlots = {
   1: number;
 };
 
+/**
+ * 玩家遊戲進度（解放條件篩選用）。各軸獨立，未填＝該軸為 0。
+ * 對應 unlocks.json 條目的多軸語意：任一軸達標即視為可製作。
+ */
+export type PlayerProgress = {
+  /** 村莊任務進度（已解放的最高★，0-6）。 */
+  village?: number;
+  /** 集會所任務進度（已解放的最高★，1-3 初階＝低位、4-8 進階＝上位）。 */
+  hub?: number;
+  /** Master 集會所任務進度（MR 劇情章節★，0-6）。 */
+  mrChapter?: number;
+  /** MR 等級（通關後的數字等級，TU 魔物解放門檻用）。 */
+  mrLevel?: number;
+};
+
 export type SearchMode = "fast" | "exact" | "greedy";
 
 /** 武器搜尋模式：fixed = 固定指定武器；search = 從同類型武器中搜尋。 */
@@ -357,6 +372,12 @@ export type BuildSearchRequest = {
   minResistances?: Partial<Record<ElementResistanceKey, number>>;
   /** 裝備 rarity 上限（依 preset 階段限制取得門檻，同時套用於防具與 search 模式武器；未指定＝不限）。固定部位/武器不受限。 */
   maxRarity?: number;
+  /**
+   * 玩家遊戲進度（解放條件精確篩選，rarity 限裝的精確化替代）。
+   * 指定且 deps 帶有 unlocks 資料時，候選池濾除進度尚未解放的裝備；
+   * 未指定＝行為與既有搜尋完全相同。固定部位/武器不受限。
+   */
+  progress?: PlayerProgress;
   /** 屬攻武器流派：候選武器評分以屬性值優先；EFR 排名納入屬性傷害。未指定時退回依 autoRules 推斷。 */
   preferElement?: boolean;
   /** 排名權重（傷害/舒適/彈性）。未指定時由呼叫端依 preset tier 帶入或用 DEFAULT_SCORE_PROFILE。 */

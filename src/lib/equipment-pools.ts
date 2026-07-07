@@ -14,12 +14,14 @@ import { slotValue } from "./slot-utils";
 /**
  * 依部位分組所有防具，並套用排除清單。
  * maxRarity 給定時，濾除 rarity 超過上限的防具（依 preset 階段限制取得門檻）；
- * 固定部位在 applyFixedParts 直接以 id 帶入，不受此上限影響。
+ * craftable 給定時，濾除進度尚未解放的防具（解放條件精確篩選，見 unlocks.ts）；
+ * 固定部位在 applyFixedParts 直接以 id 帶入，不受兩者影響。
  */
 export function buildEquipmentPools(
   armors: ArmorPiece[],
   excluded?: ExcludedItems,
-  maxRarity?: number
+  maxRarity?: number,
+  craftable?: (id: string) => boolean
 ): EquipmentPools {
   const excludeSet = new Set(excluded?.armorIds ?? []);
   const pools = {
@@ -32,6 +34,7 @@ export function buildEquipmentPools(
   for (const a of armors) {
     if (excludeSet.has(a.id)) continue;
     if (maxRarity != null && (a.rarity ?? 0) > maxRarity) continue;
+    if (craftable && !craftable(a.id)) continue;
     if (pools[a.part]) pools[a.part].push(a);
   }
   return pools;
@@ -235,6 +238,8 @@ export function buildWeaponPool(opts: {
   preferElement?: boolean;
   /** 裝備 rarity 上限（依 preset 階段限制取得門檻）。固定武器不受限。 */
   maxRarity?: number;
+  /** 進度解放篩選（見 unlocks.ts）。固定武器不受限。 */
+  craftable?: (id: string) => boolean;
 }): Weapon[] {
   const {
     weapons,
@@ -249,6 +254,7 @@ export function buildWeaponPool(opts: {
     elementFilter,
     preferElement,
     maxRarity,
+    craftable,
   } = opts;
 
   if (weaponSearchMode === "fixed") {
@@ -263,7 +269,8 @@ export function buildWeaponPool(opts: {
       w.weaponType === weaponType &&
       !excluded.has(w.id) &&
       (!elementFilter || w.element?.type === elementFilter) &&
-      (maxRarity == null || (w.rarity ?? 0) <= maxRarity)
+      (maxRarity == null || (w.rarity ?? 0) <= maxRarity) &&
+      (!craftable || craftable(w.id))
   );
   const cap = mode === "greedy" ? 2 : mode === "fast" ? 3 : 4;
   return candidates

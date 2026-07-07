@@ -14,6 +14,7 @@ import {
   skillIsSpecial as defaultSkillIsSpecial,
 } from "./data";
 import type { GameData } from "./game-data";
+import { isCraftable, type UnlockEntry } from "./unlocks";
 import {
   applyFixedParts,
   buildEquipmentPools,
@@ -40,6 +41,8 @@ export type SearchDeps = {
   skillIsSpecial: Record<string, boolean>;
   weaponById: Record<string, Weapon>;
   weapons: Weapon[];
+  /** 解放條件資料（可選）。與 request.progress 同時給定時啟用進度篩選。 */
+  unlocks?: Record<string, UnlockEntry>;
 };
 
 /**
@@ -48,7 +51,9 @@ export type SearchDeps = {
  */
 export function createSearchDeps(
   gameData: GameData,
-  extraArmors: ArmorPiece[] = []
+  extraArmors: ArmorPiece[] = [],
+  /** 解放條件資料（loadUnlocks() 的 entries）；給定後 request.progress 才會生效。 */
+  unlocks?: Record<string, UnlockEntry>
 ): SearchDeps {
   let armors = gameData.armors;
   let armorById = gameData.armorById;
@@ -65,6 +70,7 @@ export function createSearchDeps(
     decorationsBySkill: defaultDecosBySkill,
     skillMax: defaultSkillMax,
     skillIsSpecial: defaultSkillIsSpecial,
+    ...(unlocks ? { unlocks } : {}),
   };
 }
 
@@ -131,6 +137,15 @@ export function searchBuilds(
   // 護石：固定護石即使用者輸入的護石，兩者在第一版等價
   const effectiveCharm: Charm = fixedParts.charm ?? charm;
 
+  // 進度解放篩選：request.progress 與 deps.unlocks 同時給定才啟用（旗標疊加，
+  // 未啟用時行為與既有搜尋完全相同）。固定部位/武器照舊不受限。
+  const progress = request.progress;
+  const unlockMap = deps.unlocks;
+  const craftable =
+    progress && unlockMap
+      ? (id: string) => isCraftable(unlockMap[id], progress)
+      : undefined;
+
   // 武器候選池：fixed → 單一指定武器；search → 同類型武器依分數取前 N
   const weaponPool = buildWeaponPool({
     weapons: deps.weapons,
@@ -145,17 +160,19 @@ export function searchBuilds(
     elementFilter,
     preferElement,
     maxRarity: request.maxRarity,
+    craftable,
   });
   // 後援：無任何武器候選（無資料或全被排除）時，退回舊版手動洞數
   const weaponCandidates: (Weapon | undefined)[] =
     weaponPool.length > 0 ? weaponPool : [undefined];
   const weaponFixed = weaponSearchMode === "fixed";
 
-  // 防具基礎池：分組（依 rarity 上限限制取得門檻）→ 排除 → 固定
+  // 防具基礎池：分組（依 rarity 上限/進度解放限制取得門檻）→ 排除 → 固定
   const basePools0 = buildEquipmentPools(
     deps.armors,
     excludedItems,
-    request.maxRarity
+    request.maxRarity,
+    craftable
   );
   const basePools = applyFixedParts(basePools0, fixedParts, deps.armorById);
 
