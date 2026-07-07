@@ -246,7 +246,7 @@ async function fetchText(url, tries = 3) {
   throw new Error(`failed: ${url}`);
 }
 
-/** 詳細頁磁碟快取（scripts/.kiranico-cache/，已 gitignore）：全量掃描 5544 頁，重跑免重抓。 */
+/** 詳細頁磁碟快取（scripts/.kiranico-cache/，已 gitignore，~736MB）：重跑免重抓。 */
 const CACHE_DIR = path.join(__dirname, ".kiranico-cache");
 fs.mkdirSync(CACHE_DIR, { recursive: true });
 async function fetchTextCached(url, key, tries = 2) {
@@ -256,6 +256,23 @@ async function fetchTextCached(url, key, tries = 2) {
   fs.writeFileSync(file, html);
   return html;
 }
+
+/**
+ * 素材快照（scripts/item-materials.json，**進版控**，~1-2MB）：
+ * 每件裝備解析後的（素材, 數量）清單。換機開發 clone 即用、零抓取；
+ * HTML 快取存在時以其為準並於掃描後重寫快照。破曉已停更（TU5 為最終版），
+ * 素材資料穩定。格式：{ id: { f: [[素材,數量],…], u: [[…]] } }（f=生產, u=強化）。
+ */
+const MATS_SNAPSHOT_FILE = path.join(__dirname, "item-materials.json");
+function loadMatsSnapshot() {
+  try {
+    return JSON.parse(fs.readFileSync(MATS_SNAPSHOT_FILE, "utf8"));
+  } catch {
+    return {};
+  }
+}
+const toPairs = (list) => list.map((m) => [m.name, m.qty]);
+const fromPairs = (pairs) => (pairs ?? []).map(([name, qty]) => ({ name, qty }));
 
 /** 同 import-kiranico：抓大型 + 小型魔物名單，依名稱長度遞減排序。 */
 async function fetchMonsterNames() {
@@ -396,7 +413,10 @@ async function main() {
   //     回填只用通用素材（礦石/骨等）的 rarity 近似條目。
   const allItems = [...armors, ...weapons];
   const itemMats = new Map(); // id -> {forge, upgrade}
-  console.log(`→ 全量素材掃描（${allItems.length} 件詳細頁，快取於 scripts/.kiranico-cache）`);
+  const matsSnapshot = loadMatsSnapshot();
+  console.log(
+    `→ 全量素材掃描（${allItems.length} 件；來源優先序：HTML 快取 → 素材快照${Object.keys(matsSnapshot).length ? `（${Object.keys(matsSnapshot).length} 件可用）` : "（無）"} → 線上抓取）`
+  );
   const unknownMats = new Set();
   let gated = 0;
   let sourced = 0;
@@ -407,15 +427,23 @@ async function main() {
     async (x) => {
       const kind = x.id.startsWith("armor_") ? "armors" : "weapons";
       const numId = x.id.replace(/^(armor|weapon)_/, "");
-      let html;
-      try {
-        html = await fetchTextCached(`${BASE}/${kind}/${numId}`, x.id);
-      } catch {
-        fetchFailed++;
-        return;
+      let forge;
+      let upgrade;
+      const cached = fs.existsSync(path.join(CACHE_DIR, x.id + ".html"));
+      if (!cached && matsSnapshot[x.id]) {
+        forge = fromPairs(matsSnapshot[x.id].f);
+        upgrade = fromPairs(matsSnapshot[x.id].u);
+      } else {
+        let html;
+        try {
+          html = await fetchTextCached(`${BASE}/${kind}/${numId}`, x.id);
+        } catch {
+          fetchFailed++;
+          return;
+        }
+        forge = sectionMaterials(html, "生產素材", "強化素材");
+        upgrade = kind === "weapons" ? sectionMaterials(html, "強化素材") : [];
       }
-      const forge = sectionMaterials(html, "生產素材", "強化素材");
-      const upgrade = kind === "weapons" ? sectionMaterials(html, "強化素材") : [];
       itemMats.set(x.id, { forge, upgrade });
       // (1)(2) 僅適用 MR 非 confirmed
       if (x.rankLabel !== "MR" || entries[x.id].c === "confirmed") return;
@@ -476,6 +504,21 @@ async function main() {
   if (unknownMats.size) {
     console.warn(`  ⚠ 未知傀異素材（以 A5+ 保守處理）：${[...unknownMats].join("、")}`);
   }
+
+  // 重寫素材快照（一物件一行 compact，diff 友善）
+  const snapOut = {};
+  for (const [id, m] of itemMats) {
+    snapOut[id] = { f: toPairs(m.forge), u: toPairs(m.upgrade) };
+  }
+  fs.writeFileSync(
+    MATS_SNAPSHOT_FILE,
+    "{\n" +
+      Object.entries(snapOut)
+        .map(([id, v]) => `${JSON.stringify(id)}:${JSON.stringify(v)}`)
+        .join(",\n") +
+      "\n}\n"
+  );
+  console.log(`  素材快照已寫入 scripts/item-materials.json（${itemMats.size} 件）`);
 
   // ---- 素材時期自舉 ----
   // 素材取得期 = 各軸上「用到它的可信裝備門檻」最小值（裝備做得出 ⟹ 素材拿得到）。
