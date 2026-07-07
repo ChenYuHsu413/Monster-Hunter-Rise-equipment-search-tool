@@ -102,6 +102,18 @@ function monsterOverrideFor(nameZh) {
 }
 
 /**
+ * 人工驗證通過的推導條目（名稱樣式）：推導值經社群/攻略站查證無誤，
+ * 信心度升為 confirmed（值不變）。與 MANUAL_ENTRY_OVERRIDES 的差別：
+ * 這裡只升級信心度，不覆寫內容。
+ */
+const VERIFIED_INFERRED = [
+  /^神德/, // 天迴龍主線 M5（Game8：M5 爵銀龍後兩關鍵任務即開）
+  /^永愛/,
+  /^雪花之瓊妃抱擁改$/, // 素材實查：冰人魚龍凍爪（M3）+ 通用素材
+  /^雪花之瓊妃呼喚改$/, // 素材實查：鋼龍剛爪（M5）
+];
+
+/**
  * 逐件人工覆寫（最後套用，蓋過所有推導）。社群驗證過的完整條目。
  * 用於單件推導攔不住的複合案例——目前主要是「強化樹門檻傳播」缺口：
  * 本階素材門檻低、但前一階武器的門檻更高（強化鏈繞不過去）。
@@ -191,13 +203,28 @@ async function mapConcurrent(items, limit, fn, onProgress) {
   return results;
 }
 
-/** 詳細頁某區段（startLabel 起、endLabel 止）內的素材名清單。 */
+/** 詳細頁某區段（startLabel 起、endLabel 止）內的（素材名, 數量）清單。 */
 function sectionMaterials(html, startLabel, endLabel) {
   const s = html.indexOf(startLabel);
   if (s < 0) return [];
   const end = endLabel ? html.indexOf(endLabel, s) : -1;
   const seg = html.slice(s, end < 0 ? s + 6000 : end);
-  return [...seg.matchAll(/data\/items\/\d+">([^<]+)</g)].map((m) => m[1].trim());
+  // 以位置配對素材連結與其後的 xN 數量（缺數量預設 1），同 import-kiranico
+  const out = [];
+  const re = /data\/items\/\d+">([^<]+)<|>x(\d+)</g;
+  let m;
+  let pending = null;
+  while ((m = re.exec(seg))) {
+    if (m[1] != null) {
+      if (pending) out.push({ name: pending, qty: 1 });
+      pending = m[1].trim();
+    } else if (pending) {
+      out.push({ name: pending, qty: Number(m[2]) });
+      pending = null;
+    }
+  }
+  if (pending) out.push({ name: pending, qty: 1 });
+  return out;
 }
 
 async function fetchText(url, tries = 3) {
@@ -354,6 +381,7 @@ async function main() {
   console.log(`→ 傀異素材門檻掃描（R9+ MR 非 confirmed，共 ${candidates.length} 件詳細頁）`);
   const unknownMats = new Set();
   let gated = 0;
+  let sourced = 0;
   let fetchFailed = 0;
   await mapConcurrent(
     candidates,
@@ -375,29 +403,70 @@ async function main() {
       let best = Infinity;
       let bestNote = null;
       for (const p of paths) {
-        const [mr, note] = afflictedGate(p, unknownMats);
+        const [mr, note] = afflictedGate(p.map((m) => m.name), unknownMats);
         if (mr < best) {
           best = mr;
           bestNote = note;
         }
       }
-      if (best === 0 || best === Infinity) return; // 存在不需傀異素材的路徑
-      const e = entries[x.id];
-      entries[x.id] = {
-        mr: best,
-        ...(bestNote ? { note: bestNote } : {}),
-        ...(e.mon ? { mon: e.mon } : {}),
-        c: "inferred",
-        src: "anomaly-material",
-      };
-      gated++;
+      if (best > 0 && best < Infinity) {
+        const e = entries[x.id];
+        entries[x.id] = {
+          mr: best,
+          ...(bestNote ? { note: bestNote } : {}),
+          ...(e.mon ? { mon: e.mon } : {}),
+          c: "inferred",
+          src: "anomaly-material",
+        };
+        gated++;
+        return;
+      }
+      // 來源補判：無傀異門檻、且仍為 rarity 近似者，以生產＋強化素材
+      // 重新歸屬來源魔物（import-kiranico 的 sourceMonster 只看生產素材，
+  // 升級型武器生產欄常為空，是「來源：-」的主因）。
+      if (entries[x.id].src !== "rarity-approx") return;
+      const mats = forge.length > 0 ? forge : upgrade;
+      const tally = {};
+      let attributed = 0;
+      for (const { name, qty } of mats) {
+        const mon = monstersByLen.find((m) => name.startsWith(m));
+        if (mon) {
+          tally[mon] = (tally[mon] ?? 0) + qty;
+          attributed += qty;
+        }
+      }
+      let topMon;
+      let topQty = 0;
+      for (const [m, q] of Object.entries(tally)) {
+        if (q > topQty) {
+          topQty = q;
+          topMon = m;
+        }
+      }
+      if (!topMon || topQty / attributed < 0.6) return; // 無主導魔物
+      const derived = unlockEntry({ ...x, sourceMonster: topMon }, tracks);
+      if (derived.src === "rarity-approx") return; // 該魔物也推不出星級
+      entries[x.id] = { ...derived, src: "material-source" };
+      sourced++;
     },
     (done, total) => console.log(`  ...${done}/${total}`)
   );
-  console.log(`  完成：${gated} 件套用傀異門檻，${fetchFailed} 件抓取失敗`);
+  console.log(`  完成：${gated} 件套用傀異門檻，${sourced} 件由素材補判來源，${fetchFailed} 件抓取失敗`);
   if (unknownMats.size) {
     console.warn(`  ⚠ 未知傀異素材（以 A5+ 保守處理）：${[...unknownMats].join("、")}`);
   }
+
+  // 人工驗證通過的推導條目 → 升 confirmed（值不變）
+  let verifiedApplied = 0;
+  for (const item of [...armors, ...weapons]) {
+    const e = entries[item.id];
+    if (e.c === "inferred" && VERIFIED_INFERRED.some((re) => re.test(item.nameZh))) {
+      e.c = "confirmed";
+      e.src += "+verified";
+      verifiedApplied++;
+    }
+  }
+  if (verifiedApplied) console.log(`→ 人工驗證升級：${verifiedApplied} 件`);
 
   // 逐件人工覆寫（最後套用）
   let manualApplied = 0;

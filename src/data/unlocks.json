@@ -7129,23 +7129,27 @@
   },
   "armor_1854946666": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "妃蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1820343658": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "天狗獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1651522922": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1616919914": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1716534634": {
    "m": 3,
@@ -7154,53 +7158,63 @@
   },
   "armor_1869180171": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "妃蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1834577163": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "天狗獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1665756427": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1631153419": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1730768139": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "泡狐龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1749212456": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "妃蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1848827176": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "天狗獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1814224168": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1645403432": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1610800424": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "泡狐龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1763970249": {
    "m": 3,
@@ -7587,78 +7601,93 @@
   },
   "armor_290397875": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "怨虎龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_390012595": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "將軍蟹",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_355409587": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "妃蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1797201587": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "泥翁龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1762598579": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "剛纏獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1933375893": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "黑蝕龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1898772885": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "轟龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1998387605": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "火龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1963784597": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "雌火龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1962736021": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "岩龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2081827210": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "黑蝕龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1913006474": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "轟龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1911957898": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "火龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2011572618": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "雌火龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1976969610": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "岩龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_33729762": {
    "m": 2,
@@ -7691,29 +7720,34 @@
    "src": "quest-star"
   },
   "armor_2066614476": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 1,
+   "mon": "大名蟹",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2032011468": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 1,
+   "mon": "水獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2131626188": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 1,
+   "mon": "傘鳥",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2130577612": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 1,
+   "mon": "河童蛙",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2095974604": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 1,
+   "mon": "迅猛龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1678211309": {
    "m": 3,
@@ -7737,8 +7771,9 @@
   },
   "armor_2110224621": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "狡狗龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1000642436": {
    "m": 5,
@@ -7802,28 +7837,33 @@
   },
   "armor_2140081913": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "怨虎龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2105478905": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "妃蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1936658169": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "雪鬼獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1902055161": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2001669881": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "泥翁龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_78709465": {
    "m": 5,
@@ -8007,103 +8047,123 @@
   },
   "armor_1996376688": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "冰人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1961773680": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "熾妃蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1256082032": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "熔翁龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1221479024": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1321093744": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "棘龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2010626577": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "冰人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1976023569": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "熾妃蜘蛛",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1270331921": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "熔翁龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1235728913": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1335343633": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "棘龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2129631659": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "電龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2095028651": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "泡狐龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1926207915": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "冰人魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1891604907": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "將軍蟹",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1991219627": {
    "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "剛纏獸",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2143340872": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "蠻顎龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2108737864": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "毒妖鳥",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1939917128": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "泥魚龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1905314120": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 2,
+   "mon": "飛雷龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2004928840": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 1,
+   "mon": "搔鳥",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_349613199": {
    "m": 1,
@@ -8136,9 +8196,10 @@
    "src": "quest-star"
   },
   "armor_1918601716": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "千刃龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1883998708": {
    "m": 3,
@@ -8146,44 +8207,52 @@
    "src": "rarity-approx"
   },
   "armor_1983613428": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "轟龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1949010420": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 5,
+   "mon": "金獅子",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1243318772": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 5,
+   "mon": "炎王龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1619740736": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1719355456": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1684752448": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "棘龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2052802624": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "棘龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2018199616": {
-   "m": 3,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 4,
+   "mon": "冰狼龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1872965530": {
    "m": 3,
@@ -8906,8 +8975,9 @@
   },
   "armor_2023373161": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "天迴龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2122987881": {
    "m": 5,
@@ -8916,23 +8986,27 @@
   },
   "armor_2088384873": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "爆鱗龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1919564137": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "霞龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1884961129": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "金獅子",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2037606670": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "天迴龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_2137221390": {
    "m": 5,
@@ -8941,18 +9015,21 @@
   },
   "armor_2102618382": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "爆鱗龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1933797646": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "霞龍",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_1899194638": {
    "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mon": "金獅子",
+   "c": "inferred",
+   "src": "material-source"
   },
   "armor_244759617": {
    "m": 5,
@@ -9417,62 +9494,62 @@
   "armor_1581111167": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1546508159": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1377687423": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1343084415": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1476253567": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1148995216": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1517045392": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1482442384": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1582057104": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1547454096": {
    "m": 5,
    "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "armor_1595344668": {
    "mr": 10,
@@ -9959,8 +10036,8 @@
   "weapon_295248775": {
    "m": 5,
    "mon": "鋼龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "weapon_309498788": {
    "mr": 50,
@@ -13938,8 +14015,8 @@
   "weapon_720458848": {
    "m": 3,
    "mon": "冰人魚龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "c": "confirmed",
+   "src": "quest-star+verified"
   },
   "weapon_734692353": {
    "mr": 50,
