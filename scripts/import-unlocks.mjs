@@ -62,6 +62,36 @@ const TU_MONSTER_MR = {
 };
 
 /**
+ * 名稱樣式 → 來源魔物覆寫（依序比對，先中先贏）。
+ * 變種/傀異克服魔物的素材名稱前綴與 Kiranico 魔物名單不一致，
+ * sourceMonster 啟發式會誤判為基底魔物（例：混沌黑蝕裝備被判成黑蝕龍、
+ * 禍鎧/鎧怨鬼被判成怨虎龍、赫耀・曆來源判定失敗落到 rarity 近似），
+ * 造成解放章節嚴重低估（社群實測回報）。此表以裝備名稱樣式強制指定來源。
+ * 注意「･曆」要在「赫耀」之前（傀異克服天彗龍 vs 秘紅赫耀）。
+ */
+const NAME_MONSTER_OVERRIDES = [
+  [/曆/, "天彗龍（傀異克服）"], // 赫耀・曆（Risen 天彗龍裝）
+  [/霞龍醒/, "霞龍（傀異克服）"],
+  [/脈動鋼龍/, "鋼龍（傀異克服）"],
+  [/脈動帝王/, "炎王龍（傀異克服）"],
+  // 混沌黑蝕防具 + 「○or○」武器（混沌or法律等 14 把）。
+  // 不可用寬鬆的 /混沌/：奇怪龍的混沌之弓系列、村裝「混沌的」系列會誤中。
+  [/混沌黑蝕|or/, "混沌黑蝕龍"],
+  // 僅「・怨」是嗟怨轟天裝：基底怨虎龍裝本身就叫 禍鎧（村）/ 禍鎧・霸（上位）。
+  [/鎧怨鬼|鎧幽鬼|禍鎧･怨/, "嗟怨轟天怨虎龍"],
+  // 僅「鳴神○○真」是百龍之源（Allmother）裝：基底鳴神/雷鳴神武器屬一般雷神龍。
+  [/^鳴神.*真$/, "百龍之源雷神龍"],
+  [/赫耀/, "秘紅赫耀的天彗龍"], // 基底 R7 赫耀（集8★）與 R10 赫耀・真（M6）；・曆已被上面攔截
+];
+
+function monsterOverrideFor(nameZh) {
+  for (const [re, mon] of NAME_MONSTER_OVERRIDES) {
+    if (re.test(nameZh)) return mon;
+  }
+  return undefined;
+}
+
+/**
  * rarity → 里程碑近似映射（unverified 後備）。
  * 沿用 rankByRarity 的三段劃分再細分：R1-3 村/低位、R4-7 上位、R8-10 MR。
  */
@@ -151,7 +181,7 @@ function earliestByMonster(quests) {
 
 /** 單件裝備 → 解放條目。 */
 function unlockEntry(item, tracks) {
-  const mon = item.sourceMonster;
+  const mon = monsterOverrideFor(item.nameZh) ?? item.sourceMonster;
   const rank = item.rankLabel; // 村 / HR / MR（rarity 推算，見 import-kiranico）
   const fallback = () => ({
     ...RARITY_FALLBACK[item.rarity] ?? { m: 6 },
@@ -198,6 +228,11 @@ async function main() {
   for (const name of Object.keys(TU_MONSTER_MR)) {
     if (!monsterSet.has(name)) {
       console.warn(`  ⚠ TU_MONSTER_MR 鍵名不在魔物名單中：「${name}」（不會被套用）`);
+    }
+  }
+  for (const [, name] of NAME_MONSTER_OVERRIDES) {
+    if (!monsterSet.has(name)) {
+      console.warn(`  ⚠ NAME_MONSTER_OVERRIDES 魔物名不在名單中：「${name}」`);
     }
   }
 

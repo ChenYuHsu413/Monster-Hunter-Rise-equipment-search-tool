@@ -4784,29 +4784,34 @@
    "src": "quest-star"
   },
   "armor_42218768": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_7615760": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_107230480": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_72627472": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_440677648": {
-   "h": 7,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "h": 8,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_922309678": {
    "h": 8,
@@ -8780,59 +8785,64 @@
    "src": "quest-star"
   },
   "armor_405615482": {
-   "m": 5,
-   "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "百龍之源雷神龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_505230202": {
-   "m": 5,
-   "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "百龍之源雷神龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_470627194": {
-   "m": 5,
-   "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "百龍之源雷神龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_335360890": {
-   "m": 5,
-   "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "百龍之源雷神龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_300757882": {
-   "m": 5,
-   "mon": "雷神龍",
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "百龍之源雷神龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_612222885": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_980273061": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_945670053": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_1045284773": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_1010681765": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "m": 6,
+   "mon": "秘紅赫耀的天彗龍",
+   "c": "inferred",
+   "src": "quest-star"
   },
   "armor_1548317998": {
    "m": 5,
@@ -8865,34 +8875,34 @@
    "src": "quest-star"
   },
   "armor_1144685569": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1512735745": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1478132737": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1577747457": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1576698881": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_2023373161": {
    "m": 5,
@@ -9150,34 +9160,34 @@
    "src": "tu-mr-const"
   },
   "armor_733524129": {
-   "m": 5,
-   "mon": "霞龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 110,
+   "mon": "霞龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_698921121": {
-   "m": 5,
-   "mon": "霞龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 110,
+   "mon": "霞龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_798535841": {
-   "m": 5,
-   "mon": "霞龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 110,
+   "mon": "霞龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_763932833": {
-   "m": 5,
-   "mon": "霞龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 110,
+   "mon": "霞龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_595112097": {
-   "m": 5,
-   "mon": "霞龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 110,
+   "mon": "霞龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_586559913": {
    "m": 5,
@@ -9185,34 +9195,34 @@
    "src": "rarity-approx"
   },
   "armor_1447854084": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1413251076": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_707559428": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_672956420": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_772571140": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1462104101": {
    "m": 4,
@@ -9245,64 +9255,64 @@
    "src": "quest-star"
   },
   "armor_1418846278": {
-   "m": 5,
-   "mon": "鋼龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 120,
+   "mon": "鋼龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_713154630": {
-   "m": 5,
-   "mon": "鋼龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 120,
+   "mon": "鋼龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_678551622": {
-   "m": 5,
-   "mon": "鋼龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 120,
+   "mon": "鋼龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_778166342": {
-   "m": 5,
-   "mon": "鋼龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 120,
+   "mon": "鋼龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_743563334": {
-   "m": 5,
-   "mon": "鋼龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 120,
+   "mon": "鋼龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1433096295": {
-   "m": 5,
-   "mon": "炎王龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 140,
+   "mon": "炎王龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_727404647": {
-   "m": 5,
-   "mon": "炎王龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 140,
+   "mon": "炎王龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_692801639": {
-   "m": 5,
-   "mon": "炎王龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 140,
+   "mon": "炎王龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_792416359": {
-   "m": 5,
-   "mon": "炎王龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 140,
+   "mon": "炎王龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_757813351": {
-   "m": 5,
-   "mon": "炎王龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 140,
+   "mon": "炎王龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_762970380": {
    "m": 5,
@@ -9340,29 +9350,34 @@
    "src": "tu-mr-const"
   },
   "armor_1552103353": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 160,
+   "mon": "天彗龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1383282617": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 160,
+   "mon": "天彗龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1348679609": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 160,
+   "mon": "天彗龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1448294329": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 160,
+   "mon": "天彗龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_1413691321": {
-   "m": 5,
-   "c": "unverified",
-   "src": "rarity-approx"
+   "mr": 160,
+   "mon": "天彗龍（傀異克服）",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "armor_791978178": {
    "m": 5,
@@ -10724,10 +10739,10 @@
    "src": "quest-star"
   },
   "weapon_1287641823": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_2090482025": {
    "m": 4,
@@ -10759,10 +10774,10 @@
    "src": "quest-star"
   },
   "weapon_219843620": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_3593430": {
    "h": 7,
@@ -12486,10 +12501,10 @@
    "src": "quest-star"
   },
   "weapon_1223576176": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_2099120332": {
    "m": 4,
@@ -12521,10 +12536,10 @@
    "src": "quest-star"
   },
   "weapon_114564227": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_163757007": {
    "h": 7,
@@ -13985,10 +14000,10 @@
    "src": "quest-star"
   },
   "weapon_1553808153": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1311390057": {
    "m": 4,
@@ -14020,10 +14035,10 @@
    "src": "quest-star"
   },
   "weapon_158224919": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_479724791": {
    "h": 7,
@@ -15844,10 +15859,10 @@
    "src": "quest-star"
   },
   "weapon_1952069993": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1744256889": {
    "m": 4,
@@ -15879,10 +15894,10 @@
    "src": "quest-star"
   },
   "weapon_143028957": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_31974409": {
    "h": 7,
@@ -17548,10 +17563,10 @@
    "src": "quest-star"
   },
   "weapon_1126410930": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1930299596": {
    "m": 4,
@@ -17583,10 +17598,10 @@
    "src": "quest-star"
   },
   "weapon_467840226": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1120125699": {
    "h": 4,
@@ -19154,10 +19169,10 @@
    "src": "quest-star"
   },
   "weapon_1547688671": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1339349295": {
    "m": 4,
@@ -19189,10 +19204,10 @@
    "src": "quest-star"
   },
   "weapon_485485670": {
-   "m": 5,
-   "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_310904055": {
    "h": 7,
@@ -20815,10 +20830,10 @@
    "src": "quest-star"
   },
   "weapon_1091807922": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1929251020": {
    "m": 4,
@@ -20850,10 +20865,10 @@
    "src": "quest-star"
   },
   "weapon_101800967": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_95515796": {
    "h": 7,
@@ -22498,10 +22513,10 @@
    "src": "quest-star"
   },
   "weapon_1602644798": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1331743048": {
    "m": 4,
@@ -22533,10 +22548,10 @@
    "src": "quest-star"
   },
   "weapon_878150196": {
-   "m": 5,
-   "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_423367850": {
    "h": 7,
@@ -24148,10 +24163,10 @@
    "src": "quest-star"
   },
   "weapon_1517279967": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1946474799": {
    "m": 4,
@@ -24183,10 +24198,10 @@
    "src": "quest-star"
   },
   "weapon_80383012": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_131589129": {
    "h": 7,
@@ -25699,10 +25714,10 @@
    "src": "quest-star"
   },
   "weapon_779351078": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1583237744": {
    "m": 4,
@@ -25734,10 +25749,10 @@
    "src": "quest-star"
   },
   "weapon_1668390283": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1676338745": {
    "h": 7,
@@ -27329,10 +27344,10 @@
    "src": "quest-star"
   },
   "weapon_1455594331": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1156733399": {
    "m": 4,
@@ -27364,10 +27379,10 @@
    "src": "quest-star"
   },
   "weapon_345603277": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_396809430": {
    "h": 7,
@@ -29049,10 +29064,10 @@
    "src": "quest-star"
   },
   "weapon_1359460881": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1299572742": {
    "m": 4,
@@ -29084,10 +29099,10 @@
    "src": "quest-star"
   },
   "weapon_858728410": {
-   "m": 4,
-   "mon": "黑蝕龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1366884999": {
    "v": 3,
@@ -30643,10 +30658,10 @@
    "src": "quest-star"
   },
   "weapon_786955141": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1589795287": {
    "m": 4,
@@ -30678,10 +30693,10 @@
    "src": "quest-star"
   },
   "weapon_1794985120": {
-   "m": 5,
-   "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1741350457": {
    "h": 7,
@@ -32200,10 +32215,10 @@
    "src": "quest-star"
   },
   "weapon_582046816": {
-   "m": 3,
-   "mon": "怨虎龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 100,
+   "mon": "嗟怨轟天怨虎龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_1548634736": {
    "m": 4,
@@ -32235,10 +32250,10 @@
    "src": "quest-star"
   },
   "weapon_395402247": {
-   "m": 5,
-   "mon": "天迴龍",
-   "c": "inferred",
-   "src": "quest-star"
+   "mr": 10,
+   "mon": "混沌黑蝕龍",
+   "c": "confirmed",
+   "src": "tu-mr-const"
   },
   "weapon_2059601639": {
    "h": 7,
