@@ -51,7 +51,7 @@ const nameMap = (() => {
     return JSON.parse(fs.readFileSync(MAP_FILE, "utf8"));
   } catch {
     console.warn("⚠ data/jp-name-map.json 不存在，所有 id 將為 null（建表後重跑回填）");
-    return { skills: {}, armors: {}, decorations: {}, weapons: {}, alternatives: {} };
+    return { skills: {}, armors: {}, decorations: {}, weapons: {}, alternatives: {}, rampageSkills: {}, rampageDecorations: {} };
   }
 })();
 const unresolved = new Map(); // `${type}:${ja}` -> {type, rawNameJa, game8Id, count, examples}
@@ -181,8 +181,9 @@ function parseDecoCell(cell) {
     if (m[1] === "自由枠") {
       decos.push({ free: true, slotSize: Number(m[2]), count });
     } else if (m[1].endsWith("系") || m[1].endsWith("竜珠")) {
-      // ○系＝武器百龍珠、○竜珠＝百龍装飾品；專案無此資料，比照獵蟲留原文
-      rampage.push({ rawNameJa: raw, count });
+      // ○竜珠＝百龍裝飾品，對照 Kiranico rampageDecorations；○系（特攻系等）為 Game8
+      // 欄位簡稱、非單一珠名，對不到→unresolved→suggestions（零猜測，保留日文 fallback）。
+      rampage.push({ id: resolve("rampageDecorations", raw), rawNameJa: raw, count });
     } else if (m[1].startsWith("各属性")) {
       // Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，
       // 非單一珠、無法對 ID；標 placeholder，顯示端提示玩家依屬性自選。
@@ -431,7 +432,9 @@ function parseWeaponHH(rows) {
   };
 }
 
-/** 操蟲棍獵蟲表 → { rawNameJa, game8Id, statsRaw }。專案無獵蟲資料，不解析 ID。 */
+/** 操蟲棍獵蟲表 → { rawNameJa, game8Id, statsRaw }。Kiranico 無獵蟲資料頁（ja/zh 導覽列、
+ *  直接路徑、操蟲棍武器詳細頁三入口皆確認無），無法走 ID 對照；此處僅存原文，繁中名由
+ *  顯示端查手動對照檔（尚未實作，見交接文件），非 ID 制。 */
 function parseKinsect(rows) {
   const name = rows[0].cells[0].text;
   let atkType = null;
@@ -462,7 +465,7 @@ const parseRampage = (rows) =>
     .slice(rows[0].cells[0].text === "派生" || rows[0].cells.some((c) => c.text.includes("百竜スキル")) ? 1 : 0)
     .flatMap((r) => r.cells.map((c) => c.text))
     .filter((t) => t && t !== "派生" && !t.includes("百竜スキル"))
-    .map((t) => ({ rawNameJa: t }));
+    .map((t) => ({ id: resolve("rampageSkills", t), rawNameJa: t }));
 
 // ---------- 文章 → builds ----------
 function parseArticle(html, weapon, category, url, errors) {
@@ -635,13 +638,14 @@ const SCHEMA_DOC = {
       "操蟲棍獵蟲推薦（おすすめ猟虫節，僅 insect-glaive）：kinsect[] 陣列。專案無獵蟲資料，故只存 rawNameJa/game8Id/statsRaw（攻撃屬性＋型），不解析內部 ID，顯示端照 fallback 顯示原文。",
   },
   kinsect:
-    "選用欄位（kinsect-list 必有、weapon-list 若同節有獵蟲表則附帶）：獵蟲清單，每筆 { rawNameJa, game8Id, statsRaw }，無 ID 解析。",
+    "選用欄位（kinsect-list 必有、weapon-list 若同節有獵蟲表則附帶）：獵蟲清單，每筆 { rawNameJa, game8Id, statsRaw }，無 ID 解析（Kiranico 無獵蟲資料頁）。繁中名規劃走手動對照檔（尚未實作，非 ID 制）。",
   alternatives:
     "armor 部位的選用欄位：Game8「Aスロ/Bスロ ヘルム」＝兩件擇一。存在時該部位 id=alternatives[0].id（主裝備），alternatives=[{id},…] 為全部可選件。★三階 UI 需將此部位卡片顯示成「A 或 B」、四階匯出以主裝備為預選。由 data/jp-name-overrides.json 的 alternatives 段人工定義（scraper 不自動拆分）；未定義的 A/B 名 id=null 待人工。",
   categories: "階段分類鍵與中文標籤見 scripts/game8-sources.json 的 categories。",
   stageName: "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
   augmentRaw: "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
-  rampageSkills: "百龍技能（rawNameJa 原樣，專案資料無百龍技能清單，不做 ID 解析）。",
+  rampageSkills: "百龍技能：id 對照 src/data/rampage-skills.json（Kiranico rampage-skills 官方繁中）；對不到 id=null 進 unresolved，顯示端 fallback 日文。rawNameJa 保留。",
+  rampageDecos: "武器百龍裝飾品（weapons[].rampageDecos）：○竜珠 id 對照 src/data/rampage-decorations.json（複合鍵 rdeco_{skillNumId}_{slot}）；○系欄位簡稱對不到→null→suggestions。id 僅供顯示查繁中，不進匯出 payload。",
   placeholder:
     "裝飾珠選用旗標：Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，非單一珠、無 ID。顯示端應提示玩家依屬性自選（如火→火炎珠），不當缺漏。",
   errors: "解析失敗的表格（不硬猜），含來源 URL 與表頭預覽，供人工處理。",

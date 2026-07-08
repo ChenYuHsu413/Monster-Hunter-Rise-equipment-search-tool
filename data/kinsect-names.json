@@ -1,0 +1,7 @@
+{
+  "$comment": "獵蟲繁中對照（手動維護空檔）。Kiranico MHRise 無獵蟲資料頁（ja/zh 導覽列、直接猜路徑、操蟲棍武器詳細頁三入口皆確認無），無法走 ID 對照，故不進 jp-name-map 管線，改此手動對照檔（機制同 editorial-translations）。鍵＝Game8 獵蟲表 rawNameJa 原文，值＝官方繁中名（由人工自遊戲抄入）。值為 null 時顯示端 fallback 日文原文並加警告樣式。$ 前綴鍵為 meta，非對照條目。",
+  "グランツビートル": null,
+  "サルヴァースタッグ": null,
+  "オスパーダドゥーレ": null,
+  "ケーニヒゴアビートル": null
+}

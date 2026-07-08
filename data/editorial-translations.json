@@ -1,0 +1,3 @@
+{
+  "$comment": "Game8 編輯用『短標記』繁中對照（手動維護空檔）。鍵＝原文短標記（buildName／stageName／noteRaw 中無句讀點且 <22 字者，候選清單見 data/editorial-strings.json），值＝人工繁中翻譯。值為 null／缺鍵時顯示端 fallback 原文。此檔只譯 Game8 自訂的『欄位標記』，不譯遊戲官方名詞（那些走 Kiranico 繁中／jp-name-map）；成句解說（含。或、或≥22字）為 Game8 編輯評述，顯示端直接排除、不翻譯（勿越過『不爬說明段落』紅線）。$ 前綴鍵為 meta。"
+}

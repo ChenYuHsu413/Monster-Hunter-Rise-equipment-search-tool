@@ -5,19 +5,22 @@
   "scrapedAt": "2026-07-08",
   "generator": "scripts/scrape-game8.js（來源設定 scripts/game8-sources.json）",
   "schemaDoc": {
-   "builds": "配裝清單。所有 skill/armor/decoration/weapon 引用一律存專案內部 ID：armors/weapons/decorations 用資料檔的 id 欄位（armor_*/weapon_*/deco_*），skills 用中文名稱字串（=skills.json 的 name，專案無獨立技能 id）。比對不到時 id=null 且列入頂層 unresolved 清單（補 data/jp-name-map.json 後重跑回填）。rawNameJa=Game8 日文原文，僅供除錯與人工補表；game8Id=Game8 文章數字 ID，為人工補表的穩定鍵。",
+   "builds": "配裝清單。所有 skill/armor/decoration/weapon 引用一律存專案內部 ID：armors/weapons/decorations 用資料檔的 id 欄位（armor_*/weapon_*/deco_*），skills 用中文名稱字串（=skills.json 的 name，專案無獨立技能 id）。比對不到時 id=null 且列入頂層 unresolved 清單（補 data/jp-name-overrides.json 後重跑回填）。rawNameJa=Game8 日文原文，僅供除錯與人工補表；game8Id=Game8 文章數字 ID，為人工補表的穩定鍵。",
+   "syntheticIds": "內部 ID 可能含手工合成條目（deco_manual_* 前綴）：Kiranico 漏收但確實存在的資料由 import-kiranico 的 MANUAL_DECORATIONS 補入，id 無對應 Kiranico 數字。顯示端勿對 id 做數字解析或組 Kiranico 連結（kiranicoUrl 已白名單排除）。",
+   "residualRisk": "殘餘風險（可接受，不另處理）：資料完整性以 Game8 配裝(獨立外部源) vs 專案交叉核對，但『Kiranico 漏收 + Game8 也沒用到』的珠仍偵測不到。這類珠不會出現在推薦配裝、也極少是配裝關鍵珠，故列為已知殘留。",
    "kind": {
     "full-build": "成套配裝：armor 恆為 5 件、slot 依來源列序填 head/chest/arms/waist/legs；可能含 talisman（護石：skills+slots+decorations）、buildDecorations（全裝珠總計，僅上位畢業裝格式——該格式珠不逐部位標示）、skillTotals（發動技能總表，含 required=紅字必須技能、augmentedLevel=傀異錬成後等級）。skillTotals 為 null 時=來源未提供總表（簡易格式），下游需自行從部位 skills 合成或僅顯示部位技能。匯出到配裝器＝完整套裝預選。",
     "armor-pieces": "單件推薦清單（MR 拓荒文常見）：armor 為不定長陣列、slot=null（同部位可能多件並列，如兩頂頭盔擇一）。非成套語義——無護石、無技能總表、無完整發動技能可算。卡片顯示需逐件列出；匯出到配裝器時只能作為部分部位預選，其餘部位留空，行為與 full-build 不同。",
     "weapon-list": "純武器推薦（おすすめ武器文章、簡易格式的候選武器節）：無 armor/talisman。weapons[].noteRaw 保留 H3 標題（含 MR1 等時期標註）。",
     "kinsect-list": "操蟲棍獵蟲推薦（おすすめ猟虫節，僅 insect-glaive）：kinsect[] 陣列。專案無獵蟲資料，故只存 rawNameJa/game8Id/statsRaw（攻撃屬性＋型），不解析內部 ID，顯示端照 fallback 顯示原文。"
    },
-   "kinsect": "選用欄位（kinsect-list 必有、weapon-list 若同節有獵蟲表則附帶）：獵蟲清單，每筆 { rawNameJa, game8Id, statsRaw }，無 ID 解析。",
+   "kinsect": "選用欄位（kinsect-list 必有、weapon-list 若同節有獵蟲表則附帶）：獵蟲清單，每筆 { rawNameJa, game8Id, statsRaw }，無 ID 解析（Kiranico 無獵蟲資料頁）。繁中名規劃走手動對照檔（尚未實作，非 ID 制）。",
    "alternatives": "armor 部位的選用欄位：Game8「Aスロ/Bスロ ヘルム」＝兩件擇一。存在時該部位 id=alternatives[0].id（主裝備），alternatives=[{id},…] 為全部可選件。★三階 UI 需將此部位卡片顯示成「A 或 B」、四階匯出以主裝備為預選。由 data/jp-name-overrides.json 的 alternatives 段人工定義（scraper 不自動拆分）；未定義的 A/B 名 id=null 待人工。",
    "categories": "階段分類鍵與中文標籤見 scripts/game8-sources.json 的 categories。",
    "stageName": "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
    "augmentRaw": "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
-   "rampageSkills": "百龍技能（rawNameJa 原樣，專案資料無百龍技能清單，不做 ID 解析）。",
+   "rampageSkills": "百龍技能：id 對照 src/data/rampage-skills.json（Kiranico rampage-skills 官方繁中）；對不到 id=null 進 unresolved，顯示端 fallback 日文。rawNameJa 保留。",
+   "rampageDecos": "武器百龍裝飾品（weapons[].rampageDecos）：○竜珠 id 對照 src/data/rampage-decorations.json（複合鍵 rdeco_{skillNumId}_{slot}）；○系欄位簡稱對不到→null→suggestions。id 僅供顯示查繁中，不進匯出 payload。",
    "placeholder": "裝飾珠選用旗標：Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，非單一珠、無 ID。顯示端應提示玩家依屬性自選（如火→火炎珠），不當缺漏。",
    "errors": "解析失敗的表格（不硬猜），含來源 URL 與表頭預覽，供人工處理。",
    "unresolved": "比對不到內部 ID 的日文名稱彙總（type/rawNameJa/game8Id/出現次數/example builds）。"
@@ -40,6 +43,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -311,6 +315,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -562,6 +567,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -853,6 +859,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -1122,6 +1129,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -1420,6 +1428,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -1710,6 +1719,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -1977,6 +1987,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -2269,6 +2280,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -2550,6 +2562,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -2849,6 +2862,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -3133,6 +3147,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -3419,6 +3434,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -3739,6 +3755,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -5571,18 +5588,23 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "切れ味変更【壱】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_82213476",
      "rawNameJa": "会心率激化"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -5816,12 +5838,15 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_82213476",
      "rawNameJa": "会心率激化"
     }
    ],
@@ -6049,12 +6074,15 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_82213476",
      "rawNameJa": "会心率激化"
     }
    ],
@@ -6691,9 +6719,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "骨素材②"
     },
     {
+     "id": "rskill_408054401",
      "rawNameJa": "会心率強化Ⅱ"
     }
    ],
@@ -6883,15 +6913,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": null,
      "rawNameJa": "攻撃力強化Ⅱ or 会心率強化Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "雪鬼獣"
     },
     {
+     "id": "rskill_528038624",
      "rawNameJa": "会心率強化Ⅰ"
     }
    ],
@@ -7111,9 +7145,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_408054401",
      "rawNameJa": "会心率強化Ⅱ"
     }
    ],
@@ -7911,6 +7947,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -8166,6 +8203,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -8452,6 +8490,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -8728,6 +8767,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -9031,6 +9071,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -9329,6 +9370,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -9627,6 +9669,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -9936,6 +9979,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -10231,6 +10275,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -14088,36 +14133,47 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "霞龍"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "轟竜"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     },
     {
+     "id": null,
      "rawNameJa": "①"
     },
     {
+     "id": null,
      "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを一発生産するのはNG！)"
     },
     {
+     "id": null,
      "rawNameJa": "②"
     },
     {
+     "id": null,
      "rawNameJa": "③"
     },
     {
+     "id": null,
      "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化して、 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -14292,9 +14348,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石素材"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     }
    ],
@@ -14484,30 +14542,39 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "轟竜"
     },
     {
+     "id": null,
      "rawNameJa": "鉄蟲糸技強化 ※"
     },
     {
+     "id": null,
      "rawNameJa": "①"
     },
     {
+     "id": null,
      "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを生産するのはNG！)"
     },
     {
+     "id": null,
      "rawNameJa": "②"
     },
     {
+     "id": null,
      "rawNameJa": "③"
     },
     {
+     "id": null,
      "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化する。 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成"
     }
    ],
@@ -19239,21 +19306,27 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "ギルド武器"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     },
     {
+     "id": null,
      "rawNameJa": "雌火竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -21044,9 +21117,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "雌火竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -21234,9 +21309,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -22434,6 +22511,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -22753,6 +22831,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -23067,6 +23146,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -23383,6 +23463,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -23711,6 +23792,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -24032,6 +24114,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -24329,6 +24412,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -24628,6 +24712,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -24924,6 +25009,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -25214,6 +25300,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -28653,45 +28740,59 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "アイルー"
     },
     {
+     "id": "rskill_69941095",
      "rawNameJa": "鬼人激化"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "蛮顎竜"
     },
     {
+     "id": "rskill_67000766",
      "rawNameJa": "属性強化【火】Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "泡狐竜"
     },
     {
+     "id": "rskill_243411229",
      "rawNameJa": "属性強化【水】Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "雷狼竜"
     },
     {
+     "id": "rskill_200239249",
      "rawNameJa": "属性強化【雷】Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "氷属性"
     },
     {
+     "id": "rskill_808327178",
      "rawNameJa": "属性強化【氷】Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "天彗龍"
     },
     {
+     "id": null,
      "rawNameJa": "攻撃力強化Ⅲ 竜種特効 天彗龍の魂"
     }
    ],
@@ -29979,27 +30080,35 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "ギルド武器派生"
     },
     {
+     "id": "rskill_243411229",
      "rawNameJa": "属性強化【水】Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "白兎獣"
     },
     {
+     "id": "rskill_928294933",
      "rawNameJa": "属性強化【氷】Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "傘鳥"
     },
     {
+     "id": "rskill_4438520",
      "rawNameJa": "属性強化【火】Ⅰ"
     },
     {
+     "id": null,
      "rawNameJa": "奇怪竜"
     },
     {
+     "id": "rskill_200239249",
      "rawNameJa": "属性強化【雷】Ⅱ"
     }
    ],
@@ -30424,33 +30533,43 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "蛮顎竜"
     },
     {
+     "id": null,
      "rawNameJa": "会心率強化Ⅱ or 属性強化【火】Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "泥爺竜"
     },
     {
+     "id": "rskill_243411229",
      "rawNameJa": "属性強化【水】Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "雷狼竜"
     },
     {
+     "id": "rskill_200239249",
      "rawNameJa": "属性強化【雷】Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "氷属性派生"
     },
     {
+     "id": "rskill_808327178",
      "rawNameJa": "属性強化【氷】Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "ギルド武器派生②"
     },
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     }
    ],
@@ -31477,6 +31596,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -31781,6 +31901,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -32080,6 +32201,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -32374,6 +32496,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -32684,6 +32807,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -32976,6 +33100,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -33270,6 +33395,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -33545,6 +33671,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -33827,6 +33954,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -34115,6 +34243,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【3】",
        "count": 1
       }
@@ -34390,6 +34519,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -34647,6 +34777,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -34932,6 +35063,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -35210,6 +35342,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -35495,6 +35628,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -35773,6 +35907,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -38814,15 +38949,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "轟竜"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -39710,9 +39849,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "骨素材②"
     },
     {
+     "id": "rskill_110172730",
      "rawNameJa": "防御力強化Ⅱ"
     }
    ],
@@ -40740,6 +40881,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -41052,6 +41194,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -41370,6 +41513,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -41670,6 +41814,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -41989,6 +42134,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -46325,30 +46471,39 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "斬れ味変更【壱型】 斬れ味変更【肆型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_278586937",
      "rawNameJa": "旋律変更【攻撃】Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "爆麟竜"
     },
     {
+     "id": "rskill_748441147",
      "rawNameJa": "属性強化【爆破】Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "轟竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "ブルファンゴ"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -46582,12 +46737,15 @@
    ],
    "rampageSkills": [
     {
+     "id": "rskill_1251979832",
      "rawNameJa": "斬れ味変更【壱型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_278586937",
      "rawNameJa": "旋律変更【攻撃】Ⅱ"
     }
    ],
@@ -46822,12 +46980,15 @@
    ],
    "rampageSkills": [
     {
+     "id": "rskill_1965261215",
      "rawNameJa": "斬れ味変更【肆型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_278586937",
      "rawNameJa": "旋律変更【攻撃】Ⅱ"
     }
    ],
@@ -47404,9 +47565,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "掻鳥"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -47621,9 +47784,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "百竜"
     },
     {
+     "id": null,
      "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ"
     }
    ],
@@ -47841,9 +48006,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "百竜"
     },
     {
+     "id": null,
      "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ"
     }
    ],
@@ -48540,6 +48707,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -49528,6 +49696,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -49941,6 +50110,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -50614,6 +50784,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -50770,6 +50941,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -50982,6 +51154,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -51227,6 +51400,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -51442,6 +51616,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -52659,15 +52834,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "轟竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "天彗龍"
     },
     {
+     "id": null,
      "rawNameJa": "攻撃力強化Ⅲ 竜種特効"
     }
    ],
@@ -53762,9 +53941,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石"
     },
     {
+     "id": null,
      "rawNameJa": "鉄蟲糸技強化 (流転付き取得済の場合)"
     }
    ],
@@ -53982,9 +54163,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "角竜"
     },
     {
+     "id": "rskill_422304422",
      "rawNameJa": "会心率強化Ⅲ"
     }
    ],
@@ -54192,9 +54375,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -59553,15 +59738,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "妃蜘蛛"
     },
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
+     "id": null,
      "rawNameJa": "ガルク"
     },
     {
+     "id": "rskill_829609269",
      "rawNameJa": "オトモへの采配術"
     }
    ],
@@ -59807,12 +59996,15 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "切れ味変更【参型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_1875928865",
      "rawNameJa": "砲撃変更【通常型】Ⅲ"
     }
    ],
@@ -60528,12 +60720,15 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "切れ味変更【参型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_384321147",
      "rawNameJa": "砲撃変更【拡散型】Ⅲ"
     }
    ],
@@ -60963,9 +61158,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石派生②"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -61177,21 +61374,27 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石派生②"
     },
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
+     "id": null,
      "rawNameJa": "ガルク"
     },
     {
+     "id": "rskill_829609269",
      "rawNameJa": "オトモへの采配術"
     },
     {
+     "id": null,
      "rawNameJa": "雌火竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -62081,6 +62284,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "変擊竜珠【3】",
        "count": 1
       }
@@ -62334,6 +62538,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_650730464_3",
        "rawNameJa": "変撃竜珠【3】",
        "count": 1
       }
@@ -62620,6 +62825,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_650730464_3",
        "rawNameJa": "変撃竜珠【3】",
        "count": 1
       }
@@ -62897,6 +63103,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_650730464_3",
        "rawNameJa": "変撃竜珠【3】",
        "count": 1
       }
@@ -63179,6 +63386,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_650730464_3",
        "rawNameJa": "変撃竜珠【3】",
        "count": 1
       }
@@ -63461,6 +63669,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_650730464_3",
        "rawNameJa": "変撃竜珠【3】",
        "count": 1
       }
@@ -63743,6 +63952,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_650730464_3",
        "rawNameJa": "変撃竜珠【3】",
        "count": 1
       }
@@ -70676,24 +70886,31 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": "rskill_141986722",
      "rawNameJa": "ビン変更【減気】Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "轟竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -70858,9 +71075,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     }
    ],
@@ -71299,15 +71518,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -71728,9 +71951,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "氷牙竜"
     },
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     }
    ],
@@ -72565,6 +72790,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": "rdeco_1454094898_3",
        "rawNameJa": "鋼魂竜珠【3】",
        "count": 1
       }
@@ -72863,6 +73089,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -73162,6 +73389,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -73448,6 +73676,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -73737,6 +73966,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -74025,6 +74255,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -74320,6 +74551,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -74617,6 +74849,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -74890,6 +75123,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -75182,6 +75416,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -75462,6 +75697,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -76039,6 +76275,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": "rdeco_1454094898_3",
        "rawNameJa": "鋼魂竜珠【3】",
        "count": 1
       }
@@ -82916,15 +83153,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "金獅子"
     },
     {
+     "id": "rskill_487804973",
      "rawNameJa": "鈍刃の一撃"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -83783,15 +84024,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     },
     {
+     "id": null,
      "rawNameJa": "鍛冶屋武器"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -84180,15 +84425,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "金獅子"
     },
     {
+     "id": "rskill_487804973",
      "rawNameJa": "鈍刃の一撃"
     }
    ],
@@ -90187,15 +90436,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "轟竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -91012,15 +91265,19 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鉱石"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "雌火竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -91213,9 +91470,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -97304,30 +97563,39 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "怨虎竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "ロングバレル"
     },
     {
+     "id": null,
      "rawNameJa": "雷狼竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "ロングバレル"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "ロングバレル"
     }
    ],
@@ -99287,12 +99555,15 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鎌鼬竜"
     },
     {
+     "id": "rskill_422304422",
      "rawNameJa": "会心率強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "サイレンサー"
     }
    ],
@@ -99489,21 +99760,27 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "サイレンサー"
     },
     {
+     "id": null,
      "rawNameJa": "怨虎竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "サイレンサー"
     }
    ],
@@ -100104,6 +100381,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -100400,6 +100678,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -100679,6 +100958,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -100980,6 +101260,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -107873,33 +108154,43 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "金獅子"
     },
     {
+     "id": "rskill_555444468",
      "rawNameJa": "徹甲榴弾追加Ⅱ"
     },
     {
+     "id": null,
      "rawNameJa": "炎王龍"
     },
     {
+     "id": "rskill_921617750",
      "rawNameJa": "炎王龍の魂"
     },
     {
+     "id": null,
      "rawNameJa": "妃蜘蛛"
     },
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
+     "id": null,
      "rawNameJa": "氷牙竜"
     },
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
+     "id": null,
      "rawNameJa": "怨虎竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -108082,9 +108373,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "鎌鼬竜"
     },
     {
+     "id": "rskill_437062215",
      "rawNameJa": "会心率強化Ⅳ"
     }
    ],
@@ -108292,9 +108585,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
    ],
@@ -108772,9 +109067,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "怨虎竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -109819,6 +110116,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -109845,6 +110143,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -109865,6 +110164,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -109891,6 +110191,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -109923,6 +110224,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -109949,6 +110251,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -109981,6 +110284,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110007,6 +110311,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110027,6 +110332,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110047,6 +110353,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110075,6 +110382,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -110101,6 +110409,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -110114,6 +110423,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -110140,6 +110450,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -110172,6 +110483,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -110198,6 +110510,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110239,6 +110552,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -110271,6 +110585,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110297,6 +110612,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110329,6 +110645,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110355,6 +110672,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110375,6 +110693,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -110395,6 +110714,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -112201,6 +112521,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -112508,6 +112829,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -112812,6 +113134,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -113103,6 +113426,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -113405,6 +113729,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -113701,6 +114026,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -114025,6 +114351,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -114348,6 +114675,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -114650,6 +114978,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -114957,6 +115286,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -115553,6 +115883,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -115855,6 +116186,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -116116,6 +116448,7 @@
      "decorations": [],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -116390,6 +116723,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -116713,6 +117047,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -117027,6 +117362,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -117594,6 +117930,7 @@
      ],
      "rampageDecos": [
       {
+       "id": null,
        "rawNameJa": "特攻系【2】",
        "count": 1
       }
@@ -117890,6 +118227,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -118180,6 +118518,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -118500,6 +118839,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -118804,6 +119144,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -119091,6 +119432,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -119398,6 +119740,7 @@
      ],
      "rampageDecos": [
       {
+       "id": "rdeco_948614223_3",
        "rawNameJa": "属痛竜珠【3】",
        "count": 1
       }
@@ -123799,21 +124142,27 @@
    ],
    "rampageSkills": [
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": null,
      "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】"
     },
     {
+     "id": "rskill_1655497276",
      "rawNameJa": "ビン追加【強撃】"
     },
     {
+     "id": "rskill_1802985780",
      "rawNameJa": "ビン追加【減気】"
     },
     {
+     "id": "rskill_325103727",
      "rawNameJa": "曲射変更【会心型】"
     }
    ],
@@ -124000,21 +124349,27 @@
    ],
    "rampageSkills": [
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
+     "id": null,
      "rawNameJa": "属性付与Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】"
     },
     {
+     "id": "rskill_1655497276",
      "rawNameJa": "ビン追加【強撃】"
     },
     {
+     "id": "rskill_1802985780",
      "rawNameJa": "ビン追加【減気】"
     },
     {
+     "id": "rskill_325103727",
      "rawNameJa": "曲射変更【会心型】"
     }
    ],
@@ -124486,54 +124841,71 @@
    ],
    "rampageSkills": [
     {
+     "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
+     "id": "rskill_858617035",
      "rawNameJa": "無属性攻撃強化"
     },
     {
+     "id": null,
      "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】"
     },
     {
+     "id": "rskill_1655497276",
      "rawNameJa": "ビン追加【強撃】"
     },
     {
+     "id": "rskill_1802985780",
      "rawNameJa": "ビン追加【減気】"
     },
     {
+     "id": "rskill_325103727",
      "rawNameJa": "曲射変更【会心型】"
     },
     {
+     "id": null,
      "rawNameJa": "霞龍"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
+     "id": null,
      "rawNameJa": "天狗獣"
     },
     {
+     "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     },
     {
+     "id": null,
      "rawNameJa": "①"
     },
     {
+     "id": null,
      "rawNameJa": "「天狗獣派生」の「天具・光背の弓Ⅰ」を作成"
     },
     {
+     "id": null,
      "rawNameJa": "②"
     },
     {
+     "id": null,
      "rawNameJa": "③"
     },
     {
+     "id": null,
      "rawNameJa": "「天具・光背の弓Ⅰ」を迅竜派生へ強化して、 「鉄蟲糸技強化」付きの「闇夜弓【影縫】」が完成"
     }
    ],
@@ -124884,12 +125256,15 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "攻撃力強化Ⅱ 属性付与Ⅱ(好みの属性を選ぶ) 射撃型変更【連射】 ビン強化【接撃】orビン追加【強撃】 ビン追加【減気】 （曲射変更は不要）"
     },
     {
+     "id": null,
      "rawNameJa": "蛮顎竜"
     },
     {
+     "id": "rskill_67000766",
      "rawNameJa": "属性強化【火】Ⅲ"
     }
    ],
@@ -125302,9 +125677,11 @@
    ],
    "rampageSkills": [
     {
+     "id": null,
      "rawNameJa": "迅竜"
     },
     {
+     "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
    ],
@@ -125969,5 +126346,640 @@
   }
  ],
  "errors": [],
- "unresolved": []
+ "unresolved": [
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "特攻系【2】",
+   "game8Id": null,
+   "count": 36,
+   "examples": [
+    "great-sword:mrEndgame:0",
+    "great-sword:mrEndgame:1",
+    "great-sword:mrEndgame:2"
+   ]
+  },
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "鋼塊竜珠【3】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:mrEndgame:12"
+   ]
+  },
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "特攻系【3】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hammer:mrEndgame:9"
+   ]
+  },
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "変擊竜珠【3】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "switch-axe:mrEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "迅竜",
+   "game8Id": null,
+   "count": 21,
+   "examples": [
+    "great-sword:riseEndgame:0",
+    "great-sword:riseHigh:1",
+    "great-sword:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "轟竜",
+   "game8Id": null,
+   "count": 7,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "hammer:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉱石",
+   "game8Id": null,
+   "count": 5,
+   "examples": [
+    "lance:riseHigh:0",
+    "switch-axe:riseHigh:0",
+    "switch-axe:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "雌火竜",
+   "game8Id": null,
+   "count": 4,
+   "examples": [
+    "sword-and-shield:riseEndgame:0",
+    "sword-and-shield:riseHigh:0",
+    "gunlance:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "怨虎竜",
+   "game8Id": null,
+   "count": 4,
+   "examples": [
+    "light-bowgun:riseEndgame:0",
+    "light-bowgun:riseHigh:1",
+    "heavy-bowgun:riseEndgame:6"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【壱型】",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "great-sword:riseEndgame:1",
+    "great-sword:riseEndgame:2",
+    "switch-axe:riseEndgame:5"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "①",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "②",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "③",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "蛮顎竜",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "dual-blades:riseEndgame:0",
+    "dual-blades:riseHigh:2",
+    "bow:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "雷狼竜",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "dual-blades:riseEndgame:0",
+    "dual-blades:riseHigh:2",
+    "light-bowgun:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "金獅子",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "charge-blade:riseEndgame:0",
+    "charge-blade:riseHigh:2",
+    "heavy-bowgun:riseEndgame:6"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ロングバレル",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "light-bowgun:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "サイレンサー",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "light-bowgun:riseHigh:0",
+    "light-bowgun:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "bow:riseEndgame:0",
+    "bow:riseEndgame:1",
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "骨素材②",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "great-sword:riseHigh:0",
+    "hammer:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "霞龍",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "天彗龍",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "dual-blades:riseEndgame:0",
+    "lance:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "百竜",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "hunting-horn:riseHigh:1",
+    "hunting-horn:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "hunting-horn:riseHigh:1",
+    "hunting-horn:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "妃蜘蛛",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseEndgame:0",
+    "heavy-bowgun:riseEndgame:6"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ガルク",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseEndgame:0",
+    "gunlance:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【参型】",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseEndgame:1",
+    "gunlance:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉱石派生②",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseHigh:0",
+    "gunlance:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "氷牙竜",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "switch-axe:riseHigh:4",
+    "heavy-bowgun:riseEndgame:6"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鎌鼬竜",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "light-bowgun:riseHigh:0",
+    "heavy-bowgun:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【壱】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "great-sword:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅱ or 会心率強化Ⅱ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "great-sword:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "雪鬼獣",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "great-sword:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを一発生産するのはNG！)",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseEndgame:6"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化して、 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseEndgame:6"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉱石素材",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉄蟲糸技強化 ※",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを生産するのはNG！)",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化する。 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ギルド武器",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "sword-and-shield:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "アイルー",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "泡狐竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "氷属性",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅲ 竜種特効 天彗龍の魂",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ギルド武器派生",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "白兎獣",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "傘鳥",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "奇怪竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "会心率強化Ⅱ or 属性強化【火】Ⅲ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "泥爺竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "氷属性派生",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ギルド武器派生②",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "斬れ味変更【壱型】 斬れ味変更【肆型】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "爆麟竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ブルファンゴ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "掻鳥",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅲ 竜種特効",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "lance:riseEndgame:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉄蟲糸技強化 (流転付き取得済の場合)",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "lance:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "角竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "lance:riseHigh:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鍛冶屋武器",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "charge-blade:riseHigh:0"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "炎王龍",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "heavy-bowgun:riseEndgame:6"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "属性付与Ⅲ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:1"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "天狗獣",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「天狗獣派生」の「天具・光背の弓Ⅰ」を作成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「天具・光背の弓Ⅰ」を迅竜派生へ強化して、 「鉄蟲糸技強化」付きの「闇夜弓【影縫】」が完成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:4"
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅱ 属性付与Ⅱ(好みの属性を選ぶ) 射撃型変更【連射】 ビン強化【接撃】orビン追加【強撃】 ビン追加【減気】 （曲射変更は不要）",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseHigh:1"
+   ]
+  }
+ ]
 }

@@ -1,0 +1,184 @@
+[
+  {
+    "id": "rdeco_1068582062_2",
+    "nameZh": "悔恨龍珠【2】",
+    "nameJa": "痛恨竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "1068582062"
+  },
+  {
+    "id": "rdeco_948614223_3",
+    "nameZh": "屬痛龍珠【3】",
+    "nameJa": "属痛竜珠【３】",
+    "slotLevel": 3,
+    "skillNumId": "948614223"
+  },
+  {
+    "id": "rdeco_962847852_1",
+    "nameZh": "護刃龍珠【1】",
+    "nameJa": "護刃竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "962847852"
+  },
+  {
+    "id": "rdeco_977622029_3",
+    "nameZh": "護研龍珠【3】",
+    "nameJa": "護研竜珠【３】",
+    "slotLevel": 3,
+    "skillNumId": "977622029"
+  },
+  {
+    "id": "rdeco_991855650_3",
+    "nameZh": "鬼激龍珠【3】",
+    "nameJa": "鬼激竜珠【３】",
+    "slotLevel": 3,
+    "skillNumId": "991855650"
+  },
+  {
+    "id": "rdeco_637004739_2",
+    "nameZh": "大奏龍珠【2】",
+    "nameJa": "大奏竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "637004739"
+  },
+  {
+    "id": "rdeco_650730464_3",
+    "nameZh": "變擊龍珠【3】",
+    "nameJa": "変撃竜珠【３】",
+    "slotLevel": 3,
+    "skillNumId": "650730464"
+  },
+  {
+    "id": "rdeco_664963969_2",
+    "nameZh": "曲續龍珠【2】",
+    "nameJa": "曲続竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "664963969"
+  },
+  {
+    "id": "rdeco_1573099892_3",
+    "nameZh": "龍杭龍珠【3】",
+    "nameJa": "竜杭竜珠【３】",
+    "slotLevel": 3,
+    "skillNumId": "1573099892"
+  },
+  {
+    "id": "rdeco_559754055_2",
+    "nameZh": "破龍龍珠【2】",
+    "nameJa": "破竜竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "559754055"
+  },
+  {
+    "id": "rdeco_574004068_2",
+    "nameZh": "破空龍珠【2】",
+    "nameJa": "破空竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "574004068"
+  },
+  {
+    "id": "rdeco_588237573_2",
+    "nameZh": "破流龍珠【2】",
+    "nameJa": "破流竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "588237573"
+  },
+  {
+    "id": "rdeco_769735482_1",
+    "nameZh": "破小龍珠【1】",
+    "nameJa": "破小竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "769735482"
+  },
+  {
+    "id": "rdeco_783968987_1",
+    "nameZh": "火擴龍珠【1】",
+    "nameJa": "火拡竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "783968987"
+  },
+  {
+    "id": "rdeco_798219000_1",
+    "nameZh": "水擴龍珠【1】",
+    "nameJa": "水拡竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "798219000"
+  },
+  {
+    "id": "rdeco_678759065_1",
+    "nameZh": "雷擴龍珠【1】",
+    "nameJa": "雷拡竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "678759065"
+  },
+  {
+    "id": "rdeco_693009086_1",
+    "nameZh": "冰擴龍珠【1】",
+    "nameJa": "氷拡竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "693009086"
+  },
+  {
+    "id": "rdeco_707242591_2",
+    "nameZh": "怨魂龍珠【2】",
+    "nameJa": "怨魂竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "707242591"
+  },
+  {
+    "id": "rdeco_1425611388_2",
+    "nameZh": "天魂龍珠【2】",
+    "nameJa": "天魂竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "1425611388"
+  },
+  {
+    "id": "rdeco_1439844893_2",
+    "nameZh": "霞魂龍珠【2】",
+    "nameJa": "霞魂竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "1439844893"
+  },
+  {
+    "id": "rdeco_1454094898_3",
+    "nameZh": "鋼魂龍珠【3】",
+    "nameJa": "鋼魂竜珠【３】",
+    "slotLevel": 3,
+    "skillNumId": "1454094898"
+  },
+  {
+    "id": "rdeco_1468852691_2",
+    "nameZh": "炎魂龍珠【2】",
+    "nameJa": "炎魂竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "1468852691"
+  },
+  {
+    "id": "rdeco_1348884976_2",
+    "nameZh": "風神龍珠【2】",
+    "nameJa": "風神竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "1348884976"
+  },
+  {
+    "id": "rdeco_1363118481_2",
+    "nameZh": "雷神龍珠【2】",
+    "nameJa": "雷神竜珠【２】",
+    "slotLevel": 2,
+    "skillNumId": "1363118481"
+  },
+  {
+    "id": "rdeco_1376844214_1",
+    "nameZh": "指示龍珠【1】",
+    "nameJa": "采配竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "1376844214"
+  },
+  {
+    "id": "rdeco_1558849879_1",
+    "nameZh": "鬼鳥龍珠【1】",
+    "nameJa": "魂鳥竜珠【１】",
+    "slotLevel": 1,
+    "skillNumId": "1558849879"
+  }
+]

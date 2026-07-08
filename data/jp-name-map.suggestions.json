@@ -1,6 +1,1766 @@
 {
  "generatedAt": "2026-07-08",
  "note": "正規化後精確比對仍失敗者，多為 Game8 暱稱/簡稱/錯字/二擇一寫法。★確認後填 data/jp-name-overrides.json（勿手改 jp-name-map.json），重跑 build-jp-name-map.js → scrape-game8.js 回填。一般項：candidates 為編輯距離最近 2-3 候選，把確認 ID 填進 override 對應 type。二擇一項（kind=alternatives，防具 A/B）：alternativeCandidates 列各替代裝備的重建名＋候選；suggestedOverride 為兩件皆 exact-match 時可直接填入 override.alternatives 的 ID 陣列。",
- "counts": {},
- "items": []
+ "counts": {
+  "rampageDecorations": 4,
+  "rampageSkills": 62
+ },
+ "items": [
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "特攻系【2】",
+   "game8Id": null,
+   "count": 36,
+   "examples": [
+    "great-sword:mrEndgame:0",
+    "great-sword:mrEndgame:1",
+    "great-sword:mrEndgame:2"
+   ],
+   "candidates": [
+    {
+     "name": "痛恨竜珠【２】",
+     "id": "rdeco_1068582062_2",
+     "distance": 4
+    },
+    {
+     "name": "大奏竜珠【２】",
+     "id": "rdeco_637004739_2",
+     "distance": 4
+    },
+    {
+     "name": "曲続竜珠【２】",
+     "id": "rdeco_664963969_2",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "鋼塊竜珠【3】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:mrEndgame:12"
+   ],
+   "candidates": [
+    {
+     "name": "鋼魂竜珠【３】",
+     "id": "rdeco_1454094898_3",
+     "distance": 1
+    },
+    {
+     "name": "属痛竜珠【３】",
+     "id": "rdeco_948614223_3",
+     "distance": 2
+    },
+    {
+     "name": "護研竜珠【３】",
+     "id": "rdeco_977622029_3",
+     "distance": 2
+    }
+   ]
+  },
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "特攻系【3】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hammer:mrEndgame:9"
+   ],
+   "candidates": [
+    {
+     "name": "属痛竜珠【３】",
+     "id": "rdeco_948614223_3",
+     "distance": 4
+    },
+    {
+     "name": "護研竜珠【３】",
+     "id": "rdeco_977622029_3",
+     "distance": 4
+    },
+    {
+     "name": "鬼激竜珠【３】",
+     "id": "rdeco_991855650_3",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageDecorations",
+   "rawNameJa": "変擊竜珠【3】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "switch-axe:mrEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "変撃竜珠【３】",
+     "id": "rdeco_650730464_3",
+     "distance": 1
+    },
+    {
+     "name": "属痛竜珠【３】",
+     "id": "rdeco_948614223_3",
+     "distance": 2
+    },
+    {
+     "name": "護研竜珠【３】",
+     "id": "rdeco_977622029_3",
+     "distance": 2
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "迅竜",
+   "game8Id": null,
+   "count": 21,
+   "examples": [
+    "great-sword:riseEndgame:0",
+    "great-sword:riseHigh:1",
+    "great-sword:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "操竜の達人",
+     "id": "rskill_26244859",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "轟竜",
+   "game8Id": null,
+   "count": 7,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "hammer:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "操竜の達人",
+     "id": "rskill_26244859",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉱石",
+   "game8Id": null,
+   "count": 5,
+   "examples": [
+    "lance:riseHigh:0",
+    "switch-axe:riseHigh:0",
+    "switch-axe:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "雌火竜",
+   "game8Id": null,
+   "count": 4,
+   "examples": [
+    "sword-and-shield:riseEndgame:0",
+    "sword-and-shield:riseHigh:0",
+    "gunlance:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "怨虎竜",
+   "game8Id": null,
+   "count": 4,
+   "examples": [
+    "light-bowgun:riseEndgame:0",
+    "light-bowgun:riseHigh:1",
+    "heavy-bowgun:riseEndgame:6"
+   ],
+   "candidates": [
+    {
+     "name": "怨虎竜の魂",
+     "id": "rskill_159483346",
+     "distance": 2
+    },
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【壱型】",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "great-sword:riseEndgame:1",
+    "great-sword:riseEndgame:2",
+    "switch-axe:riseEndgame:5"
+   ],
+   "candidates": [
+    {
+     "name": "斬れ味変更【壱型】",
+     "id": "rskill_1251979832",
+     "distance": 1
+    },
+    {
+     "name": "斬れ味変更【弐型】",
+     "id": "rskill_1265689049",
+     "distance": 2
+    },
+    {
+     "name": "斬れ味変更【参型】",
+     "id": "rskill_1951027710",
+     "distance": 2
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "①",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "②",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "③",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "long-sword:riseHigh:1",
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "蛮顎竜",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "dual-blades:riseEndgame:0",
+    "dual-blades:riseHigh:2",
+    "bow:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "雷狼竜",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "dual-blades:riseEndgame:0",
+    "dual-blades:riseHigh:2",
+    "light-bowgun:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "金獅子",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "charge-blade:riseEndgame:0",
+    "charge-blade:riseHigh:2",
+    "heavy-bowgun:riseEndgame:6"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ロングバレル",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "light-bowgun:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "ビン変形強化",
+     "id": "rskill_132503333",
+     "distance": 5
+    },
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 6
+    },
+    {
+     "name": "攻撃力激化",
+     "id": "rskill_289049423",
+     "distance": 6
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "サイレンサー",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "light-bowgun:riseHigh:0",
+    "light-bowgun:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "装着ビン強化",
+     "id": "rskill_412366096",
+     "distance": 5
+    },
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 6
+    },
+    {
+     "name": "攻撃力激化",
+     "id": "rskill_289049423",
+     "distance": 6
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】",
+   "game8Id": null,
+   "count": 3,
+   "examples": [
+    "bow:riseEndgame:0",
+    "bow:riseEndgame:1",
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "砲撃変更【放射型】Ⅰ",
+     "id": "rskill_1755961030",
+     "distance": 12
+    },
+    {
+     "name": "砲撃変更【放射型】Ⅱ",
+     "id": "rskill_1770194663",
+     "distance": 12
+    },
+    {
+     "name": "砲撃変更【放射型】Ⅲ",
+     "id": "rskill_1784968836",
+     "distance": 12
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "骨素材②",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "great-sword:riseHigh:0",
+    "hammer:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    },
+    {
+     "name": "小型特効",
+     "id": "rskill_54728377",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "霞龍",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "long-sword:riseEndgame:6",
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "霞龍の魂",
+     "id": "rskill_188491152",
+     "distance": 2
+    },
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鋼龍の魂",
+     "id": "rskill_873829809",
+     "distance": 3
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "天彗龍",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "dual-blades:riseEndgame:0",
+    "lance:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "天彗龍の魂",
+     "id": "rskill_173733363",
+     "distance": 2
+    },
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "百竜",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "hunting-horn:riseHigh:1",
+    "hunting-horn:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "操竜の達人",
+     "id": "rskill_26244859",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "hunting-horn:riseHigh:1",
+    "hunting-horn:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 26
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 26
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 26
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "妃蜘蛛",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseEndgame:0",
+    "heavy-bowgun:riseEndgame:6"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ガルク",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseEndgame:0",
+    "gunlance:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【参型】",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseEndgame:1",
+    "gunlance:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "斬れ味変更【参型】",
+     "id": "rskill_1951027710",
+     "distance": 1
+    },
+    {
+     "name": "斬れ味変更【壱型】",
+     "id": "rskill_1251979832",
+     "distance": 2
+    },
+    {
+     "name": "斬れ味変更【弐型】",
+     "id": "rskill_1265689049",
+     "distance": 2
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉱石派生②",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "gunlance:riseHigh:0",
+    "gunlance:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力激化",
+     "id": "rskill_289049423",
+     "distance": 5
+    },
+    {
+     "name": "属性値激化",
+     "id": "rskill_514312899",
+     "distance": 5
+    },
+    {
+     "name": "会心率激化",
+     "id": "rskill_82213476",
+     "distance": 5
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "氷牙竜",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "switch-axe:riseHigh:4",
+    "heavy-bowgun:riseEndgame:6"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鎌鼬竜",
+   "game8Id": null,
+   "count": 2,
+   "examples": [
+    "light-bowgun:riseHigh:0",
+    "heavy-bowgun:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "切れ味変更【壱】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "great-sword:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "斬れ味変更【壱型】",
+     "id": "rskill_1251979832",
+     "distance": 2
+    },
+    {
+     "name": "斬れ味変更【弐型】",
+     "id": "rskill_1265689049",
+     "distance": 3
+    },
+    {
+     "name": "斬れ味変更【参型】",
+     "id": "rskill_1951027710",
+     "distance": 3
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅱ or 会心率強化Ⅱ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "great-sword:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 8
+    },
+    {
+     "name": "会心率強化Ⅲ",
+     "id": "rskill_422304422",
+     "distance": 10
+    },
+    {
+     "name": "防御力強化Ⅲ",
+     "id": "rskill_124406235",
+     "distance": 10
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "雪鬼獣",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "great-sword:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを一発生産するのはNG！)",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseEndgame:6"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 41
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 41
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 41
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化して、 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseEndgame:6"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 40
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 40
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 40
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉱石素材",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    },
+    {
+     "name": "小型特効",
+     "id": "rskill_54728377",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉄蟲糸技強化 ※",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "鉄蟲糸技強化",
+     "id": "rskill_430385024",
+     "distance": 1
+    },
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 5
+    },
+    {
+     "name": "属性値強化Ⅰ",
+     "id": "rskill_303299436",
+     "distance": 5
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを生産するのはNG！)",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 39
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 39
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 39
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化する。 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "long-sword:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 40
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 40
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 40
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ギルド武器",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "sword-and-shield:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力激化",
+     "id": "rskill_289049423",
+     "distance": 5
+    },
+    {
+     "name": "属性値激化",
+     "id": "rskill_514312899",
+     "distance": 5
+    },
+    {
+     "name": "会心率激化",
+     "id": "rskill_82213476",
+     "distance": 5
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "アイルー",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    },
+    {
+     "name": "小型特効",
+     "id": "rskill_54728377",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "泡狐竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "氷属性",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "劫血活性",
+     "id": "rskill_1602107658",
+     "distance": 3
+    },
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "属性値激化",
+     "id": "rskill_514312899",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅲ 竜種特効 天彗龍の魂",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "猟虫Ｌｖ強化Ⅲ",
+     "id": "rskill_917846727",
+     "distance": 13
+    },
+    {
+     "name": "属性強化【火】Ⅱ",
+     "id": "rskill_19196313",
+     "distance": 15
+    },
+    {
+     "name": "属性強化【火】Ⅲ",
+     "id": "rskill_67000766",
+     "distance": 15
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ギルド武器派生",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "ガードバッシュ",
+     "id": "rskill_1184241740",
+     "distance": 6
+    },
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 7
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 7
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "白兎獣",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "傘鳥",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "奇怪竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "会心率強化Ⅱ or 属性強化【火】Ⅲ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "属性強化【麻痺】Ⅲ",
+     "id": "rskill_629436129",
+     "distance": 11
+    },
+    {
+     "name": "属性強化【睡眠】Ⅲ",
+     "id": "rskill_537427524",
+     "distance": 11
+    },
+    {
+     "name": "属性強化【爆破】Ⅲ",
+     "id": "rskill_748441147",
+     "distance": 11
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "泥爺竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "氷属性派生",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "属性値激化",
+     "id": "rskill_514312899",
+     "distance": 4
+    },
+    {
+     "name": "氷属性弾増加Ⅰ",
+     "id": "rskill_1598324411",
+     "distance": 4
+    },
+    {
+     "name": "攻撃力激化",
+     "id": "rskill_289049423",
+     "distance": 5
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ギルド武器派生②",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "dual-blades:riseHigh:2"
+   ],
+   "candidates": [
+    {
+     "name": "ガードバッシュ",
+     "id": "rskill_1184241740",
+     "distance": 7
+    },
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 8
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 8
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "斬れ味変更【壱型】 斬れ味変更【肆型】",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "砲撃変更【通常型】Ⅰ",
+     "id": "rskill_1814415203",
+     "distance": 14
+    },
+    {
+     "name": "砲撃変更【通常型】Ⅱ",
+     "id": "rskill_1862219520",
+     "distance": 14
+    },
+    {
+     "name": "砲撃変更【通常型】Ⅲ",
+     "id": "rskill_1875928865",
+     "distance": 14
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "爆麟竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "ブルファンゴ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "ブレ抑制強化",
+     "id": "rskill_840071771",
+     "distance": 5
+    },
+    {
+     "name": "ブレ抑制激化",
+     "id": "rskill_1051085374",
+     "distance": 5
+    },
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 6
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "掻鳥",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "hunting-horn:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅲ 竜種特効",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "lance:riseEndgame:0"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 4
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 5
+    },
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 6
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鉄蟲糸技強化 (流転付き取得済の場合)",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "lance:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "属性強化【火】Ⅲ",
+     "id": "rskill_67000766",
+     "distance": 16
+    },
+    {
+     "name": "属性強化【水】Ⅲ",
+     "id": "rskill_257661234",
+     "distance": 16
+    },
+    {
+     "name": "属性強化【雷】Ⅲ",
+     "id": "rskill_885053622",
+     "distance": 16
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "角竜",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "lance:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 2
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "操竜の達人",
+     "id": "rskill_26244859",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "鍛冶屋武器",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "charge-blade:riseHigh:0"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力激化",
+     "id": "rskill_289049423",
+     "distance": 5
+    },
+    {
+     "name": "属性値激化",
+     "id": "rskill_514312899",
+     "distance": 5
+    },
+    {
+     "name": "会心率激化",
+     "id": "rskill_82213476",
+     "distance": 5
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "炎王龍",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "heavy-bowgun:riseEndgame:6"
+   ],
+   "candidates": [
+    {
+     "name": "炎王龍の魂",
+     "id": "rskill_921617750",
+     "distance": 2
+    },
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "属性付与Ⅲ",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:1"
+   ],
+   "candidates": [
+    {
+     "name": "属性値強化Ⅱ",
+     "id": "rskill_485829389",
+     "distance": 3
+    },
+    {
+     "name": "属性値強化Ⅲ",
+     "id": "rskill_500079394",
+     "distance": 3
+    },
+    {
+     "name": "属性付与【火】Ⅰ",
+     "id": "rskill_762691032",
+     "distance": 3
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "天狗獣",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "研鑽",
+     "id": "rskill_1495849160",
+     "distance": 3
+    },
+    {
+     "name": "鬼人激化",
+     "id": "rskill_69941095",
+     "distance": 4
+    },
+    {
+     "name": "竜種特効",
+     "id": "rskill_40478360",
+     "distance": 4
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「天狗獣派生」の「天具・光背の弓Ⅰ」を作成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 21
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 21
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 21
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "「天具・光背の弓Ⅰ」を迅竜派生へ強化して、 「鉄蟲糸技強化」付きの「闇夜弓【影縫】」が完成",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseEndgame:4"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 44
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 44
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 44
+    }
+   ]
+  },
+  {
+   "type": "rampageSkills",
+   "rawNameJa": "攻撃力強化Ⅱ 属性付与Ⅱ(好みの属性を選ぶ) 射撃型変更【連射】 ビン強化【接撃】orビン追加【強撃】 ビン追加【減気】 （曲射変更は不要）",
+   "game8Id": null,
+   "count": 1,
+   "examples": [
+    "bow:riseHigh:1"
+   ],
+   "candidates": [
+    {
+     "name": "攻撃力強化Ⅰ",
+     "id": "rskill_366824395",
+     "distance": 67
+    },
+    {
+     "name": "攻撃力強化Ⅱ",
+     "id": "rskill_381074408",
+     "distance": 67
+    },
+    {
+     "name": "攻撃力強化Ⅲ",
+     "id": "rskill_395307913",
+     "distance": 67
+    }
+   ]
+  }
+ ]
 }

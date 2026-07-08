@@ -21,6 +21,7 @@ import { auditKnownMax } from "./audit-known-max.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, "..", "src", "data");
 const BASE = "https://mhrise.kiranico.com/zh-Hant/data";
+const BASE_JA = "https://mhrise.kiranico.com/ja/data";
 const UA = { "User-Agent": "Mozilla/5.0 (data import for personal armor builder)" };
 
 // KNOWN_MAX（硬編技能上限）已抽至 scripts/known-max.mjs（單一真相源，audit 共用）。
@@ -596,8 +597,102 @@ async function attachArmorSources(armors, monstersByLen) {
   console.log(`  完成：${withSource} 件有推測來源，${failed} 件詳細頁抓取失敗`);
 }
 
+// ---------------- 百龍技能 / 百龍裝飾品 ----------------
+/** rampage-skills 列表 → Map(numId → name)。同 numId 去重（列表每技能一列）。 */
+function parseRampageSkillList(html) {
+  const map = new Map();
+  for (const m of html.matchAll(/data\/rampage-skills\/(\d+)">([^<]+)<\/a>/g)) {
+    if (!map.has(m[1])) map.set(m[1], m[2].trim());
+  }
+  return map;
+}
+
+/**
+ * rampage-decorations 列表 → [{skillNumId, slot, name}]。
+ * 百龍珠自身無數字 ID：珠名在純文字 <td>，該列連向所賦技能的 rampage-skills/{id}。
+ * 以 (skillNumId, slot) 作跨語言穩定鍵（slot 取珠名【N】，全半形皆可）。
+ */
+function parseRampageDecoList(html) {
+  const out = [];
+  for (const row of tableRows(html)) {
+    const td = row.match(/<td[^>]*>([\s\S]*?)<\/td>/);
+    if (!td) continue;
+    const name = td[1].replace(/<[^>]+>/g, "").trim();
+    const slotM = name.match(/【([\d０-９])】/);
+    const skillM = row.match(/data\/rampage-skills\/(\d+)/);
+    if (!slotM || !skillM) continue;
+    out.push({ skillNumId: skillM[1], slot: Number(slotM[1].normalize("NFKC")), name });
+  }
+  return out;
+}
+
+/**
+ * 以 (skillNumId, slot) 分組並斷言鍵唯一。這個複合鍵的隱含假設是「同一百龍技能
+ * 不會有兩顆同孔位的珠」——大概率為真但非事實，故同鍵不同名即視為碰撞、fail loudly，
+ * 不靜默取一（join 鍵品質決定整條對照線品質）。同鍵同名＝重複列，去重取一。
+ */
+function indexRampageDecos(list, side) {
+  const byKey = new Map();
+  const collisions = [];
+  for (const it of list) {
+    const key = `${it.skillNumId}_${it.slot}`;
+    const prev = byKey.get(key);
+    if (prev == null) byKey.set(key, it.name);
+    else if (prev !== it.name) collisions.push(`[${side}] ${key}: 「${prev}」 vs 「${it.name}」`);
+  }
+  return { byKey, collisions };
+}
+
+/**
+ * 抓百龍技能 + 百龍裝飾品（ja+zh），產出 rampage-skills.json / rampage-decorations.json。
+ * 百龍技能有數字 ID（numId join）；百龍珠無自身 ID（複合鍵 join + 碰撞斷言）。
+ * 兩檔存 nameJa，供 build-jp-name-map 直接建對照（免二次抓 ja 列表）。
+ */
+async function importRampage() {
+  console.log("→ 百龍技能（rampage-skills, ja+zh）");
+  const rsZh = parseRampageSkillList(await fetchText(`${BASE}/rampage-skills`));
+  await new Promise((r) => setTimeout(r, 1200));
+  const rsJa = parseRampageSkillList(await fetchText(`${BASE_JA}/rampage-skills`));
+  const rampageSkills = [];
+  for (const [numId, nameZh] of rsZh) {
+    const nameJa = rsJa.get(numId);
+    if (nameJa == null) continue; // zh 有 ja 無：無法建 ja 對照，跳過
+    rampageSkills.push({ id: `rskill_${numId}`, nameZh, nameJa });
+  }
+  console.log(`  ${rampageSkills.length} 百龍技能（zh ${rsZh.size} / ja ${rsJa.size}）`);
+
+  console.log("→ 百龍裝飾品（rampage-decorations, ja+zh）");
+  await new Promise((r) => setTimeout(r, 1200));
+  const rdZh = indexRampageDecos(parseRampageDecoList(await fetchText(`${BASE}/rampage-decorations`)), "zh");
+  await new Promise((r) => setTimeout(r, 1200));
+  const rdJa = indexRampageDecos(parseRampageDecoList(await fetchText(`${BASE_JA}/rampage-decorations`)), "ja");
+  const collisions = [...rdZh.collisions, ...rdJa.collisions];
+  if (collisions.length) {
+    console.error("✗ 百龍裝飾品複合鍵 (skillNumId, slot) 碰撞——「同技能同孔位不重複珠」假設不成立：");
+    for (const c of collisions) console.error(`   ${c}`);
+    throw new Error(`rampage-decorations 複合鍵碰撞 ${collisions.length} 筆`);
+  }
+  const rampageDecorations = [];
+  for (const [key, nameZh] of rdZh.byKey) {
+    const nameJa = rdJa.byKey.get(key);
+    if (nameJa == null) continue;
+    const [skillNumId, slot] = key.split("_");
+    rampageDecorations.push({ id: `rdeco_${key}`, nameZh, nameJa, slotLevel: Number(slot), skillNumId });
+  }
+  console.log(`  ${rampageDecorations.length} 百龍裝飾品（zh ${rdZh.byKey.size} / ja ${rdJa.byKey.size}，複合鍵唯一 ✓）`);
+
+  fs.writeFileSync(path.join(DATA_DIR, "rampage-skills.json"), JSON.stringify(rampageSkills, null, 2) + "\n");
+  fs.writeFileSync(path.join(DATA_DIR, "rampage-decorations.json"), JSON.stringify(rampageDecorations, null, 2) + "\n");
+  console.log("✓ 已寫入 src/data/{rampage-skills,rampage-decorations}.json");
+}
+
 // ---------------- 主流程 ----------------
 async function main() {
+  // 只跑百龍資料（不重抓/覆蓋 skills/deco/armors/weapons 四檔）。
+  if (process.argv.includes("--only-rampage")) {
+    await importRampage();
+    return;
+  }
   // 重跑防呆：硬編 KNOWN_MAX 與 Kiranico 技能頁效果表機械核對，不符即中止。
   // 破曉資料已凍結、不做自動抓取根治，但重跑前強制稽核以防硬編值悄悄過時。
   console.log("→ 稽核 KNOWN_MAX（對 Kiranico 效果表）");
@@ -695,6 +790,8 @@ async function main() {
     JSON.stringify(weapons, null, 2) + "\n"
   );
   console.log("✓ 已寫入 src/data/{skills,decorations,armors,weapons}.json");
+
+  await importRampage();
 }
 
 main().catch((e) => {

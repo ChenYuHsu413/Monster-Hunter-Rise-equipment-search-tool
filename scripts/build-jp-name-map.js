@@ -94,6 +94,12 @@ const projWeapons = new Set(JSON.parse(fs.readFileSync(path.join(SRC, "weapons.j
 const projArmors = new Set(JSON.parse(fs.readFileSync(path.join(SRC, "armors.json"), "utf8")).map((x) => x.id));
 const projDecos = new Set(JSON.parse(fs.readFileSync(path.join(SRC, "decorations.json"), "utf8")).map((x) => x.id));
 const projSkills = new Set(JSON.parse(fs.readFileSync(path.join(SRC, "skills.json"), "utf8")).map((x) => x.name));
+// 百龍技能 / 百龍裝飾品：import-kiranico 已把 ja+zh 存進資料檔（百龍珠無數字 ID，已在
+// import 端以複合鍵 join 完成）。此處直接讀，用 nameJa 建對照，不重抓 ja 列表。
+const rampSkills = JSON.parse(fs.readFileSync(path.join(SRC, "rampage-skills.json"), "utf8"));
+const rampDecos = JSON.parse(fs.readFileSync(path.join(SRC, "rampage-decorations.json"), "utf8"));
+const projRampageSkills = new Set(rampSkills.map((x) => x.id));
+const projRampageDecorations = new Set(rampDecos.map((x) => x.id));
 
 // ---------- 編輯距離（建議檔用） ----------
 function levenshtein(a, b) {
@@ -115,8 +121,8 @@ function levenshtein(a, b) {
 
 async function main() {
   // ---- 抓列表、組對照 ----
-  const map = { skills: {}, armors: {}, decorations: {}, weapons: {} };
-  const pool = { skills: [], armors: [], decorations: [], weapons: [] }; // {name, norm, id}
+  const map = { skills: {}, armors: {}, decorations: {}, weapons: {}, rampageSkills: {}, rampageDecorations: {} };
+  const pool = { skills: [], armors: [], decorations: [], weapons: [], rampageSkills: [], rampageDecorations: [] }; // {name, norm, id}
   const collisions = [];
 
   // 命名衝突（同名→不同 ID）幾乎全為防具性別雙胞胎（男/女版同名同技能同數值，
@@ -167,19 +173,23 @@ async function main() {
     }
   }
 
+  console.log("→ 百龍技能 / 百龍裝飾品（讀資料檔 nameJa，不重抓）");
+  for (const r of rampSkills) add("rampageSkills", r.nameJa, r.id);
+  for (const r of rampDecos) add("rampageDecorations", r.nameJa, r.id);
+
   const counts = Object.fromEntries(Object.entries(map).map(([k, v]) => [k, Object.keys(v).length]));
   console.log(`  對照條目：${JSON.stringify(counts)}；命名衝突 ${collisions.length}（防具性別雙胞胎，first-wins 取一件）`);
 
   // ---- 合併人工 override（重跑安全：人工判斷全收在 data/jp-name-overrides.json，
   //      override 優先蓋過自動結果；★不從產出檔回讀，重跑不會沖掉人工成果）----
-  const projById = { weapons: projWeapons, armors: projArmors, decorations: projDecos, skills: projSkills };
+  const projById = { weapons: projWeapons, armors: projArmors, decorations: projDecos, skills: projSkills, rampageSkills: projRampageSkills, rampageDecorations: projRampageDecorations };
   let override = {};
   try {
     override = JSON.parse(fs.readFileSync(OVERRIDE_FILE, "utf8"));
   } catch {}
-  const ovApplied = { skills: 0, armors: 0, decorations: 0, weapons: 0, alternatives: 0 };
+  const ovApplied = { skills: 0, armors: 0, decorations: 0, weapons: 0, alternatives: 0, rampageSkills: 0, rampageDecorations: 0 };
   const ovBad = [];
-  for (const type of ["skills", "armors", "decorations", "weapons"]) {
+  for (const type of ["skills", "armors", "decorations", "weapons", "rampageSkills", "rampageDecorations"]) {
     for (const [rawName, id] of Object.entries(override[type] ?? {})) {
       if (rawName.startsWith("$")) continue;
       if (!projById[type].has(id)) {

@@ -23,6 +23,8 @@ const proj = {
   armors: new Set(JSON.parse(fs.readFileSync(path.join(SRC, "armors.json"), "utf8")).map((x) => x.id)),
   decorations: new Set(JSON.parse(fs.readFileSync(path.join(SRC, "decorations.json"), "utf8")).map((x) => x.id)),
   skills: new Set(JSON.parse(fs.readFileSync(path.join(SRC, "skills.json"), "utf8")).map((x) => x.name)),
+  rampageDecorations: new Set(JSON.parse(fs.readFileSync(path.join(SRC, "rampage-decorations.json"), "utf8")).map((x) => x.id)),
+  rampageSkills: new Set(JSON.parse(fs.readFileSync(path.join(SRC, "rampage-skills.json"), "utf8")).map((x) => x.id)),
 };
 
 const broken = []; // {type, id, rawNameJa, buildId} — id 存在但不在專案
@@ -44,7 +46,10 @@ function checkRef(type, ref, buildId) {
 for (const b of builds.builds) {
   const decos = (arr) => (arr ?? []).forEach((d) => checkRef("decorations", d, b.id));
   const skills = (arr) => (arr ?? []).forEach((s) => checkRef("skills", s, b.id));
-  (b.weapons ?? []).forEach((w) => checkRef("weapons", w, b.id));
+  for (const w of b.weapons ?? []) {
+    checkRef("weapons", w, b.id);
+    (w.rampageDecos ?? []).forEach((d) => checkRef("rampageDecorations", d, b.id));
+  }
   for (const p of b.armor ?? []) {
     checkRef("armors", p, b.id);
     decos(p.decorations);
@@ -56,7 +61,9 @@ for (const b of builds.builds) {
   }
   decos(b.buildDecorations);
   skills(b.skillTotals);
-  // kinsect / rampageDecos / rampageSkills：專案無對應資料，預期無 ID，不檢查
+  (b.rampageSkills ?? []).forEach((s) => checkRef("rampageSkills", s, b.id));
+  // rampageDecos/rampageSkills：已有 id → 完整性檢查；對不到（特攻系/錯字）id=null 計入孤兒。
+  // kinsect：Kiranico 無獵蟲資料頁，永遠無 id（繁中走手動對照檔），預期，不檢查。
 }
 
 const orphanList = [...orphans.values()];
