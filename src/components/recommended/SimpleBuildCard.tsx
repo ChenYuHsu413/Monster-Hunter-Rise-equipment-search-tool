@@ -1,7 +1,7 @@
 "use client";
 
 import type { RecommendedBuild } from "@/types/recommended";
-import type { NameResolver } from "@/lib/recommended-builds";
+import { isEditorialSentence, type NameResolver } from "@/lib/recommended-builds";
 import type { BuilderImport } from "@/lib/builder-import";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -35,16 +35,29 @@ function LockButton({
   );
 }
 
-/** 獵蟲清單（kinsect-list，或 weapon-list 附帶）：只有日文原文，照原樣顯示。 */
-function KinsectList({ build }: { build: RecommendedBuild }) {
+/**
+ * 獵蟲清單（kinsect-list，或 weapon-list 附帶）：nameJa 查手動繁中對照，未填以
+ * WarnName fallback 日文（Kiranico 無獵蟲頁，繁中名待人工填 data/kinsect-names.json）。
+ */
+function KinsectList({
+  build,
+  resolver,
+}: {
+  build: RecommendedBuild;
+  resolver: NameResolver;
+}) {
   if (!build.kinsect || build.kinsect.length === 0) return null;
   return (
     <div className="space-y-1">
-      {build.kinsect.map((k, i) => (
+      {build.kinsect.map((k, i) => {
+        const r = resolver.kinsect(k.rawNameJa);
+        return (
         <div key={i} className="flex items-start gap-2 text-sm">
           <Bug className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
           <div className="min-w-0">
-            <div className="font-medium">{k.rawNameJa}</div>
+            <div className="font-medium">
+              {r.resolved ? r.name : <WarnName name={r.name} />}
+            </div>
             {k.statsRaw && (
               <div className="text-[11px] text-muted-foreground">
                 {k.statsRaw}
@@ -52,7 +65,8 @@ function KinsectList({ build }: { build: RecommendedBuild }) {
             )}
           </div>
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -153,21 +167,25 @@ export function SimpleBuildCard({
                       {w.statsRaw}
                     </div>
                   )}
-                  {w.noteRaw && w.noteRaw !== r.name && (
-                    <div className="text-[11px] text-muted-foreground/80">
-                      {w.noteRaw}
-                    </div>
-                  )}
+                  {w.noteRaw &&
+                    !isEditorialSentence(w.noteRaw) &&
+                    w.noteRaw !== r.name && (
+                      <div className="text-[11px] text-muted-foreground/80">
+                        {resolver.editorial(w.noteRaw).name}
+                      </div>
+                    )}
                 </div>
               </div>
             );
           })}
-          <KinsectList build={build} />
+          <KinsectList build={build} resolver={resolver} />
         </div>
       )}
 
       {/* kinsect-list：純獵蟲 */}
-      {build.kind === "kinsect-list" && <KinsectList build={build} />}
+      {build.kind === "kinsect-list" && (
+        <KinsectList build={build} resolver={resolver} />
+      )}
 
       <SourceFooter sourceUrl={build.sourceUrl} />
     </Card>

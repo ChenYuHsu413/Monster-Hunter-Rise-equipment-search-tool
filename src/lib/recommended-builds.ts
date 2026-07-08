@@ -5,6 +5,10 @@ import type {
 } from "@/types/recommended";
 import { decorations } from "./data";
 import { loadGameData } from "./game-data";
+import rampageSkillsData from "@/data/rampage-skills.json";
+import rampageDecosData from "@/data/rampage-decorations.json";
+import kinsectNamesData from "../../data/kinsect-names.json";
+import editorialTranslationsData from "../../data/editorial-translations.json";
 
 /**
  * 推薦配裝資料（data/recommended-builds.json，~2.4MB）的延遲載入與索引。
@@ -83,6 +87,46 @@ const decoNameById: Record<string, string> = Object.fromEntries(
   decorations.map((d) => [d.id, d.nameZh])
 );
 
+/** 百龍技能／百龍裝飾品 id → 繁中名（Kiranico 官方繁中）。 */
+const rampageSkillNameById: Record<string, string> = Object.fromEntries(
+  (rampageSkillsData as { id: string; nameZh: string }[]).map((r) => [
+    r.id,
+    r.nameZh,
+  ])
+);
+const rampageDecoNameById: Record<string, string> = Object.fromEntries(
+  (rampageDecosData as { id: string; nameZh: string }[]).map((r) => [
+    r.id,
+    r.nameZh,
+  ])
+);
+
+/** 手動對照表（$ 前綴為 meta，null＝待人工）→ 只留已填的繁中對照。 */
+function loadManualMap(raw: Record<string, unknown>): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [k, v] of Object.entries(raw)) {
+    if (k.startsWith("$")) continue;
+    if (typeof v === "string" && v) out[k] = v;
+  }
+  return out;
+}
+/** 獵蟲 nameJa → 繁中（手動；未填則缺鍵）。 */
+const kinsectNameByJa = loadManualMap(
+  kinsectNamesData as Record<string, unknown>
+);
+/** Game8 編輯短標記 原文 → 繁中（手動；未填則缺鍵）。 */
+const editorialByRaw = loadManualMap(
+  editorialTranslationsData as Record<string, unknown>
+);
+
+/**
+ * 成句判定：含。或、或 ≥22 字＝Game8 編輯評述（非欄位標記），顯示端「不翻譯也不顯示」
+ * 直接排除。★與 scripts/build-editorial-strings.mjs 的 isEditorialSentence 同步。
+ */
+export function isEditorialSentence(raw: string): boolean {
+  return /[。、]/.test(raw) || raw.length >= 22;
+}
+
 /**
  * 名稱解析：以載入後的 gameData 建立 armor/weapon 中文名對照。
  * 珠子用靜態表。回傳 { name, resolved }：resolved=false 代表對應不到內部資料，
@@ -94,6 +138,14 @@ export type NameResolver = {
   armor: (id?: string, rawNameJa?: string) => ResolvedName;
   weapon: (id?: string, rawNameJa?: string) => ResolvedName;
   deco: (id?: string, rawNameJa?: string) => ResolvedName;
+  /** 百龍技能：id 對照 rampage-skills.json 繁中，對不到 fallback 日文。 */
+  rampageSkill: (id?: string, rawNameJa?: string) => ResolvedName;
+  /** 百龍裝飾品：id 對照 rampage-decorations.json 繁中，對不到 fallback 日文。 */
+  rampageDeco: (id?: string, rawNameJa?: string) => ResolvedName;
+  /** 獵蟲：nameJa 對照手動 kinsect-names.json，未填 fallback 日文。 */
+  kinsect: (rawNameJa?: string) => ResolvedName;
+  /** Game8 編輯短標記：對照手動 editorial-translations.json，未填 fallback 原文。 */
+  editorial: (raw?: string) => ResolvedName;
 };
 
 function fallback(rawNameJa?: string): ResolvedName {
@@ -115,6 +167,22 @@ export async function createNameResolver(): Promise<NameResolver> {
     deco: (id, rawNameJa) => {
       const name = id ? decoNameById[id] : undefined;
       return name ? { name, resolved: true } : fallback(rawNameJa);
+    },
+    rampageSkill: (id, rawNameJa) => {
+      const name = id ? rampageSkillNameById[id] : undefined;
+      return name ? { name, resolved: true } : fallback(rawNameJa);
+    },
+    rampageDeco: (id, rawNameJa) => {
+      const name = id ? rampageDecoNameById[id] : undefined;
+      return name ? { name, resolved: true } : fallback(rawNameJa);
+    },
+    kinsect: (rawNameJa) => {
+      const name = rawNameJa ? kinsectNameByJa[rawNameJa] : undefined;
+      return name ? { name, resolved: true } : fallback(rawNameJa);
+    },
+    editorial: (raw) => {
+      const name = raw ? editorialByRaw[raw] : undefined;
+      return name ? { name, resolved: true } : fallback(raw);
     },
   };
 }

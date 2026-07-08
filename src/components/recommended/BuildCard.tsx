@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { RecommendedBuild, RecoArmor } from "@/types/recommended";
-import type { NameResolver } from "@/lib/recommended-builds";
+import type { NameResolver, ResolvedName } from "@/lib/recommended-builds";
 import { Card } from "@/components/ui/card";
 import { WeaponIcon, ArmorIcon } from "@/components/EquipmentIcon";
 import { DecoList, SkillTotals, WarnName, SlotBadge } from "./parts";
@@ -47,6 +47,33 @@ function ExportButton({
       <Wand2 className="h-3.5 w-3.5" />
       以此為基礎修改
     </Button>
+  );
+}
+
+/**
+ * 百龍技能／百龍裝飾品清單：id 查繁中，對不到以 WarnName fallback 日文（・分隔）。
+ * 百龍珠附 ×count。繁中名僅供顯示，不進匯出 payload。
+ */
+function RampageList({
+  items,
+  resolve,
+}: {
+  items: { id?: string; rawNameJa: string; count?: number }[];
+  resolve: (id?: string, rawNameJa?: string) => ResolvedName;
+}) {
+  return (
+    <>
+      {items.map((it, i) => {
+        const r = resolve(it.id, it.rawNameJa);
+        return (
+          <span key={i}>
+            {i > 0 && "・"}
+            {r.resolved ? r.name : <WarnName name={r.name} />}
+            {it.count && it.count > 1 ? ` ×${it.count}` : ""}
+          </span>
+        );
+      })}
+    </>
   );
 }
 
@@ -105,7 +132,9 @@ export function BuildCard({
   // 摘要 chip 與匯入 payload 同源（selectCoreSkillRows）：所見即所匯。
   const coreRows = selectCoreSkillRows(build, skillMax, SPECIAL_SKILLS).rows;
 
-  // 摘要態：一列式（武器名 + 核心技能 chip + 護石標記 + 匯入按鈕）。
+  // 摘要態：三段式（武器名靠左截斷 ｜ 核心技能 chip 吃中間單列裁切 ｜ 護石+匯入+箭頭
+  // 靠右鎖死）。手機刻意兩行（名稱+動作區一行、chip 一行），非 flex-wrap 意外折行：
+  // chip 段 w-full 強制換行，桌機 sm: 收回單列。
   if (!expanded) {
     return (
       <Card className="p-3">
@@ -123,49 +152,54 @@ export function BuildCard({
           title="點擊展開完整配裝"
           className="flex cursor-pointer flex-wrap items-center gap-x-2 gap-y-1"
         >
-          <WeaponIcon
-            type={build.weaponType}
-            className="h-5 w-5 shrink-0 text-primary"
-          />
-          <span className="text-sm font-medium">
-            {weaponName ? (
-              weaponName.resolved ? (
-                weaponName.name
+          {/* 左：武器圖示 + 名稱（過長截斷） */}
+          <div className="order-1 flex min-w-0 shrink items-center gap-2">
+            <WeaponIcon
+              type={build.weaponType}
+              className="h-5 w-5 shrink-0 text-primary"
+            />
+            <span className="truncate text-sm font-medium">
+              {weaponName ? (
+                weaponName.resolved ? (
+                  weaponName.name
+                ) : (
+                  <WarnName name={weaponName.name} />
+                )
               ) : (
-                <WarnName name={weaponName.name} />
-              )
-            ) : (
-              build.buildName
-            )}
-          </span>
-          {needsCharm && (
-            <span
-              className="inline-flex items-center gap-0.5 text-[10px] text-amber-300"
-              title="此配裝需要護石"
-            >
-              <Gem className="h-3 w-3" />
-              護石
+                build.buildName
+              )}
             </span>
-          )}
+          </div>
+          {/* 右：護石標記 + 匯入 + 箭頭（ml-auto 鎖右；手機留在第一行，桌機置最右） */}
+          <div className="order-2 ml-auto flex shrink-0 items-center gap-1 sm:order-3">
+            {needsCharm && (
+              <span
+                className="inline-flex items-center gap-0.5 text-[10px] text-amber-300"
+                title="此配裝需要護石"
+              >
+                <Gem className="h-3 w-3" />
+                護石
+              </span>
+            )}
+            {hasSkillTotals && (
+              <ExportButton build={build} onExport={onExport} />
+            )}
+            <ChevronDown className="h-4 w-4 text-muted-foreground" />
+          </div>
+          {/* 中：核心技能 chip（單列、超出裁切；手機獨佔第二行、桌機吃剩餘寬） */}
           {coreRows.length > 0 && (
-            <span className="flex flex-wrap gap-1">
+            <div className="order-3 flex w-full min-w-0 gap-1 overflow-hidden sm:order-2 sm:w-auto sm:flex-1">
               {coreRows.map((s) => (
                 <span
                   key={s.name}
-                  className="inline-flex items-center gap-0.5 rounded border border-border bg-muted px-1.5 py-0.5 text-[11px]"
+                  className="inline-flex shrink-0 items-center gap-0.5 whitespace-nowrap rounded border border-border bg-muted px-1.5 py-0.5 text-[11px]"
                 >
                   {s.name}
                   <span className="font-mono font-semibold">{s.level}</span>
                 </span>
               ))}
-            </span>
+            </div>
           )}
-          <span className="ml-auto flex items-center gap-1">
-            {hasSkillTotals && (
-              <ExportButton build={build} onExport={onExport} />
-            )}
-            <ChevronDown className="h-4 w-4 text-muted-foreground" />
-          </span>
         </div>
       </Card>
     );
@@ -234,9 +268,10 @@ export function BuildCard({
             {weapon.rampageDecos && weapon.rampageDecos.length > 0 && (
               <div className="text-[11px] text-muted-foreground">
                 百龍珠：
-                {weapon.rampageDecos
-                  .map((d) => d.rawNameJa + (d.count && d.count > 1 ? ` ×${d.count}` : ""))
-                  .join("・")}
+                <RampageList
+                  items={weapon.rampageDecos}
+                  resolve={resolver.rampageDeco}
+                />
               </div>
             )}
           </div>
@@ -322,7 +357,10 @@ export function BuildCard({
       {build.rampageSkills && build.rampageSkills.length > 0 && (
         <div className="text-[11px] text-muted-foreground">
           百龍技能：
-          {build.rampageSkills.map((s) => s.rawNameJa).join("・")}
+          <RampageList
+            items={build.rampageSkills}
+            resolve={resolver.rampageSkill}
+          />
         </div>
       )}
 

@@ -69,8 +69,12 @@ export type RecoWeapon = {
   noteRaw?: string;
   /** full-build：武器上的裝飾珠。 */
   decorations?: RecoDecoration[];
-  /** full-build：百龍裝飾珠（rawNameJa 原文，無 id 解析）。 */
-  rampageDecos?: { rawNameJa: string; count?: number }[];
+  /**
+   * full-build：武器百龍裝飾珠。id 對照 src/data/rampage-decorations.json
+   * （複合鍵 rdeco_{skillNumId}_{slot}）；○系欄位簡稱對不到→id 省略。
+   * id 僅供顯示查繁中，不進匯出 payload。
+   */
+  rampageDecos?: { id?: string; rawNameJa: string; count?: number }[];
 };
 
 /** 一件防具引用（full-build slot 恆為部位；armor-pieces slot=null）。 */
@@ -120,8 +124,11 @@ export type RecommendedBuild = {
   buildDecorations?: RecoDecoration[] | null;
   /** 發動技能總表（null＝來源未提供）。 */
   skillTotals?: RecoSkillTotal[] | null;
-  /** 百龍技能（rawNameJa 原文，無 id 解析）。 */
-  rampageSkills?: { rawNameJa: string }[] | null;
+  /**
+   * 百龍技能。id 對照 src/data/rampage-skills.json（Kiranico 官方繁中）；
+   * 對不到→id 省略，顯示端 fallback 日文。id 僅供顯示，不進匯出 payload。
+   */
+  rampageSkills?: { id?: string; rawNameJa: string }[] | null;
   kinsect?: RecoKinsect[];
   sourceUrl: string;
 };
