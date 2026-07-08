@@ -11,7 +11,10 @@ import {
   ARMOR_PART_LABELS,
   type ArmorPart,
 } from "@/types/build";
-import { ChevronDown, ChevronUp, Gem } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { skillMax, SPECIAL_SKILLS } from "@/lib/data";
+import { buildFullBuildImport, type BuilderImport } from "@/lib/builder-import";
+import { ChevronDown, ChevronUp, Gem, Wand2 } from "lucide-react";
 
 const ARMOR_ORDER: ArmorPart[] = ["head", "chest", "arms", "waist", "legs"];
 
@@ -47,11 +50,14 @@ function ArmorName({
 export function BuildCard({
   build,
   resolver,
+  onExport,
 }: {
   build: RecommendedBuild;
   resolver: NameResolver;
+  onExport: (payload: BuilderImport) => void;
 }) {
   const [skillsOpen, setSkillsOpen] = useState(false);
+  const hasSkillTotals = (build.skillTotals ?? []).length > 0;
   const weapon = build.weapons?.[0];
   const weaponName = weapon
     ? resolver.weapon(weapon.id, weapon.rawNameJa)
@@ -72,6 +78,20 @@ export function BuildCard({
             </p>
           )}
         </div>
+        {hasSkillTotals && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="h-7 shrink-0 gap-1 text-xs"
+            onClick={() =>
+              onExport(buildFullBuildImport(build, skillMax, SPECIAL_SKILLS))
+            }
+            title="把此配裝的核心技能與護石帶入配裝器（不含傀異錬成加成）"
+          >
+            <Wand2 className="h-3.5 w-3.5" />
+            以此為基礎修改
+          </Button>
+        )}
       </div>
 
       {/* 武器 */}

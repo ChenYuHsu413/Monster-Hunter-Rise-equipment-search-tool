@@ -21,6 +21,8 @@ export type OwnedCharm = {
   skills: { name: string; level: number }[];
   /** 孔位等級陣列（已去零），例如 [2,1]。 */
   slots: number[];
+  /** 來源標記：由推薦配裝匯入的護石標 "reco"（可辨識、可刪，與自有護石並存）。 */
+  source?: "reco";
 };
 
 export type SearchConditions = {
@@ -128,7 +130,12 @@ function sanitizeCharms(v: unknown): OwnedCharm[] {
     const slots = Array.isArray(raw.slots)
       ? normalizeSlots(raw.slots.map((n) => Number(n)).filter((n) => Number.isFinite(n)))
       : [];
-    out.push({ id: raw.id, skills, slots });
+    out.push({
+      id: raw.id,
+      skills,
+      slots,
+      ...(raw.source === "reco" ? { source: "reco" as const } : {}),
+    });
   }
   return out;
 }

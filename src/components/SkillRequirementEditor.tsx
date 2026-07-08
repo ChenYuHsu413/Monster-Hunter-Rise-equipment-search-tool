@@ -1,22 +1,38 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useRef, useState } from "react";
 import type { Skill, SkillMap } from "@/types/build";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { X, Plus } from "lucide-react";
+import { X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { SET_SKILLS } from "@/lib/data";
+import { SET_SKILLS, buildPresets } from "@/lib/data";
+
+/**
+ * 常用技能快捷區：依所有 preset 的必要技能出現頻率取前 12（資料驅動，不硬編）。
+ * 玩家最常需要的技能（攻擊、看破、超會心…）會自然浮上來。
+ */
+const COMMON_SKILLS: string[] = (() => {
+  const freq = new Map<string, number>();
+  for (const p of buildPresets) {
+    for (const name of Object.keys(p.requiredSkills ?? {})) {
+      freq.set(name, (freq.get(name) ?? 0) + 1);
+    }
+  }
+  return [...freq.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 12)
+    .map(([name]) => name);
+})();
 
 /** 下拉選項的單列渲染（含特殊/套裝標記）。 */
 function SkillOption({ s }: { s: Skill }) {
@@ -37,55 +53,78 @@ function SkillOption({ s }: { s: Skill }) {
   );
 }
 
-/** 新增技能下拉（套裝技能獨立分組）。 */
-function AddSkillSelect({
+/** 可搜尋的新增技能輸入框：輸入中文即時過濾，點候選加入。 */
+function SkillSearchAdd({
   skills,
   onAdd,
+  placeholder,
 }: {
   skills: Skill[];
   onAdd: (name: string) => void;
+  placeholder: string;
 }) {
-  const [setGroup, normalGroup] = useMemo(() => {
-    const set: Skill[] = [];
-    const normal: Skill[] = [];
-    for (const s of skills) (SET_SKILLS.has(s.name) ? set : normal).push(s);
-    return [set, normal];
-  }, [skills]);
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const blurTimer = useRef<number | null>(null);
+
+  const matches = useMemo(() => {
+    const q = query.trim();
+    const pool = q ? skills.filter((s) => s.name.includes(q)) : skills;
+    return pool.slice(0, 40);
+  }, [skills, query]);
+
+  const add = (name: string) => {
+    onAdd(name);
+    setQuery("");
+    setOpen(false);
+  };
 
   return (
-    <Select value="" onValueChange={onAdd}>
-      <SelectTrigger className="h-7 text-xs">
-        <span className="flex items-center gap-1 text-muted-foreground">
-          <Plus className="h-3.5 w-3.5" /> 新增技能
-        </span>
-      </SelectTrigger>
-      <SelectContent>
-        {setGroup.length > 0 && (
-          <SelectGroup>
-            <SelectLabel className="text-muted-foreground">
-              套裝技能（靠系列件數）
-            </SelectLabel>
-            {setGroup.map((s) => (
-              <SelectItem key={s.name} value={s.name}>
+    <div className="relative">
+      <div className="flex items-center gap-1.5 rounded-md border border-border px-2">
+        <Search className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+        <Input
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setOpen(true);
+          }}
+          onFocus={() => setOpen(true)}
+          onBlur={() => {
+            // 延遲關閉，讓候選項的 mousedown/click 先觸發
+            blurTimer.current = window.setTimeout(() => setOpen(false), 120);
+          }}
+          placeholder={placeholder}
+          className="h-8 border-0 px-0 text-xs focus-visible:ring-0"
+        />
+      </div>
+      {open && matches.length > 0 && (
+        <ul
+          className="absolute z-30 mt-1 max-h-56 w-full overflow-y-auto rounded-md border border-border bg-popover p-1 shadow-md scrollbar-thin"
+          onMouseDown={() => {
+            // 取消 blur 的關閉，確保點擊生效
+            if (blurTimer.current) window.clearTimeout(blurTimer.current);
+          }}
+        >
+          {matches.map((s) => (
+            <li key={s.name}>
+              <button
+                type="button"
+                onClick={() => add(s.name)}
+                className="flex w-full items-center rounded-sm px-2 py-1 text-left text-xs hover:bg-accent/50"
+              >
                 <SkillOption s={s} />
-              </SelectItem>
-            ))}
-          </SelectGroup>
-        )}
-        <SelectGroup>
-          {setGroup.length > 0 && (
-            <SelectLabel className="text-muted-foreground">
-              一般技能
-            </SelectLabel>
-          )}
-          {normalGroup.map((s) => (
-            <SelectItem key={s.name} value={s.name}>
-              <SkillOption s={s} />
-            </SelectItem>
+              </button>
+            </li>
           ))}
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+        </ul>
+      )}
+      {open && query.trim() && matches.length === 0 && (
+        <div className="absolute z-30 mt-1 w-full rounded-md border border-border bg-popover px-2 py-1.5 text-xs text-muted-foreground shadow-md">
+          查無「{query.trim()}」相關技能
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -172,10 +211,34 @@ export function SkillRequirementEditor({
           )}
         </div>
 
-        <AddSkillSelect
+        <SkillSearchAdd
           skills={addable}
           onAdd={(name) => onChangeRequired({ ...required, [name]: 1 })}
+          placeholder="搜尋技能名稱加入必要條件…"
         />
+
+        {/* 常用技能快捷（依 preset 頻率；已加入或已排除者不顯示） */}
+        {(() => {
+          const quick = COMMON_SKILLS.filter(
+            (n) => !(n in required) && !excludedSet.has(n)
+          );
+          if (quick.length === 0) return null;
+          return (
+            <div className="flex flex-wrap gap-1">
+              {quick.map((name) => (
+                <button
+                  key={name}
+                  type="button"
+                  onClick={() => onChangeRequired({ ...required, [name]: 1 })}
+                  className="rounded-full border border-border px-2 py-0.5 text-[11px] text-muted-foreground hover:border-primary/50 hover:text-primary"
+                  title="常用技能，點擊加入必要條件"
+                >
+                  + {name}
+                </button>
+              ))}
+            </div>
+          );
+        })()}
       </div>
 
       {/* ---- 排除技能 ---- */}
@@ -211,9 +274,10 @@ export function SkillRequirementEditor({
           )}
         </div>
 
-        <AddSkillSelect
+        <SkillSearchAdd
           skills={addable}
           onAdd={(name) => onChangeExcluded([...excluded, name])}
+          placeholder="搜尋技能名稱加入排除條件…"
         />
       </div>
     </div>

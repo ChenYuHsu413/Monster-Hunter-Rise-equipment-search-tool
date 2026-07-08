@@ -12,6 +12,7 @@ import {
 } from "@/lib/recommended-builds";
 import { useLocalStorage } from "@/lib/use-local-storage";
 import type { RecommendedBuild } from "@/types/recommended";
+import type { BuilderImport } from "@/lib/builder-import";
 import { WeaponIcon } from "@/components/EquipmentIcon";
 import { BuildCard } from "./BuildCard";
 import { SimpleBuildCard } from "./SimpleBuildCard";
@@ -22,14 +23,18 @@ import { ChevronDown, ChevronUp, Loader2, Swords } from "lucide-react";
 function BuildCardDispatch({
   build,
   resolver,
+  onExport,
 }: {
   build: RecommendedBuild;
   resolver: NameResolver;
+  onExport: (payload: BuilderImport) => void;
 }) {
   if (build.kind === "full-build") {
-    return <BuildCard build={build} resolver={resolver} />;
+    return <BuildCard build={build} resolver={resolver} onExport={onExport} />;
   }
-  return <SimpleBuildCard build={build} resolver={resolver} />;
+  return (
+    <SimpleBuildCard build={build} resolver={resolver} onExport={onExport} />
+  );
 }
 
 /** 一個分區（下位/上位過渡/…）：標題 + 卡片網格。 */
@@ -37,10 +42,12 @@ function StageSection({
   title,
   builds,
   resolver,
+  onExport,
 }: {
   title: string;
   builds: RecommendedBuild[];
   resolver: NameResolver;
+  onExport: (payload: BuilderImport) => void;
 }) {
   return (
     <section className="space-y-2">
@@ -50,14 +57,23 @@ function StageSection({
       </div>
       <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
         {builds.map((b) => (
-          <BuildCardDispatch key={b.id} build={b} resolver={resolver} />
+          <BuildCardDispatch
+            key={b.id}
+            build={b}
+            resolver={resolver}
+            onExport={onExport}
+          />
         ))}
       </div>
     </section>
   );
 }
 
-export function RecommendedView() {
+export function RecommendedView({
+  onExport,
+}: {
+  onExport: (payload: BuilderImport) => void;
+}) {
   const [index, setIndex] = useState<RecommendedIndex | null>(null);
   const [resolver, setResolver] = useState<NameResolver | null>(null);
   // 選定的武器種類（persist；空字串＝尚未選）。
@@ -135,6 +151,7 @@ export function RecommendedView() {
                   title={CATEGORY_LABELS[cat]}
                   builds={builds}
                   resolver={resolver}
+                  onExport={onExport}
                 />
               );
             })}
@@ -166,6 +183,7 @@ export function RecommendedView() {
                         key={b.id}
                         build={b}
                         resolver={resolver}
+                        onExport={onExport}
                       />
                     ))}
                   </div>

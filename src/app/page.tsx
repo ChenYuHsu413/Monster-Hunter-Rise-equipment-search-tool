@@ -7,6 +7,7 @@ import { BuilderView } from "@/components/builder/BuilderView";
 import { Button } from "@/components/ui/button";
 import { Compass, Swords } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { builderHasConditions, type BuilderImport } from "@/lib/builder-import";
 
 /**
  * 雙 Tab 殼：推薦配裝（預設）與配裝器。
@@ -28,6 +29,8 @@ export default function Home() {
   const [tab, setTabState] = useState<Tab>("recommend");
   // 配裝器首次被選到才掛載，之後保留於 DOM（hidden）以留住狀態。
   const [builderMounted, setBuilderMounted] = useState(false);
+  // 推薦配裝→配裝器的待套用匯入指令；BuilderView 套用後回呼清空。
+  const [pendingImport, setPendingImport] = useState<BuilderImport | null>(null);
 
   // 初始化與 popstate（上一頁/分享連結）同步：由 URL ?tab= 決定目前分頁。
   useEffect(() => {
@@ -49,6 +52,22 @@ export default function Home() {
     params.set("tab", t);
     // replace（非 push）：切 Tab 不堆歷史，返回鍵直接離開網站而非在 Tab 間彈跳。
     window.history.replaceState(null, "", `?${params.toString()}`);
+  };
+
+  /**
+   * 推薦配裝卡片觸發的匯出：切到配裝器並交付匯入指令（不自動搜尋，由 BuilderView 套用）。
+   * full-build 會覆蓋必要技能，故若配裝器已有非空條件先確認；lock-* 為 additive，不確認。
+   */
+  const exportToBuilder = (payload: BuilderImport) => {
+    if (payload.kind === "full-build" && builderHasConditions()) {
+      const ok = window.confirm(
+        "配裝器已有搜尋條件，要以此推薦配裝覆蓋必要技能嗎？（你的護石清單會保留）"
+      );
+      if (!ok) return;
+    }
+    setBuilderMounted(true);
+    setPendingImport(payload);
+    selectTab("builder");
   };
 
   return (
@@ -99,7 +118,7 @@ export default function Home() {
             tab === "recommend" ? "flex min-h-0 flex-1 flex-col" : "hidden"
           )}
         >
-          <RecommendedView />
+          <RecommendedView onExport={exportToBuilder} />
         </div>
         {builderMounted && (
           <div
@@ -107,7 +126,10 @@ export default function Home() {
               tab === "builder" ? "flex min-h-0 flex-1 flex-col" : "hidden"
             )}
           >
-            <BuilderView />
+            <BuilderView
+              pendingImport={pendingImport}
+              onConsumeImport={() => setPendingImport(null)}
+            />
           </div>
         )}
       </div>

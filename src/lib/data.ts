@@ -37,6 +37,14 @@ export const SET_SKILLS = new Set<string>([
   "炎鱗之恩惠",
 ]);
 
+/**
+ * 高風險/高價值特殊技能（狂化、業鎧、狂龍症、血氣覺醒等；skills.json 的 special）。
+ * 這批多為傀異錬成/狂竜化衍生，搜尋器不模擬其取得，故推薦配裝匯入時不列入必要技能。
+ */
+export const SPECIAL_SKILLS = new Set<string>(
+  skills.filter((s) => s.special).map((s) => s.name)
+);
+
 /** 技能名稱 → 最大等級。未列出的技能預設上限 7。 */
 export const skillMax: Record<string, number> = Object.fromEntries(
   skills.map((s) => [s.name, s.maxLevel])

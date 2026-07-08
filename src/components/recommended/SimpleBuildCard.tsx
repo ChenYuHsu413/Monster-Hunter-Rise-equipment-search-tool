@@ -2,11 +2,38 @@
 
 import type { RecommendedBuild } from "@/types/recommended";
 import type { NameResolver } from "@/lib/recommended-builds";
+import type { BuilderImport } from "@/lib/builder-import";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { WeaponIcon } from "@/components/EquipmentIcon";
 import { WarnName, SkillList, SlotBadge } from "./parts";
 import { SourceFooter } from "./SourceFooter";
-import { Bug } from "lucide-react";
+import { Bug, Lock } from "lucide-react";
+
+/** 「在配裝器鎖定」小按鈕；id 未解析（無專案資料）時停用。 */
+function LockButton({
+  onClick,
+  disabled,
+  label,
+}: {
+  onClick: () => void;
+  disabled: boolean;
+  label: string;
+}) {
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      className="h-6 shrink-0 gap-1 px-1.5 text-[11px] text-muted-foreground hover:text-primary"
+      onClick={onClick}
+      disabled={disabled}
+      title={disabled ? "查無對應的專案資料，無法鎖定" : label}
+    >
+      <Lock className="h-3 w-3" />
+      鎖定
+    </Button>
+  );
+}
 
 /** 獵蟲清單（kinsect-list，或 weapon-list 附帶）：只有日文原文，照原樣顯示。 */
 function KinsectList({ build }: { build: RecommendedBuild }) {
@@ -37,9 +64,11 @@ function KinsectList({ build }: { build: RecommendedBuild }) {
 export function SimpleBuildCard({
   build,
   resolver,
+  onExport,
 }: {
   build: RecommendedBuild;
   resolver: NameResolver;
+  onExport: (payload: BuilderImport) => void;
 }) {
   return (
     <Card className="flex flex-col gap-2 p-3">
@@ -66,6 +95,13 @@ export function SimpleBuildCard({
                     {r.resolved ? r.name : <WarnName name={r.name} />}
                   </span>
                   <SlotBadge slots={a.slots} />
+                  <LockButton
+                    disabled={!a.id}
+                    label="在配裝器鎖定此部位為此裝備"
+                    onClick={() =>
+                      a.id && onExport({ kind: "lock-armor", id: a.id })
+                    }
+                  />
                 </div>
                 <SkillList skills={a.skills} />
               </div>
@@ -99,6 +135,18 @@ export function SimpleBuildCard({
                         龍{w.rampageSlot}
                       </span>
                     ) : null}
+                    <LockButton
+                      disabled={!w.id}
+                      label="在配裝器固定此武器"
+                      onClick={() =>
+                        w.id &&
+                        onExport({
+                          kind: "lock-weapon",
+                          id: w.id,
+                          weaponType: build.weaponType,
+                        })
+                      }
+                    />
                   </div>
                   {w.statsRaw && (
                     <div className="text-[11px] text-muted-foreground">

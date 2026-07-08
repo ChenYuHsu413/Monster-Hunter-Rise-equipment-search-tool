@@ -100,11 +100,17 @@ function PartRow({
       />
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
-          <span
-            className={cn("truncate text-[15px]", excluded && "line-through")}
+          <button
+            type="button"
+            onClick={onFix}
+            title={fixed ? "已固定此部位" : "點擊以固定此部位"}
+            className={cn(
+              "truncate text-left text-[15px] hover:text-primary",
+              excluded && "line-through"
+            )}
           >
             {piece.nameZh}
-          </span>
+          </button>
           <span className="shrink-0 font-mono text-[11px] text-muted-foreground">
             {formatSlots(piece.slots)}
           </span>

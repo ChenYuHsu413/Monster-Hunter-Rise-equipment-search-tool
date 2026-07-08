@@ -35,6 +35,7 @@ import {
   type SearchConditions,
 } from "@/lib/search-conditions";
 import { decodeShareState, encodeShareState } from "@/lib/share-link";
+import type { BuilderImport } from "@/lib/builder-import";
 import {
   elementSkillMap,
   mergeMaxSkills,
@@ -71,6 +72,7 @@ import {
   SlidersHorizontal,
   ChevronDown,
   ChevronUp,
+  X,
 } from "lucide-react";
 
 /** 結果排序鍵：EFR / 防禦 / 孔位餘裕。 */
@@ -82,7 +84,24 @@ const SORT_OPTIONS: { key: SortKey; label: string; hint: string }[] = [
   { key: "slots", label: "孔位餘裕", hint: "剩餘洞位價值由高到低" },
 ];
 
-export function BuilderView() {
+type BuilderViewProps = {
+  /** 由推薦配裝頁交付的待套用匯入指令（切到配裝器時帶入）。 */
+  pendingImport?: BuilderImport | null;
+  /** 套用完成後通知外層清空 pendingImport。 */
+  onConsumeImport?: () => void;
+};
+
+/** 匯入完成後在條件區顯示的一行提示。 */
+type ImportNotice = {
+  importedCount: number;
+  totalCount: number;
+  droppedAugment: boolean;
+};
+
+export function BuilderView({
+  pendingImport,
+  onConsumeImport,
+}: BuilderViewProps = {}) {
   const firstPreset = presetsForWeapon("long-sword")[0] ?? buildPresets[0];
 
   // ---- 延遲載入的防具 / 武器資料（不進首屏 bundle）----
@@ -247,6 +266,12 @@ export function BuilderView() {
   // 手機版：搜尋條件面板是否展開（桌機恆顯示，此狀態只影響 <lg）。
   const [conditionsOpen, setConditionsOpen] = useState(true);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  // 條件區容器（匯入/鎖定後捲動對齊）。
+  const asideRef = useRef<HTMLElement>(null);
+  // 由推薦配裝匯入後顯示的一行提示；null＝不顯示。
+  const [importNotice, setImportNotice] = useState<ImportNotice | null>(null);
+  // 搜尋後條件是否又被更動（顯示「條件已變更，重新搜尋」提示；不自動觸發）。
+  const [dirtySinceSearch, setDirtySinceSearch] = useState(false);
 
   const presets = useMemo(() => presetsForWeapon(weaponType), [weaponType]);
   const weaponById = gameData?.weaponById ?? {};
@@ -434,6 +459,7 @@ export function BuilderView() {
       setResults(out.results);
       setMeta(out.meta);
       setLoading(false);
+      setDirtySinceSearch(false);
       // 手機版：搜尋後自動收合條件並跳到結果（桌機恆顯示，收合僅影響視覺）。
       // 延遲捲動，等收合的版面重排完成後再對齊到（sticky 的）條件收合列。
       if (typeof window !== "undefined" && window.innerWidth < 1024) {
@@ -522,6 +548,112 @@ export function BuilderView() {
     setToast(msg);
     window.setTimeout(() => setToast(null), 1800);
   };
+
+  // ---- 全部清除（條件區 chip 操作）----
+  const clearAllFixed = () => {
+    const hadWeapon = !!fixedParts.weapon;
+    setFixedParts({});
+    if (hadWeapon) {
+      setFixedWeaponId("");
+      setWeaponSearchMode("search");
+      reapplyAutoSkills(autoElementType("search"));
+    }
+  };
+  const clearAllExcluded = () =>
+    setExcludedItems({ armorIds: [], weaponIds: [] });
+  const removeRecoCharm = (id: string) =>
+    setCharms(charms.filter((c) => c.id !== id));
+  const recoCharms = charms.filter((c) => c.source === "reco");
+
+  // ---- 推薦配裝匯入的套用 ----
+  const applyImport = async (payload: BuilderImport) => {
+    // 確保資料已載入：lock-armor 需查部位、lock-weapon 需查屬性
+    const gd = gameData ?? (await loadGameData());
+    if (!gameData) setGameData(gd);
+
+    if (payload.kind === "full-build") {
+      const importedNames = new Set(Object.keys(payload.requiredSkills));
+      // 切到該配裝的武器種類（直接設，不走 changeWeapon 以免 applyPreset 覆蓋匯入的技能）。
+      const switchType = payload.weaponType !== weaponType;
+      if (switchType) {
+        setWeaponType(payload.weaponType);
+        setElementFilter("all");
+        setFixedWeaponId("");
+        setWeaponSearchMode("search");
+        const first = presetsForWeapon(payload.weaponType)[0];
+        if (first) setPresetId(first.id); // 只給 preset 下拉一個合法值，不套用其技能
+      }
+      setConditions((prev) => {
+        const fixedParts = { ...prev.fixedParts };
+        if (switchType) delete fixedParts.weapon;
+        return {
+          ...prev,
+          requiredSkills: payload.requiredSkills,
+          // 匯入技能若在排除清單中會互斥導致無解，一併移除
+          excludedSkills: prev.excludedSkills.filter(
+            (s) => !importedNames.has(s)
+          ),
+          fixedParts,
+          // 「以此為基礎修改」＝從這套重新開始：保留使用者自有護石，取代所有舊的推薦來源護石。
+          charms: [
+            ...prev.charms.filter((c) => c.source !== "reco"),
+            ...(payload.charm ? [payload.charm] : []),
+          ],
+        };
+      });
+      setAutoSkills({}); // 匯入為手動核心技能，清掉殘留的 preset 自動技能提示
+      setImportNotice({
+        importedCount: payload.importedCount,
+        totalCount: payload.totalCount,
+        droppedAugment: payload.droppedAugment,
+      });
+    } else if (payload.kind === "lock-armor") {
+      const part = gd.armorById[payload.id]?.part;
+      if (part) fixArmor(part, payload.id);
+      setImportNotice(null);
+    } else if (payload.kind === "lock-weapon") {
+      if (payload.weaponType !== weaponType) changeWeapon(payload.weaponType);
+      fixWeapon(payload.id);
+      setImportNotice(null);
+    }
+
+    // 展開條件區並捲動對齊（不自動搜尋）
+    setConditionsOpen(true);
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        if (typeof window !== "undefined" && window.innerWidth < 1024) {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          asideRef.current?.scrollTo?.({ top: 0, behavior: "smooth" });
+        }
+      })
+    );
+  };
+
+  // 收到 pendingImport → 套用後通知外層清空（同一指令只套一次）。
+  useEffect(() => {
+    if (!pendingImport) return;
+    applyImport(pendingImport);
+    onConsumeImport?.();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pendingImport]);
+
+  // 搜尋後條件又被更動 → 標記需重新搜尋（含 B 的鎖定/排除；不自動觸發）。
+  useEffect(() => {
+    if (hasSearched) setDirtySinceSearch(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    conditions,
+    reservedSlots,
+    minDefense,
+    minResistances,
+    weaponType,
+    weaponSearchMode,
+    fixedWeaponId,
+    elementFilter,
+    searchMode,
+    augments,
+  ]);
 
   const copySummary = async (summary: string) => {
     try {
@@ -648,10 +780,37 @@ export function BuilderView() {
       <div className="flex flex-1 flex-col lg:min-h-0 lg:flex-row">
         {/* 左側控制欄（手機可收合，桌機恆顯示）*/}
         <aside
+          ref={asideRef}
           className={`${
             conditionsOpen ? "flex" : "hidden"
           } w-full flex-col gap-3 border-b border-border p-3 scrollbar-thin lg:flex lg:w-[400px] lg:shrink-0 lg:overflow-y-auto lg:border-b-0 lg:border-r`}
         >
+          {importNotice && (
+            <div className="flex items-start justify-between gap-2 rounded-md border border-primary/30 bg-primary/10 px-3 py-2 text-xs text-primary">
+              <div className="space-y-0.5">
+                <p>
+                  已從推薦配裝匯入核心技能 {importNotice.importedCount} 項
+                  {importNotice.totalCount > importNotice.importedCount && (
+                    <span className="text-primary/70">
+                      （共 {importNotice.totalCount} 項，其餘為附帶技能未匯入）
+                    </span>
+                  )}
+                  ，請確認後搜尋。
+                </p>
+                {importNotice.droppedAugment && (
+                  <p className="text-amber-400">已排除傀異錬成加成的等級。</p>
+                )}
+              </div>
+              <button
+                type="button"
+                onClick={() => setImportNotice(null)}
+                className="shrink-0 text-primary/70 hover:text-primary"
+                title="關閉提示"
+              >
+                <X className="h-3.5 w-3.5" />
+              </button>
+            </div>
+          )}
           <Card>
             <CardContent className="space-y-3 p-3">
               <WeaponSelector
@@ -746,10 +905,14 @@ export function BuilderView() {
                     <FixedPartsPanel
                       fixedParts={fixedParts}
                       excludedItems={excludedItems}
+                      recoCharms={recoCharms}
                       armorById={armorById}
                       weaponById={weaponById}
                       onClearFixed={clearFixed}
                       onRemoveExcluded={removeExcluded}
+                      onClearAllFixed={clearAllFixed}
+                      onClearAllExcluded={clearAllExcluded}
+                      onRemoveRecoCharm={removeRecoCharm}
                     />
                   </div>
                   <div className="space-y-1.5 border-t border-border pt-3">
@@ -838,6 +1001,23 @@ export function BuilderView() {
                 >
                   關閉
                 </button>
+              </div>
+            )}
+            {dirtySinceSearch && hasSearched && !loading && (
+              <div className="mb-3 flex items-center justify-between gap-2 rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-300">
+                <span className="flex items-center gap-1.5">
+                  <AlertTriangle className="h-3.5 w-3.5" />
+                  條件已變更，目前結果為上次搜尋所得。
+                </span>
+                <Button
+                  size="sm"
+                  className="h-7 shrink-0 gap-1.5 text-xs"
+                  onClick={runSearch}
+                  disabled={loading || Object.keys(required).length === 0}
+                >
+                  <Search className="h-3.5 w-3.5" />
+                  重新搜尋
+                </Button>
               </div>
             )}
             {searchMode === "exact" && !loading && (
