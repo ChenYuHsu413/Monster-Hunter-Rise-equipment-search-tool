@@ -26,8 +26,23 @@ const ROOT = path.join(__dirname, "..");
 const SRC = path.join(ROOT, "src", "data");
 const CACHE = path.join(__dirname, ".cache");
 const MAP_FILE = path.join(ROOT, "data", "jp-name-map.json");
+const OVERRIDE_FILE = path.join(ROOT, "data", "jp-name-overrides.json");
 const SUGGEST_FILE = path.join(ROOT, "data", "jp-name-map.suggestions.json");
 const BUILDS_FILE = path.join(ROOT, "data", "recommended-builds.json");
+
+/** 部位後綴 token（A/B 二擇一防具的後綴重建用）。 */
+const ARMOR_SUFFIX =
+  /(ヘルム|メイル|アーム|コイル|グリーヴ|グリーブ|クラウン|フォールド|ペイル|アンカ|ガンバ|キャップ|レジスト|ベスト|ロッド|フープ|マスク|コート|スーツ|レギンス|アンク|イラム|クイス|ラーマ|オッハ|ライース|トロンコ|フロール|【[^】]*】[^【】]*)$/;
+
+/** 「A/Bヘルム」→ ["Aヘルム", "Bヘルム"]（末段完整，前段補末段後綴）。非 A/B 回 null。 */
+function splitAlternatives(name) {
+  const parts = name.split("/");
+  if (parts.length < 2) return null;
+  const last = parts[parts.length - 1];
+  const sm = last.match(ARMOR_SUFFIX);
+  const suf = sm ? sm[1] : "";
+  return parts.map((p, i) => (i === parts.length - 1 || p.match(ARMOR_SUFFIX) ? p : p + suf));
+}
 
 const HOST = "https://mhrise.kiranico.com";
 const UA = { "User-Agent": "Mozilla/5.0 (data import for personal armor builder)" };
@@ -155,23 +170,42 @@ async function main() {
   const counts = Object.fromEntries(Object.entries(map).map(([k, v]) => [k, Object.keys(v).length]));
   console.log(`  對照條目：${JSON.stringify(counts)}；命名衝突 ${collisions.length}（防具性別雙胞胎，first-wins 取一件）`);
 
-  // ---- 寫對照表（保留既有人工增補：既存檔的鍵若不在自動結果中則保留）----
-  let existing = {};
+  // ---- 合併人工 override（重跑安全：人工判斷全收在 data/jp-name-overrides.json，
+  //      override 優先蓋過自動結果；★不從產出檔回讀，重跑不會沖掉人工成果）----
+  const projById = { weapons: projWeapons, armors: projArmors, decorations: projDecos, skills: projSkills };
+  let override = {};
   try {
-    existing = JSON.parse(fs.readFileSync(MAP_FILE, "utf8"));
+    override = JSON.parse(fs.readFileSync(OVERRIDE_FILE, "utf8"));
   } catch {}
-  const manualKept = { skills: 0, armors: 0, decorations: 0, weapons: 0 };
-  for (const type of Object.keys(map)) {
-    for (const [k, v] of Object.entries(existing[type] ?? {})) {
-      if (map[type][k] == null) {
-        map[type][k] = v; // 人工增補的鍵（自動抓不到者）保留
-        manualKept[type]++;
+  const ovApplied = { skills: 0, armors: 0, decorations: 0, weapons: 0, alternatives: 0 };
+  const ovBad = [];
+  for (const type of ["skills", "armors", "decorations", "weapons"]) {
+    for (const [rawName, id] of Object.entries(override[type] ?? {})) {
+      if (rawName.startsWith("$")) continue;
+      if (!projById[type].has(id)) {
+        ovBad.push(`${type}.${rawName}→${id}（ID 不在專案資料）`);
+        continue;
       }
+      map[type][normalizeJa(rawName)] = id;
+      ovApplied[type]++;
     }
   }
-  const keptTotal = Object.values(manualKept).reduce((a, b) => a + b, 0);
+  // alternatives（A/B 二擇一）：值為內部 ID 陣列，第一個為主裝備
+  const alternatives = {};
+  for (const [rawName, ids] of Object.entries(override.alternatives ?? {})) {
+    if (rawName.startsWith("$")) continue;
+    const bad = (ids ?? []).filter((id) => !projArmors.has(id));
+    if (!Array.isArray(ids) || ids.length < 2 || bad.length) {
+      ovBad.push(`alternatives.${rawName}（需 ≥2 個有效 armor ID；無效：${bad.join(",") || "格式"}）`);
+      continue;
+    }
+    alternatives[normalizeJa(rawName)] = ids;
+    ovApplied.alternatives++;
+  }
+  map.alternatives = alternatives;
+  if (ovBad.length) console.warn(`  ⚠ override 無效項 ${ovBad.length}：\n     ${ovBad.join("\n     ")}`);
   fs.writeFileSync(MAP_FILE, JSON.stringify(map, null, 1) + "\n");
-  console.log(`✓ data/jp-name-map.json（保留人工增補 ${keptTotal} 筆）`);
+  console.log(`✓ data/jp-name-map.json（合併 override：${JSON.stringify(ovApplied)}）`);
 
   // ---- 建議檔：對 recommended-builds.json 仍比不到者，附最近候選 ----
   let builds;
@@ -181,21 +215,39 @@ async function main() {
     console.log("（尚無 recommended-builds.json，略過建議檔）");
     return;
   }
-  const still = builds.unresolved.filter((u) => map[u.type]?.[normalizeJa(u.rawNameJa)] == null);
+  // 仍未解析者＝(a) 一般名不在 map，或 (b) A/B 二擇一名不在 map.alternatives
+  const still = builds.unresolved.filter((u) => {
+    const norm = normalizeJa(u.rawNameJa);
+    if (u.type === "armors" && u.rawNameJa.includes("/")) return map.alternatives[norm] == null;
+    return map[u.type]?.[norm] == null;
+  });
   const suggestions = still.map((u) => {
     const norm = normalizeJa(u.rawNameJa);
-    const ranked = pool[u.type]
+    const base = { type: u.type, rawNameJa: u.rawNameJa, game8Id: u.game8Id, count: u.count, examples: u.examples };
+    // A/B 二擇一防具：分割器重建後綴，每個替代裝備各給最近候選（不直接採用，供人工填 override.alternatives）
+    const alts = u.type === "armors" ? splitAlternatives(u.rawNameJa) : null;
+    if (alts) {
+      base.kind = "alternatives";
+      base.alternativeCandidates = alts.map((part) => {
+        const pn = normalizeJa(part);
+        return {
+          reconstructed: part,
+          candidates: pool.armors
+            .map((c) => ({ name: c.name, id: c.id, distance: levenshtein(pn, c.norm) }))
+            .sort((a, b) => a.distance - b.distance)
+            .slice(0, 2),
+        };
+      });
+      // 附上「兩件皆 exact-match」時可直接填入 override 的 ID 陣列
+      const exact = base.alternativeCandidates.map((a) => (a.candidates[0]?.distance === 0 ? a.candidates[0].id : null));
+      if (exact.every(Boolean)) base.suggestedOverride = exact;
+      return base;
+    }
+    base.candidates = pool[u.type]
       .map((c) => ({ name: c.name, id: c.id, distance: levenshtein(norm, c.norm) }))
       .sort((a, b) => a.distance - b.distance)
       .slice(0, 3);
-    return {
-      type: u.type,
-      rawNameJa: u.rawNameJa,
-      game8Id: u.game8Id,
-      count: u.count,
-      examples: u.examples,
-      candidates: ranked,
-    };
+    return base;
   });
   suggestions.sort((a, b) => a.type.localeCompare(b.type) || b.count - a.count);
   fs.writeFileSync(
@@ -203,7 +255,7 @@ async function main() {
     JSON.stringify(
       {
         generatedAt: new Date().toISOString().slice(0, 10),
-        note: "精確比對（正規化後）仍失敗者，多為 Game8 暱稱/簡稱。candidates 為 Kiranico 名稱中編輯距離最近的 2-3 個候選＋內部 ID，供人工勾選。確認後把「日文名: 內部ID」加進 data/jp-name-map.json 對應 type，重跑 scrape-game8.js 即回填。",
+        note: "正規化後精確比對仍失敗者，多為 Game8 暱稱/簡稱/錯字/二擇一寫法。★確認後填 data/jp-name-overrides.json（勿手改 jp-name-map.json），重跑 build-jp-name-map.js → scrape-game8.js 回填。一般項：candidates 為編輯距離最近 2-3 候選，把確認 ID 填進 override 對應 type。二擇一項（kind=alternatives，防具 A/B）：alternativeCandidates 列各替代裝備的重建名＋候選；suggestedOverride 為兩件皆 exact-match 時可直接填入 override.alternatives 的 ID 陣列。",
         counts: still.reduce((a, u) => ((a[u.type] = (a[u.type] ?? 0) + 1), a), {}),
         items: suggestions,
       },

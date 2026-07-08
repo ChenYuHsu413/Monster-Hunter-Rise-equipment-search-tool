@@ -51,7 +51,7 @@ const nameMap = (() => {
     return JSON.parse(fs.readFileSync(MAP_FILE, "utf8"));
   } catch {
     console.warn("⚠ data/jp-name-map.json 不存在，所有 id 將為 null（建表後重跑回填）");
-    return { skills: {}, armors: {}, decorations: {}, weapons: {} };
+    return { skills: {}, armors: {}, decorations: {}, weapons: {}, alternatives: {} };
   }
 })();
 const unresolved = new Map(); // `${type}:${ja}` -> {type, rawNameJa, game8Id, count, examples}
@@ -180,7 +180,8 @@ function parseDecoCell(cell) {
     const count = m[3] ? Number(m[3]) : 1;
     if (m[1] === "自由枠") {
       decos.push({ free: true, slotSize: Number(m[2]), count });
-    } else if (m[1].endsWith("系")) {
+    } else if (m[1].endsWith("系") || m[1].endsWith("竜珠")) {
+      // ○系＝武器百龍珠、○竜珠＝百龍装飾品；專案無此資料，比照獵蟲留原文
       rampage.push({ rawNameJa: raw, count });
     } else {
       decos.push({ id: resolve("decorations", raw, cell.game8Id ? null : null), rawNameJa: raw, count });
@@ -232,10 +233,16 @@ function parseSkillTotals(cell) {
 const ARMOR_SLOTS = ["head", "chest", "arms", "waist", "legs"];
 
 /**
- * 防具表（armorMR / armorSimple）→ { pieces, talisman, buildDecorations, skillTotals }
+ * 防具表 → { pieces, talisman, buildDecorations, skillTotals }
  * 列序固定：5 部位 →（護石）→（装飾品總表）→（発動スキル）。
+ * 部位列版面三種（由表頭第二欄判定）：
+ *  - mr     ：防具|傀異錬成|装飾品 → [名稱, 錬成, 珠]
+ *  - mr-slot：防具|スロット/傀異錬成 → [名稱, 孔位, 錬成]，珠在獨立装飾品總表
+ *  - simple ：防具|スロ|スキル → [名稱, 孔位, 技能]
  */
 function parseArmorTable(rows, type) {
+  const h1 = rows[0].cells[1]?.text ?? "";
+  const layout = type === "armorSimple" ? "simple" : /スロ/.test(h1) ? "mr-slot" : "mr";
   const pieces = [];
   let talisman = null;
   let buildDecorations = null;
@@ -244,8 +251,17 @@ function parseArmorTable(rows, type) {
   for (let i = 1; i < rows.length; i++) {
     const cells = rows[i].cells;
     const c0 = cells[0].text;
-    if (c0 === "護石" && cells.length >= 3 && cells[1].text === "スロット") {
-      mode = "talisman-next"; // MR 格式：護石小節表頭，下一列才是資料
+    // 護石列：cell1 為「スロ(ット)」字樣＝表頭，資料在下一列；否則為單列資料（簡易格式）
+    if (c0 === "護石") {
+      if (/^スロ/.test(cells[1]?.text ?? "")) {
+        mode = "talisman-next";
+      } else {
+        talisman = {
+          skills: cells[2] ? parseSkillList(cells[2]) : [],
+          slots: parseSlots(cells[1]?.text ?? ""),
+          decorations: [],
+        };
+      }
       continue;
     }
     if (mode === "talisman-next") {
@@ -261,15 +277,6 @@ function parseArmorTable(rows, type) {
         decorations: cells[2] ? parseDecoCell(cells[2]).decos : [],
       };
       mode = "pieces";
-      continue;
-    }
-    if (c0 === "護石") {
-      // 簡易格式：護石|②ーー|・弱点特効 2（單列）
-      talisman = {
-        skills: cells[2] ? parseSkillList(cells[2]) : [],
-        slots: parseSlots(cells[1]?.text ?? ""),
-        decorations: [],
-      };
       continue;
     }
     if (c0 === "装飾品") {
@@ -290,19 +297,26 @@ function parseArmorTable(rows, type) {
       mode = "pieces";
       continue;
     }
-    // 註解/區段列（部分 MR 表把傀異錬成獨立成列，或夾帶 ※ 說明句），非防具
-    if (c0 === "傀異錬成" || /※/.test(c0) || c0.length > 18) continue;
+    // 註解/區段列（部分 MR 表把傀異錬成獨立成列，或夾帶 ※ 說明句），非防具。
+    // 「技能名 空格 數字」= 護石技能列在無標準表頭時漏抓（防具名不會以 空格+數字 結尾）。
+    if (c0 === "傀異錬成" || /※/.test(c0) || c0.length > 18 || /\s\d+$/.test(c0)) continue;
     // 部位列
+    // A/B 二擇一防具（Game8「Aスロ/Bスロ ヘルム」）：若 override 已定 alternatives，
+    // 展開為 alternatives 陣列（第一個為主裝備）；未定則照常 resolve（→null→待人工）
+    const altIds = c0.includes("/") ? nameMap.alternatives?.[normalizeJa(c0)] : null;
     const piece = {
       slot: null, // 5 件成套時由組裝階段依列序填 head→legs
-      id: resolve("armors", c0, cells[0].game8Id),
+      id: altIds ? altIds[0] : resolve("armors", c0, cells[0].game8Id),
       rawNameJa: c0,
       game8Id: cells[0].game8Id,
+      ...(altIds ? { alternatives: altIds.map((id) => ({ id })) } : {}),
     };
-    if (type === "armorMR") {
+    if (layout === "mr") {
       piece.augmentRaw = cells[1]?.text || null; // 傀異錬成，原樣保留日文
-      const { decos } = parseDecoCell(cells[2] ?? { text: "", html: "" });
-      piece.decorations = decos;
+      piece.decorations = parseDecoCell(cells[2] ?? { text: "", html: "" }).decos;
+    } else if (layout === "mr-slot") {
+      piece.slots = parseSlots(cells[1]?.text ?? "");
+      piece.augmentRaw = cells[2]?.text || null; // 珠在獨立総表（buildDecorations）
     } else {
       piece.slots = parseSlots(cells[1]?.text ?? "");
       piece.skills = cells[2] ? parseSkillList(cells[2]) : [];
@@ -616,6 +630,8 @@ const SCHEMA_DOC = {
   },
   kinsect:
     "選用欄位（kinsect-list 必有、weapon-list 若同節有獵蟲表則附帶）：獵蟲清單，每筆 { rawNameJa, game8Id, statsRaw }，無 ID 解析。",
+  alternatives:
+    "armor 部位的選用欄位：Game8「Aスロ/Bスロ ヘルム」＝兩件擇一。存在時該部位 id=alternatives[0].id（主裝備），alternatives=[{id},…] 為全部可選件。★三階 UI 需將此部位卡片顯示成「A 或 B」、四階匯出以主裝備為預選。由 data/jp-name-overrides.json 的 alternatives 段人工定義（scraper 不自動拆分）；未定義的 A/B 名 id=null 待人工。",
   categories: "階段分類鍵與中文標籤見 scripts/game8-sources.json 的 categories。",
   stageName: "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
   augmentRaw: "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
