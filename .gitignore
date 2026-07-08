@@ -40,3 +40,6 @@ scripts/.kiranico-cache/
 
 # Game8 文章快取（scrape-game8.js 用）
 scripts/.game8-cache/
+
+# Kiranico 日文列表頁快取（build-jp-name-map.js 用）
+scripts/.cache/

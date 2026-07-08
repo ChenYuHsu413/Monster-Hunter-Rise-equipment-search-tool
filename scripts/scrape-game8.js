@@ -27,6 +27,7 @@
  */
 const fs = require("node:fs");
 const path = require("node:path");
+const { normalizeJa } = require("./game8-normalize.js");
 
 const ROOT = path.join(__dirname, "..");
 const CONFIG = JSON.parse(fs.readFileSync(path.join(__dirname, "game8-sources.json"), "utf8"));
@@ -56,7 +57,7 @@ const nameMap = (() => {
 const unresolved = new Map(); // `${type}:${ja}` -> {type, rawNameJa, game8Id, count, examples}
 let currentBuildId = null;
 function resolve(type, ja, game8Id) {
-  const id = nameMap[type]?.[ja];
+  const id = nameMap[type]?.[normalizeJa(ja)];
   if (id != null) return id;
   const key = `${type}:${ja}`;
   const u = unresolved.get(key) ?? { type, rawNameJa: ja, game8Id: game8Id ?? null, count: 0, examples: [] };
@@ -156,6 +157,8 @@ function classifyTable(rows) {
   if (/^[▼①②③④⑤⑥⑦⑧⑨]/.test(h[0])) return "skip"; // 跳轉選單/製作步驟表
   if (h[0].includes("：")) return "skip"; // 「火属性：○○」式文字指南表
   if (/【\d】$/.test(h[0])) return "skip"; // 裝飾珠推薦清單（火炎珠【1】|…）
+  if (h.some((x) => x.includes("属性別"))) return "skip"; // 站內屬性別跳轉導覽表
+  if (rows.some((r) => r.cells[0].text === "猟虫ボーナス")) return "kinsect"; // 操蟲棍獵蟲表
   if (h[0] === "武器" && h[1] && h[1].includes("装飾品")) return "weaponFull";
   if (h[0].startsWith("武器名")) return "weaponCandidate"; // 含弓的「武器名 / ビン」
   if (h[1] === "レア度") return "weaponVertical"; // 直式規格表（笛/弩推薦頁）
@@ -193,29 +196,35 @@ function parseDecoCell(cell) {
   return { decos, rampage };
 }
 
-/** 「・ 攻撃 2 ・ 見切り 2」/「弱点特効 2」→ [{id,rawNameJa,level}] */
+/** 「・ 攻撃 2 ・ 見切り 2」/「弱点特効 2」→ [{id,rawNameJa,level}]。
+ *  收合傀異錬成升級記法「攻撃 0→1」為最終值（否則箭頭混入技能名）。 */
 function parseSkillList(cell) {
   const out = [];
-  for (const m of cell.text.matchAll(/(?:・\s*)?([^・\s／][^・／]*?)\s+(\d+)(?=\s|$)/g)) {
+  const text = cell.text.replace(/\d*\s*→\s*/g, "");
+  for (const m of text.matchAll(/(?:・\s*)?([^・\s／][^・／]*?)\s+(\d+)(?=\s|$)/g)) {
     const ja = m[1].trim();
     out.push({ id: resolve("skills", ja), rawNameJa: ja, level: Number(m[2]) });
   }
   return out;
 }
 
-/** 発動スキル總表：「見切り Lv7 ／ 龍気活性 Lv4→Lv5」＋a-red 必須標記。 */
+/**
+ * 発動スキル總表。結構：每技能為 <a>名稱</a><b>LvN[→LvM]</b>，紅字必須技能
+ * 外包 <span class="a-red">。以結構解析（比 ／ 文字切割穩健，正確處理
+ * Lv4→Lv5 升級記法，不會把箭頭誤判為技能名）。required 判定：該 <a> 之前
+ * 最近的是 a-red span 開啟而非 </span> 關閉 → 位於紅字區。
+ */
 function parseSkillTotals(cell) {
   const out = [];
-  const chunks = cell.html.split(/／/);
-  for (const chunk of chunks) {
-    const matches = [...textOf(chunk).matchAll(/([^\s／]+?)\s*Lv(\d+)(?:→Lv(\d+))?/g)];
-    for (const m of matches) {
-      const entry = { id: resolve("skills", m[1]), rawNameJa: m[1], level: Number(m[2]) };
-      if (m[3]) entry.augmentedLevel = Number(m[3]);
-      if (matches.length === 1 ? /a-red/.test(chunk) : /a-red/.test(chunk)) entry.required = /a-red/.test(chunk);
-      if (!entry.required) delete entry.required;
-      out.push(entry);
-    }
+  const re = /<a[^>]*>([^<]+)<\/a>\s*<b[^>]*>\s*Lv(\d+)(?:\s*→\s*Lv(\d+))?/g;
+  let m;
+  while ((m = re.exec(cell.html))) {
+    const name = decodeEntities(m[1]).trim();
+    const entry = { id: resolve("skills", name), rawNameJa: name, level: Number(m[2]) };
+    if (m[3]) entry.augmentedLevel = Number(m[3]);
+    const before = cell.html.slice(0, m.index);
+    if (before.lastIndexOf('a-red') > before.lastIndexOf("</span>")) entry.required = true;
+    out.push(entry);
   }
   return out;
 }
@@ -240,7 +249,8 @@ function parseArmorTable(rows, type) {
       continue;
     }
     if (mode === "talisman-next") {
-      const skills = [...cells[0].text.matchAll(/(\S+?)\s+(\d+)/g)].map((m) => ({
+      const talismanText = cells[0].text.replace(/\d*\s*→\s*/g, ""); // 收合傀異錬成升級記法
+      const skills = [...talismanText.matchAll(/(\S+?)\s+(\d+)/g)].map((m) => ({
         id: resolve("skills", m[1], cells[0].game8Id),
         rawNameJa: m[1],
         level: Number(m[2]),
@@ -280,6 +290,8 @@ function parseArmorTable(rows, type) {
       mode = "pieces";
       continue;
     }
+    // 註解/區段列（部分 MR 表把傀異錬成獨立成列，或夾帶 ※ 說明句），非防具
+    if (c0 === "傀異錬成" || /※/.test(c0) || c0.length > 18) continue;
     // 部位列
     const piece = {
       slot: null, // 5 件成套時由組裝階段依列序填 head→legs
@@ -401,6 +413,24 @@ function parseWeaponHH(rows) {
   };
 }
 
+/** 操蟲棍獵蟲表 → { rawNameJa, game8Id, statsRaw }。專案無獵蟲資料，不解析 ID。 */
+function parseKinsect(rows) {
+  const name = rows[0].cells[0].text;
+  let atkType = null;
+  let kinType = null;
+  for (const r of rows) {
+    for (const c of r.cells) {
+      if (c.text === "打撃" || c.text === "切断") atkType = c.text;
+      if (/型/.test(c.text) && c.text !== "タイプ" && c.text.length <= 14) kinType = kinType || c.text;
+    }
+  }
+  return {
+    rawNameJa: name,
+    game8Id: rows[0].cells[0].game8Id,
+    statsRaw: [atkType, kinType].filter(Boolean).join(" ") || null,
+  };
+}
+
 const WEAPON_TYPES = new Set(["weaponFull", "weaponCandidate", "weaponVertical", "weaponHH"]);
 function parseWeaponAny(it) {
   if (it.type === "weaponFull") return parseWeaponFull(it.rows);
@@ -460,8 +490,9 @@ function parseArticle(html, weapon, category, url, errors) {
   for (const sec of sections) {
     if (!sec.items.length) continue;
     const armorTables = sec.items.filter((x) => x.type === "armorMR" || x.type === "armorSimple");
+    const kinsects = sec.items.filter((x) => x.type === "kinsect").map((x) => parseKinsect(x.rows));
     if (armorTables.length === 0) {
-      // 純武器節（おすすめ武器/候選清單）→ weapon-list
+      // 純武器節（おすすめ武器/候選清單）→ weapon-list；純獵蟲節 → kinsect-list
       const weapons = [];
       for (const it of sec.items) {
         currentBuildId = `${weaponType}:${category}:${seq}`;
@@ -470,7 +501,21 @@ function parseArticle(html, weapon, category, url, errors) {
           if (w) weapons.push({ ...w, noteRaw: it.h3 || null });
         }
       }
-      if (!weapons.length) continue;
+      if (!weapons.length) {
+        if (kinsects.length) {
+          builds.push({
+            id: mkId(),
+            weaponType,
+            category,
+            kind: "kinsect-list",
+            buildName: sec.h2,
+            stageName: sec.h2,
+            kinsect: kinsects,
+            sourceUrl: url,
+          });
+        }
+        continue;
+      }
       const rampages = sec.items.filter((x) => x.type === "rampage").flatMap((x) => parseRampage(x.rows));
       builds.push({
         id: mkId(),
@@ -480,6 +525,7 @@ function parseArticle(html, weapon, category, url, errors) {
         buildName: sec.h2,
         stageName: sec.h2,
         weapons: weapons.filter(Boolean),
+        ...(kinsects.length ? { kinsect: kinsects } : {}),
         rampageSkills: rampages.length ? rampages : null,
         sourceUrl: url,
       });
@@ -565,7 +611,11 @@ const SCHEMA_DOC = {
       "單件推薦清單（MR 拓荒文常見）：armor 為不定長陣列、slot=null（同部位可能多件並列，如兩頂頭盔擇一）。非成套語義——無護石、無技能總表、無完整發動技能可算。卡片顯示需逐件列出；匯出到配裝器時只能作為部分部位預選，其餘部位留空，行為與 full-build 不同。",
     "weapon-list":
       "純武器推薦（おすすめ武器文章、簡易格式的候選武器節）：無 armor/talisman。weapons[].noteRaw 保留 H3 標題（含 MR1 等時期標註）。",
+    "kinsect-list":
+      "操蟲棍獵蟲推薦（おすすめ猟虫節，僅 insect-glaive）：kinsect[] 陣列。專案無獵蟲資料，故只存 rawNameJa/game8Id/statsRaw（攻撃屬性＋型），不解析內部 ID，顯示端照 fallback 顯示原文。",
   },
+  kinsect:
+    "選用欄位（kinsect-list 必有、weapon-list 若同節有獵蟲表則附帶）：獵蟲清單，每筆 { rawNameJa, game8Id, statsRaw }，無 ID 解析。",
   categories: "階段分類鍵與中文標籤見 scripts/game8-sources.json 的 categories。",
   stageName: "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
   augmentRaw: "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
