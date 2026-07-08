@@ -5588,7 +5588,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1251979832",
      "rawNameJa": "切れ味変更【壱】"
     },
     {
@@ -5834,7 +5834,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1251979832",
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
@@ -6070,7 +6070,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1251979832",
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
@@ -47608,7 +47608,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1251979832",
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
@@ -47834,7 +47834,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1251979832",
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
@@ -59804,7 +59804,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1951027710",
      "rawNameJa": "切れ味変更【参型】"
     },
     {
@@ -60528,7 +60528,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1951027710",
      "rawNameJa": "切れ味変更【参型】"
     },
     {
@@ -70678,7 +70678,7 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
+     "id": "rskill_1251979832",
      "rawNameJa": "切れ味変更【壱型】"
     },
     {
@@ -126019,36 +126019,6 @@
    "count": 1,
    "examples": [
     "switch-axe:mrEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "切れ味変更【壱型】",
-   "game8Id": null,
-   "count": 5,
-   "examples": [
-    "great-sword:riseEndgame:1",
-    "great-sword:riseEndgame:2",
-    "hunting-horn:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "切れ味変更【参型】",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "gunlance:riseEndgame:1",
-    "gunlance:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "切れ味変更【壱】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "great-sword:riseEndgame:0"
    ]
   }
  ]
