@@ -74,7 +74,11 @@ src/
 │   ├── guide.ts            #   引導模式邏輯（進度→階段映射、preset 鏈上下階、進度正規化）
 │   ├── efr.ts              #   EFR 傷害模型（有效攻擊×斬味×期望會心＋屬性）
 │   ├── score-build.ts      #   scoreBuild()（EFR 傷害 + 舒適 + 彈性，依 scoreProfile 分階加權）
-│   └── build-search.ts     #   searchBuilds() / formatBuildResult()
+│   ├── build-search.ts     #   searchBuilds() / formatBuildResult()
+│   ├── search.worker.ts    #   Web Worker：直接 import build-search 跑搜尋（不凍結 UI、可取消）
+│   ├── builder-import.ts   #   推薦配裝 → 配裝器的匯入通道（核心技能萃取，見「推薦配裝匯出」節）
+│   ├── search-conditions.ts#   配裝器單一 state 物件（序列化/反序列化、我的護石清單）
+│   └── share-link.ts       #   分享連結：序列化條件子集到 ?c=（刻意不含護石）
 ├── components/             # UI 元件（每個獨立、可組合）
 ├── app/page.tsx            # 主 Dashboard 頁面（進階搜尋）
 └── app/guide/page.tsx      # 新手引導模式（輸入進度 → 現在最佳配裝 + 下一套目標）
@@ -88,6 +92,22 @@ src/
 4. 每套配裝自動補珠：先補必要技能（補不滿即淘汰）→ 檢查保留洞位（硬條件）→ 剩餘補偏好
 5. 依 `scoreBuild()` 排序，最多顯示前 100 套
 6. 從結果卡片可「固定此部位 / 排除此裝備」，再搜尋即套用
+7. 搜尋在 **Web Worker**（`search.worker.ts`）執行：主執行緒不凍結、搜尋期間可切 Tab / 捲動 / 取消。演算法未改，只是搬移；`?workerParity=1` 可開主執行緒同步重算並比對有序 id（驗證前後一致）。
+
+## 推薦配裝匯出到配裝器
+
+「推薦配裝」頁的卡片可帶入「配裝器」（`builder-import.ts`）。這裡的裁決都有原因，改動前先讀懂：
+
+- **full-build「以此為基礎修改」＝匯核心技能 + 護石**，非全表照搬。核心技能取法（`extractCoreSkills`）：排序鍵 `紅字優先 → 等級÷maxLevel 比值 → 等級 → Game8 原順序`，取前 **N=4**。
+  - **為何 N=4**：由 10 筆隨機大師畢業裝校準——N=4 時 9/10 可搜出結果（含 2 筆驗收指定配裝）；N=6 僅 5/10（6 個 maxed 硬技能對「基礎防具」過緊）。
+  - **為何比值排序而非裸等級**：一大批定義性技能天生 maxLevel 低（達人藝 1/1、超會心 3/3），裸等級會把它們排在攻擊 4/7 後砍掉。比值讓「作者刻意堆滿的技能」浮上來。
+  - **為何紅字只當優先鍵不當全集**：Game8 `required` 紅字實測只在 2/399 full-build 有標（不是 parser 壞，是 Game8 真的幾乎不標）；且那兩筆的紅字集達 9 項全 maxed，全匯反而零結果。
+- **排除 `special` 技能**（狂化 / 業鎧【修羅】 / 狂龍症 / 血氣覺醒等，即 `SPECIAL_SKILLS`）：這批是傀異錬成 / 狂竜化衍生，搜尋器不模擬其取得，硬性要求必零結果。匯入時整批排除，並在提示點名（否則匯入畢業裝條件區近乎空白，會被誤認功能壞掉）。
+- **等級取 `level` 不取 `augmentedLevel`**：Game8 `Lv4→Lv5` 中 `level=4` 是**錬成前基礎值**（要匯入的）、`augmentedLevel=5` 是錬成後總值。照總值匯入會無解。有此情形時提示「已排除傀異錬成加成的等級」。再 clamp 到 `skillMax`（防禦性）。
+- **切換武器種類**為該配裝的武器（用直接 setter，不走 `changeWeapon` 以免 `applyPreset` 覆蓋剛匯入的技能）。
+- **護石**標 `source:"reco"` 併入清單，與自有護石並存、可單獨刪；**每次 full-build 匯入取代所有舊 reco 護石**（＝從這套重新開始，不跨匯入累積）。
+- **覆蓋確認**：配裝器已有非空條件時，full-build 匯入前 `window.confirm`（無 Dialog 原件，最小改動）；`lock-armor` / `lock-weapon` 為 additive 不確認。
+- **armor-pieces / weapon-list**「鎖定」：前者反查 `armorById.part` 固定該部位、後者固定武器並帶入武器種類；皆切 Tab 但**不自動搜尋**。
 
 ## 資料來源與匯入
 

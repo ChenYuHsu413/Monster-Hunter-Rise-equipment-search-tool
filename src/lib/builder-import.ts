@@ -32,6 +32,8 @@ export type BuilderImport =
       totalCount: number;
       /** 是否有技能因傀異錬成加成被降回基礎等級（顯示提示用）。 */
       droppedAugment: boolean;
+      /** 因不可重現而被排除的 special 技能名（提示點名用）。 */
+      excludedSpecial: string[];
     }
   | { kind: "lock-armor"; id: string }
   | { kind: "lock-weapon"; id: string; weaponType: string };
@@ -69,6 +71,8 @@ export function extractCoreSkills(
   importedCount: number;
   totalCount: number;
   droppedAugment: boolean;
+  /** 因不可重現而被排除的 special 技能名（去重、依原順序），供提示點名。 */
+  excludedSpecial: string[];
 } {
   const totals = build.skillTotals ?? [];
   const droppedAugment = totals.some(
@@ -76,10 +80,20 @@ export function extractCoreSkills(
   );
 
   // 可用列：技能名對得上 skillMax（實測全對得上；防禦性保留），且非 special（不可重現）。
+  // 順手收集被排除的 special 技能名（去重），供匯入提示點名，避免匯入畢業裝看似空條件。
+  const excludedSpecial: string[] = [];
+  const seenSpecial = new Set<string>();
   const rows = totals
     .map((s, i) => {
       const name = s.id;
-      if (!name || skillMax[name] == null || specialSkills.has(name)) return null;
+      if (!name || skillMax[name] == null) return null;
+      if (specialSkills.has(name)) {
+        if (!seenSpecial.has(name)) {
+          seenSpecial.add(name);
+          excludedSpecial.push(name);
+        }
+        return null;
+      }
       const max = skillMax[name];
       const level = Math.min(s.level, max); // 基礎值 clamp（augmentedLevel 不取）
       return { name, level, ratio: level / max, order: i, required: !!s.required };
@@ -104,6 +118,7 @@ export function extractCoreSkills(
     importedCount: picked.length,
     totalCount: totals.length,
     droppedAugment,
+    excludedSpecial,
   };
 }
 
@@ -140,6 +155,7 @@ export function buildFullBuildImport(
     importedCount: core.importedCount,
     totalCount: core.totalCount,
     droppedAugment: core.droppedAugment,
+    excludedSpecial: core.excludedSpecial,
   };
 }
 

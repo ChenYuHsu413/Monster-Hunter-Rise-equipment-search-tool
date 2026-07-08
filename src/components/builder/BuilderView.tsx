@@ -104,6 +104,8 @@ type ImportNotice = {
   importedCount: number;
   totalCount: number;
   droppedAugment: boolean;
+  /** 被排除的 special（錬成衍生）技能名，供點名說明為何未匯入。 */
+  excludedSpecial: string[];
 };
 
 export function BuilderView({
@@ -716,6 +718,7 @@ export function BuilderView({
         importedCount: payload.importedCount,
         totalCount: payload.totalCount,
         droppedAugment: payload.droppedAugment,
+        excludedSpecial: payload.excludedSpecial,
       });
     } else if (payload.kind === "lock-armor") {
       const part = gd.armorById[payload.id]?.part;
@@ -923,6 +926,15 @@ export function BuilderView({
                 </p>
                 {importNotice.droppedAugment && (
                   <p className="text-amber-400">已排除傀異錬成加成的等級。</p>
+                )}
+                {importNotice.excludedSpecial.length > 0 && (
+                  <p className="text-amber-400">
+                    已略過 {importNotice.excludedSpecial.slice(0, 3).join("、")}
+                    {importNotice.excludedSpecial.length > 3
+                      ? `等 ${importNotice.excludedSpecial.length} 項`
+                      : ""}
+                    錬成／狂竜化衍生技能（無法以基礎裝備重現）。
+                  </p>
                 )}
               </div>
               <button
