@@ -75,3 +75,20 @@
   未追蹤，僅存 C 槽）。
 - 待啟動大型計畫：新手引導模式已全部完成（見 docs/ROADMAP.md、DATA-COVERAGE.md）；
   剩餘尾巴見 HANDOFF.md。
+
+## 5. 工作協議（換手／長 session 失真防護）
+
+一次長 session 上下文嚴重劣化，導致「宣稱 3 個 commit 全部沒發生、報的筆數全是幻覺、
+半套 Edit 留下編譯破口」。教訓固化如下（每個 session 先讀）：
+
+- **一步一驗，佐證優先**：每個宣稱的產出（檔案、筆數、跑批結果、commit 落地）必須附**當下真實
+  工具輸出**；無佐證的結論不寫進回報。Write/Edit 後靠 build／resolver 實測佐證，不靠記憶。
+- **build 是最終權威**：Edit／Read／grep／甚至 git 命令的 stdout 都可能失真。逐行 Edit 對不上時
+  改整檔 Write；驗證用「停 dev server + `rm -rf .next`」的乾淨 `next build`；確認 git 狀態用
+  `git log --oneline`（多筆交叉）或直接讀 `.git/logs/HEAD`（reflog 物理檔），不靠單筆 short hash。
+- **交接文件本身也可能失真**：上一手的 handoff／memory 是「當時的宣稱」，非地面真相。動手前先用
+  `git status --porcelain`、`git check-ignore`、乾淨 build 交叉核對，把每條前提驗成事實再信。
+  （本輪即發現 handoff 說的「.gitignore line72-78 壞內容」「recommended-builds.json 被 gitignore
+  需 git add -f」皆為失真——實際 .gitignore 乾淨、該檔未被忽略。）
+- **中文 stdout 亂碼**：Git Bash 中文輸出常亂碼／截斷——改用 Node 寫檔 + Read 讀，或請使用者手動
+  貼 `git status` 真實輸出當地面真相。
