@@ -5600,10 +5600,6 @@
      "rawNameJa": "会心率激化"
     },
     {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
@@ -6719,10 +6715,6 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "骨素材②"
-    },
-    {
      "id": "rskill_408054401",
      "rawNameJa": "会心率強化Ⅱ"
     }
@@ -6914,15 +6906,7 @@
    "rampageSkills": [
     {
      "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
-     "id": null,
      "rawNameJa": "攻撃力強化Ⅱ or 会心率強化Ⅱ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "雪鬼獣"
     },
     {
      "id": "rskill_528038624",
@@ -7144,10 +7128,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
     {
      "id": "rskill_408054401",
      "rawNameJa": "会心率強化Ⅱ"
@@ -14133,44 +14113,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "霞龍"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "轟竜"
-    },
-    {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
-    },
-    {
-     "id": null,
-     "rawNameJa": "①"
-    },
-    {
-     "id": null,
-     "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを一発生産するのはNG！)"
-    },
-    {
-     "id": null,
-     "rawNameJa": "②"
-    },
-    {
-     "id": null,
-     "rawNameJa": "③"
-    },
-    {
-     "id": null,
-     "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化して、 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
     },
     {
      "id": "rskill_395307913",
@@ -14347,10 +14295,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "鉱石素材"
-    },
     {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
@@ -14542,40 +14486,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
      "id": null,
-     "rawNameJa": "轟竜"
-    },
-    {
-     "id": null,
      "rawNameJa": "鉄蟲糸技強化 ※"
-    },
-    {
-     "id": null,
-     "rawNameJa": "①"
-    },
-    {
-     "id": null,
-     "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを生産するのはNG！)"
-    },
-    {
-     "id": null,
-     "rawNameJa": "②"
-    },
-    {
-     "id": null,
-     "rawNameJa": "③"
-    },
-    {
-     "id": null,
-     "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化する。 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/386193"
@@ -19306,24 +19222,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "ギルド武器"
-    },
-    {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
     },
     {
-     "id": null,
-     "rawNameJa": "雌火竜"
-    },
-    {
      "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
     },
     {
      "id": "rskill_381074408",
@@ -21117,10 +21021,6 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "雌火竜"
-    },
-    {
      "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
@@ -21308,10 +21208,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
     {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
@@ -28740,56 +28636,28 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "アイルー"
-    },
-    {
      "id": "rskill_69941095",
      "rawNameJa": "鬼人激化"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
     },
     {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "蛮顎竜"
-    },
-    {
      "id": "rskill_67000766",
      "rawNameJa": "属性強化【火】Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "泡狐竜"
     },
     {
      "id": "rskill_243411229",
      "rawNameJa": "属性強化【水】Ⅱ"
     },
     {
-     "id": null,
-     "rawNameJa": "雷狼竜"
-    },
-    {
      "id": "rskill_200239249",
      "rawNameJa": "属性強化【雷】Ⅱ"
     },
     {
-     "id": null,
-     "rawNameJa": "氷属性"
-    },
-    {
      "id": "rskill_808327178",
      "rawNameJa": "属性強化【氷】Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "天彗龍"
     },
     {
      "id": null,
@@ -30080,32 +29948,16 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "ギルド武器派生"
-    },
-    {
      "id": "rskill_243411229",
      "rawNameJa": "属性強化【水】Ⅱ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "白兎獣"
     },
     {
      "id": "rskill_928294933",
      "rawNameJa": "属性強化【氷】Ⅱ"
     },
     {
-     "id": null,
-     "rawNameJa": "傘鳥"
-    },
-    {
      "id": "rskill_4438520",
      "rawNameJa": "属性強化【火】Ⅰ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "奇怪竜"
     },
     {
      "id": "rskill_200239249",
@@ -30534,39 +30386,19 @@
    "rampageSkills": [
     {
      "id": null,
-     "rawNameJa": "蛮顎竜"
-    },
-    {
-     "id": null,
      "rawNameJa": "会心率強化Ⅱ or 属性強化【火】Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "泥爺竜"
     },
     {
      "id": "rskill_243411229",
      "rawNameJa": "属性強化【水】Ⅱ"
     },
     {
-     "id": null,
-     "rawNameJa": "雷狼竜"
-    },
-    {
      "id": "rskill_200239249",
      "rawNameJa": "属性強化【雷】Ⅱ"
     },
     {
-     "id": null,
-     "rawNameJa": "氷属性派生"
-    },
-    {
      "id": "rskill_808327178",
      "rawNameJa": "属性強化【氷】Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "ギルド武器派生②"
     },
     {
      "id": "rskill_274815918",
@@ -38949,16 +38781,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "轟竜"
-    },
-    {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
     },
     {
      "id": "rskill_395307913",
@@ -39848,10 +39672,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "骨素材②"
-    },
     {
      "id": "rskill_110172730",
      "rawNameJa": "防御力強化Ⅱ"
@@ -46483,24 +46303,12 @@
      "rawNameJa": "旋律変更【攻撃】Ⅱ"
     },
     {
-     "id": null,
-     "rawNameJa": "爆麟竜"
-    },
-    {
      "id": "rskill_748441147",
      "rawNameJa": "属性強化【爆破】Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "轟竜"
-    },
-    {
      "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "ブルファンゴ"
     },
     {
      "id": "rskill_381074408",
@@ -47565,10 +47373,6 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "掻鳥"
-    },
-    {
      "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     }
@@ -47783,10 +47587,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "百竜"
-    },
     {
      "id": null,
      "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ"
@@ -48005,10 +47805,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "百竜"
-    },
     {
      "id": null,
      "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ"
@@ -52834,16 +52630,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "轟竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "天彗龍"
     },
     {
      "id": null,
@@ -53942,10 +53730,6 @@
    "rampageSkills": [
     {
      "id": null,
-     "rawNameJa": "鉱石"
-    },
-    {
-     "id": null,
      "rawNameJa": "鉄蟲糸技強化 (流転付き取得済の場合)"
     }
    ],
@@ -54163,10 +53947,6 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "角竜"
-    },
-    {
      "id": "rskill_422304422",
      "rawNameJa": "会心率強化Ⅲ"
     }
@@ -54374,10 +54154,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
     {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
@@ -59738,16 +59514,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "妃蜘蛛"
-    },
-    {
      "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "ガルク"
     },
     {
      "id": "rskill_829609269",
@@ -61158,10 +60926,6 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "鉱石派生②"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     }
@@ -61374,24 +61138,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "鉱石派生②"
-    },
-    {
      "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
-     "id": null,
-     "rawNameJa": "ガルク"
-    },
-    {
      "id": "rskill_829609269",
      "rawNameJa": "オトモへの采配術"
-    },
-    {
-     "id": null,
-     "rawNameJa": "雌火竜"
     },
     {
      "id": "rskill_381074408",
@@ -70898,16 +70650,8 @@
      "rawNameJa": "ビン変更【減気】Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "轟竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
     },
     {
      "id": "rskill_395307913",
@@ -71074,10 +70818,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "鉱石"
-    },
     {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
@@ -71518,16 +71258,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "鉱石"
-    },
-    {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
     },
     {
      "id": "rskill_395307913",
@@ -71950,10 +71682,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "氷牙竜"
-    },
     {
      "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
@@ -83153,16 +82881,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "金獅子"
-    },
-    {
      "id": "rskill_487804973",
      "rawNameJa": "鈍刃の一撃"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
     },
     {
      "id": "rskill_395307913",
@@ -84024,16 +83744,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "鉱石"
-    },
-    {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
-    },
-    {
-     "id": null,
-     "rawNameJa": "鍛冶屋武器"
     },
     {
      "id": "rskill_381074408",
@@ -84425,16 +84137,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "金獅子"
     },
     {
      "id": "rskill_487804973",
@@ -90436,16 +90140,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "轟竜"
     },
     {
      "id": "rskill_395307913",
@@ -91265,16 +90961,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "鉱石"
-    },
-    {
      "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "雌火竜"
     },
     {
      "id": "rskill_381074408",
@@ -91469,10 +91157,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
     {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
@@ -97563,40 +97247,16 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "怨虎竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "ロングバレル"
-    },
-    {
-     "id": null,
-     "rawNameJa": "雷狼竜"
     },
     {
      "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
     },
     {
-     "id": null,
-     "rawNameJa": "ロングバレル"
-    },
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "ロングバレル"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/380009"
@@ -99555,16 +99215,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "鎌鼬竜"
-    },
-    {
      "id": "rskill_422304422",
      "rawNameJa": "会心率強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "サイレンサー"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/386265"
@@ -99760,28 +99412,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "サイレンサー"
-    },
-    {
-     "id": null,
-     "rawNameJa": "怨虎竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "サイレンサー"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/386265"
@@ -108154,40 +107790,20 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "金獅子"
-    },
-    {
      "id": "rskill_555444468",
      "rawNameJa": "徹甲榴弾追加Ⅱ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "炎王龍"
     },
     {
      "id": "rskill_921617750",
      "rawNameJa": "炎王龍の魂"
     },
     {
-     "id": null,
-     "rawNameJa": "妃蜘蛛"
-    },
-    {
      "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
-     "id": null,
-     "rawNameJa": "氷牙竜"
-    },
-    {
      "id": "rskill_274815918",
      "rawNameJa": "攻撃力強化Ⅳ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "怨虎竜"
     },
     {
      "id": "rskill_395307913",
@@ -108372,10 +107988,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "鎌鼬竜"
-    },
     {
      "id": "rskill_437062215",
      "rawNameJa": "会心率強化Ⅳ"
@@ -108584,10 +108196,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
     {
      "id": "rskill_381074408",
      "rawNameJa": "攻撃力強化Ⅱ"
@@ -109066,10 +108674,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "怨虎竜"
-    },
     {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
@@ -124865,48 +124469,16 @@
      "rawNameJa": "曲射変更【会心型】"
     },
     {
-     "id": null,
-     "rawNameJa": "霞龍"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
-    {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
-    },
-    {
-     "id": null,
-     "rawNameJa": "天狗獣"
     },
     {
      "id": "rskill_430385024",
      "rawNameJa": "鉄蟲糸技強化"
-    },
-    {
-     "id": null,
-     "rawNameJa": "①"
-    },
-    {
-     "id": null,
-     "rawNameJa": "「天狗獣派生」の「天具・光背の弓Ⅰ」を作成"
-    },
-    {
-     "id": null,
-     "rawNameJa": "②"
-    },
-    {
-     "id": null,
-     "rawNameJa": "③"
-    },
-    {
-     "id": null,
-     "rawNameJa": "「天具・光背の弓Ⅰ」を迅竜派生へ強化して、 「鉄蟲糸技強化」付きの「闇夜弓【影縫】」が完成"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/380835"
@@ -125258,10 +124830,6 @@
     {
      "id": null,
      "rawNameJa": "攻撃力強化Ⅱ 属性付与Ⅱ(好みの属性を選ぶ) 射撃型変更【連射】 ビン強化【接撃】orビン追加【強撃】 ビン追加【減気】 （曲射変更は不要）"
-    },
-    {
-     "id": null,
-     "rawNameJa": "蛮顎竜"
     },
     {
      "id": "rskill_67000766",
@@ -125676,10 +125244,6 @@
     }
    ],
    "rampageSkills": [
-    {
-     "id": null,
-     "rawNameJa": "迅竜"
-    },
     {
      "id": "rskill_395307913",
      "rawNameJa": "攻撃力強化Ⅲ"
@@ -126387,61 +125951,6 @@
   },
   {
    "type": "rampageSkills",
-   "rawNameJa": "迅竜",
-   "game8Id": null,
-   "count": 21,
-   "examples": [
-    "great-sword:riseEndgame:0",
-    "great-sword:riseHigh:1",
-    "great-sword:riseHigh:2"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "轟竜",
-   "game8Id": null,
-   "count": 7,
-   "examples": [
-    "long-sword:riseEndgame:6",
-    "long-sword:riseHigh:1",
-    "hammer:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "鉱石",
-   "game8Id": null,
-   "count": 5,
-   "examples": [
-    "lance:riseHigh:0",
-    "switch-axe:riseHigh:0",
-    "switch-axe:riseHigh:2"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "雌火竜",
-   "game8Id": null,
-   "count": 4,
-   "examples": [
-    "sword-and-shield:riseEndgame:0",
-    "sword-and-shield:riseHigh:0",
-    "gunlance:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "怨虎竜",
-   "game8Id": null,
-   "count": 4,
-   "examples": [
-    "light-bowgun:riseEndgame:0",
-    "light-bowgun:riseHigh:1",
-    "heavy-bowgun:riseEndgame:6"
-   ]
-  },
-  {
-   "type": "rampageSkills",
    "rawNameJa": "切れ味変更【壱型】",
    "game8Id": null,
    "count": 3,
@@ -126449,91 +125958,6 @@
     "great-sword:riseEndgame:1",
     "great-sword:riseEndgame:2",
     "switch-axe:riseEndgame:5"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "①",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "long-sword:riseEndgame:6",
-    "long-sword:riseHigh:1",
-    "bow:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "②",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "long-sword:riseEndgame:6",
-    "long-sword:riseHigh:1",
-    "bow:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "③",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "long-sword:riseEndgame:6",
-    "long-sword:riseHigh:1",
-    "bow:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "蛮顎竜",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "dual-blades:riseEndgame:0",
-    "dual-blades:riseHigh:2",
-    "bow:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "雷狼竜",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "dual-blades:riseEndgame:0",
-    "dual-blades:riseHigh:2",
-    "light-bowgun:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "金獅子",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "charge-blade:riseEndgame:0",
-    "charge-blade:riseHigh:2",
-    "heavy-bowgun:riseEndgame:6"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "ロングバレル",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "light-bowgun:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "サイレンサー",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "light-bowgun:riseHigh:0",
-    "light-bowgun:riseHigh:1"
    ]
   },
   {
@@ -126549,46 +125973,6 @@
   },
   {
    "type": "rampageSkills",
-   "rawNameJa": "骨素材②",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "great-sword:riseHigh:0",
-    "hammer:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "霞龍",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "long-sword:riseEndgame:6",
-    "bow:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "天彗龍",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "dual-blades:riseEndgame:0",
-    "lance:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "百竜",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "hunting-horn:riseHigh:1",
-    "hunting-horn:riseHigh:2"
-   ]
-  },
-  {
-   "type": "rampageSkills",
    "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ",
    "game8Id": null,
    "count": 2,
@@ -126599,62 +125983,12 @@
   },
   {
    "type": "rampageSkills",
-   "rawNameJa": "妃蜘蛛",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "gunlance:riseEndgame:0",
-    "heavy-bowgun:riseEndgame:6"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "ガルク",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "gunlance:riseEndgame:0",
-    "gunlance:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
    "rawNameJa": "切れ味変更【参型】",
    "game8Id": null,
    "count": 2,
    "examples": [
     "gunlance:riseEndgame:1",
     "gunlance:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "鉱石派生②",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "gunlance:riseHigh:0",
-    "gunlance:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "氷牙竜",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "switch-axe:riseHigh:4",
-    "heavy-bowgun:riseEndgame:6"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "鎌鼬竜",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "light-bowgun:riseHigh:0",
-    "heavy-bowgun:riseHigh:0"
    ]
   },
   {
@@ -126677,101 +126011,11 @@
   },
   {
    "type": "rampageSkills",
-   "rawNameJa": "雪鬼獣",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "great-sword:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを一発生産するのはNG！)",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "long-sword:riseEndgame:6"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化して、 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "long-sword:riseEndgame:6"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "鉱石素材",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "long-sword:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
    "rawNameJa": "鉄蟲糸技強化 ※",
    "game8Id": null,
    "count": 1,
    "examples": [
     "long-sword:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "「鉄石素材派生」の「鉄鋸刀Ⅰ」を作成 (轟竜派生の一虎刀Ⅰを生産するのはNG！)",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "long-sword:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "「鉄鋸刀Ⅰ」を轟竜派生へ強化する。 「鉄蟲糸技強化」付きの「一虎刀【餓刃】」が完成",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "long-sword:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "ギルド武器",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "sword-and-shield:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "アイルー",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "泡狐竜",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "氷属性",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseEndgame:0"
    ]
   },
   {
@@ -126785,70 +126029,7 @@
   },
   {
    "type": "rampageSkills",
-   "rawNameJa": "ギルド武器派生",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "白兎獣",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "傘鳥",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "奇怪竜",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
    "rawNameJa": "会心率強化Ⅱ or 属性強化【火】Ⅲ",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:2"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "泥爺竜",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:2"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "氷属性派生",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:2"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "ギルド武器派生②",
    "game8Id": null,
    "count": 1,
    "examples": [
@@ -126862,33 +126043,6 @@
    "count": 1,
    "examples": [
     "hunting-horn:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "爆麟竜",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "hunting-horn:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "ブルファンゴ",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "hunting-horn:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "掻鳥",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "hunting-horn:riseHigh:0"
    ]
   },
   {
@@ -126911,65 +126065,11 @@
   },
   {
    "type": "rampageSkills",
-   "rawNameJa": "角竜",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "lance:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "鍛冶屋武器",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "charge-blade:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "炎王龍",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "heavy-bowgun:riseEndgame:6"
-   ]
-  },
-  {
-   "type": "rampageSkills",
    "rawNameJa": "属性付与Ⅲ",
    "game8Id": null,
    "count": 1,
    "examples": [
     "bow:riseEndgame:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "天狗獣",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "bow:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "「天狗獣派生」の「天具・光背の弓Ⅰ」を作成",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "bow:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "「天具・光背の弓Ⅰ」を迅竜派生へ強化して、 「鉄蟲糸技強化」付きの「闇夜弓【影縫】」が完成",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "bow:riseEndgame:4"
    ]
   },
   {

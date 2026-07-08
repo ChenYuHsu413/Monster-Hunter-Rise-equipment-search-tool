@@ -165,6 +165,7 @@ function classifyTable(rows) {
   if (h[0].startsWith("最終派生")) return "weaponHH"; // 狩獵笛 最終派生/切れ味 表
   if (h[0] === "防具" && h[1] && h[1].includes("錬成")) return "armorMR";
   if (h[0] === "防具" && h.some((x) => x === "スキル")) return "armorSimple";
+  if (/継承|やり方/.test(h[0])) return "skip"; // 百竜スキル継承步驟教學表（①②③＋說明文），非技能清單
   if (h[0] === "派生" || h.some((x) => x.includes("百竜スキル"))) return "rampage";
   if (h[0] === "護石") return "skip"; // 獨立護石說明表（罕見），非配裝主體
   return null;
@@ -460,12 +461,18 @@ function parseWeaponAny(it) {
   return parseWeaponCandidate(it.rows);
 }
 
-const parseRampage = (rows) =>
-  rows
-    .slice(rows[0].cells[0].text === "派生" || rows[0].cells.some((c) => c.text.includes("百竜スキル")) ? 1 : 0)
-    .flatMap((r) => r.cells.map((c) => c.text))
+// 「派生」表（派生 | おすすめ百竜スキル [| おすすめ強化パーツ]）：col0＝派生元（怪物/素材/武器系）、
+// col2＝強化パーツ（ロングバレル等），皆非百龍技能——只取 col1 技能欄。單一「百竜スキル」表則各 cell 皆技能。
+const parseRampage = (rows) => {
+  const h0 = rows[0].cells[0].text;
+  const hasHeader = h0 === "派生" || rows[0].cells.some((c) => c.text.includes("百竜スキル"));
+  const isDeriv = h0 === "派生";
+  return rows
+    .slice(hasHeader ? 1 : 0)
+    .flatMap((r) => (isDeriv ? (r.cells[1] ? [r.cells[1].text] : []) : r.cells.map((c) => c.text)))
     .filter((t) => t && t !== "派生" && !t.includes("百竜スキル"))
     .map((t) => ({ id: resolve("rampageSkills", t), rawNameJa: t }));
+};
 
 // ---------- 文章 → builds ----------
 function parseArticle(html, weapon, category, url, errors) {
