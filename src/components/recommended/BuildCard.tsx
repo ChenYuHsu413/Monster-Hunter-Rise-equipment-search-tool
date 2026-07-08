@@ -13,10 +13,42 @@ import {
 } from "@/types/build";
 import { Button } from "@/components/ui/button";
 import { skillMax, SPECIAL_SKILLS } from "@/lib/data";
-import { buildFullBuildImport, type BuilderImport } from "@/lib/builder-import";
+import {
+  buildFullBuildImport,
+  selectCoreSkillRows,
+  type BuilderImport,
+} from "@/lib/builder-import";
 import { ChevronDown, ChevronUp, Gem, Wand2 } from "lucide-react";
 
 const ARMOR_ORDER: ArmorPart[] = ["head", "chest", "arms", "waist", "legs"];
+
+/**
+ * 「以此為基礎修改」按鈕。摘要態與展開態共用；stopPropagation 確保點按鈕
+ * （含覆蓋 confirm 取消後）不會冒泡觸發外層列的展開／收合。
+ */
+function ExportButton({
+  build,
+  onExport,
+}: {
+  build: RecommendedBuild;
+  onExport: (payload: BuilderImport) => void;
+}) {
+  return (
+    <Button
+      variant="outline"
+      size="sm"
+      className="h-7 shrink-0 gap-1 text-xs"
+      onClick={(e) => {
+        e.stopPropagation();
+        onExport(buildFullBuildImport(build, skillMax, SPECIAL_SKILLS));
+      }}
+      title="把此配裝的核心技能與護石帶入配裝器（不含傀異錬成加成）"
+    >
+      <Wand2 className="h-3.5 w-3.5" />
+      以此為基礎修改
+    </Button>
+  );
+}
 
 /** 一件防具的名稱：有 alternatives（A/B 二擇一）時顯示「A 或 B」。 */
 function ArmorName({
@@ -56,6 +88,8 @@ export function BuildCard({
   resolver: NameResolver;
   onExport: (payload: BuilderImport) => void;
 }) {
+  // 卡片摘要／展開兩態（不持久化：單卡展開無回訪價值）。
+  const [expanded, setExpanded] = useState(false);
   const [skillsOpen, setSkillsOpen] = useState(false);
   const hasSkillTotals = (build.skillTotals ?? []).length > 0;
   const weapon = build.weapons?.[0];
@@ -63,11 +97,98 @@ export function BuildCard({
     ? resolver.weapon(weapon.id, weapon.rawNameJa)
     : null;
   const totals = build.skillTotals ?? [];
+  const needsCharm = !!(
+    build.talisman &&
+    ((build.talisman.skills ?? []).length > 0 ||
+      (build.talisman.slots ?? []).some((s) => s > 0))
+  );
+  // 摘要 chip 與匯入 payload 同源（selectCoreSkillRows）：所見即所匯。
+  const coreRows = selectCoreSkillRows(build, skillMax, SPECIAL_SKILLS).rows;
 
+  // 摘要態：一列式（武器名 + 核心技能 chip + 護石標記 + 匯入按鈕）。
+  if (!expanded) {
+    return (
+      <Card className="p-3">
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => setExpanded(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setExpanded(true);
+            }
+          }}
+          aria-expanded={false}
+          title="點擊展開完整配裝"
+          className="flex cursor-pointer flex-wrap items-center gap-x-2 gap-y-1"
+        >
+          <WeaponIcon
+            type={build.weaponType}
+            className="h-5 w-5 shrink-0 text-primary"
+          />
+          <span className="text-sm font-medium">
+            {weaponName ? (
+              weaponName.resolved ? (
+                weaponName.name
+              ) : (
+                <WarnName name={weaponName.name} />
+              )
+            ) : (
+              build.buildName
+            )}
+          </span>
+          {needsCharm && (
+            <span
+              className="inline-flex items-center gap-0.5 text-[10px] text-amber-300"
+              title="此配裝需要護石"
+            >
+              <Gem className="h-3 w-3" />
+              護石
+            </span>
+          )}
+          {coreRows.length > 0 && (
+            <span className="flex flex-wrap gap-1">
+              {coreRows.map((s) => (
+                <span
+                  key={s.name}
+                  className="inline-flex items-center gap-0.5 rounded border border-border bg-muted px-1.5 py-0.5 text-[11px]"
+                >
+                  {s.name}
+                  <span className="font-mono font-semibold">{s.level}</span>
+                </span>
+              ))}
+            </span>
+          )}
+          <span className="ml-auto flex items-center gap-1">
+            {hasSkillTotals && (
+              <ExportButton build={build} onExport={onExport} />
+            )}
+            <ChevronDown className="h-4 w-4 text-muted-foreground" />
+          </span>
+        </div>
+      </Card>
+    );
+  }
+
+  // 展開態：完整卡片（內容與改版前一致）。
   return (
     <Card className="flex flex-col gap-2 p-3">
-      {/* 標題 */}
-      <div className="flex items-start justify-between gap-2">
+      {/* 標題（點擊收合） */}
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={() => setExpanded(false)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setExpanded(false);
+          }
+        }}
+        aria-expanded={true}
+        title="點擊收合"
+        className="flex cursor-pointer items-start justify-between gap-2"
+      >
         <div className="min-w-0">
           <h4 className="text-sm font-semibold leading-tight">
             {build.buildName}
@@ -78,20 +199,10 @@ export function BuildCard({
             </p>
           )}
         </div>
-        {hasSkillTotals && (
-          <Button
-            variant="outline"
-            size="sm"
-            className="h-7 shrink-0 gap-1 text-xs"
-            onClick={() =>
-              onExport(buildFullBuildImport(build, skillMax, SPECIAL_SKILLS))
-            }
-            title="把此配裝的核心技能與護石帶入配裝器（不含傀異錬成加成）"
-          >
-            <Wand2 className="h-3.5 w-3.5" />
-            以此為基礎修改
-          </Button>
-        )}
+        <div className="flex shrink-0 items-center gap-1">
+          {hasSkillTotals && <ExportButton build={build} onExport={onExport} />}
+          <ChevronUp className="h-4 w-4 text-muted-foreground" />
+        </div>
       </div>
 
       {/* 武器 */}

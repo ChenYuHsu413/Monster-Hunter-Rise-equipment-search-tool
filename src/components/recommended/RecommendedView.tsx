@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { weaponTypes } from "@/lib/data";
 import {
   CATEGORY_LABELS,
@@ -11,13 +11,19 @@ import {
   type RecommendedIndex,
 } from "@/lib/recommended-builds";
 import { useLocalStorage } from "@/lib/use-local-storage";
-import type { RecommendedBuild } from "@/types/recommended";
+import type { RecommendedBuild, RecommendedCategory } from "@/types/recommended";
 import type { BuilderImport } from "@/lib/builder-import";
 import { WeaponIcon } from "@/components/EquipmentIcon";
 import { BuildCard } from "./BuildCard";
 import { SimpleBuildCard } from "./SimpleBuildCard";
 import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronUp, Loader2, Swords } from "lucide-react";
+
+/** 手風琴分區的顯示順序：五階段（依既有順序）+ 推薦武器一覽收尾。 */
+const SECTION_ORDER: RecommendedCategory[] = [
+  ...STAGE_CATEGORY_ORDER,
+  "weaponRecommend",
+];
 
 /** 依 kind 分派卡片版型。 */
 function BuildCardDispatch({
@@ -37,34 +43,61 @@ function BuildCardDispatch({
   );
 }
 
-/** 一個分區（下位/上位過渡/…）：標題 + 卡片網格。 */
+/**
+ * 一個可收合分區（手風琴一員）：標題列（名稱 + 筆數 + chevron）+ 展開時的卡片網格。
+ * 五階段與推薦武器一覽共用此版型；收合時不掛載卡片（30~40 張卡的頁面實質省渲染）。
+ */
 function StageSection({
   title,
+  count,
+  open,
+  onToggle,
+  sectionRef,
   builds,
   resolver,
   onExport,
 }: {
   title: string;
+  count: number;
+  open: boolean;
+  onToggle: () => void;
+  sectionRef: (el: HTMLElement | null) => void;
   builds: RecommendedBuild[];
   resolver: NameResolver;
   onExport: (payload: BuilderImport) => void;
 }) {
   return (
-    <section className="space-y-2">
-      <div className="flex items-center gap-2">
-        <h3 className="text-sm font-bold">{title}</h3>
-        <span className="text-xs text-muted-foreground">{builds.length} 套</span>
-      </div>
-      <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
-        {builds.map((b) => (
-          <BuildCardDispatch
-            key={b.id}
-            build={b}
-            resolver={resolver}
-            onExport={onExport}
-          />
-        ))}
-      </div>
+    <section ref={sectionRef} className="scroll-mt-16 space-y-2">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between rounded-lg border border-border bg-muted/40 px-3 py-2 text-sm font-bold"
+      >
+        <span>
+          {title}
+          <span className="ml-2 text-xs font-normal text-muted-foreground">
+            ({count})
+          </span>
+        </span>
+        {open ? (
+          <ChevronUp className="h-4 w-4" />
+        ) : (
+          <ChevronDown className="h-4 w-4" />
+        )}
+      </button>
+      {open && (
+        <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
+          {builds.map((b) => (
+            <BuildCardDispatch
+              key={b.id}
+              build={b}
+              resolver={resolver}
+              onExport={onExport}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
@@ -78,7 +111,13 @@ export function RecommendedView({
   const [resolver, setResolver] = useState<NameResolver | null>(null);
   // 選定的武器種類（persist；空字串＝尚未選）。
   const [weaponType, setWeaponType] = useLocalStorage("mhsb.recoWeaponType", "");
-  const [weaponRecoOpen, setWeaponRecoOpen] = useState(false);
+  // 展開過的分區（全域記憶、不分武器；預設全收合）。存 category 值陣列。
+  const [openStages, setOpenStages] = useLocalStorage<string[]>(
+    "mhsb.recoStagesOpen",
+    []
+  );
+  // 各分區標題 DOM，供快速導覽捲動定位。
+  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
     let alive = true;
@@ -94,8 +133,29 @@ export function RecommendedView({
     };
   }, []);
 
+  const isOpen = (cat: string) => openStages.includes(cat);
+  const toggleStage = (cat: string) =>
+    setOpenStages((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+    );
+  const openStage = (cat: string) =>
+    setOpenStages((prev) => (prev.includes(cat) ? prev : [...prev, cat]));
+  const scrollToStage = (cat: string) => {
+    openStage(cat);
+    sectionRefs.current[cat]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   const byCat = weaponType ? index?.byWeaponType.get(weaponType) : undefined;
-  const weaponRecoBuilds = byCat?.get("weaponRecommend") ?? [];
+  // 該武器實際有資料的分區（保 SECTION_ORDER 順序）。
+  const sections = SECTION_ORDER.map((cat) => ({
+    cat,
+    builds: byCat?.get(cat) ?? [],
+  })).filter((s) => s.builds.length > 0);
+  // 快速導覽只列五階段（不含推薦武器一覽）。
+  const navSections = sections.filter((s) => s.cat !== "weaponRecommend");
 
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-y-auto scrollbar-thin">
@@ -140,63 +200,54 @@ export function RecommendedView({
             <Swords className="h-8 w-8 text-primary/60" />
             <p className="text-sm">選擇上方武器種類以檢視各階段推薦配裝</p>
           </div>
+        ) : sections.length === 0 ? (
+          <p className="py-12 text-center text-sm text-muted-foreground">
+            此武器種類尚無推薦配裝資料。
+          </p>
         ) : (
-          <div className="space-y-6">
-            {STAGE_CATEGORY_ORDER.map((cat) => {
-              const builds = byCat?.get(cat);
-              if (!builds || builds.length === 0) return null;
-              return (
+          <>
+            {/* 階段快速導覽（sticky 置頂；手機可橫向捲動、不換行） */}
+            {navSections.length > 0 && (
+              <div className="sticky top-0 z-10 -mx-4 border-b border-border bg-background px-4 py-2">
+                <div className="flex gap-2 overflow-x-auto scrollbar-thin">
+                  {navSections.map(({ cat }) => (
+                    <button
+                      key={cat}
+                      type="button"
+                      onClick={() => scrollToStage(cat)}
+                      className={cn(
+                        "shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-xs transition-colors",
+                        isOpen(cat)
+                          ? "border-primary bg-primary/10 text-primary"
+                          : "border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"
+                      )}
+                    >
+                      {CATEGORY_LABELS[cat]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 分區手風琴 */}
+            <div className="space-y-4">
+              {sections.map(({ cat, builds }) => (
                 <StageSection
                   key={cat}
                   title={CATEGORY_LABELS[cat]}
+                  count={builds.length}
+                  open={isOpen(cat)}
+                  onToggle={() => toggleStage(cat)}
+                  sectionRef={(el) => {
+                    sectionRefs.current[cat] = el;
+                  }}
                   builds={builds}
                   resolver={resolver}
                   onExport={onExport}
                 />
-              );
-            })}
-
-            {/* 推薦武器一覽（獨立可摺疊區塊，置於最後） */}
-            {weaponRecoBuilds.length > 0 && (
-              <section>
-                <button
-                  type="button"
-                  onClick={() => setWeaponRecoOpen((v) => !v)}
-                  className="flex w-full items-center justify-between rounded-lg border border-border bg-muted/40 px-3 py-2 text-sm font-bold"
-                >
-                  <span>
-                    {CATEGORY_LABELS.weaponRecommend}
-                    <span className="ml-2 text-xs font-normal text-muted-foreground">
-                      {weaponRecoBuilds.length} 組
-                    </span>
-                  </span>
-                  {weaponRecoOpen ? (
-                    <ChevronUp className="h-4 w-4" />
-                  ) : (
-                    <ChevronDown className="h-4 w-4" />
-                  )}
-                </button>
-                {weaponRecoOpen && (
-                  <div className="grid grid-cols-1 gap-3 pt-2 xl:grid-cols-2">
-                    {weaponRecoBuilds.map((b) => (
-                      <BuildCardDispatch
-                        key={b.id}
-                        build={b}
-                        resolver={resolver}
-                        onExport={onExport}
-                      />
-                    ))}
-                  </div>
-                )}
-              </section>
-            )}
-
-            {byCat === undefined && (
-              <p className="py-12 text-center text-sm text-muted-foreground">
-                此武器種類尚無推薦配裝資料。
-              </p>
-            )}
-          </div>
+              ))}
+            </div>
+          </>
         )}
       </div>
     </div>
