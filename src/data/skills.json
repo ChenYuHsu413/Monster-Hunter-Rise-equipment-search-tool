@@ -456,7 +456,7 @@
   },
   {
     "name": "激昂",
-    "maxLevel": 1
+    "maxLevel": 3
   },
   {
     "name": "業鎧【修羅】",
@@ -522,7 +522,7 @@
   },
   {
     "name": "弱點特效【屬性】",
-    "maxLevel": 2
+    "maxLevel": 3
   },
   {
     "name": "連擊",
@@ -534,7 +534,7 @@
   },
   {
     "name": "必定累積狀態異常值",
-    "maxLevel": 2
+    "maxLevel": 3
   },
   {
     "name": "剛心",
@@ -542,11 +542,11 @@
   },
   {
     "name": "異常累積強化",
-    "maxLevel": 1
+    "maxLevel": 3
   },
   {
     "name": "煽動",
-    "maxLevel": 2
+    "maxLevel": 3
   },
   {
     "name": "暴風纏身",
@@ -560,12 +560,12 @@
   },
   {
     "name": "狂化",
-    "maxLevel": 1,
+    "maxLevel": 2,
     "special": true
   },
   {
     "name": "奮鬥",
-    "maxLevel": 2
+    "maxLevel": 3
   },
   {
     "name": "寒氣鍊成",
