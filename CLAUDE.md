@@ -1,0 +1,77 @@
+# CLAUDE.md — MHR:Sunbreak 配裝搜尋器 專案記憶
+
+> 本檔是**專案專屬記憶的跨機器載體**。這幾週的教訓原本累積在 `~/.claude/`（使用者層記憶，
+> 位於 C 槽、重開機即消失），此處把「與本專案相關、程式碼看不出來的裁決與教訓」蒸餾進版控。
+> 通用工程守則在 repo 上層的 `AI Class ChenYu/CLAUDE.md`（clone 本 repo 不會帶走，新機器另備）。
+> 詳細記錄見 `~/.claude` 備份與各 `docs/*.md`；本檔只留高價值、每個 session 都該先讀的部分。
+
+---
+
+## 0. 禁區（不得更動；D 的 Worker 搬移不算改行為）
+
+- `src/lib/efr.ts` 的 `EFR_RELEVANT_SKILLS`。改它必須同步 `build-search.ts` 護石支配剪枝的相關技能集。
+- `src/lib/equipment-pools.ts` 的候選集 limit 邏輯（`prunePools` 的每部位件數 + 護石懲罰階梯）。
+- 搜尋演算法本體行為（`searchBuilds`）。搬進 Worker 只是搬移，不得改變結果。
+- `scripts/` 與 `data/`（頂層）視為唯讀；**例外**：明確授權的資料修正（如 skillMax 稽核）可動
+  `scripts/known-max.mjs` + `src/data/*.json`，但要走稽核線、獨立 commit、跑 audit 驗證。
+
+## 1. 資料完整性教訓（踩過坑，最容易重犯）
+
+- **同源資料不可自我盤查**：拿「專案資料 vs 稽核基準」若兩者同源（都來自 import-kiranico、同一條
+  regex），等於自己跟自己比，對方自身的缺漏會隱形、結論無效。正解＝用**獨立外部源**交叉核對
+  （例：珠子完整性用 Game8 配裝 vs 專案，而非 decorations.json vs Kiranico 快取）。
+- **「對不到」先分兩種**：名稱差異（我方名字不同）vs 真的缺（對方根本沒這筆）。鑑別關鍵＝
+  **顆數 / 等級收支**（一筆配裝用了幾顆、單顆給幾級，反推該珠是否可能是某個既有珠）。
+- **Game8 孔位標註不可信**，需 `skillTotals` 交叉核對。Game8 也會有上游資料錯（如某筆攻擊 Lv8，
+  硬上限是 7）——遇到超標先分「Game8 錯」還是「我方 skillMax 錯」。
+- **硬編常數表一旦錯一個就全部可疑**：KNOWN_MAX 稽核發現 26 條硬編有 13 條錯（半數）。
+  技能真上限用 **Kiranico 技能詳細頁效果表列數**（第一張 table，cell[0]=ＬｖN）機械核對；
+  先用已知正確的技能驗證方法 100% 吻合才信。`scripts/audit-known-max.mjs` 已固化此稽核。
+- **查證要對「這套裝備」而非「這隻魔物」**：解放門檻誤判多來自「這隻魔物 M5 出現」但「這套裝備是
+  傀異克服版 M180」。覆寫樣式必須**收窄**，否則同名前綴造成系統性誤判。
+- **重跑安全**：人工判斷全進 override 檔（`data/jp-name-overrides.json` 等），**絕不手改產出檔**
+  （Game8/Kiranico 重跑會沖掉）。`import-unlocks.mjs` 重跑會清掉樹傳播條目，
+  `derive-weapon-trees.mjs` 必須在其後重跑（`--write`）。
+
+## 2. 關鍵架構裁決（程式碼看不出「為什麼」）
+
+- **推薦配裝匯出到配裝器（四階，見 `src/lib/builder-import.ts` 與 README「推薦配裝匯出」節）**：
+  - full-build「以此為基礎修改」＝匯**核心技能 + 護石**，非全表照搬。
+  - 核心技能排序鍵：`紅字優先 → 等級÷maxLevel 比值 → 等級 → Game8 原順序`，取前 **N=4**
+    （由 10 筆隨機畢業裝校準：N=4 時 9/10 有結果、含 2 筆驗收；N=6 僅 5/10）。
+  - **比值排序**而非裸等級：定義性技能常 maxLevel 低（達人藝 1/1、超會心 3/3），裸等級會砍掉它們。
+  - **紅字只當優先鍵不當全集**：Game8 `required` 紅字實測只在 2/399 有標，且那兩筆全集 9 項 maxed
+    → 全匯反而零結果。
+  - **排除 `special` 技能**（`SPECIAL_SKILLS`：狂化/業鎧【修羅】/狂龍症/血氣覺醒等錬成・狂竜化衍生）：
+    搜尋器不模擬其取得，硬要求必零結果；匯入時整批排除**並在提示點名**（否則畢業裝條件區近乎空白
+    會被誤認壞掉）。
+  - **augmentedLevel 欄位語意**：Game8 `Lv4→Lv5` 中 `level=4` 是**錬成前基礎值**（要匯入的）、
+    `augmentedLevel=5` 是錬成後總值。照總值匯入會無解。取 `level`，再 clamp 到 skillMax。
+  - **reco 護石取代制**：匯入的護石標 `source:"reco"`，每次 full-build 匯入**取代所有舊 reco 護石**
+    （＝從這套重新開始，不跨匯入累積），但保留使用者自有護石。
+- **搜尋器重構（三階前）**：排除技能＝硬條件（帶該技能的裝備直接踢出候選池，非扣分）；
+  結果引擎內固定 EFR total（raw + element×4）降冪，UI 三鍵（EFR/防禦/孔位餘裕）client 重排；
+  搜尋條件收斂成單一 `SearchConditions` 物件（`deserializeSearchConditions` 內建 sanitize）。
+- **武器派生樹（`derive-weapon-trees.mjs`）**：rarity 重置一律斷樹；升級限定分支根不繼承（保守低估）；
+  素材快照皆空＝初始配給武器＝樹根。295 筆可疑邊界待影片抽驗。
+- **信心度標註風格**：解放資料用 confirmed / inferred / unverified 三層，不確定寧可標 unverified
+  也不假裝精確；自舉推導為上界近似、略保守。
+
+## 3. 環境與管線
+
+- Node（見新機器 `.nvmrc`/package.json engines，若無則用 LTS）；`npm install` → `npm run dev`（3006）/
+  `npm run build`。
+- 資料管線重跑順序：`build-jp-name-map.js` → `scrape-game8.js` → `validate-recommended-builds.js`。
+  皆有磁碟快取（`scripts/.cache` / `.game8-cache` / `.kiranico-cache`，全 gitignore），
+  快取在時「重跑零抓取」；快取缺失只是變慢（會禮貌重抓，2.5s 間隔）。
+- 破曉 TU5 已停更、資料凍結，故不做 import 時自動抓取的根治，改以稽核 + 快取固化。
+
+## 4. 記憶與備份
+
+- 詳細專案記憶原在 `~/.claude/projects/D--AI-Class-ChenYu-AIClass-MHSB/memory/`（C 槽，5 檔：
+  MEMORY.md 索引 + game8-recommended-builds / search-refactor-decisions / weapon-tree-derivation /
+  newbie-guided-mode-plan）。已備份至 `D:\claude-backup\`。
+- `~/.claude/` 全域 config 版控於 `github.com/ChenYuHsu413/Claude-Config`（memory/projects/sessions
+  未追蹤，僅存 C 槽）。
+- 待啟動大型計畫：新手引導模式已全部完成（見 docs/ROADMAP.md、DATA-COVERAGE.md）；
+  剩餘尾巴見 HANDOFF.md。
