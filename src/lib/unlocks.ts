@@ -81,7 +81,12 @@ export function describeUnlock(entry: UnlockEntry | undefined): string {
   return entry.note ? `${base}（${entry.note}）` : base;
 }
 
-/** 裝備 id → Kiranico 詳細頁連結（素材細節查詢用）。 */
+/**
+ * 裝備 id → Kiranico 詳細頁連結（素材細節查詢用）。
+ * 嚴格白名單 `(armor|weapon)_數字`：合成/手工 id（如 Kiranico 漏收而手動補的
+ * deco_manual_*）與所有裝飾珠一律回 undefined，不會組出壞連結。若日後為裝飾珠
+ * 加 Kiranico 連結，須同樣排除 deco_manual_* 前綴。
+ */
 export function kiranicoUrl(id: string): string | undefined {
   const m = id.match(/^(armor|weapon)_(\d+)$/);
   if (!m) return undefined;

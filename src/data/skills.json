@@ -460,7 +460,7 @@
   },
   {
     "name": "業鎧【修羅】",
-    "maxLevel": 1,
+    "maxLevel": 3,
     "special": true
   },
   {
@@ -469,7 +469,7 @@
   },
   {
     "name": "狂龍症【蝕】",
-    "maxLevel": 1,
+    "maxLevel": 3,
     "special": true
   },
   {
@@ -490,7 +490,7 @@
   },
   {
     "name": "款待",
-    "maxLevel": 3
+    "maxLevel": 1
   },
   {
     "name": "蓄力大師",
@@ -510,7 +510,7 @@
   },
   {
     "name": "刃鱗研磨",
-    "maxLevel": 2
+    "maxLevel": 3
   },
   {
     "name": "飛簷走壁【翔】",
@@ -526,7 +526,7 @@
   },
   {
     "name": "連擊",
-    "maxLevel": 5
+    "maxLevel": 3
   },
   {
     "name": "毅力",
@@ -550,12 +550,12 @@
   },
   {
     "name": "暴風纏身",
-    "maxLevel": 1,
+    "maxLevel": 3,
     "special": true
   },
   {
     "name": "粉塵飛舞",
-    "maxLevel": 1,
+    "maxLevel": 3,
     "special": true
   },
   {
@@ -573,7 +573,7 @@
   },
   {
     "name": "龍氣轉換",
-    "maxLevel": 1
+    "maxLevel": 3
   },
   {
     "name": "天衣無縫",
@@ -581,17 +581,17 @@
   },
   {
     "name": "狂龍症【翔】",
-    "maxLevel": 1,
+    "maxLevel": 3,
     "special": true
   },
   {
     "name": "血氣覺醒",
-    "maxLevel": 1,
+    "maxLevel": 3,
     "special": true
   },
   {
     "name": "緩衝",
-    "maxLevel": 3
+    "maxLevel": 1
   },
   {
     "name": "激勵",

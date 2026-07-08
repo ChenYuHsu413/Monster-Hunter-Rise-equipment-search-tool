@@ -621,7 +621,9 @@ async function verifyHub() {
 
 // ---------- schema 文件（供三、四階 prompt 引用） ----------
 const SCHEMA_DOC = {
-  builds: "配裝清單。所有 skill/armor/decoration/weapon 引用一律存專案內部 ID：armors/weapons/decorations 用資料檔的 id 欄位（armor_*/weapon_*/deco_*），skills 用中文名稱字串（=skills.json 的 name，專案無獨立技能 id）。比對不到時 id=null 且列入頂層 unresolved 清單（補 data/jp-name-map.json 後重跑回填）。rawNameJa=Game8 日文原文，僅供除錯與人工補表；game8Id=Game8 文章數字 ID，為人工補表的穩定鍵。",
+  builds: "配裝清單。所有 skill/armor/decoration/weapon 引用一律存專案內部 ID：armors/weapons/decorations 用資料檔的 id 欄位（armor_*/weapon_*/deco_*），skills 用中文名稱字串（=skills.json 的 name，專案無獨立技能 id）。比對不到時 id=null 且列入頂層 unresolved 清單（補 data/jp-name-overrides.json 後重跑回填）。rawNameJa=Game8 日文原文，僅供除錯與人工補表；game8Id=Game8 文章數字 ID，為人工補表的穩定鍵。",
+  syntheticIds: "內部 ID 可能含手工合成條目（deco_manual_* 前綴）：Kiranico 漏收但確實存在的資料由 import-kiranico 的 MANUAL_DECORATIONS 補入，id 無對應 Kiranico 數字。顯示端勿對 id 做數字解析或組 Kiranico 連結（kiranicoUrl 已白名單排除）。",
+  residualRisk: "殘餘風險（可接受，不另處理）：資料完整性以 Game8 配裝(獨立外部源) vs 專案交叉核對，但『Kiranico 漏收 + Game8 也沒用到』的珠仍偵測不到。這類珠不會出現在推薦配裝、也極少是配裝關鍵珠，故列為已知殘留。",
   kind: {
     "full-build":
       "成套配裝：armor 恆為 5 件、slot 依來源列序填 head/chest/arms/waist/legs；可能含 talisman（護石：skills+slots+decorations）、buildDecorations（全裝珠總計，僅上位畢業裝格式——該格式珠不逐部位標示）、skillTotals（發動技能總表，含 required=紅字必須技能、augmentedLevel=傀異錬成後等級）。skillTotals 為 null 時=來源未提供總表（簡易格式），下游需自行從部位 skills 合成或僅顯示部位技能。匯出到配裝器＝完整套裝預選。",
