@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { weaponTypes } from "@/lib/data";
 import {
   CATEGORY_LABELS,
@@ -52,7 +52,6 @@ function StageSection({
   count,
   open,
   onToggle,
-  sectionRef,
   builds,
   resolver,
   onExport,
@@ -61,13 +60,12 @@ function StageSection({
   count: number;
   open: boolean;
   onToggle: () => void;
-  sectionRef: (el: HTMLElement | null) => void;
   builds: RecommendedBuild[];
   resolver: NameResolver;
   onExport: (payload: BuilderImport) => void;
 }) {
   return (
-    <section ref={sectionRef} className="scroll-mt-16 space-y-2">
+    <section className="space-y-2">
       <button
         type="button"
         onClick={onToggle}
@@ -116,8 +114,6 @@ export function RecommendedView({
     "mhsb.recoStagesOpen",
     []
   );
-  // 各分區標題 DOM，供快速導覽捲動定位。
-  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
     let alive = true;
@@ -138,15 +134,6 @@ export function RecommendedView({
     setOpenStages((prev) =>
       prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
     );
-  const openStage = (cat: string) =>
-    setOpenStages((prev) => (prev.includes(cat) ? prev : [...prev, cat]));
-  const scrollToStage = (cat: string) => {
-    openStage(cat);
-    sectionRefs.current[cat]?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
 
   const byCat = weaponType ? index?.byWeaponType.get(weaponType) : undefined;
   // 該武器實際有資料的分區（保 SECTION_ORDER 順序）。
@@ -154,8 +141,6 @@ export function RecommendedView({
     cat,
     builds: byCat?.get(cat) ?? [],
   })).filter((s) => s.builds.length > 0);
-  // 快速導覽只列五階段（不含推薦武器一覽）。
-  const navSections = sections.filter((s) => s.cat !== "weaponRecommend");
 
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-y-auto scrollbar-thin">
@@ -206,29 +191,6 @@ export function RecommendedView({
           </p>
         ) : (
           <>
-            {/* 階段快速導覽（sticky 置頂；手機可橫向捲動、不換行） */}
-            {navSections.length > 0 && (
-              <div className="sticky top-0 z-10 -mx-4 border-b border-border bg-background px-4 py-2">
-                <div className="flex gap-2 overflow-x-auto scrollbar-thin">
-                  {navSections.map(({ cat }) => (
-                    <button
-                      key={cat}
-                      type="button"
-                      onClick={() => scrollToStage(cat)}
-                      className={cn(
-                        "shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-xs transition-colors",
-                        isOpen(cat)
-                          ? "border-primary bg-primary/10 text-primary"
-                          : "border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"
-                      )}
-                    >
-                      {CATEGORY_LABELS[cat]}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {/* 分區手風琴 */}
             <div className="space-y-4">
               {sections.map(({ cat, builds }) => (
@@ -238,9 +200,6 @@ export function RecommendedView({
                   count={builds.length}
                   open={isOpen(cat)}
                   onToggle={() => toggleStage(cat)}
-                  sectionRef={(el) => {
-                    sectionRefs.current[cat] = el;
-                  }}
                   builds={builds}
                   resolver={resolver}
                   onExport={onExport}
