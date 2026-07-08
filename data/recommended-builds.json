@@ -18,6 +18,7 @@
    "stageName": "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
    "augmentRaw": "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
    "rampageSkills": "百龍技能（rawNameJa 原樣，專案資料無百龍技能清單，不做 ID 解析）。",
+   "placeholder": "裝飾珠選用旗標：Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，非單一珠、無 ID。顯示端應提示玩家依屬性自選（如火→火炎珠），不當缺漏。",
    "errors": "解析失敗的表格（不硬猜），含來源 URL 與表頭預覽，供人工處理。",
    "unresolved": "比對不到內部 ID 的日文名稱彙總（type/rawNameJa/game8Id/出現次數/example builds）。"
   }
@@ -1177,7 +1178,7 @@
        "game8Id": 384615
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -1229,13 +1230,13 @@
        "game8Id": 384615
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -1405,13 +1406,13 @@
        "game8Id": 511582
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -1477,7 +1478,7 @@
        "game8Id": 465127
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -1521,7 +1522,7 @@
        "game8Id": 484558
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -2260,7 +2261,7 @@
        "game8Id": 511582
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -2324,7 +2325,7 @@
        "game8Id": 465130
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -2432,7 +2433,7 @@
       "game8Id": 465174
      },
      {
-      "id": null,
+      "id": "deco_173733363",
       "rawNameJa": "盤石珠【1】",
       "count": 1,
       "game8Id": 470891
@@ -16270,7 +16271,7 @@
      "game8Id": 384595
     },
     {
-     "id": null,
+     "id": "deco_173733363",
      "rawNameJa": "盤石珠【1】",
      "count": 3,
      "game8Id": 470891
@@ -27630,7 +27631,7 @@
      "game8Id": 484550
     },
     {
-     "id": null,
+     "id": "deco_173733363",
      "rawNameJa": "盤石珠【1】",
      "count": 3,
      "game8Id": 470891
@@ -27876,7 +27877,7 @@
    },
    "buildDecorations": [
     {
-     "id": null,
+     "placeholder": true,
      "rawNameJa": "各属性強化の装飾品【3】",
      "count": 1
     },
@@ -27911,7 +27912,7 @@
      "game8Id": 380127
     },
     {
-     "id": null,
+     "placeholder": true,
      "rawNameJa": "各属性強化の装飾品【1】",
      "count": 2
     },
@@ -27922,7 +27923,7 @@
      "game8Id": 470871
     },
     {
-     "id": null,
+     "id": "deco_173733363",
      "rawNameJa": "盤石珠【1】",
      "count": 1,
      "game8Id": 470891
@@ -36284,7 +36285,7 @@
      "game8Id": 484552
     },
     {
-     "id": null,
+     "id": "deco_173733363",
      "rawNameJa": "盤石珠【1】",
      "count": 3,
      "game8Id": 470891
@@ -36602,7 +36603,7 @@
      "game8Id": 380092
     },
     {
-     "id": null,
+     "id": "deco_173733363",
      "rawNameJa": "盤石珠【1】",
      "count": 3,
      "game8Id": 470891
@@ -44780,7 +44781,7 @@
      "game8Id": 499952
     },
     {
-     "id": null,
+     "placeholder": true,
      "rawNameJa": "各属性強化の装飾品【3】",
      "count": 1
     },
@@ -44803,7 +44804,7 @@
      "game8Id": 384597
     },
     {
-     "id": null,
+     "placeholder": true,
      "rawNameJa": "各属性強化の装飾品【2】",
      "count": 1
     },
@@ -55473,7 +55474,7 @@
       "game8Id": 470869
      },
      {
-      "id": null,
+      "id": "deco_173733363",
       "rawNameJa": "盤石珠【1】",
       "count": 1,
       "game8Id": 470891
@@ -55704,13 +55705,13 @@
        "game8Id": 380089
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -55766,7 +55767,7 @@
        "game8Id": 499615
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -57545,13 +57546,13 @@
        "game8Id": 465162
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -57578,7 +57579,7 @@
        "game8Id": 465141
       },
       {
-       "id": null,
+       "id": "deco_173733363",
        "rawNameJa": "盤石珠【1】",
        "count": 1,
        "game8Id": 470891
@@ -57942,7 +57943,7 @@
      "game8Id": 511575
     },
     {
-     "id": null,
+     "id": "deco_173733363",
      "rawNameJa": "盤石珠【1】",
      "count": 3,
      "game8Id": 470891
@@ -75822,7 +75823,7 @@
        "game8Id": 465122
       },
       {
-       "id": null,
+       "placeholder": true,
        "rawNameJa": "各属性珠Ⅳ【4】",
        "count": 1
       }
@@ -75869,7 +75870,7 @@
        "game8Id": 465164
       },
       {
-       "id": null,
+       "placeholder": true,
        "rawNameJa": "各属性珠【1】",
        "count": 1
       },
@@ -93931,12 +93932,12 @@
    },
    "buildDecorations": [
     {
-     "id": null,
+     "placeholder": true,
      "rawNameJa": "各属性珠Ⅲ【3】",
      "count": 1
     },
     {
-     "id": null,
+     "placeholder": true,
      "rawNameJa": "各属性珠Ⅱ【2】",
      "count": 1
     },
@@ -105109,7 +105110,7 @@
      "game8Id": 380117
     },
     {
-     "id": null,
+     "id": "deco_1594014760",
      "rawNameJa": "跳躍珠Ⅱ【2】",
      "count": 1,
      "game8Id": 380115
@@ -125968,90 +125969,5 @@
   }
  ],
  "errors": [],
- "unresolved": [
-  {
-   "type": "decorations",
-   "rawNameJa": "盤石珠【1】",
-   "game8Id": null,
-   "count": 23,
-   "examples": [
-    "great-sword:mrEndgame:4",
-    "great-sword:mrEndgame:5",
-    "great-sword:mrEndgame:8"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "各属性強化の装飾品【3】",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "dual-blades:mrEndgame:16",
-    "hunting-horn:mrEndgame:12"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "各属性強化の装飾品【1】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:mrEndgame:16"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "各属性強化の装飾品【2】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "hunting-horn:mrEndgame:12"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "各属性珠Ⅳ【4】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "charge-blade:mrEndgame:11"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "各属性珠【1】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "charge-blade:mrEndgame:11"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "各属性珠Ⅲ【3】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "light-bowgun:mrEndgame:6"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "各属性珠Ⅱ【2】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "light-bowgun:mrEndgame:6"
-   ]
-  },
-  {
-   "type": "decorations",
-   "rawNameJa": "跳躍珠Ⅱ【2】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "heavy-bowgun:mrEndgame:15"
-   ]
-  }
- ]
+ "unresolved": []
 }

@@ -183,6 +183,10 @@ function parseDecoCell(cell) {
     } else if (m[1].endsWith("系") || m[1].endsWith("竜珠")) {
       // ○系＝武器百龍珠、○竜珠＝百龍装飾品；專案無此資料，比照獵蟲留原文
       rampage.push({ rawNameJa: raw, count });
+    } else if (m[1].startsWith("各属性")) {
+      // Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，
+      // 非單一珠、無法對 ID；標 placeholder，顯示端提示玩家依屬性自選。
+      decos.push({ placeholder: true, rawNameJa: raw, count });
     } else {
       decos.push({ id: resolve("decorations", raw, cell.game8Id ? null : null), rawNameJa: raw, count });
     }
@@ -190,7 +194,7 @@ function parseDecoCell(cell) {
   // game8Id 逐珠取：cell 內多個 <a> 依序對應
   const links = [...cell.html.matchAll(/href="(?:https:\/\/game8\.jp)?\/mhrise\/(\d+)"[^>]*>([\s\S]*?)<\/a>/g)];
   for (const d of decos) {
-    if (d.free) continue;
+    if (d.free || d.placeholder) continue;
     const link = links.find((l) => textOf(l[2]) === d.rawNameJa);
     if (link) d.game8Id = Number(link[1]);
   }
@@ -636,6 +640,8 @@ const SCHEMA_DOC = {
   stageName: "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
   augmentRaw: "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
   rampageSkills: "百龍技能（rawNameJa 原樣，專案資料無百龍技能清單，不做 ID 解析）。",
+  placeholder:
+    "裝飾珠選用旗標：Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，非單一珠、無 ID。顯示端應提示玩家依屬性自選（如火→火炎珠），不當缺漏。",
   errors: "解析失敗的表格（不硬猜），含來源 URL 與表頭預覽，供人工處理。",
   unresolved: "比對不到內部 ID 的日文名稱彙總（type/rawNameJa/game8Id/出現次數/example builds）。",
 };
