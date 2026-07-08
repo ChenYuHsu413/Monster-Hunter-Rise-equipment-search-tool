@@ -24,7 +24,15 @@ import {
 } from "@/lib/data";
 import { TIER_MAX_RARITY } from "@/types/build";
 import { loadGameData, type GameData } from "@/lib/game-data";
-import { searchBuilds, createSearchDeps, type SearchMeta } from "@/lib/build-search";
+import {
+  searchBuilds,
+  createSearchDeps,
+  type SearchMeta,
+} from "@/lib/build-search";
+import type {
+  SearchWorkerRequest,
+  SearchWorkerResponse,
+} from "@/lib/search.worker";
 import { slotValue } from "@/lib/slot-utils";
 import { useLocalStorage } from "@/lib/use-local-storage";
 import {
@@ -241,6 +249,16 @@ export function BuilderView({
   const [meta, setMeta] = useState<SearchMeta | null>(null);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  // 搜尋 Worker（延遲建立、跨搜尋重用；取消時 terminate 後置 null 重建）。
+  const workerRef = useRef<Worker | null>(null);
+  // 遞增搜尋序號：忽略已取消/過期的 worker 回傳。
+  const searchIdRef = useRef(0);
+  // 搜尋中經過毫秒（不確定進度提示；searchBuilds 為整段同步、無增量進度）。
+  const [searchElapsed, setSearchElapsed] = useState(0);
+  const elapsedTimerRef = useRef<number | null>(null);
+  const searchStartRef = useRef(0);
+  // 最近一次送出的搜尋請求（gated parity 對照用）。
+  const lastRequestRef = useRef<BuildSearchRequest | null>(null);
   const [sortKey, setSortKey] = useLocalStorage<SortKey>("mhsb.sortKey", "efr");
   // 顯示上限：手機首訪預設 20、桌機 100；有存過就沿用。（讀 effect 先於寫 effect）
   const [resultLimit, setResultLimit] = useState(100);
@@ -417,12 +435,103 @@ export function BuilderView({
     reapplyAutoSkills(weaponById[id]?.element?.type);
   };
 
-  const runSearch = async () => {
-    setLoading(true);
-    setHasSearched(true);
-    // 確保防具/武器資料已載入（第一次搜尋可能還在載）
+  // ---- 搜尋期間的經過毫秒計時（不確定進度提示）----
+  const startElapsed = () => {
+    searchStartRef.current =
+      typeof performance !== "undefined" ? performance.now() : 0;
+    setSearchElapsed(0);
+    elapsedTimerRef.current = window.setInterval(() => {
+      setSearchElapsed(
+        (typeof performance !== "undefined" ? performance.now() : 0) -
+          searchStartRef.current
+      );
+    }, 100);
+  };
+  const stopElapsed = () => {
+    if (elapsedTimerRef.current != null) {
+      window.clearInterval(elapsedTimerRef.current);
+      elapsedTimerRef.current = null;
+    }
+  };
+
+  /** 套用搜尋結果（含手機版搜尋後收合捲動）。 */
+  const applySearchOutput = (out: SearchWorkerResponse & { ok: true }) => {
+    setResults(out.output.results);
+    setMeta(out.output.meta);
+    setDirtySinceSearch(false);
+    if (typeof window !== "undefined" && window.innerWidth < 1024) {
+      setConditionsOpen(false);
+      setTimeout(
+        () =>
+          toggleRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          }),
+        140
+      );
+    }
+  };
+
+  /**
+   * gated 一致性對照（?workerParity=1）：worker 回傳後，在主執行緒以同一 request 同步
+   * 再算一次，比對「有序」id 列表。有序比對是刻意的——順序差異代表 EFR 計算在 worker
+   * 環境有偏移，也要抓出。結果印到 console（PARITY OK / MISMATCH）。
+   */
+  const runParityCheck = async (workerOut: SearchWorkerResponse & { ok: true }) => {
+    const req = lastRequestRef.current;
+    if (!req) return;
     const gd = gameData ?? (await loadGameData());
-    if (!gameData) setGameData(gd);
+    const inline = searchBuilds(req, createSearchDeps(gd, augments), () => 0);
+    const a = workerOut.output.results.map((r) => r.id);
+    const b = inline.results.map((r) => r.id);
+    const same = a.length === b.length && a.every((id, i) => id === b[i]);
+    if (same) {
+      // eslint-disable-next-line no-console
+      console.log(
+        `[workerParity] OK — worker 與主執行緒有序 id 完全一致（${a.length} 套；有效組合 worker=${workerOut.output.meta.validBuilds} inline=${inline.meta.validBuilds}；護石 ${req.charms.length}）`
+      );
+    } else {
+      const diffAt = a.findIndex((id, i) => id !== b[i]);
+      // eslint-disable-next-line no-console
+      console.warn(
+        `[workerParity] MISMATCH — worker=${a.length} inline=${b.length}，首個相異位置 #${diffAt}`,
+        { worker: a.slice(0, 5), inline: b.slice(0, 5) }
+      );
+    }
+  };
+
+  /** 延遲建立 / 重用搜尋 Worker；onmessage 以 searchId 忽略過期回傳。 */
+  const ensureWorker = (): Worker => {
+    if (!workerRef.current) {
+      const w = new Worker(
+        new URL("../../lib/search.worker.ts", import.meta.url)
+      );
+      w.onmessage = (e: MessageEvent<SearchWorkerResponse>) => {
+        const msg = e.data;
+        if (msg.id !== searchIdRef.current) return; // 已取消/過期
+        stopElapsed();
+        setLoading(false);
+        if (msg.ok) {
+          applySearchOutput(msg);
+          if (
+            typeof window !== "undefined" &&
+            new URLSearchParams(window.location.search).get("workerParity") ===
+              "1"
+          ) {
+            runParityCheck(msg);
+          }
+        } else showToast(`搜尋發生錯誤：${msg.error}`);
+      };
+      workerRef.current = w;
+    }
+    return workerRef.current;
+  };
+
+  const runSearch = () => {
+    const id = ++searchIdRef.current;
+    setHasSearched(true);
+    setLoading(true);
+    startElapsed();
     const request: BuildSearchRequest = {
       weaponType,
       presetId,
@@ -450,31 +559,32 @@ export function BuilderView({
       searchMode,
       resultLimit,
     };
-    const deps = createSearchDeps(gd, augments);
-    // 讓 UI 先繪製 loading 狀態，再執行同步搜尋
-    setTimeout(() => {
-      const out = searchBuilds(request, deps, () =>
-        typeof performance !== "undefined" ? performance.now() : 0
-      );
-      setResults(out.results);
-      setMeta(out.meta);
-      setLoading(false);
-      setDirtySinceSearch(false);
-      // 手機版：搜尋後自動收合條件並跳到結果（桌機恆顯示，收合僅影響視覺）。
-      // 延遲捲動，等收合的版面重排完成後再對齊到（sticky 的）條件收合列。
-      if (typeof window !== "undefined" && window.innerWidth < 1024) {
-        setConditionsOpen(false);
-        setTimeout(
-          () =>
-            toggleRef.current?.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            }),
-          140
-        );
-      }
-    }, 20);
+    lastRequestRef.current = request;
+    ensureWorker().postMessage({
+      id,
+      request,
+      augments,
+    } satisfies SearchWorkerRequest);
   };
+
+  /** 取消搜尋：terminate worker（下次搜尋重建）並復原 UI；序號遞增作廢在途回傳。 */
+  const cancelSearch = () => {
+    searchIdRef.current++;
+    workerRef.current?.terminate();
+    workerRef.current = null;
+    stopElapsed();
+    setLoading(false);
+  };
+
+  // 卸載時清理 worker 與計時器。
+  useEffect(
+    () => () => {
+      workerRef.current?.terminate();
+      if (elapsedTimerRef.current != null)
+        window.clearInterval(elapsedTimerRef.current);
+    },
+    []
+  );
 
   // ---- 結果卡片操作 ----
   const fixArmor = (part: ArmorPart, id: string) =>
@@ -740,19 +850,33 @@ export function BuilderView({
           <Share2 className="h-4 w-4" />
           分享連結
         </Button>
-        <Button
-          size="lg"
-          onClick={runSearch}
-          disabled={loading || Object.keys(required).length === 0}
-          className="gap-2"
-        >
-          {loading ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
+        {loading ? (
+          <>
+            <Button size="lg" disabled className="gap-2">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              搜尋中…{Math.round(searchElapsed)}ms
+            </Button>
+            <Button
+              size="lg"
+              variant="destructive"
+              onClick={cancelSearch}
+              className="gap-2"
+            >
+              <X className="h-4 w-4" />
+              取消
+            </Button>
+          </>
+        ) : (
+          <Button
+            size="lg"
+            onClick={runSearch}
+            disabled={Object.keys(required).length === 0}
+            className="gap-2"
+          >
             <Search className="h-4 w-4" />
-          )}
-          {!gameData && !loading ? "資料載入中…" : "搜尋配裝"}
-        </Button>
+            {!gameData ? "資料載入中…" : "搜尋配裝"}
+          </Button>
+        )}
       </div>
 
       {/* ---- 手機版：搜尋條件收合列（sticky，桌機隱藏）---- */}
@@ -1036,7 +1160,19 @@ export function BuilderView({
             {loading ? (
               <div className="flex flex-col items-center justify-center gap-3 py-24 text-muted-foreground">
                 <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                <p className="text-sm">搜尋配裝中…</p>
+                <p className="text-sm">
+                  搜尋配裝中…{" "}
+                  <span className="font-mono">{Math.round(searchElapsed)}ms</span>
+                </p>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={cancelSearch}
+                  className="gap-1.5"
+                >
+                  <X className="h-3.5 w-3.5" />
+                  取消搜尋
+                </Button>
               </div>
             ) : !hasSearched ? (
               <EmptyState
