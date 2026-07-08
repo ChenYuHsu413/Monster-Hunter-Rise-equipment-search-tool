@@ -42,11 +42,6 @@ export const skillMax: Record<string, number> = Object.fromEntries(
   skills.map((s) => [s.name, s.maxLevel])
 );
 
-/** 技能名稱 → 是否為特殊/高風險技能。 */
-export const skillIsSpecial: Record<string, boolean> = Object.fromEntries(
-  skills.map((s) => [s.name, !!s.special])
-);
-
 /** 技能名稱 → Skill 主資料。 */
 export const skillByName: Record<string, Skill> = Object.fromEntries(
   skills.map((s) => [s.name, s])

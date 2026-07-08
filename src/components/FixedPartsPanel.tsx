@@ -18,7 +18,7 @@ type Props = {
   excludedItems: ExcludedItems;
   armorById: Record<string, ArmorPiece>;
   weaponById: Record<string, Weapon>;
-  onClearFixed: (part: ArmorPart | "weapon" | "charm") => void;
+  onClearFixed: (part: ArmorPart | "weapon") => void;
   onRemoveExcluded: (id: string) => void;
 };
 

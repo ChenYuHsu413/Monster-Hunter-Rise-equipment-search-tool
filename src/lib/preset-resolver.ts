@@ -52,7 +52,7 @@ export function resolveAutoSkills(
 
 /**
  * 套用 preset 的 autoRules 到技能條件。
- * - 複製 preset 的四組技能表
+ * - 複製 preset 的技能條件
  * - 若 autoRules.addElementAttackSkill 且武器為五屬性，將對應屬性強化併入 requiredSkills（取較大值）
  * - autoAddedSkills 供 UI 顯示「已自動加入」
  */
@@ -63,9 +63,7 @@ export function resolvePresetSkills(
   const auto = resolveAutoSkillsFromElement(preset.autoRules, elementType);
   return {
     requiredSkills: mergeMaxSkills({ ...preset.requiredSkills }, auto),
-    preferredSkills: { ...preset.preferredSkills },
-    avoidSkills: { ...preset.avoidSkills },
-    skillWeights: { ...preset.skillWeights },
+    excludedSkills: [...preset.excludedSkills],
     autoAddedSkills: auto,
   };
 }

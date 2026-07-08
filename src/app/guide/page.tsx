@@ -6,7 +6,6 @@ import Link from "next/link";
 import { weaponTypes } from "@/lib/data";
 import {
   TIER_MAX_RARITY,
-  TIER_SCORE_PROFILE,
   ARMOR_PART_LABELS,
   ARMOR_PARTS,
   type BuildPreset,
@@ -18,7 +17,6 @@ import {
 } from "@/types/build";
 import { loadGameData } from "@/lib/game-data";
 import { searchBuilds, createSearchDeps } from "@/lib/build-search";
-import { mergeMaxSkills } from "@/lib/preset-resolver";
 import {
   loadUnlocks,
   isCraftable,
@@ -62,8 +60,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/** 引導頁固定用空護石／不保留洞位／無排除（新手不需要這些進階條件）。 */
-const EMPTY_CHARM = { skills: {}, slots: [] as number[] };
+/** 引導頁固定不用護石／不保留洞位／無排除（新手不需要這些進階條件）。 */
 const NO_RESERVED = { 4: 0, 3: 0, 2: 0, 1: 0 };
 const NO_EXCLUDED = { armorIds: [] as string[], weaponIds: [] as string[] };
 
@@ -143,7 +140,6 @@ function extractPieces(
 function guideRequest(
   weaponType: string,
   preset: BuildPreset,
-  tier: PresetTier,
   extra: Partial<BuildSearchRequest>
 ): BuildSearchRequest {
   return {
@@ -152,14 +148,11 @@ function guideRequest(
     weaponSearchMode: "search",
     autoRules: preset.autoRules,
     preferElement: preset.preferElement,
-    scoreProfile: preset.scoreProfile ?? TIER_SCORE_PROFILE[tier],
-    charm: EMPTY_CHARM,
+    charms: [],
     fixedParts: {},
     excludedItems: NO_EXCLUDED,
     requiredSkills: { ...preset.requiredSkills },
-    preferredSkills: { ...preset.preferredSkills },
-    avoidSkills: { ...preset.avoidSkills },
-    skillWeights: { ...preset.skillWeights },
+    excludedSkills: [...preset.excludedSkills],
     reservedSlots: NO_RESERVED,
     searchMode: "fast",
     resultLimit: 3,
@@ -313,26 +306,33 @@ export default function GuidePage() {
 
     // 讓 loading 狀態先繪製，再跑同步搜尋（沿用主頁做法）
     setTimeout(() => {
-      // A. 現在最佳：以進度精確篩選；湊不滿必要技能時降為偏好再試一次
+      // A. 現在最佳：以進度精確篩選；湊不滿必要技能時逐步放寬——
+      //    從最後一項必要技能開始逐一移除重搜，直到有結果（最終會退到無必要技能）。
       let current: BuildResult | null = null;
       let currentRelaxed = false;
-      const reqA = guideRequest(weaponType, preset, tier, { progress: p });
-      const outA = searchBuilds(reqA, deps);
+      const outA = searchBuilds(
+        guideRequest(weaponType, preset, { progress: p }),
+        deps
+      );
       if (outA.results.length > 0) {
         current = outA.results[0];
       } else {
-        const relaxed = guideRequest(weaponType, preset, tier, {
-          progress: p,
-          requiredSkills: {},
-          preferredSkills: mergeMaxSkills(
-            { ...preset.preferredSkills },
-            preset.requiredSkills
-          ),
-        });
-        const outRelaxed = searchBuilds(relaxed, deps);
-        if (outRelaxed.results.length > 0) {
-          current = outRelaxed.results[0];
-          currentRelaxed = true;
+        const relaxedRequired = { ...preset.requiredSkills };
+        const dropOrder = Object.keys(relaxedRequired).reverse();
+        for (const skill of dropOrder) {
+          delete relaxedRequired[skill];
+          const outRelaxed = searchBuilds(
+            guideRequest(weaponType, preset, {
+              progress: p,
+              requiredSkills: { ...relaxedRequired },
+            }),
+            deps
+          );
+          if (outRelaxed.results.length > 0) {
+            current = outRelaxed.results[0];
+            currentRelaxed = true;
+            break;
+          }
         }
       }
 
@@ -344,7 +344,7 @@ export default function GuidePage() {
         ? { tier, preset }
         : nextTierPreset(weaponType, tier);
       if (nextInfo) {
-        const reqB = guideRequest(weaponType, nextInfo.preset, nextInfo.tier, {
+        const reqB = guideRequest(weaponType, nextInfo.preset, {
           maxRarity: TIER_MAX_RARITY[nextInfo.tier],
         });
         const outB = searchBuilds(reqB, deps);

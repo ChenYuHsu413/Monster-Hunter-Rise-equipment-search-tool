@@ -7,7 +7,6 @@ import type {
   BuildResult,
   ElementResistanceKey,
   FixedParts,
-  ReservedSlots,
   SkillMap,
 } from "@/types/build";
 import {
@@ -31,6 +30,7 @@ import {
   weaponSeriesLabel,
 } from "@/lib/weapon-utils";
 import { weaponTypes, decorationsBySkill, skillMax } from "@/lib/data";
+import { mergeMaxSkills } from "@/lib/preset-resolver";
 import { suggestAddableSkills } from "@/lib/suggest-skills";
 import {
   Lock,
@@ -49,10 +49,8 @@ type Props = {
   result: BuildResult;
   rank: number;
   weaponSlotsLabel: string;
+  /** 使用者指定的必要技能（不含 autoSkills，卡片內會合併）。 */
   requiredSkills: SkillMap;
-  preferredSkills: SkillMap;
-  avoidSkills: SkillMap;
-  reservedSlots: ReservedSlots;
   fixedParts: FixedParts;
   /** 已排除的裝備/武器 id 集合（用於卡片上顯示排除狀態）。 */
   excludedIds: Set<string>;
@@ -167,8 +165,6 @@ export function BuildResultCard({
   rank,
   weaponSlotsLabel,
   requiredSkills,
-  preferredSkills,
-  avoidSkills,
   fixedParts,
   excludedIds,
   isFavorite,
@@ -181,7 +177,6 @@ export function BuildResultCard({
   onToggleFavorite,
   onToggleCompare,
 }: Props) {
-  const s = result.score;
   const missing = Object.entries(result.missingRequiredSkills);
   const weapon = result.weapon;
   const weaponExcluded = weapon ? excludedIds.has(weapon.id) : false;
@@ -189,6 +184,11 @@ export function BuildResultCard({
     ? weaponTypes.find((t) => t.id === weapon.weaponType)?.nameZh
     : undefined;
   const autoEntries = Object.entries(result.autoSkills ?? {});
+  // 技能摘要的「使用者指定」集合 = 必要技能 + 自動技能（兩者都不算額外賺到）
+  const effectiveRequired = useMemo(
+    () => mergeMaxSkills(requiredSkills, result.autoSkills ?? {}),
+    [requiredSkills, result.autoSkills]
+  );
   // 追加技能建議：用此配裝的剩餘洞位推算還能塞哪些珠（擇一）。
   const addable = useMemo(
     () =>
@@ -211,30 +211,21 @@ export function BuildResultCard({
           </div>
           <div>
             <div className="flex items-baseline gap-1.5">
-              <span className="font-mono text-lg font-bold">{s.total}</span>
-              <span className="text-[11px] text-muted-foreground">總分</span>
+              <span
+                className="font-mono text-lg font-bold text-orange-400"
+                title="EFR：期望攻擊值（同武器種類內可比較的參考指標）"
+              >
+                {result.efr.raw}
+              </span>
+              <span className="text-[11px] text-muted-foreground">EFR</span>
             </div>
             <div className="flex flex-wrap gap-x-2 text-[11px] text-muted-foreground">
-              <span title="EFR 傷害分（武器面板＋傷害技能）" className="text-orange-400">
-                傷 {s.damageScore}
-              </span>
-              <span title="偏好（舒適）技能分">偏 {s.preferredSkillScore}</span>
-              <span title="剩餘洞位（彈性）分">洞 {s.slotScore}</span>
-              {s.elementScore > 0 && (
-                <span title="屬性有效傷害（EFR 屬性部分）" className="text-sky-400">
-                  屬 {s.elementScore}
+              {result.efr.element > 0 && (
+                <span title="期望屬性值（EFR 屬性部分）" className="text-sky-400">
+                  屬性 {result.efr.element}
                 </span>
               )}
-              {s.specialSkillScore > 0 && (
-                <span title="特殊技能分" className="text-accent">
-                  特 {s.specialSkillScore}
-                </span>
-              )}
-              {s.penaltyScore < 0 && (
-                <span title="扣分" className="text-destructive">
-                  罰 {s.penaltyScore}
-                </span>
-              )}
+              <span title="5 件防具基礎防禦總和">防禦 {result.totalDefense}</span>
             </div>
           </div>
         </div>
@@ -394,11 +385,20 @@ export function BuildResultCard({
             >
               護石
             </Badge>
-            <span className="min-w-0 flex-1 truncate text-sm">
-              {Object.entries(result.charm.skills)
-                .map(([n, l]) => `${n} ${l}`)
-                .join("・") || "無護石"}
-            </span>
+            {result.charm.id ? (
+              <>
+                <span className="min-w-0 flex-1 truncate text-sm">
+                  {result.charm.name}
+                </span>
+                <Badge variant="accent" className="shrink-0 px-1 py-0 text-[11px]">
+                  我的護石
+                </Badge>
+              </>
+            ) : (
+              <span className="min-w-0 flex-1 truncate text-sm text-muted-foreground">
+                未使用護石
+              </span>
+            )}
             <span className="font-mono text-[11px] text-muted-foreground">
               {formatSlots(result.charm.slots)}
             </span>
@@ -431,9 +431,7 @@ export function BuildResultCard({
           </div>
           <SkillSummary
             skills={result.finalSkills}
-            required={requiredSkills}
-            preferred={preferredSkills}
-            avoid={avoidSkills}
+            required={effectiveRequired}
           />
         </div>
 

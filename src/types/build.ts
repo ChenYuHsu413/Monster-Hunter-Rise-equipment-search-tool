@@ -248,54 +248,18 @@ export const TIER_MAX_RARITY: Record<PresetTier, number> = {
   畢業: 10,
 };
 
-/**
- * 排名權重分配：傷害(EFR) / 舒適(偏好技能) / 彈性(剩餘洞) 三者的相對比重。
- * 由 preset 指定；未指定時依 tier 取 TIER_SCORE_PROFILE 預設。
- */
-export type ScoreProfile = {
-  /** EFR 傷害指標權重。 */
-  damage: number;
-  /** 偏好（舒適/泛用）技能分權重。 */
-  comfort: number;
-  /** 剩餘洞位（彈性）分權重。 */
-  slot: number;
-};
-
-/**
- * 各階段的預設權重：越後期越重傷害，越前期越重舒適與彈性。
- * 畢業預設為傷害向；「畢業-舒適」類 preset 可自帶 scoreProfile 覆寫。
- * 這些是校準起點，之後以 R1 等參考配裝微調。
- */
-export const TIER_SCORE_PROFILE: Record<PresetTier, ScoreProfile> = {
-  初心: { damage: 0.15, comfort: 1.0, slot: 1.0 },
-  拓荒: { damage: 0.4, comfort: 0.9, slot: 0.7 },
-  進階: { damage: 0.8, comfort: 0.45, slot: 0.35 },
-  // 畢業預設為傷害向：舒適/彈性壓低，讓最高 EFR 配裝真正排榜首。
-  畢業: { damage: 1.0, comfort: 0.15, slot: 0.15 },
-};
-
-/** 無 tier 時的保底權重。 */
-export const DEFAULT_SCORE_PROFILE: ScoreProfile = {
-  damage: 0.5,
-  comfort: 0.8,
-  slot: 0.6,
-};
-
 export type BuildPreset = {
   id: string;
   nameZh: string;
   weaponType: string;
   /** 進度階段分類（用於流派清單分組）。未標示者視為未分類。 */
   tier?: PresetTier;
-  /** 排名權重覆寫（例如「畢業-舒適」）。未指定則依 tier 取預設。 */
-  scoreProfile?: ScoreProfile;
   /** 屬攻武器流派：search 模式挑候選武器時以屬性值優先（與 autoRules 解耦，物理向初心屬性武器亦可開）。 */
   preferElement?: boolean;
   description: string;
   requiredSkills: SkillMap;
-  preferredSkills: SkillMap;
-  avoidSkills: SkillMap;
-  skillWeights: SkillMap;
+  /** 排除技能（硬條件：帶有這些技能的裝備不進候選池）。 */
+  excludedSkills: string[];
   autoRules?: PresetAutoRules;
   /** 套用時一併帶入的保留洞位（例如屬性模板預留 Lv3+Lv2 給屬性攻擊珠）。未指定則不改動現有保留洞位。 */
   reservedSlots?: Partial<ReservedSlots>;
@@ -305,14 +269,12 @@ export type BuildPreset = {
 /** resolvePresetSkills() 的結果：套用 autoRules 後的技能條件。 */
 export type ResolvedSkillConditions = {
   requiredSkills: SkillMap;
-  preferredSkills: SkillMap;
-  avoidSkills: SkillMap;
-  skillWeights: SkillMap;
+  excludedSkills: string[];
   /** 由 autoRules 自動加入的技能（顯示用）。 */
   autoAddedSkills: SkillMap;
 };
 
-/** 固定部位。字串為裝備 id；護石因為使用者手動輸入，直接存物件。 */
+/** 固定部位。字串為裝備 id（護石為清單制，不在固定範圍）。 */
 export type FixedParts = {
   weapon?: string;
   head?: string;
@@ -320,7 +282,6 @@ export type FixedParts = {
   arms?: string;
   waist?: string;
   legs?: string;
-  charm?: Charm;
 };
 
 export type ExcludedItems = {
@@ -378,20 +339,17 @@ export type BuildSearchRequest = {
    * 未指定＝行為與既有搜尋完全相同。固定部位/武器不受限。
    */
   progress?: PlayerProgress;
-  /** 屬攻武器流派：候選武器評分以屬性值優先；EFR 排名納入屬性傷害。未指定時退回依 autoRules 推斷。 */
+  /** 屬攻武器流派：候選武器評分以屬性值優先。未指定時退回依 autoRules 推斷。 */
   preferElement?: boolean;
-  /** 排名權重（傷害/舒適/彈性）。未指定時由呼叫端依 preset tier 帶入或用 DEFAULT_SCORE_PROFILE。 */
-  scoreProfile?: ScoreProfile;
   /** @deprecated 舊版手動武器洞數。僅在武器候選池為空時作為後援。 */
   weaponSlots?: number[];
-  charm: Charm;
+  /** 護石清單：每顆都會納入組合計算。空陣列＝不使用護石。 */
+  charms: Charm[];
   fixedParts: FixedParts;
   excludedItems: ExcludedItems;
   requiredSkills: SkillMap;
-  preferredSkills: SkillMap;
-  avoidSkills: SkillMap;
-  /** 偏好技能的評分權重（由 preset 帶入，可隨技能條件一起調整）。 */
-  skillWeights: SkillMap;
+  /** 排除技能（硬條件：最終配裝不得出現這些技能）。 */
+  excludedSkills: string[];
   reservedSlots: ReservedSlots;
   searchMode: SearchMode;
   resultLimit: number;
@@ -411,17 +369,14 @@ export type DecorationAssignment = {
   source: EquipmentPart;
 };
 
-export type BuildScore = {
+/** 配裝的 EFR 參考值（同武器種類內可比較的期望傷害指標）。 */
+export type BuildEfr = {
+  /** 物理期望攻擊值。 */
+  raw: number;
+  /** 期望屬性值（無屬性武器為 0）。 */
+  element: number;
+  /** 綜合排序鍵（raw + element × 係數，見 efr.ts）。 */
   total: number;
-  /** EFR 傷害分（已乘 profile.damage 權重）。取代舊的武器物理隱形問題。 */
-  damageScore: number;
-  requiredSkillScore: number;
-  preferredSkillScore: number;
-  slotScore: number;
-  penaltyScore: number;
-  specialSkillScore: number;
-  /** 屬性有效傷害（EFR 屬性部分，顯示用）。非屬性武器為 0。 */
-  elementScore: number;
 };
 
 export type BuildResult = {
@@ -443,7 +398,8 @@ export type BuildResult = {
   totalDefense: number;
   /** 5 件防具各屬性耐性總和（顯示用，可為負）。 */
   totalResistances: Record<ElementResistanceKey, number>;
-  score: BuildScore;
+  /** EFR 參考值（預設排序鍵）。無武器（手動洞數後援）時全為 0。 */
+  efr: BuildEfr;
   /** 未能補滿的必要技能（技能 → 還缺幾級）。理論上搜尋結果不含缺口，但保留欄位供 debug/greedy。 */
   missingRequiredSkills: SkillMap;
   /** 是否符合保留洞位需求。 */

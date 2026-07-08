@@ -5,11 +5,19 @@
     "weaponType": "long-sword",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）的輕量過渡：只要基礎弱點特效＋攻擊，早期防具加少量珠子即可湊齊，先站穩輸出再邁向拓荒會心。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "看破": 3, "超會心": 1, "匠": 2, "利刃": 2, "收刀術": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "匠": 1.0, "弱點特效": 1.0, "利刃": 0.9, "收刀術": 0.8 },
-    "tags": ["初心", "過渡", "泛用"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "ls-pioneer",
@@ -17,11 +25,20 @@
     "weaponType": "long-sword",
     "tier": "拓荒",
     "description": "純會心過渡組，素材門檻低，靠看破＋弱點特效＋超會心把暴擊拉滿，泛用打大部分 MR 前期怪。",
-    "requiredSkills": { "看破": 5, "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊": 4, "匠": 3, "利刃": 2, "精神抖擻": 2, "剛心": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "匠": 1.1, "利刃": 1.0, "剛心": 1.0, "精神抖擻": 0.9 },
-    "tags": ["拓荒", "會心", "泛用"]
+    "requiredSkills": {
+      "看破": 5,
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "拓荒",
+      "會心",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "ls-advanced",
@@ -29,11 +46,21 @@
     "weaponType": "long-sword",
     "tier": "進階",
     "description": "中期加入攻勢（對異常／傀異怪常駐會心）與達人藝維持紫斬，銜接傀異鍊成前的火力。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3, "攻勢": 3, "看破": 3 },
-    "preferredSkills": { "攻擊": 4, "達人藝": 3, "匠": 2, "剛刃研磨": 2, "剛心": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻勢": 1.4, "達人藝": 1.3, "攻擊": 1.2, "匠": 1.0, "剛心": 1.0, "剛刃研磨": 0.9 },
-    "tags": ["進階", "攻勢", "達人藝"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3,
+      "攻勢": 3,
+      "看破": 3
+    },
+    "tags": [
+      "進階",
+      "攻勢",
+      "達人藝"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "ls-endgame",
@@ -41,11 +68,19 @@
     "weaponType": "long-sword",
     "tier": "畢業",
     "description": "TU5 終盤 meta：狂化補滿會心＋奮鬥拉攻擊倍率，剛心穩定斬味，業鎧修羅堆極限輸出。高風險高回報。（畢業-傷害，參考 Game8 破曉 meta）",
-    "requiredSkills": { "超會心": 3, "弱點特效": 3 },
-    "preferredSkills": { "奮鬥": 2, "狂化": 1, "攻擊": 5, "剛心": 2, "無傷": 3, "達人藝": 3, "逆襲": 3, "業鎧【修羅】": 1 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "業鎧【修羅】": 2.0, "奮鬥": 1.8, "狂化": 1.5, "逆襲": 1.3, "達人藝": 1.3, "剛心": 1.2, "攻擊": 1.1, "無傷": 1.0 },
-    "tags": ["畢業", "傷害", "狂化", "Game8"]
+    "requiredSkills": {
+      "超會心": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "狂化",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "ls-advanced-element",
@@ -54,12 +89,24 @@
     "preferElement": true,
     "tier": "進階",
     "description": "屬性居合太刀：會心擊【屬性】把每段氣刃斬的屬性暴擊化，配收刀術／拔刀術【技】的居合節奏，適合打有明顯屬性弱點的怪。依武器屬性自動加對應屬性強化。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊": 4, "看破": 3, "收刀術": 3, "拔刀術【技】": 3, "達人藝": 2, "弱點特效【屬性】": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "弱點特效【屬性】": 1.3, "拔刀術【技】": 1.2, "達人藝": 1.1, "攻擊": 1.1, "看破": 1.0, "收刀術": 1.0 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["進階", "屬性", "居合"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "進階",
+      "屬性",
+      "居合"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "ls-endgame-element",
@@ -68,25 +115,47 @@
     "preferElement": true,
     "tier": "畢業",
     "description": "TU5 屬性太刀畢業：會心擊【屬性】＋屬性攻擊強化滿載，天衣無縫維持斬味與續戰，對高屬性弱點的怪其屬性輸出可勝過物理狂化流。（參考 Game8 破曉 meta）",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊": 5, "看破": 4, "達人藝": 3, "弱點特效【屬性】": 2, "天衣無縫": 3, "收刀術": 3 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.5, "弱點特效【屬性】": 1.3, "天衣無縫": 1.3, "達人藝": 1.2, "攻擊": 1.1, "看破": 1.0, "收刀術": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "屬性", "會心擊屬性", "Game8"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "屬性",
+      "會心擊屬性",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "ls-endgame-comfort",
     "nameZh": "畢業舒適太刀",
     "weaponType": "long-sword",
     "tier": "畢業",
-    "scoreProfile": { "damage": 0.55, "comfort": 1.0, "slot": 0.8 },
-    "description": "達人藝會心舒適流：不碰狂化／伏魔等紅槽風險技能，靠看破＋弱點＋超會心＋達人藝維持穩定會心與斬味，精神抖擻／剛心提升容錯。傷害略讓於狂化流，但好操作、續戰穩。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊": 5, "看破": 5, "達人藝": 3, "匠": 3, "收刀術": 3, "精神抖擻": 3, "剛心": 2, "迴避距離UP": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "達人藝": 1.3, "看破": 1.2, "攻擊": 1.1, "精神抖擻": 1.1, "剛心": 1.0, "匠": 1.0, "收刀術": 0.9, "迴避距離UP": 0.8 },
-    "tags": ["畢業", "舒適", "會心", "泛用"]
+    "description": "達人藝會心舒適流：不碰狂化／伏魔等紅槽風險技能，靠看破＋弱點＋超會心＋達人藝維持穩定會心與斬味，精神抖擻提升容錯。舒適技能（達人藝／精神抖擻）寫入必要條件，確保每套結果都好操作、續戰穩；純傷害技能交由 EFR 排名自然拉高。",
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3,
+      "達人藝": 3,
+      "精神抖擻": 2
+    },
+    "tags": [
+      "畢業",
+      "舒適",
+      "會心",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "ls-endgame-frostcraft",
@@ -94,11 +163,20 @@
     "weaponType": "long-sword",
     "tier": "畢業",
     "description": "TU5 天照寒氣居合流：靠收刀術頻繁收刀累積寒氣鍊成、拉高氣刃斬爆發傷害，砥石高速化＋翔蟲能手維持居合節奏。屬非紅槽風險的高爆發物理流。（參考 Game8 破曉 meta）",
-    "requiredSkills": { "超會心": 3, "弱點特效": 3 },
-    "preferredSkills": { "寒氣鍊成": 3, "攻擊": 5, "收刀術": 3, "翔蟲能手": 3, "拔刀術【技】": 2, "匠": 2, "砥石使用高速化": 3, "迴避距離UP": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "寒氣鍊成": 1.6, "收刀術": 1.3, "拔刀術【技】": 1.2, "攻擊": 1.1, "翔蟲能手": 1.0, "匠": 1.0, "砥石使用高速化": 0.9, "迴避距離UP": 0.8 },
-    "tags": ["畢業", "傷害", "寒氣", "居合", "Game8"]
+    "requiredSkills": {
+      "超會心": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "寒氣",
+      "居合",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "ls-initiate-element",
@@ -107,11 +185,19 @@
     "preferElement": true,
     "tier": "初心",
     "description": "剛進大師位（MR1~3）屬性居合太刀過渡：先靠會心擊【屬性】把居合斬的屬性暴擊化，武器以屬性值優先；早期裝湊不出滿屬性強化，屬性套等拓荒 MR4+ 再堆。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "會心擊【屬性】": 2, "看破": 3, "超會心": 1, "收刀術": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.3, "攻擊": 1.1, "看破": 1.0, "弱點特效": 1.0, "超會心": 0.9, "收刀術": 0.8 },
-    "tags": ["初心", "屬性", "居合"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "屬性",
+      "居合"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "ls-pioneer-element",
@@ -120,12 +206,24 @@
     "preferElement": true,
     "tier": "拓荒",
     "description": "MR 前期屬性居合太刀：會心擊【屬性】＋屬性強化 Lv3 讓氣刃斬屬性暴擊化，收刀術／拔刀術【技】維持居合節奏；可用天迴龍等 rarity 9 屬性裝。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3, "看破": 3 },
-    "preferredSkills": { "攻擊": 4, "超會心": 3, "收刀術": 3, "拔刀術【技】": 2, "弱點特效【屬性】": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "弱點特效【屬性】": 1.3, "拔刀術【技】": 1.1, "攻擊": 1.1, "超會心": 1.0, "看破": 1.0, "收刀術": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 3 },
-    "tags": ["拓荒", "屬性", "居合"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3,
+      "看破": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 3
+    },
+    "tags": [
+      "拓荒",
+      "屬性",
+      "居合"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "gs-initiate",
@@ -133,11 +231,19 @@
     "weaponType": "great-sword",
     "tier": "初心",
     "description": "MR1~3 真蓄入門：拔刀術【技】降門檻先保證拔刀會心，攻擊墊底傷害，蓄力與會心系之後再補。",
-    "requiredSkills": { "拔刀術【技】": 2, "攻擊": 3 },
-    "preferredSkills": { "弱點特效": 2, "看破": 2, "集中": 2, "匠": 2, "KO術": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "拔刀術【技】": 1.3, "攻擊": 1.2, "集中": 1.1, "弱點特效": 1.0, "看破": 1.0, "匠": 0.9 },
-    "tags": ["初心", "過渡", "拔刀"]
+    "requiredSkills": {
+      "拔刀術【技】": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "拔刀"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "gs-pioneer",
@@ -145,11 +251,20 @@
     "weaponType": "great-sword",
     "tier": "拓荒",
     "description": "真蓄一擊流入門配，拔刀術【技】保證會心、集中加速蓄力，素材便宜好上手。",
-    "requiredSkills": { "拔刀術【技】": 3, "弱點特效": 3, "看破": 3 },
-    "preferredSkills": { "攻擊": 4, "超會心": 3, "匠": 3, "集中": 3, "KO術": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "拔刀術【技】": 1.4, "集中": 1.2, "攻擊": 1.2, "超會心": 1.1, "匠": 1.0, "KO術": 0.9 },
-    "tags": ["拓荒", "拔刀", "蓄力"]
+    "requiredSkills": {
+      "拔刀術【技】": 3,
+      "弱點特效": 3,
+      "看破": 3
+    },
+    "tags": [
+      "拓荒",
+      "拔刀",
+      "蓄力"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "gs-advanced",
@@ -157,11 +272,19 @@
     "weaponType": "great-sword",
     "tier": "進階",
     "description": "MR 中期寒氣居合大劍：收刀術頻繁收刀累積寒氣鍊成拉高真蓄爆發，攻擊守勢靠格擋補會心，拔刀術【技】保拔刀會心，集中加速蓄力。銜接畢業寒氣居合流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "寒氣鍊成": 3, "攻擊": 4, "收刀術": 3, "拔刀術【技】": 2, "攻擊守勢": 2, "集中": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "寒氣鍊成": 1.5, "攻擊守勢": 1.2, "收刀術": 1.1, "攻擊": 1.1, "拔刀術【技】": 1.0, "超會心": 1.0, "集中": 0.9 },
-    "tags": ["進階", "寒氣", "居合"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "進階",
+      "寒氣",
+      "居合"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "gs-endgame",
@@ -169,11 +292,19 @@
     "weaponType": "great-sword",
     "tier": "畢業",
     "description": "TU5 寒氣居合大劍：收刀術頻繁收刀累積寒氣鍊成拉高真蓄爆發，攻擊守勢靠格擋補會心，拔刀術【技】保拔刀會心，集中加速蓄力。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "超會心": 3, "弱點特效": 3 },
-    "preferredSkills": { "寒氣鍊成": 3, "攻擊": 5, "看破": 4, "攻擊守勢": 3, "拔刀術【技】": 3, "收刀術": 3, "集中": 3, "蓄力大師": 3 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "寒氣鍊成": 1.6, "攻擊守勢": 1.3, "看破": 1.2, "蓄力大師": 1.2, "攻擊": 1.1, "拔刀術【技】": 1.1, "收刀術": 1.0, "集中": 1.0 },
-    "tags": ["畢業", "傷害", "寒氣", "Game8"]
+    "requiredSkills": {
+      "超會心": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "寒氣",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "sns-initiate",
@@ -181,11 +312,19 @@
     "weaponType": "sword-and-shield",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）攻勢片手劍入門：靠盾擊格擋觸發攻擊守勢補攻擊與會心，看破墊會心，防禦性能提升容錯。走向畢業攻勢流。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "攻擊守勢": 2, "看破": 3, "超會心": 1, "防禦性能": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊守勢": 1.3, "攻擊": 1.1, "看破": 1.1, "弱點特效": 1.0, "防禦性能": 0.8, "超會心": 0.8 },
-    "tags": ["初心", "過渡", "攻勢"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "攻勢"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "sns-pioneer",
@@ -193,11 +332,18 @@
     "weaponType": "sword-and-shield",
     "tier": "拓荒",
     "description": "MR 前期攻勢片手劍過渡：攻擊守勢靠格擋補攻擊與會心，弱點＋超會心拉暴擊，防禦性能／減輕膽怯穩住格擋節奏。走向畢業攻勢流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊守勢": 3, "攻擊": 4, "看破": 3, "防禦性能": 3, "減輕膽怯": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊守勢": 1.4, "看破": 1.2, "攻擊": 1.1, "超會心": 1.1, "防禦性能": 0.8, "減輕膽怯": 0.7 },
-    "tags": ["拓荒", "攻勢"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "拓荒",
+      "攻勢"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "sns-advanced",
@@ -205,11 +351,18 @@
     "weaponType": "sword-and-shield",
     "tier": "進階",
     "description": "MR 中期攻勢片手劍：攻擊守勢靠格擋補攻擊與會心，天衣無縫維持斬味與續戰，防禦性能穩住格擋節奏。銜接畢業攻勢流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊守勢": 3, "攻擊": 5, "看破": 4, "天衣無縫": 3, "防禦性能": 4, "減輕膽怯": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊守勢": 1.5, "天衣無縫": 1.2, "看破": 1.2, "攻擊": 1.1, "防禦性能": 0.8, "減輕膽怯": 0.7 },
-    "tags": ["進階", "攻勢"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "進階",
+      "攻勢"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "sns-endgame",
@@ -217,11 +370,19 @@
     "weaponType": "sword-and-shield",
     "tier": "畢業",
     "description": "TU5 攻擊守勢片手劍：靠盾擊格擋觸發攻擊守勢補攻擊與會心，天衣無縫維持斬味與續戰，防禦性能／減輕膽怯穩住格擋節奏。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊守勢": 3, "攻擊": 7, "看破": 4, "天衣無縫": 3, "防禦性能": 5, "減輕膽怯": 3, "翔蟲能手": 1, "轉禍為福": 1 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "攻擊守勢": 1.5, "天衣無縫": 1.3, "看破": 1.2, "攻擊": 1.1, "轉禍為福": 1.0, "防禦性能": 0.8, "減輕膽怯": 0.7, "翔蟲能手": 0.7 },
-    "tags": ["畢業", "傷害", "攻勢", "Game8"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "攻勢",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "db-initiate",
@@ -229,11 +390,19 @@
     "weaponType": "dual-blades",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）物理會心雙刀：不吃屬性，靠弱點特效＋看破＋連擊堆物理暴擊、體術撐鬼人化耐力，武器以攻擊／會心優先；想走屬性選「初心屬性雙刀」。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "看破": 3, "超會心": 1, "體術": 3, "連擊": 2, "迴避性能": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "連擊": 1.1, "體術": 1.0, "弱點特效": 1.0, "迴避性能": 0.8 },
-    "tags": ["初心", "會心", "泛用"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "會心",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "db-pioneer",
@@ -242,12 +411,24 @@
     "preferElement": true,
     "tier": "拓荒",
     "description": "鬼人亂舞多 hit 吃屬性，入門靠會心擊【屬性】＋弱點特效把屬性暴擊化，體術撐鬼人化耐力。依武器屬性自動加對應屬性強化。",
-    "requiredSkills": { "弱點特效": 3, "會心擊【屬性】": 3, "看破": 3 },
-    "preferredSkills": { "攻擊": 4, "超會心": 2, "匠": 2, "體術": 3, "迴避性能": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "攻擊": 1.1, "體術": 1.0, "匠": 1.0, "超會心": 1.0, "迴避性能": 0.8 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["拓荒", "屬性", "泛用"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "會心擊【屬性】": 3,
+      "看破": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "拓荒",
+      "屬性",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "db-advanced",
@@ -256,12 +437,24 @@
     "preferElement": true,
     "tier": "進階",
     "description": "MR 中期屬性鬼人流：會心擊【屬性】把亂舞屬性暴擊化，超會心＋弱點拉高會心傷害，精神抖擻穩定續戰。天衣無縫（荒天套）為加分非必要，湊到更順。依武器屬性自動加對應屬性強化。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊": 4, "看破": 3, "弱點特效【屬性】": 2, "精神抖擻": 3, "天衣無縫": 3, "達人藝": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "天衣無縫": 1.3, "弱點特效【屬性】": 1.3, "達人藝": 1.1, "攻擊": 1.1, "看破": 1.0, "精神抖擻": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["進階", "屬性", "鬼人"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "進階",
+      "屬性",
+      "鬼人"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "db-advanced-crit",
@@ -269,11 +462,20 @@
     "weaponType": "dual-blades",
     "tier": "進階",
     "description": "MR 中期物理會心流：看破＋弱點＋超會心把會心與會心傷害拉滿，連擊隨亂舞疊面板，達人藝維持斬味。不吃屬性、對高物理弱點的怪泛用，素材與技能門檻比屬性流低。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3, "看破": 4 },
-    "preferredSkills": { "攻擊": 4, "連擊": 3, "達人藝": 3, "匠": 3, "力量解放": 3, "挑戰者": 3 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "連擊": 1.3, "看破": 1.2, "達人藝": 1.2, "攻擊": 1.1, "挑戰者": 1.1, "力量解放": 1.0, "匠": 1.0, "超會心": 1.0 },
-    "tags": ["進階", "會心", "泛用"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3,
+      "看破": 4
+    },
+    "tags": [
+      "進階",
+      "會心",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "db-endgame",
@@ -282,12 +484,23 @@
     "preferElement": true,
     "tier": "畢業",
     "description": "TU5 屬性雙刀畢業上限組：龍氣轉換把龍病轉成屬性強化，天衣無縫維持無耐力鬼人亂舞，屬性上限最高。（畢業-傷害，參考 Game8 破曉 meta）",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "龍氣轉換": 1, "天衣無縫": 3, "超會心": 3, "力量解放": 3, "精神抖擻": 3, "迅疾吐納": 1, "轉禍為福": 2, "弱點特效【屬性】": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "龍氣轉換": 1.8, "天衣無縫": 1.5, "會心擊【屬性】": 1.4, "力量解放": 1.3, "弱點特效【屬性】": 1.3, "迅疾吐納": 1.2, "轉禍為福": 1.1, "超會心": 1.1, "精神抖擻": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "傷害", "屬性", "Game8"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "屬性",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "db-endgame-comfort",
@@ -295,14 +508,27 @@
     "weaponType": "dual-blades",
     "preferElement": true,
     "tier": "畢業",
-    "scoreProfile": { "damage": 0.55, "comfort": 1.0, "slot": 0.8 },
-    "description": "屬性雙刀舒適流：保留會心擊【屬性】的屬性暴擊主軸，但不吃龍氣轉換／伏魔等高風險技能，改用精神抖擻、泡沫之舞、體術提升容錯與鬼人步機動。依武器屬性自動加屬性強化。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "超會心": 3, "看破": 4, "達人藝": 3, "精神抖擻": 3, "泡沫之舞": 3, "剛心": 2, "體術": 3, "弱點特效【屬性】": 2 },
-    "avoidSkills": { "伏魔響命": 1, "龍氣轉換": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "弱點特效【屬性】": 1.2, "達人藝": 1.2, "看破": 1.1, "精神抖擻": 1.1, "泡沫之舞": 1.0, "超會心": 1.0, "剛心": 1.0, "體術": 0.8 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "舒適", "屬性", "泛用"]
+    "description": "屬性雙刀舒適流：保留會心擊【屬性】的屬性暴擊主軸，但不吃龍氣轉換／伏魔等高風險技能，改用泡沫之舞、體術提升容錯與鬼人步機動。舒適技能（泡沫之舞／體術）寫入必要條件，確保每套結果都保有機動容錯；依武器屬性自動加屬性強化。",
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3,
+      "泡沫之舞": 3,
+      "體術": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "舒適",
+      "屬性",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "龍氣轉換"
+    ]
   },
   {
     "id": "db-endgame-agitator",
@@ -311,12 +537,24 @@
     "preferElement": true,
     "tier": "畢業",
     "description": "TU5 攻擊挑戰連擊屬性流：攻擊拉滿＋挑戰者＋連擊堆疊面板，天衣無縫維持無耐力鬼人亂舞，翔蟲能手強化絲纏機動。比龍氣轉換流更直覺、對怪泛用。（參考 Game8 破曉 meta）",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "天衣無縫": 3, "攻擊": 7, "超會心": 3, "挑戰者": 4, "連擊": 3, "翔蟲能手": 3, "力量解放": 2, "弱點特效【屬性】": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "天衣無縫": 1.4, "挑戰者": 1.3, "連擊": 1.2, "弱點特效【屬性】": 1.2, "攻擊": 1.1, "力量解放": 1.0, "超會心": 1.0, "翔蟲能手": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "傷害", "挑戰者", "屬性", "Game8"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "挑戰者",
+      "屬性",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "db-initiate-element",
@@ -325,12 +563,23 @@
     "preferElement": true,
     "tier": "初心",
     "description": "剛進大師位（MR1~3）屬性雙刀：會心擊【屬性】把鬼人亂舞的屬性暴擊化、體術撐耐力，武器以屬性值優先。選上方屬性篩選後自動帶入該屬性攻擊強化 Lv5。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "會心擊【屬性】": 2, "看破": 3, "體術": 3, "超會心": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.3, "攻擊": 1.1, "看破": 1.0, "體術": 1.0, "弱點特效": 1.0, "超會心": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["初心", "屬性", "過渡"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "初心",
+      "屬性",
+      "過渡"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "db-initiate-template",
@@ -339,12 +588,24 @@
     "preferElement": true,
     "tier": "初心",
     "description": "屬性萬用模板：看破 7 ＋ 會心擊【屬性】把物理與屬性暴擊都拉滿，並預留 Lv3+Lv2 洞位——插火炎珠Ⅲ＋Ⅱ 之類即補滿對應屬性攻擊強化 Lv5，換屬性只換兩顆珠、防具不用重配。",
-    "requiredSkills": { "看破": 7, "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "體術": 3, "超會心": 1, "攻擊": 3 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "看破": 1.2, "弱點特效": 1.1, "攻擊": 1.1, "體術": 1.0, "超會心": 0.9 },
-    "reservedSlots": { "3": 1, "2": 1 },
-    "tags": ["初心", "屬性", "萬用模板"]
+    "requiredSkills": {
+      "看破": 7,
+      "會心擊【屬性】": 3,
+      "弱點特效": 3
+    },
+    "reservedSlots": {
+      "2": 1,
+      "3": 1
+    },
+    "tags": [
+      "初心",
+      "屬性",
+      "萬用模板"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "db-pioneer-crit",
@@ -352,11 +613,20 @@
     "weaponType": "dual-blades",
     "tier": "拓荒",
     "description": "MR 前期物理會心雙刀：不吃屬性，靠看破＋弱點特效＋超會心＋連擊堆物理暴擊，泛用打各種怪，武器以攻擊／會心優先。",
-    "requiredSkills": { "看破": 5, "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "攻擊": 4, "連擊": 3, "利刃": 2, "體術": 3, "迴避性能": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "連擊": 1.1, "利刃": 1.0, "體術": 0.9, "迴避性能": 0.8 },
-    "tags": ["拓荒", "會心", "泛用"]
+    "requiredSkills": {
+      "看破": 5,
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "拓荒",
+      "會心",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "lbg-initiate",
@@ -364,11 +634,19 @@
     "weaponType": "light-bowgun",
     "tier": "初心",
     "description": "MR1~3 貫通入門：貫通強化２＋速射２先成形，攻擊墊傷害，抑制偏移穩住連射。",
-    "requiredSkills": { "貫通彈･貫通箭強化": 2, "攻擊": 3 },
-    "preferredSkills": { "速射強化": 2, "弱點特效": 2, "抑制偏移": 2, "收刀術": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "貫通彈･貫通箭強化": 1.3, "速射強化": 1.2, "攻擊": 1.1, "弱點特效": 1.0, "抑制偏移": 0.9, "收刀術": 0.8 },
-    "tags": ["初心", "貫通", "過渡"]
+    "requiredSkills": {
+      "貫通彈･貫通箭強化": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "貫通",
+      "過渡"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "lbg-pioneer",
@@ -376,11 +654,20 @@
     "weaponType": "light-bowgun",
     "tier": "拓荒",
     "description": "貫通速射入門：貫通強化＋速射強化各給大幅傷害修正，抑制偏移穩定連射，收刀術快速收槍走位。",
-    "requiredSkills": { "貫通彈･貫通箭強化": 3, "速射強化": 3, "抑制偏移": 3 },
-    "preferredSkills": { "攻擊": 4, "弱點特效": 3, "收刀術": 3, "迴避距離UP": 2, "裝填擴充": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "貫通彈･貫通箭強化": 1.4, "速射強化": 1.3, "攻擊": 1.1, "弱點特效": 1.0, "抑制偏移": 1.0, "收刀術": 0.8, "迴避距離UP": 0.8 },
-    "tags": ["拓荒", "貫通", "速射"]
+    "requiredSkills": {
+      "貫通彈･貫通箭強化": 3,
+      "速射強化": 3,
+      "抑制偏移": 3
+    },
+    "tags": [
+      "拓荒",
+      "貫通",
+      "速射"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "lbg-advanced",
@@ -388,11 +675,21 @@
     "weaponType": "light-bowgun",
     "tier": "進階",
     "description": "中期補會心系（弱點特效／看破／超會心）與迴避距離大幅提升走位安全，火力與續戰兼顧。",
-    "requiredSkills": { "貫通彈･貫通箭強化": 3, "速射強化": 3, "抑制偏移": 3, "攻擊": 4 },
-    "preferredSkills": { "弱點特效": 3, "超會心": 2, "看破": 2, "迴避距離UP": 2, "裝填速度": 1, "彈道強化": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "貫通彈･貫通箭強化": 1.4, "速射強化": 1.3, "攻擊": 1.1, "弱點特效": 1.1, "超會心": 1.0, "看破": 1.0, "迴避距離UP": 0.8, "裝填速度": 0.8, "彈道強化": 0.8 },
-    "tags": ["進階", "貫通", "會心"]
+    "requiredSkills": {
+      "貫通彈･貫通箭強化": 3,
+      "速射強化": 3,
+      "抑制偏移": 3,
+      "攻擊": 4
+    },
+    "tags": [
+      "進階",
+      "貫通",
+      "會心"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "lbg-endgame",
@@ -400,11 +697,19 @@
     "weaponType": "light-bowgun",
     "tier": "畢業",
     "description": "TU5 貫通速射輕弩：速射強化＋貫通彈強化拉高每發傷害，彈藥節約省彈延長輸出，看破＋超會心＋弱點拉暴擊，裝填／後座力順化射擊。最安全的高輸出流。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "貫通彈･貫通箭強化": 3, "弱點特效": 3 },
-    "preferredSkills": { "速射強化": 3, "彈藥節約": 3, "超會心": 3, "看破": 6, "攻擊": 5, "裝填速度": 3, "後座力減輕": 3, "抑制偏移": 3 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "貫通彈･貫通箭強化": 1.5, "速射強化": 1.4, "彈藥節約": 1.2, "超會心": 1.1, "看破": 1.1, "攻擊": 1.1, "裝填速度": 0.9, "後座力減輕": 0.9 },
-    "tags": ["畢業", "貫通", "速射", "Game8"]
+    "requiredSkills": {
+      "貫通彈･貫通箭強化": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "畢業",
+      "貫通",
+      "速射",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "bow-initiate",
@@ -413,11 +718,19 @@
     "preferElement": true,
     "tier": "初心",
     "description": "剛進大師位（MR1~3）弓過渡：弓極吃耐力，先把體術＋蓄力大師＋弱點特效湊起來穩定蓄力射擊，屬性套等拓荒 MR4+ 再成形。",
-    "requiredSkills": { "蓄力大師": 2, "弱點特效": 2 },
-    "preferredSkills": { "攻擊": 3, "體術": 3, "看破": 2, "超會心": 1, "會心擊【屬性】": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "蓄力大師": 1.3, "體術": 1.2, "攻擊": 1.1, "弱點特效": 1.0, "看破": 1.0, "會心擊【屬性】": 0.9 },
-    "tags": ["初心", "過渡", "泛用"]
+    "requiredSkills": {
+      "蓄力大師": 2,
+      "弱點特效": 2
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "bow-pioneer",
@@ -426,12 +739,24 @@
     "preferElement": true,
     "tier": "拓荒",
     "description": "屬性連射弓入門：蓄力大師開頂級蓄力、會心擊【屬性】屬性暴擊化，體術撐蓄力射擊耐力。依武器屬性自動加對應屬性強化。",
-    "requiredSkills": { "弱點特效": 3, "會心擊【屬性】": 3, "蓄力大師": 3 },
-    "preferredSkills": { "攻擊": 4, "體術": 3, "看破": 2, "超會心": 2, "迴避距離UP": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "蓄力大師": 1.3, "體術": 1.2, "攻擊": 1.1, "看破": 1.0, "超會心": 1.0, "迴避距離UP": 0.8 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 3 },
-    "tags": ["拓荒", "屬性", "蓄力大師"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "會心擊【屬性】": 3,
+      "蓄力大師": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 3
+    },
+    "tags": [
+      "拓荒",
+      "屬性",
+      "蓄力大師"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "bow-advanced",
@@ -440,12 +765,24 @@
     "preferElement": true,
     "tier": "進階",
     "description": "TU5 天衣無縫上身：迴避不掉耐力，蓄力／曲射迴圈更放肆，銜接畢業屬性套的過渡強化。依武器屬性自動加對應屬性強化。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3, "蓄力大師": 3 },
-    "preferredSkills": { "天衣無縫": 3, "攻擊": 4, "弱點特效【屬性】": 2, "超會心": 2, "體術": 3, "精神抖擻": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "天衣無縫": 1.5, "會心擊【屬性】": 1.4, "弱點特效【屬性】": 1.3, "蓄力大師": 1.3, "體術": 1.2, "攻擊": 1.1, "超會心": 1.0, "精神抖擻": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["進階", "天衣無縫", "屬性"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3,
+      "蓄力大師": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "進階",
+      "天衣無縫",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "bow-endgame",
@@ -454,12 +791,23 @@
     "preferElement": true,
     "tier": "畢業",
     "description": "TU5 龍屬轉換擴散弓：龍氣轉換把耐性轉屬性、散彈強化拉高擴散箭屬性傷害，會心擊【屬性】屬性暴擊化，天衣無縫維持續戰，解放弓的蓄力階段增傷。依武器屬性自動加屬性強化。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "龍氣轉換": 1, "散彈･擴散箭強化": 3, "天衣無縫": 3, "力量解放": 3, "超會心": 3, "解放弓的蓄力階段": 1, "耐力急速回復": 3, "體術": 3 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "龍氣轉換": 1.4, "散彈･擴散箭強化": 1.3, "天衣無縫": 1.3, "力量解放": 1.1, "超會心": 1.1, "體術": 0.9, "耐力急速回復": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "傷害", "屬性", "Game8"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "屬性",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "hammer-advanced",
@@ -467,11 +815,18 @@
     "weaponType": "hammer",
     "tier": "進階",
     "description": "MR 中期爆破大錘：蓄力大師強化蓄力頭槌，爆破屬性強化疊爆破，達人藝維持斬味，集中加速蓄力。銜接畢業爆破蓄力流。",
-    "requiredSkills": { "弱點特效": 3, "看破": 4 },
-    "preferredSkills": { "蓄力大師": 3, "爆破屬性強化": 3, "達人藝": 3, "攻擊": 4, "集中": 3, "KO術": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "蓄力大師": 1.4, "爆破屬性強化": 1.3, "達人藝": 1.3, "看破": 1.2, "攻擊": 1.1, "集中": 1.0, "KO術": 0.9 },
-    "tags": ["進階", "爆破"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "看破": 4
+    },
+    "tags": [
+      "進階",
+      "爆破"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hammer-endgame",
@@ -479,11 +834,19 @@
     "weaponType": "hammer",
     "tier": "畢業",
     "description": "TU5 爆破蓄力大錘：蓄力大師強化蓄力頭槌，爆破屬性強化疊爆破，達人藝維持斬味，集中加速蓄力。少數揮擊爆發大量傷害。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "弱點特效": 3, "看破": 4 },
-    "preferredSkills": { "蓄力大師": 3, "爆破屬性強化": 3, "達人藝": 3, "攻擊": 4, "集中": 3, "翔蟲能手": 3, "超會心": 1, "彈道強化": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "蓄力大師": 1.4, "爆破屬性強化": 1.3, "達人藝": 1.3, "看破": 1.2, "攻擊": 1.1, "集中": 1.0, "翔蟲能手": 0.9, "彈道強化": 0.8 },
-    "tags": ["畢業", "傷害", "爆破", "Game8"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "看破": 4
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "爆破",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "hh-advanced",
@@ -492,12 +855,23 @@
     "preferElement": true,
     "tier": "進階",
     "description": "MR 中期龍屬笛：龍氣活化提升龍屬輸出，屬性強化滿載，耐力急速回復維持鬼人化，連擊疊面板。依武器屬性自動加屬性強化。銜接畢業龍屬轉換流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "龍氣活化": 4, "攻擊": 4, "匠": 3, "連擊": 3, "耐力急速回復": 3, "力量解放": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "龍氣活化": 1.4, "超會心": 1.2, "連擊": 1.1, "攻擊": 1.1, "耐力急速回復": 1.0, "匠": 1.0, "力量解放": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["進階", "屬性", "龍氣"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "進階",
+      "屬性",
+      "龍氣"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hh-endgame",
@@ -506,12 +880,23 @@
     "preferElement": true,
     "tier": "畢業",
     "description": "TU5 龍屬轉換狩獵笛：龍氣活化＋龍氣轉換把龍病轉成屬性強化拉高龍屬輸出，耐力急速回復維持鬼人化，剛刃研磨顧斬味。依武器屬性自動加屬性強化。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "弱點特效": 3 },
-    "preferredSkills": { "龍氣活化": 5, "龍氣轉換": 3, "攻擊": 4, "匠": 3, "耐力急速回復": 3, "力量解放": 2, "剛刃研磨": 2, "吹笛名人": 1 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "龍氣活化": 1.5, "龍氣轉換": 1.5, "弱點特效": 1.2, "攻擊": 1.1, "匠": 1.0, "力量解放": 1.0, "耐力急速回復": 0.9, "剛刃研磨": 0.8 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "傷害", "屬性", "龍氣", "Game8"]
+    "requiredSkills": {
+      "弱點特效": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "屬性",
+      "龍氣",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "lance-advanced",
@@ -519,11 +904,19 @@
     "weaponType": "lance",
     "tier": "進階",
     "description": "MR 中期挑戰防反長槍：挑戰者拉高攻擊與會心，剛心／合氣穩住防反，防禦性能減傷，攻擊守勢格擋補傷。銜接畢業挑戰防反流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "挑戰者": 4, "攻擊": 4, "剛心": 2, "防禦性能": 3, "攻擊守勢": 2, "合氣": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "挑戰者": 1.3, "攻擊守勢": 1.2, "剛心": 1.1, "超會心": 1.1, "攻擊": 1.1, "防禦性能": 0.8, "合氣": 0.9 },
-    "tags": ["進階", "挑戰者", "防禦"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "進階",
+      "挑戰者",
+      "防禦"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "lance-endgame",
@@ -531,11 +924,19 @@
     "weaponType": "lance",
     "tier": "畢業",
     "description": "TU5 挑戰防反長槍：挑戰者拉滿攻擊與會心，防禦性能／防禦強化撐防反，攻擊守勢格擋補傷，天衣無縫維持斬味。長槍能扛、輸出穩。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "挑戰者": 5, "攻擊": 5, "看破": 4, "防禦性能": 4, "天衣無縫": 3, "攻擊守勢": 2, "力量解放": 2, "防禦強化": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "挑戰者": 1.4, "天衣無縫": 1.3, "攻擊守勢": 1.2, "看破": 1.2, "攻擊": 1.1, "力量解放": 1.0, "防禦性能": 0.8, "防禦強化": 0.7 },
-    "tags": ["畢業", "傷害", "挑戰者", "Game8"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "挑戰者",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "gunlance-advanced",
@@ -543,11 +944,19 @@
     "weaponType": "gunlance",
     "tier": "進階",
     "description": "MR 中期砲擊流：砲術強化砲擊／龍杭砲傷害，砲彈裝填增加砲彈數，剛心穩住砲擊節奏，攻擊墊高斬擊。以砲擊循環為主。",
-    "requiredSkills": { "砲術": 3, "弱點特效": 3, "超會心": 2 },
-    "preferredSkills": { "砲彈裝填": 2, "攻擊": 4, "匠": 3, "剛心": 2, "達人藝": 2, "集中": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "砲術": 1.5, "砲彈裝填": 1.3, "攻擊": 1.1, "剛心": 1.1, "匠": 1.0, "達人藝": 1.0, "集中": 0.9 },
-    "tags": ["進階", "砲擊"]
+    "requiredSkills": {
+      "砲術": 3,
+      "弱點特效": 3,
+      "超會心": 2
+    },
+    "tags": [
+      "進階",
+      "砲擊"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "gunlance-endgame",
@@ -555,11 +964,18 @@
     "weaponType": "gunlance",
     "tier": "畢業",
     "description": "TU5 砲擊絲纏銃槍：砲術滿載強化砲擊／龍杭砲，砲彈裝填增彈，奇襲從背後補傷，鬼火纏身疊火傷，翔蟲能手強化絲纏機動。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "砲術": 3, "弱點特效": 3 },
-    "preferredSkills": { "砲彈裝填": 2, "攻擊": 4, "奇襲": 3, "鬼火纏身": 3, "翔蟲能手": 3, "天衣無縫": 2, "超會心": 1, "高速變形": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "砲術": 1.5, "砲彈裝填": 1.3, "奇襲": 1.2, "鬼火纏身": 1.2, "天衣無縫": 1.1, "攻擊": 1.1, "翔蟲能手": 0.9, "高速變形": 0.8 },
-    "tags": ["畢業", "砲擊", "Game8"]
+    "requiredSkills": {
+      "砲術": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "畢業",
+      "砲擊",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "swaxe-advanced",
@@ -568,12 +984,22 @@
     "preferElement": true,
     "tier": "進階",
     "description": "MR 中期屬性斬斧：弱點特效【屬性】＋屬性強化拉高零解屬性暴擊，高速變形順化變形循環，強化持續延長劍模式。依武器屬性自動加屬性強化。銜接畢業屬性瓶流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "弱點特效【屬性】": 2, "高速變形": 3, "攻擊": 4, "連擊": 3, "強化持續": 2, "匠": 3 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "弱點特效【屬性】": 1.4, "高速變形": 1.2, "連擊": 1.1, "超會心": 1.1, "攻擊": 1.1, "強化持續": 0.9, "匠": 1.0 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["進階", "屬性"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "進階",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "swaxe-endgame",
@@ -582,12 +1008,23 @@
     "preferElement": true,
     "tier": "畢業",
     "description": "TU5 屬性瓶斬擊斧：弱點特效【屬性】把零解屬性暴擊化，天衣無縫維持斬味，高速變形順化變形循環，強化持續延長劍模式。依武器屬性自動加屬性強化。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "弱點特效【屬性】": 2, "天衣無縫": 3, "高速變形": 3, "攻擊": 7, "連擊": 3, "強化持續": 3, "翔蟲能手": 3, "迴避距離UP": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "弱點特效【屬性】": 1.4, "天衣無縫": 1.3, "高速變形": 1.2, "連擊": 1.2, "攻擊": 1.1, "超會心": 1.0, "強化持續": 0.9, "翔蟲能手": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "傷害", "屬性", "Game8"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "屬性",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "chargeblade-advanced",
@@ -596,12 +1033,22 @@
     "preferElement": true,
     "tier": "進階",
     "description": "MR 中期屬性盾斧：會心擊【屬性】＋屬性強化拉高斧模式屬性傷害，高速變形順化變形，力量解放補會心。依武器屬性自動加屬性強化。銜接畢業屬性強化斧流。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "看破": 4, "超會心": 3, "高速變形": 3, "力量解放": 3, "匠": 3, "耐力急速回復": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "看破": 1.2, "超會心": 1.1, "高速變形": 1.1, "力量解放": 1.0, "匠": 1.0 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["進階", "屬性"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "進階",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "chargeblade-endgame",
@@ -610,12 +1057,23 @@
     "preferElement": true,
     "tier": "畢業",
     "description": "TU5 屬性強化斧盾斧：會心擊【屬性】＋龍氣轉換拉高斧模式屬性傷害，天衣無縫維持斬味，高速變形順化變形，力量解放補會心。依武器屬性自動加屬性強化。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "看破": 6, "龍氣轉換": 3, "天衣無縫": 3, "高速變形": 3, "攻擊": 4, "超會心": 3, "力量解放": 3, "耐力急速回復": 3 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "龍氣轉換": 1.4, "天衣無縫": 1.3, "看破": 1.2, "高速變形": 1.1, "攻擊": 1.1, "超會心": 1.0, "力量解放": 1.0 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 5 },
-    "tags": ["畢業", "傷害", "屬性", "Game8"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 5
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "屬性",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "insectglaive-advanced",
@@ -623,11 +1081,19 @@
     "weaponType": "insect-glaive",
     "tier": "進階",
     "description": "MR 中期爆破操蟲棍：爆破屬性強化疊爆破，看破＋超會心拉暴擊，轉禍為福化解異常，翔蟲能手強化空戰。銜接畢業爆破流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3, "看破": 4 },
-    "preferredSkills": { "爆破屬性強化": 3, "攻擊": 4, "轉禍為福": 2, "集中": 3, "翔蟲能手": 3, "達人藝": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "爆破屬性強化": 1.4, "轉禍為福": 1.2, "看破": 1.2, "攻擊": 1.1, "超會心": 1.0, "翔蟲能手": 1.0, "達人藝": 1.0, "集中": 0.9 },
-    "tags": ["進階", "爆破"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3,
+      "看破": 4
+    },
+    "tags": [
+      "進階",
+      "爆破"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "insectglaive-endgame",
@@ -635,11 +1101,20 @@
     "weaponType": "insect-glaive",
     "tier": "畢業",
     "description": "TU5 爆破操蟲棍：爆破屬性強化＋異常累積強化疊爆破，看破＋超會心拉暴擊，天衣無縫維持斬味，轉禍為福化解異常。狀態棍可勝過純物理。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3, "看破": 4 },
-    "preferredSkills": { "爆破屬性強化": 3, "攻擊": 7, "天衣無縫": 3, "轉禍為福": 3, "異常累積強化": 1, "強化持續": 2, "翔蟲能手": 1, "達人藝": 2 },
-    "avoidSkills": { "伏魔響命": 1 },
-    "skillWeights": { "爆破屬性強化": 1.4, "天衣無縫": 1.3, "轉禍為福": 1.2, "看破": 1.2, "攻擊": 1.1, "超會心": 1.0, "達人藝": 1.0, "強化持續": 0.9 },
-    "tags": ["畢業", "傷害", "爆破", "Game8"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3,
+      "看破": 4
+    },
+    "tags": [
+      "畢業",
+      "傷害",
+      "爆破",
+      "Game8"
+    ],
+    "excludedSkills": [
+      "伏魔響命"
+    ]
   },
   {
     "id": "hbg-advanced",
@@ -647,11 +1122,18 @@
     "weaponType": "heavy-bowgun",
     "tier": "進階",
     "description": "MR 中期擴散重弩：散彈強化拉高擴散彈傷害，超會心＋力量解放拉暴擊，彈藥節約省彈延長輸出，利刃維持斬味。銜接畢業擴散龍氣流。",
-    "requiredSkills": { "散彈･擴散箭強化": 3, "弱點特效": 3 },
-    "preferredSkills": { "攻擊": 5, "超會心": 3, "力量解放": 3, "彈藥節約": 2, "利刃": 2, "後座力減輕": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "散彈･擴散箭強化": 1.5, "超會心": 1.1, "力量解放": 1.1, "攻擊": 1.1, "彈藥節約": 1.0, "利刃": 0.9, "後座力減輕": 0.9 },
-    "tags": ["進階", "擴散"]
+    "requiredSkills": {
+      "散彈･擴散箭強化": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "進階",
+      "擴散"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hbg-endgame",
@@ -659,11 +1141,17 @@
     "weaponType": "heavy-bowgun",
     "tier": "畢業",
     "description": "TU5 擴散龍氣重弩：散彈強化拉高擴散彈傷害，龍氣活化＋伏魔響命換取高攻擊，力量解放補會心，彈藥節約省彈。需維持低血觸發龍氣。對齊 Game8 破曉 meta。",
-    "requiredSkills": { "散彈･擴散箭強化": 3, "弱點特效": 3 },
-    "preferredSkills": { "龍氣活化": 5, "攻擊": 7, "超會心": 3, "力量解放": 3, "彈藥節約": 3, "利刃": 3, "伏魔響命": 1, "後座力減輕": 2 },
-    "avoidSkills": {},
-    "skillWeights": { "散彈･擴散箭強化": 1.5, "龍氣活化": 1.4, "伏魔響命": 1.2, "超會心": 1.1, "力量解放": 1.1, "攻擊": 1.1, "彈藥節約": 1.0, "利刃": 0.9 },
-    "tags": ["畢業", "擴散", "傷害", "Game8"]
+    "requiredSkills": {
+      "散彈･擴散箭強化": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "畢業",
+      "擴散",
+      "傷害",
+      "Game8"
+    ],
+    "excludedSkills": []
   },
   {
     "id": "hammer-initiate",
@@ -671,11 +1159,19 @@
     "weaponType": "hammer",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）：弱點特效＋攻擊墊底，看破補會心、KO術靠蓄力頭槌暈怪，早期裝加少量珠即可湊。先站穩輸出。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "看破": 3, "超會心": 1, "KO術": 2, "匠": 2, "集中": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "KO術": 1.0, "弱點特效": 1.0, "匠": 0.9, "集中": 0.9, "超會心": 0.8 },
-    "tags": ["初心", "過渡", "泛用"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hammer-pioneer",
@@ -683,11 +1179,19 @@
     "weaponType": "hammer",
     "tier": "拓荒",
     "description": "MR 前期會心過渡：弱點＋看破＋超會心把暴擊拉滿，KO術維持暈怪，蓄力大師強化蓄力頭槌，集中加速蓄力。走向畢業爆破蓄力流。",
-    "requiredSkills": { "弱點特效": 3, "看破": 3, "攻擊": 4 },
-    "preferredSkills": { "超會心": 3, "KO術": 3, "蓄力大師": 2, "匠": 3, "集中": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "看破": 1.2, "蓄力大師": 1.2, "超會心": 1.1, "KO術": 1.1, "攻擊": 1.1, "匠": 1.0, "集中": 0.9 },
-    "tags": ["拓荒", "會心"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "看破": 3,
+      "攻擊": 4
+    },
+    "tags": [
+      "拓荒",
+      "會心"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hh-initiate",
@@ -696,11 +1200,19 @@
     "preferElement": true,
     "tier": "初心",
     "description": "剛進大師位（MR1~3）屬性笛入門：以屬性笛先靠弱點＋攻擊墊底輸出，連擊隨演奏疊面板，屬性強化等拓荒再堆。走向畢業龍屬流。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "看破": 3, "超會心": 1, "匠": 2, "連擊": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "連擊": 1.0, "弱點特效": 1.0, "匠": 0.9, "超會心": 0.8 },
-    "tags": ["初心", "過渡", "屬性"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hh-pioneer",
@@ -709,12 +1221,22 @@
     "preferElement": true,
     "tier": "拓荒",
     "description": "MR 前期屬性笛過渡：弱點＋超會心拉暴擊，屬性強化 Lv3 提升屬性輸出，連擊疊面板，匠顧斬味。依武器屬性自動加屬性強化。走向畢業龍屬流。",
-    "requiredSkills": { "弱點特效": 3, "攻擊": 4 },
-    "preferredSkills": { "超會心": 3, "匠": 3, "連擊": 3, "龍氣活化": 2, "達人藝": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "超會心": 1.2, "龍氣活化": 1.2, "連擊": 1.1, "攻擊": 1.1, "達人藝": 1.0, "匠": 1.0 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 3 },
-    "tags": ["拓荒", "屬性"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "攻擊": 4
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 3
+    },
+    "tags": [
+      "拓荒",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "lance-initiate",
@@ -722,11 +1244,19 @@
     "weaponType": "lance",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）：弱點特效＋攻擊墊底，剛心讓防反不被彈開先站穩防禦節奏，防禦性能減傷提升容錯。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "看破": 3, "剛心": 1, "匠": 2, "防禦性能": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "剛心": 1.1, "弱點特效": 1.0, "匠": 0.9, "防禦性能": 0.8 },
-    "tags": ["初心", "過渡", "防禦"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "防禦"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "lance-pioneer",
@@ -734,11 +1264,20 @@
     "weaponType": "lance",
     "tier": "拓荒",
     "description": "MR 前期防反過渡：弱點＋看破＋超會心拉暴擊，剛心／合氣穩住防反，匠顧斬味，防禦性能減傷。攻守兼備。",
-    "requiredSkills": { "弱點特效": 3, "看破": 3, "攻擊": 4 },
-    "preferredSkills": { "超會心": 3, "剛心": 2, "匠": 3, "合氣": 1, "防禦性能": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "看破": 1.2, "超會心": 1.1, "剛心": 1.1, "攻擊": 1.1, "匠": 1.0, "合氣": 0.9, "防禦性能": 0.8 },
-    "tags": ["拓荒", "會心", "防禦"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "看破": 3,
+      "攻擊": 4
+    },
+    "tags": [
+      "拓荒",
+      "會心",
+      "防禦"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "gunlance-initiate",
@@ -746,11 +1285,19 @@
     "weaponType": "gunlance",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）：攻擊墊底，砲術強化砲擊傷害，砲彈裝填增加砲彈數，先建立砲擊循環。早期裝好上手。",
-    "requiredSkills": { "攻擊": 3, "弱點特效": 2 },
-    "preferredSkills": { "砲術": 2, "砲彈裝填": 1, "匠": 2, "剛心": 1 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "砲術": 1.4, "砲彈裝填": 1.2, "攻擊": 1.1, "剛心": 1.0, "弱點特效": 1.0, "匠": 0.9 },
-    "tags": ["初心", "過渡", "砲擊"]
+    "requiredSkills": {
+      "攻擊": 3,
+      "弱點特效": 2
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "砲擊"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "gunlance-pioneer",
@@ -758,11 +1305,18 @@
     "weaponType": "gunlance",
     "tier": "拓荒",
     "description": "MR 前期砲擊過渡：砲術＋砲彈裝填強化砲擊循環，攻擊墊高斬擊，剛心穩住節奏，匠顧斬味。以砲擊為主。",
-    "requiredSkills": { "砲術": 3, "弱點特效": 3 },
-    "preferredSkills": { "砲彈裝填": 2, "攻擊": 4, "匠": 3, "剛心": 2, "超會心": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "砲術": 1.5, "砲彈裝填": 1.3, "攻擊": 1.1, "剛心": 1.1, "超會心": 1.0, "匠": 1.0 },
-    "tags": ["拓荒", "砲擊"]
+    "requiredSkills": {
+      "砲術": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "拓荒",
+      "砲擊"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "swaxe-initiate",
@@ -771,11 +1325,19 @@
     "preferElement": true,
     "tier": "初心",
     "description": "剛進大師位（MR1~3）屬性斬斧入門：屬性瓶斬斧靠弱點＋攻擊墊底，看破補會心，集中加速零解。走向畢業屬性瓶流。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "看破": 3, "超會心": 1, "匠": 2, "集中": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "弱點特效": 1.0, "匠": 0.9, "集中": 0.9, "超會心": 0.8 },
-    "tags": ["初心", "過渡", "屬性"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "swaxe-pioneer",
@@ -784,12 +1346,22 @@
     "preferElement": true,
     "tier": "拓荒",
     "description": "MR 前期屬性斬斧過渡：弱點＋超會心拉暴擊，弱點特效【屬性】把零解屬性暴擊化，高速變形順化循環。依武器屬性自動加屬性強化。走向畢業屬性瓶流。",
-    "requiredSkills": { "弱點特效": 3, "超會心": 3 },
-    "preferredSkills": { "弱點特效【屬性】": 2, "攻擊": 4, "匠": 3, "高速變形": 2, "集中": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "弱點特效【屬性】": 1.3, "超會心": 1.2, "攻擊": 1.1, "高速變形": 1.0, "匠": 1.0, "集中": 0.9 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 3 },
-    "tags": ["拓荒", "屬性"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "超會心": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 3
+    },
+    "tags": [
+      "拓荒",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "chargeblade-initiate",
@@ -798,11 +1370,19 @@
     "preferElement": true,
     "tier": "初心",
     "description": "剛進大師位（MR1~3）屬性盾斧入門：屬性強化斧盾斧靠弱點＋攻擊墊底，會心擊【屬性】把斧模式屬性暴擊化，集中加速蓄能。走向畢業屬性強化斧流。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "會心擊【屬性】": 2, "看破": 3, "超會心": 1, "匠": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.3, "攻擊": 1.1, "看破": 1.1, "弱點特效": 1.0, "匠": 0.9, "超會心": 0.8 },
-    "tags": ["初心", "過渡", "屬性"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "chargeblade-pioneer",
@@ -811,12 +1391,22 @@
     "preferElement": true,
     "tier": "拓荒",
     "description": "MR 前期屬性盾斧過渡：會心擊【屬性】＋屬性強化拉高斧模式屬性傷害，超會心提升暴擊，高速變形順化變形。依武器屬性自動加屬性強化。走向畢業屬性強化斧流。",
-    "requiredSkills": { "會心擊【屬性】": 3, "弱點特效": 3 },
-    "preferredSkills": { "看破": 3, "超會心": 3, "匠": 3, "高速變形": 2, "力量解放": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "會心擊【屬性】": 1.4, "超會心": 1.1, "看破": 1.1, "高速變形": 1.0, "力量解放": 1.0, "匠": 1.0 },
-    "autoRules": { "addElementAttackSkill": true, "elementAttackLevel": 3 },
-    "tags": ["拓荒", "屬性"]
+    "requiredSkills": {
+      "會心擊【屬性】": 3,
+      "弱點特效": 3
+    },
+    "autoRules": {
+      "addElementAttackSkill": true,
+      "elementAttackLevel": 3
+    },
+    "tags": [
+      "拓荒",
+      "屬性"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "insectglaive-initiate",
@@ -824,11 +1414,19 @@
     "weaponType": "insect-glaive",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）：弱點特效＋攻擊墊底，看破補會心，集中加速蓄力，翔蟲能手強化空戰。早期裝好上手。",
-    "requiredSkills": { "弱點特效": 2, "攻擊": 3 },
-    "preferredSkills": { "看破": 3, "超會心": 1, "集中": 2, "翔蟲能手": 2, "匠": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "攻擊": 1.2, "看破": 1.1, "翔蟲能手": 1.0, "弱點特效": 1.0, "集中": 0.9, "匠": 0.9, "超會心": 0.8 },
-    "tags": ["初心", "過渡", "泛用"]
+    "requiredSkills": {
+      "弱點特效": 2,
+      "攻擊": 3
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "insectglaive-pioneer",
@@ -836,11 +1434,20 @@
     "weaponType": "insect-glaive",
     "tier": "拓荒",
     "description": "MR 前期會心過渡：弱點＋看破＋超會心拉暴擊，集中加速蓄力，翔蟲能手強化空戰機動，匠顧斬味。泛用空戰流。",
-    "requiredSkills": { "弱點特效": 3, "看破": 3, "攻擊": 4 },
-    "preferredSkills": { "超會心": 3, "集中": 3, "翔蟲能手": 3, "匠": 3, "達人藝": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "看破": 1.2, "超會心": 1.1, "攻擊": 1.1, "翔蟲能手": 1.0, "達人藝": 1.0, "匠": 1.0, "集中": 0.9 },
-    "tags": ["拓荒", "會心", "泛用"]
+    "requiredSkills": {
+      "弱點特效": 3,
+      "看破": 3,
+      "攻擊": 4
+    },
+    "tags": [
+      "拓荒",
+      "會心",
+      "泛用"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hbg-initiate",
@@ -848,11 +1455,19 @@
     "weaponType": "heavy-bowgun",
     "tier": "初心",
     "description": "剛進大師位（MR1~3）擴散重弩入門：攻擊＋弱點墊底，散彈強化拉高擴散彈傷害，後座力減輕／裝填速度順化射擊。走向畢業擴散流。",
-    "requiredSkills": { "攻擊": 3, "弱點特效": 2 },
-    "preferredSkills": { "散彈･擴散箭強化": 2, "後座力減輕": 2, "裝填速度": 2, "看破": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "散彈･擴散箭強化": 1.4, "攻擊": 1.1, "看破": 1.0, "弱點特效": 1.0, "後座力減輕": 0.9, "裝填速度": 0.9 },
-    "tags": ["初心", "過渡", "擴散"]
+    "requiredSkills": {
+      "攻擊": 3,
+      "弱點特效": 2
+    },
+    "tags": [
+      "初心",
+      "過渡",
+      "擴散"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   },
   {
     "id": "hbg-pioneer",
@@ -860,10 +1475,17 @@
     "weaponType": "heavy-bowgun",
     "tier": "拓荒",
     "description": "MR 前期擴散重弩過渡：散彈強化滿載，弱點＋超會心提升暴擊，力量解放補會心，後座力／裝填順化射擊節奏。走向畢業擴散流。",
-    "requiredSkills": { "散彈･擴散箭強化": 3, "弱點特效": 3 },
-    "preferredSkills": { "攻擊": 4, "超會心": 2, "力量解放": 2, "後座力減輕": 2, "裝填速度": 2 },
-    "avoidSkills": { "伏魔響命": 1, "狂化": 1 },
-    "skillWeights": { "散彈･擴散箭強化": 1.5, "超會心": 1.1, "力量解放": 1.0, "攻擊": 1.1, "後座力減輕": 0.9, "裝填速度": 0.9 },
-    "tags": ["拓荒", "擴散"]
+    "requiredSkills": {
+      "散彈･擴散箭強化": 3,
+      "弱點特效": 3
+    },
+    "tags": [
+      "拓荒",
+      "擴散"
+    ],
+    "excludedSkills": [
+      "伏魔響命",
+      "狂化"
+    ]
   }
 ]

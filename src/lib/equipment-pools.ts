@@ -11,17 +11,31 @@ import type {
 import { ARMOR_PARTS } from "@/types/build";
 import { slotValue } from "./slot-utils";
 
+/** 裝備是否帶有任一排除技能（排除技能為硬條件，直接踢出候選池）。 */
+function hasExcludedSkill(
+  skills: SkillMap | undefined,
+  excludedSkills: Set<string>
+): boolean {
+  if (!skills || excludedSkills.size === 0) return false;
+  for (const name of Object.keys(skills)) {
+    if (excludedSkills.has(name)) return true;
+  }
+  return false;
+}
+
 /**
  * 依部位分組所有防具，並套用排除清單。
  * maxRarity 給定時，濾除 rarity 超過上限的防具（依 preset 階段限制取得門檻）；
  * craftable 給定時，濾除進度尚未解放的防具（解放條件精確篩選，見 unlocks.ts）；
- * 固定部位在 applyFixedParts 直接以 id 帶入，不受兩者影響。
+ * excludedSkills 給定時，濾除帶有排除技能的防具；
+ * 固定部位在 applyFixedParts 直接以 id 帶入，不受以上影響。
  */
 export function buildEquipmentPools(
   armors: ArmorPiece[],
   excluded?: ExcludedItems,
   maxRarity?: number,
-  craftable?: (id: string) => boolean
+  craftable?: (id: string) => boolean,
+  excludedSkills: Set<string> = new Set()
 ): EquipmentPools {
   const excludeSet = new Set(excluded?.armorIds ?? []);
   const pools = {
@@ -35,6 +49,7 @@ export function buildEquipmentPools(
     if (excludeSet.has(a.id)) continue;
     if (maxRarity != null && (a.rarity ?? 0) > maxRarity) continue;
     if (craftable && !craftable(a.id)) continue;
+    if (hasExcludedSkill(a.skills, excludedSkills)) continue;
     if (pools[a.part]) pools[a.part].push(a);
   }
   return pools;
@@ -75,21 +90,16 @@ export function applyFixedParts(
 }
 
 /**
- * 單件裝備對某流派的啟發式分數，用於 fast/greedy 模式候選篩選。
- * 只是粗略排序，不代表最終配裝分數。
+ * 單件裝備的啟發式分數（必要技能覆蓋 + 洞位彈性），
+ * 用於 fast/greedy 模式候選篩選。只是粗略排序，不代表最終配裝優劣。
  */
-export function scoreArmorPieceForPreset(
+export function scoreArmorPieceForRequired(
   piece: ArmorPiece,
-  required: SkillMap,
-  preferred: SkillMap,
-  avoid: SkillMap,
-  weights: SkillMap
+  required: SkillMap
 ): number {
   let score = 0;
   for (const [skill, lvl] of Object.entries(piece.skills)) {
     if (required[skill]) score += lvl * 12;
-    if (preferred[skill]) score += lvl * (weights[skill] ?? 1) * 4;
-    if (avoid[skill]) score -= lvl * 25;
   }
   // 洞位彈性：能容納珠子越多越好
   score += slotValue(piece.slots) * 1.5;
@@ -112,26 +122,29 @@ export function requiredCoverageScore(
 
 /**
  * 依模式對候選池做裁切。
- * - exact：全部保留
- * - fast：每部位保留啟發式分數前 limit 名
- * - greedy：每部位保留「必要覆蓋 + 分數」前 limit 名（更小）
+ * - exact：每部位保留啟發式分數前 12 名（見下方 limit）
+ * - fast：每部位保留啟發式分數前 9 名
+ * - greedy：每部位保留「必要覆蓋 + 分數」前 7 名（更小）
  */
 export function prunePools(
   pools: EquipmentPools,
-  preset: {
-    requiredSkills: SkillMap;
-    preferredSkills: SkillMap;
-    avoidSkills: SkillMap;
-    skillWeights: SkillMap;
-  },
+  requiredSkills: SkillMap,
   mode: "fast" | "exact" | "greedy",
   fixed: FixedParts,
   /** 參與搜尋的武器候選數。>1 時縮小每部位件數，讓總組合數（W × N^5）維持在可負荷範圍。 */
-  weaponCount: number = 1
+  weaponCount: number = 1,
+  /** 護石候選數。多顆時解算次數 ×C，再縮小每部位件數以維持總量。 */
+  charmCount: number = 1
 ): EquipmentPools {
-  // 每部位保留件數（控制組合數 N^5)。
-  // 全防具資料庫下（每部位 300+ 件),暴力枚舉不可行,故各模式皆做相關度裁切。
-  const limit =
+  // 每部位保留件數 limit：搜尋解算次數約為 weaponCount × limit^5 × charmCount，
+  // 全防具庫每部位 300+ 件無法暴力枚舉，故各模式依相關度只留前 limit 名。
+  //
+  // 基準 limit（單一武器 vs 多武器候選 weaponCount>1，後者要再乘 W 故收緊）：
+  //   模式      單武器  多武器
+  //   greedy      7       6     （最激進，只顧補必要技能缺口）
+  //   fast        9       7     （預設，速度與品質平衡）
+  //   exact      12       9     （最寬，枚舉最多候選）
+  let limit =
     weaponCount > 1
       ? mode === "greedy"
         ? 6
@@ -144,22 +157,26 @@ export function prunePools(
           ? 9
           : 12;
 
-  // 相關技能集合（必要 + 偏好),用於預先濾除完全無關的裝備。
-  const relevant = new Set([
-    ...Object.keys(preset.requiredSkills),
-    ...Object.keys(preset.preferredSkills),
-  ]);
+  // 護石維度安全網：護石已在 searchBuilds 先做支配剪枝，但非支配護石仍可能有十餘顆，
+  // 每多一顆解算次數就 ×charmCount。目標把總解算量（≈ weaponCount × limit^5 × charmCount）
+  // 壓在約 5~8 萬以內（單武器/多武器皆然），故護石數越多每部位再各減 1 件：
+  //   charmCount >= 2 → -1
+  //   charmCount >= 4 → 再 -1
+  //   charmCount >= 8 → 再 -1
+  // 最低保底 4 件（低於此結果品質過差）。支配剪枝通常把數十顆壓到十餘顆，
+  // 落在 >=8 這檔（limit 收到 4），仍能穩定 <5s 完成。
+  if (charmCount >= 2) limit -= 1;
+  if (charmCount >= 4) limit -= 1;
+  if (charmCount >= 8) limit -= 1;
+  limit = Math.max(4, limit);
+
+  // 相關技能集合（必要),用於預先濾除完全無關的裝備。
+  const relevant = new Set(Object.keys(requiredSkills));
 
   const scoreOf = (piece: ArmorPiece) =>
-    scoreArmorPieceForPreset(
-      piece,
-      preset.requiredSkills,
-      preset.preferredSkills,
-      preset.avoidSkills,
-      preset.skillWeights
-    ) +
+    scoreArmorPieceForRequired(piece, requiredSkills) +
     (mode === "greedy"
-      ? requiredCoverageScore(piece, preset.requiredSkills) * 20
+      ? requiredCoverageScore(piece, requiredSkills) * 20
       : 0);
 
   const out = {} as EquipmentPools;
@@ -189,16 +206,14 @@ export function prunePools(
 const FIVE_ELEMENTS = new Set(["fire", "water", "thunder", "ice", "dragon"]);
 
 /**
- * 單把武器對某流派的啟發式分數（search 模式候選排序用）。
- * 攻擊/會心/洞位/自帶技能相關度綜合。
+ * 單把武器的啟發式分數（search 模式候選排序用）。
+ * 攻擊/會心/洞位/自帶必要技能覆蓋綜合。
  * preferElement=true（屬性流 preset）時：以屬性值為主要排序依據（屬攻優先），
  * 並將無屬性/狀態異常武器大幅降權（屬性流用不到）。
  */
-export function scoreWeaponForPreset(
+export function scoreWeaponForRequired(
   weapon: Weapon,
   required: SkillMap,
-  preferred: SkillMap,
-  weights: SkillMap,
   preferElement = false
 ): number {
   let score = weapon.attack / 10 + weapon.affinity / 5;
@@ -206,7 +221,6 @@ export function scoreWeaponForPreset(
   if (weapon.rampageSlot) score += weapon.rampageSlot;
   for (const [skill, lvl] of Object.entries(weapon.skills ?? {})) {
     if (required[skill]) score += lvl * 12;
-    if (preferred[skill]) score += lvl * (weights[skill] ?? 1) * 4;
   }
   if (preferElement) {
     const el = weapon.element;
@@ -218,8 +232,8 @@ export function scoreWeaponForPreset(
 
 /**
  * 建立武器候選池。
- * - fixed：只回傳指定武器（fixedWeaponId 優先，其次 fixedParts.weapon）
- * - search：同 weaponType 的武器，套用排除清單，依分數取前 N（控制組合數）
+ * - fixed：只回傳指定武器（fixedWeaponId 優先，其次 fixedParts.weapon）；不受排除技能限制（使用者明示選擇）
+ * - search：同 weaponType 的武器，套用排除清單與排除技能，依分數取前 N（控制組合數）
  * 回傳空陣列時由呼叫端後援（例如舊版手動洞數）。
  */
 export function buildWeaponPool(opts: {
@@ -230,7 +244,9 @@ export function buildWeaponPool(opts: {
   fixedWeaponId?: string;
   fixedPartsWeapon?: string;
   excludedWeaponIds: string[];
-  preset: { requiredSkills: SkillMap; preferredSkills: SkillMap; skillWeights: SkillMap };
+  requiredSkills: SkillMap;
+  /** 排除技能（硬條件）。 */
+  excludedSkills?: Set<string>;
   mode: "fast" | "exact" | "greedy";
   /** 屬性篩選（僅五屬性）：search 模式只保留該屬性武器。未指定＝不限。 */
   elementFilter?: WeaponElementFilter;
@@ -249,7 +265,8 @@ export function buildWeaponPool(opts: {
     fixedWeaponId,
     fixedPartsWeapon,
     excludedWeaponIds,
-    preset,
+    requiredSkills,
+    excludedSkills = new Set(),
     mode,
     elementFilter,
     preferElement,
@@ -270,19 +287,14 @@ export function buildWeaponPool(opts: {
       !excluded.has(w.id) &&
       (!elementFilter || w.element?.type === elementFilter) &&
       (maxRarity == null || (w.rarity ?? 0) <= maxRarity) &&
-      (!craftable || craftable(w.id))
+      (!craftable || craftable(w.id)) &&
+      !hasExcludedSkill(w.skills, excludedSkills)
   );
   const cap = mode === "greedy" ? 2 : mode === "fast" ? 3 : 4;
   return candidates
     .map((w) => ({
       w,
-      score: scoreWeaponForPreset(
-        w,
-        preset.requiredSkills,
-        preset.preferredSkills,
-        preset.skillWeights,
-        preferElement
-      ),
+      score: scoreWeaponForRequired(w, requiredSkills, preferElement),
     }))
     .sort((a, b) => b.score - a.score)
     .slice(0, cap)

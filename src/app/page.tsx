@@ -7,7 +7,6 @@ import type {
   ArmorPiece,
   BuildResult,
   BuildSearchRequest,
-  Charm,
   ElementResistanceKey,
   ElementType,
   FixedParts,
@@ -24,15 +23,18 @@ import {
   getPreset,
   presetsForWeapon,
 } from "@/lib/data";
-import {
-  TIER_MAX_RARITY,
-  TIER_SCORE_PROFILE,
-  DEFAULT_SCORE_PROFILE,
-} from "@/types/build";
+import { TIER_MAX_RARITY } from "@/types/build";
 import { loadGameData, type GameData } from "@/lib/game-data";
 import { searchBuilds, createSearchDeps, type SearchMeta } from "@/lib/build-search";
-import { parseSlotString } from "@/lib/slot-utils";
+import { slotValue } from "@/lib/slot-utils";
 import { useLocalStorage } from "@/lib/use-local-storage";
+import {
+  EMPTY_SEARCH_CONDITIONS,
+  migrateLegacyConditions,
+  ownedCharmToCharm,
+  type OwnedCharm,
+  type SearchConditions,
+} from "@/lib/search-conditions";
 import {
   elementSkillMap,
   mergeMaxSkills,
@@ -46,12 +48,7 @@ import { WeaponPicker, type ElementFilterValue } from "@/components/WeaponPicker
 import { BuildPresetSelector } from "@/components/BuildPresetSelector";
 import { SearchModeSelector } from "@/components/SearchModeSelector";
 import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
-import { CharmInput, type CharmRow } from "@/components/CharmInput";
-import {
-  CharmLibrary,
-  charmLabel,
-  type SavedCharm,
-} from "@/components/CharmLibrary";
+import { CharmListPanel } from "@/components/CharmListPanel";
 import { ReservedSlotsInput } from "@/components/ReservedSlotsInput";
 import { DefenseResInput } from "@/components/DefenseResInput";
 import { FixedPartsPanel } from "@/components/FixedPartsPanel";
@@ -77,13 +74,14 @@ import {
   ChevronUp,
 } from "lucide-react";
 
-const EMPTY_CHARM_ROWS: CharmRow[] = [
-  { name: "", level: 1 },
-  { name: "", level: 1 },
-  { name: "", level: 1 },
-];
+/** 結果排序鍵：EFR / 防禦 / 孔位餘裕。 */
+type SortKey = "efr" | "defense" | "slots";
 
-const clone = (m: SkillMap): SkillMap => ({ ...m });
+const SORT_OPTIONS: { key: SortKey; label: string; hint: string }[] = [
+  { key: "efr", label: "EFR", hint: "期望攻擊值（含屬性）由高到低" },
+  { key: "defense", label: "防禦", hint: "5 件防具基礎防禦總和由高到低" },
+  { key: "slots", label: "孔位餘裕", hint: "剩餘洞位價值由高到低" },
+];
 
 export default function Home() {
   const firstPreset = presetsForWeapon("long-sword")[0] ?? buildPresets[0];
@@ -112,7 +110,7 @@ export default function Home() {
   );
   // 固定武器 id，"" 表示未選（localStorage 不便存 undefined）。
   const [fixedWeaponId, setFixedWeaponId] = useLocalStorage("mhsb.fixedWeaponId", "");
-  // 武器屬性篩選（目前僅雙刀啟用）。"all" 代表不限。
+  // 武器屬性篩選。"all" 代表不限。
   const [elementFilter, setElementFilter] = useLocalStorage<ElementFilterValue>(
     "mhsb.elementFilter",
     "all"
@@ -120,20 +118,54 @@ export default function Home() {
   /** 目前套用在技能編輯器中的自動技能（依 preset autoRules 與固定武器屬性）。 */
   const [autoSkills, setAutoSkills] = useLocalStorage<SkillMap>("mhsb.autoSkills", {});
 
-  // ---- 技能條件（由 preset 帶入，可編輯）----
-  const [required, setRequired] = useLocalStorage<SkillMap>("mhsb.required", clone(firstPreset.requiredSkills));
-  const [preferred, setPreferred] = useLocalStorage<SkillMap>("mhsb.preferred", clone(firstPreset.preferredSkills));
-  const [avoid, setAvoid] = useLocalStorage<SkillMap>("mhsb.avoid", clone(firstPreset.avoidSkills));
-  const [weights, setWeights] = useLocalStorage<SkillMap>("mhsb.weights", clone(firstPreset.skillWeights));
-
-  // ---- 護石 / 保留洞位 ----
-  const [charmRows, setCharmRows] = useLocalStorage<CharmRow[]>("mhsb.charmRows", EMPTY_CHARM_ROWS);
-  const [charmSlotsStr, setCharmSlotsStr] = useLocalStorage("mhsb.charmSlots", "0-0-0");
-  // 護石庫：儲存多顆護石，一鍵套用（純本地）。
-  const [charmLibrary, setCharmLibrary] = useLocalStorage<SavedCharm[]>(
-    "mhsb.charmLibrary",
-    []
+  // ---- 搜尋條件（單一 state 物件；「推薦配裝匯入」可經 deserialize 整包帶入）----
+  const [conditions, setConditions] = useLocalStorage<SearchConditions>(
+    "mhsb.searchConditions",
+    EMPTY_SEARCH_CONDITIONS
   );
+  const {
+    requiredSkills: required,
+    excludedSkills,
+    fixedParts,
+    excludedItems,
+    charms,
+    useCharms,
+  } = conditions;
+
+  // 一次性遷移：改版前的零散 key（必要/排除技能、固定/排除裝備、護石庫）
+  useEffect(() => {
+    if (window.localStorage.getItem("mhsb.searchConditions") != null) return;
+    const migrated = migrateLegacyConditions();
+    if (migrated) setConditions(migrated);
+    // 只在掛載時檢查一次
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const setRequired = (v: SkillMap | ((prev: SkillMap) => SkillMap)) =>
+    setConditions((prev) => ({
+      ...prev,
+      requiredSkills: typeof v === "function" ? v(prev.requiredSkills) : v,
+    }));
+  const setExcludedSkills = (v: string[]) =>
+    setConditions((prev) => ({ ...prev, excludedSkills: v }));
+  const setFixedParts = (v: FixedParts | ((prev: FixedParts) => FixedParts)) =>
+    setConditions((prev) => ({
+      ...prev,
+      fixedParts: typeof v === "function" ? v(prev.fixedParts) : v,
+    }));
+  const setExcludedItems = (
+    v: ExcludedItems | ((prev: ExcludedItems) => ExcludedItems)
+  ) =>
+    setConditions((prev) => ({
+      ...prev,
+      excludedItems: typeof v === "function" ? v(prev.excludedItems) : v,
+    }));
+  const setCharms = (v: OwnedCharm[]) =>
+    setConditions((prev) => ({ ...prev, charms: v }));
+  const setUseCharms = (v: boolean) =>
+    setConditions((prev) => ({ ...prev, useCharms: v }));
+
+  // ---- 保留洞位 ----
   const [reservedSlots, setReservedSlots] = useLocalStorage<ReservedSlots>("mhsb.reserved", {
     4: 0,
     3: 0,
@@ -147,12 +179,7 @@ export default function Home() {
     Partial<Record<ElementResistanceKey, number>>
   >("mhsb.minResistances", {});
 
-  // ---- 固定 / 排除 / 鍊成 ----
-  const [fixedParts, setFixedParts] = useLocalStorage<FixedParts>("mhsb.fixedParts", {});
-  const [excludedItems, setExcludedItems] = useLocalStorage<ExcludedItems>("mhsb.excluded", {
-    armorIds: [],
-    weaponIds: [],
-  });
+  // ---- 傀異鍊成自訂防具 ----
   const [augments, setAugments] = useLocalStorage<ArmorPiece[]>("mhsb.augments", []);
 
   // ---- 結果（不 persist）----
@@ -160,6 +187,7 @@ export default function Home() {
   const [meta, setMeta] = useState<SearchMeta | null>(null);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  const [sortKey, setSortKey] = useLocalStorage<SortKey>("mhsb.sortKey", "efr");
   // 顯示上限：手機首訪預設 20、桌機 100；有存過就沿用。（讀 effect 先於寫 effect）
   const [resultLimit, setResultLimit] = useState(100);
   useEffect(() => {
@@ -212,6 +240,25 @@ export default function Home() {
     return m;
   }, [gameData, augments]);
 
+  // 依排序鍵重排目前結果（client 端重排，不需重新搜尋）
+  const sortedResults = useMemo(() => {
+    const arr = [...results];
+    if (sortKey === "defense") {
+      arr.sort(
+        (a, b) => b.totalDefense - a.totalDefense || b.efr.total - a.efr.total
+      );
+    } else if (sortKey === "slots") {
+      arr.sort(
+        (a, b) =>
+          slotValue(b.remainingSlots) - slotValue(a.remainingSlots) ||
+          b.efr.total - a.efr.total
+      );
+    } else {
+      arr.sort((a, b) => b.efr.total - a.efr.total);
+    }
+    return arr;
+  }, [results, sortKey]);
+
   /**
    * 目前用於自動技能的「屬性來源」：
    * fixed 模式取固定武器屬性；search 模式取屬性篩選（未篩選則無）。
@@ -233,10 +280,11 @@ export default function Home() {
     const p = getPreset(id);
     if (!p) return;
     const resolved = resolvePresetSkills(p, elementType);
-    setRequired(resolved.requiredSkills);
-    setPreferred(resolved.preferredSkills);
-    setAvoid(resolved.avoidSkills);
-    setWeights(resolved.skillWeights);
+    setConditions((prev) => ({
+      ...prev,
+      requiredSkills: resolved.requiredSkills,
+      excludedSkills: resolved.excludedSkills,
+    }));
     setAutoSkills(resolved.autoAddedSkills);
     // 一律重設保留洞位：preset 有指定則帶入，否則歸零（避免上一個模板的保留洞位殘留）。
     setReservedSlots({
@@ -307,41 +355,6 @@ export default function Home() {
     reapplyAutoSkills(weaponById[id]?.element?.type);
   };
 
-  const buildCharm = (): Charm => {
-    const skillMap: SkillMap = {};
-    for (const r of charmRows) {
-      if (r.name) skillMap[r.name] = (skillMap[r.name] ?? 0) + r.level;
-    }
-    return { skills: skillMap, slots: parseSlotString(charmSlotsStr) };
-  };
-
-  // ---- 護石庫 ----
-  const charmHasContent =
-    charmRows.some((r) => r.name) || parseSlotString(charmSlotsStr).length > 0;
-  const saveCharm = () => {
-    const entry: SavedCharm = {
-      id: `charm_${Date.now()}`,
-      rows: charmRows.map((r) => ({ ...r })),
-      slots: charmSlotsStr,
-    };
-    setCharmLibrary((prev) => {
-      // 相同內容（標籤一致）不重複儲存
-      if (prev.some((c) => charmLabel(c) === charmLabel(entry))) {
-        showToast("護石庫已有相同護石");
-        return prev;
-      }
-      showToast("已儲存到護石庫");
-      return [entry, ...prev];
-    });
-  };
-  const loadCharm = (c: SavedCharm) => {
-    setCharmRows(c.rows.map((r) => ({ ...r })));
-    setCharmSlotsStr(c.slots);
-    showToast("已套用護石");
-  };
-  const deleteCharm = (id: string) =>
-    setCharmLibrary((prev) => prev.filter((c) => c.id !== id));
-
   const runSearch = async () => {
     setLoading(true);
     setHasSearched(true);
@@ -366,18 +379,11 @@ export default function Home() {
         ? TIER_MAX_RARITY[currentPreset.tier]
         : undefined,
       preferElement: currentPreset?.preferElement,
-      scoreProfile:
-        currentPreset?.scoreProfile ??
-        (currentPreset?.tier
-          ? TIER_SCORE_PROFILE[currentPreset.tier]
-          : DEFAULT_SCORE_PROFILE),
-      charm: buildCharm(),
+      charms: useCharms ? charms.map(ownedCharmToCharm) : [],
       fixedParts,
       excludedItems,
       requiredSkills: required,
-      preferredSkills: preferred,
-      avoidSkills: avoid,
-      skillWeights: weights,
+      excludedSkills,
       reservedSlots,
       searchMode,
       resultLimit,
@@ -432,7 +438,7 @@ export default function Home() {
     }
   };
 
-  const clearFixed = (key: ArmorPart | "weapon" | "charm") => {
+  const clearFixed = (key: ArmorPart | "weapon") => {
     setFixedParts((prev) => {
       const next = { ...prev };
       delete next[key];
@@ -640,11 +646,9 @@ export default function Home() {
                 <TabsContent value="skills" className="pt-2">
                   <SkillRequirementEditor
                     required={required}
-                    preferred={preferred}
-                    avoid={avoid}
+                    excluded={excludedSkills}
                     onChangeRequired={setRequired}
-                    onChangePreferred={setPreferred}
-                    onChangeAvoid={setAvoid}
+                    onChangeExcluded={setExcludedSkills}
                     allSkills={allSkills}
                   />
                 </TabsContent>
@@ -654,19 +658,12 @@ export default function Home() {
                     <Label className="text-xs text-muted-foreground">
                       護石
                     </Label>
-                    <CharmInput
-                      rows={charmRows}
-                      slotsStr={charmSlotsStr}
-                      onChangeRows={setCharmRows}
-                      onChangeSlots={setCharmSlotsStr}
+                    <CharmListPanel
+                      charms={charms}
+                      useCharms={useCharms}
+                      onChangeCharms={setCharms}
+                      onChangeUseCharms={setUseCharms}
                       allSkills={allSkills}
-                    />
-                    <CharmLibrary
-                      library={charmLibrary}
-                      canSave={charmHasContent}
-                      onSave={saveCharm}
-                      onLoad={loadCharm}
-                      onDelete={deleteCharm}
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -742,7 +739,24 @@ export default function Home() {
                 </span>
               )}
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="flex items-center gap-1">
+                <Label className="text-[11px] text-muted-foreground">
+                  排序
+                </Label>
+                {SORT_OPTIONS.map((o) => (
+                  <Button
+                    key={o.key}
+                    variant={sortKey === o.key ? "secondary" : "ghost"}
+                    size="sm"
+                    className="h-7 px-2 text-xs"
+                    onClick={() => setSortKey(o.key)}
+                    title={o.hint}
+                  >
+                    {o.label}
+                  </Button>
+                ))}
+              </div>
               {(favorites.length > 0 || compared.length > 0) && (
                 <span className="text-xs text-muted-foreground">
                   收藏 {favorites.length} · 比較 {compared.length}
@@ -792,12 +806,12 @@ export default function Home() {
                 title="尚未搜尋配裝"
                 description={`你可以先完成：
 1. 選擇武器與流派（會自動帶入技能需求）
-2. 調整必要技能、偏好技能與排除技能
-3. 輸入護石與武器洞數
+2. 調整必要技能與排除技能
+3. 到「裝備」頁登錄你的護石
 4. 視需要固定部位或排除裝備
 5. 按下搜尋配裝
 
-搜尋後會顯示前 100 套符合硬條件的配裝。`}
+搜尋後會顯示前 100 套符合硬條件的配裝，預設依 EFR 排序。`}
               />
             ) : results.length === 0 ? (
               <EmptyState
@@ -806,16 +820,13 @@ export default function Home() {
               />
             ) : (
               <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
-                {results.map((r, i) => (
+                {sortedResults.map((r, i) => (
                   <BuildResultCard
                     key={r.id}
                     result={r}
                     rank={i + 1}
                     weaponSlotsLabel="—"
                     requiredSkills={required}
-                    preferredSkills={preferred}
-                    avoidSkills={avoid}
-                    reservedSlots={reservedSlots}
                     fixedParts={fixedParts}
                     excludedIds={excludedIds}
                     isFavorite={favorites.includes(r.id)}

@@ -15,7 +15,6 @@ export type SolveInput = {
   /** 補珠前的既有技能（防具 + 護石 + 武器）。 */
   currentSkills: SkillMap;
   requiredSkills: SkillMap;
-  preferredSkills: SkillMap;
   reservedSlots: ReservedSlots;
   /** 技能名稱 → 可用珠子清單（已依效率排序）。 */
   decorationsBySkill: Record<string, Decoration[]>;
@@ -94,14 +93,12 @@ function reserveSlots(
  * 自動補珠主流程：
  * 1. 先補 requiredSkills；補不滿 → success:false（missingRequired 記錄缺口）
  * 2. 檢查 reservedSlots 是否仍能保留；不能 → success:false（保留洞位視為硬條件）
- * 3. 用剩餘（扣除保留）洞位補 preferredSkills，依效率盡量補
- * 4. 回傳所有指派、達成技能、剩餘洞位（含保留下來的空洞）
+ * 3. 回傳所有指派、達成技能、剩餘洞位（含保留下來的空洞，留給玩家自由運用）
  */
 export function solveDecorations(input: SolveInput): DecorationSolveResult {
   const {
     currentSkills,
     requiredSkills,
-    preferredSkills,
     reservedSlots,
     decorationsBySkill,
     skillMax,
@@ -166,31 +163,9 @@ export function solveDecorations(input: SolveInput): DecorationSolveResult {
       missingRequired: {}, // 必要技能已達成，但保留洞位失敗
     };
   }
-  const heldSlots = reserve.held;
-  let freeSlots = reserve.remaining; // 可用於偏好技能
-
-  // ---- 3. 偏好技能（用未保留的洞位盡量補）----
-  const preferredOrder = Object.keys(preferredSkills);
-  for (const skill of preferredOrder) {
-    const gapFn = () => {
-      const cap = skillMax[skill]
-        ? Math.min(preferredSkills[skill], skillMax[skill])
-        : preferredSkills[skill];
-      return cap - ((currentSkills[skill] ?? 0) + (achieved[skill] ?? 0));
-    };
-    while (gapFn() > 0) {
-      const deco = pickDecoForSkill(skill, gapFn(), freeSlots, decorationsBySkill);
-      if (!deco) break;
-      const placed = placeDecoration(deco.slotLevel, freeSlots);
-      if (!placed) break;
-      record(deco, placed.placedInSlotLevel);
-      freeSlots = placed.remaining;
-    }
-  }
-
-  // ---- 4. 回傳 ----
-  // 剩餘洞位 = 補完偏好後的自由洞 + 保留下來的空洞（都仍可供玩家使用）
-  const remaining = normalizeSlots([...freeSlots, ...heldSlots]);
+  // ---- 3. 回傳 ----
+  // 剩餘洞位 = 自由洞 + 保留下來的空洞（都仍可供玩家使用）
+  const remaining = normalizeSlots([...reserve.remaining, ...reserve.held]);
   return {
     success: true,
     assignments,
