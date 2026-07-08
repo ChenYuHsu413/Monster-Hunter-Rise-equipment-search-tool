@@ -19,7 +19,7 @@
    "categories": "階段分類鍵與中文標籤見 scripts/game8-sources.json 的 categories。",
    "stageName": "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
    "augmentRaw": "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
-   "rampageSkills": "百龍技能：id 對照 src/data/rampage-skills.json（Kiranico rampage-skills 官方繁中）；對不到 id=null 進 unresolved，顯示端 fallback 日文。rawNameJa 保留。",
+   "rampageSkills": "百龍技能：id 對照 src/data/rampage-skills.json（Kiranico rampage-skills 官方繁中）；對不到 id=null 進 unresolved，顯示端 fallback 日文。rawNameJa 保留。同格多技能（空白/「or」分隔）已切分逐一解析、尾註（※…、括號）已剝除。placeholder=true＝屬性付與簡寫（Game8 略屬性），依武器屬性自選、不對單一 ID。",
    "rampageDecos": "武器百龍裝飾品（weapons[].rampageDecos）：○竜珠 id 對照 src/data/rampage-decorations.json（複合鍵 rdeco_{skillNumId}_{slot}）；○系欄位簡稱對不到→null→suggestions。id 僅供顯示查繁中，不進匯出 payload。",
    "placeholder": "裝飾珠選用旗標：Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，非單一珠、無 ID。顯示端應提示玩家依屬性自選（如火→火炎珠），不當缺漏。",
    "errors": "解析失敗的表格（不硬猜），含來源 URL 與表頭預覽，供人工處理。",
@@ -6905,8 +6905,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "攻撃力強化Ⅱ or 会心率強化Ⅱ"
+     "id": "rskill_381074408",
+     "rawNameJa": "攻撃力強化Ⅱ"
+    },
+    {
+     "id": "rskill_408054401",
+     "rawNameJa": "会心率強化Ⅱ"
     },
     {
      "id": "rskill_528038624",
@@ -14490,8 +14494,8 @@
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "鉄蟲糸技強化 ※"
+     "id": "rskill_430385024",
+     "rawNameJa": "鉄蟲糸技強化"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/386193"
@@ -28660,8 +28664,16 @@
      "rawNameJa": "属性強化【氷】Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "攻撃力強化Ⅲ 竜種特効 天彗龍の魂"
+     "id": "rskill_395307913",
+     "rawNameJa": "攻撃力強化Ⅲ"
+    },
+    {
+     "id": "rskill_40478360",
+     "rawNameJa": "竜種特効"
+    },
+    {
+     "id": "rskill_173733363",
+     "rawNameJa": "天彗龍の魂"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/380765"
@@ -30385,8 +30397,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "会心率強化Ⅱ or 属性強化【火】Ⅲ"
+     "id": "rskill_408054401",
+     "rawNameJa": "会心率強化Ⅱ"
+    },
+    {
+     "id": "rskill_67000766",
+     "rawNameJa": "属性強化【火】Ⅲ"
     },
     {
      "id": "rskill_243411229",
@@ -46291,8 +46307,12 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "斬れ味変更【壱型】 斬れ味変更【肆型】"
+     "id": "rskill_1251979832",
+     "rawNameJa": "斬れ味変更【壱型】"
+    },
+    {
+     "id": "rskill_1965261215",
+     "rawNameJa": "斬れ味変更【肆型】"
     },
     {
      "id": "rskill_858617035",
@@ -47589,7 +47609,15 @@
    "rampageSkills": [
     {
      "id": null,
-     "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ"
+     "rawNameJa": "切れ味変更【壱型】"
+    },
+    {
+     "id": "rskill_858617035",
+     "rawNameJa": "無属性攻撃強化"
+    },
+    {
+     "id": "rskill_278586937",
+     "rawNameJa": "旋律変更【攻撃】Ⅱ"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/386570"
@@ -47807,7 +47835,15 @@
    "rampageSkills": [
     {
      "id": null,
-     "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ"
+     "rawNameJa": "切れ味変更【壱型】"
+    },
+    {
+     "id": "rskill_858617035",
+     "rawNameJa": "無属性攻撃強化"
+    },
+    {
+     "id": "rskill_278586937",
+     "rawNameJa": "旋律変更【攻撃】Ⅱ"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/386570"
@@ -52634,8 +52670,12 @@
      "rawNameJa": "攻撃力強化Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "攻撃力強化Ⅲ 竜種特効"
+     "id": "rskill_395307913",
+     "rawNameJa": "攻撃力強化Ⅲ"
+    },
+    {
+     "id": "rskill_40478360",
+     "rawNameJa": "竜種特効"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/379858"
@@ -53729,8 +53769,8 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "鉄蟲糸技強化 (流転付き取得済の場合)"
+     "id": "rskill_430385024",
+     "rawNameJa": "鉄蟲糸技強化"
     }
    ],
    "sourceUrl": "https://game8.jp/mhrise/386343"
@@ -123754,8 +123794,12 @@
      "rawNameJa": "無属性攻撃強化"
     },
     {
-     "id": null,
-     "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】"
+     "id": "rskill_340316373",
+     "rawNameJa": "射撃型変更【連射】"
+    },
+    {
+     "id": "rskill_354549962",
+     "rawNameJa": "射撃型変更【貫通】"
     },
     {
      "id": "rskill_1655497276",
@@ -123957,12 +124001,16 @@
      "rawNameJa": "攻撃力強化Ⅳ"
     },
     {
-     "id": null,
+     "placeholder": true,
      "rawNameJa": "属性付与Ⅲ"
     },
     {
-     "id": null,
-     "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】"
+     "id": "rskill_340316373",
+     "rawNameJa": "射撃型変更【連射】"
+    },
+    {
+     "id": "rskill_354549962",
+     "rawNameJa": "射撃型変更【貫通】"
     },
     {
      "id": "rskill_1655497276",
@@ -124453,8 +124501,12 @@
      "rawNameJa": "無属性攻撃強化"
     },
     {
-     "id": null,
-     "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】"
+     "id": "rskill_340316373",
+     "rawNameJa": "射撃型変更【連射】"
+    },
+    {
+     "id": "rskill_354549962",
+     "rawNameJa": "射撃型変更【貫通】"
     },
     {
      "id": "rskill_1655497276",
@@ -124828,8 +124880,28 @@
    ],
    "rampageSkills": [
     {
-     "id": null,
-     "rawNameJa": "攻撃力強化Ⅱ 属性付与Ⅱ(好みの属性を選ぶ) 射撃型変更【連射】 ビン強化【接撃】orビン追加【強撃】 ビン追加【減気】 （曲射変更は不要）"
+     "id": "rskill_381074408",
+     "rawNameJa": "攻撃力強化Ⅱ"
+    },
+    {
+     "placeholder": true,
+     "rawNameJa": "属性付与Ⅱ"
+    },
+    {
+     "id": "rskill_340316373",
+     "rawNameJa": "射撃型変更【連射】"
+    },
+    {
+     "id": "rskill_1640739359",
+     "rawNameJa": "ビン強化【接撃】"
+    },
+    {
+     "id": "rskill_1655497276",
+     "rawNameJa": "ビン追加【強撃】"
+    },
+    {
+     "id": "rskill_1802985780",
+     "rawNameJa": "ビン追加【減気】"
     },
     {
      "id": "rskill_67000766",
@@ -125953,32 +126025,11 @@
    "type": "rampageSkills",
    "rawNameJa": "切れ味変更【壱型】",
    "game8Id": null,
-   "count": 3,
+   "count": 5,
    "examples": [
     "great-sword:riseEndgame:1",
     "great-sword:riseEndgame:2",
-    "switch-axe:riseEndgame:5"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "射撃型変更【連射】 射撃型変更【貫通】",
-   "game8Id": null,
-   "count": 3,
-   "examples": [
-    "bow:riseEndgame:0",
-    "bow:riseEndgame:1",
-    "bow:riseEndgame:4"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "切れ味変更【壱型】 無属性攻撃強化 旋律変更【攻撃】Ⅱ",
-   "game8Id": null,
-   "count": 2,
-   "examples": [
-    "hunting-horn:riseHigh:1",
-    "hunting-horn:riseHigh:2"
+    "hunting-horn:riseHigh:1"
    ]
   },
   {
@@ -125998,87 +126049,6 @@
    "count": 1,
    "examples": [
     "great-sword:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "攻撃力強化Ⅱ or 会心率強化Ⅱ",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "great-sword:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "鉄蟲糸技強化 ※",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "long-sword:riseHigh:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "攻撃力強化Ⅲ 竜種特効 天彗龍の魂",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "会心率強化Ⅱ or 属性強化【火】Ⅲ",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "dual-blades:riseHigh:2"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "斬れ味変更【壱型】 斬れ味変更【肆型】",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "hunting-horn:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "攻撃力強化Ⅲ 竜種特効",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "lance:riseEndgame:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "鉄蟲糸技強化 (流転付き取得済の場合)",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "lance:riseHigh:0"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "属性付与Ⅲ",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "bow:riseEndgame:1"
-   ]
-  },
-  {
-   "type": "rampageSkills",
-   "rawNameJa": "攻撃力強化Ⅱ 属性付与Ⅱ(好みの属性を選ぶ) 射撃型変更【連射】 ビン強化【接撃】orビン追加【強撃】 ビン追加【減気】 （曲射変更は不要）",
-   "game8Id": null,
-   "count": 1,
-   "examples": [
-    "bow:riseHigh:1"
    ]
   }
  ]

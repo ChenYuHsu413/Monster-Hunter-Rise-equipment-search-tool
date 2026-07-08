@@ -58,18 +58,40 @@ function RampageList({
   items,
   resolve,
 }: {
-  items: { id?: string; rawNameJa: string; count?: number }[];
+  items: {
+    id?: string;
+    rawNameJa: string;
+    count?: number;
+    placeholder?: boolean;
+  }[];
   resolve: (id?: string, rawNameJa?: string) => ResolvedName;
 }) {
   return (
     <>
       {items.map((it, i) => {
+        const count = it.count && it.count > 1 ? ` ×${it.count}` : "";
+        // 屬性付與簡寫：依武器屬性自選，不做 ID 對照（比照裝飾珠「對應屬性珠」）。
+        if (it.placeholder) {
+          const lv = it.rawNameJa.replace(/^属性付与/, "");
+          return (
+            <span key={i}>
+              {i > 0 && "・"}
+              <span
+                className="text-sky-300"
+                title="依你的武器屬性自選對應的屬性付與"
+              >
+                對應屬性付與{lv}
+              </span>
+              {count}
+            </span>
+          );
+        }
         const r = resolve(it.id, it.rawNameJa);
         return (
           <span key={i}>
             {i > 0 && "・"}
             {r.resolved ? r.name : <WarnName name={r.name} />}
-            {it.count && it.count > 1 ? ` ×${it.count}` : ""}
+            {count}
           </span>
         );
       })}

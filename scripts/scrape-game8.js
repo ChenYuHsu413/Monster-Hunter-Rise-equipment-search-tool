@@ -461,17 +461,43 @@ function parseWeaponAny(it) {
   return parseWeaponCandidate(it.rows);
 }
 
+// 百龍屬性付與（火/水/雷/氷/龍 各一條 Ⅰ~Ⅲ）：Game8 略屬性＝「配你的武器屬性自選」的慣用簡寫，
+// 不對單一 ID，比照裝飾珠「各属性珠」的 placeholder（顯示端顯「對應屬性付與Ⅲ」）。
+const RAMPAGE_ELEMENT_GRANT = /^属性付与[IV]+$/;
+/**
+ * 單一儲存格文字 → 技能名 token[]。Game8 常把多個技能塞進同格（空白分隔、「A or B」二擇一），
+ * 或加註記（※…、（好みの属性を選ぶ）等）。剝註記後按空白/「or」/／切分，讓每個真技能各自解析。
+ */
+function splitRampageCell(text) {
+  return text
+    .replace(/[（(][^）)]*[）)]/g, " ") // 括號註記
+    .replace(/※.*$/, "") // ※ 起的尾註
+    .replace(/\bor\b/gi, " ") // 二擇一分隔 → 拆兩筆（顯示兩個選項）
+    .split(/[\s／]+/)
+    .map((t) => t.trim())
+    .filter(Boolean);
+}
 // 「派生」表（派生 | おすすめ百竜スキル [| おすすめ強化パーツ]）：col0＝派生元（怪物/素材/武器系）、
 // col2＝強化パーツ（ロングバレル等），皆非百龍技能——只取 col1 技能欄。單一「百竜スキル」表則各 cell 皆技能。
 const parseRampage = (rows) => {
   const h0 = rows[0].cells[0].text;
   const hasHeader = h0 === "派生" || rows[0].cells.some((c) => c.text.includes("百竜スキル"));
   const isDeriv = h0 === "派生";
-  return rows
+  const cells = rows
     .slice(hasHeader ? 1 : 0)
-    .flatMap((r) => (isDeriv ? (r.cells[1] ? [r.cells[1].text] : []) : r.cells.map((c) => c.text)))
-    .filter((t) => t && t !== "派生" && !t.includes("百竜スキル"))
-    .map((t) => ({ id: resolve("rampageSkills", t), rawNameJa: t }));
+    .flatMap((r) => (isDeriv ? (r.cells[1] ? [r.cells[1].text] : []) : r.cells.map((c) => c.text)));
+  const out = [];
+  for (const raw of cells) {
+    for (const t of splitRampageCell(raw)) {
+      if (t === "派生" || t.includes("百竜スキル")) continue;
+      if (RAMPAGE_ELEMENT_GRANT.test(normalizeJa(t))) {
+        out.push({ placeholder: true, rawNameJa: t });
+        continue;
+      }
+      out.push({ id: resolve("rampageSkills", t), rawNameJa: t });
+    }
+  }
+  return out;
 };
 
 // ---------- 文章 → builds ----------
@@ -651,7 +677,7 @@ const SCHEMA_DOC = {
   categories: "階段分類鍵與中文標籤見 scripts/game8-sources.json 的 categories。",
   stageName: "文章內 H2 段落標題（如「上位おすすめ装備(集会所★4〜5)」），保留文章內的階段細分；buildName 取最貼近該配裝的標題（H3 為主），同名多組時以武器名消歧。",
   augmentRaw: "傀異錬成內容，Game8 日文原樣保留（專案無對應系統，顯示端自行決定呈現方式）。",
-  rampageSkills: "百龍技能：id 對照 src/data/rampage-skills.json（Kiranico rampage-skills 官方繁中）；對不到 id=null 進 unresolved，顯示端 fallback 日文。rawNameJa 保留。",
+  rampageSkills: "百龍技能：id 對照 src/data/rampage-skills.json（Kiranico rampage-skills 官方繁中）；對不到 id=null 進 unresolved，顯示端 fallback 日文。rawNameJa 保留。同格多技能（空白/「or」分隔）已切分逐一解析、尾註（※…、括號）已剝除。placeholder=true＝屬性付與簡寫（Game8 略屬性），依武器屬性自選、不對單一 ID。",
   rampageDecos: "武器百龍裝飾品（weapons[].rampageDecos）：○竜珠 id 對照 src/data/rampage-decorations.json（複合鍵 rdeco_{skillNumId}_{slot}）；○系欄位簡稱對不到→null→suggestions。id 僅供顯示查繁中，不進匯出 payload。",
   placeholder:
     "裝飾珠選用旗標：Game8 元素佔位符（各属性珠／各属性強化の装飾品）＝「配你武器屬性選對應珠」，非單一珠、無 ID。顯示端應提示玩家依屬性自選（如火→火炎珠），不當缺漏。",
