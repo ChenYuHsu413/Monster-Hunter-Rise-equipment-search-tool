@@ -9953,11 +9953,12 @@
    "src": "material-tier"
   },
   "weapon_1902174681": {
-   "v": 3,
-   "h": 2,
+   "v": 5,
+   "h": 3,
    "mon": "翼蛇龍",
+   "note": "需先強化前一階（蛇劍【毒蛾】Ⅰ）",
    "c": "unverified",
-   "src": "rarity-approx"
+   "src": "tree-propagation"
   },
   "weapon_1916424702": {
    "h": 4,
@@ -10084,10 +10085,11 @@
    "src": "material-tier"
   },
   "weapon_317449258": {
-   "v": 1,
+   "v": 2,
    "h": 1,
+   "note": "需先強化前一階（鋼鐵劍）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_332221387": {
    "v": 2,
@@ -10590,10 +10592,11 @@
    "src": "anomaly-material"
   },
   "weapon_284802673": {
-   "mr": 10,
+   "mr": 50,
    "mon": "銀火龍",
-   "c": "confirmed",
-   "src": "tu-mr-const"
+   "note": "需先強化前一階（火龍吼劍）",
+   "c": "inferred",
+   "src": "tree-propagation"
   },
   "weapon_512419385": {
    "v": 6,
@@ -10621,9 +10624,10 @@
    "src": "quest-star"
   },
   "weapon_1453249896": {
-   "m": 3,
+   "m": 4,
+   "note": "需先強化前一階（突兀之角改）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_1466959113": {
    "mr": 50,
@@ -10931,9 +10935,10 @@
    "src": "material-tier"
   },
   "weapon_1142508555": {
-   "h": 7,
+   "h": 8,
+   "note": "需先強化前一階（暴風神大劍Ⅰ）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_1329834674": {
    "mr": 20,
@@ -11127,10 +11132,11 @@
    "src": "material-tier"
   },
   "weapon_1027909653": {
-   "h": 5,
+   "h": 6,
    "mon": "咬魚",
+   "note": "需先強化前一階（冷凍旗魚Ⅰ）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_1042159626": {
    "h": 6,
@@ -11186,14 +11192,16 @@
    "src": "material-tier"
   },
   "weapon_610045871": {
-   "h": 5,
+   "h": 6,
+   "note": "需先強化前一階（貓之靈魂Ⅰ）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_624295756": {
-   "h": 4,
+   "h": 6,
+   "note": "需先強化前一階（貓之靈魂Ⅱ）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_1834864472": {
    "m": 1,
@@ -11248,9 +11256,10 @@
    "src": "quest-star"
   },
   "weapon_136832009": {
-   "h": 6,
+   "h": 7,
+   "note": "需先強化前一階（百龍大劍Ⅳ）",
    "c": "unverified",
-   "src": "rarity-approx"
+   "src": "tree-propagation"
   },
   "weapon_864684119": {
    "h": 7,
@@ -13832,9 +13841,10 @@
    "src": "quest-star"
   },
   "weapon_1034532434": {
-   "m": 3,
+   "m": 4,
+   "note": "需先強化前一階（兄弟劍信仰改）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_1048766067": {
    "mr": 50,
@@ -14201,9 +14211,10 @@
    "src": "material-tier"
   },
   "weapon_1350745128": {
-   "h": 7,
+   "h": 8,
+   "note": "需先強化前一階（暴風神刃Ⅰ）",
    "c": "inferred",
-   "src": "material-tier"
+   "src": "tree-propagation"
   },
   "weapon_1596001020": {
    "mr": 20,
@@ -14590,9 +14601,10 @@
    "src": "quest-star"
   },
   "weapon_76108846": {
-   "h": 6,
+   "h": 7,
+   "note": "需先強化前一階（百龍雙刃Ⅳ）",
    "c": "unverified",
-   "src": "rarity-approx"
+   "src": "tree-propagation"
   },
   "weapon_832515949": {
    "h": 7,

@@ -1,0 +1,3632 @@
+{
+ "meta": {
+  "source": "derive-weapon-trees.mjs — Kiranico 列表順序分段（rarity 重置×可直接生產）+ 線性鏈門檻傳播",
+  "fields": "trees[]: treeId/type/treeName/nodeCount/rootCraftable; nodes{weaponId}: treeId/nodeIndex/craftable",
+  "caveat": "分岔形狀為線性鏈近似，升級限定分支根不繼承門檻（保守低估），待影片抽驗校正",
+  "types": [
+   "great-sword",
+   "dual-blades"
+  ]
+ },
+ "trees": [
+  {
+   "treeId": "great-sword/00",
+   "type": "great-sword",
+   "treeName": "村莊守衛防衛大劍",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/01",
+   "type": "great-sword",
+   "treeName": "神火鐵大劍",
+   "nodeCount": 9,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/02",
+   "type": "great-sword",
+   "treeName": "公爵利刃",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/03",
+   "type": "great-sword",
+   "treeName": "雪鬼獸大劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/04",
+   "type": "great-sword",
+   "treeName": "狐大劍東道宿夜花",
+   "nodeCount": 7,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/05",
+   "type": "great-sword",
+   "treeName": "玄鐵大劍",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/06",
+   "type": "great-sword",
+   "treeName": "土砂大劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/07",
+   "type": "great-sword",
+   "treeName": "轟龍大顎",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/08",
+   "type": "great-sword",
+   "treeName": "奇怪龍大劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/09",
+   "type": "great-sword",
+   "treeName": "鐮鼬龍刀",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/10",
+   "type": "great-sword",
+   "treeName": "蛇劍【毒蛾】",
+   "nodeCount": 5,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/11",
+   "type": "great-sword",
+   "treeName": "隱密鉤斬劍",
+   "nodeCount": 7,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/12",
+   "type": "great-sword",
+   "treeName": "人魚之劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/13",
+   "type": "great-sword",
+   "treeName": "雪花之瓊妃呼喚",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/14",
+   "type": "great-sword",
+   "treeName": "鐵劍",
+   "nodeCount": 9,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/15",
+   "type": "great-sword",
+   "treeName": "電龍啼劍",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/16",
+   "type": "great-sword",
+   "treeName": "灼炎大刀",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/17",
+   "type": "great-sword",
+   "treeName": "毒妖鳥大劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/18",
+   "type": "great-sword",
+   "treeName": "冰尖巨牙",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/19",
+   "type": "great-sword",
+   "treeName": "冷月之斷劍",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/20",
+   "type": "great-sword",
+   "treeName": "傘之大劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/21",
+   "type": "great-sword",
+   "treeName": "全身逼擠",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/22",
+   "type": "great-sword",
+   "treeName": "骨劍",
+   "nodeCount": 9,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/23",
+   "type": "great-sword",
+   "treeName": "紅鉗劍",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/24",
+   "type": "great-sword",
+   "treeName": "將軍蟹之刃",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/25",
+   "type": "great-sword",
+   "treeName": "巨骨劍",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/26",
+   "type": "great-sword",
+   "treeName": "裂傷參宿七",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/27",
+   "type": "great-sword",
+   "treeName": "女武神骨劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/28",
+   "type": "great-sword",
+   "treeName": "薔薇板劍",
+   "nodeCount": 4,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/29",
+   "type": "great-sword",
+   "treeName": "泥土大劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/30",
+   "type": "great-sword",
+   "treeName": "赤紅之翼",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/31",
+   "type": "great-sword",
+   "treeName": "不諧對角",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/32",
+   "type": "great-sword",
+   "treeName": "狗龍大劍",
+   "nodeCount": 5,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/33",
+   "type": "great-sword",
+   "treeName": "蠻顎龍大劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/34",
+   "type": "great-sword",
+   "treeName": "王大劍風雷",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/35",
+   "type": "great-sword",
+   "treeName": "暴雨大劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/36",
+   "type": "great-sword",
+   "treeName": "剛纏獸之刃",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/37",
+   "type": "great-sword",
+   "treeName": "冰雪大劍",
+   "nodeCount": 5,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/38",
+   "type": "great-sword",
+   "treeName": "禍大劍【封】",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/39",
+   "type": "great-sword",
+   "treeName": "自尊of暗影",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/40",
+   "type": "great-sword",
+   "treeName": "THE啟示",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "great-sword/41",
+   "type": "great-sword",
+   "treeName": "鬼金棒",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/42",
+   "type": "great-sword",
+   "treeName": "暴風神大劍",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/43",
+   "type": "great-sword",
+   "treeName": "雷鳴神大劍",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/44",
+   "type": "great-sword",
+   "treeName": "鋼冰大劍",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/45",
+   "type": "great-sword",
+   "treeName": "炎王之刃",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/46",
+   "type": "great-sword",
+   "treeName": "獅尾毒彎刀",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/47",
+   "type": "great-sword",
+   "treeName": "赫翼大劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/48",
+   "type": "great-sword",
+   "treeName": "龍之棲所",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/49",
+   "type": "great-sword",
+   "treeName": "誘入夢鄉之貝大劍",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/50",
+   "type": "great-sword",
+   "treeName": "冷凍旗魚",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/51",
+   "type": "great-sword",
+   "treeName": "忍傘【吞龍】",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/52",
+   "type": "great-sword",
+   "treeName": "貓之靈魂",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/53",
+   "type": "great-sword",
+   "treeName": "王國騎士信念大劍",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "great-sword/54",
+   "type": "great-sword",
+   "treeName": "百龍大劍",
+   "nodeCount": 8,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/00",
+   "type": "dual-blades",
+   "treeName": "村莊守衛防衛雙刃",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/01",
+   "type": "dual-blades",
+   "treeName": "神火鐵雙刃",
+   "nodeCount": 9,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/02",
+   "type": "dual-blades",
+   "treeName": "公爵勾劍",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/03",
+   "type": "dual-blades",
+   "treeName": "泥翁雙斬劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/04",
+   "type": "dual-blades",
+   "treeName": "熔翁離溶劍",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/05",
+   "type": "dual-blades",
+   "treeName": "王雙刃雷神",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/06",
+   "type": "dual-blades",
+   "treeName": "暗霧蘊劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/07",
+   "type": "dual-blades",
+   "treeName": "亡命之徒",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/08",
+   "type": "dual-blades",
+   "treeName": "奇怪龍短劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/09",
+   "type": "dual-blades",
+   "treeName": "雙匕",
+   "nodeCount": 9,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/10",
+   "type": "dual-blades",
+   "treeName": "轟龍雙切",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/11",
+   "type": "dual-blades",
+   "treeName": "狐雙刃拂曉夢如空",
+   "nodeCount": 7,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/12",
+   "type": "dual-blades",
+   "treeName": "傘之雙劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/13",
+   "type": "dual-blades",
+   "treeName": "鳥喙雙劍",
+   "nodeCount": 5,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/14",
+   "type": "dual-blades",
+   "treeName": "冰層心劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/15",
+   "type": "dual-blades",
+   "treeName": "冷月之朱爪",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/16",
+   "type": "dual-blades",
+   "treeName": "隱密匕首",
+   "nodeCount": 7,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/17",
+   "type": "dual-blades",
+   "treeName": "雙電鋸刀",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/18",
+   "type": "dual-blades",
+   "treeName": "雙戰斧",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/19",
+   "type": "dual-blades",
+   "treeName": "青熊雙鉞",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/20",
+   "type": "dual-blades",
+   "treeName": "蠻顎龍雙劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/21",
+   "type": "dual-blades",
+   "treeName": "骨斧",
+   "nodeCount": 9,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/22",
+   "type": "dual-blades",
+   "treeName": "巨顎軒轅十二",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/23",
+   "type": "dual-blades",
+   "treeName": "蟹角",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/24",
+   "type": "dual-blades",
+   "treeName": "六刃雙刀",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/25",
+   "type": "dual-blades",
+   "treeName": "雌雄焰刀",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/26",
+   "type": "dual-blades",
+   "treeName": "薔薇獠牙",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/27",
+   "type": "dual-blades",
+   "treeName": "兄弟劍",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/28",
+   "type": "dual-blades",
+   "treeName": "泥土雙劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/29",
+   "type": "dual-blades",
+   "treeName": "飛雷雙劍裂蛇",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/30",
+   "type": "dual-blades",
+   "treeName": "火刃火燃石",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/31",
+   "type": "dual-blades",
+   "treeName": "水獸雙劍",
+   "nodeCount": 6,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/32",
+   "type": "dual-blades",
+   "treeName": "剛纏獸之對",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/33",
+   "type": "dual-blades",
+   "treeName": "人魚之爪",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/34",
+   "type": "dual-blades",
+   "treeName": "雪花之瓊妃抱擁",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/35",
+   "type": "dual-blades",
+   "treeName": "冰雪雙劍",
+   "nodeCount": 5,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/36",
+   "type": "dual-blades",
+   "treeName": "禍刃【封】",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/37",
+   "type": "dual-blades",
+   "treeName": "烏鴉of撕裂者",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/38",
+   "type": "dual-blades",
+   "treeName": "THE使徒",
+   "nodeCount": 3,
+   "rootCraftable": false
+  },
+  {
+   "treeId": "dual-blades/39",
+   "type": "dual-blades",
+   "treeName": "鬥鬼【高丸】",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/40",
+   "type": "dual-blades",
+   "treeName": "暴風神刃",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/41",
+   "type": "dual-blades",
+   "treeName": "爆鱗手斧",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/42",
+   "type": "dual-blades",
+   "treeName": "雷鳴神刃",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/43",
+   "type": "dual-blades",
+   "treeName": "鋼冰狼牙",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/44",
+   "type": "dual-blades",
+   "treeName": "雙爪刀",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/45",
+   "type": "dual-blades",
+   "treeName": "焰形雙劍",
+   "nodeCount": 4,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/46",
+   "type": "dual-blades",
+   "treeName": "赫翼雙刃",
+   "nodeCount": 6,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/47",
+   "type": "dual-blades",
+   "treeName": "貓手雙劍",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/48",
+   "type": "dual-blades",
+   "treeName": "雨天水母",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/49",
+   "type": "dual-blades",
+   "treeName": "半圓蟲斧",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/50",
+   "type": "dual-blades",
+   "treeName": "秩序細劍",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/51",
+   "type": "dual-blades",
+   "treeName": "異態尾劍",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/52",
+   "type": "dual-blades",
+   "treeName": "忍糰子【睡蜜玉】",
+   "nodeCount": 5,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/53",
+   "type": "dual-blades",
+   "treeName": "村長雙刀【不限】",
+   "nodeCount": 2,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/54",
+   "type": "dual-blades",
+   "treeName": "王國騎士意志雙劍",
+   "nodeCount": 3,
+   "rootCraftable": true
+  },
+  {
+   "treeId": "dual-blades/55",
+   "type": "dual-blades",
+   "treeName": "百龍雙刃",
+   "nodeCount": 8,
+   "rootCraftable": true
+  }
+ ],
+ "nodes": {
+  "weapon_184112174": {
+   "treeId": "great-sword/00",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_198360015": {
+   "treeId": "great-sword/00",
+   "nodeIndex": 1,
+   "craftable": true
+  },
+  "weapon_86605005": {
+   "treeId": "great-sword/00",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_100838626": {
+   "treeId": "great-sword/00",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_14949507": {
+   "treeId": "great-sword/00",
+   "nodeIndex": 4,
+   "craftable": true
+  },
+  "weapon_166615486": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_180848991": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_194574716": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_879896861": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_894146866": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 4,
+   "craftable": true
+  },
+  "weapon_908904659": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1268645766": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_1953968039": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 7,
+   "craftable": false
+  },
+  "weapon_1967693636": {
+   "treeId": "great-sword/01",
+   "nodeIndex": 8,
+   "craftable": false
+  },
+  "weapon_343256722": {
+   "treeId": "great-sword/02",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_357506739": {
+   "treeId": "great-sword/02",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_176669624": {
+   "treeId": "great-sword/02",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_1608178838": {
+   "treeId": "great-sword/03",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1488719031": {
+   "treeId": "great-sword/03",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1502968916": {
+   "treeId": "great-sword/03",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1981927269": {
+   "treeId": "great-sword/03",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1895513882": {
+   "treeId": "great-sword/03",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1910271803": {
+   "treeId": "great-sword/03",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1750804397": {
+   "treeId": "great-sword/04",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1765578562": {
+   "treeId": "great-sword/04",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1779812195": {
+   "treeId": "great-sword/04",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1924521688": {
+   "treeId": "great-sword/04",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1938755321": {
+   "treeId": "great-sword/04",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_2086698654": {
+   "treeId": "great-sword/04",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_2100932287": {
+   "treeId": "great-sword/04",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_508648366": {
+   "treeId": "great-sword/05",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_522881871": {
+   "treeId": "great-sword/05",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_402914156": {
+   "treeId": "great-sword/05",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1232589542": {
+   "treeId": "great-sword/06",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1246298759": {
+   "treeId": "great-sword/06",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1260548772": {
+   "treeId": "great-sword/06",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2057760307": {
+   "treeId": "great-sword/06",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_2071485904": {
+   "treeId": "great-sword/06",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1683066353": {
+   "treeId": "great-sword/06",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_302454362": {
+   "treeId": "great-sword/07",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_483935867": {
+   "treeId": "great-sword/07",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_498185752": {
+   "treeId": "great-sword/07",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1697316246": {
+   "treeId": "great-sword/07",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1712074167": {
+   "treeId": "great-sword/07",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1625660756": {
+   "treeId": "great-sword/07",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1979425349": {
+   "treeId": "great-sword/08",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1994199674": {
+   "treeId": "great-sword/08",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_2008433179": {
+   "treeId": "great-sword/08",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1639894389": {
+   "treeId": "great-sword/08",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1653620074": {
+   "treeId": "great-sword/08",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1667853579": {
+   "treeId": "great-sword/08",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_757534375": {
+   "treeId": "great-sword/09",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_804814404": {
+   "treeId": "great-sword/09",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_684830309": {
+   "treeId": "great-sword/09",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1816321320": {
+   "treeId": "great-sword/09",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1831079113": {
+   "treeId": "great-sword/09",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1888465464": {
+   "treeId": "great-sword/10",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1902174681": {
+   "treeId": "great-sword/10",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1916424702": {
+   "treeId": "great-sword/10",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1878883566": {
+   "treeId": "great-sword/10",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1758899343": {
+   "treeId": "great-sword/10",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1842829262": {
+   "treeId": "great-sword/11",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1856538607": {
+   "treeId": "great-sword/11",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1870788492": {
+   "treeId": "great-sword/11",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1772625068": {
+   "treeId": "great-sword/11",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1786858573": {
+   "treeId": "great-sword/11",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1801108578": {
+   "treeId": "great-sword/11",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_313810487": {
+   "treeId": "great-sword/11",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_1354956124": {
+   "treeId": "great-sword/12",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1369714045": {
+   "treeId": "great-sword/12",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1383963922": {
+   "treeId": "great-sword/12",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_338947075": {
+   "treeId": "great-sword/12",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_353721376": {
+   "treeId": "great-sword/12",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_401507265": {
+   "treeId": "great-sword/12",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_281539558": {
+   "treeId": "great-sword/13",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_295248775": {
+   "treeId": "great-sword/13",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_309498788": {
+   "treeId": "great-sword/13",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_480689128": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_494922633": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_317449258": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_332221387": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_451226381": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 4,
+   "craftable": true
+  },
+  "weapon_465476386": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_323732293": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_472724346": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 7,
+   "craftable": false
+  },
+  "weapon_486957851": {
+   "treeId": "great-sword/14",
+   "nodeIndex": 8,
+   "craftable": false
+  },
+  "weapon_534762296": {
+   "treeId": "great-sword/15",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_414253785": {
+   "treeId": "great-sword/15",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_428503806": {
+   "treeId": "great-sword/15",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_224020955": {
+   "treeId": "great-sword/16",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_238270968": {
+   "treeId": "great-sword/16",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_253028761": {
+   "treeId": "great-sword/16",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_442737311": {
+   "treeId": "great-sword/16",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_457511612": {
+   "treeId": "great-sword/16",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_69091933": {
+   "treeId": "great-sword/16",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1930658207": {
+   "treeId": "great-sword/17",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_2113204668": {
+   "treeId": "great-sword/17",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_2127438173": {
+   "treeId": "great-sword/17",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_116896370": {
+   "treeId": "great-sword/17",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_130605587": {
+   "treeId": "great-sword/17",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_10637872": {
+   "treeId": "great-sword/17",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1723822260": {
+   "treeId": "great-sword/18",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1737531477": {
+   "treeId": "great-sword/18",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1617563722": {
+   "treeId": "great-sword/18",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_24871377": {
+   "treeId": "great-sword/18",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_39645686": {
+   "treeId": "great-sword/18",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_53879191": {
+   "treeId": "great-sword/18",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_202346932": {
+   "treeId": "great-sword/19",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_249610581": {
+   "treeId": "great-sword/19",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_263860554": {
+   "treeId": "great-sword/19",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_699080218": {
+   "treeId": "great-sword/20",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_713838139": {
+   "treeId": "great-sword/20",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_728088024": {
+   "treeId": "great-sword/20",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_143876459": {
+   "treeId": "great-sword/20",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_158650632": {
+   "treeId": "great-sword/20",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_172884265": {
+   "treeId": "great-sword/20",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1413410297": {
+   "treeId": "great-sword/21",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1427135902": {
+   "treeId": "great-sword/21",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1474923967": {
+   "treeId": "great-sword/21",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_187134158": {
+   "treeId": "great-sword/21",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_905486575": {
+   "treeId": "great-sword/21",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_919736460": {
+   "treeId": "great-sword/21",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_77056707": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_90782432": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_105015937": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_119265958": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_33360455": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_47610468": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_933970093": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 6,
+   "craftable": false
+  },
+  "weapon_814526530": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 7,
+   "craftable": false
+  },
+  "weapon_828760163": {
+   "treeId": "great-sword/22",
+   "nodeIndex": 8,
+   "craftable": false
+  },
+  "weapon_843010048": {
+   "treeId": "great-sword/23",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_856719393": {
+   "treeId": "great-sword/23",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1038743494": {
+   "treeId": "great-sword/23",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1052977127": {
+   "treeId": "great-sword/24",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1067751300": {
+   "treeId": "great-sword/24",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_947767205": {
+   "treeId": "great-sword/24",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_61843973": {
+   "treeId": "great-sword/25",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_209787450": {
+   "treeId": "great-sword/25",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_962017114": {
+   "treeId": "great-sword/25",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_975726459": {
+   "treeId": "great-sword/25",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_989976344": {
+   "treeId": "great-sword/25",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_635111225": {
+   "treeId": "great-sword/26",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_649885406": {
+   "treeId": "great-sword/26",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_664119039": {
+   "treeId": "great-sword/26",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2049663185": {
+   "treeId": "great-sword/27",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_2064437494": {
+   "treeId": "great-sword/27",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1709572247": {
+   "treeId": "great-sword/27",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_544151196": {
+   "treeId": "great-sword/27",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_557860541": {
+   "treeId": "great-sword/27",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_572110418": {
+   "treeId": "great-sword/27",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_754116211": {
+   "treeId": "great-sword/28",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_768890384": {
+   "treeId": "great-sword/28",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_783124017": {
+   "treeId": "great-sword/28",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_371215952": {
+   "treeId": "great-sword/28",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_2141688178": {
+   "treeId": "great-sword/29",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_2021179667": {
+   "treeId": "great-sword/29",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_2035429680": {
+   "treeId": "great-sword/29",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_797373910": {
+   "treeId": "great-sword/29",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_676865527": {
+   "treeId": "great-sword/29",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_691115412": {
+   "treeId": "great-sword/29",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_351221504": {
+   "treeId": "great-sword/30",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_364930849": {
+   "treeId": "great-sword/30",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_379180742": {
+   "treeId": "great-sword/30",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_705349045": {
+   "treeId": "great-sword/30",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1424766378": {
+   "treeId": "great-sword/30",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_284802673": {
+   "treeId": "great-sword/30",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_512419385": {
+   "treeId": "great-sword/31",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_527193566": {
+   "treeId": "great-sword/31",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_407209471": {
+   "treeId": "great-sword/31",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1438999883": {
+   "treeId": "great-sword/31",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1453249896": {
+   "treeId": "great-sword/31",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1466959113": {
+   "treeId": "great-sword/31",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_213558453": {
+   "treeId": "great-sword/32",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_228332714": {
+   "treeId": "great-sword/32",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_242566219": {
+   "treeId": "great-sword/32",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1346991406": {
+   "treeId": "great-sword/32",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1361224911": {
+   "treeId": "great-sword/32",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1631797355": {
+   "treeId": "great-sword/33",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1646571528": {
+   "treeId": "great-sword/33",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1828577321": {
+   "treeId": "great-sword/33",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1375999212": {
+   "treeId": "great-sword/33",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1558004877": {
+   "treeId": "great-sword/33",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1572254882": {
+   "treeId": "great-sword/33",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_393414375": {
+   "treeId": "great-sword/34",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_273970820": {
+   "treeId": "great-sword/34",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_288204453": {
+   "treeId": "great-sword/34",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1586488387": {
+   "treeId": "great-sword/34",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1600214112": {
+   "treeId": "great-sword/34",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1323549443": {
+   "treeId": "great-sword/35",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1338323744": {
+   "treeId": "great-sword/35",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1218339521": {
+   "treeId": "great-sword/35",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1480229889": {
+   "treeId": "great-sword/35",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1494479910": {
+   "treeId": "great-sword/35",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1542806471": {
+   "treeId": "great-sword/35",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1154386916": {
+   "treeId": "great-sword/36",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1168636805": {
+   "treeId": "great-sword/36",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1182346170": {
+   "treeId": "great-sword/36",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1113584556": {
+   "treeId": "great-sword/37",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1127293773": {
+   "treeId": "great-sword/37",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1275761506": {
+   "treeId": "great-sword/37",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1196596059": {
+   "treeId": "great-sword/37",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1076611960": {
+   "treeId": "great-sword/37",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1398197555": {
+   "treeId": "great-sword/38",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1546140880": {
+   "treeId": "great-sword/38",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1560374513": {
+   "treeId": "great-sword/38",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1091386137": {
+   "treeId": "great-sword/38",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1139174206": {
+   "treeId": "great-sword/38",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1287641823": {
+   "treeId": "great-sword/38",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_2090482025": {
+   "treeId": "great-sword/39",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_2104715534": {
+   "treeId": "great-sword/39",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_2119489839": {
+   "treeId": "great-sword/39",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2133723340": {
+   "treeId": "great-sword/40",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_2013755629": {
+   "treeId": "great-sword/40",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_219843620": {
+   "treeId": "great-sword/40",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_3593430": {
+   "treeId": "great-sword/41",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_17302775": {
+   "treeId": "great-sword/41",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_65107092": {
+   "treeId": "great-sword/41",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1301351164": {
+   "treeId": "great-sword/41",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1315601053": {
+   "treeId": "great-sword/41",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_2075269283": {
+   "treeId": "great-sword/41",
+   "nodeIndex": 5,
+   "craftable": true
+  },
+  "weapon_1517202549": {
+   "treeId": "great-sword/42",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1530928234": {
+   "treeId": "great-sword/42",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1142508555": {
+   "treeId": "great-sword/42",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1329834674": {
+   "treeId": "great-sword/42",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1190313000": {
+   "treeId": "great-sword/43",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1204544457": {
+   "treeId": "great-sword/43",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1258179184": {
+   "treeId": "great-sword/43",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_421459356": {
+   "treeId": "great-sword/44",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_468723133": {
+   "treeId": "great-sword/44",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1957227062": {
+   "treeId": "great-sword/44",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1971476951": {
+   "treeId": "great-sword/44",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_80319826": {
+   "treeId": "great-sword/45",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_94553459": {
+   "treeId": "great-sword/45",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1985710580": {
+   "treeId": "great-sword/45",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2000484757": {
+   "treeId": "great-sword/45",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_109327632": {
+   "treeId": "great-sword/46",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_123561265": {
+   "treeId": "great-sword/46",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1880500618": {
+   "treeId": "great-sword/46",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1928305067": {
+   "treeId": "great-sword/46",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1085101038": {
+   "treeId": "great-sword/47",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1099334543": {
+   "treeId": "great-sword/47",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1942014280": {
+   "treeId": "great-sword/47",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2061019266": {
+   "treeId": "great-sword/47",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_148186106": {
+   "treeId": "great-sword/47",
+   "nodeIndex": 4,
+   "craftable": true
+  },
+  "weapon_162435995": {
+   "treeId": "great-sword/47",
+   "nodeIndex": 5,
+   "craftable": true
+  },
+  "weapon_638529389": {
+   "treeId": "great-sword/48",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_551591682": {
+   "treeId": "great-sword/48",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_565825315": {
+   "treeId": "great-sword/48",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1686849600": {
+   "treeId": "great-sword/48",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1701623905": {
+   "treeId": "great-sword/48",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_580075200": {
+   "treeId": "great-sword/49",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_594833121": {
+   "treeId": "great-sword/49",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_743300742": {
+   "treeId": "great-sword/49",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1715857414": {
+   "treeId": "great-sword/49",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1730107431": {
+   "treeId": "great-sword/49",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1013151860": {
+   "treeId": "great-sword/50",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1027909653": {
+   "treeId": "great-sword/50",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1042159626": {
+   "treeId": "great-sword/50",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1643155396": {
+   "treeId": "great-sword/50",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1657405413": {
+   "treeId": "great-sword/50",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_955729963": {
+   "treeId": "great-sword/51",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_969457608": {
+   "treeId": "great-sword/51",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_983691241": {
+   "treeId": "great-sword/51",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1671638938": {
+   "treeId": "great-sword/51",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1820630971": {
+   "treeId": "great-sword/51",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_997941134": {
+   "treeId": "great-sword/52",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_610045871": {
+   "treeId": "great-sword/52",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_624295756": {
+   "treeId": "great-sword/52",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1834864472": {
+   "treeId": "great-sword/52",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1849114489": {
+   "treeId": "great-sword/52",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1862823710": {
+   "treeId": "great-sword/53",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1790643932": {
+   "treeId": "great-sword/53",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1805418237": {
+   "treeId": "great-sword/53",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_923154672": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_836724881": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_850450614": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_256816232": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_136832009": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_864684119": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_205609991": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_267645893": {
+   "treeId": "great-sword/54",
+   "nodeIndex": 7,
+   "craftable": true
+  },
+  "weapon_90356687": {
+   "treeId": "dual-blades/00",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_104590316": {
+   "treeId": "dual-blades/00",
+   "nodeIndex": 1,
+   "craftable": true
+  },
+  "weapon_10212127": {
+   "treeId": "dual-blades/00",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_24970044": {
+   "treeId": "dual-blades/00",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_39219933": {
+   "treeId": "dual-blades/00",
+   "nodeIndex": 4,
+   "craftable": true
+  },
+  "weapon_267614324": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_148154389": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_162404362": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_176637995": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_190365640": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 4,
+   "craftable": true
+  },
+  "weapon_875687913": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1160642438": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_1174876071": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 7,
+   "craftable": false
+  },
+  "weapon_1087938372": {
+   "treeId": "dual-blades/01",
+   "nodeIndex": 8,
+   "craftable": false
+  },
+  "weapon_1102172005": {
+   "treeId": "dual-blades/02",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1116421914": {
+   "treeId": "dual-blades/02",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_919310827": {
+   "treeId": "dual-blades/02",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_709627063": {
+   "treeId": "dual-blades/03",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_723876948": {
+   "treeId": "dual-blades/03",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1442753653": {
+   "treeId": "dual-blades/03",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1131179835": {
+   "treeId": "dual-blades/03",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1279647448": {
+   "treeId": "dual-blades/03",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1293881081": {
+   "treeId": "dual-blades/03",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1341161118": {
+   "treeId": "dual-blades/04",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_53453554": {
+   "treeId": "dual-blades/04",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1221177023": {
+   "treeId": "dual-blades/04",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1675916932": {
+   "treeId": "dual-blades/05",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1824368293": {
+   "treeId": "dual-blades/05",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1838618202": {
+   "treeId": "dual-blades/05",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1235426908": {
+   "treeId": "dual-blades/05",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1250184829": {
+   "treeId": "dual-blades/05",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1989988598": {
+   "treeId": "dual-blades/06",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_2004222103": {
+   "treeId": "dual-blades/06",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1884254388": {
+   "treeId": "dual-blades/06",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1264434706": {
+   "treeId": "dual-blades/06",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1949756979": {
+   "treeId": "dual-blades/06",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1963482576": {
+   "treeId": "dual-blades/06",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1171849863": {
+   "treeId": "dual-blades/07",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1186099876": {
+   "treeId": "dual-blades/07",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1200333381": {
+   "treeId": "dual-blades/07",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2011270641": {
+   "treeId": "dual-blades/07",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1891302806": {
+   "treeId": "dual-blades/07",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1334112700": {
+   "treeId": "dual-blades/08",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1214128477": {
+   "treeId": "dual-blades/08",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1228378482": {
+   "treeId": "dual-blades/08",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1906060727": {
+   "treeId": "dual-blades/08",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1920310612": {
+   "treeId": "dual-blades/08",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1934544245": {
+   "treeId": "dual-blades/08",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1820058666": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1834830795": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1849080808": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1863314313": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1776376750": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1790610255": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_2082487658": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 6,
+   "craftable": false
+  },
+  "weapon_2130275595": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 7,
+   "craftable": false
+  },
+  "weapon_2144525608": {
+   "treeId": "dual-blades/09",
+   "nodeIndex": 8,
+   "craftable": false
+  },
+  "weapon_1852327547": {
+   "treeId": "dual-blades/10",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1866577432": {
+   "treeId": "dual-blades/10",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1746593337": {
+   "treeId": "dual-blades/10",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2025065673": {
+   "treeId": "dual-blades/10",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_2039315694": {
+   "treeId": "dual-blades/10",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_2053549199": {
+   "treeId": "dual-blades/10",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1691129666": {
+   "treeId": "dual-blades/11",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1705363299": {
+   "treeId": "dual-blades/11",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1719613184": {
+   "treeId": "dual-blades/11",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2067274924": {
+   "treeId": "dual-blades/11",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1678855245": {
+   "treeId": "dual-blades/11",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1726659682": {
+   "treeId": "dual-blades/11",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1740893187": {
+   "treeId": "dual-blades/11",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_547380638": {
+   "treeId": "dual-blades/12",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_561614271": {
+   "treeId": "dual-blades/12",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_575864156": {
+   "treeId": "dual-blades/12",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1621449760": {
+   "treeId": "dual-blades/12",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1635681217": {
+   "treeId": "dual-blades/12",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1649931238": {
+   "treeId": "dual-blades/12",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1080889978": {
+   "treeId": "dual-blades/13",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1095123483": {
+   "treeId": "dual-blades/13",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1109373496": {
+   "treeId": "dual-blades/13",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1663640455": {
+   "treeId": "dual-blades/13",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1812108196": {
+   "treeId": "dual-blades/13",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_432257528": {
+   "treeId": "dual-blades/14",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_447015321": {
+   "treeId": "dual-blades/14",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_461265342": {
+   "treeId": "dual-blades/14",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1859896133": {
+   "treeId": "dual-blades/14",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1874670458": {
+   "treeId": "dual-blades/14",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1754686235": {
+   "treeId": "dual-blades/14",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1768936248": {
+   "treeId": "dual-blades/15",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1782645465": {
+   "treeId": "dual-blades/15",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1796895486": {
+   "treeId": "dual-blades/15",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2016970735": {
+   "treeId": "dual-blades/16",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_2031220620": {
+   "treeId": "dual-blades/16",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_2079008685": {
+   "treeId": "dual-blades/16",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_368288415": {
+   "treeId": "dual-blades/16",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_383062716": {
+   "treeId": "dual-blades/16",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_397296221": {
+   "treeId": "dual-blades/16",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1757949418": {
+   "treeId": "dual-blades/16",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_490711557": {
+   "treeId": "dual-blades/17",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_504437306": {
+   "treeId": "dual-blades/17",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_418007515": {
+   "treeId": "dual-blades/17",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_277328498": {
+   "treeId": "dual-blades/17",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_291037715": {
+   "treeId": "dual-blades/17",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_305287728": {
+   "treeId": "dual-blades/17",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1804860268": {
+   "treeId": "dual-blades/18",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_343223053": {
+   "treeId": "dual-blades/18",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_357473058": {
+   "treeId": "dual-blades/18",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_530551220": {
+   "treeId": "dual-blades/18",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_410042709": {
+   "treeId": "dual-blades/18",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_424292682": {
+   "treeId": "dual-blades/18",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1589715789": {
+   "treeId": "dual-blades/19",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1603965794": {
+   "treeId": "dual-blades/19",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1483981571": {
+   "treeId": "dual-blades/19",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_438526315": {
+   "treeId": "dual-blades/19",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_453300488": {
+   "treeId": "dual-blades/19",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_2108993544": {
+   "treeId": "dual-blades/20",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_2123227177": {
+   "treeId": "dual-blades/20",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_2137479118": {
+   "treeId": "dual-blades/20",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_98435369": {
+   "treeId": "dual-blades/20",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_112685262": {
+   "treeId": "dual-blades/20",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_126394607": {
+   "treeId": "dual-blades/20",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_72845663": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_86571388": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_100804893": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_14391602": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_29149395": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_43399408": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_6426764": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_20660397": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 7,
+   "craftable": false
+  },
+  "weapon_35434562": {
+   "treeId": "dual-blades/21",
+   "nodeIndex": 8,
+   "craftable": false
+  },
+  "weapon_217440355": {
+   "treeId": "dual-blades/22",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_231690240": {
+   "treeId": "dual-blades/22",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_245399585": {
+   "treeId": "dual-blades/22",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_259651526": {
+   "treeId": "dual-blades/23",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_139667431": {
+   "treeId": "dual-blades/23",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_154441604": {
+   "treeId": "dual-blades/23",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_168675237": {
+   "treeId": "dual-blades/24",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_887568218": {
+   "treeId": "dual-blades/24",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_901277563": {
+   "treeId": "dual-blades/24",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1733322529": {
+   "treeId": "dual-blades/25",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1613354694": {
+   "treeId": "dual-blades/25",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1627588327": {
+   "treeId": "dual-blades/25",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_915527448": {
+   "treeId": "dual-blades/25",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_929761081": {
+   "treeId": "dual-blades/25",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1830653396": {
+   "treeId": "dual-blades/25",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_810317534": {
+   "treeId": "dual-blades/26",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_824551167": {
+   "treeId": "dual-blades/26",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_872355484": {
+   "treeId": "dual-blades/26",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1816419895": {
+   "treeId": "dual-blades/26",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_1794921950": {
+   "treeId": "dual-blades/27",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1809155583": {
+   "treeId": "dual-blades/27",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_347010460": {
+   "treeId": "dual-blades/27",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1020282557": {
+   "treeId": "dual-blades/27",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1034532434": {
+   "treeId": "dual-blades/27",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1048766067": {
+   "treeId": "dual-blades/27",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1242087699": {
+   "treeId": "dual-blades/28",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1960980784": {
+   "treeId": "dual-blades/28",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1975214289": {
+   "treeId": "dual-blades/28",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1063540240": {
+   "treeId": "dual-blades/28",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_943556145": {
+   "treeId": "dual-blades/28",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_957806038": {
+   "treeId": "dual-blades/28",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1897963605": {
+   "treeId": "dual-blades/29",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1945768010": {
+   "treeId": "dual-blades/29",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_2094219371": {
+   "treeId": "dual-blades/29",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1005069815": {
+   "treeId": "dual-blades/29",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_616666516": {
+   "treeId": "dual-blades/29",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_630900149": {
+   "treeId": "dual-blades/29",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_57632913": {
+   "treeId": "dual-blades/30",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_205576374": {
+   "treeId": "dual-blades/30",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_219809879": {
+   "treeId": "dual-blades/30",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1420031014": {
+   "treeId": "dual-blades/30",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1434803143": {
+   "treeId": "dual-blades/30",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1449036772": {
+   "treeId": "dual-blades/30",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1290854873": {
+   "treeId": "dual-blades/31",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1305104894": {
+   "treeId": "dual-blades/31",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1319338399": {
+   "treeId": "dual-blades/31",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_645674410": {
+   "treeId": "dual-blades/31",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_659907915": {
+   "treeId": "dual-blades/31",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_539940200": {
+   "treeId": "dual-blades/31",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_553649417": {
+   "treeId": "dual-blades/32",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_601453870": {
+   "treeId": "dual-blades/32",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_749905103": {
+   "treeId": "dual-blades/32",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_590622077": {
+   "treeId": "dual-blades/33",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_739089682": {
+   "treeId": "dual-blades/33",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_786877747": {
+   "treeId": "dual-blades/33",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_764679404": {
+   "treeId": "dual-blades/33",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_778912909": {
+   "treeId": "dual-blades/33",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_793162914": {
+   "treeId": "dual-blades/33",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_673178691": {
+   "treeId": "dual-blades/34",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_720458848": {
+   "treeId": "dual-blades/34",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_734692353": {
+   "treeId": "dual-blades/34",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1498755872": {
+   "treeId": "dual-blades/35",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1512989377": {
+   "treeId": "dual-blades/35",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1527239398": {
+   "treeId": "dual-blades/35",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1463286661": {
+   "treeId": "dual-blades/35",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1342778298": {
+   "treeId": "dual-blades/35",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_800603344": {
+   "treeId": "dual-blades/36",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_680619249": {
+   "treeId": "dual-blades/36",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_694869142": {
+   "treeId": "dual-blades/36",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1390582619": {
+   "treeId": "dual-blades/36",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1404816248": {
+   "treeId": "dual-blades/36",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1553808153": {
+   "treeId": "dual-blades/36",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_1311390057": {
+   "treeId": "dual-blades/37",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1325623566": {
+   "treeId": "dual-blades/37",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1239734575": {
+   "treeId": "dual-blades/37",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1253968076": {
+   "treeId": "dual-blades/38",
+   "nodeIndex": 0,
+   "craftable": false
+  },
+  "weapon_1268218093": {
+   "treeId": "dual-blades/38",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_158224919": {
+   "treeId": "dual-blades/38",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_479724791": {
+   "treeId": "dual-blades/39",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_493974676": {
+   "treeId": "dual-blades/39",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_508208309": {
+   "treeId": "dual-blades/39",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1568041790": {
+   "treeId": "dual-blades/39",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1582291679": {
+   "treeId": "dual-blades/39",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1967265955": {
+   "treeId": "dual-blades/39",
+   "nodeIndex": 5,
+   "craftable": true
+  },
+  "weapon_1456479338": {
+   "treeId": "dual-blades/40",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1470712843": {
+   "treeId": "dual-blades/40",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1350745128": {
+   "treeId": "dual-blades/40",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1596001020": {
+   "treeId": "dual-blades/40",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_522982570": {
+   "treeId": "dual-blades/41",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_402998347": {
+   "treeId": "dual-blades/41",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_450802792": {
+   "treeId": "dual-blades/41",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1523821234": {
+   "treeId": "dual-blades/41",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1538595411": {
+   "treeId": "dual-blades/41",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_1364976585": {
+   "treeId": "dual-blades/42",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1379750894": {
+   "treeId": "dual-blades/42",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1150175856": {
+   "treeId": "dual-blades/42",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_360719805": {
+   "treeId": "dual-blades/43",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_374969682": {
+   "treeId": "dual-blades/43",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1178135094": {
+   "treeId": "dual-blades/43",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1192384983": {
+   "treeId": "dual-blades/43",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_389203315": {
+   "treeId": "dual-blades/44",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_269759760": {
+   "treeId": "dual-blades/44",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1105955316": {
+   "treeId": "dual-blades/44",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1120729493": {
+   "treeId": "dual-blades/44",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_317547825": {
+   "treeId": "dual-blades/45",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_331797718": {
+   "treeId": "dual-blades/45",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1134963082": {
+   "treeId": "dual-blades/45",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1283430827": {
+   "treeId": "dual-blades/45",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1393984399": {
+   "treeId": "dual-blades/46",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1576006572": {
+   "treeId": "dual-blades/46",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1297140040": {
+   "treeId": "dual-blades/46",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1953015938": {
+   "treeId": "dual-blades/46",
+   "nodeIndex": 3,
+   "craftable": true
+  },
+  "weapon_186184149": {
+   "treeId": "dual-blades/46",
+   "nodeIndex": 4,
+   "craftable": true
+  },
+  "weapon_905060810": {
+   "treeId": "dual-blades/46",
+   "nodeIndex": 5,
+   "craftable": true
+  },
+  "weapon_1023700705": {
+   "treeId": "dual-blades/47",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1071505030": {
+   "treeId": "dual-blades/47",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_951520935": {
+   "treeId": "dual-blades/47",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1981499456": {
+   "treeId": "dual-blades/47",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1895610465": {
+   "treeId": "dual-blades/47",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_965246532": {
+   "treeId": "dual-blades/48",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_979480165": {
+   "treeId": "dual-blades/48",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_993730074": {
+   "treeId": "dual-blades/48",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1909843974": {
+   "treeId": "dual-blades/48",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1924093991": {
+   "treeId": "dual-blades/48",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_605834811": {
+   "treeId": "dual-blades/49",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_653639128": {
+   "treeId": "dual-blades/49",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_667872761": {
+   "treeId": "dual-blades/49",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1937805252": {
+   "treeId": "dual-blades/49",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_2100506522": {
+   "treeId": "dual-blades/49",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_371706563": {
+   "treeId": "dual-blades/50",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_284768992": {
+   "treeId": "dual-blades/50",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_299002497": {
+   "treeId": "dual-blades/50",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2115280827": {
+   "treeId": "dual-blades/50",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_2056810270": {
+   "treeId": "dual-blades/50",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_313252518": {
+   "treeId": "dual-blades/51",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_328010311": {
+   "treeId": "dual-blades/51",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_476478052": {
+   "treeId": "dual-blades/51",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_2071060287": {
+   "treeId": "dual-blades/51",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1682640604": {
+   "treeId": "dual-blades/51",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_846241538": {
+   "treeId": "dual-blades/52",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_860475171": {
+   "treeId": "dual-blades/52",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1008942784": {
+   "treeId": "dual-blades/52",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_1697414909": {
+   "treeId": "dual-blades/52",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_1711648402": {
+   "treeId": "dual-blades/52",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_115946329": {
+   "treeId": "dual-blades/53",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_130179966": {
+   "treeId": "dual-blades/53",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1625235123": {
+   "treeId": "dual-blades/54",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_1653194353": {
+   "treeId": "dual-blades/54",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_1667427862": {
+   "treeId": "dual-blades/54",
+   "nodeIndex": 2,
+   "craftable": true
+  },
+  "weapon_889937806": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 0,
+   "craftable": true
+  },
+  "weapon_938250159": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 1,
+   "craftable": false
+  },
+  "weapon_818282316": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 2,
+   "craftable": false
+  },
+  "weapon_465036297": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 3,
+   "craftable": false
+  },
+  "weapon_76108846": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 4,
+   "craftable": false
+  },
+  "weapon_832515949": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 5,
+   "craftable": false
+  },
+  "weapon_143975030": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 6,
+   "craftable": true
+  },
+  "weapon_172458548": {
+   "treeId": "dual-blades/55",
+   "nodeIndex": 7,
+   "craftable": true
+  }
+ }
+}
