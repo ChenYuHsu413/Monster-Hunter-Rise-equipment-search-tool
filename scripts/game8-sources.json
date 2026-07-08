@@ -1,0 +1,171 @@
+{
+  "$comment": "Game8 推薦配裝爬蟲來源設定檔。所有 URL 於 2026-07-08 人工確認。爬蟲啟動時應先抓 hubUrl,解析各武器區塊底部的『関連記事』表格,驗證/補齊本檔中的 URL(weaponRecommend 為 null 者由此自動補齊),Game8 改版時以 hub 頁為準。",
+  "hubUrl": "https://game8.jp/mhrise/464260",
+  "requestDelayMs": 2500,
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+  "outputPath": "data/recommended-builds.json",
+  "categories": {
+    "mrEndgame":  { "labelZh": "大師位畢業裝",   "labelJa": "MR最強装備" },
+    "mrEarly":    { "labelZh": "大師位拓荒裝",   "labelJa": "MRマスター序盤装備" },
+    "riseEndgame":{ "labelZh": "上位畢業裝(本篇)","labelJa": "ライズ最強装備" },
+    "riseHigh":   { "labelZh": "上位過渡裝",     "labelJa": "上位おすすめ装備" },
+    "riseLow":    { "labelZh": "下位裝",         "labelJa": "下位・序盤おすすめ装備" },
+    "weaponRecommend": { "labelZh": "推薦武器一覽", "labelJa": "おすすめ武器" }
+  },
+  "weapons": [
+    {
+      "id": "great_sword", "nameJa": "大剣", "nameZh": "大劍",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/464703",
+        "mrEarly": "https://game8.jp/mhrise/464416",
+        "riseEndgame": "https://game8.jp/mhrise/381010",
+        "riseHigh": "https://game8.jp/mhrise/386304",
+        "riseLow": "https://game8.jp/mhrise/378679",
+        "weaponRecommend": "https://game8.jp/mhrise/466582"
+      }
+    },
+    {
+      "id": "long_sword", "nameJa": "太刀", "nameZh": "太刀",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/464657",
+        "mrEarly": "https://game8.jp/mhrise/464298",
+        "riseEndgame": "https://game8.jp/mhrise/379646",
+        "riseHigh": "https://game8.jp/mhrise/386193",
+        "riseLow": "https://game8.jp/mhrise/378590",
+        "weaponRecommend": "https://game8.jp/mhrise/466581"
+      }
+    },
+    {
+      "id": "sword_and_shield", "nameJa": "片手剣", "nameZh": "單手劍",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465092",
+        "mrEarly": "https://game8.jp/mhrise/464336",
+        "riseEndgame": "https://game8.jp/mhrise/380609",
+        "riseHigh": "https://game8.jp/mhrise/386330",
+        "riseLow": "https://game8.jp/mhrise/378657",
+        "weaponRecommend": "https://game8.jp/mhrise/466215"
+      }
+    },
+    {
+      "id": "dual_blades", "nameJa": "双剣", "nameZh": "雙劍",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465104",
+        "mrEarly": "https://game8.jp/mhrise/464419",
+        "riseEndgame": "https://game8.jp/mhrise/380765",
+        "riseHigh": "https://game8.jp/mhrise/386681",
+        "riseLow": "https://game8.jp/mhrise/378715",
+        "weaponRecommend": "https://game8.jp/mhrise/466472"
+      }
+    },
+    {
+      "id": "hammer", "nameJa": "ハンマー", "nameZh": "大錘",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465091",
+        "mrEarly": "https://game8.jp/mhrise/464406",
+        "riseEndgame": "https://game8.jp/mhrise/380684",
+        "riseHigh": "https://game8.jp/mhrise/386431",
+        "riseLow": "https://game8.jp/mhrise/378542",
+        "weaponRecommend": "https://game8.jp/mhrise/466781"
+      }
+    },
+    {
+      "id": "hunting_horn", "nameJa": "狩猟笛", "nameZh": "狩獵笛",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465095",
+        "mrEarly": "https://game8.jp/mhrise/464029",
+        "riseEndgame": "https://game8.jp/mhrise/380175",
+        "riseHigh": "https://game8.jp/mhrise/386570",
+        "riseLow": "https://game8.jp/mhrise/378636",
+        "weaponRecommend": "https://game8.jp/mhrise/466804"
+      }
+    },
+    {
+      "id": "lance", "nameJa": "ランス", "nameZh": "長槍",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465102",
+        "mrEarly": "https://game8.jp/mhrise/464176",
+        "riseEndgame": "https://game8.jp/mhrise/379858",
+        "riseHigh": "https://game8.jp/mhrise/386343",
+        "riseLow": "https://game8.jp/mhrise/378688",
+        "weaponRecommend": "https://game8.jp/mhrise/466966"
+      }
+    },
+    {
+      "id": "gunlance", "nameJa": "ガンランス", "nameZh": "銃槍",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/464745",
+        "mrEarly": "https://game8.jp/mhrise/464266",
+        "riseEndgame": "https://game8.jp/mhrise/379970",
+        "riseHigh": "https://game8.jp/mhrise/386344",
+        "riseLow": "https://game8.jp/mhrise/378713",
+        "weaponRecommend": "https://game8.jp/mhrise/466960"
+      }
+    },
+    {
+      "id": "switch_axe", "nameJa": "スラッシュアックス", "nameZh": "斬擊斧",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465089",
+        "mrEarly": "https://game8.jp/mhrise/464265",
+        "riseEndgame": "https://game8.jp/mhrise/380771",
+        "riseHigh": "https://game8.jp/mhrise/386701",
+        "riseLow": "https://game8.jp/mhrise/378664",
+        "weaponRecommend": "https://game8.jp/mhrise/466653"
+      }
+    },
+    {
+      "id": "charge_blade", "nameJa": "チャージアックス", "nameZh": "充能斧",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465097",
+        "mrEarly": "https://game8.jp/mhrise/464274",
+        "riseEndgame": "https://game8.jp/mhrise/380613",
+        "riseHigh": "https://game8.jp/mhrise/386610",
+        "riseLow": "https://game8.jp/mhrise/378709",
+        "weaponRecommend": "https://game8.jp/mhrise/466800"
+      }
+    },
+    {
+      "id": "insect_glaive", "nameJa": "操虫棍", "nameZh": "操蟲棍",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465099",
+        "mrEarly": "https://game8.jp/mhrise/464417",
+        "riseEndgame": "https://game8.jp/mhrise/380666",
+        "riseHigh": "https://game8.jp/mhrise/386463",
+        "riseLow": "https://game8.jp/mhrise/378705",
+        "weaponRecommend": "https://game8.jp/mhrise/466699"
+      }
+    },
+    {
+      "id": "light_bowgun", "nameJa": "ライトボウガン", "nameZh": "輕弩",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465103",
+        "mrEarly": "https://game8.jp/mhrise/464411",
+        "riseEndgame": "https://game8.jp/mhrise/380009",
+        "riseHigh": "https://game8.jp/mhrise/386265",
+        "riseLow": "https://game8.jp/mhrise/378699",
+        "weaponRecommend": "https://game8.jp/mhrise/466977"
+      }
+    },
+    {
+      "id": "heavy_bowgun", "nameJa": "ヘビィボウガン", "nameZh": "重弩",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/464707",
+        "mrEarly": "https://game8.jp/mhrise/464272",
+        "riseEndgame": "https://game8.jp/mhrise/380580",
+        "riseHigh": "https://game8.jp/mhrise/386695",
+        "riseLow": "https://game8.jp/mhrise/378676",
+        "weaponRecommend": "https://game8.jp/mhrise/466797"
+      }
+    },
+    {
+      "id": "bow", "nameJa": "弓", "nameZh": "弓",
+      "articles": {
+        "mrEndgame": "https://game8.jp/mhrise/465100",
+        "mrEarly": "https://game8.jp/mhrise/464418",
+        "riseEndgame": "https://game8.jp/mhrise/380835",
+        "riseHigh": "https://game8.jp/mhrise/386652",
+        "riseLow": "https://game8.jp/mhrise/378712",
+        "weaponRecommend": "https://game8.jp/mhrise/466964"
+      }
+    }
+  ]
+}
