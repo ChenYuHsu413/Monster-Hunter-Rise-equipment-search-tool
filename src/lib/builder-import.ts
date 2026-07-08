@@ -38,8 +38,14 @@ export type BuilderImport =
   | { kind: "lock-armor"; id: string }
   | { kind: "lock-weapon"; id: string; weaponType: string };
 
+/** B′ 排序後挑出的核心技能列（有序、已 clamp、已排除 special）。 */
+export type CoreSkillRow = { name: string; level: number };
+
 /**
- * 從 full-build 的發動技能總表萃取「核心必要技能」。
+ * 依 B′ 策略挑出「核心必要技能」列（有序）。
+ *
+ * 此為單一真相來源：匯入 payload（extractCoreSkills）與推薦卡片摘要 chip 共用，確保
+ * 「摘要列顯示的技能」與「按下匯入帶進配裝器的技能」同源同序——兩者絕不會不一致。
  *
  * 策略（B′）：一律取前 N 項，排序鍵依序為
  *   1. 紅字必須技能優先（Game8 `required`；實測僅 2 筆旗艦畢業裝有標）——作者標記的定義性技能。
@@ -61,17 +67,19 @@ export type BuilderImport =
  * 等級一律取 `level`（傀異錬成前基礎值；`augmentedLevel` 是錬成後總值，搜尋器不模擬
  * 錬成，匯入會導致無解，故不用），再 clamp 到 skillMax（防禦性最後防線）。
  */
-export function extractCoreSkills(
+export function selectCoreSkillRows(
   build: RecommendedBuild,
   skillMax: Record<string, number>,
   specialSkills: ReadonlySet<string>,
   n: number = DEFAULT_CORE_SKILL_COUNT
 ): {
-  requiredSkills: SkillMap;
-  importedCount: number;
+  /** 前 N 項核心技能（依 B′ 排序）。 */
+  rows: CoreSkillRow[];
+  /** 技能總表原始項數。 */
   totalCount: number;
+  /** 是否有技能因傀異錬成加成被降回基礎等級。 */
   droppedAugment: boolean;
-  /** 因不可重現而被排除的 special 技能名（去重、依原順序），供提示點名。 */
+  /** 因不可重現而被排除的 special 技能名（去重、依原順序）。 */
   excludedSpecial: string[];
 } {
   const totals = build.skillTotals ?? [];
@@ -110,15 +118,41 @@ export function extractCoreSkills(
     )
     .slice(0, n);
 
-  const requiredSkills: SkillMap = {};
-  for (const r of picked) requiredSkills[r.name] = r.level;
-
   return {
-    requiredSkills,
-    importedCount: picked.length,
+    rows: picked.map((r) => ({ name: r.name, level: r.level })),
     totalCount: totals.length,
     droppedAugment,
     excludedSpecial,
+  };
+}
+
+/**
+ * 從 full-build 萃取核心必要技能，組成匯入用的 SkillMap。
+ * 排序/選取一律走 {@link selectCoreSkillRows}（與摘要 chip 同源）。
+ */
+export function extractCoreSkills(
+  build: RecommendedBuild,
+  skillMax: Record<string, number>,
+  specialSkills: ReadonlySet<string>,
+  n: number = DEFAULT_CORE_SKILL_COUNT
+): {
+  requiredSkills: SkillMap;
+  importedCount: number;
+  totalCount: number;
+  droppedAugment: boolean;
+  /** 因不可重現而被排除的 special 技能名（去重、依原順序），供提示點名。 */
+  excludedSpecial: string[];
+} {
+  const core = selectCoreSkillRows(build, skillMax, specialSkills, n);
+  const requiredSkills: SkillMap = {};
+  for (const r of core.rows) requiredSkills[r.name] = r.level;
+
+  return {
+    requiredSkills,
+    importedCount: core.rows.length,
+    totalCount: core.totalCount,
+    droppedAugment: core.droppedAugment,
+    excludedSpecial: core.excludedSpecial,
   };
 }
 
