@@ -9,6 +9,7 @@ import rampageSkillsData from "@/data/rampage-skills.json";
 import rampageDecosData from "@/data/rampage-decorations.json";
 import kinsectNamesData from "../../data/kinsect-names.json";
 import editorialTranslationsData from "../../data/editorial-translations.json";
+import jpNameMapData from "../../data/jp-name-map.json";
 
 /**
  * 推薦配裝資料（data/recommended-builds.json，~2.4MB）的延遲載入與索引。
@@ -120,6 +121,41 @@ const editorialByRaw = loadManualMap(
 );
 
 /**
+ * 編輯標記正規化：NFKC（全半形／OR→or 等統一）+ 去空白 + 小寫。
+ * 命中 jp-name-map 即官方名詞、非編輯評述，改查對照表顯示繁中。
+ * ★與離線過濾（data/editorial-strings.json 的 resolvedVia 標記）同式，勿改單邊。
+ */
+const editorialNorm = (s: string): string =>
+  s.normalize("NFKC").replace(/\s+/g, "").toLowerCase();
+
+/** 正規化官方名 → { 類別, 值 }。值：skills 為繁中、其餘為內部 id。 */
+const editorialNameMap: Map<string, { cat: string; val: string }> = (() => {
+  const m = new Map<string, { cat: string; val: string }>();
+  const cats = [
+    "skills",
+    "armors",
+    "decorations",
+    "weapons",
+    "rampageSkills",
+    "rampageDecorations",
+  ] as const;
+  // 僅取上列 6 類（值皆為 string）；alternatives（值為 string[]）不在其列，故 unknown 轉型安全。
+  const data = jpNameMapData as unknown as Record<
+    string,
+    Record<string, string>
+  >;
+  for (const cat of cats) {
+    const obj = data[cat];
+    if (!obj) continue;
+    for (const [k, v] of Object.entries(obj)) {
+      const n = editorialNorm(k);
+      if (!m.has(n)) m.set(n, { cat, val: v });
+    }
+  }
+  return m;
+})();
+
+/**
  * 成句判定：含。或、或 ≥22 字＝Game8 編輯評述（非欄位標記），顯示端「不翻譯也不顯示」
  * 直接排除。★與 scripts/build-editorial-strings.mjs 的 isEditorialSentence 同步。
  */
@@ -181,8 +217,37 @@ export async function createNameResolver(): Promise<NameResolver> {
       return name ? { name, resolved: true } : fallback(rawNameJa);
     },
     editorial: (raw) => {
-      const name = raw ? editorialByRaw[raw] : undefined;
-      return name ? { name, resolved: true } : fallback(raw);
+      if (!raw) return fallback(raw);
+      // 1) 人工編輯翻譯優先
+      const manual = editorialByRaw[raw];
+      if (manual) return { name: manual, resolved: true };
+      // 2) 官方名詞：查 name-map 對照表（id → 繁中）
+      const hit = editorialNameMap.get(editorialNorm(raw));
+      if (hit) {
+        let name: string | undefined;
+        switch (hit.cat) {
+          case "skills":
+            name = hit.val;
+            break;
+          case "weapons":
+            name = gd.weaponById[hit.val]?.nameZh;
+            break;
+          case "armors":
+            name = gd.armorById[hit.val]?.nameZh;
+            break;
+          case "decorations":
+            name = decoNameById[hit.val];
+            break;
+          case "rampageSkills":
+            name = rampageSkillNameById[hit.val];
+            break;
+          case "rampageDecorations":
+            name = rampageDecoNameById[hit.val];
+            break;
+        }
+        if (name) return { name, resolved: true };
+      }
+      return fallback(raw);
     },
   };
 }
