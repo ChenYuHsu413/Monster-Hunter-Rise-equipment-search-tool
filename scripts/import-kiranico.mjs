@@ -35,7 +35,7 @@ const KNOWN_MAX = {
   攻勢: 3,
   奇襲: 3,
   緩衝: 3,
-  堅若磐石: 3,
+  堅若磐石: 5, // Kiranico 技能頁效果表確認 Lv1-5（清單頁不給等級，先前誤設 3）
   蓄力大師: 3,
   款待: 3,
   "研磨術【銳】": 3,
@@ -53,6 +53,18 @@ const KNOWN_MAX = {
   血氣覺醒: 1,
   激勵: 1,
 };
+
+/**
+ * Kiranico 裝飾品一覽漏收的珠（手動補齊，重跑安全）。
+ * 例：顕如盤石（堅若磐石）的 1 孔版「盤石珠【1】」——Kiranico 技能頁效果表
+ * 明列 Lv1-5、卻只在裝飾品頁登錄 4 孔的 盤石珠Ⅲ【4】（Lv3），光靠它到不了
+ * Lv5，佐證 1 孔版存在但 Kiranico 未收。Game8 配裝實測單筆用 2-3 顆（若為
+ * Ⅲ 珠 Lv3 則 Lv6+ 不可能）+ 等級收支單顆 Lv1，三方證據確認。
+ * id 用 deco_manual_* 前綴（無對應 Kiranico 數字 ID）。
+ */
+const MANUAL_DECORATIONS = [
+  { id: "deco_manual_banjaku1", nameZh: "磐石珠【1】", slotLevel: 1, skillName: "堅若磐石", skillLevel: 1, craftable: true },
+];
 
 /** 高風險 / 高價值特殊技能（影響評分)。以名稱子字串比對。 */
 const SPECIAL_SKILLS = [
@@ -169,8 +181,9 @@ function parseDecorations(html) {
     const skill = row.match(/data\/skills\/\d+">([^<]+)<\/a>\s*Lv(\d+)/);
     if (!skill) continue;
     const nameZh = deco[2].trim();
-    const slotMatch = nameZh.match(/【(\d)】/);
-    const slotLevel = slotMatch ? Number(slotMatch[1]) : 1;
+    // 孔位數字全半形皆可（Kiranico 少數珠名用全形【４】，先前 \d 漏抓→誤設 1）
+    const slotMatch = nameZh.match(/【([\d０-９])】/);
+    const slotLevel = slotMatch ? Number(slotMatch[1].normalize("NFKC")) : 1;
     out.push({
       id: `deco_${deco[1]}`,
       nameZh,
@@ -622,7 +635,11 @@ async function main() {
   console.log("→ 裝飾珠");
   const decoHtml = await fetchText(`${BASE}/decorations`);
   const decorations = parseDecorations(decoHtml);
-  console.log(`  ${decorations.length} 裝飾珠`);
+  // 併入 Kiranico 漏收的手動珠（重跑安全；以 id 去重）
+  for (const md of MANUAL_DECORATIONS) {
+    if (!decorations.some((d) => d.id === md.id)) decorations.push({ ...md });
+  }
+  console.log(`  ${decorations.length} 裝飾珠（含手動補 ${MANUAL_DECORATIONS.length}）`);
 
   console.log("→ 防具（RARE 1-10）");
   const armors = [];

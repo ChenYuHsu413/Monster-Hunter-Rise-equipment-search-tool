@@ -1792,6 +1792,14 @@
     "craftable": true
   },
   {
+    "id": "deco_manual_banjaku1",
+    "nameZh": "磐石珠【1】",
+    "slotLevel": 1,
+    "skillName": "堅若磐石",
+    "skillLevel": 1,
+    "craftable": true
+  },
+  {
     "id": "deco_873829809",
     "nameZh": "背擊珠Ⅱ【4】",
     "slotLevel": 4,
@@ -1866,7 +1874,7 @@
   {
     "id": "deco_1478340184",
     "nameZh": "裝填珠Ⅱ【４】",
-    "slotLevel": 1,
+    "slotLevel": 4,
     "skillName": "裝填擴充",
     "skillLevel": 2,
     "craftable": true
@@ -1882,7 +1890,7 @@
   {
     "id": "deco_829609269",
     "nameZh": "煽動珠Ⅱ【４】",
-    "slotLevel": 1,
+    "slotLevel": 4,
     "skillName": "煽動",
     "skillLevel": 2,
     "craftable": true
@@ -1898,7 +1906,7 @@
   {
     "id": "deco_858617035",
     "nameZh": "翻異珠Ⅱ【４】",
-    "slotLevel": 1,
+    "slotLevel": 4,
     "skillName": "必定累積狀態異常值",
     "skillLevel": 2,
     "craftable": true
