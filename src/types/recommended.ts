@@ -127,8 +127,11 @@ export type RecommendedBuild = {
   /**
    * 百龍技能。id 對照 src/data/rampage-skills.json（Kiranico 官方繁中）；
    * 對不到→id 省略，顯示端 fallback 日文。id 僅供顯示，不進匯出 payload。
+   * placeholder＝屬性付與簡寫（Game8 略屬性），依武器屬性自選，不對單一 ID。
    */
-  rampageSkills?: { id?: string; rawNameJa: string }[] | null;
+  rampageSkills?:
+    | { id?: string; rawNameJa: string; placeholder?: boolean }[]
+    | null;
   kinsect?: RecoKinsect[];
   sourceUrl: string;
 };

@@ -17,6 +17,12 @@
     "凶矛【凄雲】": "weapon_44377082",
     "ローゼンべギールデ": "weapon_692061449"
   },
+  "rampageSkills": {
+    "$comment": "Game8 百龍技能名 → 專案 rampage-skills.json ID。切↔斬 字形差異：Game8 寫「切れ味変更」、專案/Kiranico 用「斬れ味変更」（斬れ味変更 全家族在 map）。不走全域 VARIANTS（見切り等既有鍵含「切」會誤傷），逐案覆寫。「壱」為 Game8 漏『型』的 typo，對到 壱型。",
+    "切れ味変更【壱型】": "rskill_1251979832",
+    "切れ味変更【参型】": "rskill_1951027710",
+    "切れ味変更【壱】": "rskill_1251979832"
+  },
   "alternatives": {
     "$comment": "防具 A/B 二擇一（Game8 寫「Aスロ/Bスロ ヘルム」意為兩件擇一）。值為內部 ID 陣列，第一個為主裝備、其餘為替代。scraper 依此把該防具展開為 alternatives 欄位（卡片顯示成「A 或 B」）。候選見 suggestions 檔的 alternativeCandidates／suggestedOverride。",
     "ケイオス/ネフィリムヘルム": ["armor_1447854084", "armor_1462104101"],
