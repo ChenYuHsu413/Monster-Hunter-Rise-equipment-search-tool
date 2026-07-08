@@ -15,44 +15,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { KNOWN_MAX } from "./known-max.mjs";
+import { auditKnownMax } from "./audit-known-max.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, "..", "src", "data");
 const BASE = "https://mhrise.kiranico.com/zh-Hant/data";
 const UA = { "User-Agent": "Mozilla/5.0 (data import for personal armor builder)" };
 
-/**
- * Kiranico 對部分技能（多為套裝加成/新技能)未提供逐級說明,頁面推不出上限。
- * 這裡以「穩定且眾所周知的遊戲常數」補上這些技能的最大等級（僅補頁面缺漏者)。
- */
-const KNOWN_MAX = {
-  連擊: 3,
-  寒氣鍊成: 3,
-  天衣無縫: 3,
-  伏魔響命: 3,
-  血氣: 3,
-  巧擊: 3,
-  攻勢: 3,
-  奇襲: 3,
-  緩衝: 1,
-  堅若磐石: 5, // Kiranico 技能頁效果表確認 Lv1-5（清單頁不給等級，先前誤設 3）
-  蓄力大師: 3,
-  款待: 1,
-  "研磨術【銳】": 3,
-  "業鎧【修羅】": 3,
-  "狂龍症【蝕】": 3,
-  "狂龍症【翔】": 3,
-  粉塵飛舞: 3,
-  暴風纏身: 3,
-  剛心: 2,
-  合氣: 2,
-  刃鱗研磨: 3,
-  迅疾吐納: 1,
-  "飛簷走壁【翔】": 1,
-  龍氣轉換: 3,
-  血氣覺醒: 3,
-  激勵: 1,
-};
+// KNOWN_MAX（硬編技能上限）已抽至 scripts/known-max.mjs（單一真相源，audit 共用）。
 
 /**
  * Kiranico 裝飾品一覽漏收的珠（手動補齊，重跑安全）。
@@ -627,6 +598,17 @@ async function attachArmorSources(armors, monstersByLen) {
 
 // ---------------- 主流程 ----------------
 async function main() {
+  // 重跑防呆：硬編 KNOWN_MAX 與 Kiranico 技能頁效果表機械核對，不符即中止。
+  // 破曉資料已凍結、不做自動抓取根治，但重跑前強制稽核以防硬編值悄悄過時。
+  console.log("→ 稽核 KNOWN_MAX（對 Kiranico 效果表）");
+  const mism = await auditKnownMax();
+  if (mism.length) {
+    console.error("✗ KNOWN_MAX 與 Kiranico 效果表不符，請更新 scripts/known-max.mjs：");
+    for (const m of mism) console.error(`   ${m.name}: 硬編 ${m.hard} → 效果表 ${m.actual}`);
+    throw new Error(`KNOWN_MAX 稽核失敗（${mism.length} 條不符）`);
+  }
+  console.log("  ✓ KNOWN_MAX 全數吻合");
+
   console.log("→ 技能");
   const skillsHtml = await fetchText(`${BASE}/skills`);
   const skills = parseSkills(skillsHtml);
