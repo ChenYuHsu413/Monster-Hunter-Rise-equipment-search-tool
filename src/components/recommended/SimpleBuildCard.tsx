@@ -88,11 +88,11 @@ export function SimpleBuildCard({
     <Card className="flex flex-col gap-2 p-3">
       <div className="min-w-0">
         <h4 className="text-sm font-semibold leading-tight">
-          {build.buildName}
+          {resolver.editorial(build.buildName).name}
         </h4>
         {build.stageName && build.stageName !== build.buildName && (
           <p className="truncate text-[11px] text-muted-foreground">
-            {build.stageName}
+            {resolver.editorial(build.stageName).name}
           </p>
         )}
       </div>
