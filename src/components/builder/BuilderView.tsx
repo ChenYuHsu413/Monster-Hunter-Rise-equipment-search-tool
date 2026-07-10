@@ -772,35 +772,59 @@ export function BuilderView({
         )}
       </div>
 
-      {/* ---- 手機版：搜尋條件收合列（sticky，桌機隱藏）---- */}
-      <button
-        ref={toggleRef}
-        type="button"
-        onClick={toggleConditions}
-        className="sticky top-0 z-20 flex shrink-0 items-center justify-between border-b border-border bg-background px-4 py-2.5 text-sm font-medium lg:hidden"
-      >
-        <span className="flex items-center gap-2">
+      {/* ---- 搜尋條件收合列（全寬度可收合；收合時顯示目前條件摘要）---- */}
+      <div className="sticky top-0 z-20 flex shrink-0 flex-wrap items-center gap-x-3 gap-y-1 border-b border-border bg-background px-4 py-2">
+        <button
+          ref={toggleRef}
+          type="button"
+          onClick={toggleConditions}
+          className="flex shrink-0 items-center gap-2 text-sm font-medium"
+        >
           <SlidersHorizontal className="h-4 w-4 text-primary" />
           搜尋條件
-        </span>
-        {conditionsOpen ? (
-          <ChevronUp className="h-4 w-4 text-muted-foreground" />
-        ) : (
-          <span className="flex items-center gap-1 text-xs text-muted-foreground">
-            展開修改
-            <ChevronDown className="h-4 w-4" />
-          </span>
+          {conditionsOpen ? (
+            <ChevronUp className="h-4 w-4 text-muted-foreground" />
+          ) : (
+            <span className="flex items-center gap-1 text-xs text-muted-foreground">
+              展開修改
+              <ChevronDown className="h-4 w-4" />
+            </span>
+          )}
+        </button>
+        {!conditionsOpen && (
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1 text-xs text-muted-foreground">
+            {Object.keys(required).length === 0 ? (
+              <span>尚未設定必要技能</span>
+            ) : (
+              Object.entries(required).map(([n, l]) => (
+                <span
+                  key={n}
+                  className="rounded bg-muted px-1.5 py-0.5 text-foreground"
+                >
+                  {n} {l}
+                </span>
+              ))
+            )}
+            {excludedSkills.length > 0 && (
+              <span className="rounded bg-destructive/10 px-1.5 py-0.5 text-destructive">
+                排除 {excludedSkills.length}
+              </span>
+            )}
+            {Object.keys(fixedParts).length > 0 && (
+              <span>· 鎖定 {Object.keys(fixedParts).length}</span>
+            )}
+          </div>
         )}
-      </button>
+      </div>
 
-      {/* ---- 主體：左右雙欄（桌機固定分欄捲動；手機正常堆疊捲動）---- */}
-      <div className="flex flex-1 flex-col lg:min-h-0 lg:flex-row">
-        {/* 左側控制欄（手機可收合，桌機恆顯示）*/}
-        <aside
+      {/* ---- 主體：條件橫向置頂、結果全寬在下 ---- */}
+      <div className="flex flex-1 flex-col lg:min-h-0">
+        {/* 條件區：橫向排列、可收合（預設展開）；內容多換行、不橫向卷軸 */}
+        <section
           ref={asideRef}
           className={`${
             conditionsOpen ? "flex" : "hidden"
-          } w-full flex-col gap-3 border-b border-border p-3 scrollbar-thin lg:flex lg:w-[400px] lg:shrink-0 lg:overflow-y-auto lg:border-b-0 lg:border-r`}
+          } shrink-0 flex-col gap-3 border-b border-border p-3 scrollbar-thin lg:max-h-[48vh] lg:overflow-y-auto`}
         >
           {importNotice && (
             <div className="flex items-start justify-between gap-2 rounded-md border border-primary/30 bg-primary/10 px-3 py-2 text-xs text-primary">
@@ -837,123 +861,130 @@ export function BuilderView({
               </button>
             </div>
           )}
-          <Card>
-            <CardContent className="space-y-3 p-3">
-              <WeaponSelector
-                weaponTypes={weaponTypes}
-                value={weaponType}
-                onChange={changeWeapon}
-              />
-              <WeaponPicker
-                weapons={typeWeapons}
-                loading={!gameData}
-                mode={weaponSearchMode}
-                onModeChange={changeWeaponSearchMode}
-                fixedWeaponId={fixedWeaponId}
-                onPickWeapon={pickWeapon}
-                enableElementFilter={elementFilterEnabled}
-                elementFilter={activeElementFilter}
-                onElementFilterChange={changeElementFilter}
-                groupBySource
-              />
-            </CardContent>
-          </Card>
+          <div className="flex flex-wrap items-start gap-3">
+            {/* 武器 */}
+            <Card className="min-w-[260px] flex-1">
+              <CardContent className="space-y-3 p-3">
+                <WeaponSelector
+                  weaponTypes={weaponTypes}
+                  value={weaponType}
+                  onChange={changeWeapon}
+                />
+                <WeaponPicker
+                  weapons={typeWeapons}
+                  loading={!gameData}
+                  mode={weaponSearchMode}
+                  onModeChange={changeWeaponSearchMode}
+                  fixedWeaponId={fixedWeaponId}
+                  onPickWeapon={pickWeapon}
+                  enableElementFilter={elementFilterEnabled}
+                  elementFilter={activeElementFilter}
+                  onElementFilterChange={changeElementFilter}
+                  groupBySource
+                />
+              </CardContent>
+            </Card>
 
-          <Card>
-            <CardContent className="p-3">
-              <Tabs defaultValue="skills">
-                <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="skills">技能</TabsTrigger>
-                  <TabsTrigger value="gear">裝備</TabsTrigger>
-                  <TabsTrigger value="locks">鎖定</TabsTrigger>
-                </TabsList>
+            {/* 技能 */}
+            <Card className="min-w-[280px] flex-1">
+              <CardContent className="space-y-2 p-3">
+                <Label className="text-xs text-muted-foreground">技能</Label>
+                <SkillRequirementEditor
+                  required={required}
+                  excluded={excludedSkills}
+                  onChangeRequired={setRequired}
+                  onChangeExcluded={setExcludedSkills}
+                  allSkills={allSkills}
+                />
+              </CardContent>
+            </Card>
 
-                <TabsContent value="skills" className="pt-2">
-                  <SkillRequirementEditor
-                    required={required}
-                    excluded={excludedSkills}
-                    onChangeRequired={setRequired}
-                    onChangeExcluded={setExcludedSkills}
-                    allSkills={allSkills}
-                  />
-                </TabsContent>
+            {/* 其他條件：護石／保留洞位／防禦耐性、鎖定／排除 */}
+            <Card className="min-w-[300px] flex-[1.5]">
+              <CardContent className="p-3">
+                <Tabs defaultValue="gear">
+                  <TabsList className="grid w-full grid-cols-2">
+                    <TabsTrigger value="gear">裝備</TabsTrigger>
+                    <TabsTrigger value="locks">鎖定</TabsTrigger>
+                  </TabsList>
 
-                <TabsContent value="gear" className="space-y-4 pt-2">
-                  <div className="space-y-1.5">
-                    <Label className="text-xs text-muted-foreground">
-                      護石
-                    </Label>
-                    <CharmListPanel
-                      charms={charms}
-                      useCharms={useCharms}
-                      onChangeCharms={setCharms}
-                      onChangeUseCharms={setUseCharms}
-                      allSkills={allSkills}
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <Label className="text-xs text-muted-foreground">
-                      保留洞位
-                    </Label>
-                    <ReservedSlotsInput
-                      value={reservedSlots}
-                      onChange={setReservedSlots}
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <Label className="text-xs text-muted-foreground">
-                      防禦 / 屬性耐性
-                    </Label>
-                    <DefenseResInput
-                      minDefense={minDefense}
-                      minResistances={minResistances}
-                      onChangeMinDefense={setMinDefense}
-                      onChangeMinResistances={setMinResistances}
-                    />
-                  </div>
-                </TabsContent>
+                  <TabsContent value="gear" className="space-y-4 pt-2">
+                    <div className="space-y-1.5">
+                      <Label className="text-xs text-muted-foreground">
+                        護石
+                      </Label>
+                      <CharmListPanel
+                        charms={charms}
+                        useCharms={useCharms}
+                        onChangeCharms={setCharms}
+                        onChangeUseCharms={setUseCharms}
+                        allSkills={allSkills}
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <Label className="text-xs text-muted-foreground">
+                        保留洞位
+                      </Label>
+                      <ReservedSlotsInput
+                        value={reservedSlots}
+                        onChange={setReservedSlots}
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <Label className="text-xs text-muted-foreground">
+                        防禦 / 屬性耐性
+                      </Label>
+                      <DefenseResInput
+                        minDefense={minDefense}
+                        minResistances={minResistances}
+                        onChangeMinDefense={setMinDefense}
+                        onChangeMinResistances={setMinResistances}
+                      />
+                    </div>
+                  </TabsContent>
 
-                <TabsContent value="locks" className="space-y-4 pt-2">
-                  <ArmorLockPanel
-                    allArmors={allArmors}
-                    loading={!gameData}
-                    fixedParts={fixedParts}
-                    onFix={fixArmor}
-                    onClear={clearFixed}
-                  />
-                  <div className="border-t border-border pt-3">
-                    <FixedPartsPanel
-                      fixedParts={fixedParts}
-                      excludedItems={excludedItems}
-                      recoCharms={recoCharms}
-                      armorById={armorById}
-                      weaponById={weaponById}
-                      onClearFixed={clearFixed}
-                      onRemoveExcluded={removeExcluded}
-                      onClearAllFixed={clearAllFixed}
-                      onClearAllExcluded={clearAllExcluded}
-                      onRemoveRecoCharm={removeRecoCharm}
-                    />
-                  </div>
-                  <div className="space-y-1.5 border-t border-border pt-3">
-                    <Label className="text-xs text-muted-foreground">
-                      傀異鍊成（自訂防具）
-                    </Label>
-                    <AugmentedArmorEditor
+                  <TabsContent value="locks" className="space-y-4 pt-2">
+                    <ArmorLockPanel
                       allArmors={allArmors}
-                      allSkills={allSkills}
-                      augments={augments}
-                      onAdd={(p) => setAugments((prev) => [...prev, p])}
-                      onRemove={(id) =>
-                        setAugments((prev) => prev.filter((a) => a.id !== id))
-                      }
+                      loading={!gameData}
+                      fixedParts={fixedParts}
+                      onFix={fixArmor}
+                      onClear={clearFixed}
                     />
-                  </div>
-                </TabsContent>
-              </Tabs>
-            </CardContent>
-          </Card>
-        </aside>
+                    <div className="border-t border-border pt-3">
+                      <FixedPartsPanel
+                        fixedParts={fixedParts}
+                        excludedItems={excludedItems}
+                        recoCharms={recoCharms}
+                        armorById={armorById}
+                        weaponById={weaponById}
+                        onClearFixed={clearFixed}
+                        onRemoveExcluded={removeExcluded}
+                        onClearAllFixed={clearAllFixed}
+                        onClearAllExcluded={clearAllExcluded}
+                        onRemoveRecoCharm={removeRecoCharm}
+                      />
+                    </div>
+                    <div className="space-y-1.5 border-t border-border pt-3">
+                      <Label className="text-xs text-muted-foreground">
+                        傀異鍊成（自訂防具）
+                      </Label>
+                      <AugmentedArmorEditor
+                        allArmors={allArmors}
+                        allSkills={allSkills}
+                        augments={augments}
+                        onAdd={(p) => setAugments((prev) => [...prev, p])}
+                        onRemove={(id) =>
+                          setAugments((prev) => prev.filter((a) => a.id !== id))
+                        }
+                      />
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
 
         {/* 右側結果 */}
         <main className="flex flex-1 flex-col lg:min-h-0">
