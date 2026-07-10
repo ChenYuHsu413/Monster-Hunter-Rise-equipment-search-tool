@@ -87,13 +87,26 @@ type BuilderViewProps = {
 };
 
 /** 匯入完成後在條件區顯示的一行提示。 */
-type ImportNotice = {
-  importedCount: number;
-  totalCount: number;
-  droppedAugment: boolean;
-  /** 被排除的 special（錬成衍生）技能名，供點名說明為何未匯入。 */
-  excludedSpecial: string[];
-};
+type ImportNotice =
+  | {
+      source: "game8";
+      importedCount: number;
+      totalCount: number;
+      droppedAugment: boolean;
+      /** 被排除的 special（錬成衍生）技能名，供點名說明為何未匯入。 */
+      excludedSpecial: string[];
+    }
+  | {
+      source: "community";
+      /** 匯入的目標技能項數。 */
+      skillCount: number;
+      /** 實際鎖定的防具件數。 */
+      lockedArmorCount: number;
+      /** 配裝原本的防具件數（恆 5）。 */
+      totalArmorCount: number;
+      /** 被排除的 special 技能名。 */
+      excludedSpecial: string[];
+    };
 
 export function BuilderView({
   pendingImport,
@@ -272,6 +285,8 @@ export function BuilderView({
   const asideRef = useRef<HTMLElement>(null);
   // 由推薦配裝匯入後顯示的一行提示；null＝不顯示。
   const [importNotice, setImportNotice] = useState<ImportNotice | null>(null);
+  // 最近一次匯入是否為社群配裝（鎖 5 件＋目標技能）。用於零結果時的脈絡提示。
+  const [fromCommunityImport, setFromCommunityImport] = useState(false);
   // 搜尋後條件是否又被更動（顯示「條件已變更，重新搜尋」提示；不自動觸發）。
   const [dirtySinceSearch, setDirtySinceSearch] = useState(false);
 
@@ -622,19 +637,63 @@ export function BuilderView({
         };
       });
       setImportNotice({
+        source: "game8",
         importedCount: payload.importedCount,
         totalCount: payload.totalCount,
         droppedAugment: payload.droppedAugment,
         excludedSpecial: payload.excludedSpecial,
       });
+      setFromCommunityImport(false);
+    } else if (payload.kind === "community-build") {
+      const importedNames = new Set(Object.keys(payload.requiredSkills));
+      const switchType =
+        !!payload.weaponType && payload.weaponType !== weaponType;
+      if (switchType) {
+        setWeaponType(payload.weaponType!);
+        setElementFilter("all");
+        setFixedWeaponId("");
+        setWeaponSearchMode("search");
+      }
+      setConditions((prev) => {
+        // 鎖定防具骨架：社群配裝完整定義五防具，先清掉所有防具部位再套用——解析不到的
+        // 部位留空（不沿用上一次匯入的舊鎖，否則會與「未鎖定」提示矛盾、靜默多鎖）。
+        const fixedParts = { ...prev.fixedParts };
+        for (const p of ["head", "chest", "arms", "waist", "legs"] as const)
+          delete fixedParts[p];
+        Object.assign(fixedParts, payload.fixedArmor);
+        if (switchType) delete fixedParts.weapon;
+        return {
+          ...prev,
+          requiredSkills: payload.requiredSkills,
+          excludedSkills: prev.excludedSkills.filter(
+            (s) => !importedNames.has(s)
+          ),
+          fixedParts,
+          // 比照 full-build：保留自有護石，取代所有舊 reco 護石。
+          charms: [
+            ...prev.charms.filter((c) => c.source !== "reco"),
+            ...(payload.charm ? [payload.charm] : []),
+          ],
+        };
+      });
+      setImportNotice({
+        source: "community",
+        skillCount: payload.skillCount,
+        lockedArmorCount: payload.lockedArmorCount,
+        totalArmorCount: payload.totalArmorCount,
+        excludedSpecial: payload.excludedSpecial,
+      });
+      setFromCommunityImport(true);
     } else if (payload.kind === "lock-armor") {
       const part = gd.armorById[payload.id]?.part;
       if (part) fixArmor(part, payload.id);
       setImportNotice(null);
+      setFromCommunityImport(false);
     } else if (payload.kind === "lock-weapon") {
       if (payload.weaponType !== weaponType) changeWeapon(payload.weaponType);
       fixWeapon(payload.id);
       setImportNotice(null);
+      setFromCommunityImport(false);
     }
 
     // 展開條件區並捲動對齊（不自動搜尋）
@@ -829,16 +888,31 @@ export function BuilderView({
           {importNotice && (
             <div className="flex items-start justify-between gap-2 rounded-md border border-primary/30 bg-primary/10 px-3 py-2 text-xs text-primary">
               <div className="space-y-0.5">
-                <p>
-                  已從推薦配裝匯入核心技能 {importNotice.importedCount} 項
-                  {importNotice.totalCount > importNotice.importedCount && (
-                    <span className="text-primary/70">
-                      （共 {importNotice.totalCount} 項，其餘為附帶技能未匯入）
-                    </span>
+                {importNotice.source === "game8" ? (
+                  <p>
+                    已從推薦配裝匯入核心技能 {importNotice.importedCount} 項
+                    {importNotice.totalCount > importNotice.importedCount && (
+                      <span className="text-primary/70">
+                        （共 {importNotice.totalCount} 項，其餘為附帶技能未匯入）
+                      </span>
+                    )}
+                    ，請確認後搜尋。
+                  </p>
+                ) : (
+                  <p>
+                    已從社群配裝鎖定 {importNotice.lockedArmorCount} 件防具並匯入
+                    目標技能 {importNotice.skillCount} 項，孔位珠子將以你的護石計算，
+                    請確認後搜尋。
+                  </p>
+                )}
+                {importNotice.source === "community" &&
+                  importNotice.lockedArmorCount < importNotice.totalArmorCount && (
+                    <p className="text-amber-400">
+                      {importNotice.totalArmorCount - importNotice.lockedArmorCount}{" "}
+                      件防具無法解析為專案資料，未鎖定（其餘部位維持空白）。
+                    </p>
                   )}
-                  ，請確認後搜尋。
-                </p>
-                {importNotice.droppedAugment && (
+                {importNotice.source === "game8" && importNotice.droppedAugment && (
                   <p className="text-amber-400">已排除傀異錬成加成的等級。</p>
                 )}
                 {importNotice.excludedSpecial.length > 0 && (
@@ -1115,7 +1189,11 @@ export function BuilderView({
             ) : results.length === 0 ? (
               <EmptyState
                 title="找不到符合條件的配裝"
-                description="試著放寬必要技能、減少保留洞位，或解除部分固定／排除設定。"
+                description={
+                  fromCommunityImport
+                    ? "以目前護石無法達成全部目標技能，可嘗試解除部分防具鎖定或調降技能等級。"
+                    : "試著放寬必要技能、減少保留洞位，或解除部分固定／排除設定。"
+                }
               />
             ) : (
               <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">

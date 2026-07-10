@@ -36,7 +36,26 @@ export type BuilderImport =
       excludedSpecial: string[];
     }
   | { kind: "lock-armor"; id: string }
-  | { kind: "lock-weapon"; id: string; weaponType: string };
+  | { kind: "lock-weapon"; id: string; weaponType: string }
+  | {
+      kind: "community-build";
+      /** 選填：泛用防具骨架可無 → 不切換配裝器武器種類。 */
+      weaponType?: string;
+      /** 目標技能（已 clamp skillMax、排除 special；直接全帶，不做 top-N 蒸餾）。 */
+      requiredSkills: SkillMap;
+      /** 解析成功的防具部位 → id，匯入時鎖定（Partial：runtime 若有件解析不到則少於 5）。 */
+      fixedArmor: Partial<Record<import("@/types/build").ArmorPart, string>>;
+      /** 此配裝的護石（標 source:"reco"），無護石時省略。 */
+      charm?: OwnedCharm;
+      /** 匯入的目標技能項數。 */
+      skillCount: number;
+      /** 實際鎖定的防具件數。 */
+      lockedArmorCount: number;
+      /** 配裝原本的防具件數（恆 5）；lockedArmorCount < 此值＝有件解析不到。 */
+      totalArmorCount: number;
+      /** 因不可重現被排除的 special 技能名。 */
+      excludedSpecial: string[];
+    };
 
 /** B′ 排序後挑出的核心技能列（有序、已 clamp、已排除 special）。 */
 export type CoreSkillRow = { name: string; level: number };

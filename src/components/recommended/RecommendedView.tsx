@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { weaponTypes } from "@/lib/data";
 import {
   CATEGORY_LABELS,
@@ -10,14 +10,19 @@ import {
   type NameResolver,
   type RecommendedIndex,
 } from "@/lib/recommended-builds";
+import {
+  loadCommunityBuilds,
+  type CommunityIndex,
+} from "@/lib/community-builds";
 import { useLocalStorage } from "@/lib/use-local-storage";
 import type { RecommendedBuild, RecommendedCategory } from "@/types/recommended";
 import type { BuilderImport } from "@/lib/builder-import";
 import { WeaponIcon } from "@/components/EquipmentIcon";
 import { BuildCard } from "./BuildCard";
 import { SimpleBuildCard } from "./SimpleBuildCard";
+import { CommunityBuildCard } from "./CommunityBuildCard";
 import { cn } from "@/lib/utils";
-import { ChevronDown, ChevronUp, Loader2, Swords } from "lucide-react";
+import { ChevronDown, ChevronUp, Loader2, Swords, Users } from "lucide-react";
 
 /** 手風琴分區的顯示順序：五階段（依既有順序）+ 推薦武器一覽收尾。 */
 const SECTION_ORDER: RecommendedCategory[] = [
@@ -52,17 +57,16 @@ function StageSection({
   count,
   open,
   onToggle,
-  builds,
-  resolver,
-  onExport,
+  icon,
+  children,
 }: {
   title: string;
   count: number;
   open: boolean;
   onToggle: () => void;
-  builds: RecommendedBuild[];
-  resolver: NameResolver;
-  onExport: (payload: BuilderImport) => void;
+  icon?: ReactNode;
+  /** 展開時的內容（卡片網格）。 */
+  children: ReactNode;
 }) {
   return (
     <section className="space-y-2">
@@ -72,9 +76,10 @@ function StageSection({
         aria-expanded={open}
         className="flex w-full items-center justify-between rounded-lg border border-border bg-muted/40 px-3 py-2 text-sm font-bold"
       >
-        <span>
+        <span className="flex items-center gap-1.5">
+          {icon}
           {title}
-          <span className="ml-2 text-xs font-normal text-muted-foreground">
+          <span className="text-xs font-normal text-muted-foreground">
             ({count})
           </span>
         </span>
@@ -85,16 +90,7 @@ function StageSection({
         )}
       </button>
       {open && (
-        <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
-          {builds.map((b) => (
-            <BuildCardDispatch
-              key={b.id}
-              build={b}
-              resolver={resolver}
-              onExport={onExport}
-            />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">{children}</div>
       )}
     </section>
   );
@@ -107,6 +103,7 @@ export function RecommendedView({
 }) {
   const [index, setIndex] = useState<RecommendedIndex | null>(null);
   const [resolver, setResolver] = useState<NameResolver | null>(null);
+  const [community, setCommunity] = useState<CommunityIndex | null>(null);
   // 選定的武器種類（persist；空字串＝尚未選）。
   const [weaponType, setWeaponType] = useLocalStorage("mhsb.recoWeaponType", "");
   // 展開過的分區（全域記憶、不分武器；預設全收合）。存 category 值陣列。
@@ -124,6 +121,10 @@ export function RecommendedView({
         setResolver(res);
       }
     );
+    // 社群配裝獨立載入（失敗不影響 Game8 分區）。
+    loadCommunityBuilds().then((c) => {
+      if (alive) setCommunity(c);
+    });
     return () => {
       alive = false;
     };
@@ -141,6 +142,14 @@ export function RecommendedView({
     cat,
     builds: byCat?.get(cat) ?? [],
   })).filter((s) => s.builds.length > 0);
+
+  // 社群配裝：該武器種類 + 無綁定的泛用防具骨架（對所有武器適用）。
+  const communityBuilds = weaponType
+    ? [
+        ...(community?.byWeaponType.get(weaponType) ?? []),
+        ...(community?.unbound ?? []),
+      ]
+    : [];
 
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-y-auto scrollbar-thin">
@@ -185,7 +194,9 @@ export function RecommendedView({
             <Swords className="h-8 w-8 text-primary/60" />
             <p className="text-sm">選擇上方武器種類以檢視各階段推薦配裝</p>
           </div>
-        ) : sections.length === 0 ? (
+        ) : sections.length === 0 &&
+          communityBuilds.length === 0 &&
+          community !== null ? (
           <p className="py-12 text-center text-sm text-muted-foreground">
             此武器種類尚無推薦配裝資料。
           </p>
@@ -200,11 +211,36 @@ export function RecommendedView({
                   count={builds.length}
                   open={isOpen(cat)}
                   onToggle={() => toggleStage(cat)}
-                  builds={builds}
-                  resolver={resolver}
-                  onExport={onExport}
-                />
+                >
+                  {builds.map((b) => (
+                    <BuildCardDispatch
+                      key={b.id}
+                      build={b}
+                      resolver={resolver}
+                      onExport={onExport}
+                    />
+                  ))}
+                </StageSection>
               ))}
+
+              {/* 第六分區：社群配裝（獨立於五階段＋推薦武器）。 */}
+              {communityBuilds.length > 0 && (
+                <StageSection
+                  title="社群配裝"
+                  icon={<Users className="h-4 w-4 text-primary" />}
+                  count={communityBuilds.length}
+                  open={isOpen("community")}
+                  onToggle={() => toggleStage("community")}
+                >
+                  {communityBuilds.map((b) => (
+                    <CommunityBuildCard
+                      key={b.raw.slug}
+                      build={b}
+                      onExport={onExport}
+                    />
+                  ))}
+                </StageSection>
+              )}
             </div>
           </>
         )}

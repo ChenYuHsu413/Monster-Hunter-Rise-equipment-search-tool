@@ -54,10 +54,14 @@ export default function Home() {
 
   /**
    * 推薦配裝卡片觸發的匯出：切到配裝器並交付匯入指令（不自動搜尋，由 BuilderView 套用）。
-   * full-build 會覆蓋必要技能，故若配裝器已有非空條件先確認；lock-* 為 additive，不確認。
+   * full-build／community-build 會覆蓋必要技能（及固定部位），故若配裝器已有非空條件先
+   * 確認；lock-* 為 additive，不確認。
    */
   const exportToBuilder = (payload: BuilderImport) => {
-    if (payload.kind === "full-build" && builderHasConditions()) {
+    if (
+      (payload.kind === "full-build" || payload.kind === "community-build") &&
+      builderHasConditions()
+    ) {
       const ok = window.confirm(
         "配裝器已有搜尋條件，要以此推薦配裝覆蓋必要技能嗎？（你的護石清單會保留）"
       );
