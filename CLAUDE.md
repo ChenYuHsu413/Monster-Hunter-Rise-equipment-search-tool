@@ -93,3 +93,8 @@
   需 git add -f」皆為失真——實際 .gitignore 乾淨、該檔未被忽略。）
 - **中文 stdout 亂碼**：Git Bash 中文輸出常亂碼／截斷——改用 Node 寫檔 + Read 讀，或請使用者手動
   貼 `git status` 真實輸出當地面真相。
+- **分支慣例＝一律直接於 `main` 工作，不開側枝**：本專案由人類親手 push，Claude 只 commit 到本地
+  `main`、停在本地等驗證。若環境把 Claude 丟進自動建立的 worktree／側枝（`claude/*`），那是 harness
+  預設，非本專案慣例——完事後把該 commit `cherry-pick`（或 `merge --ff-only`）回 `main`、砍掉側枝。
+  注意：主 repo 已 checkout `main` 時，worktree 內 `git checkout main` 會被拒（同分支不可雙 checkout），
+  改用 `git -C <主 repo 路徑>` 操作 `main`；要刪自己所在的側枝需先 `git switch --detach` 再 `git branch -D`。
