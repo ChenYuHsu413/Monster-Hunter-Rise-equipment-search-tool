@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-hammer",
+  "buildName": "ハンマー最強装備まとめ",
+  "weaponType": "hammer",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "ジャナフSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ハンターSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "見切り",
+      "level": 3
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "集中",
+      "level": 2
+    },
+    {
+      "name": "スタミナ奪取",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：夜行槌【常闇】（攻撃力強化Ⅲ ② 痛撃珠）\n護石：2スロ×2 ／ ② 痛撃珠 ② 痛撃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/hammertemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-kantuuyumi-2",
+  "buildName": "貫通弓のおすすめ装備",
+  "weaponType": "bow",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "リノプロSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "カイザーメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ヤツカダアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "カイザーコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ヤツカダグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "火属性攻撃強化",
+      "level": 5
+    },
+    {
+      "name": "体術",
+      "level": 5
+    },
+    {
+      "name": "見切り",
+      "level": 5
+    },
+    {
+      "name": "貫通弾・貫通矢強化",
+      "level": 3
+    },
+    {
+      "name": "炎鱗の恩恵",
+      "level": 2
+    },
+    {
+      "name": "スタミナ急速回復",
+      "level": 3
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：ケア・ド・ネフィラ（攻撃力強化Ⅳ ② 達人珠 ① 火炎珠 ① 火炎珠）\n護石：2スロ×2 ／ ② 達人珠 ② 体術珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/kantuuyumi",
+    "collectedAt": "2026-07-10"
+  }
+}

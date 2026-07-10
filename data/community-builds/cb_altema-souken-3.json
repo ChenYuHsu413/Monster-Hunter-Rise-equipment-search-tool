@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-souken-3",
+  "buildName": "剛刃研磨双剣:レイジネイルー",
+  "weaponType": "dual-blades",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "禍鎧・覇【兜】"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ハンターSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "剛刃研磨",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "匠",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    },
+    {
+      "name": "逆恨み",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：レイジネイルー（攻撃力190 会心率-10% 属性麻痺10 防御- スロット③自由 百竜スキル鬼人激化）\n護石：2スロ×2 ／ ② 剛刃珠 ② 剛刃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/soukentemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

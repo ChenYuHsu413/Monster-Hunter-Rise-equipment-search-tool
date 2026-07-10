@@ -21,10 +21,11 @@
  * 的珠會讓「純骨架完好」的檔整檔驗證失敗，汙染通過率語意。故收進 _extraction／notes 原文，
  * 由使用者日後以 override 升格；required 骨架維持乾淨。
  *
- * 用法：node scripts/scrape-altema.mjs [--list] [--refresh] [--only=taiken,kantuulight]
+ * 用法：node scripts/scrape-altema.mjs [--list] [--refresh] [--only=taiken,kantuulight] [--publish]
  *   --list    只讀快取索引、印出候選配裝頁清單（不抓內文）
  *   --refresh 忽略快取重抓（預設吃 scripts/.cache/altema/ 快取，重跑零請求）
  *   --only    只跑指定 cb 基名（逗號分隔）
+ *   --publish 候選 → 正式目錄 data/community-builds/（機械化刪 _extraction，含 slug 碰撞偵測；不抓站）
  * 禮貌原則：頁面間隔 REQUEST_DELAY_MS（2500ms），正常瀏覽器 UA，HTML 快取重跑零抓取。
  */
 import fs from "node:fs";
@@ -35,6 +36,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const CACHE_DIR = path.join(__dirname, ".cache", "altema");
 const OUT_DIR = path.join(ROOT, "scripts", "output", "altema-candidates");
+const PUBLISH_DIR = path.join(ROOT, "data", "community-builds");
 
 const BASE = "https://altema.jp/mhrize";
 const INDEX_SLUG = "jouitemplate";
@@ -72,6 +74,7 @@ const PAGES = [
 const args = process.argv.slice(2);
 const REFRESH = args.includes("--refresh");
 const LIST = args.includes("--list");
+const PUBLISH = args.includes("--publish");
 const ONLY = (() => {
   const a = args.find((x) => x.startsWith("--only="));
   return a ? a.slice("--only=".length).split(",") : null;
@@ -399,9 +402,46 @@ function runList() {
   for (const p of PAGES) console.log(`  ${p.slug}  ::  ${(seen.get(p.slug) ?? "(索引未見)").slice(0, 40)}`);
 }
 
+// ---------- --publish：候選 → 正式目錄（機械化刪 _extraction 中繼欄位，無一遺漏） ----------
+function runPublish() {
+  if (!fs.existsSync(OUT_DIR)) {
+    console.error(`✗ 候選目錄不存在：${OUT_DIR}（先跑一次爬蟲產出候選）`);
+    process.exit(1);
+  }
+  const files = fs.readdirSync(OUT_DIR).filter((f) => f.startsWith("cb_") && f.endsWith(".json")).sort();
+  if (!files.length) {
+    console.error(`✗ 候選目錄無 cb_*.json：${OUT_DIR}`);
+    process.exit(1);
+  }
+  fs.mkdirSync(PUBLISH_DIR, { recursive: true });
+  const slugs = new Map(); // slug → 候選檔名（碰撞偵測）
+  let published = 0;
+  let stripped = 0;
+  for (const f of files) {
+    const cb = JSON.parse(fs.readFileSync(path.join(OUT_DIR, f), "utf8"));
+    if (cb.slug && slugs.has(cb.slug)) {
+      console.error(`✗ slug 碰撞：「${cb.slug}」同時見於 ${slugs.get(cb.slug)} 與 ${f}`);
+      process.exit(1);
+    }
+    slugs.set(cb.slug, f);
+    if ("_extraction" in cb) {
+      delete cb._extraction; // 上架＝刪中繼欄位（機械化，逐檔必刪）
+      stripped++;
+    }
+    const expect = `cb_${cb.slug}.json`; // 檔名須與 slug 一致（驗證器規則）
+    if (f !== expect) console.warn(`  ⚠ 候選檔名 ${f} 與 slug 推得的 ${expect} 不符，上架採後者`);
+    fs.writeFileSync(path.join(PUBLISH_DIR, expect), JSON.stringify(cb, null, 2) + "\n");
+    published++;
+  }
+  console.log(`✓ 上架 ${published} 檔 → ${path.relative(ROOT, PUBLISH_DIR)}（刪 _extraction ${stripped}/${published}）`);
+  const existing = fs.readdirSync(PUBLISH_DIR).filter((f) => f.startsWith("cb_") && f.endsWith(".json"));
+  console.log(`  正式目錄現有 cb_*.json：${existing.length} 檔（含既有 demo）`);
+}
+
 // ---------- main ----------
 async function main() {
   if (LIST) return runList();
+  if (PUBLISH) return runPublish();
   const collectedAt = new Date().toISOString().slice(0, 10);
   fs.mkdirSync(OUT_DIR, { recursive: true });
 

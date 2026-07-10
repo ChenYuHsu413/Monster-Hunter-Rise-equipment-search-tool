@@ -43,3 +43,6 @@ scripts/.game8-cache/
 
 # Kiranico 日文列表頁快取（build-jp-name-map.js 用）
 scripts/.cache/
+
+# 爬蟲候選中繼產出（保留在本機供追溯；正式資料已上架 data/community-builds/，故不入版控）
+scripts/output/

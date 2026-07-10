@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-souken-4",
+  "buildName": "達人芸装備:ナルガ双剣",
+  "weaponType": "dual-blades",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 6
+    },
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "達人芸",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：夜天連刃【黒翼】（攻撃力190 会心率40% 属性- 防御- スロット② 超心珠 百竜スキル攻撃力強化Ⅲ）\n護石：2スロ×2 ／ ② 達芸珠 ② 達芸珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/soukentemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

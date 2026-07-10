@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-teligatachi",
+  "buildName": "ティガ太刀のおすすめ装備",
+  "weaponType": "long-sword",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "炎の封眼"
+    },
+    {
+      "slot": "chest",
+      "name": "ベリオSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ベリオSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "クロムメタルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "カガチSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "納刀術",
+      "level": 3
+    },
+    {
+      "name": "剛刃研磨",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "渾身",
+      "level": 2
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：一虎刀【餓刃】（鉄蟲糸技強化）\n護石：2スロ×2 ／ ② 剛刃珠 ② 剛刃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/teligatachi",
+    "collectedAt": "2026-07-10"
+  }
+}

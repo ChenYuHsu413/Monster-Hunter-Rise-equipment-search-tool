@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-hammer-5",
+  "buildName": "下位クリアおすすめ装備",
+  "weaponType": "hammer",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ジャナフヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "イズチメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ジャナフアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "フルフルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 3
+    },
+    {
+      "name": "KO術",
+      "level": 2
+    },
+    {
+      "name": "攻撃",
+      "level": 2
+    },
+    {
+      "name": "集中",
+      "level": 1
+    },
+    {
+      "name": "回復速度",
+      "level": 1
+    },
+    {
+      "name": "壁面移動",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：禍ツ槌【封】Ⅰ（爆破属性15 ―――）\n護石：【おすすめの護石】 初心の護石\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/hammertemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

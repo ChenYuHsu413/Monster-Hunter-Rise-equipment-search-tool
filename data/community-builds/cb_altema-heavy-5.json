@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-heavy-5",
+  "buildName": "ヘビィボウガン最強装備まとめ",
+  "weaponType": "heavy-bowgun",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ヴァイクSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "リノプロSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "マギュルSライース"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 5
+    },
+    {
+      "name": "装填拡張",
+      "level": 3
+    },
+    {
+      "name": "弾丸節約",
+      "level": 3
+    },
+    {
+      "name": "反動軽減",
+      "level": 3
+    },
+    {
+      "name": "装填速度",
+      "level": 3
+    },
+    {
+      "name": "砲術",
+      "level": 3
+    },
+    {
+      "name": "ブレ抑制",
+      "level": 2
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：金獅子砲【重雷】（徹甲榴弾追加Ⅱ ---）\n護石：2スロ×2 ／ ② 節弾珠 ② 節弾珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/heavytemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

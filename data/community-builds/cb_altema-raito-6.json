@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-raito-6",
+  "buildName": "上位クリアおすすめ装備",
+  "weaponType": "light-bowgun",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "イズチSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "イズチSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "狗竜の革篭手S"
+    },
+    {
+      "slot": "waist",
+      "name": "イズチSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "攻撃",
+      "level": 4
+    },
+    {
+      "name": "回復速度",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：禍ツ弩【封】Ⅱ（Lv2減気弾速射 攻撃力強化Ⅲ ─）\n護石：【おすすめの護石】 自由\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/raitotemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

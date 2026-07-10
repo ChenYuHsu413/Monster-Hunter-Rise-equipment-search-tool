@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-lance-2",
+  "buildName": "鉄蟲糸技運用",
+  "weaponType": "lance",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ウツシ裏【御面】覇"
+    },
+    {
+      "slot": "chest",
+      "name": "カムラノ装【上衣】覇"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "バゼルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 6
+    },
+    {
+      "name": "業物",
+      "level": 3
+    },
+    {
+      "name": "翔蟲使い",
+      "level": 3
+    },
+    {
+      "name": "ガード性能",
+      "level": 3
+    },
+    {
+      "name": "見切り",
+      "level": 3
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 3
+    },
+    {
+      "name": "弾丸節約",
+      "level": 2
+    },
+    {
+      "name": "壁面移動",
+      "level": 1
+    },
+    {
+      "name": "砲弾装填",
+      "level": 1
+    },
+    {
+      "name": "回復速度",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：ティガスティンガーⅡ（攻撃力220 会心-15% 属性- 防御- スロット① 耐衝珠 百竜スキル攻撃力強化Ⅲ）\n護石：2スロ×2 ／ ② 攻撃珠 ② 攻撃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/lancetemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

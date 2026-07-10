@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-reijineiru-3",
+  "buildName": "レイジネイルーのおすすめ装備",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ミヅハ【烏帽子】"
+    },
+    {
+      "slot": "chest",
+      "name": "ルドロスSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ジュラアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ナルガSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "金色ノ袴"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "剛刃研磨",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "達人芸",
+      "level": 3
+    },
+    {
+      "name": "心眼",
+      "level": 2
+    },
+    {
+      "name": "スタミナ急速回復",
+      "level": 2
+    },
+    {
+      "name": "回避距離UP",
+      "level": 2
+    },
+    {
+      "name": "回避性能",
+      "level": 2
+    },
+    {
+      "name": "力の解放",
+      "level": 1
+    },
+    {
+      "name": "腹減り耐性",
+      "level": 1
+    },
+    {
+      "name": "見切り",
+      "level": 1
+    },
+    {
+      "name": "弾導強化",
+      "level": 2
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：レイジネイルー（鬼人激化 ③ 達芸珠）\n護石：スキル自由 (スロット3-2必要) ／ ③ 超心珠 ② 剛刃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/reijineiru",
+    "collectedAt": "2026-07-10"
+  }
+}

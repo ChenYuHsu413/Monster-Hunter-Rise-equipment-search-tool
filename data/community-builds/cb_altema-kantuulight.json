@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-kantuulight",
+  "buildName": "貫通ライトのおすすめ装備",
+  "weaponType": "light-bowgun",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "リノプロSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ジュラアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "クロムメタルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ヴァイクSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "貫通弾・貫通矢強化",
+      "level": 3
+    },
+    {
+      "name": "反動軽減",
+      "level": 3
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "速射強化",
+      "level": 3
+    },
+    {
+      "name": "装填拡張",
+      "level": 2
+    },
+    {
+      "name": "装填速度",
+      "level": 2
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：夜行弩【梟ノ眼】（ロングバレル 攻撃力強化Ⅱ ②自由）\n護石：3スロ×1 ／ ③ 貫通珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/kantuulight",
+    "collectedAt": "2026-07-10"
+  }
+}

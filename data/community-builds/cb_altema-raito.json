@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-raito",
+  "buildName": "ライトボウガン最強装備まとめ",
+  "weaponType": "light-bowgun",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ヴァイクSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ジュラアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "アシラSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 4
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "弾丸節約",
+      "level": 3
+    },
+    {
+      "name": "速射強化",
+      "level": 3
+    },
+    {
+      "name": "装填速度",
+      "level": 3
+    },
+    {
+      "name": "反動軽減",
+      "level": 3
+    },
+    {
+      "name": "装填拡張",
+      "level": 2
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：王牙弩【野雷】（ロングバレル 攻撃力強化Ⅱ ② 痛撃珠）\n護石：2スロ×2 ／ ② 節弾珠 ② 節弾珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/raitotemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

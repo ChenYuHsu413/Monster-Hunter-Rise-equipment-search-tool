@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-hammer-2",
+  "buildName": "ハンマー最強装備まとめ",
+  "weaponType": "hammer",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "炎の封眼"
+    },
+    {
+      "slot": "chest",
+      "name": "オロミドSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSア-ム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットSグリ-グ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "見切り",
+      "level": 6
+    },
+    {
+      "name": "集中",
+      "level": 2
+    },
+    {
+      "name": "業物",
+      "level": 3
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：轟槌【虎丸】（鉄蟲糸技強化）\n護石：2スロ×2 ／ ② 短縮珠 ② 短縮珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/hammertemplate",
+    "collectedAt": "2026-07-10"
+  }
+}

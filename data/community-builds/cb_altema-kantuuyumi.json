@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-kantuuyumi",
+  "buildName": "貫通弓のおすすめ装備",
+  "weaponType": "bow",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "強弓の羽飾り"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ヤツカダアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "クロムメタルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ヤツカダグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "体術",
+      "level": 5
+    },
+    {
+      "name": "貫通弾・貫通矢強化",
+      "level": 3
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "スタミナ急速回復",
+      "level": 3
+    },
+    {
+      "name": "装填速度",
+      "level": 2
+    },
+    {
+      "name": "弓溜め段階解放",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：闇夜弓【影縫】（攻撃力強化Ⅲ ② 痛撃珠）\n護石：3スロ×1 ／ ③ 貫通珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/kantuuyumi",
+    "collectedAt": "2026-07-10"
+  }
+}
