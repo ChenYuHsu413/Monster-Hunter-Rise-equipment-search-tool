@@ -3,7 +3,6 @@
 import { useMemo, useRef, useState } from "react";
 import type { Skill, SkillMap } from "@/types/build";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
@@ -167,7 +166,7 @@ export function SkillRequirementEditor({
 
   return (
     <div className="space-y-4">
-      {/* ---- 必要技能 ---- */}
+      {/* ---- 必要技能：搜尋框 + 已選橫向 chip 列 ---- */}
       <div className={cn("space-y-2 border-l-2 pl-3", "border-l-primary")}>
         <div className="flex items-baseline justify-between">
           <Label className="text-sm font-semibold">必要技能</Label>
@@ -176,17 +175,30 @@ export function SkillRequirementEditor({
           </span>
         </div>
 
-        <div className="space-y-1.5">
+        <SkillSearchAdd
+          skills={addable}
+          onAdd={(name) => onChangeRequired({ ...required, [name]: 1 })}
+          placeholder="搜尋技能名稱加入必要條件…"
+        />
+
+        {/* 已選必要技能：橫向 chip 列（flex-wrap 自動換行；等級沿用小 dropdown 互動） */}
+        <div className="flex flex-wrap gap-1.5">
           {requiredEntries.map(([name, lvl]) => {
             const max = allSkills.find((s) => s.name === name)?.maxLevel ?? 7;
             return (
-              <div key={name} className="flex items-center gap-2">
-                <span className="flex-1 truncate text-sm">{name}</span>
+              <span
+                key={name}
+                className="inline-flex items-center gap-0.5 rounded-full border border-primary/40 bg-primary/5 py-0.5 pl-2.5 pr-1 text-sm"
+              >
+                <span className="truncate">{name}</span>
                 <Select
                   value={String(lvl)}
                   onValueChange={(v) => setLevel(name, Number(v))}
                 >
-                  <SelectTrigger className="h-7 w-[70px]">
+                  <SelectTrigger
+                    className="h-6 w-auto gap-0.5 border-0 bg-transparent px-1 py-0 font-mono text-xs shadow-none focus:ring-0"
+                    title="調整等級"
+                  >
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -197,28 +209,21 @@ export function SkillRequirementEditor({
                     ))}
                   </SelectContent>
                 </Select>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-7 w-7 shrink-0"
+                <button
+                  type="button"
                   onClick={() => removeRequired(name)}
+                  className="rounded-full p-0.5 text-muted-foreground hover:bg-primary/15 hover:text-foreground"
                   title="移除"
                 >
-                  <X className="h-3.5 w-3.5" />
-                </Button>
-              </div>
+                  <X className="h-3 w-3" />
+                </button>
+              </span>
             );
           })}
           {requiredEntries.length === 0 && (
             <p className="text-xs text-muted-foreground">尚未設定</p>
           )}
         </div>
-
-        <SkillSearchAdd
-          skills={addable}
-          onAdd={(name) => onChangeRequired({ ...required, [name]: 1 })}
-          placeholder="搜尋技能名稱加入必要條件…"
-        />
 
         {/* 常用技能快捷（凍結清單；已加入或已排除者不顯示） */}
         {(() => {
