@@ -7,7 +7,6 @@ import type {
   BuildResult,
   BuildSearchRequest,
   ElementResistanceKey,
-  ElementType,
   FixedParts,
   ExcludedItems,
   ReservedSlots,
@@ -16,13 +15,9 @@ import type {
   WeaponSearchMode,
 } from "@/types/build";
 import {
-  buildPresets,
   weaponTypes,
   skills as allSkills,
-  getPreset,
-  presetsForWeapon,
 } from "@/lib/data";
-import { TIER_MAX_RARITY } from "@/types/build";
 import { loadGameData, type GameData } from "@/lib/game-data";
 import {
   searchBuilds,
@@ -44,17 +39,9 @@ import {
 } from "@/lib/search-conditions";
 import { decodeShareState, encodeShareState } from "@/lib/share-link";
 import type { BuilderImport } from "@/lib/builder-import";
-import {
-  elementSkillMap,
-  mergeMaxSkills,
-  resolveAutoSkillsFromElement,
-  resolvePresetSkills,
-} from "@/lib/preset-resolver";
-import { ELEMENT_LABELS } from "@/lib/weapon-utils";
 
 import { WeaponSelector } from "@/components/WeaponSelector";
 import { WeaponPicker, type ElementFilterValue } from "@/components/WeaponPicker";
-import { BuildPresetSelector } from "@/components/BuildPresetSelector";
 import { SearchModeSelector } from "@/components/SearchModeSelector";
 import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
 import { CharmListPanel } from "@/components/CharmListPanel";
@@ -112,8 +99,6 @@ export function BuilderView({
   pendingImport,
   onConsumeImport,
 }: BuilderViewProps = {}) {
-  const firstPreset = presetsForWeapon("long-sword")[0] ?? buildPresets[0];
-
   // ---- 延遲載入的防具 / 武器資料（不進首屏 bundle）----
   const [gameData, setGameData] = useState<GameData | null>(null);
   useEffect(() => {
@@ -128,7 +113,6 @@ export function BuilderView({
 
   // ---- 基礎設定（persist 到 localStorage）----
   const [weaponType, setWeaponType] = useLocalStorage("mhsb.weaponType", "long-sword");
-  const [presetId, setPresetId] = useLocalStorage("mhsb.presetId", firstPreset.id);
   const [searchMode, setSearchMode] = useLocalStorage<SearchMode>("mhsb.searchMode", "fast");
 
   // ---- 武器設定 ----
@@ -143,8 +127,6 @@ export function BuilderView({
     "mhsb.elementFilter",
     "all"
   );
-  /** 目前套用在技能編輯器中的自動技能（依 preset autoRules 與固定武器屬性）。 */
-  const [autoSkills, setAutoSkills] = useLocalStorage<SkillMap>("mhsb.autoSkills", {});
 
   // ---- 搜尋條件（單一 state 物件；「推薦配裝匯入」可經 deserialize 整包帶入）----
   const [conditions, setConditions] = useLocalStorage<SearchConditions>(
@@ -293,14 +275,12 @@ export function BuilderView({
   // 搜尋後條件是否又被更動（顯示「條件已變更，重新搜尋」提示；不自動觸發）。
   const [dirtySinceSearch, setDirtySinceSearch] = useState(false);
 
-  const presets = useMemo(() => presetsForWeapon(weaponType), [weaponType]);
   const weaponById = gameData?.weaponById ?? {};
   const allArmors = gameData?.armors ?? [];
   const typeWeapons = useMemo(
     () => (gameData ? gameData.weapons.filter((w) => w.weaponType === weaponType) : []),
     [gameData, weaponType]
   );
-  const currentPreset = getPreset(presetId);
   // 來源怪兩層下拉：全武器類型皆啟用。
   // 屬性篩選：弩槍（輕弩/重弩）非屬性武器（無五屬性資料），故排除；其餘 12 類啟用。
   const elementFilterEnabled =
@@ -341,63 +321,9 @@ export function BuilderView({
     return arr;
   }, [results, sortKey]);
 
-  /**
-   * 目前用於自動技能的「屬性來源」：
-   * fixed 模式取固定武器屬性；search 模式取屬性篩選（未篩選則無）。
-   * 可傳入 override 以配合尚未套用的 state（React 更新為非同步）。
-   */
-  const autoElementType = (
-    mode: WeaponSearchMode = weaponSearchMode,
-    weaponId: string = fixedWeaponId,
-    filter: ElementFilterValue = activeElementFilter
-  ): ElementType | undefined => {
-    if (mode === "fixed")
-      return weaponId ? weaponById[weaponId]?.element?.type : undefined;
-    return filter !== "all" ? (filter as ElementType) : undefined;
-  };
-
-  /** 以 preset 重設技能編輯器；一併帶入 autoRules 屬性技能與 preset 的保留洞位。 */
-  const applyPreset = (id: string, elementType?: ElementType) => {
-    setPresetId(id);
-    const p = getPreset(id);
-    if (!p) return;
-    const resolved = resolvePresetSkills(p, elementType);
-    setConditions((prev) => ({
-      ...prev,
-      requiredSkills: resolved.requiredSkills,
-      excludedSkills: resolved.excludedSkills,
-    }));
-    setAutoSkills(resolved.autoAddedSkills);
-    // 一律重設保留洞位：preset 有指定則帶入，否則歸零（避免上一個模板的保留洞位殘留）。
-    setReservedSlots({
-      4: p.reservedSlots?.[4] ?? 0,
-      3: p.reservedSlots?.[3] ?? 0,
-      2: p.reservedSlots?.[2] ?? 0,
-      1: p.reservedSlots?.[1] ?? 0,
-    });
-  };
-
-  /**
-   * 屬性來源（固定武器 / 屬性篩選 / 模式）變更時，只重算自動技能：
-   * 移除舊自動技能（若使用者未改動其等級），併入新的屬性技能，保留其他手動編輯。
-   */
-  const reapplyAutoSkills = (elementType: ElementType | undefined) => {
-    const p = getPreset(presetId);
-    const newAuto = resolveAutoSkillsFromElement(p?.autoRules, elementType);
-    setRequired((prev) => {
-      const next = { ...prev };
-      for (const [k, v] of Object.entries(autoSkills)) {
-        if (next[k] === v) delete next[k];
-      }
-      return mergeMaxSkills(next, newAuto);
-    });
-    setAutoSkills(newAuto);
-  };
-
-  /** 屬性篩選變更：更新篩選並重算自動技能（search 模式下依新篩選帶入屬性攻擊強化）。 */
+  /** 屬性篩選變更：更新篩選（縮小候選武器候選池）。 */
   const changeElementFilter = (v: ElementFilterValue) => {
     setElementFilter(v);
-    reapplyAutoSkills(autoElementType(weaponSearchMode, fixedWeaponId, v));
   };
 
   const changeWeapon = (w: string) => {
@@ -409,8 +335,6 @@ export function BuilderView({
       delete next.weapon;
       return next;
     });
-    const first = presetsForWeapon(w)[0];
-    if (first) applyPreset(first.id, undefined);
   };
 
   const changeWeaponSearchMode = (m: WeaponSearchMode) => {
@@ -421,20 +345,17 @@ export function BuilderView({
         delete next.weapon;
         return next;
       });
-      reapplyAutoSkills(autoElementType("search"));
     } else {
       const w = fixedWeaponId ? weaponById[fixedWeaponId] : undefined;
       if (w) {
         setFixedParts((prev) => ({ ...prev, weapon: w.id }));
       }
-      reapplyAutoSkills(w?.element?.type);
     }
   };
 
   const pickWeapon = (id: string) => {
     setFixedWeaponId(id);
     setFixedParts((prev) => ({ ...prev, weapon: id }));
-    reapplyAutoSkills(weaponById[id]?.element?.type);
   };
 
   // ---- 搜尋期間的經過毫秒計時（不確定進度提示）----
@@ -536,22 +457,14 @@ export function BuilderView({
     startElapsed();
     const request: BuildSearchRequest = {
       weaponType,
-      presetId,
       weaponSearchMode,
       fixedWeaponId:
         weaponSearchMode === "fixed" ? fixedWeaponId || undefined : undefined,
-      // fixed 模式的自動技能已在編輯器中；search 模式由搜尋引擎逐武器套用
-      autoRules:
-        weaponSearchMode === "search" ? currentPreset?.autoRules : undefined,
       elementFilter:
         activeElementFilter !== "all" ? activeElementFilter : undefined,
       minDefense: minDefense > 0 ? minDefense : undefined,
       minResistances:
         Object.keys(minResistances).length > 0 ? minResistances : undefined,
-      maxRarity: currentPreset?.tier
-        ? TIER_MAX_RARITY[currentPreset.tier]
-        : undefined,
-      preferElement: currentPreset?.preferElement,
       charms: useCharms ? charms.map(ownedCharmToCharm) : [],
       fixedParts,
       excludedItems,
@@ -622,7 +535,6 @@ export function BuilderView({
     if (key === "weapon") {
       setFixedWeaponId("");
       setWeaponSearchMode("search");
-      reapplyAutoSkills(autoElementType("search"));
     }
   };
 
@@ -631,7 +543,6 @@ export function BuilderView({
     setWeaponSearchMode("fixed");
     setFixedWeaponId(id);
     setFixedParts((prev) => ({ ...prev, weapon: id }));
-    reapplyAutoSkills(weaponById[id]?.element?.type);
   };
 
   const excludeWeapon = (id: string) => {
@@ -668,7 +579,6 @@ export function BuilderView({
     if (hadWeapon) {
       setFixedWeaponId("");
       setWeaponSearchMode("search");
-      reapplyAutoSkills(autoElementType("search"));
     }
   };
   const clearAllExcluded = () =>
@@ -685,15 +595,13 @@ export function BuilderView({
 
     if (payload.kind === "full-build") {
       const importedNames = new Set(Object.keys(payload.requiredSkills));
-      // 切到該配裝的武器種類（直接設，不走 changeWeapon 以免 applyPreset 覆蓋匯入的技能）。
+      // 切到該配裝的武器種類（直接設，不走 changeWeapon 以免副作用清掉匯入的技能）。
       const switchType = payload.weaponType !== weaponType;
       if (switchType) {
         setWeaponType(payload.weaponType);
         setElementFilter("all");
         setFixedWeaponId("");
         setWeaponSearchMode("search");
-        const first = presetsForWeapon(payload.weaponType)[0];
-        if (first) setPresetId(first.id); // 只給 preset 下拉一個合法值，不套用其技能
       }
       setConditions((prev) => {
         const fixedParts = { ...prev.fixedParts };
@@ -713,7 +621,6 @@ export function BuilderView({
           ],
         };
       });
-      setAutoSkills({}); // 匯入為手動核心技能，清掉殘留的 preset 自動技能提示
       setImportNotice({
         importedCount: payload.importedCount,
         totalCount: payload.totalCount,
@@ -818,23 +725,6 @@ export function BuilderView({
       );
     }
   };
-
-  // 自動技能提示（WeaponPicker 顯示）
-  const autoHint = (() => {
-    if (!currentPreset?.autoRules?.addElementAttackSkill) return null;
-    if (weaponSearchMode === "fixed") {
-      const entries = Object.entries(autoSkills);
-      if (entries.length === 0) return null;
-      return `已根據目前武器屬性自動加入：${entries
-        .map(([n, l]) => `${n} Lv${l}`)
-        .join("、")}`;
-    }
-    if (activeElementFilter !== "all") {
-      const skill = elementSkillMap[activeElementFilter];
-      return `已篩選${ELEMENT_LABELS[activeElementFilter]}屬性武器，搜尋時將自動加入：${skill} Lv${currentPreset.autoRules.elementAttackLevel ?? 5}。`;
-    }
-    return "搜尋時將依各候選武器屬性自動加入對應的屬性攻擊強化。";
-  })();
 
   return (
     <div className="flex min-h-0 flex-1 flex-col bg-background">
@@ -961,16 +851,10 @@ export function BuilderView({
                 onModeChange={changeWeaponSearchMode}
                 fixedWeaponId={fixedWeaponId}
                 onPickWeapon={pickWeapon}
-                autoHint={autoHint}
                 enableElementFilter={elementFilterEnabled}
                 elementFilter={activeElementFilter}
                 onElementFilterChange={changeElementFilter}
                 groupBySource
-              />
-              <BuildPresetSelector
-                presets={presets}
-                value={presetId}
-                onChange={(id) => applyPreset(id, autoElementType())}
               />
             </CardContent>
           </Card>
@@ -1191,8 +1075,8 @@ export function BuilderView({
                 icon="swords"
                 title="尚未搜尋配裝"
                 description={`你可以先完成：
-1. 選擇武器與流派（會自動帶入技能需求）
-2. 調整必要技能與排除技能
+1. 選擇武器（固定一把，或從同類型武器中搜尋）
+2. 選擇必要技能與排除技能
 3. 到「裝備」頁登錄你的護石
 4. 視需要固定部位或排除裝備
 5. 按下搜尋配裝

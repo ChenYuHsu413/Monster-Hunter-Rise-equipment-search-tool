@@ -319,7 +319,8 @@ export type WeaponSearchMode = "fixed" | "search";
 
 export type BuildSearchRequest = {
   weaponType: string;
-  presetId: string;
+  /** @deprecated 引擎未讀取；A2 移除 guide 後將整欄刪除。A1 暫改選填以便配裝器不再傳入。 */
+  presetId?: string;
   weaponSearchMode: WeaponSearchMode;
   /** weaponSearchMode 為 fixed 時使用的武器 id（與 fixedParts.weapon 相容，此欄優先）。 */
   fixedWeaponId?: string;
