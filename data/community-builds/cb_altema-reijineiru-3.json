@@ -2,6 +2,7 @@
   "schemaVersion": 2,
   "slug": "altema-reijineiru-3",
   "buildName": "レイジネイルーのおすすめ装備",
+  "weaponType": "dual-blades",
   "armor": [
     {
       "slot": "head",

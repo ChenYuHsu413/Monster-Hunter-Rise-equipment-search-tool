@@ -22,6 +22,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeJa } from "./game8-normalize.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -38,7 +39,7 @@ const SCHEMA_DOC = {
     slug: "字串，須等於檔名的 {slug}（cb_{slug}.json）。",
     buildName: "顯示標題（字串，非空）。",
     armor:
-      "恰 5 件，每件 { slot: head|chest|arms|waist|legs, name }；五部位各一、不得重複。name 可為專案內部 id（armor_*）或可解析的繁中／日文／簡中名。",
+      "具體防具件陣列，每件 { slot: head|chest|arms|waist|legs, name }；不得重複部位。name 可為專案內部 id（armor_*）或可解析的繁中／日文／簡中名。搭配 flexSlots：armor 的部位 ＋ flexSlots 須『恰覆蓋五部位、不重不漏』。無 flexSlots 時即恰 5 件。",
     targetSkills:
       "目標技能列表（≥1），每筆 { name, level }；name 解析到專案技能、level 為 1..maxLevel。這是匯出到配裝器的核心輸入（技能條件）。",
     source:
@@ -46,6 +47,8 @@ const SCHEMA_DOC = {
   },
   optional: {
     placeholder: "true＝示範／佔位資料，UI 標『示範資料』。",
+    flexSlots:
+      "彈性孔部位陣列（B 最強系列的『自由枠(任意)』部位）。這些部位不指定固定防具、匯出時不鎖，留給 solver 以使用者資源填。armor 部位 ＋ flexSlots 須恰覆蓋五部位（不重不漏）。",
     weaponType: "武器類別 id（weaponTypes.json）；泛用防具骨架可不綁武器而省略。",
     weapon:
       "{ name, slots?, rampageDecorations? }。name 解析到武器 id；slots＝洞位等級陣列；rampageDecorations＝[{ name, count? }]（百龍裝飾品，解析到 rampage-decorations id）。",
@@ -78,7 +81,12 @@ const decoSlotLevel = new Map(decorations.map((d) => [d.id, d.slotLevel]));
 const armorSlots = new Map(armors.map((a) => [a.id, a.slots ?? []]));
 const weaponSlots = new Map(weapons.map((w) => [w.id, w.slots ?? []]));
 
-const nfkc = (s) => String(s).normalize("NFKC").trim();
+// 名稱正規化＝共用 scripts/game8-normalize.js 的 normalizeJa（NFKC＋去所有空白＋盤→磐 異體字
+// ＋latin 大寫）。★關鍵：build-jp-name-map.js 建 jp-name-map 的鍵就是用 normalizeJa，故查表這端
+// 必須用同一套，否則「建表 vs 查表」正規化漂移（曾因此 nfkc 少了盤→磐折疊，Altema 顕如盤石(U+76E4)
+// 對不到 jp-map 的 顕如磐石(U+78D0)→堅若磐石）。src/lib/community-builds.ts 的 nfkc 為 app 端鏡像，
+// 規則須與本函式逐條同步（見該檔交叉註解與 battery case）。
+const nfkc = (s) => normalizeJa(s);
 
 // type → NFKC(名稱鍵) → 專案標準身分（skills=原始技能名、其餘=id）。id 與繁中名皆入鍵，
 // 兩側都 NFKC 正規化（如全形羅馬數字 Ⅱ→II），映射值保留原始身分供 skillMax/slot 查表。
@@ -205,9 +213,13 @@ function validateFile(file) {
     }
   }
 
-  // --- armor（必填五件）---
-  if (!Array.isArray(build.armor) || build.armor.length !== 5) {
-    errs.push(`armor 必須恰 5 件（實得 ${Array.isArray(build.armor) ? build.armor.length : "非陣列"}）`);
+  // --- armor + flexSlots（必填：五部位齊；具體防具件 + 自由枠彈性孔恰覆蓋 head/chest/arms/waist/legs，
+  //     不重不漏）。flexSlots＝作者標「自由枠(任意)」的部位（B 最強系列常見）：不指定固定防具、
+  //     匯出時該部位不鎖，留給 solver 以使用者資源填。 ---
+  const flexSlots = Array.isArray(build.flexSlots) ? build.flexSlots : [];
+  if (build.flexSlots != null && !Array.isArray(build.flexSlots)) errs.push("flexSlots 須為部位名陣列");
+  if (!Array.isArray(build.armor)) {
+    errs.push("armor 必須為陣列");
   } else {
     const seen = new Set();
     for (let i = 0; i < build.armor.length; i++) {
@@ -229,6 +241,18 @@ function validateFile(file) {
           errs.push(`armor[${i}]「${p.name}」的裝飾品裝不進孔位（孔 [${slots.join(",")}]、珠等級 [${levels.join(",")}]）`);
       }
     }
+    // 自由枠部位：須為合法部位、且與 armor 或自身不重複
+    for (let i = 0; i < flexSlots.length; i++) {
+      const s = flexSlots[i];
+      if (!ARMOR_SLOTS.includes(s)) errs.push(`flexSlots[${i}]「${s}」非法（須 ${ARMOR_SLOTS.join("/")}）`);
+      else if (seen.has(s)) errs.push(`flexSlots 部位「${s}」與 armor 或自身重複`);
+      else seen.add(s);
+    }
+    // 五部位齊：具體件 + 自由枠 = 恰 5 相異部位
+    if (seen.size !== 5)
+      errs.push(
+        `防具部位不齊：armor(${build.armor.length}) ＋ flexSlots(${flexSlots.length}) 須恰覆蓋 5 部位（實得相異 ${seen.size}）`
+      );
   }
 
   // --- targetSkills（必填）---

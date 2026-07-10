@@ -5,7 +5,7 @@
     "拡散矢強化": "散彈･擴散箭強化",
     "貫通矢強化": "貫通彈･貫通箭強化",
     "回避距離": "迴避距離UP",
-    "$altema": "來源 altema.jp/mhrize（E 任務社群配裝爬蟲）。弱点特攻＝Altema 誤字（正字 弱点特効）→ 弱點特效。",
+    "$altema": "來源 altema.jp/mhrize（E 任務社群配裝爬蟲）。弱点特攻＝Altema 誤字（正字 弱点特効）→ 弱點特效。（顕如盤石 的 盤/磐 異體字改由社群 nfkc 共用 normalizeJa 的盤→磐折疊解決，不走 override，見 validate-community-builds.mjs nfkc 註解。）",
     "弱点特攻": "弱點特效"
   },
   "armors": {

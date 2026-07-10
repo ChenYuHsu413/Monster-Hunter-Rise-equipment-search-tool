@@ -10,12 +10,17 @@
  * 「日文原文」，解析交給驗證器（jp-name-map → suggestions）；本腳本不自行解析 ID，
  * 讓未解析名稱集中在一個裁決面（scripts/output/altema-candidates.suggestions.json）。
  *
- * 表格啟發式（偵察＋實測 taikentemplate 確認）：每頁多表——
- *   具體配裝表：表頭含「部位」＋「防具名」、且 ≥4 個 seriesbogu 連結、資料列非 ×/-。
- *   発動スキル表：表頭第一格＝「発動スキル」→ targetSkills（技能總表）。
+ * 爬取集：A 武器別テンプレ（14）＋C 特定流派（6）＋B 最強装備（14，MR201+ 傀異 min-max）。
+ *
+ * 表格啟發式（偵察＋實測確認）：每頁多表——
+ *   具體配裝表：表頭「部位」＋名稱欄（防具名／武器名／装備名）、≥4 seriesbogu、資料列非 ×/-；
+ *     且「具體件 + 自由枠」須恰 5 相異部位，否則＝候選件表（同部位多列）→ 略過。
+ *   自由枠（B 最強系列的彈性孔）：該部位不指定固定防具 → 進 flexSlots（選填），該 slot 不鎖。
+ *   発動スキル表：表頭第一格＝「発動スキル」→ targetSkills；一表可含「発動スキル」＋
+ *     「おすすめ発動スキル」兩子段，皆併入（同名取最高）。
  *   武器名表：表頭第一格＝「武器名」→ 武器（收進 notes/_extraction，不結構化）。
  *   互動模擬器表（投稿樣板）：全 ×/- 佔位、seriesbogu=0 → 剔除（且 scan 於「投稿」段止步）。
- *   其餘（必要素材／スキル解説／入れ替え技／百竜スキル）表頭不符 → 靜默略過。
+ *   其餘（必要素材／スキル解説／入れ替え技／百竜スキル／汎用火力スキル）表頭不符 → 靜默略過。
  *
  * 武器與逐孔珠為何走 notes 而非結構化：兩者皆選填；若結構化，未解析的武器名／無法裝孔
  * 的珠會讓「純骨架完好」的檔整檔驗證失敗，汙染通過率語意。故收進 _extraction／notes 原文，
@@ -67,8 +72,24 @@ const PAGES = [
   { slug: "zanreturaito", cb: "zanreturaito", wt: "light-bowgun" },
   { slug: "kantuuyumi", cb: "kantuuyumi", wt: "bow" },
   { slug: "kaihukubue", cb: "kaihukubue", wt: "hunting-horn" },
-  { slug: "reijineiru", cb: "reijineiru" }, // 武種不確定 → 不標 weaponType（選填）
+  // reijineiru＝Game8 editorial 標「レイジネイルー(麻痺双剣)」→ 雙劍（天狗獸雙劍）
+  { slug: "reijineiru", cb: "reijineiru", wt: "dual-blades" },
   { slug: "teligatachi", cb: "teligatachi", wt: "long-sword" },
+  // B：武器別「最強装備」（MR201+ 傀異錬成/傀異克服 min-max；14 武種各一）
+  { slug: "mrtaikensaikyou", cb: "mrtaiken", wt: "great-sword" },
+  { slug: "mrtachisoubi", cb: "mrtachi", wt: "long-sword" },
+  { slug: "mrkatatekensoubi", cb: "mrkatateken", wt: "sword-and-shield" },
+  { slug: "mrsoukensoubi", cb: "mrsouken", wt: "dual-blades" },
+  { slug: "mrhammersoubi", cb: "mrhammer", wt: "hammer" },
+  { slug: "mrhuesoubi", cb: "mrhue", wt: "hunting-horn" },
+  { slug: "mrrancesoubi", cb: "mrrance", wt: "lance" },
+  { slug: "mrgunrancesoubi", cb: "mrgunrance", wt: "gunlance" },
+  { slug: "mrsuraakusoubi", cb: "mrsuraaku", wt: "switch-axe" },
+  { slug: "mrchaakusoubi", cb: "mrchaaku", wt: "charge-blade" },
+  { slug: "mrsouchukonsoubi", cb: "mrsouchukon", wt: "insect-glaive" },
+  { slug: "mrlightbowgunsoubi", cb: "mrlightbowgun", wt: "light-bowgun" },
+  { slug: "mrheavybowgunsoubi", cb: "mrheavybowgun", wt: "heavy-bowgun" },
+  { slug: "mryumisoubi", cb: "mryumi", wt: "bow" },
 ];
 
 const args = process.argv.slice(2);
@@ -174,7 +195,8 @@ function extractUpdateStamp(html) {
 const PART_TO_SLOT = { 頭: "head", 胴: "chest", 腕: "arms", 腰: "waist", 脚: "legs" };
 const PLACEHOLDER_RE = /^[×\-ー―−]?$/; // ×／- 佔位（模擬器空樣板）
 
-const NAME_COL_RE = /防具名|武器名/; // 名稱欄可標「防具名」（分離式）或「武器名」（武器＋防具合表式）
+const NAME_COL_RE = /防具名|武器名|装備名/; // 名稱欄：防具名（分離式）／武器名（合表式）／装備名（B 最強系列）
+const FLEX_SLOT_NAME = "自由枠"; // B 最強系列的彈性孔：該部位不指定固定防具，留給使用者資源
 
 function classifyTable(rows, seriesbogu) {
   if (!rows.length) return null;
@@ -199,24 +221,30 @@ function classifyTable(rows, seriesbogu) {
 // 主用弾種自選對應強化」，非單一技能、無法對 ID。比照 Game8 placeholder：不進 targetSkills（否則
 // 必然解析失敗、拖垮通過率），改收進 _extraction 供顯示端提示。
 const PLACEHOLDER_SKILL_RE = /[○〇]{2}/;
-/** 発動スキル表 → { skills:[{name,level}], placeholders:[string] }（原文技能名，交驗證器解析）。 */
+/** 発動スキル表 → { skills:[{name,level}], placeholders:[string] }（原文技能名，交驗證器解析）。
+ *  一表可含「発動スキル」＋「おすすめ発動スキル」兩子段（B 最強系列），皆併入（同名取最高）；
+ *  尾綴「以上」（剛心Lv1 以上）以放寬 $ 收進。子段標題列（無 Lv）自然略過。 */
 function parseSkillTotals(rows) {
-  const skills = [];
+  const byName = new Map(); // name → 最高等級
   const placeholders = [];
   for (const r of rows.slice(1)) {
     for (const c of r.cells) {
-      const m = c.text.match(/^(.+?)\s*Lv\.?\s*(\d+)$/);
+      const m = c.text.match(/^(.+?)\s*Lv\.?\s*(\d+)/);
       if (!m) continue;
       const name = m[1].trim();
-      if (PLACEHOLDER_SKILL_RE.test(name)) placeholders.push(`${name}Lv${m[2]}`);
-      else skills.push({ name, level: Number(m[2]) });
+      const level = Number(m[2]);
+      if (PLACEHOLDER_SKILL_RE.test(name)) {
+        placeholders.push(`${name}Lv${level}`);
+      } else {
+        byName.set(name, Math.max(byName.get(name) ?? 0, level));
+      }
     }
   }
-  return { skills, placeholders };
+  return { skills: [...byName].map(([name, level]) => ({ name, level })), placeholders };
 }
 
-/** 具體配裝表 → { armor:[{slot,name}], charmRaw, piecesRaw, weaponFromRow }
- *  合表式含一列 部位＝武器（武器與防具同表）→ 抽成 weaponFromRow（原文，不結構化）。 */
+/** 具體配裝表 → { armor:[{slot,name}], flexSlots:[slot], charmRaw, piecesRaw, weaponFromRow }
+ *  合表式含一列 部位＝武器 → 抽成 weaponFromRow（原文）；部位名＝「自由枠」→ 該 slot 進 flexSlots。 */
 function parseArmorTable(rows) {
   const h = rows[0].cells.map((c) => c.text);
   const nameIdx = Math.max(0, h.findIndex((x) => NAME_COL_RE.test(x)));
@@ -224,6 +252,7 @@ function parseArmorTable(rows) {
   // 中欄（性能/斬れ味/パーツ/百竜強化…）＝名稱與孔位以外的欄，當作 per-piece 原文備註。
   const midColIdx = h.findIndex((x, i) => i > 0 && i !== nameIdx && !/スロ/.test(x));
   const armor = [];
+  const flexSlots = [];
   const piecesRaw = [];
   let charmRaw = null;
   let weaponFromRow = null;
@@ -248,6 +277,10 @@ function parseArmorTable(rows) {
     }
     const slot = PART_TO_SLOT[part];
     if (!slot) continue;
+    if (name === FLEX_SLOT_NAME) {
+      flexSlots.push(slot); // 彈性孔：該部位不鎖，記入 flexSlots
+      continue;
+    }
     if (!name || PLACEHOLDER_RE.test(name)) continue;
     armor.push({ slot, name });
     piecesRaw.push({
@@ -258,7 +291,7 @@ function parseArmorTable(rows) {
       slotsRaw: slotColIdx >= 0 ? r.cells[slotColIdx]?.text ?? null : null,
     });
   }
-  return { armor, charmRaw, piecesRaw, weaponFromRow };
+  return { armor, flexSlots, charmRaw, piecesRaw, weaponFromRow };
 }
 
 /** 武器名表 → { name, statsRaw }（原文，不結構化）。結構：r0=武器名, r1=名稱, r2=規格表頭, r3=值。 */
@@ -315,10 +348,18 @@ function parsePage(html, page, url, collectedAt, stats) {
     if (type === "weapon") {
       pendingWeapon = parseWeapon(rows);
     } else if (type === "armor") {
-      const { armor, charmRaw, piecesRaw, weaponFromRow } = parseArmorTable(rows);
+      const { armor, flexSlots, charmRaw, piecesRaw, weaponFromRow } = parseArmorTable(rows);
+      // 部位覆蓋檢查：具體件 + 自由枠須恰為 5 個相異部位。否則＝候選件表（同部位多列，
+      // 如 B 的「自由枠おすすめ装備」列 頭/頭/腰/腰/腰）或殘缺表 → 非單一 build，略過。
+      const allSlots = [...armor.map((a) => a.slot), ...flexSlots];
+      if (allSlots.length !== 5 || new Set(allSlots).size !== 5) {
+        pendingWeapon = null;
+        continue;
+      }
       const b = {
         heading,
         armor,
+        flexSlots,
         charmRaw,
         piecesRaw,
         weapon: weaponFromRow || pendingWeapon, // 合表式優先取同表武器列
@@ -350,6 +391,13 @@ function parsePage(html, page, url, collectedAt, stats) {
     for (const p of altPieces) notesParts.push(`${p.slot} 可替換：${p.altNames.join(" / ")}`);
     if (b.placeholderSkills.length)
       notesParts.push(`屬性／弾種依武器自選：${b.placeholderSkills.join("、")}`);
+    if (b.flexSlots.length) {
+      const zh = { head: "頭", chest: "胴", arms: "腕", waist: "腰", legs: "脚" };
+      notesParts.push(
+        `自由枠（${b.flexSlots.map((s) => zh[s]).join("・")}）＝彈性部位，由你的資源填；` +
+          `此為 MR201+ 傀異錬成前提配裝，固定件的傀異錬成技能需自行錬成。`
+      );
+    }
     notesParts.push("逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。");
 
     const cb = {
@@ -358,6 +406,7 @@ function parsePage(html, page, url, collectedAt, stats) {
       buildName,
       ...(page.wt ? { weaponType: page.wt } : {}),
       armor: b.armor,
+      ...(b.flexSlots.length ? { flexSlots: b.flexSlots } : {}),
       targetSkills: b.targetSkills,
       ...(updateStamp ? { publishedAt: updateStamp } : {}),
       notes: notesParts.join("\n"),
@@ -374,9 +423,10 @@ function parsePage(html, page, url, collectedAt, stats) {
         weaponRaw: b.weapon,
         charmRaw: b.charmRaw,
         placeholderSkills: b.placeholderSkills,
+        flexSlots: b.flexSlots,
         pieces: b.piecesRaw,
         confidence: {
-          armor: b.armor.length === 5 ? "high" : `low(${b.armor.length}/5)`,
+          armor: b.armor.length + b.flexSlots.length === 5 ? "high" : `low(${b.armor.length}+${b.flexSlots.length}/5)`,
           targetSkills: b.targetSkills.length ? "high" : "missing",
         },
       },
@@ -468,30 +518,33 @@ async function main() {
     perPage.push({
       page: page.slug,
       builds: cbs.length,
-      armorOk: cbs.filter((c) => c.armor.length === 5).length,
+      armorOk: cbs.filter((c) => c.armor.length + (c.flexSlots?.length ?? 0) === 5).length,
       skillsOk: cbs.filter((c) => c.targetSkills.length > 0).length,
     });
     console.log(`  ${page.slug}: ${cbs.length} build(s)`);
   }
 
-  // 抽取率報告
+  // 抽取率報告（防具5件＝具體件+自由枠恰 5 部位；flex＝含彈性孔的套數）
   const total = written.length;
-  const armor5 = written.filter((c) => c.armor.length === 5).length;
+  const slots5 = (c) => c.armor.length + (c.flexSlots?.length ?? 0) === 5;
+  const armor5 = written.filter(slots5).length;
+  const withFlex = written.filter((c) => c.flexSlots?.length).length;
   const withSkills = written.filter((c) => c.targetSkills.length > 0).length;
   const withWeapon = written.filter((c) => c._extraction.weaponRaw).length;
   const withCharm = written.filter((c) => c._extraction.charmRaw).length;
   console.log(`\n✓ 產出 ${total} 檔 → ${path.relative(ROOT, OUT_DIR)}`);
   console.log(
-    `  抽取率：防具5件 ${armor5}/${total}、目標技能≥1 ${withSkills}/${total}、` +
+    `  抽取率：五部位齊 ${armor5}/${total}（含自由枠 ${withFlex}）、目標技能≥1 ${withSkills}/${total}、` +
       `武器 ${withWeapon}/${total}、護石 ${withCharm}/${total}`
   );
   const report = {
     generatedAt: collectedAt,
-    source: "Altema（altema.jp/mhrize）武器別テンプレ装備＋特定流派配裝（A+C 集）",
+    source: "Altema（altema.jp/mhrize）武器別テンプレ（A）＋特定流派（C）＋最強装備（B）",
     pagesCrawled: pages.length,
     buildsExtracted: total,
     extractionRates: {
       armorFive: `${armor5}/${total}`,
+      withFlexSlots: `${withFlex}/${total}`,
       targetSkills: `${withSkills}/${total}`,
       weaponProse: `${withWeapon}/${total}`,
       charmProse: `${withCharm}/${total}`,
@@ -502,6 +555,12 @@ async function main() {
     skippedHeaders: Object.fromEntries(
       Object.entries(stats.skippedHeaders).sort((a, b) => b[1] - a[1])
     ),
+    // 產 0 建的頁（備查）：B 最強系列的 双剣/笛/弓/軽弩/重弩 用 4th layout——建表無「部位」欄
+    // （列序即 頭→脚）、seriesbogu=0（連 /nlinkanri 而非 seriesbogu）、且全套為同一組 ケイオス／
+    // ネフィリム A/B 通用集（跨 5 武種重複、且社群管線無 alternatives 機制無法乾淨表達）。本輪不收。
+    zeroBuildPages: perPage
+      .filter((pp) => pp.builds === 0)
+      .map((pp) => ({ slug: pp.page, url: `${BASE}/${pp.page}`, reason: "4th-layout（無部位表頭＋ケイオス/ネフィリム A/B 通用集）" })),
     perPage,
   };
   fs.writeFileSync(path.join(OUT_DIR, "_extraction-report.json"), JSON.stringify(report, null, 2) + "\n");
