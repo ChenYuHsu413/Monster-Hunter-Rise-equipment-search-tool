@@ -885,60 +885,46 @@ export function BuilderView({
               </CardContent>
             </Card>
 
-            {/* 技能 */}
-            <Card className="min-w-[280px] flex-1">
-              <CardContent className="space-y-2 p-3">
-                <Label className="text-xs text-muted-foreground">技能</Label>
-                <SkillRequirementEditor
-                  required={required}
-                  excluded={excludedSkills}
-                  onChangeRequired={setRequired}
-                  onChangeExcluded={setExcludedSkills}
-                  allSkills={allSkills}
-                />
-              </CardContent>
-            </Card>
-
-            {/* 其他條件：護石／保留洞位／防禦耐性、鎖定／排除 */}
-            <Card className="min-w-[300px] flex-[1.5]">
+            {/* 技能｜護石｜鎖定：單一 tab 面板 */}
+            <Card className="min-w-[280px] flex-[1.6]">
               <CardContent className="p-3">
-                <Tabs defaultValue="gear">
-                  <TabsList className="grid w-full grid-cols-2">
-                    <TabsTrigger value="gear">裝備</TabsTrigger>
+                <Tabs defaultValue="skills">
+                  <TabsList className="grid w-full grid-cols-3">
+                    <TabsTrigger value="skills">技能</TabsTrigger>
+                    <TabsTrigger value="charms">護石</TabsTrigger>
                     <TabsTrigger value="locks">鎖定</TabsTrigger>
                   </TabsList>
 
-                  <TabsContent value="gear" className="space-y-4 pt-2">
-                    <div className="space-y-1.5">
+                  <TabsContent value="skills" className="pt-2">
+                    <SkillRequirementEditor
+                      required={required}
+                      excluded={excludedSkills}
+                      onChangeRequired={setRequired}
+                      onChangeExcluded={setExcludedSkills}
+                      allSkills={allSkills}
+                    />
+                  </TabsContent>
+
+                  <TabsContent value="charms" className="space-y-4 pt-2">
+                    <CharmListPanel
+                      charms={charms}
+                      useCharms={useCharms}
+                      onChangeCharms={setCharms}
+                      onChangeUseCharms={setUseCharms}
+                      allSkills={allSkills}
+                    />
+                    <div className="space-y-1.5 border-t border-border pt-3">
                       <Label className="text-xs text-muted-foreground">
-                        護石
+                        傀異鍊成（自訂防具）
                       </Label>
-                      <CharmListPanel
-                        charms={charms}
-                        useCharms={useCharms}
-                        onChangeCharms={setCharms}
-                        onChangeUseCharms={setUseCharms}
+                      <AugmentedArmorEditor
+                        allArmors={allArmors}
                         allSkills={allSkills}
-                      />
-                    </div>
-                    <div className="space-y-1.5">
-                      <Label className="text-xs text-muted-foreground">
-                        保留洞位
-                      </Label>
-                      <ReservedSlotsInput
-                        value={reservedSlots}
-                        onChange={setReservedSlots}
-                      />
-                    </div>
-                    <div className="space-y-1.5">
-                      <Label className="text-xs text-muted-foreground">
-                        防禦 / 屬性耐性
-                      </Label>
-                      <DefenseResInput
-                        minDefense={minDefense}
-                        minResistances={minResistances}
-                        onChangeMinDefense={setMinDefense}
-                        onChangeMinResistances={setMinResistances}
+                        augments={augments}
+                        onAdd={(p) => setAugments((prev) => [...prev, p])}
+                        onRemove={(id) =>
+                          setAugments((prev) => prev.filter((a) => a.id !== id))
+                        }
                       />
                     </div>
                   </TabsContent>
@@ -965,22 +951,34 @@ export function BuilderView({
                         onRemoveRecoCharm={removeRecoCharm}
                       />
                     </div>
-                    <div className="space-y-1.5 border-t border-border pt-3">
-                      <Label className="text-xs text-muted-foreground">
-                        傀異鍊成（自訂防具）
-                      </Label>
-                      <AugmentedArmorEditor
-                        allArmors={allArmors}
-                        allSkills={allSkills}
-                        augments={augments}
-                        onAdd={(p) => setAugments((prev) => [...prev, p])}
-                        onRemove={(id) =>
-                          setAugments((prev) => prev.filter((a) => a.id !== id))
-                        }
-                      />
-                    </div>
                   </TabsContent>
                 </Tabs>
+              </CardContent>
+            </Card>
+
+            {/* 進階限制：保留洞位 + 防禦／屬性耐性 */}
+            <Card className="min-w-[240px] flex-1">
+              <CardContent className="space-y-4 p-3">
+                <div className="space-y-1.5">
+                  <Label className="text-xs text-muted-foreground">
+                    保留洞位
+                  </Label>
+                  <ReservedSlotsInput
+                    value={reservedSlots}
+                    onChange={setReservedSlots}
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label className="text-xs text-muted-foreground">
+                    防禦 / 屬性耐性
+                  </Label>
+                  <DefenseResInput
+                    minDefense={minDefense}
+                    minResistances={minResistances}
+                    onChangeMinDefense={setMinDefense}
+                    onChangeMinResistances={setMinResistances}
+                  />
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -1108,7 +1106,7 @@ export function BuilderView({
                 description={`你可以先完成：
 1. 選擇武器（固定一把，或從同類型武器中搜尋）
 2. 選擇必要技能與排除技能
-3. 到「裝備」頁登錄你的護石
+3. 到「護石」頁登錄你的護石
 4. 視需要固定部位或排除裝備
 5. 按下搜尋配裝
 
