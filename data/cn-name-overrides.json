@@ -1,0 +1,8 @@
+{
+  "$comment": "簡中名的人工裁決覆寫（社群配裝收錄用）。當 validate-community-builds.mjs 對某簡中名比不到、寫進 data/community-builds.suggestions.json 後，人工看候選、把確認的『內部 ID 或繁中名』填進對應 type。解析時本檔與 cn-name-map.json 同層合併（override 優先）。★日文名沿用既有 data/jp-name-overrides.json，不在此重立。鍵用簡中原文（工具自動 NFKC 正規化）。填法示例：\"某簡中防具名\": \"armor_123456789\"。",
+  "skills": {},
+  "armors": {},
+  "decorations": {},
+  "weapons": {},
+  "rampageDecorations": {}
+}

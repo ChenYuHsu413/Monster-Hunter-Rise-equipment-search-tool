@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "slug": "demo-full-lbg",
+  "placeholder": true,
+  "buildName": "【示範】冥淵纏鎧 弱特超心 輕弩全欄位樣本",
+  "weaponType": "light-bowgun",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "冥淵纏鎧憤怒之角",
+      "decorations": [
+        { "name": "攻擊珠【2】", "count": 1 },
+        { "name": "攻擊珠Ⅱ【4】", "count": 1 }
+      ]
+    },
+    {
+      "slot": "chest",
+      "name": "冥淵纏鎧憤怒之軀",
+      "decorations": [
+        { "name": "痛擊珠【2】", "count": 1 },
+        { "name": "匠珠【3】", "count": 1 }
+      ],
+      "augment": "傀異錬成：攻擊+, 會心+（原文照抄，專案不模擬）"
+    },
+    { "slot": "arms", "name": "冥淵纏鎧憤怒之棘" },
+    { "slot": "waist", "name": "冥淵纏鎧憤怒之尾" },
+    { "slot": "legs", "name": "冥淵纏鎧憤怒之足" }
+  ],
+  "weapon": {
+    "name": "神火傑輕弩",
+    "slots": [2, 4],
+    "rampageDecorations": [{ "name": "悔恨龍珠【2】", "count": 1 }]
+  },
+  "talisman": {
+    "skills": [{ "name": "超會心", "level": 1 }],
+    "slots": [2, 1],
+    "decorations": [{ "name": "超心珠【2】", "count": 1 }]
+  },
+  "targetSkills": [
+    { "name": "弱點特效", "level": 3 },
+    { "name": "超会心", "level": 3 },
+    { "name": "攻击", "level": 5 },
+    { "name": "伏魔響命", "level": 3 }
+  ],
+  "gameVersion": "TU5",
+  "publishedAt": "2024-09-01",
+  "notes": "示範全欄位樣本：混合繁中（防具/部分技能）、日文（超会心 過 jp-name-map）、簡中（攻击 過 cn-name-map）三種名稱輸入，逐孔裝飾品與護石齊全，供驗證與 UI 測『全欄位』形態。",
+  "source": {
+    "platform": "bahamut",
+    "author": "示範作者",
+    "url": "https://example.com/community-build/demo-full-lbg",
+    "collectedAt": "2026-07-10"
+  }
+}

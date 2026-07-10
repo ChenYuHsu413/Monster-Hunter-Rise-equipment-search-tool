@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 2,
+  "slug": "demo-skeleton-gs",
+  "placeholder": true,
+  "buildName": "【示範】龍捲真 泛用防具骨架（純必填）",
+  "armor": [
+    { "slot": "head", "name": "龍捲之首真" },
+    { "slot": "chest", "name": "龍捲胸甲真" },
+    { "slot": "arms", "name": "龍捲之臂真" },
+    { "slot": "waist", "name": "龍捲之腰真" },
+    { "slot": "legs", "name": "龍捲之足真" }
+  ],
+  "targetSkills": [
+    { "name": "風紋一致", "level": 4 },
+    { "name": "集中", "level": 3 },
+    { "name": "迴避距離UP", "level": 3 }
+  ],
+  "notes": "示範純骨架樣本：只有必填（防具五件＋目標技能＋來源），無武器/護石/裝飾品——泛用防具骨架不綁武器，孔位珠子留待使用者匯入配裝器後以自己資源計算。供驗證與 UI 測『純骨架』形態。",
+  "source": {
+    "platform": "altema",
+    "author": "示範作者2",
+    "url": "https://example.com/community-build/demo-skeleton-gs",
+    "collectedAt": "2026-07-10"
+  }
+}

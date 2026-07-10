@@ -1,0 +1,12 @@
+{
+  "$comment": "簡中名 → 專案內部 ID 或繁中名的字面對照表（社群配裝收錄用）。validate-community-builds.mjs 解析名稱時，繁中直接比、日文過 jp-name-map、簡中最後過本檔。命中後對映射值『再解析一次』，故值可填內部 ID（armor_*/weapon_*/deco_*）或繁中名（技能名／nameZh）皆可。★這是人工累積的查表，不是演算法轉換（OpenCC 未引入）；內容隨收錄累積，起手式只放結構與少量示例，不預先求全。人工新裁決優先收進 data/cn-name-overrides.json，穩定後再沉澱進本檔。鍵用簡中原文（工具自動 NFKC 正規化）。",
+  "skills": {
+    "攻击": "攻擊",
+    "弱点特效": "弱點特效",
+    "超会心": "超會心"
+  },
+  "armors": {},
+  "decorations": {},
+  "weapons": {},
+  "rampageDecorations": {}
+}
