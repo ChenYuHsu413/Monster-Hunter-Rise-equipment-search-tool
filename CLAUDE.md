@@ -98,3 +98,8 @@
   預設，非本專案慣例——完事後把該 commit `cherry-pick`（或 `merge --ff-only`）回 `main`、砍掉側枝。
   注意：主 repo 已 checkout `main` 時，worktree 內 `git checkout main` 會被拒（同分支不可雙 checkout），
   改用 `git -C <主 repo 路徑>` 操作 `main`；要刪自己所在的側枝需先 `git switch --detach` 再 `git branch -D`。
+- **Dev server 管理**：每次 session 結束、或要執行 `rm -rf .next`／乾淨 build 前，必須先確認並關閉
+  自己啟動的 dev server（Windows 下可 `taskkill /F /IM node.exe`，或挑 PID 關）。殭屍 dev server
+  疊加會使 port 遞增（3000→3001→…），且清 `.next` 會讓仍存活的舊實例 CSS／chunk 失效，呈現
+  「全站無樣式」的假故障。人類若回報「localhost 樣式全裸」，第一優先懷疑殭屍 server ＋ 瀏覽器快取
+  （Ctrl+F5），而非最近的 commit。
