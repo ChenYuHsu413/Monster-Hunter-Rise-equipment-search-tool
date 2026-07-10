@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-yumi-4",
+  "buildName": "弓最強装備まとめ",
+  "weaponType": "bow",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "リノプロSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "カイザーメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ヤツカダアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "カイザーコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ヤツカダグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "火属性攻撃強化",
+      "level": 5
+    },
+    {
+      "name": "体術",
+      "level": 5
+    },
+    {
+      "name": "見切り",
+      "level": 5
+    },
+    {
+      "name": "貫通弾・貫通矢強化",
+      "level": 3
+    },
+    {
+      "name": "炎鱗の恩恵",
+      "level": 2
+    },
+    {
+      "name": "スタミナ急速回復",
+      "level": 3
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：ケア・ド・ネフィラ（ビン接撃・強撃・毒 睡眠・爆破・減気 攻撃力170 会心率30% 属性火33 防御- スロット②①① 百竜スキル攻撃力強化Ⅳ）\n護石：2スロ×2 ／ ② 達人珠 ② 体術珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/yumitemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "yumitemplate",
+    "heading": "弓最強装備まとめ",
+    "weaponRaw": {
+      "name": "ケア・ド・ネフィラ",
+      "statsRaw": "ビン接撃・強撃・毒 睡眠・爆破・減気 攻撃力170 会心率30% 属性火33 防御- スロット②①① 百竜スキル攻撃力強化Ⅳ"
+    },
+    "charmRaw": "2スロ×2 ／ ② 達人珠 ② 体術珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "リノプロSヘルム",
+        "skillsRaw": "貫通弾・矢強化Lv2 気絶耐性Lv1",
+        "slotsRaw": "① 火炎珠"
+      },
+      {
+        "slot": "chest",
+        "name": "カイザーメイル",
+        "skillsRaw": "炎鱗の恩恵Lv1 見切りLv1 達人芸Lv1",
+        "slotsRaw": "① 火炎珠"
+      },
+      {
+        "slot": "arms",
+        "name": "ヤツカダアーム",
+        "skillsRaw": "体術Lv2 スタ急Lv1",
+        "slotsRaw": "② 達人珠"
+      },
+      {
+        "slot": "waist",
+        "name": "カイザーコイル",
+        "skillsRaw": "炎鱗の恩恵Lv1 見切りLv1",
+        "slotsRaw": "③ 貫通珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ヤツカダグリーヴ",
+        "skillsRaw": "体術Lv2 スタ急Lv2",
+        "slotsRaw": "① 火炎珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

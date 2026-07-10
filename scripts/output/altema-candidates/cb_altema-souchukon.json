@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-souchukon",
+  "buildName": "超会心構成:ナルガ武器",
+  "weaponType": "insect-glaive",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "カイザーメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "カイザーアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "インゴットSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "カガチSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "強化持続",
+      "level": 3
+    },
+    {
+      "name": "達人芸",
+      "level": 3
+    },
+    {
+      "name": "弱点特効",
+      "level": 2
+    },
+    {
+      "name": "炎鱗の恩恵",
+      "level": 2
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    },
+    {
+      "name": "体術",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：闇鎌棍【夜凪】（攻撃力190 会心率40% 猟虫ケーニヒゴアビートル スロット② 昂揚珠 百竜スキル攻撃力強化Ⅲ）\n護石：2スロ×2 ／ ② 達芸珠 ② 達芸珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/souchukontemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "souchukontemplate",
+    "heading": "超会心構成:ナルガ武器",
+    "weaponRaw": {
+      "name": "闇鎌棍【夜凪】",
+      "statsRaw": "攻撃力190 会心率40% 猟虫ケーニヒゴアビートル スロット② 昂揚珠 百竜スキル攻撃力強化Ⅲ"
+    },
+    "charmRaw": "2スロ×2 ／ ② 達芸珠 ② 達芸珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "カイザークラウン",
+        "skillsRaw": "見切りLv3 超会心Lv1",
+        "slotsRaw": "① 耐衝珠"
+      },
+      {
+        "slot": "chest",
+        "name": "カイザーメイル",
+        "skillsRaw": "炎鱗の恩恵Lv1 見切りLv1 達人芸Lv1",
+        "slotsRaw": "①-"
+      },
+      {
+        "slot": "arms",
+        "name": "カイザーアーム",
+        "skillsRaw": "炎鱗の恩恵Lv1 見切りLv1 超会心Lv1",
+        "slotsRaw": "② 超心珠"
+      },
+      {
+        "slot": "waist",
+        "name": "インゴットSコイル",
+        "skillsRaw": "強化持続Lv2",
+        "slotsRaw": "② 痛撃珠"
+      },
+      {
+        "slot": "legs",
+        "name": "カガチSグリーヴ",
+        "skillsRaw": "体術Lv1 見切りLv2",
+        "slotsRaw": "② 痛撃珠 ①-"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

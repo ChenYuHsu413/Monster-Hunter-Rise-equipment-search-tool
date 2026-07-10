@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-hammer-3",
+  "buildName": "ハンマー最強装備まとめ",
+  "weaponType": "hammer",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "カムラノ装【上衣】覇"
+    },
+    {
+      "slot": "arms",
+      "name": "赫耀ノアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ナルガSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "カガチSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "業物",
+      "level": 3
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "翔蟲使い",
+      "level": 3
+    },
+    {
+      "name": "回避距離UP",
+      "level": 2
+    },
+    {
+      "name": "スタミナ奪取",
+      "level": 2
+    },
+    {
+      "name": "超会心",
+      "level": 1
+    },
+    {
+      "name": "壁面移動",
+      "level": 1
+    },
+    {
+      "name": "龍気活性",
+      "level": 1
+    },
+    {
+      "name": "体術",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：轟槌【虎丸】（鉄蟲糸技強化）\n護石：2スロ×2 ／ ② 斬鉄珠 ② 斬鉄珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/hammertemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "hammertemplate",
+    "heading": "ハンマー最強装備まとめ",
+    "weaponRaw": {
+      "name": "轟槌【虎丸】",
+      "statsRaw": "鉄蟲糸技強化"
+    },
+    "charmRaw": "2スロ×2 ／ ② 斬鉄珠 ② 斬鉄珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "カイザークラウン",
+        "skillsRaw": "見切りLv3 超会心Lv1",
+        "slotsRaw": "① 耐衝珠"
+      },
+      {
+        "slot": "chest",
+        "name": "カムラノ装【上衣】覇",
+        "skillsRaw": "翔蟲使いLv2 壁面移動Lv1 見切りLv1",
+        "slotsRaw": "① 奪気珠"
+      },
+      {
+        "slot": "arms",
+        "name": "赫耀ノアーム",
+        "skillsRaw": "龍気活性Lv1 弱点特効Lv2",
+        "slotsRaw": "② 痛撃珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ナルガSコイル",
+        "skillsRaw": "回避距離UPLv2 見切りLv1",
+        "slotsRaw": "② 翔蟲珠"
+      },
+      {
+        "slot": "legs",
+        "name": "カガチSグリーヴ",
+        "skillsRaw": "体術Lv1 見切りLv2",
+        "slotsRaw": "② 斬鉄珠 ① 奪気珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

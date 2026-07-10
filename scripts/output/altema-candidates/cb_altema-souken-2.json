@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-souken-2",
+  "buildName": "毒特化装備:オオナズチ武器",
+  "weaponType": "dual-blades",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "禍鎧・覇【兜】"
+    },
+    {
+      "slot": "chest",
+      "name": "ルドロスSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ミヅハ【大袖】"
+    },
+    {
+      "slot": "waist",
+      "name": "ミヅハ【丸帯】"
+    },
+    {
+      "slot": "legs",
+      "name": "ミヅハ【具足】"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "霞皮の恩恵",
+      "level": 3
+    },
+    {
+      "name": "スタミナ急速回復",
+      "level": 3
+    },
+    {
+      "name": "剛刃研磨",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "毒属性強化",
+      "level": 3
+    },
+    {
+      "name": "ランナー",
+      "level": 2
+    },
+    {
+      "name": "逆恨み",
+      "level": 1
+    },
+    {
+      "name": "匠",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    },
+    {
+      "name": "フルチャージ",
+      "level": 1
+    },
+    {
+      "name": "回避性能",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：双剣オオナズチ（攻撃力190 会心率- 属性毒40 防御- スロット② 強走珠 ① 研磨珠 ① 研磨珠 百竜スキル攻撃力強化Ⅲ）\n護石：2スロ×2 ／ ② 剛刃珠 ② 剛刃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/soukentemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "soukentemplate",
+    "heading": "毒特化装備:オオナズチ武器",
+    "weaponRaw": {
+      "name": "双剣オオナズチ",
+      "statsRaw": "攻撃力190 会心率- 属性毒40 防御- スロット② 強走珠 ① 研磨珠 ① 研磨珠 百竜スキル攻撃力強化Ⅲ"
+    },
+    "charmRaw": "2スロ×2 ／ ② 剛刃珠 ② 剛刃珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "禍鎧・覇【兜】",
+        "skillsRaw": "逆恨みLv1 匠Lv1 ひるみ軽減Lv1",
+        "slotsRaw": "② 強走珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ルドロスSメイル",
+        "skillsRaw": "スタミナ急速回復Lv2",
+        "slotsRaw": "② 早気珠"
+      },
+      {
+        "slot": "arms",
+        "name": "ミヅハ【大袖】",
+        "skillsRaw": "霞皮の恩恵Lv1 毒属性強化Lv1 回避性能Lv1",
+        "slotsRaw": "① 研磨珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ミヅハ【丸帯】",
+        "skillsRaw": "霞皮の恩恵Lv1 毒属性強化Lv1 フルチャージLv1",
+        "slotsRaw": "① 毒珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ミヅハ【具足】",
+        "skillsRaw": "霞皮の恩恵Lv1 回避性能Lv1",
+        "slotsRaw": "② 剛刃珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

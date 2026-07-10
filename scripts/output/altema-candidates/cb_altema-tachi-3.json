@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-tachi-3",
+  "buildName": "ナルガ太刀採用装備",
+  "weaponType": "long-sword",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "ベリオSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ベリオSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "クロムメタルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "金色ノ袴"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 4
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "納刀術",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "達人芸",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "渾身",
+      "level": 2
+    },
+    {
+      "name": "力の解放",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：夜刀【月影】（攻撃力180 会心率40% 属性- 防御- スロット② 痛撃珠 百竜スキル攻撃強化Ⅲ）\n護石：2スロ×2 ／ ② 達芸珠 ② 達芸珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/tachitemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "tachitemplate",
+    "heading": "ナルガ太刀採用装備",
+    "weaponRaw": {
+      "name": "夜刀【月影】",
+      "statsRaw": "攻撃力180 会心率40% 属性- 防御- スロット② 痛撃珠 百竜スキル攻撃強化Ⅲ"
+    },
+    "charmRaw": "2スロ×2 ／ ② 達芸珠 ② 達芸珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "カイザークラウン",
+        "skillsRaw": "見切りLv3 超会心Lv1",
+        "slotsRaw": "① 耐衝珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ベリオSメイル",
+        "skillsRaw": "納刀術Lv1 渾身Lv1",
+        "slotsRaw": "② 痛撃珠 ① 耐絶珠 ① 耐絶珠"
+      },
+      {
+        "slot": "arms",
+        "name": "ベリオSアーム",
+        "skillsRaw": "納刀術Lv1 渾身Lv1 見切りLv1",
+        "slotsRaw": "② 痛撃珠"
+      },
+      {
+        "slot": "waist",
+        "name": "クロムメタルコイル",
+        "skillsRaw": "-",
+        "slotsRaw": "③ 達芸珠 ② 速納珠 ①自由"
+      },
+      {
+        "slot": "legs",
+        "name": "金色ノ袴",
+        "skillsRaw": "超会心Lv2 力の解放Lv1",
+        "slotsRaw": "① 研磨珠 ① 研磨珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

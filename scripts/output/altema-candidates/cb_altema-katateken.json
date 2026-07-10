@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-katateken",
+  "buildName": "鈍器心眼装備：ハイニンジャソード",
+  "weaponType": "sword-and-shield",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ボロスSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "カガチSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レックスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ハンターSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "心眼",
+      "level": 3
+    },
+    {
+      "name": "鈍器使い",
+      "level": 3
+    },
+    {
+      "name": "スタミナ奪取",
+      "level": 3
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 3
+    },
+    {
+      "name": "防御",
+      "level": 1
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    },
+    {
+      "name": "攻めの守勢",
+      "level": 1
+    },
+    {
+      "name": "見切り",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：ハイニンジャソード（攻撃力200 会心率100% 属性- 防御- スロット① 耐衝珠 ① 耐衝珠 ① 耐衝珠 百竜スキル鉄蟲糸技強化）\n護石：2スロ×2 ／ ② 鈍器珠 ② 心眼珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/katatekentemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "katatekentemplate",
+    "heading": "鈍器心眼装備：ハイニンジャソード",
+    "weaponRaw": {
+      "name": "ハイニンジャソード",
+      "statsRaw": "攻撃力200 会心率100% 属性- 防御- スロット① 耐衝珠 ① 耐衝珠 ① 耐衝珠 百竜スキル鉄蟲糸技強化"
+    },
+    "charmRaw": "2スロ×2 ／ ② 鈍器珠 ② 心眼珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "ボロスSヘルム",
+        "skillsRaw": "攻撃Lv1 防御Lv1 攻めの守勢Lv1",
+        "slotsRaw": "② 攻撃珠 ① 奪気珠"
+      },
+      {
+        "slot": "chest",
+        "name": "カガチSメイル",
+        "skillsRaw": "心眼Lv1 見切りLv1",
+        "slotsRaw": "③ 攻撃珠"
+      },
+      {
+        "slot": "arms",
+        "name": "レックスSアーム",
+        "skillsRaw": "鈍器使いLv2 心眼Lv1",
+        "slotsRaw": "③ 超心珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 超心珠 ① 奪気珠 ① 奪気珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ハンターSグリーヴ",
+        "skillsRaw": "攻撃Lv2 気絶耐性Lv1",
+        "slotsRaw": "② 超心珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

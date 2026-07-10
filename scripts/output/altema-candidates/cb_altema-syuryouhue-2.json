@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-syuryouhue-2",
+  "buildName": "ティガ笛採用装備",
+  "weaponType": "hunting-horn",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "カイザーグリーヴ"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 6
+    },
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 2
+    },
+    {
+      "name": "炎鱗の恩恵",
+      "level": 1
+    },
+    {
+      "name": "笛吹き名人",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：轟鼓【虎鐘】（攻撃力210 会心-20% 属性- 防御- スロット- 百竜スキル攻撃力強化Ⅱ）\n護石：2スロ×2 ／ ② 痛撃珠 ② 痛撃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/syuryouhuetemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "syuryouhuetemplate",
+    "heading": "ティガ笛採用装備",
+    "weaponRaw": {
+      "name": "轟鼓【虎鐘】",
+      "statsRaw": "攻撃力210 会心-20% 属性- 防御- スロット- 百竜スキル攻撃力強化Ⅱ"
+    },
+    "charmRaw": "2スロ×2 ／ ② 痛撃珠 ② 痛撃珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "カイザークラウン",
+        "skillsRaw": "見切りLv3 超会心Lv1",
+        "slotsRaw": "① 鼓笛珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ヴァイクSメイル",
+        "skillsRaw": "-",
+        "slotsRaw": "③ 痛撃珠 ② 攻撃珠 ① 耐衝珠"
+      },
+      {
+        "slot": "arms",
+        "name": "カイザーグリーヴ",
+        "skillsRaw": "炎鱗の恩恵Lv1 見切りLv1 超会心Lv1",
+        "slotsRaw": "② 攻撃珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 攻撃珠 ① 研磨珠 ① 研磨珠"
+      },
+      {
+        "slot": "legs",
+        "name": "インゴットSグリーヴ",
+        "skillsRaw": "攻撃Lv2 見切りLv2",
+        "slotsRaw": "① 研磨珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

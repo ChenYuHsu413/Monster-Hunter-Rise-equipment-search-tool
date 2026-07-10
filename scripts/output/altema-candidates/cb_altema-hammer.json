@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-hammer",
+  "buildName": "ハンマー最強装備まとめ",
+  "weaponType": "hammer",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "ジャナフSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ハンターSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "見切り",
+      "level": 3
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "集中",
+      "level": 2
+    },
+    {
+      "name": "スタミナ奪取",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    },
+    {
+      "name": "気絶耐性",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：夜行槌【常闇】（攻撃力強化Ⅲ ② 痛撃珠）\n護石：2スロ×2 ／ ② 痛撃珠 ② 痛撃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/hammertemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "hammertemplate",
+    "heading": "ハンマー最強装備まとめ",
+    "weaponRaw": {
+      "name": "夜行槌【常闇】",
+      "statsRaw": "攻撃力強化Ⅲ ② 痛撃珠"
+    },
+    "charmRaw": "2スロ×2 ／ ② 痛撃珠 ② 痛撃珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "カイザークラウン",
+        "skillsRaw": "見切りLv3 超会心Lv1",
+        "slotsRaw": "① 耐衝珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ジャナフSメイル",
+        "skillsRaw": "集中Lv2 ランナーLv1",
+        "slotsRaw": "① 奪気珠 ① 奪気珠"
+      },
+      {
+        "slot": "arms",
+        "name": "レウスSアーム",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 攻撃珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "②超心珠 ① 奪気珠 ① 研磨珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ハンターSグリーヴ",
+        "skillsRaw": "攻撃Lv2 気絶耐性Lv1",
+        "slotsRaw": "② 超心珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

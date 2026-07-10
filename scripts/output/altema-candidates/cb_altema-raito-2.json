@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-raito-2",
+  "buildName": "ライトボウガン最強装備まとめ",
+  "weaponType": "light-bowgun",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ヴァイクSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "リノプロSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ジャナフSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "バゼルグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 6
+    },
+    {
+      "name": "弾丸節約",
+      "level": 3
+    },
+    {
+      "name": "KO術",
+      "level": 3
+    },
+    {
+      "name": "砲術",
+      "level": 3
+    },
+    {
+      "name": "反動軽減",
+      "level": 3
+    },
+    {
+      "name": "装填拡張",
+      "level": 3
+    },
+    {
+      "name": "気絶耐性",
+      "level": 2
+    },
+    {
+      "name": "装填速度",
+      "level": 2
+    },
+    {
+      "name": "ブレ抑制",
+      "level": 1
+    },
+    {
+      "name": "ガード性能",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：禍ツ弩ノ幽鬼ドシュー（サイレンサー 攻撃力強化Ⅲ ② 節弾珠 ① 点射珠）\n護石：2スロ×2 ／ ② 攻撃珠 ② 攻撃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/raitotemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "raitotemplate",
+    "heading": "ライトボウガン最強装備まとめ",
+    "weaponRaw": {
+      "name": "禍ツ弩ノ幽鬼ドシュー",
+      "statsRaw": "サイレンサー 攻撃力強化Ⅲ ② 節弾珠 ① 点射珠"
+    },
+    "charmRaw": "2スロ×2 ／ ② 攻撃珠 ② 攻撃珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "ヴァイクSヘルム",
+        "skillsRaw": "装填拡張Lv2",
+        "slotsRaw": "② 節弾珠 ① 早填珠"
+      },
+      {
+        "slot": "chest",
+        "name": "リノプロSメイル",
+        "skillsRaw": "砲術Lv1 気絶耐性Lv2",
+        "slotsRaw": "② 節弾珠 ① 早填珠"
+      },
+      {
+        "slot": "arms",
+        "name": "ジャナフSアーム",
+        "skillsRaw": "KO術Lv2 攻撃Lv2",
+        "slotsRaw": "① 抑反珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② KO珠 ① 抑反珠 ① 抑反珠"
+      },
+      {
+        "slot": "legs",
+        "name": "バゼルグリーヴ",
+        "skillsRaw": "砲術Lv2 ガード性能Lv1",
+        "slotsRaw": "③ 装填珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

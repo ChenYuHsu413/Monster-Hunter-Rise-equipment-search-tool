@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-souken-3",
+  "buildName": "剛刃研磨双剣:レイジネイルー",
+  "weaponType": "dual-blades",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "禍鎧・覇【兜】"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ハンターSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "剛刃研磨",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "匠",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    },
+    {
+      "name": "逆恨み",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：レイジネイルー（攻撃力190 会心率-10% 属性麻痺10 防御- スロット③自由 百竜スキル鬼人激化）\n護石：2スロ×2 ／ ② 剛刃珠 ② 剛刃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/soukentemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "soukentemplate",
+    "heading": "剛刃研磨双剣:レイジネイルー",
+    "weaponRaw": {
+      "name": "レイジネイルー",
+      "statsRaw": "攻撃力190 会心率-10% 属性麻痺10 防御- スロット③自由 百竜スキル鬼人激化"
+    },
+    "charmRaw": "2スロ×2 ／ ② 剛刃珠 ② 剛刃珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "禍鎧・覇【兜】",
+        "skillsRaw": "逆恨みLv1 匠Lv1 ひるみ軽減Lv1",
+        "slotsRaw": "② 強走珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ヴァイクSメイル",
+        "skillsRaw": "-",
+        "slotsRaw": "③自由 ② 超心珠 ① 研磨珠"
+      },
+      {
+        "slot": "arms",
+        "name": "レウスSアーム",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 超心珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 剛刃珠 ① 研磨珠 ① 研磨珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ハンターSグリーヴ",
+        "skillsRaw": "気絶耐性Lv1 攻撃Lv2",
+        "slotsRaw": "② 攻撃珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

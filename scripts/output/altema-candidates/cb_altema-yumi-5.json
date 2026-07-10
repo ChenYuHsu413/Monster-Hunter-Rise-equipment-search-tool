@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-yumi-5",
+  "buildName": "弓最強装備まとめ",
+  "weaponType": "bow",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "強弓の羽飾り"
+    },
+    {
+      "slot": "chest",
+      "name": "ヤツカダメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ヤツカダアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ヤツカダグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 5
+    },
+    {
+      "name": "体術",
+      "level": 4
+    },
+    {
+      "name": "スタミナ急速回復",
+      "level": 3
+    },
+    {
+      "name": "散弾・拡散矢強化",
+      "level": 3
+    },
+    {
+      "name": "装填速度",
+      "level": 2
+    },
+    {
+      "name": "弓溜め段階解放",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：魔導弓アルマデール（ビン接撃・強撃 毒・麻痺 攻撃力230 会心率- 属性- 防御- スロット③ 百竜スキル攻撃力強化Ⅲ）\n護石：3スロ×1 ／ ③ 散弾珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/yumitemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "yumitemplate",
+    "heading": "弓最強装備まとめ",
+    "weaponRaw": {
+      "name": "魔導弓アルマデール",
+      "statsRaw": "ビン接撃・強撃 毒・麻痺 攻撃力230 会心率- 属性- 防御- スロット③ 百竜スキル攻撃力強化Ⅲ"
+    },
+    "charmRaw": "3スロ×1 ／ ③ 散弾珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "強弓の羽飾り",
+        "skillsRaw": "弓溜め段階解放Lv1",
+        "slotsRaw": "-"
+      },
+      {
+        "slot": "chest",
+        "name": "ヤツカダメイル",
+        "skillsRaw": "散弾・拡散強化Lv1 装填速度Lv1",
+        "slotsRaw": "② 攻撃珠 ① 耐衝珠"
+      },
+      {
+        "slot": "arms",
+        "name": "ヤツカダアーム",
+        "skillsRaw": "体術Lv2 スタ急Lv1",
+        "slotsRaw": "② 攻撃珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 攻撃珠 ① ①"
+      },
+      {
+        "slot": "legs",
+        "name": "ヤツカダグリーヴ",
+        "skillsRaw": "体術Lv2 スタ急Lv2",
+        "slotsRaw": "① 早填珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

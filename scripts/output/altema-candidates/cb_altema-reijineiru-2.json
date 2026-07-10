@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-reijineiru-2",
+  "buildName": "レイジネイルーのおすすめ装備",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "クシャナアンク"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ハンターSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "達人芸",
+      "level": 3
+    },
+    {
+      "name": "砥石使用高速化",
+      "level": 3
+    },
+    {
+      "name": "匠",
+      "level": 3
+    },
+    {
+      "name": "気絶耐性",
+      "level": 3
+    },
+    {
+      "name": "通常弾・連射矢強化",
+      "level": 2
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：レイジネイルー（鬼人激化 ③自由）\n護石：達人芸Lv2 ／ ① 耐絶珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/reijineiru",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "reijineiru",
+    "heading": "レイジネイルーのおすすめ装備",
+    "weaponRaw": {
+      "name": "レイジネイルー",
+      "statsRaw": "鬼人激化 ③自由"
+    },
+    "charmRaw": "達人芸Lv2 ／ ① 耐絶珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "クシャナアンク",
+        "skillsRaw": "匠Lv2 通常弾・連射矢強化Lv2",
+        "slotsRaw": "① 耐絶珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ヴァイクSメイル",
+        "skillsRaw": "-",
+        "slotsRaw": "③ 匠珠 ② 超心珠 ① 研磨珠"
+      },
+      {
+        "slot": "arms",
+        "name": "レウスSアーム",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 超心珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "②達芸珠 ① 研磨珠 ① 研磨珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ハンターSグリーヴ",
+        "skillsRaw": "気絶耐性Lv1 攻撃Lv2",
+        "slotsRaw": "② 攻撃珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

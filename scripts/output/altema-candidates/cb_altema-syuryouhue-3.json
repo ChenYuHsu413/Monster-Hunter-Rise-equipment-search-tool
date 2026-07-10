@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-syuryouhue-3",
+  "buildName": "バゼル笛採用装備",
+  "weaponType": "hunting-horn",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ウツシ裏【御面】覇"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "禍鎧・覇【篭手】"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ハンターSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "匠",
+      "level": 3
+    },
+    {
+      "name": "業物",
+      "level": 3
+    },
+    {
+      "name": "弾丸節約",
+      "level": 2
+    },
+    {
+      "name": "気絶耐性",
+      "level": 3
+    },
+    {
+      "name": "翔蟲使い",
+      "level": 3
+    },
+    {
+      "name": "鬼火纏",
+      "level": 1
+    },
+    {
+      "name": "笛吹き名人",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：爆鱗鼓バゼルライド（攻撃力220 会心-10% 属性爆破 防御- スロット- 百竜スキル属性強化【爆破】Ⅲ）\n護石：2スロ×2 ／ ② 攻撃珠 ② 攻撃珠\nhead 可替換：神凪・願【元結】\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/syuryouhuetemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "syuryouhuetemplate",
+    "heading": "バゼル笛採用装備",
+    "weaponRaw": {
+      "name": "爆鱗鼓バゼルライド",
+      "statsRaw": "攻撃力220 会心-10% 属性爆破 防御- スロット- 百竜スキル属性強化【爆破】Ⅲ"
+    },
+    "charmRaw": "2スロ×2 ／ ② 攻撃珠 ② 攻撃珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "ウツシ裏【御面】覇",
+        "altNames": [
+          "神凪・願【元結】"
+        ],
+        "skillsRaw": "業物Lv2 弾丸節約Lv2 翔蟲使いLv1",
+        "slotsRaw": "① 鼓笛珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ヴァイクSメイル",
+        "skillsRaw": "-",
+        "slotsRaw": "③匠珠 ② 翔蟲珠 ① 耐衝珠"
+      },
+      {
+        "slot": "arms",
+        "name": "禍鎧・覇【篭手】",
+        "skillsRaw": "鬼火纏Lv1 匠Lv2",
+        "slotsRaw": "② 翔蟲珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 攻撃珠 ① 耐絶珠 ① 耐絶珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ハンターSグリーヴ",
+        "skillsRaw": "攻撃Lv2 気絶耐性Lv1",
+        "slotsRaw": "② 斬鉄珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

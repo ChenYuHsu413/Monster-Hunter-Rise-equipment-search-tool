@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-hammer-5",
+  "buildName": "下位クリアおすすめ装備",
+  "weaponType": "hammer",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ジャナフヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "イズチメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "ジャナフアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "フルフルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 3
+    },
+    {
+      "name": "KO術",
+      "level": 2
+    },
+    {
+      "name": "攻撃",
+      "level": 2
+    },
+    {
+      "name": "集中",
+      "level": 1
+    },
+    {
+      "name": "回復速度",
+      "level": 1
+    },
+    {
+      "name": "壁面移動",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：禍ツ槌【封】Ⅰ（爆破属性15 ―――）\n護石：【おすすめの護石】 初心の護石\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/hammertemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "hammertemplate",
+    "heading": "下位クリアおすすめ装備",
+    "weaponRaw": {
+      "name": "禍ツ槌【封】Ⅰ",
+      "statsRaw": "爆破属性15 ―――"
+    },
+    "charmRaw": "【おすすめの護石】 初心の護石",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "ジャナフヘルム",
+        "skillsRaw": "集中Lv1 KO術Lv1",
+        "slotsRaw": "―――"
+      },
+      {
+        "slot": "chest",
+        "name": "イズチメイル",
+        "skillsRaw": "見切りLv1 回復速度Lv1",
+        "slotsRaw": "―――"
+      },
+      {
+        "slot": "arms",
+        "name": "ジャナフアーム",
+        "skillsRaw": "KO術Lv1 攻撃Lv1",
+        "slotsRaw": "―――"
+      },
+      {
+        "slot": "waist",
+        "name": "フルフルコイル",
+        "skillsRaw": "回復速度Lv1",
+        "slotsRaw": "―――"
+      },
+      {
+        "slot": "legs",
+        "name": "インゴットグリーヴ",
+        "skillsRaw": "攻撃Lv1 見切りLv1",
+        "slotsRaw": "―――"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

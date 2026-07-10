@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-heavy",
+  "buildName": "ヘビィボウガン最強装備まとめ",
+  "weaponType": "heavy-bowgun",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "ヴァイクSヘルム"
+    },
+    {
+      "slot": "chest",
+      "name": "ヴァイクSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "バゼルアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "バゼルコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ヴァイクSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "貫通弾・貫通矢強化",
+      "level": 3
+    },
+    {
+      "name": "装填速度",
+      "level": 3
+    },
+    {
+      "name": "渾身",
+      "level": 3
+    },
+    {
+      "name": "ガード性能",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "反動軽減",
+      "level": 2
+    },
+    {
+      "name": "砲弾装填",
+      "level": 2
+    },
+    {
+      "name": "ガード強化",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：ゲェレーラエスピノ（攻撃力強化Ⅳ ② 渾身珠）\n護石：3スロ×1 2スロ×1 ／ ③ 貫通珠 ② 渾身珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/heavytemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "heavytemplate",
+    "heading": "ヘビィボウガン最強装備まとめ",
+    "weaponRaw": {
+      "name": "ゲェレーラエスピノ",
+      "statsRaw": "攻撃力強化Ⅳ ② 渾身珠"
+    },
+    "charmRaw": "3スロ×1 2スロ×1 ／ ③ 貫通珠 ② 渾身珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "ヴァイクSヘルム",
+        "skillsRaw": "装填拡張Lv2",
+        "slotsRaw": "② 鉄壁珠 ① 抑反珠"
+      },
+      {
+        "slot": "chest",
+        "name": "ヴァイクSメイル",
+        "skillsRaw": "-",
+        "slotsRaw": "③ 貫通珠 ② 鉄壁珠 ① 抑反珠"
+      },
+      {
+        "slot": "arms",
+        "name": "バゼルアーム",
+        "skillsRaw": "砲弾装填Lv1 ガード強化Lv1",
+        "slotsRaw": "② 超心珠 ② 超心珠"
+      },
+      {
+        "slot": "waist",
+        "name": "バゼルコイル",
+        "skillsRaw": "砲弾装填Lv1 ガード性能Lv1",
+        "slotsRaw": "② 超心珠 ② 渾身珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ヴァイクSグリーヴ",
+        "skillsRaw": "装填拡張Lv1",
+        "slotsRaw": "③ 貫通珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$comment": "社群配裝比不到的名稱。hints 僅為子字串提示、非裁決。人工確認後：簡中填 data/cn-name-overrides.json、日文填 data/jp-name-overrides.json。",
+  "items": [
+    {
+      "type": "armors",
+      "rawName": "レウスSア-ム",
+      "files": [
+        "cb_altema-hammer-2.json"
+      ],
+      "hints": []
+    },
+    {
+      "type": "armors",
+      "rawName": "インゴットSグリ-グ",
+      "files": [
+        "cb_altema-hammer-2.json"
+      ],
+      "hints": []
+    },
+    {
+      "type": "skills",
+      "rawName": "弱点特攻",
+      "files": [
+        "cb_altema-heavy-3.json"
+      ],
+      "hints": []
+    },
+    {
+      "type": "armors",
+      "rawName": "強弓の羽飾り",
+      "files": [
+        "cb_altema-kantuuyumi.json",
+        "cb_altema-yumi-2.json",
+        "cb_altema-yumi-3.json",
+        "cb_altema-yumi-5.json",
+        "cb_altema-yumi.json"
+      ],
+      "hints": []
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-souken",
+  "buildName": "USJ装備採用汎用双剣",
+  "weaponType": "dual-blades",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "カイザークラウン"
+    },
+    {
+      "slot": "chest",
+      "name": "蒼世ノ侍【羽織】"
+    },
+    {
+      "slot": "arms",
+      "name": "蒼世ノ侍【袖】"
+    },
+    {
+      "slot": "waist",
+      "name": "ベリオSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "ヤツカダグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "見切り",
+      "level": 6
+    },
+    {
+      "name": "体術",
+      "level": 5
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "会心撃【属性】",
+      "level": 3
+    },
+    {
+      "name": "スタミナ急速回復",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 1
+    },
+    {
+      "name": "抜刀術【技】",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "護石：2スロ×2 ／ ② 達人珠 ② 痛撃珠\n屬性／弾種依武器自選：○○属性攻撃強化Lv4\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/soukentemplate",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "soukentemplate",
+    "heading": "USJ装備採用汎用双剣",
+    "weaponRaw": null,
+    "charmRaw": "2スロ×2 ／ ② 達人珠 ② 痛撃珠",
+    "placeholderSkills": [
+      "○○属性攻撃強化Lv4"
+    ],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "カイザークラウン",
+        "skillsRaw": "見切りLv3 超会心Lv1",
+        "slotsRaw": "①属性珠"
+      },
+      {
+        "slot": "chest",
+        "name": "蒼世ノ侍【羽織】",
+        "skillsRaw": "体術Lv2 弱点特効Lv1",
+        "slotsRaw": "② 早気珠"
+      },
+      {
+        "slot": "arms",
+        "name": "蒼世ノ侍【袖】",
+        "skillsRaw": "体術Lv1 弱点特効Lv1 会心撃【属性】Lv2",
+        "slotsRaw": "①属性珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ベリオSコイル",
+        "skillsRaw": "抜刀術【技】Lv1 見切りLv2",
+        "slotsRaw": "①属性珠"
+      },
+      {
+        "slot": "legs",
+        "name": "ヤツカダグリーヴ",
+        "skillsRaw": "体術Lv2 スタミナ急速回復Lv2",
+        "slotsRaw": "①属性珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}

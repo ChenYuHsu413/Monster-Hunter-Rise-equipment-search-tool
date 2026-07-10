@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-kaihukubue",
+  "buildName": "回復笛のおすすめ装備",
+  "weaponType": "hunting-horn",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "炎の封眼"
+    },
+    {
+      "slot": "chest",
+      "name": "カガチSメイル"
+    },
+    {
+      "slot": "arms",
+      "name": "レウスSアーム"
+    },
+    {
+      "slot": "waist",
+      "name": "ジャナフSコイル"
+    },
+    {
+      "slot": "legs",
+      "name": "インゴットSグリーヴ"
+    }
+  ],
+  "targetSkills": [
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "弱点特効",
+      "level": 3
+    },
+    {
+      "name": "笛吹き名人",
+      "level": 1
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年1月10日(水) 14:13",
+  "notes": "武器：百竜笛Ⅴ（切れ味変更【参型】 無属性攻撃強化 旋律変更【回復】Ⅱ）\n護石：2スロ×2 ／ ② 痛撃珠 ② 攻撃珠\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/kaihukubue",
+    "collectedAt": "2026-07-10"
+  },
+  "_extraction": {
+    "pageSlug": "kaihukubue",
+    "heading": "回復笛のおすすめ装備",
+    "weaponRaw": {
+      "name": "百竜笛Ⅴ",
+      "statsRaw": "切れ味変更【参型】 無属性攻撃強化 旋律変更【回復】Ⅱ"
+    },
+    "charmRaw": "2スロ×2 ／ ② 痛撃珠 ② 攻撃珠",
+    "placeholderSkills": [],
+    "pieces": [
+      {
+        "slot": "head",
+        "name": "炎の封眼",
+        "skillsRaw": "見切りLv4",
+        "slotsRaw": "-"
+      },
+      {
+        "slot": "chest",
+        "name": "カガチSメイル",
+        "skillsRaw": "心眼Lv1 見切りLv1",
+        "slotsRaw": "③自由"
+      },
+      {
+        "slot": "arms",
+        "name": "レウスSアーム",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 痛撃珠"
+      },
+      {
+        "slot": "waist",
+        "name": "ジャナフSコイル",
+        "skillsRaw": "攻撃Lv2",
+        "slotsRaw": "② 痛撃珠 ①自由 ① 耐衝珠"
+      },
+      {
+        "slot": "legs",
+        "name": "インゴットSグリーヴ",
+        "skillsRaw": "攻撃Lv2 見切りLv2",
+        "slotsRaw": "① 鼓笛珠"
+      }
+    ],
+    "confidence": {
+      "armor": "high",
+      "targetSkills": "high"
+    }
+  }
+}
