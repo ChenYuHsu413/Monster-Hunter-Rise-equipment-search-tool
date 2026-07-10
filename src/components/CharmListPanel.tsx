@@ -17,10 +17,10 @@ import {
 import { Pencil, Plus, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/** 護石洞數所有組合（3 洞，各 0~3 級，非遞增），例如 "2-1-0"。 */
+/** 護石洞數所有組合（3 洞，各 0~4 級，非遞增），例如 "2-1-0"、"4-4-4"。 */
 const CHARM_SLOT_OPTIONS: string[] = (() => {
   const opts: string[] = [];
-  for (let a = 0; a <= 3; a++)
+  for (let a = 0; a <= 4; a++)
     for (let b = 0; b <= a; b++)
       for (let c = 0; c <= b; c++) opts.push(`${a}-${b}-${c}`);
   return opts;
