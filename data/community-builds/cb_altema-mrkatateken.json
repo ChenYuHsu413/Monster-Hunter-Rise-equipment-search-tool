@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-mrkatateken",
+  "buildName": "MR201～のおすすめ装備",
+  "weaponType": "sword-and-shield",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "リバルクシャナアンク"
+    },
+    {
+      "slot": "chest",
+      "name": "荒天【衣】"
+    },
+    {
+      "slot": "arms",
+      "name": "荒天【袪】"
+    },
+    {
+      "slot": "legs",
+      "name": "荒天【袴】"
+    }
+  ],
+  "flexSlots": [
+    "waist"
+  ],
+  "targetSkills": [
+    {
+      "name": "天衣無崩",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "翔蟲使い",
+      "level": 3
+    },
+    {
+      "name": "風纏",
+      "level": 1
+    },
+    {
+      "name": "力の解放",
+      "level": 1
+    },
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "連撃",
+      "level": 3
+    },
+    {
+      "name": "渾身",
+      "level": 3
+    },
+    {
+      "name": "顕如盤石",
+      "level": 3
+    },
+    {
+      "name": "闇討ち",
+      "level": 3
+    },
+    {
+      "name": "ひるみ軽減",
+      "level": 3
+    },
+    {
+      "name": "粉塵纏",
+      "level": 1
+    },
+    {
+      "name": "剛心",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年2月1日(木) 08:01",
+  "notes": "自由枠（腰）＝彈性部位，由你的資源填；此為 MR201+ 傀異錬成前提配裝，固定件的傀異錬成技能需自行錬成。\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/mrkatatekensoubi",
+    "collectedAt": "2026-07-10"
+  }
+}

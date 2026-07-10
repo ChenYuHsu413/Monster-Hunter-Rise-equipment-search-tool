@@ -194,7 +194,22 @@ export function CommunityBuildCard({
       <div className="space-y-1">
         {ARMOR_ORDER.map((part) => {
           const p = build.armor.find((x) => x.slot === part);
-          if (!p) return null;
+          // 自由枠（彈性孔）：無固定防具，顯示「由你的裝備填」——B 最強系列 MR201+ 傀異前提配裝。
+          if (!p) {
+            if (!raw.flexSlots?.includes(part)) return null;
+            return (
+              <div key={part} className="flex items-start gap-2 text-sm">
+                <span className="flex w-9 shrink-0 items-center gap-1 text-[11px] text-muted-foreground">
+                  <ArmorIcon part={part} className="h-4 w-4" />
+                  {ARMOR_PART_LABELS[part]}
+                </span>
+                <span className="inline-flex items-center gap-1 text-[11px] text-sky-300/90" title="自由枠：由你的裝備與資源填">
+                  <Gem className="h-3 w-3" />
+                  自由枠（由你的裝備填）
+                </span>
+              </div>
+            );
+          }
           return (
             <div key={part} className="flex items-start gap-2 text-sm">
               <span className="flex w-9 shrink-0 items-center gap-1 text-[11px] text-muted-foreground">

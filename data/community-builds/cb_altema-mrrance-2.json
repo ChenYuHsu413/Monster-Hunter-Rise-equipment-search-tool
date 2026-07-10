@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "slug": "altema-mrrance-2",
+  "buildName": "Lv200までのおすすめ装備",
+  "weaponType": "lance",
+  "armor": [
+    {
+      "slot": "head",
+      "name": "リバルカイザーホーン"
+    },
+    {
+      "slot": "chest",
+      "name": "荒天【衣】"
+    },
+    {
+      "slot": "arms",
+      "name": "エスピナZファオスト"
+    },
+    {
+      "slot": "legs",
+      "name": "荒天【袴】"
+    }
+  ],
+  "flexSlots": [
+    "waist"
+  ],
+  "targetSkills": [
+    {
+      "name": "天衣無崩",
+      "level": 3
+    },
+    {
+      "name": "超会心",
+      "level": 3
+    },
+    {
+      "name": "見切り",
+      "level": 7
+    },
+    {
+      "name": "業物",
+      "level": 2
+    },
+    {
+      "name": "弾丸節約",
+      "level": 2
+    },
+    {
+      "name": "弱点特効",
+      "level": 1
+    },
+    {
+      "name": "剛心",
+      "level": 1
+    },
+    {
+      "name": "粉塵纏",
+      "level": 1
+    },
+    {
+      "name": "攻撃",
+      "level": 7
+    },
+    {
+      "name": "ガード性能",
+      "level": 5
+    },
+    {
+      "name": "攻めの守勢",
+      "level": 3
+    },
+    {
+      "name": "渾身",
+      "level": 3
+    },
+    {
+      "name": "顕如盤石",
+      "level": 3
+    },
+    {
+      "name": "緩衝",
+      "level": 1
+    },
+    {
+      "name": "回避距離UP",
+      "level": 1
+    },
+    {
+      "name": "連撃",
+      "level": 1
+    },
+    {
+      "name": "煽衛",
+      "level": 1
+    }
+  ],
+  "publishedAt": "最終更新：2024年3月1日(金) 08:01",
+  "notes": "自由枠（腰）＝彈性部位，由你的資源填；此為 MR201+ 傀異錬成前提配裝，固定件的傀異錬成技能需自行錬成。\n逐孔珠與護石為 Altema 原文摘錄，精確孔位／珠子由配裝器 solver 以使用者資源計算。",
+  "source": {
+    "platform": "altema",
+    "author": "アルテマ",
+    "url": "https://altema.jp/mhrize/mrrancesoubi",
+    "collectedAt": "2026-07-10"
+  }
+}

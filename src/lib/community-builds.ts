@@ -25,7 +25,31 @@ type ResolveType =
   | "weapons"
   | "decorations";
 
-const nfkc = (s: string) => s.normalize("NFKC").trim();
+// 名稱正規化：與 scripts/game8-normalize.js 的 normalizeJa、scripts/validate-community-builds.mjs
+// 的 nfkc（共用 normalizeJa）逐條同步——NFKC → 去所有空白 → 盤(U+76E4)→磐(U+78D0) 異體字 → latin 大寫。
+// build-jp-name-map.js 建 jp-name-map 的鍵用 normalizeJa，故「查表」這端必須同規則，否則漂移
+// （如 Altema 顕如盤石 對不到 jp-map 的 顕如磐石→堅若磐石）。★改任一端須同步三處並更新下方 BATTERY。
+const nfkc = (s: string) =>
+  s.normalize("NFKC").replace(/\s+/g, "").replace(/盤/g, "磐").toUpperCase();
+
+// battery case（防漂移）：dev 時驗證上式與 normalizeJa 規格一致；不符即拋，逼使三處同步。
+if (process.env.NODE_ENV !== "production") {
+  const BATTERY: [string, string][] = [
+    ["顕如盤石", "顕如磐石"], // 盤→磐 異體字
+    ["ｱｰﾑ", "アーム"], // NFKC 半形片假名
+    ["Ⅱ", "II"], // NFKC 羅馬數字
+    [" 弱点 特効 ", "弱点特効"], // 去所有空白
+    ["of", "OF"], // latin 大寫
+  ];
+  for (const [inp, exp] of BATTERY) {
+    if (nfkc(inp) !== exp)
+      throw new Error(
+        `community nfkc 漂移：nfkc(${JSON.stringify(inp)})=${JSON.stringify(
+          nfkc(inp)
+        )} ≠ ${JSON.stringify(exp)}（須與 scripts/game8-normalize.js normalizeJa 同步）`
+      );
+  }
+}
 
 const jpMap = jpNameMapData as unknown as Record<
   string,

@@ -384,15 +384,19 @@ function parsePage(html, page, url, collectedAt, stats) {
   return builds.map((b, i) => {
     const slug = `altema-${page.cb}${multi && i > 0 ? `-${i + 1}` : ""}`;
     const buildName = b.heading ? `${b.heading}` : `${page.cb} テンプレ装備`;
+    const zh = { head: "頭", chest: "胴", arms: "腕", waist: "腰", legs: "脚" };
     const altPieces = b.piecesRaw.filter((p) => p.altNames?.length);
+    // 名稱含「/」＝A/B 二擇一（如 ヴァチス/プラグマ，Altema 常漏件型後綴）。社群管線無 alternatives
+    // 機制、解析採首件；此處把整串（含落選項）留痕於 notes，供使用者看得出替代選擇。
+    const slashPieces = b.armor.filter((a) => a.name.includes("/"));
     const notesParts = [];
     if (b.weapon) notesParts.push(`武器：${b.weapon.name}${b.weapon.statsRaw ? `（${b.weapon.statsRaw}）` : ""}`);
     if (b.charmRaw) notesParts.push(`護石：${b.charmRaw}`);
-    for (const p of altPieces) notesParts.push(`${p.slot} 可替換：${p.altNames.join(" / ")}`);
+    for (const p of altPieces) notesParts.push(`${zh[p.slot]} 可替換：${p.altNames.join(" / ")}`);
+    for (const p of slashPieces) notesParts.push(`${zh[p.slot]} 為 A/B 二擇一（${p.name}）：解析採前者，落選項亦列此供參考。`);
     if (b.placeholderSkills.length)
       notesParts.push(`屬性／弾種依武器自選：${b.placeholderSkills.join("、")}`);
     if (b.flexSlots.length) {
-      const zh = { head: "頭", chest: "胴", arms: "腕", waist: "腰", legs: "脚" };
       notesParts.push(
         `自由枠（${b.flexSlots.map((s) => zh[s]).join("・")}）＝彈性部位，由你的資源填；` +
           `此為 MR201+ 傀異錬成前提配裝，固定件的傀異錬成技能需自行錬成。`

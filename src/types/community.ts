@@ -65,8 +65,10 @@ export type CommunityBuild = {
   buildName: string;
   /** 選填：泛用防具骨架可無（不綁單一武器種類）。 */
   weaponType?: string;
-  /** 恰 5 件。 */
+  /** 具體防具件；搭配 flexSlots，armor 部位 ∪ flexSlots 須恰覆蓋五部位。無 flexSlots 時即 5 件。 */
   armor: CommunityArmorPiece[];
+  /** 彈性孔部位（B 最強系列「自由枠(任意)」）：不指定固定防具、匯出不鎖，留給 solver 以使用者資源填。 */
+  flexSlots?: ("head" | "chest" | "arms" | "waist" | "legs")[];
   weapon?: CommunityWeapon;
   talisman?: CommunityTalisman;
   /** 目標技能列表（必填，≥1）。匯出到配裝器的核心輸入。 */
