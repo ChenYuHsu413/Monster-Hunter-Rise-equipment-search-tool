@@ -377,13 +377,13 @@ export function BuilderView({
     }
   };
 
-  /** 套用搜尋結果（含手機版搜尋後收合捲動）。 */
+  /** 套用搜尋結果（全寬度搜尋後自動收合條件區；手機版另捲動對齊收合列）。 */
   const applySearchOutput = (out: SearchWorkerResponse & { ok: true }) => {
     setResults(out.output.results);
     setMeta(out.output.meta);
     setDirtySinceSearch(false);
+    setConditionsOpen(false);
     if (typeof window !== "undefined" && window.innerWidth < 1024) {
-      setConditionsOpen(false);
       setTimeout(
         () =>
           toggleRef.current?.scrollIntoView({
