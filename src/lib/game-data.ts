@@ -7,7 +7,7 @@ import type { ArmorPiece, Weapon } from "@/types/build";
  * 因此用動態 import 讓 webpack 拆成獨立 chunk，不進首屏 bundle。
  * 載入後以 module 層變數快取，之後同步取用。
  *
- * 小型資料（技能 / 珠子 / 武器類型 / preset）仍在 data.ts 靜態載入（UI 立即需要）。
+ * 小型資料（技能 / 珠子 / 武器類型）仍在 data.ts 靜態載入（UI 立即需要）。
  */
 export type GameData = {
   armors: ArmorPiece[];

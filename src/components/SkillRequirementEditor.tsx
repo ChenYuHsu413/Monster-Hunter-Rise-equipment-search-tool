@@ -15,24 +15,27 @@ import {
 } from "@/components/ui/select";
 import { X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { SET_SKILLS, buildPresets } from "@/lib/data";
+import { SET_SKILLS } from "@/lib/data";
 
 /**
- * 常用技能快捷區：依所有 preset 的必要技能出現頻率取前 12（資料驅動，不硬編）。
- * 玩家最常需要的技能（攻擊、看破、超會心…）會自然浮上來。
+ * 常用技能快捷區：玩家最常需要的 12 個技能。
+ * 原為 buildPresets 必要技能出現頻率動態推導；流派 preset 移除後，凍結為當時
+ * 由資料算出的前 12 名（出現頻率由高到低），行為與先前一致。
  */
-const COMMON_SKILLS: string[] = (() => {
-  const freq = new Map<string, number>();
-  for (const p of buildPresets) {
-    for (const name of Object.keys(p.requiredSkills ?? {})) {
-      freq.set(name, (freq.get(name) ?? 0) + 1);
-    }
-  }
-  return [...freq.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 12)
-    .map(([name]) => name);
-})();
+const COMMON_SKILLS: string[] = [
+  "弱點特效",
+  "超會心",
+  "攻擊",
+  "看破",
+  "會心擊【屬性】",
+  "貫通彈･貫通箭強化",
+  "蓄力大師",
+  "砲術",
+  "散彈･擴散箭強化",
+  "拔刀術【技】",
+  "速射強化",
+  "抑制偏移",
+];
 
 /** 下拉選項的單列渲染（含特殊/套裝標記）。 */
 function SkillOption({ s }: { s: Skill }) {
@@ -217,7 +220,7 @@ export function SkillRequirementEditor({
           placeholder="搜尋技能名稱加入必要條件…"
         />
 
-        {/* 常用技能快捷（依 preset 頻率；已加入或已排除者不顯示） */}
+        {/* 常用技能快捷（凍結清單；已加入或已排除者不顯示） */}
         {(() => {
           const quick = COMMON_SKILLS.filter(
             (n) => !(n in required) && !excludedSet.has(n)

@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { RecommendedView } from "@/components/recommended/RecommendedView";
 import { BuilderView } from "@/components/builder/BuilderView";
-import { Button } from "@/components/ui/button";
-import { Compass, Swords } from "lucide-react";
+import { Swords } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { builderHasConditions, type BuilderImport } from "@/lib/builder-import";
 
@@ -102,12 +100,6 @@ export default function Home() {
               </button>
             ))}
           </div>
-          <Link href="/guide">
-            <Button variant="outline" size="sm" className="gap-1.5">
-              <Compass className="h-4 w-4" />
-              新手引導
-            </Button>
-          </Link>
         </div>
       </header>
 

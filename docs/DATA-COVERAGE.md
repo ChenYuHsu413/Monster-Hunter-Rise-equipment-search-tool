@@ -3,6 +3,9 @@
 > 產出：`node scripts/import-unlocks.mjs`；驗證與本報告數據：`node scripts/validate-unlocks.mjs`。
 > 資料基準：Kiranico 破曉 TU5（Ver16）、任務清單四軌（村莊／集會所初階／進階／Master）。
 > 最後更新：2026-07-07。
+>
+> ⚠️ **2026-07-10 註**：消費此資料的 `/guide` 新手引導模式已移除；`unlocks.json` 資料層與搜尋
+> 引擎 progress 篩選能力保留（目前無 UI caller）。本文提及的「preset 用裝」屬歷史紀錄（preset 已移除）。
 
 ## 信心度定義
 

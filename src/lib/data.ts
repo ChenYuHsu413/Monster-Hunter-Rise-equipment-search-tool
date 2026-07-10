@@ -1,10 +1,8 @@
 import decorationsRaw from "@/data/decorations.json";
 import skillsRaw from "@/data/skills.json";
 import weaponTypesRaw from "@/data/weaponTypes.json";
-import presetsRaw from "@/data/buildPresets.json";
 
 import type {
-  BuildPreset,
   Decoration,
   Skill,
   WeaponType,
@@ -14,14 +12,13 @@ import type {
  * 集中式資料存取層（小型、UI 立即需要的資料）。
  *
  * 大型的防具 / 武器資料改由 game-data.ts 延遲載入（不進首屏 bundle），
- * 搜尋時透過 createSearchDeps() 注入。此檔只保留技能 / 珠子 / 武器類型 /
- * preset 等小資料與其衍生索引。
+ * 搜尋時透過 createSearchDeps() 注入。此檔只保留技能 / 珠子 / 武器類型
+ * 等小資料與其衍生索引。
  */
 
 export const decorations = decorationsRaw as unknown as Decoration[];
 export const skills = skillsRaw as unknown as Skill[];
 export const weaponTypes = weaponTypesRaw as unknown as WeaponType[];
-export const buildPresets = presetsRaw as unknown as BuildPreset[];
 
 /**
  * 套裝（系列）技能：靠穿戴同系列防具件數累加觸發，而非單件給滿。
@@ -71,11 +68,3 @@ export const decorationsBySkill: Record<string, Decoration[]> = (() => {
   }
   return map;
 })();
-
-export function getPreset(id: string): BuildPreset | undefined {
-  return buildPresets.find((p) => p.id === id);
-}
-
-export function presetsForWeapon(weaponType: string): BuildPreset[] {
-  return buildPresets.filter((p) => p.weaponType === weaponType);
-}

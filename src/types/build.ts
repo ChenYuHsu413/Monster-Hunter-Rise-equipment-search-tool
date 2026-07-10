@@ -222,56 +222,17 @@ export type WeaponType = {
   supported: boolean;
 };
 
-/** preset 自動規則：依武器屬性自動加入條件技能等。 */
+/**
+ * 依武器屬性自動加入條件技能的規則（○屬性攻擊強化）。
+ * 流派 preset 移除後已無 UI caller，但屬搜尋引擎（build-search.ts）通用能力，
+ * 由 BuildSearchRequest.autoRules 攜入、preset-resolver 解析；屬禁區（見 CLAUDE.md §0）
+ * 保留，勿因 grep 無 caller 誤判為死碼。
+ */
 export type PresetAutoRules = {
   /** 依武器屬性（五屬性）自動加入對應「○屬性攻擊強化」。 */
   addElementAttackSkill?: boolean;
   /** 自動加入的屬性強化等級，預設 5。 */
   elementAttackLevel?: number;
-};
-
-/** preset 進度階段：初心（剛進 MR）→ 拓荒（MR 前期）→ 進階（中期）→ 畢業（TU5 終盤 meta）。 */
-export type PresetTier = "初心" | "拓荒" | "進階" | "畢業";
-
-export const PRESET_TIER_ORDER: PresetTier[] = ["初心", "拓荒", "進階", "畢業"];
-
-/**
- * 各階段允許的防具 rarity 上限（取得門檻代理指標）。
- * MR 防具為 rarity 8（早期）/9（中期，含天迴龍 MR5）/10（終盤）。
- * 初心限 ≤8 以排除天迴龍等 MR5+ 裝；進階/畢業不設限（≤10）。
- * 註：Kiranico 無精確「MR 第幾星解放」資料，此為 rarity 推算的近似值。
- */
-export const TIER_MAX_RARITY: Record<PresetTier, number> = {
-  初心: 8,
-  拓荒: 9,
-  進階: 10,
-  畢業: 10,
-};
-
-export type BuildPreset = {
-  id: string;
-  nameZh: string;
-  weaponType: string;
-  /** 進度階段分類（用於流派清單分組）。未標示者視為未分類。 */
-  tier?: PresetTier;
-  /** 屬攻武器流派：search 模式挑候選武器時以屬性值優先（與 autoRules 解耦，物理向初心屬性武器亦可開）。 */
-  preferElement?: boolean;
-  description: string;
-  requiredSkills: SkillMap;
-  /** 排除技能（硬條件：帶有這些技能的裝備不進候選池）。 */
-  excludedSkills: string[];
-  autoRules?: PresetAutoRules;
-  /** 套用時一併帶入的保留洞位（例如屬性模板預留 Lv3+Lv2 給屬性攻擊珠）。未指定則不改動現有保留洞位。 */
-  reservedSlots?: Partial<ReservedSlots>;
-  tags: string[];
-};
-
-/** resolvePresetSkills() 的結果：套用 autoRules 後的技能條件。 */
-export type ResolvedSkillConditions = {
-  requiredSkills: SkillMap;
-  excludedSkills: string[];
-  /** 由 autoRules 自動加入的技能（顯示用）。 */
-  autoAddedSkills: SkillMap;
 };
 
 /** 固定部位。字串為裝備 id（護石為清單制，不在固定範圍）。 */
@@ -319,12 +280,13 @@ export type WeaponSearchMode = "fixed" | "search";
 
 export type BuildSearchRequest = {
   weaponType: string;
-  /** @deprecated 引擎未讀取；A2 移除 guide 後將整欄刪除。A1 暫改選填以便配裝器不再傳入。 */
-  presetId?: string;
   weaponSearchMode: WeaponSearchMode;
   /** weaponSearchMode 為 fixed 時使用的武器 id（與 fixedParts.weapon 相容，此欄優先）。 */
   fixedWeaponId?: string;
-  /** preset 的自動規則（search 模式下由搜尋引擎逐武器套用）。 */
+  /**
+   * 依武器屬性逐武器套用的自動技能規則（search 模式）。
+   * 流派 preset／guide 移除後已無 caller；引擎通用能力，屬禁區保留，勿因 grep 誤判為死碼。
+   */
   autoRules?: PresetAutoRules;
   /** 武器屬性篩選（僅五屬性；search 模式縮小候選池，未指定＝不限）。 */
   elementFilter?: WeaponElementFilter;
@@ -332,7 +294,10 @@ export type BuildSearchRequest = {
   minDefense?: number;
   /** 各屬性耐性下限（5 件防具總和）。只檢查有指定的屬性；未指定的屬性＝不限。 */
   minResistances?: Partial<Record<ElementResistanceKey, number>>;
-  /** 裝備 rarity 上限（依 preset 階段限制取得門檻，同時套用於防具與 search 模式武器；未指定＝不限）。固定部位/武器不受限。 */
+  /**
+   * 裝備 rarity 上限（同時套用於防具與 search 模式武器；未指定＝不限）。固定部位/武器不受限。
+   * 流派 preset／guide 移除後已無 caller；引擎通用能力，屬禁區保留，勿因 grep 誤判為死碼。
+   */
   maxRarity?: number;
   /**
    * 玩家遊戲進度（解放條件精確篩選，rarity 限裝的精確化替代）。
@@ -340,7 +305,10 @@ export type BuildSearchRequest = {
    * 未指定＝行為與既有搜尋完全相同。固定部位/武器不受限。
    */
   progress?: PlayerProgress;
-  /** 屬攻武器流派：候選武器評分以屬性值優先。未指定時退回依 autoRules 推斷。 */
+  /**
+   * 候選武器評分以屬性值優先。未指定時退回依 autoRules 推斷。
+   * 流派 preset／guide 移除後已無 caller；引擎通用能力，屬禁區保留，勿因 grep 誤判為死碼。
+   */
   preferElement?: boolean;
   /** @deprecated 舊版手動武器洞數。僅在武器候選池為空時作為後援。 */
   weaponSlots?: number[];

@@ -51,7 +51,7 @@ type Props = {
   onModeChange: (m: WeaponSearchMode) => void;
   fixedWeaponId?: string;
   onPickWeapon: (id: string) => void;
-  /** 自動技能提示（由上層依 preset autoRules 與武器屬性計算）。 */
+  /** 選填提示字串（由上層計算後顯示於武器選擇下方）。目前配裝器未使用。 */
   autoHint?: string | null;
   /** 是否顯示屬性篩選器（弩槍非屬性武器，故停用）。 */
   enableElementFilter?: boolean;

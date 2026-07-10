@@ -421,7 +421,9 @@ export function BuildResultCard({
           <DecorationSummary decorations={result.decorations} />
         </div>
 
-        {/* 自動技能（依武器屬性加入） */}
+        {/* 自動技能（依武器屬性加入，由搜尋引擎 autoRules 產生）。
+            流派 preset／guide 移除後配裝器不再送 autoRules，此分支目前恆不觸發；
+            屬引擎通用能力顯示位（禁區保留，見 CLAUDE.md §0），勿因無觸發誤判為死碼刪除。 */}
         {autoEntries.length > 0 && (
           <p className="flex items-center gap-1.5 rounded-md bg-accent/10 px-2 py-1 text-[11px] text-accent">
             <Sparkles className="h-3 w-3 shrink-0" />
