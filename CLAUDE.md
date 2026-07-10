@@ -73,8 +73,9 @@
   newbie-guided-mode-plan）。已備份至 `D:\claude-backup\`。
 - `~/.claude/` 全域 config 版控於 `github.com/ChenYuHsu413/Claude-Config`（memory/projects/sessions
   未追蹤，僅存 C 槽）。
-- 待啟動大型計畫：新手引導模式已全部完成（見 docs/ROADMAP.md、DATA-COVERAGE.md）；
-  剩餘尾巴見 HANDOFF.md。
+- 新手引導模式（`/guide`）與流派 preset 已於 `f433557`／`d070884` 移除（定位與「推薦配裝」頁籤
+  重疊，推薦配裝頁為其替代）；原計畫文件 docs/ROADMAP.md、DATA-COVERAGE.md 仍在（已加移除註記），
+  尾巴見 HANDOFF.md。
 
 ## 5. 工作協議（換手／長 session 失真防護）
 
