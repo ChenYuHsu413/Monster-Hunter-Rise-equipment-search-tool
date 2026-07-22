@@ -12,6 +12,11 @@
 import type { ArmorPiece, BuildSearchRequest, GameId } from "@/types/build";
 import { searchBuilds, createSearchDeps, type SearchDeps, type SearchOutput } from "./build-search";
 import { loadGameData } from "./game-data";
+import {
+  applyWeaponAugment,
+  hasNumericDelta,
+  type WorldWeaponAugment,
+} from "./world-weapon-augment";
 
 export type SearchWorkerRequest = {
   /** 遞增搜尋序號：主執行緒用來忽略已取消/過期的回傳。 */
@@ -21,6 +26,11 @@ export type SearchWorkerRequest = {
   augments: ArmorPiece[];
   /** 遊戲（未帶＝rise，向後相容）。World 走 world-registry 的固定護石候選池 deps。 */
   gameId?: GameId;
+  /**
+   * World 武器強化「簡化輸入」。僅 gameId==="world" 且固定武器模式下套用：
+   * 數值 delta 改武器副本、虛擬 set bonus 設 deps.world.virtualSetBonus。
+   */
+  worldWeaponAugment?: WorldWeaponAugment;
 };
 
 export type SearchWorkerResponse =
@@ -29,8 +39,37 @@ export type SearchWorkerResponse =
 
 const ctx = self as unknown as DedicatedWorkerGlobalScope;
 
+/**
+ * 把 World 武器強化套進 world deps（僅固定武器模式）。
+ * - 數值 delta：對固定 id 的武器建淺拷貝＋改值，重建 weaponById 覆蓋該 id（不 mutate 共享資料）。
+ * - 虛擬 set bonus：設 deps.world.virtualSetBonus，供 computeSetBonusSkills 種入 +1 件。
+ * 無 augment / 非固定模式 / 找不到武器 → 原 deps 原樣返回。
+ */
+function applyWorldWeaponAugment(
+  deps: SearchDeps,
+  request: BuildSearchRequest,
+  aug: WorldWeaponAugment | undefined
+): SearchDeps {
+  if (!aug || request.weaponSearchMode !== "fixed" || !deps.world) return deps;
+  const id = request.fixedWeaponId ?? request.fixedParts?.weapon;
+  if (!id) return deps;
+  let next = deps;
+  const base = deps.weaponById[id];
+  if (base && hasNumericDelta(aug)) {
+    const augmented = applyWeaponAugment(base, aug);
+    next = { ...next, weaponById: { ...next.weaponById, [id]: augmented } };
+  }
+  if (aug.setBonusId) {
+    next = {
+      ...next,
+      world: { ...next.world!, virtualSetBonus: { [aug.setBonusId]: 1 } },
+    };
+  }
+  return next;
+}
+
 ctx.onmessage = async (e: MessageEvent<SearchWorkerRequest>) => {
-  const { id, request, augments, gameId } = e.data;
+  const { id, request, augments, gameId, worldWeaponAugment } = e.data;
   try {
     let deps: SearchDeps;
     if (gameId === "world") {
@@ -38,6 +77,9 @@ ctx.onmessage = async (e: MessageEvent<SearchWorkerRequest>) => {
       // 動態 import：world 引擎程式只在 worker 實際搜 world 時載入，不進 rise 路徑。
       const { loadWorldSearchDeps } = await import("./world-registry");
       deps = await loadWorldSearchDeps();
+      // 武器強化「簡化輸入」（僅固定武器模式）：改武器副本 + 虛擬 set bonus。
+      // 只重建 weaponById 覆蓋單一 id，不 mutate 共享的 dynamic-import 快取資料。
+      deps = applyWorldWeaponAugment(deps, request, worldWeaponAugment);
     } else {
       const gd = await loadGameData();
       deps = createSearchDeps(gd, augments);

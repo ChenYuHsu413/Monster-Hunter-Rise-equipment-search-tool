@@ -53,6 +53,11 @@ export type WorldSearchExt = {
   skillByName: Record<string, Skill>;
   /** 護石候選（charmMode = craftable-list，取代 Rise 的使用者護石庫）。 */
   charmPool: Charm[];
+  /**
+   * 武器覺醒賦予的「虛擬 set bonus +1 件」（setBonusId → 額外件數）。固定武器模式下由
+   * worker 依 worldWeaponAugment 注入；undefined＝無（一般 World 搜尋，行為不變）。
+   */
+  virtualSetBonus?: Record<string, number>;
 };
 
 /** 可注入的資料相依（測試用）；預設使用本地 JSON。 */
@@ -426,7 +431,8 @@ export function searchBuilds(
               if (deps.world?.profile.features.setBonus) {
                 setBonusSkills = computeSetBonusSkills(
                   pieces,
-                  deps.world.setBonusById
+                  deps.world.setBonusById,
+                  deps.world.virtualSetBonus
                 );
                 effSkillMax = resolveDynamicSkillMax(
                   deps.skillMax,

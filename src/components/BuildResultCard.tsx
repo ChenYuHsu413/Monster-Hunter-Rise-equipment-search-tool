@@ -64,6 +64,11 @@ export type WorldResultInfo = {
   skillByName: Record<string, Skill>;
   /** profile.resolveSkillMax：依當前 set bonus 觸發技能動態解析上限（secret 分母）。 */
   resolveSkillMax: (skill: string, active: SkillMap) => number;
+  /**
+   * 武器覺醒賦予的「虛擬 set bonus +1 件」（setBonusId → 額外件數）。件數統計種入，
+   * 使 3 件門檻可用 2 件防具達成。undefined＝無（一般搜尋）。
+   */
+  virtualSetBonus?: Record<string, number>;
 };
 
 const SHARP_COLOR_ZH = ["紅", "橙", "黃", "綠", "藍", "白", "紫"];
@@ -94,33 +99,49 @@ function activeSharpIndex(
   return last;
 }
 
-/** 統計 5 件防具的 setBonusId 件數，回傳觸發達門檻的 rank（供結果卡顯示）。 */
+/**
+ * 統計防具的 setBonusId 件數（可種入武器覺醒的虛擬 +1 件），回傳觸發達門檻的 rank。
+ * virtual＝該 set bonus 的虛擬件數，供顯示「含武器覺醒 +N」標註。
+ */
 function worldSetBonusRows(
   pieces: ArmorPiece[],
-  setBonusById: Record<string, SetBonus>
-): { name: string; count: number; triggered: { skill: string; pieces: number }[] }[] {
-  const counts: Record<string, number> = {};
+  setBonusById: Record<string, SetBonus>,
+  virtualSetBonus?: Record<string, number>
+): {
+  name: string;
+  count: number;
+  virtual: number;
+  triggered: { skill: string; pieces: number }[];
+}[] {
+  const counts: Record<string, number> = virtualSetBonus ? { ...virtualSetBonus } : {};
   for (const p of pieces) {
     if (p.setBonusId) counts[p.setBonusId] = (counts[p.setBonusId] ?? 0) + 1;
   }
-  const rows: { name: string; count: number; triggered: { skill: string; pieces: number }[] }[] = [];
+  const rows: {
+    name: string;
+    count: number;
+    virtual: number;
+    triggered: { skill: string; pieces: number }[];
+  }[] = [];
   for (const [id, count] of Object.entries(counts)) {
     const sb = setBonusById[id];
     if (!sb) continue;
     const triggered = sb.ranks
       .filter((r) => count >= r.pieces)
       .map((r) => ({ skill: r.skillName, pieces: r.pieces }));
-    if (triggered.length) rows.push({ name: sb.nameZh, count, triggered });
+    if (triggered.length)
+      rows.push({ name: sb.nameZh, count, virtual: virtualSetBonus?.[id] ?? 0, triggered });
   }
   return rows;
 }
 
-/** 觸發的 set bonus 技能表（供 resolveSkillMax 動態上限判定）。 */
+/** 觸發的 set bonus 技能表（供 resolveSkillMax 動態上限判定；可種入虛擬 +1 件）。 */
 function activeSetBonusSkills(
   pieces: ArmorPiece[],
-  setBonusById: Record<string, SetBonus>
+  setBonusById: Record<string, SetBonus>,
+  virtualSetBonus?: Record<string, number>
 ): SkillMap {
-  const counts: Record<string, number> = {};
+  const counts: Record<string, number> = virtualSetBonus ? { ...virtualSetBonus } : {};
   for (const p of pieces) {
     if (p.setBonusId) counts[p.setBonusId] = (counts[p.setBonusId] ?? 0) + 1;
   }
@@ -290,10 +311,16 @@ export function BuildResultCard({
 
   // ---- World 顯示：set bonus 觸發、secret 解放後分母、生效斬味色 ----
   const armorPieces = ARMOR_PARTS.map((p) => result.armor[p]);
-  const setBonusRows = world ? worldSetBonusRows(armorPieces, world.setBonusById) : [];
+  const setBonusRows = world
+    ? worldSetBonusRows(armorPieces, world.setBonusById, world.virtualSetBonus)
+    : [];
   const secretRows = useMemo(() => {
     if (!world) return [];
-    const active = activeSetBonusSkills(armorPieces, world.setBonusById);
+    const active = activeSetBonusSkills(
+      armorPieces,
+      world.setBonusById,
+      world.virtualSetBonus
+    );
     const out: { name: string; level: number; cap: number; unlocked: boolean }[] = [];
     for (const [name, level] of Object.entries(result.finalSkills)) {
       const s = world.skillByName[name];
@@ -564,6 +591,14 @@ export function BuildResultCard({
                       <span className="font-medium text-foreground">
                         {r.name} ×{r.count}
                       </span>
+                      {r.virtual > 0 && (
+                        <span
+                          className="text-[11px] text-primary"
+                          title="含武器覺醒賦予的虛擬件數"
+                        >
+                          （含武器覺醒 +{r.virtual}）
+                        </span>
+                      )}
                       <span className="text-muted-foreground">→</span>
                       {r.triggered.map((t) => (
                         <Badge

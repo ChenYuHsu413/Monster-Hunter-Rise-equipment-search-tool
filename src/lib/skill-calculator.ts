@@ -36,9 +36,14 @@ export function calculateSkills(
  */
 export function computeSetBonusSkills(
   pieces: ArmorPiece[],
-  setBonusById: Record<string, SetBonus>
+  setBonusById: Record<string, SetBonus>,
+  /**
+   * 預先種入的件數（World 武器覺醒賦予的「虛擬 set bonus +1 件」）。Rise 不傳＝空，
+   * counts 由 {} 起算，行為與改造前逐位元一致。
+   */
+  extraCounts?: Record<string, number>
 ): SkillMap {
-  const counts: Record<string, number> = {};
+  const counts: Record<string, number> = extraCounts ? { ...extraCounts } : {};
   for (const p of pieces) {
     if (p.setBonusId) counts[p.setBonusId] = (counts[p.setBonusId] ?? 0) + 1;
   }

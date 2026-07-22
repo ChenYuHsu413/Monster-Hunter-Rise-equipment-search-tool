@@ -37,6 +37,11 @@ import {
 } from "@/lib/search-conditions";
 import { decodeShareState, encodeShareState } from "@/lib/share-link";
 import type { BuilderImport } from "@/lib/builder-import";
+import {
+  EMPTY_WORLD_WEAPON_AUGMENT,
+  isNoopAugment,
+  type WorldWeaponAugment,
+} from "@/lib/world-weapon-augment";
 
 import { WeaponSelector } from "@/components/WeaponSelector";
 import { WeaponPicker, type ElementFilterValue } from "@/components/WeaponPicker";
@@ -44,6 +49,7 @@ import { SearchModeSelector } from "@/components/SearchModeSelector";
 import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
 import { CharmListPanel } from "@/components/CharmListPanel";
 import { WorldCharmPanel } from "@/components/WorldCharmPanel";
+import { WorldWeaponAugmentPanel } from "@/components/WorldWeaponAugmentPanel";
 import { ReservedSlotsInput } from "@/components/ReservedSlotsInput";
 import { DefenseResInput } from "@/components/DefenseResInput";
 import { FixedPartsPanel } from "@/components/FixedPartsPanel";
@@ -177,18 +183,6 @@ export function BuilderView({
     for (const b of gameStatic?.setBonuses ?? []) m[b.id] = b;
     return m;
   }, [gameStatic]);
-  const worldResultInfo = useMemo(
-    () =>
-      isWorld && profile && gameStatic
-        ? {
-            setBonusById: worldSetBonusById,
-            skillByName: gameStatic.skillByName,
-            resolveSkillMax: profile.resolveSkillMax,
-          }
-        : undefined,
-    [isWorld, profile, gameStatic, worldSetBonusById]
-  );
-
   // ---- 基礎設定（persist 到 localStorage）----
   const [weaponType, setWeaponType] = useLocalStorage(`${prefix}weaponType`, "long-sword");
   const [searchMode, setSearchMode] = useLocalStorage<SearchMode>(`${prefix}searchMode`, "fast");
@@ -204,6 +198,38 @@ export function BuilderView({
   const [elementFilter, setElementFilter] = useLocalStorage<ElementFilterValue>(
     `${prefix}elementFilter`,
     "all"
+  );
+
+  // ---- World 武器強化「簡化輸入」（覺醒／客製強化；僅固定武器模式）。Rise 不用。 ----
+  const [worldWeaponAugment, setWorldWeaponAugment] =
+    useLocalStorage<WorldWeaponAugment>(
+      `${prefix}worldWeaponAugment`,
+      EMPTY_WORLD_WEAPON_AUGMENT
+    );
+  // 實際會送進搜尋的強化：僅 World + 固定武器 + 有選武器 + 非空強化時才帶。
+  const activeWeaponAugment =
+    isWorld &&
+    weaponSearchMode === "fixed" &&
+    !!fixedWeaponId &&
+    !isNoopAugment(worldWeaponAugment)
+      ? worldWeaponAugment
+      : undefined;
+
+  // World 結果卡顯示所需（set bonus / secret 分母 / 虛擬件數）。Rise 為 undefined。
+  const worldResultInfo = useMemo(
+    () =>
+      isWorld && profile && gameStatic
+        ? {
+            setBonusById: worldSetBonusById,
+            skillByName: gameStatic.skillByName,
+            resolveSkillMax: profile.resolveSkillMax,
+            // 武器覺醒賦予的虛擬 set bonus（+1 件）：結果卡件數統計種入。
+            virtualSetBonus: activeWeaponAugment?.setBonusId
+              ? { [activeWeaponAugment.setBonusId]: 1 }
+              : undefined,
+          }
+        : undefined,
+    [isWorld, profile, gameStatic, worldSetBonusById, activeWeaponAugment]
   );
 
   // ---- World 護石選擇（craftable-list）：固定一顆 / 排除若干顆。Rise 不用。 ----
@@ -265,6 +291,9 @@ export function BuilderView({
           setFixedWeaponId(decoded.fixedWeaponId);
         if (decoded.elementFilter)
           setElementFilter(decoded.elementFilter as ElementFilterValue);
+        // World 武器強化：連結有帶則套用，無帶（舊連結）維持既有（不覆寫成空）。
+        if (decoded.worldWeaponAugment)
+          setWorldWeaponAugment(decoded.worldWeaponAugment);
         setSharedNotice(true);
       }
       params.delete("c");
@@ -424,6 +453,8 @@ export function BuilderView({
     setWeaponType(w);
     setElementFilter("all");
     setFixedWeaponId("");
+    // 武器強化與特定武器綁定，換武器種類時清掉（避免舊 delta 靜默套到新武器）。
+    if (isWorld) setWorldWeaponAugment({ ...EMPTY_WORLD_WEAPON_AUGMENT });
     setFixedParts((prev) => {
       const next = { ...prev };
       delete next.weapon;
@@ -582,6 +613,7 @@ export function BuilderView({
       request,
       augments,
       gameId,
+      worldWeaponAugment: activeWeaponAugment,
     } satisfies SearchWorkerRequest);
   };
 
@@ -853,6 +885,7 @@ export function BuilderView({
     augments,
     worldFixedCharmId,
     worldExcludedCharmIds,
+    worldWeaponAugment,
   ]);
 
   const copySummary = async (summary: string) => {
@@ -873,6 +906,7 @@ export function BuilderView({
       weaponSearchMode,
       fixedWeaponId,
       elementFilter,
+      worldWeaponAugment: activeWeaponAugment,
     });
     // 帶 ?game=：開啟者由 page.tsx 先切到對應遊戲，再由該 BuilderView 套用 ?c=。
     const gameQ = isWorld ? "game=world&" : "";
@@ -1100,6 +1134,21 @@ export function BuilderView({
                   onElementFilterChange={changeElementFilter}
                   groupBySource
                 />
+                {/* World 武器強化「簡化輸入」：僅固定武器模式且已選武器時顯示。 */}
+                {isWorld &&
+                  weaponSearchMode === "fixed" &&
+                  !!fixedWeaponId &&
+                  weaponById[fixedWeaponId] && (
+                    <WorldWeaponAugmentPanel
+                      augment={worldWeaponAugment}
+                      onChange={setWorldWeaponAugment}
+                      setBonuses={gameStatic?.setBonuses ?? []}
+                      weaponHasElement={
+                        !!weaponById[fixedWeaponId].element &&
+                        (weaponById[fixedWeaponId].element?.value ?? 0) > 0
+                      }
+                    />
+                  )}
               </CardContent>
             </Card>
 

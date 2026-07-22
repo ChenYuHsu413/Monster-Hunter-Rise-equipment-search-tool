@@ -3,6 +3,11 @@ import {
   deserializeSearchConditions,
   type SearchConditions,
 } from "./search-conditions";
+import {
+  isNoopAugment,
+  sanitizeWeaponAugment,
+  type WorldWeaponAugment,
+} from "./world-weapon-augment";
 
 /**
  * 配裝器「可分享連結」的編碼／解碼。
@@ -26,6 +31,8 @@ export type ShareableBuilderState = {
   weaponSearchMode?: WeaponSearchMode;
   fixedWeaponId?: string;
   elementFilter?: string;
+  /** World 武器強化「簡化輸入」；舊連結無此欄，解碼時視為無強化（向後相容）。 */
+  worldWeaponAugment?: WorldWeaponAugment;
   /** SearchConditions 去掉護石後的欄位（用 deserialize 還原、消毒）。 */
   conditions: {
     requiredSkills: SkillMap;
@@ -45,6 +52,8 @@ export type DecodedShare = {
   weaponSearchMode?: WeaponSearchMode;
   fixedWeaponId?: string;
   elementFilter?: string;
+  /** World 武器強化；舊連結無 → undefined。 */
+  worldWeaponAugment?: WorldWeaponAugment;
 };
 
 /** 把配裝器目前狀態編成 URL query 值（不含護石）。 */
@@ -55,6 +64,7 @@ export function encodeShareState(input: {
   weaponSearchMode?: WeaponSearchMode;
   fixedWeaponId?: string;
   elementFilter?: string;
+  worldWeaponAugment?: WorldWeaponAugment;
 }): string {
   const payload: ShareableBuilderState = {
     v: 1,
@@ -63,6 +73,11 @@ export function encodeShareState(input: {
     weaponSearchMode: input.weaponSearchMode,
     fixedWeaponId: input.fixedWeaponId || undefined,
     elementFilter: input.elementFilter,
+    // 只在有實際強化時帶入，避免無謂膨脹連結。
+    worldWeaponAugment:
+      input.worldWeaponAugment && !isNoopAugment(input.worldWeaponAugment)
+        ? input.worldWeaponAugment
+        : undefined,
     conditions: {
       requiredSkills: input.conditions.requiredSkills,
       excludedSkills: input.conditions.excludedSkills,
@@ -94,6 +109,11 @@ export function decodeShareState(raw: string): DecodedShare | null {
   const mode = asString(obj.weaponSearchMode);
   // 舊格式（無 game 欄）視為 rise；只認識已知遊戲，其餘退回 rise。
   const game: GameId = obj.game === "world" ? "world" : "rise";
+  // World 武器強化：缺欄（舊連結）→ undefined；有欄則消毒。只在 world 生效。
+  const worldWeaponAugment =
+    game === "world" && obj.worldWeaponAugment !== undefined
+      ? sanitizeWeaponAugment(obj.worldWeaponAugment)
+      : undefined;
   return {
     game,
     conditions,
@@ -102,5 +122,6 @@ export function decodeShareState(raw: string): DecodedShare | null {
       mode === "fixed" || mode === "search" ? mode : undefined,
     fixedWeaponId: asString(obj.fixedWeaponId),
     elementFilter: asString(obj.elementFilter),
+    worldWeaponAugment,
   };
 }
