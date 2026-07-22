@@ -6,24 +6,22 @@ import type {
   ArmorPiece,
   BuildResult,
   BuildSearchRequest,
+  Charm,
   ElementResistanceKey,
   FixedParts,
   ExcludedItems,
+  GameId,
   ReservedSlots,
+  SetBonus,
   SearchMode,
   SkillMap,
   WeaponSearchMode,
 } from "@/types/build";
-import {
-  weaponTypes,
-  skills as allSkills,
-} from "@/lib/data";
+import { getGameStaticData, type GameStaticData } from "@/lib/data";
 import { loadGameData, type GameData } from "@/lib/game-data";
-import {
-  searchBuilds,
-  createSearchDeps,
-  type SearchMeta,
-} from "@/lib/build-search";
+import { type SearchMeta } from "@/lib/build-search";
+import { getGameProfile, type GameProfile } from "@/lib/game-profile";
+import { GameIdProvider } from "@/lib/game-context";
 import type {
   SearchWorkerRequest,
   SearchWorkerResponse,
@@ -45,6 +43,7 @@ import { WeaponPicker, type ElementFilterValue } from "@/components/WeaponPicker
 import { SearchModeSelector } from "@/components/SearchModeSelector";
 import { SkillRequirementEditor } from "@/components/SkillRequirementEditor";
 import { CharmListPanel } from "@/components/CharmListPanel";
+import { WorldCharmPanel } from "@/components/WorldCharmPanel";
 import { ReservedSlotsInput } from "@/components/ReservedSlotsInput";
 import { DefenseResInput } from "@/components/DefenseResInput";
 import { FixedPartsPanel } from "@/components/FixedPartsPanel";
@@ -80,6 +79,8 @@ const SORT_OPTIONS: { key: SortKey; label: string; hint: string }[] = [
 ];
 
 type BuilderViewProps = {
+  /** 目前遊戲（PLAN Phase 5）。預設 rise；page.tsx 以 key=gameId 重掛載切換。 */
+  gameId?: GameId;
   /** 由推薦配裝頁交付的待套用匯入指令（切到配裝器時帶入）。 */
   pendingImport?: BuilderImport | null;
   /** 套用完成後通知外層清空 pendingImport。 */
@@ -109,41 +110,108 @@ type ImportNotice =
     };
 
 export function BuilderView({
+  gameId = "rise",
   pendingImport,
   onConsumeImport,
 }: BuilderViewProps = {}) {
+  // localStorage 前綴：rise "mhsb." / world "mhwib."（兩款狀態互不污染）。gameId 於本
+  // 元件生命週期恆定（page.tsx 以 key=gameId 重掛載切換），故可直接由 gameId 導出。
+  const prefix = gameId === "world" ? "mhwib." : "mhsb.";
+  const isWorld = gameId === "world";
+
+  // ---- 小資料（技能/武器類型/珠子索引/set bonus）與 profile：per-game ----
+  // rise 為模組載入時同步註冊，可即用；world 需先動態 import world-registry 註冊
+  // （並取護石候選池）→ 也讓 world 引擎程式維持 lazy chunk，不進首屏。
+  const [gameStatic, setGameStatic] = useState<GameStaticData | null>(
+    isWorld ? null : getGameStaticData("rise")
+  );
+  const [profile, setProfile] = useState<GameProfile | null>(
+    isWorld ? null : getGameProfile("rise")
+  );
+  const [worldCharmPool, setWorldCharmPool] = useState<Charm[]>([]);
+  useEffect(() => {
+    if (!isWorld) return;
+    let alive = true;
+    (async () => {
+      const { ensureWorldRegistered } = await import("@/lib/world-registry");
+      const ws = await ensureWorldRegistered();
+      if (!alive) return;
+      setGameStatic(getGameStaticData("world"));
+      setProfile(getGameProfile("world"));
+      setWorldCharmPool(ws.charms);
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [isWorld]);
+
+  const weaponTypes = gameStatic?.weaponTypes ?? [];
+  const allSkills = gameStatic?.skills ?? [];
+
   // ---- 延遲載入的防具 / 武器資料（不進首屏 bundle）----
   const [gameData, setGameData] = useState<GameData | null>(null);
   useEffect(() => {
     let alive = true;
-    loadGameData().then((gd) => {
+    loadGameData(gameId).then((gd) => {
       if (alive) setGameData(gd);
     });
     return () => {
       alive = false;
     };
-  }, []);
+  }, [gameId]);
+
+  // 資料就緒：rise 的小資料同步可用（初始 state 即非空），故此旗標對 rise 恆等於 !gameData
+  // （行為不變）；world 另需 gameStatic/profile 由 world-registry 非同步註冊完成。
+  const dataLoading = !gameData || !gameStatic || !profile;
+
+  // World 結果卡顯示所需（set bonus / secret 分母）。Rise 為 undefined，結果卡不渲染 World 區塊。
+  const worldSetBonusById = useMemo(() => {
+    const m: Record<string, SetBonus> = {};
+    for (const b of gameStatic?.setBonuses ?? []) m[b.id] = b;
+    return m;
+  }, [gameStatic]);
+  const worldResultInfo = useMemo(
+    () =>
+      isWorld && profile && gameStatic
+        ? {
+            setBonusById: worldSetBonusById,
+            skillByName: gameStatic.skillByName,
+            resolveSkillMax: profile.resolveSkillMax,
+          }
+        : undefined,
+    [isWorld, profile, gameStatic, worldSetBonusById]
+  );
 
   // ---- 基礎設定（persist 到 localStorage）----
-  const [weaponType, setWeaponType] = useLocalStorage("mhsb.weaponType", "long-sword");
-  const [searchMode, setSearchMode] = useLocalStorage<SearchMode>("mhsb.searchMode", "fast");
+  const [weaponType, setWeaponType] = useLocalStorage(`${prefix}weaponType`, "long-sword");
+  const [searchMode, setSearchMode] = useLocalStorage<SearchMode>(`${prefix}searchMode`, "fast");
 
   // ---- 武器設定 ----
   const [weaponSearchMode, setWeaponSearchMode] = useLocalStorage<WeaponSearchMode>(
-    "mhsb.weaponSearchMode",
+    `${prefix}weaponSearchMode`,
     "search"
   );
   // 固定武器 id，"" 表示未選（localStorage 不便存 undefined）。
-  const [fixedWeaponId, setFixedWeaponId] = useLocalStorage("mhsb.fixedWeaponId", "");
+  const [fixedWeaponId, setFixedWeaponId] = useLocalStorage(`${prefix}fixedWeaponId`, "");
   // 武器屬性篩選。"all" 代表不限。
   const [elementFilter, setElementFilter] = useLocalStorage<ElementFilterValue>(
-    "mhsb.elementFilter",
+    `${prefix}elementFilter`,
     "all"
+  );
+
+  // ---- World 護石選擇（craftable-list）：固定一顆 / 排除若干顆。Rise 不用。 ----
+  const [worldFixedCharmId, setWorldFixedCharmId] = useLocalStorage(
+    `${prefix}worldFixedCharmId`,
+    ""
+  );
+  const [worldExcludedCharmIds, setWorldExcludedCharmIds] = useLocalStorage<string[]>(
+    `${prefix}worldExcludedCharmIds`,
+    []
   );
 
   // ---- 搜尋條件（單一 state 物件；「推薦配裝匯入」可經 deserialize 整包帶入）----
   const [conditions, setConditions] = useLocalStorage<SearchConditions>(
-    "mhsb.searchConditions",
+    `${prefix}searchConditions`,
     EMPTY_SEARCH_CONDITIONS
   );
   const {
@@ -155,8 +223,10 @@ export function BuilderView({
     useCharms,
   } = conditions;
 
-  // 一次性遷移：改版前的零散 key（必要/排除技能、固定/排除裝備、護石庫）
+  // 一次性遷移：改版前的零散 key（必要/排除技能、固定/排除裝備、護石庫）。
+  // 僅 rise（舊版只有 Rise 資料，mhwib.* 無舊格式可遷移）。
   useEffect(() => {
+    if (isWorld) return;
     if (window.localStorage.getItem("mhsb.searchConditions") != null) return;
     const migrated = migrateLegacyConditions();
     if (migrated) setConditions(migrated);
@@ -172,7 +242,8 @@ export function BuilderView({
     const c = params.get("c");
     if (c) {
       const decoded = decodeShareState(c);
-      if (decoded) {
+      // 只套用與本遊戲相符的分享條件（page.tsx 依 ?game= 已切到對應 BuilderView）。
+      if (decoded && decoded.game === gameId) {
         setConditions((prev) => ({
           ...prev,
           requiredSkills: decoded.conditions.requiredSkills,
@@ -225,7 +296,7 @@ export function BuilderView({
     setConditions((prev) => ({ ...prev, useCharms: v }));
 
   // ---- 保留洞位 ----
-  const [reservedSlots, setReservedSlots] = useLocalStorage<ReservedSlots>("mhsb.reserved", {
+  const [reservedSlots, setReservedSlots] = useLocalStorage<ReservedSlots>(`${prefix}reserved`, {
     4: 0,
     3: 0,
     2: 0,
@@ -233,13 +304,13 @@ export function BuilderView({
   });
 
   // ---- 防禦 / 屬性耐性下限（硬性條件；空＝不限）----
-  const [minDefense, setMinDefense] = useLocalStorage("mhsb.minDefense", 0);
+  const [minDefense, setMinDefense] = useLocalStorage(`${prefix}minDefense`, 0);
   const [minResistances, setMinResistances] = useLocalStorage<
     Partial<Record<ElementResistanceKey, number>>
-  >("mhsb.minResistances", {});
+  >(`${prefix}minResistances`, {});
 
-  // ---- 傀異鍊成自訂防具 ----
-  const [augments, setAugments] = useLocalStorage<ArmorPiece[]>("mhsb.augments", []);
+  // ---- 傀異鍊成自訂防具（Rise 專屬；World features.qurioAugment=false 不顯示）----
+  const [augments, setAugments] = useLocalStorage<ArmorPiece[]>(`${prefix}augments`, []);
 
   // ---- 結果（不 persist）----
   const [results, setResults] = useState<BuildResult[]>([]);
@@ -256,24 +327,25 @@ export function BuilderView({
   const searchStartRef = useRef(0);
   // 最近一次送出的搜尋請求（gated parity 對照用）。
   const lastRequestRef = useRef<BuildSearchRequest | null>(null);
-  const [sortKey, setSortKey] = useLocalStorage<SortKey>("mhsb.sortKey", "efr");
+  const [sortKey, setSortKey] = useLocalStorage<SortKey>(`${prefix}sortKey`, "efr");
   // 顯示上限：手機首訪預設 20、桌機 100；有存過就沿用。（讀 effect 先於寫 effect）
   const [resultLimit, setResultLimit] = useState(100);
   useEffect(() => {
-    const stored = window.localStorage.getItem("mhsb.resultLimit");
+    const stored = window.localStorage.getItem(`${prefix}resultLimit`);
     if (stored != null) {
       setResultLimit(Math.max(1, Math.min(100, Number(stored) || 100)));
     } else if (window.innerWidth < 1024) {
       setResultLimit(20);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
-    window.localStorage.setItem("mhsb.resultLimit", String(resultLimit));
-  }, [resultLimit]);
+    window.localStorage.setItem(`${prefix}resultLimit`, String(resultLimit));
+  }, [prefix, resultLimit]);
 
   // 收藏 / 比較（存為陣列以利序列化）
-  const [favorites, setFavorites] = useLocalStorage<string[]>("mhsb.favorites", []);
-  const [compared, setCompared] = useLocalStorage<string[]>("mhsb.compared", []);
+  const [favorites, setFavorites] = useLocalStorage<string[]>(`${prefix}favorites`, []);
+  const [compared, setCompared] = useLocalStorage<string[]>(`${prefix}compared`, []);
   const [toast, setToast] = useState<string | null>(null);
   // 開啟帶條件的分享連結時顯示的一行提示（護石以使用者自己的清單計算）。
   const [sharedNotice, setSharedNotice] = useState(false);
@@ -418,7 +490,10 @@ export function BuilderView({
   const runParityCheck = async (workerOut: SearchWorkerResponse & { ok: true }) => {
     const req = lastRequestRef.current;
     if (!req) return;
-    const gd = gameData ?? (await loadGameData());
+    if (isWorld) return; // parity 對照僅 Rise（world deps 由 world-registry 提供，非本路徑）
+    // 動態 import：搜尋引擎只在此開發用對照路徑載入，故不進首屏 bundle（Phase 5 lazy 化）。
+    const { searchBuilds, createSearchDeps } = await import("@/lib/build-search");
+    const gd = gameData ?? (await loadGameData(gameId));
     const inline = searchBuilds(req, createSearchDeps(gd, augments), () => 0);
     const a = workerOut.output.results.map((r) => r.id);
     const b = inline.results.map((r) => r.id);
@@ -480,9 +555,14 @@ export function BuilderView({
       minDefense: minDefense > 0 ? minDefense : undefined,
       minResistances:
         Object.keys(minResistances).length > 0 ? minResistances : undefined,
-      charms: useCharms ? charms.map(ownedCharmToCharm) : [],
+      // World：護石走固定候選池（worker 的 world deps），非使用者護石庫；
+      // 固定/排除以 fixedCharmId + excludedItems.charmIds 表達（引擎既有能力）。
+      charms: isWorld ? [] : useCharms ? charms.map(ownedCharmToCharm) : [],
       fixedParts,
-      excludedItems,
+      excludedItems: isWorld
+        ? { ...excludedItems, charmIds: worldExcludedCharmIds }
+        : excludedItems,
+      ...(isWorld && worldFixedCharmId ? { fixedCharmId: worldFixedCharmId } : {}),
       requiredSkills: required,
       excludedSkills,
       reservedSlots,
@@ -494,6 +574,7 @@ export function BuilderView({
       id,
       request,
       augments,
+      gameId,
     } satisfies SearchWorkerRequest);
   };
 
@@ -732,6 +813,8 @@ export function BuilderView({
     elementFilter,
     searchMode,
     augments,
+    worldFixedCharmId,
+    worldExcludedCharmIds,
   ]);
 
   const copySummary = async (summary: string) => {
@@ -746,13 +829,16 @@ export function BuilderView({
   // 產生可分享連結：序列化搜尋條件子集（不含護石）到 ?c=，複製到剪貼簿並更新網址列。
   const shareLink = async () => {
     const c = encodeShareState({
+      game: gameId,
       conditions,
       weaponType,
       weaponSearchMode,
       fixedWeaponId,
       elementFilter,
     });
-    const query = `?tab=builder&c=${c}`;
+    // 帶 ?game=：開啟者由 page.tsx 先切到對應遊戲，再由該 BuilderView 套用 ?c=。
+    const gameQ = isWorld ? "game=world&" : "";
+    const query = `?${gameQ}tab=builder&c=${c}`;
     window.history.replaceState(null, "", query);
     const url = `${window.location.origin}${window.location.pathname}${query}`;
     try {
@@ -786,6 +872,7 @@ export function BuilderView({
   };
 
   return (
+    <GameIdProvider value={gameId}>
     <div className="flex min-h-0 flex-1 flex-col bg-background">
       {/* ---- 配裝器工具列（App 標題與分頁在外層殼）---- */}
       <div className="flex shrink-0 flex-wrap items-center justify-end gap-3 border-b border-border px-4 py-2.5">
@@ -826,7 +913,7 @@ export function BuilderView({
             className="gap-2"
           >
             <Search className="h-4 w-4" />
-            {!gameData ? "資料載入中…" : "搜尋配裝"}
+            {dataLoading ? "資料載入中…" : "搜尋配裝"}
           </Button>
         )}
       </div>
@@ -980,27 +1067,42 @@ export function BuilderView({
                   </TabsContent>
 
                   <TabsContent value="charms" className="space-y-4 pt-2">
-                    <CharmListPanel
-                      charms={charms}
-                      useCharms={useCharms}
-                      onChangeCharms={setCharms}
-                      onChangeUseCharms={setUseCharms}
-                      allSkills={allSkills}
-                    />
-                    <div className="space-y-1.5 border-t border-border pt-3">
-                      <Label className="text-xs text-muted-foreground">
-                        傀異鍊成（自訂防具）
-                      </Label>
-                      <AugmentedArmorEditor
-                        allArmors={allArmors}
-                        allSkills={allSkills}
-                        augments={augments}
-                        onAdd={(p) => setAugments((prev) => [...prev, p])}
-                        onRemove={(id) =>
-                          setAugments((prev) => prev.filter((a) => a.id !== id))
-                        }
+                    {profile?.charmMode === "craftable-list" ? (
+                      // World：固定可生產護石清單（資料選單，可固定/排除）。
+                      <WorldCharmPanel
+                        charms={worldCharmPool}
+                        fixedCharmId={worldFixedCharmId}
+                        excludedCharmIds={worldExcludedCharmIds}
+                        onChangeFixed={setWorldFixedCharmId}
+                        onChangeExcluded={setWorldExcludedCharmIds}
                       />
-                    </div>
+                    ) : (
+                      // Rise：使用者護石庫（自由登錄）。
+                      <CharmListPanel
+                        charms={charms}
+                        useCharms={useCharms}
+                        onChangeCharms={setCharms}
+                        onChangeUseCharms={setUseCharms}
+                        allSkills={allSkills}
+                      />
+                    )}
+                    {/* 傀異鍊成：Rise 專屬（profile.features.qurioAugment）；World 隱藏。 */}
+                    {profile?.features.qurioAugment && (
+                      <div className="space-y-1.5 border-t border-border pt-3">
+                        <Label className="text-xs text-muted-foreground">
+                          傀異鍊成（自訂防具）
+                        </Label>
+                        <AugmentedArmorEditor
+                          allArmors={allArmors}
+                          allSkills={allSkills}
+                          augments={augments}
+                          onAdd={(p) => setAugments((prev) => [...prev, p])}
+                          onRemove={(id) =>
+                            setAugments((prev) => prev.filter((a) => a.id !== id))
+                          }
+                        />
+                      </div>
+                    )}
                   </TabsContent>
 
                   <TabsContent value="locks" className="space-y-4 pt-2">
@@ -1215,6 +1317,10 @@ export function BuilderView({
                     onCopy={copySummary}
                     onToggleFavorite={(id) => toggleInList(setFavorites, id)}
                     onToggleCompare={(id) => toggleInList(setCompared, id)}
+                    weaponTypes={weaponTypes}
+                    decorationsBySkill={gameStatic?.decorationsBySkill}
+                    skillMax={gameStatic?.skillMax}
+                    world={worldResultInfo}
                   />
                 ))}
               </div>
@@ -1231,5 +1337,6 @@ export function BuilderView({
         </div>
       )}
     </div>
+    </GameIdProvider>
   );
 }

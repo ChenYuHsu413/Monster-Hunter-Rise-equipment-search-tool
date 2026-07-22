@@ -5,9 +5,13 @@ import type {
   ArmorPart,
   ArmorPiece,
   BuildResult,
+  Decoration,
   ElementResistanceKey,
   FixedParts,
+  SetBonus,
+  Skill,
   SkillMap,
+  WeaponType,
 } from "@/types/build";
 import {
   ARMOR_PARTS,
@@ -29,7 +33,11 @@ import {
   formatWeaponStats,
   weaponSeriesLabel,
 } from "@/lib/weapon-utils";
-import { weaponTypes, decorationsBySkill, skillMax } from "@/lib/data";
+import {
+  weaponTypes as riseWeaponTypes,
+  decorationsBySkill as riseDecosBySkill,
+  skillMax as riseSkillMax,
+} from "@/lib/data";
 import { mergeMaxSkills } from "@/lib/preset-resolver";
 import { suggestAddableSkills } from "@/lib/suggest-skills";
 import {
@@ -42,8 +50,88 @@ import {
   Gem,
   Sparkles,
   Plus,
+  Layers,
+  Swords,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+/**
+ * World 結果卡專屬顯示資料（PLAN Phase 5）。Rise 為 undefined，不渲染任何 World 區塊。
+ * 以純資料 + 輕量內聯運算呈現，不 import skill-calculator/efr-world（維持首屏 bundle 乾淨）。
+ */
+export type WorldResultInfo = {
+  setBonusById: Record<string, SetBonus>;
+  skillByName: Record<string, Skill>;
+  /** profile.resolveSkillMax：依當前 set bonus 觸發技能動態解析上限（secret 分母）。 */
+  resolveSkillMax: (skill: string, active: SkillMap) => number;
+};
+
+const SHARP_COLOR_ZH = ["紅", "橙", "黃", "綠", "藍", "白", "紫"];
+const SHARP_HEX = [
+  "#d24d4d", "#e08a3c", "#e0c93c", "#4fae54",
+  "#4f7fd2", "#e8e8e8", "#b47ff0",
+];
+
+/** 生效斬味色索引（在 base↔max 間依匠等級插值；與 efr-world.activeSharpIndex 同邏輯）。 */
+function activeSharpIndex(
+  sharpness: { base: number[]; max: number[] } | undefined,
+  handicraftLv: number
+): number {
+  if (!sharpness) return 2;
+  const sum = (a: number[]) => a.reduce((s, v) => s + v, 0);
+  const baseTotal = sum(sharpness.base);
+  const maxTotal = sum(sharpness.max);
+  const reach = baseTotal + (Math.min(handicraftLv, 5) / 5) * (maxTotal - baseTotal);
+  let cum = 0;
+  let last = 2;
+  for (let i = 0; i < 7; i++) {
+    if (sharpness.max[i] > 0) {
+      cum += sharpness.max[i];
+      last = i;
+      if (reach <= cum + 1e-6) return i;
+    }
+  }
+  return last;
+}
+
+/** 統計 5 件防具的 setBonusId 件數，回傳觸發達門檻的 rank（供結果卡顯示）。 */
+function worldSetBonusRows(
+  pieces: ArmorPiece[],
+  setBonusById: Record<string, SetBonus>
+): { name: string; count: number; triggered: { skill: string; pieces: number }[] }[] {
+  const counts: Record<string, number> = {};
+  for (const p of pieces) {
+    if (p.setBonusId) counts[p.setBonusId] = (counts[p.setBonusId] ?? 0) + 1;
+  }
+  const rows: { name: string; count: number; triggered: { skill: string; pieces: number }[] }[] = [];
+  for (const [id, count] of Object.entries(counts)) {
+    const sb = setBonusById[id];
+    if (!sb) continue;
+    const triggered = sb.ranks
+      .filter((r) => count >= r.pieces)
+      .map((r) => ({ skill: r.skillName, pieces: r.pieces }));
+    if (triggered.length) rows.push({ name: sb.nameZh, count, triggered });
+  }
+  return rows;
+}
+
+/** 觸發的 set bonus 技能表（供 resolveSkillMax 動態上限判定）。 */
+function activeSetBonusSkills(
+  pieces: ArmorPiece[],
+  setBonusById: Record<string, SetBonus>
+): SkillMap {
+  const counts: Record<string, number> = {};
+  for (const p of pieces) {
+    if (p.setBonusId) counts[p.setBonusId] = (counts[p.setBonusId] ?? 0) + 1;
+  }
+  const skills: SkillMap = {};
+  for (const [id, cnt] of Object.entries(counts)) {
+    const sb = setBonusById[id];
+    if (!sb) continue;
+    for (const r of sb.ranks) if (cnt >= r.pieces) skills[r.skillName] = (skills[r.skillName] ?? 0) + r.skillLevel;
+  }
+  return skills;
+}
 
 type Props = {
   result: BuildResult;
@@ -63,6 +151,12 @@ type Props = {
   onCopy: (summary: string) => void;
   onToggleFavorite: (id: string) => void;
   onToggleCompare: (id: string) => void;
+  /** per-game 小資料（預設 Rise；World 由 BuilderView 傳入對應資料）。 */
+  weaponTypes?: WeaponType[];
+  decorationsBySkill?: Record<string, Decoration[]>;
+  skillMax?: Record<string, number>;
+  /** World 專屬顯示（set bonus / secret 分母 / 斬味色）；Rise 為 undefined。 */
+  world?: WorldResultInfo;
 };
 
 const RES_LABELS: Record<ElementResistanceKey, string> = {
@@ -182,6 +276,10 @@ export function BuildResultCard({
   onCopy,
   onToggleFavorite,
   onToggleCompare,
+  weaponTypes = riseWeaponTypes,
+  decorationsBySkill = riseDecosBySkill,
+  skillMax = riseSkillMax,
+  world,
 }: Props) {
   const missing = Object.entries(result.missingRequiredSkills);
   const weapon = result.weapon;
@@ -189,6 +287,27 @@ export function BuildResultCard({
   const weaponTypeLabel = weapon
     ? weaponTypes.find((t) => t.id === weapon.weaponType)?.nameZh
     : undefined;
+
+  // ---- World 顯示：set bonus 觸發、secret 解放後分母、生效斬味色 ----
+  const armorPieces = ARMOR_PARTS.map((p) => result.armor[p]);
+  const setBonusRows = world ? worldSetBonusRows(armorPieces, world.setBonusById) : [];
+  const secretRows = useMemo(() => {
+    if (!world) return [];
+    const active = activeSetBonusSkills(armorPieces, world.setBonusById);
+    const out: { name: string; level: number; cap: number; unlocked: boolean }[] = [];
+    for (const [name, level] of Object.entries(result.finalSkills)) {
+      const s = world.skillByName[name];
+      if (s?.secretMaxLevel == null) continue; // 只列有 secret 的技能
+      const cap = world.resolveSkillMax(name, active);
+      out.push({ name, level, cap, unlocked: cap > s.maxLevel });
+    }
+    return out.sort((a, b) => b.level - a.level);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [world, result.finalSkills, result.armor]);
+  const sharpIdx =
+    world && weapon?.sharpness
+      ? activeSharpIndex(weapon.sharpness, result.finalSkills["匠"] ?? 0)
+      : -1;
   const autoEntries = Object.entries(result.autoSkills ?? {});
   // 技能摘要的「使用者指定」集合 = 必要技能 + 自動技能（兩者都不算額外賺到）
   const effectiveRequired = useMemo(
@@ -397,7 +516,7 @@ export function BuildResultCard({
                   {result.charm.name}
                 </span>
                 <Badge variant="accent" className="shrink-0 px-1 py-0 text-[11px]">
-                  我的護石
+                  {world ? "可生產" : "我的護石"}
                 </Badge>
               </>
             ) : (
@@ -410,6 +529,79 @@ export function BuildResultCard({
             </span>
           </div>
         </div>
+
+        {/* World：set bonus 觸發、secret 解放後分母、生效斬味色 */}
+        {world && (setBonusRows.length > 0 || secretRows.length > 0 || sharpIdx >= 0) && (
+          <div className="space-y-1.5 rounded-md border border-border/60 bg-muted/20 px-2.5 py-2">
+            {sharpIdx >= 0 && (
+              <div className="flex items-center gap-1.5 text-xs">
+                <Swords className="h-3.5 w-3.5 text-muted-foreground" />
+                <span className="text-muted-foreground">生效斬味</span>
+                <span
+                  className="inline-flex items-center gap-1 rounded px-1.5 py-0.5 font-medium"
+                  style={{
+                    backgroundColor: SHARP_HEX[sharpIdx] + "33",
+                    color: SHARP_HEX[sharpIdx],
+                  }}
+                >
+                  <span
+                    className="inline-block h-2 w-2 rounded-sm"
+                    style={{ backgroundColor: SHARP_HEX[sharpIdx] }}
+                  />
+                  {SHARP_COLOR_ZH[sharpIdx]}斬
+                </span>
+                <span className="text-[11px] text-muted-foreground/70">
+                  （含匠 {result.finalSkills["匠"] ?? 0}）
+                </span>
+              </div>
+            )}
+            {setBonusRows.length > 0 && (
+              <div className="flex items-start gap-1.5 text-xs">
+                <Layers className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+                <div className="min-w-0 flex-1 space-y-0.5">
+                  {setBonusRows.map((r) => (
+                    <div key={r.name} className="flex flex-wrap items-center gap-x-1.5">
+                      <span className="font-medium text-foreground">
+                        {r.name} ×{r.count}
+                      </span>
+                      <span className="text-muted-foreground">→</span>
+                      {r.triggered.map((t) => (
+                        <Badge
+                          key={t.skill + t.pieces}
+                          variant="secondary"
+                          className="px-1.5 py-0 text-[11px]"
+                        >
+                          {t.skill}（{t.pieces} 件）
+                        </Badge>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {secretRows.length > 0 && (
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px]">
+                <span className="text-muted-foreground">解放上限</span>
+                {secretRows.map((s) => (
+                  <span
+                    key={s.name}
+                    className={cn(
+                      "font-mono",
+                      s.unlocked ? "text-emerald-400" : "text-muted-foreground"
+                    )}
+                    title={
+                      s.unlocked
+                        ? `${s.name} 已由 set bonus 解放上限至 ${s.cap}`
+                        : `${s.name} 原生上限 ${s.cap}`
+                    }
+                  >
+                    {s.name} {s.level}/{s.cap}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         <Separator />
 
