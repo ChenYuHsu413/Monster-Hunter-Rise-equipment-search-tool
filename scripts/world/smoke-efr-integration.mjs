@@ -28,20 +28,29 @@ const fmt = (r) =>
 const SKILLS_NO_HANDI = { 挑戰者: 7, 超會心: 3, 弱點特效: 3 };
 const SKILLS_WITH_HANDI = { ...SKILLS_NO_HANDI, 匠: 5 };
 
-// ═══ (1) Fatalis 含匠 vs 不含匠 ═══
-console.log("\n━━━ (1) Black Fatalis Blade：含匠5 vs 不含匠（挑戰者7/超會心3/弱點特效3）━━━");
+// ═══ (1) Fatalis 匠0→5 期望斬味模型驗收：EFR 必須單調上升（本尾巴的存在理由）═══
+// 舊 color-only 模型下 Fatalis base 已有薄紫(purple10)，匠0/匠5 tip 同為紫 → 物理 EFR 匠-不變
+// （這是被本尾巴推翻的限制）。改期望斬味倍率後：匠愈高 → 頂端紫段愈厚 → 60 單位視窗內紫佔比
+// 愈大 → 期望倍率單調上升。此處輸出 0~5 各級對照表並斷言嚴格遞增。
+console.log("\n━━━ (1) Black Fatalis Blade：匠 0→5 期望斬味 EFR 對照（挑戰者7/超會心3/弱點特效3）━━━");
 {
   const w = W("Black Fatalis Blade");
-  console.log(`  武器 atk=${w.attack} aff=${w.affinity}% base=Σ${w.sharpness.base.reduce((a, b) => a + b, 0)} max=Σ${w.sharpness.max.reduce((a, b) => a + b, 0)}`);
-  const noH = computeEfr({ weapon: w, skills: SKILLS_NO_HANDI });
-  const wiH = computeEfr({ weapon: w, skills: SKILLS_WITH_HANDI });
-  console.log(`  不含匠：${fmt(noH)}`);
-  console.log(`  含匠5：${fmt(wiH)}`);
-  // Task A 實測：Fatalis base 已有紫斬薄層(purple10) → 匠0/匠5 生效色同為紫，色不變。
-  assert(noH.sharpColor === "紫" && wiH.sharpColor === "紫",
-    "Fatalis 匠0/匠5 生效色皆為紫（base 已達紫；符合 world-sharpness-audit 第四節）");
-  assert(Math.abs(noH.raw - wiH.raw) < 1e-9,
-    "→ 故 Fatalis 物理 EFR 匠-不變（color-only 模型不計紫斬長度；已於 efr-world-notes 註記為限制）");
+  console.log(`  武器 atk=${w.attack} aff=${w.affinity}% base=[${w.sharpness.base}]Σ${w.sharpness.base.reduce((a, b) => a + b, 0)} max=[${w.sharpness.max}]Σ${w.sharpness.max.reduce((a, b) => a + b, 0)}`);
+  console.log("  匠 | 期望raw乘數 | EFR raw | tip 斬味色");
+  const rows = [];
+  for (let h = 0; h <= 5; h++) {
+    const r = computeEfr({ weapon: w, skills: { ...SKILLS_NO_HANDI, 匠: h } });
+    rows.push(r);
+    console.log(`   ${h} |   ${r.sharpMult.toFixed(4)}   | ${r.raw.toFixed(1)} | ${r.sharpColor}`);
+  }
+  let mono = true;
+  for (let h = 1; h <= 5; h++) if (!(rows[h].raw > rows[h - 1].raw)) mono = false;
+  assert(mono, "Fatalis 匠 0→5 EFR raw 嚴格單調上升（期望斬味模型：薄紫增厚提高頂端 60 單位加權倍率）");
+  const gainPct = ((rows[5].raw / rows[0].raw - 1) * 100);
+  assert(gainPct > 0 && gainPct < 15,
+    `→ 匠0→5 升幅合理（+${gainPct.toFixed(2)}%；反映紫段 10→60 的視窗加權變化，非跳色暴衝）`);
+  assert(rows[0].sharpColor === "紫" && rows[5].sharpColor === "紫",
+    "→ tip 色 0/5 皆紫（base 已達紫；EFR 上升來自視窗加權而非 tip 換色，符合 world-sharpness-audit 第四節形狀）");
 }
 
 // ═══ (2) 匠改變生效色的機制證明（Buster：base 黃封頂 → max 綠）═══

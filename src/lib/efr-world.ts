@@ -32,6 +32,15 @@ const RAW_SHARP_MULT = [0.5, 0.75, 1.0, 1.05, 1.2, 1.32, 1.39];
 const ELEM_SHARP_MULT = [0.25, 0.5, 0.75, 1.0, 1.0625, 1.15, 1.25];
 const SHARP_COLOR_ZH = ["紅", "橙", "黃", "綠", "藍", "白", "紫"];
 
+/**
+ * 期望斬味消耗單位：一輪輸出視窗（一段不中斷連段/一次磨刀間隔內）約消耗的斬味單位數，
+ * 用作「從色帶頂端往下取多長來加權平均倍率」的視窗寬度。**可調校準常數，非遊戲硬常數**。
+ * 依據見 `docs/efr-world-notes.md` 第五節：CSV 斬味尺度下多數近戰每命中約耗 1 單位，
+ * 一段主力連段約 30–60 命中；取 60 使「頂端主色主導、但薄層尖端（如 Fatalis base 紫10）
+ * 仍與其下一色顯著混合」，正是讓匠在物理 EFR 上重新可見的關鍵寬度。
+ */
+const EXPECTED_SHARPNESS_USE = 60;
+
 // ══ 無條件傷害技能（依等級索引，index 0 = 未持有）══
 // Attack Boost（skill_levels：L1-3 flat +3/6/9；L4-7 flat +12/15/18/21 且 會心 +5%）。
 const ATTACK_FLAT = [0, 3, 6, 9, 12, 15, 18, 21];
@@ -122,28 +131,65 @@ export const EFR_RELEVANT_SKILLS: ReadonlySet<string> = new Set([
   "真‧會心擊【屬性】", "龍脈覺醒", "真‧龍脈覺醒",
 ]);
 
-/** 依匠等級推算目前生效的斬味段索引（在 base↔max 間依總長插值）。與 efr.ts 同。 */
-function activeSharpIndex(
+/**
+ * 期望斬味倍率（尾巴：紫斬長度模型）。取代舊「最高填色 color-only」做法。
+ *
+ * 舊模型只取匠插值後的最高色乘數，故「base 已達最高色」的武器（Fatalis：base 已有薄紫 10）
+ * 匠0/匠5 生效色同為紫、物理 EFR 不隨匠變（見 world-sharpness-audit 第四節的已知限制）。
+ * 本模型改為**期望斬味倍率**：在匠決定的色帶上，自頂端（最高色）往下取
+ * `EXPECTED_SHARPNESS_USE` 單位，依落入各色段的長度**加權平均** raw/element 倍率。
+ * 匠愈高 → 頂端高色段愈長 → 視窗內高色佔比愈大 → 期望倍率單調不減（Fatalis 薄紫增厚即反映）。
+ *
+ * 匠等級仍如舊模型在 base↔max 間**依總長插值**求 reach、再以 max 色帶形狀截斷定出各色段長度
+ * （與 activeSharpIndex 同一插值基礎，僅把「取頂色」換成「取頂端 60 單位加權」）。
+ *
+ * 回傳 { raw, elem, tipIdx }：raw/elem 為期望乘數；tipIdx 為最高填色段（供顯示 sharpColor）。
+ * 無斬味資料（弩/弓）→ 中性黃(idx2)：raw 1.0、elem 0.75。
+ *
+ * **未建模**：剃刀銳利/砥石類（磨刀速度/斬味回復）技能不影響本視窗計算——它們改變的是磨刀
+ * 頻率與紫斬耗損速率，非某一輪視窗內的色段構成，屬另一層近似（見 notes）。利刃 World 無此技能。
+ */
+function expectedSharp(
   sharpness: { base: number[]; max: number[] } | undefined,
   handicraftLv: number
-): number {
-  if (!sharpness) return 2; // 無斬味資料（弩/弓）→ 視為黃(1.0) 中性
+): { raw: number; elem: number; tipIdx: number } {
+  const NEUTRAL = { raw: RAW_SHARP_MULT[2], elem: ELEM_SHARP_MULT[2], tipIdx: 2 };
+  if (!sharpness) return NEUTRAL; // 無斬味資料（弩/弓）→ 中性黃(1.0)
   const { base, max } = sharpness;
   const sum = (a: number[]) => a.reduce((s, v) => s + v, 0);
   const baseTotal = sum(base);
   const maxTotal = sum(max);
   const reach =
     baseTotal + (Math.min(handicraftLv, 5) / 5) * (maxTotal - baseTotal);
-  let cum = 0;
-  let last = 2;
+
+  // 依 max 色帶形狀截斷至 reach，得目前生效各色段長度 seg[i]（低色先填、高色最後）。
+  const seg = new Array(7).fill(0);
+  let cum = 0; // reach 之前已累積的色段長（不含當前色段）
+  let tipIdx = 2;
   for (let i = 0; i < 7; i++) {
-    if (max[i] > 0) {
-      cum += max[i];
-      last = i;
-      if (reach <= cum + 1e-6) return i;
-    }
+    if (max[i] <= 0) continue;
+    const room = Math.max(0, Math.min(max[i], reach - cum));
+    seg[i] = room;
+    if (room > 0) tipIdx = i;
+    cum += max[i];
+    if (cum >= reach - 1e-6) break;
   }
-  return last;
+
+  // 自頂端（高色）往下取 EXPECTED_SHARPNESS_USE 單位，依落入各色段長度加權平均。
+  let remaining = EXPECTED_SHARPNESS_USE;
+  let rawSum = 0;
+  let elemSum = 0;
+  let used = 0;
+  for (let i = 6; i >= 0 && remaining > 1e-9; i--) {
+    if (seg[i] <= 0) continue;
+    const take = Math.min(seg[i], remaining);
+    rawSum += take * RAW_SHARP_MULT[i];
+    elemSum += take * ELEM_SHARP_MULT[i];
+    used += take;
+    remaining -= take;
+  }
+  if (used <= 0) return NEUTRAL; // 理論上不會（有斬味即有段），保底中性
+  return { raw: rawSum / used, elem: elemSum / used, tipIdx };
 }
 
 /** 期望會心倍率：正會心以會心傷害計，負會心以 0.75×（−25%）計。與 efr.ts 同。 */
@@ -189,9 +235,9 @@ export function computeEfr(input: EfrInput): EfrResult {
   const critDmg = at(CRIT_BOOST_DMG, lv("超會心"));
   const critMult = expectedCritMult(aff, critDmg);
 
-  // ── 斬味 ──
-  const sharpIdx = activeSharpIndex(weapon.sharpness, lv("匠"));
-  const sharpMult = RAW_SHARP_MULT[sharpIdx];
+  // ── 斬味（期望倍率：頂端 EXPECTED_SHARPNESS_USE 單位加權平均）──
+  const sharp = expectedSharp(weapon.sharpness, lv("匠"));
+  const sharpMult = sharp.raw;
 
   const raw = effAttack * sharpMult * critMult;
 
@@ -212,7 +258,7 @@ export function computeEfr(input: EfrInput): EfrResult {
     if (lv("真‧龍脈覺醒") > 0) elVal += TRUE_DRAGONVEIN_ELEM;
     else if (lv("龍脈覺醒") > 0) elVal += DRAGONVEIN_ELEM;
     elVal += at(COALESCENCE_ELEM, lv("轉禍為福")) * uptime;
-    const elSharp = ELEM_SHARP_MULT[sharpIdx];
+    const elSharp = sharp.elem;
     // 會心擊【屬性】：會心時屬性傷害提升（依武器種）。真‧會心擊【屬性】為強化版，優先。
     const critElem = critElemFactor(
       weapon.weaponType,
@@ -234,7 +280,7 @@ export function computeEfr(input: EfrInput): EfrResult {
     effAttack,
     effAffinity: aff,
     critMult,
-    sharpColor: SHARP_COLOR_ZH[sharpIdx],
+    sharpColor: SHARP_COLOR_ZH[sharp.tipIdx],
     sharpMult,
   };
 }
