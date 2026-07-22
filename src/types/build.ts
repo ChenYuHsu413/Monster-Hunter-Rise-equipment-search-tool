@@ -82,6 +82,12 @@ export type ArmorPiece = {
   rankLabel?: string;
   /** 推測的主要來源怪物（由生產素材推得，同套 5 部位一致，非官方標註）。 */
   sourceMonster?: string;
+  /**
+   * 所屬套裝加成 id（World 真髓/加護 set bonus 歸屬；指向 SetBonus.id）。
+   * 新增選填欄位；Rise 資料無此欄，skill-calculator 的 set bonus 步驟僅在
+   * profile.features.setBonus 為真時執行，故 Rise 行為不變。
+   */
+  setBonusId?: string;
 };
 
 /** 屬性 / 狀態異常類型。none 表示無屬性。 */
@@ -191,8 +197,15 @@ export type Decoration = {
   id: string;
   nameZh: string;
   slotLevel: SlotLevel;
+  /** 主技能名稱（保留：Rise 相容 / 單技能珠主技能；World 複合珠填第一技能，僅相容用途）。 */
   skillName: string;
+  /** 主技能等級（保留欄位，語意同上）。 */
   skillLevel: number;
+  /**
+   * 完整技能表（World Lv4 複合珠：單技能 Lv2，或雙技能各 Lv1）。
+   * 新增選填欄位；未提供時消費端由 { [skillName]: skillLevel } 推導，故 Rise 資料行為不變。
+   */
+  skills?: SkillMap;
   craftable: boolean;
 };
 
@@ -212,6 +225,37 @@ export type Skill = {
   description?: string;
   /** 是否為高風險/高價值特殊技能（狂化、業鎧、狂龍症等），影響評分。 */
   special?: boolean;
+  /**
+   * World 技能解放後的上限（例：挑戰者 5→7）。新增選填欄位。
+   * 僅在 profile.features.secretSkills 為真、且對應解放技能已由 set bonus 觸發時生效；
+   * Rise 資料無此欄，maxLevel 為唯一上限，行為不變。
+   */
+  secretMaxLevel?: number;
+  /**
+   * 解放此技能上限的「○之力解放」技能名（例：攻擊 Attack Boost 的解放不存在；
+   * 挑戰者由「Agitator Secret」解放）。新增選填欄位，語意同上。
+   */
+  secretUnlockedBy?: string;
+};
+
+/**
+ * 套裝加成（World 真髓/加護 set bonus）：靠穿戴同 setBonusId 防具達件數門檻觸發技能。
+ * Rise 無此機制（套裝技能為逐件技能，見 data.ts SET_SKILLS），故 Rise 資料不含 SetBonus。
+ */
+export type SetBonus = {
+  id: string;
+  /** 中文名（例：銀火龍的真髓）。 */
+  nameZh: string;
+  nameEn?: string;
+  /**
+   * 各件數門檻觸發的技能。pieces 為門檻（2/3/4/5），達到後 skillName 併入 skillLevel 級。
+   * 主源（MHWorldData）每個 set bonus 最多 2 組門檻，映射為此陣列。
+   */
+  ranks: Array<{
+    pieces: number;
+    skillName: string;
+    skillLevel: number;
+  }>;
 };
 
 /** 武器類型定義。`supported: false` 的武器為佔位，將陸續開放。 */
