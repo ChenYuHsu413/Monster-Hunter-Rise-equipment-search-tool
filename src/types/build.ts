@@ -243,6 +243,11 @@ export type Skill = {
    * 挑戰者由「Agitator Secret」解放）。新增選填欄位，語意同上。
    */
   secretUnlockedBy?: string;
+  /**
+   * 全域 secret 解放器（World Fatalis「Inheritance」）：觸發後解除**所有** secret
+   * 技能的上限，不限特定技能。新增選填欄位；Rise 無此機制。
+   */
+  unlocksAllSecrets?: boolean;
 };
 
 /**

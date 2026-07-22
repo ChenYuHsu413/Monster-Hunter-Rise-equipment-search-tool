@@ -871,7 +871,8 @@
   {
     "name": "Inheritance",
     "nameEn": "Inheritance",
-    "maxLevel": 1
+    "maxLevel": 1,
+    "unlocksAllSecrets": true
   },
   {
     "name": "Transcendance",

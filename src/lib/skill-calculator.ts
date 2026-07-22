@@ -1,4 +1,4 @@
-import type { ArmorPiece, Charm, SkillMap, Weapon } from "@/types/build";
+import type { ArmorPiece, Charm, SetBonus, SkillMap, Weapon } from "@/types/build";
 
 /** 合併多個 SkillMap（累加等級）。不 mutate 輸入。 */
 export function mergeSkills(...maps: (SkillMap | undefined)[]): SkillMap {
@@ -26,6 +26,56 @@ export function calculateSkills(
     charm?.skills,
     weapon?.skills
   );
+}
+
+/**
+ * World：統計 5 件防具的 setBonusId 件數，回傳達門檻觸發的 set bonus 技能表。
+ * 觸發的技能同時包含（a）傷害技能（如 真‧會心擊【屬性】）與（b）secret 解放器
+ * （如 挑戰者‧極意、Inheritance）——後者不加傷害等級，但供 resolveSkillMax 判定動態上限。
+ * Rise 防具無 setBonusId，呼叫端不會進此路徑。
+ */
+export function computeSetBonusSkills(
+  pieces: ArmorPiece[],
+  setBonusById: Record<string, SetBonus>
+): SkillMap {
+  const counts: Record<string, number> = {};
+  for (const p of pieces) {
+    if (p.setBonusId) counts[p.setBonusId] = (counts[p.setBonusId] ?? 0) + 1;
+  }
+  const skills: SkillMap = {};
+  for (const [id, cnt] of Object.entries(counts)) {
+    const sb = setBonusById[id];
+    if (!sb) continue;
+    for (const rank of sb.ranks) {
+      if (cnt >= rank.pieces) {
+        skills[rank.skillName] = (skills[rank.skillName] ?? 0) + rank.skillLevel;
+      }
+    }
+  }
+  return skills;
+}
+
+/**
+ * World：依當前觸發的 set bonus 技能，動態解析技能上限。
+ * 只覆寫「有 secret 的技能」（secretSkillNames，實測 12 個）；其餘沿用靜態上限，
+ * 未觸發任何 secret 時回傳原 baseSkillMax（同參考，零額外配置）。
+ * resolveSkillMax 由 profile 提供（封裝 world skillByName + 兩條解放路徑判定）。
+ */
+export function resolveDynamicSkillMax(
+  baseSkillMax: Record<string, number>,
+  setBonusSkills: SkillMap,
+  resolveSkillMax: (skill: string, active: SkillMap) => number,
+  secretSkillNames: readonly string[]
+): Record<string, number> {
+  let out: Record<string, number> | null = null;
+  for (const name of secretSkillNames) {
+    const dyn = resolveSkillMax(name, setBonusSkills);
+    if (dyn !== baseSkillMax[name]) {
+      out ??= { ...baseSkillMax };
+      out[name] = dyn;
+    }
+  }
+  return out ?? baseSkillMax;
 }
 
 /** 依技能上限截斷等級（超過上限的等級視為浪費，不計入）。 */

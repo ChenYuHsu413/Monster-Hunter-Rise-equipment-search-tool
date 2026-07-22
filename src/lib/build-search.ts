@@ -4,6 +4,7 @@ import type {
   BuildSearchRequest,
   Charm,
   Decoration,
+  SetBonus,
   SkillMap,
   Weapon,
 } from "@/types/build";
@@ -13,6 +14,7 @@ import {
   skillMax as defaultSkillMax,
 } from "./data";
 import type { GameData } from "./game-data";
+import type { GameProfile } from "./game-profile";
 import { isCraftable, type UnlockEntry } from "./unlocks";
 import {
   applyFixedParts,
@@ -24,12 +26,29 @@ import { collectSlots, formatSlots } from "./slot-utils";
 import {
   calculateSkills,
   clampSkillsToMax,
+  computeSetBonusSkills,
   mergeSkills,
+  resolveDynamicSkillMax,
 } from "./skill-calculator";
 import { mergeMaxSkills, resolveAutoSkills } from "./preset-resolver";
 import { formatWeaponStats } from "./weapon-utils";
 import { solveDecorations } from "./decoration-solver";
 import { computeEfr, EFR_RELEVANT_SKILLS } from "./efr";
+
+/**
+ * World 專屬搜尋擴充（PLAN Phase 3）。存在時啟用 set bonus / 動態上限 / 護石候選池 /
+ * 停用護石支配剪枝等 World 行為；`deps.world` 為 undefined 時（Rise）所有 World 分支
+ * 短路，searchBuilds 走與改造前逐位元一致的路徑（由回歸基準保證）。
+ */
+export type WorldSearchExt = {
+  profile: GameProfile;
+  /** setBonusId → SetBonus，供 computeSetBonusSkills 統計件數觸發。 */
+  setBonusById: Record<string, SetBonus>;
+  /** 有 secret 的技能名（動態上限只需覆寫這些，實測 12 個）。 */
+  secretSkillNames: readonly string[];
+  /** 護石候選（charmMode = craftable-list，取代 Rise 的使用者護石庫）。 */
+  charmPool: Charm[];
+};
 
 /** 可注入的資料相依（測試用）；預設使用本地 JSON。 */
 export type SearchDeps = {
@@ -41,6 +60,8 @@ export type SearchDeps = {
   weapons: Weapon[];
   /** 解放條件資料（可選）。與 request.progress 同時給定時啟用進度篩選。 */
   unlocks?: Record<string, UnlockEntry>;
+  /** World 專屬擴充（可選）。undefined＝Rise，所有 World 分支短路。 */
+  world?: WorldSearchExt;
 };
 
 /**
@@ -331,6 +352,24 @@ export function searchBuilds(
               // 防具技能與護石無關，每個防具組合只算一次
               const armorSkills = calculateSkills(pieces, undefined);
 
+              // World：set bonus 技能 + 動態上限（僅依防具，每防具組合算一次）。
+              // Rise（deps.world 為 undefined）短路：setBonusSkills 保持 undefined、
+              // effSkillMax 保持 deps.skillMax 同參考，後續路徑與改造前逐位元一致。
+              let setBonusSkills: SkillMap | undefined;
+              let effSkillMax = deps.skillMax;
+              if (deps.world?.profile.features.setBonus) {
+                setBonusSkills = computeSetBonusSkills(
+                  pieces,
+                  deps.world.setBonusById
+                );
+                effSkillMax = resolveDynamicSkillMax(
+                  deps.skillMax,
+                  setBonusSkills,
+                  deps.world.profile.resolveSkillMax,
+                  deps.world.secretSkillNames
+                );
+              }
+
               for (const charm of charmCandidates) {
                 combos++;
                 if (combos > MAX_COMBOS) {
@@ -338,10 +377,14 @@ export function searchBuilds(
                   break weaponLoop;
                 }
 
-                const currentSkills = mergeSkills(
+                const baseCurrent = mergeSkills(
                   armorSkills,
                   mergeSkills(charm.skills, weaponSkills)
                 );
+                // World：併入 set bonus 觸發的技能（解放器 + 傷害技能）。
+                const currentSkills = setBonusSkills
+                  ? mergeSkills(baseCurrent, setBonusSkills)
+                  : baseCurrent;
                 const slots = collectSlots(pieces, charm, weaponSlots);
 
                 const solve = solveDecorations({
@@ -350,14 +393,14 @@ export function searchBuilds(
                   requiredSkills: effRequired,
                   reservedSlots,
                   decorationsBySkill: deps.decorationsBySkill,
-                  skillMax: deps.skillMax,
+                  skillMax: effSkillMax,
                 });
 
                 if (!solve.success) continue; // 必要技能或保留洞位不符 → 淘汰
 
                 const finalSkills = clampSkillsToMax(
                   mergeSkills(currentSkills, decoSkillMap(solve.assignments)),
-                  deps.skillMax
+                  effSkillMax
                 );
 
                 // 排除技能最終防線（候選池已預濾，這裡擋固定部位等漏網）

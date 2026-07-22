@@ -75,6 +75,15 @@ for (const s of skillBase) {
   if (!isBlank(s.unlocks)) unlockerEnOf[norm(s.unlocks)] = s.name_en;
 }
 
+// 全域 secret 解放器（Fatalis「Inheritance」）：由技能逐級描述機械偵測，
+// 不硬編技能名。描述含「removes the skill level cap for the skill secrets」者，
+// 觸發後解除**所有** secret 技能的上限（Phase 3 resolveSkillMax 路徑 b）。
+const globalUnlockEn = new Set(
+  skillLevels
+    .filter((r) => /removes the skill level cap for the skill secret/i.test(r.description_en || ""))
+    .map((r) => norm(r.base_name_en))
+);
+
 // =====================================================================
 // 1) skills.json
 // =====================================================================
@@ -92,6 +101,7 @@ const skillsOut = skillBase.map((s) => {
     const unlockerEn = unlockerEnOf[norm(en)];
     if (unlockerEn) out.secretUnlockedBy = zhSkill(unlockerEn);
   }
+  if (globalUnlockEn.has(norm(en))) out.unlocksAllSecrets = true;
   return out;
 });
 
