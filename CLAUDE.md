@@ -109,6 +109,22 @@
   弱點傷口計滿、uptime 0.75、會心擊【屬性】倍率依武器種、zh 100 筆 EN-fallback。
 - **PLAN↔實測衝突點名**（實測為準）：真‧龍脈覺醒為 **5 件**門檻（非 PLAN 說的 3；龍脈覺醒才是 3 件）；
   自由搜尋 挑戰者7 可經 Raging Brachydios 挑戰者‧極意(3件) 解放，非只有 Fatalis Inheritance。
+- **複合珠 solver 有界修復（尾巴 D，`decoration-solver.ts`）**：`solveDecorations` = 貪婪主體
+  （`greedySolve`，逐位元未改）+ **貪婪失敗後**的 gated 有界局部搜尋。**gate＝候選珠含覆蓋 ≥2
+  必要技能之複合珠**（Rise 珠無 `.skills`、恆空 → 短路回傳貪婪結果，Rise 逐位元不變由回歸背書；
+  **不用 if-rise 硬判**）。採用準則＝(必要技能滿足數, 保留洞位可行, 剩餘洞位價值) 字典序**嚴格更優
+  才換、平手不換**（決定性、絕不退化）。深度 ≤2（偏好單珠 alt + 複合珠 seed depth-1，depth-2 僅在
+  depth-1 未救活時）。效能增幅 ≤30%（實測 +16%）。
+  - **spec↔實測衝突點名（實測為準）**：PLAN 假設貪婪對「兩必要技能可由一顆複合珠同時推進」次優、
+    要「單珠→複合珠」替換。**探測腳本證實貪婪的 bonusCoverage 對此已最優**（R 場景直接成功）。
+    真正殘留次優是**反方向**的 (E) 貪婪過度搶大洞給複合珠、餓死只有大洞可補的技能，與 (F) 多複合珠
+    並存時短視選錯首顆。故修復涵蓋**雙向**（偏好單珠 + seed 複合珠），非 PLAN 的單向。真實資料掃描
+    15000 組僅 4 組觸發（皆 (E)），修復主要價值在補救 (E)。
+  - **`__setDecorationRepairEnabled` 是 bench-only seam**，生產恆 true（應用碼絕不呼叫）；
+    僅供 `bench-repair-perf.mjs` 量測貪婪-only 基準。
+  - 驗收腳本：`test-decoration-repair.mjs`（3 構造案例 E/depth-1/F + 決定性）、
+    `smoke-repair-realdata.mjs`（真實前後對照 + Phase3③ + 決定性）、`bench-repair-perf.mjs`、
+    `smoke-cross-session.mjs`（A 匯入/B 匠單調/C 追加洞可進複合珠）。
 
 ## 5. 工作協議（換手／長 session 失真防護）
 
