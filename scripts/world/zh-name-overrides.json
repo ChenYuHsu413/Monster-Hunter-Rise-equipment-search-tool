@@ -58,6 +58,611 @@
       "zh": "【精英‧龍β】服裝",
       "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BrvgB/jing-ying-long-b-fu-zhuang",
       "via": "Kiranico EN \"Fatalis β+\"（MHWorldData EN \"Dragon β+\" 別名橋接）"
+    },
+    "Passionate α+": {
+      "zh": "精英·熱情α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/73EbB/passion-a",
+      "via": "armorseries detail <title>（活動 α+ 系列不在索引頁）"
+    },
+    "Demonlord α+": {
+      "zh": "精英·魔界之主α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BPZ07/demonlord-a",
+      "via": "armorseries detail <title>（活動 α+ 系列不在索引頁）"
+    },
+    "Artemis α+": {
+      "zh": "精英·阿提蜜絲α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bZq5/artemis-a",
+      "via": "armorseries detail <title>（活動 α+ 系列不在索引頁）"
+    }
+  },
+  "weapons": {
+    "Fatalis Blade": {
+      "zh": "黑龍刃",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/jqHy9fvw/hei-long-ren"
+    },
+    "Black Fatalis Blade": {
+      "zh": "黑龍玄刃",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/g3HqlfMK/hei-long-xuan-ren"
+    },
+    "Dark Claw": {
+      "zh": "漆黑爪",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/rqu9ZHra/qi-hei-zhua"
+    },
+    "Dark Claw \"Demise\"": {
+      "zh": "漆黑爪【終焉】",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/N5u5ECxA/qi-hei-zhua-zhong-yan"
+    },
+    "Fatalis Sickle": {
+      "zh": "黑龍刀",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/RLuQpSYg/hei-long-dao"
+    },
+    "Fatalis Zaggespanon": {
+      "zh": "黑龍殲滅刀",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/zDuXMHD3/hei-long-jian-mie-dao"
+    },
+    "Fatalis Sword": {
+      "zh": "黑龍劍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/jkiy9fvQ/hei-long-jian"
+    },
+    "True Fatalis Sword": {
+      "zh": "真‧黑龍劍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/gPiqlfMj/zhen-hei-long-jian"
+    },
+    "Fatalis Dual Blades": {
+      "zh": "黑龍雙刃",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/RRFQpSY3/hei-long-shuang-ren"
+    },
+    "Fatalis Dual Skies": {
+      "zh": "黑龍雙刃【二天】",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/z2FXMHDa/hei-long-shuang-ren-er-tian"
+    },
+    "Fatalis Buster": {
+      "zh": "黑龍滅鎚",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/VRCp8fqR/hei-long-mie-chui"
+    },
+    "Fatalis Demolisher": {
+      "zh": "黑龍殲滅鎚",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/EzCkwfA7/hei-long-jian-mie-chui"
+    },
+    "Fatalis Menace": {
+      "zh": "黑龍威脅",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/jYfy9fvj/hei-long-wei-xie"
+    },
+    "Fatalis Menace Wailer": {
+      "zh": "黑龍絕望琴",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/gKfqlfM7/hei-long-jue-wang-qin"
+    },
+    "Fatalis Lance": {
+      "zh": "黑龍槍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/y2cWoi5M/hei-long-qiang"
+    },
+    "True Fatalis Lance": {
+      "zh": "真‧黑龍槍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/ZRckgf2w/zhen-hei-long-qiang"
+    },
+    "Fatalis Gunlance": {
+      "zh": "黑龍銃槍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/5aSvbfPM/hei-long-chong-qiang"
+    },
+    "True Fatalis Gunlance": {
+      "zh": "真‧黑龍銃槍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/VwSp8fqk/zhen-hei-long-chong-qiang"
+    },
+    "Fatalis End": {
+      "zh": "黑龍劍斧",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/b9U6vcog/hei-long-jian-fu"
+    },
+    "True Fatalis End": {
+      "zh": "真‧黑龍劍斧",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/GeUqDfM3/zhen-hei-long-jian-fu"
+    },
+    "Fatalis Charger": {
+      "zh": "黑龍盾斧",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/gBTqlfMJ/hei-long-dun-fu"
+    },
+    "True Fatalis Charger": {
+      "zh": "真‧黑龍盾斧",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/yKTWoi5y/zhen-hei-long-dun-fu"
+    },
+    "Fatalis Glaive": {
+      "zh": "黑龍棍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/PRs2Esk9/hei-long-gun"
+    },
+    "True Fatalis Dyaus": {
+      "zh": "真·黑龍棍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/l6s4WU9D/zhen-hei-long-gun"
+    },
+    "Fatalis Pit": {
+      "zh": "黑龍翼弩",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/bat6vcoY/hei-long-yi-nu"
+    },
+    "Fatalis Depths": {
+      "zh": "真‧黑龍翼弩",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/G6tqDfMy/zhen-hei-long-yi-nu"
+    },
+    "Vor Cannon": {
+      "zh": "黑龍砲",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/klIXAHpp/hei-long-pao"
+    },
+    "Vor Buster": {
+      "zh": "黑龍殲滅砲",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/jPIy9fvl/hei-long-jian-mie-pao"
+    },
+    "Bow of Rack & Ruin": {
+      "zh": "破壞殲滅之剛弓",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/56hvbfPV/po-huai-jian-mie-zhi-gang-gong"
+    },
+    "Bow of Vice & Violence": {
+      "zh": "斷滅崩壞之剛烈弓",
+      "src": "https://mhworld.kiranico.com/zh-Hant/weapons/Vvhp8fqb/duan-mie-beng-huai-zhi-gang-lie-gong"
+    }
+  },
+  "armors": {
+    "Tentacle Cowl  γ+": {
+      "zh": "精英·觸角頭盔γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pQmQp/jing-ying-chu-jiao-g"
+    },
+    "Tentacle Cloak  γ+": {
+      "zh": "精英·觸角鎧甲γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pQmQp/jing-ying-chu-jiao-g"
+    },
+    "Tentacle Gloves  γ+": {
+      "zh": "精英·觸角腕甲γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pQmQp/jing-ying-chu-jiao-g"
+    },
+    "Tentacle Coil  γ+": {
+      "zh": "精英·觸角腰甲γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pQmQp/jing-ying-chu-jiao-g"
+    },
+    "Tentacle Greaves  γ+": {
+      "zh": "精英·觸角護腿γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pQmQp/jing-ying-chu-jiao-g"
+    },
+    "Rimeguard Helm  γ+": {
+      "zh": "精英‧雪崩頭盔γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pLD8p/jing-ying-xue-beng-g"
+    },
+    "Rimeguard Mail γ+": {
+      "zh": "精英‧雪崩鎧甲γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pLD8p/jing-ying-xue-beng-g"
+    },
+    "Rimeguard Vambraces  γ+": {
+      "zh": "精英‧雪崩腕甲γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pLD8p/jing-ying-xue-beng-g"
+    },
+    "Rimeguard Coil  γ+": {
+      "zh": "精英‧雪崩腰甲γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pLD8p/jing-ying-xue-beng-g"
+    },
+    "Rimeguard Greaves  γ+": {
+      "zh": "精英‧雪崩護腿γ",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pLD8p/jing-ying-xue-beng-g"
+    },
+    "Passionate Headdress α+": {
+      "zh": "精英·熱情頭飾α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/73EbB/jing-ying-re-qing-a"
+    },
+    "Passionate Body α+": {
+      "zh": "精英·熱情身體α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/73EbB/jing-ying-re-qing-a"
+    },
+    "Passionate Arms α+": {
+      "zh": "精英·熱情腕甲α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/73EbB/jing-ying-re-qing-a"
+    },
+    "Passionate Belt α+": {
+      "zh": "精英·熱情皮帶α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/73EbB/jing-ying-re-qing-a"
+    },
+    "Passionate Leggings α+": {
+      "zh": "精英·熱情靴α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/73EbB/jing-ying-re-qing-a"
+    },
+    "Demonlord Hair α+": {
+      "zh": "精英·魔界之主【艷髮】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BPZ07/jing-ying-mo-jie-zhi-zhu-a"
+    },
+    "Demonlord Cloak α+": {
+      "zh": "精英·魔界之主【外套】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BPZ07/jing-ying-mo-jie-zhi-zhu-a"
+    },
+    "Demonlord Blackarm α+": {
+      "zh": "精英·魔界之主【黑腕部】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BPZ07/jing-ying-mo-jie-zhi-zhu-a"
+    },
+    "Demonlord Leather Belt α+": {
+      "zh": "精英·魔界之主【皮帶】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BPZ07/jing-ying-mo-jie-zhi-zhu-a"
+    },
+    "Demonlord Boots α+": {
+      "zh": "精英·魔界之主【黑靴】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BPZ07/jing-ying-mo-jie-zhi-zhu-a"
+    },
+    "Dragonhead α+": {
+      "zh": "精英‧龍頭頭盔α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/7029B/jing-ying-long-a"
+    },
+    "Dragonhide α+": {
+      "zh": "精英‧龍皮α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/7029B/jing-ying-long-a"
+    },
+    "Dragonclaws α+": {
+      "zh": "精英‧龍鋼爪α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/7029B/jing-ying-long-a"
+    },
+    "Dragonbarbs α+": {
+      "zh": "精英‧龍脊椎α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/7029B/jing-ying-long-a"
+    },
+    "Dragonfeet α+": {
+      "zh": "精英‧龍靴α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/7029B/jing-ying-long-a"
+    },
+    "Dragonhead β+": {
+      "zh": "精英‧龍頭頭盔β",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bQDB/jing-ying-long-b"
+    },
+    "Dragonhide β+": {
+      "zh": "精英‧龍皮β",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bQDB/jing-ying-long-b"
+    },
+    "Dragonclaws β+": {
+      "zh": "精英‧龍鋼爪β",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bQDB/jing-ying-long-b"
+    },
+    "Dragonbarbs β+": {
+      "zh": "精英‧龍脊椎β",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bQDB/jing-ying-long-b"
+    },
+    "Dragonfeet β+": {
+      "zh": "精英‧龍靴β",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bQDB/jing-ying-long-b"
+    },
+    "Azure Age Hair α+": {
+      "zh": "精英‧蒼世武士【艷髮】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5v6R5/jing-ying-cang-shi-wu-shi-a"
+    },
+    "Azure Age Haori α+": {
+      "zh": "精英‧蒼世武士【羽織】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5v6R5/jing-ying-cang-shi-wu-shi-a"
+    },
+    "Azure Age Sleeve α+": {
+      "zh": "精英‧蒼世武士【袖】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5v6R5/jing-ying-cang-shi-wu-shi-a"
+    },
+    "Azure Age Obi α+": {
+      "zh": "精英‧蒼世武士【帶】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5v6R5/jing-ying-cang-shi-wu-shi-a"
+    },
+    "Azure Age Geta α+": {
+      "zh": "精英‧蒼世武士【足履】α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5v6R5/jing-ying-cang-shi-wu-shi-a"
+    },
+    "Artemis Head α+": {
+      "zh": "精英·阿提蜜絲頭飾α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bZq5/jing-ying-a-ti-mi-si-a"
+    },
+    "Artemis Mail α+": {
+      "zh": "精英·阿提蜜絲鎧甲α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bZq5/jing-ying-a-ti-mi-si-a"
+    },
+    "Artemis Guards α+": {
+      "zh": "精英·阿提蜜絲護手α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bZq5/jing-ying-a-ti-mi-si-a"
+    },
+    "Artemis Coil α+": {
+      "zh": "精英·阿提蜜絲腰甲α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bZq5/jing-ying-a-ti-mi-si-a"
+    },
+    "Artemis Greaves α+": {
+      "zh": "精英·阿提蜜絲護腿α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5bZq5/jing-ying-a-ti-mi-si-a"
+    }
+  },
+  "monsters": {
+    "Vespoid": {
+      "zh": "巨蜂",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/REdsV/ju-feng"
+    },
+    "Great Jagras": {
+      "zh": "大凶豺龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/zJ1Sb/da-xiong-chai-long"
+    },
+    "Kulu-Ya-Ku": {
+      "zh": "搔鳥",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/YQ1FE/sao-niao"
+    },
+    "Pukei-Pukei": {
+      "zh": "毒妖鳥",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/nebTX/du-yao-niao"
+    },
+    "Barroth": {
+      "zh": "土砂龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Z9btN/tu-sha-long"
+    },
+    "Jyuratodus": {
+      "zh": "泥魚龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/oAyTx/ni-yu-long"
+    },
+    "Tobi-Kadachi": {
+      "zh": "飛雷龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/blDTZ/fei-lei-long"
+    },
+    "Shamos": {
+      "zh": "貓蜥龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/2r9F3/mao-xi-long"
+    },
+    "Hornetaur": {
+      "zh": "巨甲蟲",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Bw3C8/ju-jia-chong"
+    },
+    "Anjanath": {
+      "zh": "蠻顎龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/ZqptN/man-e-long"
+    },
+    "Rathian": {
+      "zh": "雌火龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Rz9Tb/ci-huo-long"
+    },
+    "Tzitzi-Ya-Ku": {
+      "zh": "眩鳥",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/WQvu8/xuan-niao"
+    },
+    "Paolumu": {
+      "zh": "浮空龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/2mnT3/fu-kong-long"
+    },
+    "Great Girros": {
+      "zh": "大凶顎龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/eMAHO/da-xiong-e-long"
+    },
+    "Radobaan": {
+      "zh": "骨鎚龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/v2OUJ/gu-chui-long"
+    },
+    "Legiana": {
+      "zh": "風漂龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/QNYCK/feng-piao-long"
+    },
+    "Odogaron": {
+      "zh": "慘爪龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/ADAfZ/can-zhua-long"
+    },
+    "Rathalos": {
+      "zh": "火龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BnetX/huo-long"
+    },
+    "Diablos": {
+      "zh": "角龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BYXHE/jiao-long"
+    },
+    "Kirin": {
+      "zh": "麒麟",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BQruK/qi-lin"
+    },
+    "Gajau": {
+      "zh": "咬魚",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BgzT2/yao-yu"
+    },
+    "Pink Rathian": {
+      "zh": "櫻火龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BnNTd/ying-huo-long"
+    },
+    "Gastodon": {
+      "zh": "突擊龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/vmLtJ/tu-ji-long"
+    },
+    "Barnos": {
+      "zh": "酸翼龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/QZrSK/suan-yi-long"
+    },
+    "Dodogama": {
+      "zh": "岩賊龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/DmeH0/yan-zei-long"
+    },
+    "Zorah Magdaros": {
+      "zh": "熔山龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/EmVcV/rong-shan-long"
+    },
+    "Lavasioth": {
+      "zh": "熔岩龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BL1ca/rong-yan-long"
+    },
+    "Azure Rathalos": {
+      "zh": "蒼火龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BaYte/cang-huo-long"
+    },
+    "Black Diablos": {
+      "zh": "黑角龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/RoXHw/hei-jiao-long"
+    },
+    "Uragaan": {
+      "zh": "爆鎚龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/z99fb/bao-chui-long"
+    },
+    "Bazelgeuse": {
+      "zh": "爆鱗龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Xe7fm/bao-lin-long"
+    },
+    "Nergigante": {
+      "zh": "滅盡龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/aYaUV/mie-jin-long"
+    },
+    "Teostra": {
+      "zh": "炎王龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/jGeS0/yan-wang-long"
+    },
+    "Kushala Daora": {
+      "zh": "鋼龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/jJxin/gang-long"
+    },
+    "Vaal Hazak": {
+      "zh": "屍套龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/9mMsb/shi-tao-long"
+    },
+    "Xeno'jiiva": {
+      "zh": "冥燈龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/wA8F8/ming-deng-long"
+    },
+    "Deviljho": {
+      "zh": "恐暴龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/4rATd/kong-bao-long"
+    },
+    "Kulve Taroth": {
+      "zh": "絢輝龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/5xbCn/xuan-hui-long"
+    },
+    "Lunastra": {
+      "zh": "炎妃龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/j8gFA/yan-fei-long"
+    },
+    "Behemoth": {
+      "zh": "貝希摩斯",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/yA8Ub/bei-xi-mo-si"
+    },
+    "Wulg": {
+      "zh": "冰豺狼",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/qpVH9/bing-chai-lang"
+    },
+    "Cortos": {
+      "zh": "冬翼龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Wb0c8/dong-yi-long"
+    },
+    "Coral Pukei-Pukei": {
+      "zh": "水妖鳥",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/aY2Se/shui-yao-niao"
+    },
+    "Beotodus": {
+      "zh": "冰魚龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/OqOIX/bing-yu-long"
+    },
+    "Viper Tobi-Kadachi": {
+      "zh": "痺毒龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/2mJUK/bi-du-long"
+    },
+    "Banbaro": {
+      "zh": "猛牛龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/6dJI8/meng-niu-long"
+    },
+    "Fulgur Anjanath": {
+      "zh": "雷顎龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/zJaFg/lei-e-long"
+    },
+    "Nightshade Paolumu": {
+      "zh": "浮眠龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/QNkhw/fu-mian-long"
+    },
+    "Barioth": {
+      "zh": "冰牙龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/4k2UP/bing-ya-long"
+    },
+    "Shrieking Legiana": {
+      "zh": "霜翼風漂龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Dm5tZ/shuang-yi-feng-piao-long"
+    },
+    "Ebony Odogaron": {
+      "zh": "兇爪龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/v2gSW/xiong-zhua-long"
+    },
+    "Nargacuga": {
+      "zh": "迅龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BKNIm/xun-long"
+    },
+    "Glavenus": {
+      "zh": "斬龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Lk1ia/zhan-long"
+    },
+    "Acidic Glavenus": {
+      "zh": "硫斬龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/KpViL/liu-zhan-long"
+    },
+    "Brachydios": {
+      "zh": "碎龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/qpVH8/sui-long"
+    },
+    "Tigrex": {
+      "zh": "轟龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/jVAhP/hong-long"
+    },
+    "Brute Tigrex": {
+      "zh": "黑轟龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/j1ohM/hei-hong-long"
+    },
+    "Seething Bazelgeuse": {
+      "zh": "紅蓮爆鱗龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/6dkhX/hong-lian-bao-lin-long"
+    },
+    "Savage Deviljho": {
+      "zh": "惶怒恐暴龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/B02Tk/huang-nu-kong-bao-long"
+    },
+    "Velkhana": {
+      "zh": "冰呪龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/J1pFn/bing-zhou-long"
+    },
+    "Blackveil Vaal Hazak": {
+      "zh": "霧瘴屍套龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/WQzsl/wu-zhang-shi-tao-long"
+    },
+    "Namielle": {
+      "zh": "溟波龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Mzdfo/ming-bo-long"
+    },
+    "Shara Ishvalda": {
+      "zh": "天地煌啼龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/8mvfA/tian-di-huang-ti-long"
+    },
+    "Yian Garuga": {
+      "zh": "黑狼鳥",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/jXmhm/hei-lang-niao"
+    },
+    "Zinogre": {
+      "zh": "雷狼龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/Ak8TZ/lei-lang-long"
+    },
+    "Gold Rathian": {
+      "zh": "金火龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BaPT0/jin-huo-long"
+    },
+    "Silver Rathalos": {
+      "zh": "銀火龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/B0ktO/yin-huo-long"
+    },
+    "Ruiner Nergigante": {
+      "zh": "殲世滅盡龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/oAnim/jian-shi-mie-jin-long"
+    },
+    "Rajang": {
+      "zh": "金獅子",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/jJZIO/jin-shi-zi"
+    },
+    "Furious Rajang": {
+      "zh": "激昂金獅子",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/jN0I7/ji-ang-jin-shi-zi"
+    },
+    "Stygian Zinogre": {
+      "zh": "獄狼龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/vmKTW/yu-lang-long"
+    },
+    "Safi'jiiva": {
+      "zh": "冥赤龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/0kVsV/ming-chi-long"
+    },
+    "Raging Brachydios": {
+      "zh": "猛爆碎龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/JoYHZ/meng-bao-sui-long"
+    },
+    "Frostfang Barioth": {
+      "zh": "霜刃冰牙龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/BaZUz/shuang-ren-bing-ya-long"
+    },
+    "Alatreon": {
+      "zh": "煌黑龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/ErdcV/huang-hei-long"
+    },
+    "Fatalis": {
+      "zh": "黑龍",
+      "src": "https://mhworld.kiranico.com/zh-Hant/monsters/jA8SZ/hei-long"
     }
   }
 }

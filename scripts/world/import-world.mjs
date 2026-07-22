@@ -30,7 +30,7 @@ const overrides = existsSync(OVERRIDE_FILE)
 const ov = (kind, en) => overrides[kind]?.[en]?.zh;
 
 // 收集未映射（gap）
-const gaps = { skills: [], setBonuses: [], armorSets: [], armors: [], weapons: [], charms: [], decorations: [] };
+const gaps = { skills: [], setBonuses: [], armorSets: [], armors: [], weapons: [], charms: [], decorations: [], monsters: [] };
 function resolveZh(kind, en, csvZh) {
   const o = ov(kind, en);
   if (!isBlank(o)) return o;
@@ -241,7 +241,10 @@ const armorsOut = armorBase.map((a) => {
   if (set) {
     if (!isBlank(set.rank)) out.rankLabel = RANK_ZH[set.rank] ?? set.rank;
     if (!isBlank(set.seriesNameZh)) out.seriesName = set.seriesNameZh;
-    if (!isBlank(set.monster)) out.sourceMonster = set.monster;
+    // sourceMonster 顯示層與 Rise 對齊為 zh（Rise 既有 armors.json 即 zh）。無 MHWorldData
+    // 怪物翻譯 CSV，故走 override（monsters kind；build-zh-name-map 由 /monsters 跨語系配對填），
+    // 缺者 EN fallback（display-only，補不到不失敗）。
+    if (!isBlank(set.monster)) out.sourceMonster = resolveZh("monsters", set.monster);
     if (!isBlank(set.bonusEn)) out.setBonusId = setBonusIdByEn[set.bonusEn] ?? slug(set.bonusEn);
   }
   return out;
