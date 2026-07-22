@@ -39,10 +39,11 @@ function loadRaw(gameId: GameId): Promise<[unknown, unknown]> {
       import("@/data/rise/weapons.json"),
     ]);
   }
-  // World 資料由 PLAN Phase 2 匯入管線產出後接上（import("@/data/world/...")）。
-  return Promise.reject(
-    new Error(`game data not available for "${gameId}" (World 於 Phase 2 接入)`)
-  );
+  // World（PLAN Phase 5 接上 UI）：各自獨立動態 chunk，不進首屏。
+  return Promise.all([
+    import("@/data/world/armors.json"),
+    import("@/data/world/weapons.json"),
+  ]);
 }
 
 /** 已載入時同步取得，否則 null。 */

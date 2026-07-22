@@ -9,8 +9,8 @@
  * 搬入 worker 的目的：搜尋為同步重運算（50 顆護石可達數秒），放主執行緒會凍結 UI；
  * 移入 worker 後主執行緒在搜尋期間仍可切 Tab、捲動；並支援 terminate 取消。
  */
-import type { ArmorPiece, BuildSearchRequest } from "@/types/build";
-import { searchBuilds, createSearchDeps, type SearchOutput } from "./build-search";
+import type { ArmorPiece, BuildSearchRequest, GameId } from "@/types/build";
+import { searchBuilds, createSearchDeps, type SearchDeps, type SearchOutput } from "./build-search";
 import { loadGameData } from "./game-data";
 
 export type SearchWorkerRequest = {
@@ -19,6 +19,8 @@ export type SearchWorkerRequest = {
   request: BuildSearchRequest;
   /** 傀異鍊成自訂防具（主執行緒 state，隨請求序列化帶入）。 */
   augments: ArmorPiece[];
+  /** 遊戲（未帶＝rise，向後相容）。World 走 world-registry 的固定護石候選池 deps。 */
+  gameId?: GameId;
 };
 
 export type SearchWorkerResponse =
@@ -28,10 +30,18 @@ export type SearchWorkerResponse =
 const ctx = self as unknown as DedicatedWorkerGlobalScope;
 
 ctx.onmessage = async (e: MessageEvent<SearchWorkerRequest>) => {
-  const { id, request, augments } = e.data;
+  const { id, request, augments, gameId } = e.data;
   try {
-    const gd = await loadGameData();
-    const deps = createSearchDeps(gd, augments);
+    let deps: SearchDeps;
+    if (gameId === "world") {
+      // World：固定可生產護石候選池 + set bonus/動態上限 + efr-world（world-registry 內接線）。
+      // 動態 import：world 引擎程式只在 worker 實際搜 world 時載入，不進 rise 路徑。
+      const { loadWorldSearchDeps } = await import("./world-registry");
+      deps = await loadWorldSearchDeps();
+    } else {
+      const gd = await loadGameData();
+      deps = createSearchDeps(gd, augments);
+    }
     const output = searchBuilds(request, deps, () =>
       typeof performance !== "undefined" ? performance.now() : 0
     );

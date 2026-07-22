@@ -310,6 +310,12 @@ export function searchBuilds(
   let valid = 0;
   let truncated = false;
 
+  // EFR 模組：World 用 profile.efr（efr-world 逐級數值/斬味倍率）；Rise（deps.world
+  // 為 undefined）用本檔靜態 import 的 efr.ts。gated by deps.world → Rise 路徑逐位元不變
+  // （回歸背書）。修 Phase 4 遺留：profile.efr 先前未被 searchBuilds 消費，World 搜尋
+  // 誤用 Rise EFR 排序。
+  const computeEfrFn = deps.world ? deps.world.profile.efr.computeEfr : computeEfr;
+
   // World：預算防具相關度所需的常量（不依 effRequired，故迴圈外算一次）。
   const worldGlobalUnlockers: string[] = deps.world
     ? Object.values(deps.world.skillByName)
@@ -478,7 +484,7 @@ export function searchBuilds(
 
                 valid++;
                 const efr = weapon
-                  ? computeEfr({
+                  ? computeEfrFn({
                       weapon,
                       skills: finalSkills,
                       conditionalUptime: CONDITIONAL_UPTIME,
