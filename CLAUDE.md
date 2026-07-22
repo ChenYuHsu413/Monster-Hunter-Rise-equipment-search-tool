@@ -12,8 +12,14 @@
 - `src/lib/efr.ts` 的 `EFR_RELEVANT_SKILLS`。改它必須同步 `build-search.ts` 護石支配剪枝的相關技能集。
 - `src/lib/equipment-pools.ts` 的候選集 limit 邏輯（`prunePools` 的每部位件數 + 護石懲罰階梯）。
 - 搜尋演算法本體行為（`searchBuilds`）。搬進 Worker 只是搬移，不得改變結果。
+  **World 專屬分支一律 gated by `deps.world`**：Rise（`deps.world===undefined`）路徑逐位元不變，
+  由 `regression-baseline.mjs --check`（10/10）背書。動 searchBuilds 任何行別後必跑回歸。
 - `scripts/` 與 `data/`（頂層）視為唯讀；**例外**：明確授權的資料修正（如 skillMax 稽核）可動
   `scripts/known-max.mjs` + `src/data/*.json`，但要走稽核線、獨立 commit、跑 audit 驗證。
+- **`efr-world.ts` 與 `efr.ts` 同介面義務**：兩者共用 `EfrInput`/`EfrResult`（efr-world 直接
+  `import type` 自 efr.ts）。改動 EfrResult 形狀、computeEfr 簽章、或斬味 base/max 語意時，
+  **兩檔必須同步**，且 World 逐級數值禁憑訓練記憶硬編（機械抽取自 skill_levels.csv，無數字者
+  對 Kiranico/社群公式核對並附來源）。`build-search` 依 `deps.world?profile.efr:efr.ts` 選用。
 
 ## 1. 資料完整性教訓（踩過坑，最容易重犯）
 
@@ -76,6 +82,33 @@
 - 新手引導模式（`/guide`）與流派 preset 已於 `f433557`／`d070884` 移除（定位與「推薦配裝」頁籤
   重疊，推薦配裝頁為其替代）；原計畫文件 docs/ROADMAP.md、DATA-COVERAGE.md 仍在（已加移除註記），
   尾巴見 HANDOFF.md。
+
+## 6. World: Iceborne 擴充（多遊戲；Phase 0–5 已完成，Phase 6 未做）
+
+程式碼看不出「為什麼」的關鍵裁決（詳見 `docs/WORLD-ICEBORNE-EXPANSION-PLAN.md` 與各 audit）：
+
+- **抽象層**：`game-profile.ts`（EFR 模組/features 開關/charmMode/storagePrefix/resolveSkillMax）、
+  `game-data.ts`（`loadGameData(gameId)` 動態 import per-game chunk）、`data.ts`
+  （`getGameStaticData(gameId)`）、`world-registry.ts`（動態 import 註冊 world profile+靜態+護石池）。
+  UI 以 `gameId` prop + `key=gameId` 重掛載切換；`GameIdProvider` context 供深層元件取色表。
+- **禁區等價性**：所有 World 行為經 `deps.world` 閘門或資料層差異表達，Rise 路徑零改變（回歸背書）。
+  `profile.features` 決定 UI 面板顯隱（不用 gameId 硬判斷）：qurioAugment→傀異、charmMode→護石庫↔選單。
+- **localStorage 前綴**：rise `mhsb.*` / world `mhwib.*`，**Rise 既有鍵名一個未動**（老用戶零影響）。
+  share-link 帶 gameId，舊格式（無 game）視為 rise。**World 護石排除走 `worldExcludedCharmIds`
+  獨立 state**（非 conditions.excludedItems.charmIds——後者不進 share-link deserialize）。
+- **斬味語意（考證推翻初判，`docs/world-sharpness-audit.md`）**：MHWorldData `weapon_sharpness`
+  單列 ＝ **匠5 maxed**（非匠0 base）；`maxed=TRUE`＝base 已等於 maxed（匠加成 0）、
+  `FALSE`＝匠 Lv5 恰 +50（base 由高色端剝 50）。二值建模，無中間值。
+- **World 資料重跑順序**：`fetch-mhwd.mjs`（pin commit 抓 raw CSV 到 .cache）→ `import-world.mjs`
+  （產出 `src/data/world/*.json`，重跑安全、只改腳本不手改產出）→ `build-zh-name-map.mjs`
+  （Kiranico id 配對補 zh）→ `audit-world-data.mjs`（獨立外部源交叉稽核）。
+- **首屏 bundle**：world 資料/引擎（efr-world/world-registry/skill-calculator world 分支）維持獨立
+  lazy chunk；`BuilderView` 對 `build-search` 改動態 import（僅開發用 parity 對照才載入），
+  搜尋引擎移出首屏 → **首屏 291 kB（低於 Phase 1 的 292 基準）**。
+- **已知近似**（v1，`docs/efr-world-notes.md`）：斬味 color-only 不計長度、屬性上限不建模（高估）、
+  弱點傷口計滿、uptime 0.75、會心擊【屬性】倍率依武器種、zh 100 筆 EN-fallback。
+- **PLAN↔實測衝突點名**（實測為準）：真‧龍脈覺醒為 **5 件**門檻（非 PLAN 說的 3；龍脈覺醒才是 3 件）；
+  自由搜尋 挑戰者7 可經 Raging Brachydios 挑戰者‧極意(3件) 解放，非只有 Fatalis Inheritance。
 
 ## 5. 工作協議（換手／長 session 失真防護）
 
