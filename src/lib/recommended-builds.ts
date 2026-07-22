@@ -94,6 +94,70 @@ export function getLoadedRecommendedBuilds(): RecommendedIndex | null {
   return cache;
 }
 
+// ═══════════════════════ World（Phase 6）推薦資料 ═══════════════════════
+// Rise 路徑（上方）完全不動；World 走獨立 lazy chunk + 簡化名稱解析（無百龍/獵蟲/編輯短標記）。
+
+let worldCache: RecommendedIndex | null = null;
+let worldInflight: Promise<RecommendedIndex> | null = null;
+
+/** 載入 World 推薦配裝索引（獨立動態 chunk，不進首屏）。 */
+export function loadWorldRecommendedBuilds(): Promise<RecommendedIndex> {
+  if (worldCache) return Promise.resolve(worldCache);
+  if (!worldInflight) {
+    worldInflight = import("@/data/world/recommended-builds.json").then((mod) => {
+      const file = mod.default as unknown as RecommendedBuildsFile;
+      worldCache = buildIndex(file.builds);
+      return worldCache;
+    });
+  }
+  return worldInflight;
+}
+
+/** World 名稱解析器：armor/weapon/deco/charm id → 繁中；對不上 fallback 到 Game8 英文名。 */
+export type WorldNameResolver = {
+  armor: (id?: string, rawEn?: string) => ResolvedName;
+  weapon: (id?: string, rawEn?: string) => ResolvedName;
+  deco: (id?: string, rawEn?: string) => ResolvedName;
+  charm: (id?: string, rawEn?: string) => ResolvedName;
+};
+
+function worldFallback(rawEn?: string): ResolvedName {
+  return { name: rawEn || "（未知）", resolved: false };
+}
+
+/** 建立 World 名稱解析器（動態載入 world 資料）。 */
+export async function createWorldNameResolver(): Promise<WorldNameResolver> {
+  const [gd, decMod, chMod] = await Promise.all([
+    loadGameData("world"),
+    import("@/data/world/decorations.json"),
+    import("@/data/world/charms.json"),
+  ]);
+  const decoName: Record<string, string> = Object.fromEntries(
+    (decMod.default as unknown as { id: string; nameZh: string }[]).map((d) => [d.id, d.nameZh])
+  );
+  const charmName: Record<string, string> = Object.fromEntries(
+    (chMod.default as unknown as { id: string; name: string }[]).map((c) => [c.id, c.name])
+  );
+  return {
+    armor: (id, rawEn) => {
+      const a = id ? gd.armorById[id] : undefined;
+      return a ? { name: a.nameZh, resolved: true } : worldFallback(rawEn);
+    },
+    weapon: (id, rawEn) => {
+      const w = id ? gd.weaponById[id] : undefined;
+      return w ? { name: w.nameZh, resolved: true } : worldFallback(rawEn);
+    },
+    deco: (id, rawEn) => {
+      const n = id ? decoName[id] : undefined;
+      return n ? { name: n, resolved: true } : worldFallback(rawEn);
+    },
+    charm: (id, rawEn) => {
+      const n = id ? charmName[id] : undefined;
+      return n ? { name: n, resolved: true } : worldFallback(rawEn);
+    },
+  };
+}
+
 /** deco id → 中文名稱（含手工合成 deco_manual_*）。 */
 const decoNameById: Record<string, string> = Object.fromEntries(
   decorations.map((d) => [d.id, d.nameZh])

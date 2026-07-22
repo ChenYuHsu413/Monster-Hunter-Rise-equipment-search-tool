@@ -49,9 +49,8 @@ export default function Home() {
     const apply = () => {
       const p = new URLSearchParams(window.location.search);
       const g: GameId = p.get("game") === "world" ? "world" : "rise";
-      // World 無推薦配裝分頁，一律配裝器。
-      const t: Tab =
-        g === "world" ? "builder" : p.get("tab") === "builder" ? "builder" : "recommend";
+      // 兩款遊戲皆有推薦配裝 + 配裝器分頁（Phase 6：World 推薦配裝 tab）。
+      const t: Tab = p.get("tab") === "builder" ? "builder" : "recommend";
       setGame(g);
       setTabState(t);
       if (t === "builder") setBuilderMounted(true);
@@ -72,27 +71,24 @@ export default function Home() {
 
   const selectGame = (g: GameId) => {
     if (g === game) return;
-    const t: Tab = g === "world" ? "builder" : tab;
     setGame(g);
-    setTabState(t);
-    if (t === "builder") setBuilderMounted(true);
-    writeUrl(g, t);
+    if (tab === "builder") setBuilderMounted(true);
+    writeUrl(g, tab);
   };
 
   const selectTab = (t: Tab) => {
-    if (game === "world") return; // World 無分頁
     setTabState(t);
     if (t === "builder") setBuilderMounted(true);
     writeUrl(game, t);
   };
 
   /**
-   * 推薦配裝卡片觸發的匯出（Rise 專屬）：切到配裝器並交付匯入指令（不自動搜尋）。
+   * 推薦配裝卡片觸發的匯出：切到配裝器並交付匯入指令（不自動搜尋）。兩款遊戲共用。
    */
   const exportToBuilder = (payload: BuilderImport) => {
     if (
       (payload.kind === "full-build" || payload.kind === "community-build") &&
-      builderHasConditions()
+      builderHasConditions(game)
     ) {
       const ok = window.confirm(
         "配裝器已有搜尋條件，要以此推薦配裝覆蓋必要技能嗎？（你的護石清單會保留）"
@@ -104,8 +100,8 @@ export default function Home() {
     selectTab("builder");
   };
 
-  const showBuilder = game === "world" || builderMounted;
-  const builderVisible = game === "world" || tab === "builder";
+  const showBuilder = builderMounted;
+  const builderVisible = tab === "builder";
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background lg:h-screen">
@@ -139,42 +135,38 @@ export default function Home() {
             ))}
           </div>
 
-          {/* 分頁（Rise 專屬；World 無推薦配裝） */}
-          {game === "rise" && (
-            <div className="inline-flex rounded-lg bg-muted p-1">
-              {TABS.map((t) => (
-                <button
-                  key={t.key}
-                  type="button"
-                  onClick={() => selectTab(t.key)}
-                  className={cn(
-                    "rounded-md px-3 py-1 text-sm font-medium transition-colors",
-                    tab === t.key
-                      ? "bg-background text-foreground shadow"
-                      : "text-muted-foreground hover:text-foreground"
-                  )}
-                  aria-pressed={tab === t.key}
-                >
-                  {t.label}
-                </button>
-              ))}
-            </div>
-          )}
+          {/* 分頁（兩款遊戲皆有：推薦配裝 / 配裝器） */}
+          <div className="inline-flex rounded-lg bg-muted p-1">
+            {TABS.map((t) => (
+              <button
+                key={t.key}
+                type="button"
+                onClick={() => selectTab(t.key)}
+                className={cn(
+                  "rounded-md px-3 py-1 text-sm font-medium transition-colors",
+                  tab === t.key
+                    ? "bg-background text-foreground shadow"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+                aria-pressed={tab === t.key}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
       {/* ---- 內容 ---- */}
       <div className="flex min-h-0 flex-1 flex-col">
-        {/* 推薦配裝：Rise 專屬，保持 mounted、以 hidden 切換 */}
-        {game === "rise" && (
-          <div
-            className={cn(
-              tab === "recommend" ? "flex min-h-0 flex-1 flex-col" : "hidden"
-            )}
-          >
-            <RecommendedView onExport={exportToBuilder} />
-          </div>
-        )}
+        {/* 推薦配裝：key=game 重掛載（per-game 資料源），以 hidden 切換 */}
+        <div
+          className={cn(
+            tab === "recommend" ? "flex min-h-0 flex-1 flex-col" : "hidden"
+          )}
+        >
+          <RecommendedView key={game} gameId={game} onExport={exportToBuilder} />
+        </div>
         {/* 配裝器：key=game 重掛載，per-game 狀態互不污染 */}
         {showBuilder && (
           <div
@@ -183,7 +175,7 @@ export default function Home() {
             <BuilderView
               key={game}
               gameId={game}
-              pendingImport={game === "rise" ? pendingImport : null}
+              pendingImport={pendingImport}
               onConsumeImport={() => setPendingImport(null)}
             />
           </div>

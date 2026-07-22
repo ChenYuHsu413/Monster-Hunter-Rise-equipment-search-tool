@@ -309,11 +309,12 @@ export function buildWorldFullBuildImport(
  * 讀 localStorage 判斷配裝器目前是否已有「非空條件」（供 full-build 匯入前的覆蓋確認）。
  * 只看會被匯入覆蓋的欄位：必要/排除技能、固定/排除裝備。護石為個人倉庫，不列入。
  */
-export function builderHasConditions(): boolean {
+export function builderHasConditions(gameId: GameId = "rise"): boolean {
   if (typeof window === "undefined") return false;
+  const prefix = gameId === "world" ? "mhwib." : "mhsb.";
   let raw: string | null;
   try {
-    raw = window.localStorage.getItem("mhsb.searchConditions");
+    raw = window.localStorage.getItem(`${prefix}searchConditions`);
   } catch {
     return false;
   }

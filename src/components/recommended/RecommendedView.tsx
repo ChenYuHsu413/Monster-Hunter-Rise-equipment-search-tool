@@ -5,9 +5,13 @@ import { weaponTypes } from "@/lib/data";
 import {
   CATEGORY_LABELS,
   STAGE_CATEGORY_ORDER,
+  WORLD_STAGE_CATEGORY_ORDER,
   createNameResolver,
+  createWorldNameResolver,
   loadRecommendedBuilds,
+  loadWorldRecommendedBuilds,
   type NameResolver,
+  type WorldNameResolver,
   type RecommendedIndex,
 } from "@/lib/recommended-builds";
 import {
@@ -15,17 +19,20 @@ import {
   type CommunityIndex,
 } from "@/lib/community-builds";
 import { useLocalStorage } from "@/lib/use-local-storage";
+import type { GameId } from "@/types/build";
 import type { RecommendedBuild, RecommendedCategory } from "@/types/recommended";
-import type { BuilderImport } from "@/lib/builder-import";
+import { buildWorldFullBuildImport, type BuilderImport } from "@/lib/builder-import";
+import { GameIdProvider } from "@/lib/game-context";
 import { WeaponIcon } from "@/components/EquipmentIcon";
 import { BuildCard } from "./BuildCard";
 import { SimpleBuildCard } from "./SimpleBuildCard";
 import { CommunityBuildCard } from "./CommunityBuildCard";
+import { WorldBuildCard } from "./WorldBuildCard";
 import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronUp, Loader2, Swords, Users } from "lucide-react";
 
-/** 手風琴分區的顯示順序：五階段（依既有順序）+ 推薦武器一覽收尾。 */
-const SECTION_ORDER: RecommendedCategory[] = [
+/** Rise 手風琴分區順序：五階段 + 推薦武器一覽收尾。 */
+const RISE_SECTION_ORDER: RecommendedCategory[] = [
   ...STAGE_CATEGORY_ORDER,
   "weaponRecommend",
 ];
@@ -97,23 +104,64 @@ function StageSection({
 }
 
 export function RecommendedView({
+  gameId = "rise",
   onExport,
 }: {
+  gameId?: GameId;
   onExport: (payload: BuilderImport) => void;
 }) {
+  const isWorld = gameId === "world";
+  const prefix = isWorld ? "mhwib." : "mhsb.";
   const [index, setIndex] = useState<RecommendedIndex | null>(null);
   const [resolver, setResolver] = useState<NameResolver | null>(null);
+  const [worldResolver, setWorldResolver] = useState<WorldNameResolver | null>(null);
   const [community, setCommunity] = useState<CommunityIndex | null>(null);
+  // World 匯入所需 context（profile.resolveSkillMax + setBonusById + armorById）。
+  const [worldImportCtx, setWorldImportCtx] = useState<{
+    resolveSkillMax: (s: string, a: Record<string, number>) => number;
+    setBonusById: Record<string, { ranks: { pieces: number; skillName: string; skillLevel: number }[] }>;
+    armorById: Record<string, { setBonusId?: string }>;
+  } | null>(null);
   // 選定的武器種類（persist；空字串＝尚未選）。
-  const [weaponType, setWeaponType] = useLocalStorage("mhsb.recoWeaponType", "");
+  const [weaponType, setWeaponType] = useLocalStorage(`${prefix}recoWeaponType`, "");
   // 展開過的分區（全域記憶、不分武器；預設全收合）。存 category 值陣列。
   const [openStages, setOpenStages] = useLocalStorage<string[]>(
-    "mhsb.recoStagesOpen",
+    `${prefix}recoStagesOpen`,
     []
   );
 
   useEffect(() => {
     let alive = true;
+    if (isWorld) {
+      Promise.all([loadWorldRecommendedBuilds(), createWorldNameResolver()]).then(
+        ([idx, res]) => {
+          if (!alive) return;
+          setIndex(idx);
+          setWorldResolver(res);
+        }
+      );
+      // World 匯入 context（動態 import world-registry，維持 lazy）。
+      (async () => {
+        const [{ ensureWorldRegistered }, { getGameProfile }, { loadGameData }] =
+          await Promise.all([
+            import("@/lib/world-registry"),
+            import("@/lib/game-profile"),
+            import("@/lib/game-data"),
+          ]);
+        const ws = await ensureWorldRegistered();
+        const profile = getGameProfile("world");
+        const gd = await loadGameData("world");
+        if (!alive) return;
+        setWorldImportCtx({
+          resolveSkillMax: profile.resolveSkillMax,
+          setBonusById: ws.setBonusById as never,
+          armorById: gd.armorById as never,
+        });
+      })();
+      return () => {
+        alive = false;
+      };
+    }
     Promise.all([loadRecommendedBuilds(), createNameResolver()]).then(
       ([idx, res]) => {
         if (!alive) return;
@@ -121,14 +169,33 @@ export function RecommendedView({
         setResolver(res);
       }
     );
-    // 社群配裝獨立載入（失敗不影響 Game8 分區）。
+    // 社群配裝獨立載入（失敗不影響 Game8 分區）。Rise 專屬。
     loadCommunityBuilds().then((c) => {
       if (alive) setCommunity(c);
     });
     return () => {
       alive = false;
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isWorld]);
+
+  /** World「以此為基礎修改」：算該套 set bonus 動態上限，走 buildWorldFullBuildImport。 */
+  const useWorldBuild = (build: RecommendedBuild) => {
+    if (!worldImportCtx) return;
+    const { resolveSkillMax, setBonusById, armorById } = worldImportCtx;
+    const counts: Record<string, number> = {};
+    for (const a of build.armor ?? []) {
+      const ar = a.id ? armorById[a.id] : undefined;
+      if (ar?.setBonusId) counts[ar.setBonusId] = (counts[ar.setBonusId] ?? 0) + 1;
+    }
+    const active: Record<string, number> = {};
+    for (const [id, cnt] of Object.entries(counts)) {
+      const sb = setBonusById[id];
+      if (!sb) continue;
+      for (const r of sb.ranks) if (cnt >= r.pieces) active[r.skillName] = (active[r.skillName] ?? 0) + r.skillLevel;
+    }
+    onExport(buildWorldFullBuildImport(build, (name) => resolveSkillMax(name, active)));
+  };
 
   const isOpen = (cat: string) => openStages.includes(cat);
   const toggleStage = (cat: string) =>
@@ -137,21 +204,27 @@ export function RecommendedView({
     );
 
   const byCat = weaponType ? index?.byWeaponType.get(weaponType) : undefined;
-  // 該武器實際有資料的分區（保 SECTION_ORDER 順序）。
-  const sections = SECTION_ORDER.map((cat) => ({
-    cat,
-    builds: byCat?.get(cat) ?? [],
-  })).filter((s) => s.builds.length > 0);
+  const sectionOrder = isWorld ? WORLD_STAGE_CATEGORY_ORDER : RISE_SECTION_ORDER;
+  const sections = sectionOrder
+    .map((cat) => ({ cat, builds: byCat?.get(cat) ?? [] }))
+    .filter((s) => s.builds.length > 0);
 
-  // 社群配裝：該武器種類 + 無綁定的泛用防具骨架（對所有武器適用）。
-  const communityBuilds = weaponType
-    ? [
-        ...(community?.byWeaponType.get(weaponType) ?? []),
-        ...(community?.unbound ?? []),
-      ]
-    : [];
+  // 社群配裝：Rise 專屬（World 無）。
+  const communityBuilds =
+    !isWorld && weaponType
+      ? [
+          ...(community?.byWeaponType.get(weaponType) ?? []),
+          ...(community?.unbound ?? []),
+        ]
+      : [];
+
+  // 資料就緒判定：rise 看 resolver、world 看 worldResolver。
+  const ready = isWorld ? !!worldResolver && !!index : !!resolver && !!index;
+  // community 只在 rise 有意義；world 直接視為「已載入」以免卡零結果分支。
+  const communityLoaded = isWorld ? true : community !== null;
 
   return (
+    <GameIdProvider value={gameId}>
     <div className="flex min-h-0 flex-1 flex-col overflow-y-auto scrollbar-thin">
       <div className="mx-auto w-full max-w-5xl space-y-4 p-4">
         {/* 武器種類網格選擇 */}
@@ -184,7 +257,7 @@ export function RecommendedView({
         </div>
 
         {/* 內容 */}
-        {!resolver || !index ? (
+        {!ready ? (
           <div className="flex flex-col items-center justify-center gap-2 py-24 text-muted-foreground">
             <Loader2 className="h-7 w-7 animate-spin text-primary" />
             <p className="text-sm">載入推薦配裝資料…</p>
@@ -196,7 +269,7 @@ export function RecommendedView({
           </div>
         ) : sections.length === 0 &&
           communityBuilds.length === 0 &&
-          community !== null ? (
+          communityLoaded ? (
           <p className="py-12 text-center text-sm text-muted-foreground">
             此武器種類尚無推薦配裝資料。
           </p>
@@ -212,14 +285,23 @@ export function RecommendedView({
                   open={isOpen(cat)}
                   onToggle={() => toggleStage(cat)}
                 >
-                  {builds.map((b) => (
-                    <BuildCardDispatch
-                      key={b.id}
-                      build={b}
-                      resolver={resolver}
-                      onExport={onExport}
-                    />
-                  ))}
+                  {builds.map((b) =>
+                    isWorld ? (
+                      <WorldBuildCard
+                        key={b.id}
+                        build={b}
+                        resolver={worldResolver!}
+                        onUse={useWorldBuild}
+                      />
+                    ) : (
+                      <BuildCardDispatch
+                        key={b.id}
+                        build={b}
+                        resolver={resolver!}
+                        onExport={onExport}
+                      />
+                    )
+                  )}
                 </StageSection>
               ))}
 
@@ -246,5 +328,6 @@ export function RecommendedView({
         )}
       </div>
     </div>
+    </GameIdProvider>
   );
 }

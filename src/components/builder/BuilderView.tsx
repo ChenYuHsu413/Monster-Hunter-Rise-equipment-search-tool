@@ -107,6 +107,13 @@ type ImportNotice =
       totalArmorCount: number;
       /** 被排除的 special 技能名。 */
       excludedSpecial: string[];
+    }
+  | {
+      source: "world";
+      importedCount: number;
+      totalCount: number;
+      /** 此配裝依賴的未模擬系統中文標籤（點名警告）。 */
+      unmodeledSystems: string[];
     };
 
 export function BuilderView({
@@ -686,8 +693,39 @@ export function BuilderView({
   // ---- 推薦配裝匯入的套用 ----
   const applyImport = async (payload: BuilderImport) => {
     // 確保資料已載入：lock-armor 需查部位、lock-weapon 需查屬性
-    const gd = gameData ?? (await loadGameData());
+    const gd = gameData ?? (await loadGameData(gameId));
     if (!gameData) setGameData(gd);
+
+    // World full-build：走 World 匯入規則（護石對 id 固定、未模擬系統點名；不走 reco 護石）。
+    if (payload.kind === "full-build" && payload.gameId === "world") {
+      const importedNames = new Set(Object.keys(payload.requiredSkills));
+      if (payload.weaponType !== weaponType) {
+        setWeaponType(payload.weaponType);
+        setElementFilter("all");
+      }
+      setConditions((prev) => ({
+        ...prev,
+        requiredSkills: payload.requiredSkills,
+        excludedSkills: prev.excludedSkills.filter((s) => !importedNames.has(s)),
+      }));
+      // 護石：直接對 id 固定（World 資料裝備）。
+      setWorldFixedCharmId(payload.fixedCharmId ?? "");
+      setImportNotice({
+        source: "world",
+        importedCount: payload.importedCount,
+        totalCount: payload.totalCount,
+        unmodeledSystems: payload.unmodeledSystems ?? [],
+      });
+      setFromCommunityImport(false);
+      setConditionsOpen(true);
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => {
+          if (typeof window !== "undefined" && window.innerWidth < 1024) window.scrollTo({ top: 0, behavior: "smooth" });
+          else asideRef.current?.scrollTo?.({ top: 0, behavior: "smooth" });
+        })
+      );
+      return;
+    }
 
     if (payload.kind === "full-build") {
       const importedNames = new Set(Object.keys(payload.requiredSkills));
@@ -975,7 +1013,7 @@ export function BuilderView({
           {importNotice && (
             <div className="flex items-start justify-between gap-2 rounded-md border border-primary/30 bg-primary/10 px-3 py-2 text-xs text-primary">
               <div className="space-y-0.5">
-                {importNotice.source === "game8" ? (
+                {importNotice.source === "game8" && (
                   <p>
                     已從推薦配裝匯入核心技能 {importNotice.importedCount} 項
                     {importNotice.totalCount > importNotice.importedCount && (
@@ -985,7 +1023,19 @@ export function BuilderView({
                     )}
                     ，請確認後搜尋。
                   </p>
-                ) : (
+                )}
+                {importNotice.source === "world" && (
+                  <p>
+                    已從推薦配裝匯入核心技能 {importNotice.importedCount} 項
+                    {importNotice.totalCount > importNotice.importedCount && (
+                      <span className="text-primary/70">
+                        （共 {importNotice.totalCount} 項，其餘為附帶技能未匯入）
+                      </span>
+                    )}
+                    ，護石已固定，請確認後搜尋。
+                  </p>
+                )}
+                {importNotice.source === "community" && (
                   <p>
                     已從社群配裝鎖定 {importNotice.lockedArmorCount} 件防具並匯入
                     目標技能 {importNotice.skillCount} 項，孔位珠子將以你的護石計算，
@@ -1002,13 +1052,20 @@ export function BuilderView({
                 {importNotice.source === "game8" && importNotice.droppedAugment && (
                   <p className="text-amber-400">已排除傀異錬成加成的等級。</p>
                 )}
-                {importNotice.excludedSpecial.length > 0 && (
+                {(importNotice.source === "game8" || importNotice.source === "community") &&
+                  importNotice.excludedSpecial.length > 0 && (
+                    <p className="text-amber-400">
+                      已略過 {importNotice.excludedSpecial.slice(0, 3).join("、")}
+                      {importNotice.excludedSpecial.length > 3
+                        ? `等 ${importNotice.excludedSpecial.length} 項`
+                        : ""}
+                      錬成／狂竜化衍生技能（無法以基礎裝備重現）。
+                    </p>
+                  )}
+                {importNotice.source === "world" && importNotice.unmodeledSystems.length > 0 && (
                   <p className="text-amber-400">
-                    已略過 {importNotice.excludedSpecial.slice(0, 3).join("、")}
-                    {importNotice.excludedSpecial.length > 3
-                      ? `等 ${importNotice.excludedSpecial.length} 項`
-                      : ""}
-                    錬成／狂竜化衍生技能（無法以基礎裝備重現）。
+                    ⚠ 原配裝依賴 {importNotice.unmodeledSystems.join("、")}，引擎不模擬——
+                    已略過其能力，搜尋結果 EFR 會低於 Game8 實際值。
                   </p>
                 )}
               </div>
