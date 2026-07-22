@@ -1,5 +1,5 @@
 import type { Charm, SetBonus, Skill } from "@/types/build";
-import * as riseEfr from "./efr";
+import * as worldEfr from "./efr-world";
 import { buildStaticData, registerGameStaticData, type GameStaticData } from "./data";
 import {
   WORLD_PROFILE_PLAN,
@@ -20,9 +20,8 @@ import type { SearchDeps, WorldSearchExt } from "./build-search";
  * 所有 world JSON 皆以動態 import 載入 → 獨立 chunk、不進首屏 bundle
  * （PLAN 整合驗收 #4）。
  *
- * ⚠️ EFR：本階段 world profile 的 efr 以 **rise 模組佔位**（PLACEHOLDER）。
- * efr-world.ts 是 Phase 4 的事；冒煙測試只驗證機制（搜得出、上限對、珠子累計對），
- * 不對 EFR 數值排序下任何結論。見 TODO(Phase 4)。
+ * EFR：world profile 的 efr ＝ `efr-world.ts`（Phase 4，World 逐級數值 + 斬味倍率，
+ * 與 efr.ts 同介面）。已可據 EFR 排序（近似假設見 docs/efr-world-notes.md）。
  */
 
 export type WorldStatic = {
@@ -90,13 +89,12 @@ export async function ensureWorldRegistered(): Promise<WorldStatic> {
     .filter((s) => s.secretMaxLevel != null)
     .map((s) => s.name);
 
-  // 註冊 world profile（efr 佔位 = rise 模組；Phase 4 以 registerGameProfile 覆寫）
+  // 註冊 world profile（Phase 4：efr = efr-world.ts，World 逐級數值/斬味倍率，與 efr.ts 同介面）
   const profile: GameProfile = {
     ...WORLD_PROFILE_PLAN,
-    // TODO(Phase 4): 換成 efr-world.ts（同介面）。目前為 PLACEHOLDER，勿據其 EFR 數值下結論。
     efr: {
-      computeEfr: riseEfr.computeEfr,
-      EFR_RELEVANT_SKILLS: riseEfr.EFR_RELEVANT_SKILLS,
+      computeEfr: worldEfr.computeEfr,
+      EFR_RELEVANT_SKILLS: worldEfr.EFR_RELEVANT_SKILLS,
     },
     resolveSkillMax: makeResolveSkillMax(skillByName),
   };
