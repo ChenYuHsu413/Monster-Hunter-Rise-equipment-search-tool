@@ -49,7 +49,7 @@ export function getLoadedUnlocks(): UnlockData | null {
 export function loadUnlocks(): Promise<UnlockData> {
   if (cache) return Promise.resolve(cache);
   if (!inflight) {
-    inflight = import("@/data/unlocks.json").then((mod) => {
+    inflight = import("@/data/rise/unlocks.json").then((mod) => {
       const data = mod.default as unknown as UnlockData;
       cache = { entries: data.entries, monsters: data.monsters };
       return cache;

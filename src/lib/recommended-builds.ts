@@ -5,8 +5,8 @@ import type {
 } from "@/types/recommended";
 import { decorations } from "./data";
 import { loadGameData } from "./game-data";
-import rampageSkillsData from "@/data/rampage-skills.json";
-import rampageDecosData from "@/data/rampage-decorations.json";
+import rampageSkillsData from "@/data/rise/rampage-skills.json";
+import rampageDecosData from "@/data/rise/rampage-decorations.json";
 import kinsectNamesData from "../../data/kinsect-names.json";
 import editorialTranslationsData from "../../data/editorial-translations.json";
 import jpNameMapData from "../../data/jp-name-map.json";

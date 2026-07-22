@@ -6,6 +6,13 @@
  * - 保持可擴充：未來要接 SQLite / Supabase / IndexedDB 時，這些型別即為資料列的 shape。
  */
 
+/**
+ * 遊戲識別碼。定義於此共用型別 hub（而非 game-profile.ts），
+ * 讓資料層（game-data.ts / data.ts）可引用而不與 game-profile 形成循環依賴；
+ * game-profile.ts 直接複用本型別。
+ */
+export type GameId = "rise" | "world";
+
 export type SkillName = string;
 
 /** 技能名稱 → 等級 的對應表。等級為累計後的實際等級。 */
