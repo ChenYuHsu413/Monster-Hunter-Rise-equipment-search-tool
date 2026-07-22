@@ -88,27 +88,34 @@ console.log("  樣本：");
 for (const e of offExamples) console.log("    " + e);
 
 // ═══ (2) N 校準 ═══
-console.log("\n━━━ (2) 核心技能 N 校準（畢業裝 worldEndgame+worldMeta，top-N → World 搜尋有無結果）━━━");
-const graduate = builds.filter((b) => b.category === "worldEndgame" || b.category === "worldMeta");
-// 固定抽樣 10 筆（依 id 排序取樣，避免隨機不可複現）
-const sample = graduate.filter((_, i) => i % Math.floor(graduate.length / 10) === 0).slice(0, 10);
-for (const N of [3, 4, 5, 6]) {
-  let hit = 0;
-  const zero = [];
-  for (const b of sample) {
-    const { active } = recompute(b);
-    const resolveMax = (name) => profile.resolveSkillMax(name, active);
-    const rows = selectWorldCoreSkillRows(b, resolveMax, N);
-    const req = {};
-    for (const r of rows.rows) req[r.name] = r.level;
-    const { results } = searchBuilds({
-      weaponType: b.weaponType, weaponSearchMode: "search",
-      charms: [], fixedParts: {}, excludedItems: { armorIds: [], weaponIds: [] },
-      requiredSkills: req, excludedSkills: [], reservedSlots: { 4: 0, 3: 0, 2: 0, 1: 0 },
-      searchMode: "fast", resultLimit: 5,
-    }, deps);
-    if (results.length > 0) hit++; else zero.push(`${b.weaponType}/${b.buildName}`);
-  }
-  console.log(`  N=${N}: ${hit}/${sample.length} 有結果` + (zero.length ? `  零結果: ${zero.join(" ; ")}` : ""));
+// 固定抽樣 10 筆（依 id 排序取樣，避免隨機不可複現），對每個 N 跑 World 搜尋數有無結果。
+function sample10(pool) {
+  return pool.filter((_, i) => i % Math.max(1, Math.floor(pool.length / 10)) === 0).slice(0, 10);
 }
-console.log(`\n  抽樣: ${sample.map((b) => b.weaponType).join(", ")}`);
+function calibrateN(label, pool) {
+  console.log(`\n━━━ (2) 核心技能 N 校準（${label}，top-N → World 搜尋有無結果）━━━`);
+  const sample = sample10(pool);
+  for (const N of [3, 4, 5, 6]) {
+    let hit = 0;
+    const zero = [];
+    for (const b of sample) {
+      const { active } = recompute(b);
+      const resolveMax = (name) => profile.resolveSkillMax(name, active);
+      const rows = selectWorldCoreSkillRows(b, resolveMax, N);
+      const req = {};
+      for (const r of rows.rows) req[r.name] = r.level;
+      const { results } = searchBuilds({
+        weaponType: b.weaponType, weaponSearchMode: "search",
+        charms: [], fixedParts: {}, excludedItems: { armorIds: [], weaponIds: [] },
+        requiredSkills: req, excludedSkills: [], reservedSlots: { 4: 0, 3: 0, 2: 0, 1: 0 },
+        searchMode: "fast", resultLimit: 5,
+      }, deps);
+      if (results.length > 0) hit++; else zero.push(`${b.weaponType}/${b.buildName}`);
+    }
+    console.log(`  N=${N}: ${hit}/${sample.length} 有結果` + (zero.length ? `  零結果: ${zero.join(" ; ")}` : ""));
+  }
+  console.log(`  抽樣: ${sample.map((b) => b.weaponType).join(", ")}`);
+}
+calibrateN("畢業裝 worldEndgame+worldMeta", builds.filter((b) => b.category === "worldEndgame" || b.category === "worldMeta"));
+// A2：上位 worldHighRank 洞位/技能複雜度較畢業低，N 需獨立抽驗（畢業 N=5 未必適用）。
+calibrateN("上位 worldHighRank（A2 base-game HR）", builds.filter((b) => b.category === "worldHighRank"));

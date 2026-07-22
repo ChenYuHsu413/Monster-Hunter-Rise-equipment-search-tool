@@ -35,6 +35,7 @@ const ONLY = (args.find((a) => a.startsWith("--only=")) || "").slice(7).split(",
 const REFRESH = args.includes("--refresh");
 
 // 14 武器種 → Game8 archive id + 顯示中文（沿用 weaponTypes.json 的 zh）。
+// Iceborne（MR）build 頁：Endgame Meta / Meta / Progression 三階。
 const PAGES = [
   ["great-sword", 314144], ["long-sword", 314083], ["sword-and-shield", 314170],
   ["dual-blades", 314162], ["hammer", 314192], ["hunting-horn", 314231],
@@ -43,12 +44,31 @@ const PAGES = [
   ["light-bowgun", 314934], ["heavy-bowgun", 314965],
 ];
 
+// base-game「Best Builds for {W} (Base Game)」頁（A2 新增）。實測 14 頁的 build 全為
+// **上位（HR，armor rarity 8：Nergigante/Kulve/Drachen 級）**——★ PLAN↔實測衝突點名：
+// 任務原設「下位/上位」兩 category，但 Game8 MHW base-game 各武器種頁**只有上位配裝、零下位**
+// （下位裝即用即棄，社群不出全配裝；「Best Progression for Low Rank/High Rank」313887 為純導覽
+//  hub、無 build 表；亦無 Beginner/Starter 級 build 頁）。故 A2 只落 worldHighRank；
+//  worldLowRank 因來源無資料不建立（見 docs/world-game8-audit.md「A2」節）。
+const BASE_PAGES = [
+  ["great-sword", 314993], ["long-sword", 315034], ["sword-and-shield", 315188],
+  ["dual-blades", 315191], ["hammer", 315194], ["hunting-horn", 315257],
+  ["lance", 315200], ["gunlance", 315210], ["switch-axe", 315242],
+  ["charge-blade", 315275], ["insect-glaive", 315253], ["bow", 315271],
+  ["light-bowgun", 315202], ["heavy-bowgun", 315220],
+];
+
 // h2 階段標題 → 內部 category（實測收斂 3 階，見 audit 第六節）。
 function categoryOf(h2) {
   if (/Progression/i.test(h2)) return "worldProgression";
   if (/Endgame Meta Build\b/i.test(h2)) return "worldEndgame";
   if (/Meta Build/i.test(h2)) return "worldMeta";
   return null; // 非配裝區塊（Best Weapons/Skills/Counter/Related…）靜默略過
+}
+
+// base-game 頁只認「{W} Best Builds」h2 → 全歸 worldHighRank（Best Skills/Related Links 略過）。
+function categoryOfBase(h2) {
+  return /Best Builds/i.test(h2) ? "worldHighRank" : null;
 }
 
 // ───────── 名稱正規化與映射 ─────────
@@ -250,15 +270,15 @@ function parseBuild(html, weaponType, category, buildName, stageName, sourceUrl,
   return build;
 }
 
-/** 解析整頁：walk headers。 */
-function parsePage(html, weaponType, sourceUrl) {
+/** 解析整頁：walk headers。catFn 決定 h2→category（Iceborne vs base-game）。 */
+function parsePage(html, weaponType, sourceUrl, catFn = categoryOf) {
   const hdrs = [...html.matchAll(/a-header--([23])' id='(h[lm]_\d+)'>([^<]+)/g)]
     .map((m) => ({ lvl: +m[1], name: decodeEnt(m[3]).trim(), pos: m.index }));
   const builds = [];
   let curCat = null, idx = 0;
   for (let i = 0; i < hdrs.length; i++) {
     const hd = hdrs[i];
-    if (hd.lvl === 2) { curCat = categoryOf(hd.name); continue; }
+    if (hd.lvl === 2) { curCat = catFn(hd.name); continue; }
     if (hd.lvl === 3 && curCat) {
       const end = hdrs[i + 1] ? hdrs[i + 1].pos : hd.pos + 6000;
       const seg = html.slice(hd.pos, end);
@@ -283,14 +303,24 @@ async function fetchPage(id) {
 }
 
 async function main() {
-  const targets = PAGES.filter(([wt]) => ONLY.length === 0 || ONLY.includes(wt));
   const allBuilds = [];
+  // Iceborne（MR）頁
+  const targets = PAGES.filter(([wt]) => ONLY.length === 0 || ONLY.includes(wt));
   for (const [wt, id] of targets) {
     const url = `https://game8.co/games/Monster-Hunter-World/archives/${id}`;
     const html = await fetchPage(id);
-    const builds = parsePage(html, wt, url);
+    const builds = parsePage(html, wt, url, categoryOf);
     allBuilds.push(...builds);
-    console.log(`${wt.padEnd(16)} ${builds.length} 筆`);
+    console.log(`[IB] ${wt.padEnd(16)} ${builds.length} 筆`);
+  }
+  // base-game（HR 上位）頁 → worldHighRank
+  const baseTargets = BASE_PAGES.filter(([wt]) => ONLY.length === 0 || ONLY.includes(wt));
+  for (const [wt, id] of baseTargets) {
+    const url = `https://game8.co/games/Monster-Hunter-World/archives/${id}`;
+    const html = await fetchPage(id);
+    const builds = parsePage(html, wt, url, categoryOfBase);
+    allBuilds.push(...builds);
+    console.log(`[HR] ${wt.padEnd(16)} ${builds.length} 筆`);
   }
   const out = {
     meta: {

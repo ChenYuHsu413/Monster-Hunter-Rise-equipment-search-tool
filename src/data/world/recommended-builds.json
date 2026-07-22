@@ -20847,6 +20847,6805 @@
         }
       ],
       "unmodeled": {}
+    },
+    {
+      "id": "great-sword_worldHighRank_0",
+      "weaponType": "great-sword",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Soul of the Dragoon Great Sword Build",
+      "stageName": "Soul of the Dragoon Great Sword Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/314993",
+      "weapons": [
+        {
+          "rawNameEn": "Wyvern Ignition \"Impact\"",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "wweapon_1189"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_211",
+        "rawNameEn": "Mighty Charm II"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 5,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 3,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "匠",
+          "level": 2,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "great-sword_worldHighRank_1",
+      "weaponType": "great-sword",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Mixed Drachen Great Sword Build",
+      "stageName": "Mixed Drachen Great Sword Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/314993",
+      "weapons": [
+        {
+          "rawNameEn": "Wyvern Ignition \"Impact\"",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "wweapon_1189"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_194",
+        "rawNameEn": "Focus Charm II"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "集中",
+          "level": 3,
+          "rawNameEn": "Focus"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 3,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "great-sword_worldHighRank_2",
+      "weaponType": "great-sword",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Drachen Earplugs Great Sword Build",
+      "stageName": "Drachen Earplugs Great Sword Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/314993",
+      "weapons": [
+        {
+          "rawNameEn": "Wyvern Ignition \"Impact\"",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 2,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "wweapon_1189"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Bazel Coil Beta",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_530"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_188",
+        "rawNameEn": "Earplugs Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 6,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "耳塞",
+          "level": 5,
+          "rawNameEn": "Earplugs"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "long-sword_worldHighRank_0",
+      "weaponType": "long-sword",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Gala/Nergigante Long Sword Build",
+      "stageName": "Gala/Nergigante Long Sword Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315034",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Sword \"Fire\"",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "wweapon_10052"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Gala Suit Top Hat Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_723"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 2,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_24",
+        "rawNameEn": "Health Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 6,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 5,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "long-sword_worldHighRank_1",
+      "weaponType": "long-sword",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Empress Long Sword Build",
+      "stageName": "Empress Long Sword Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315034",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Sword \"Fire\"",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "wweapon_10052"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Empress Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 3,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_685"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_192",
+        "rawNameEn": "Exploiter Charm II"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "無傷",
+          "level": 3,
+          "rawNameEn": "Peak Performance"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "long-sword_worldHighRank_2",
+      "weaponType": "long-sword",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Divine Drachen Long Sword Build",
+      "stageName": "Divine Drachen Long Sword Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315034",
+      "weapons": [
+        {
+          "rawNameEn": "Divine Slasher",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "wweapon_168"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "集中",
+          "level": 1,
+          "rawNameEn": "Focus"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "long-sword_worldHighRank_3",
+      "weaponType": "long-sword",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Calamity Long Sword Build",
+      "stageName": "Calamity Long Sword Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315034",
+      "weapons": [
+        {
+          "rawNameEn": "Reaver \"Calamity\"",
+          "decorations": [],
+          "id": "wweapon_1153"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "sword-and-shield_worldHighRank_0",
+      "weaponType": "sword-and-shield",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Fatal Bite Sword and Shield Build",
+      "stageName": "Fatal Bite Sword and Shield Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315188",
+      "weapons": [
+        {
+          "rawNameEn": "Fatal Bite",
+          "decorations": [],
+          "id": "wweapon_1155"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "sword-and-shield_worldHighRank_1",
+      "weaponType": "sword-and-shield",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Empress Sword and Shield Build",
+      "stageName": "Empress Sword and Shield Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315188",
+      "weapons": [
+        {
+          "rawNameEn": "Empress Edge \"Styx\"",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "wweapon_1201"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kulve Taroth's Ire Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_655"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Gala Suit Cuffs Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_725"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_761"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_192",
+        "rawNameEn": "Exploiter Charm II"
+      },
+      "skillTotals": [
+        {
+          "id": "迴避性能",
+          "level": 7,
+          "rawNameEn": "Evade Window"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 3,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "超會心",
+          "level": 1,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "無傷",
+          "level": 1,
+          "rawNameEn": "Peak Performance"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "sword-and-shield_worldHighRank_2",
+      "weaponType": "sword-and-shield",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Grand Barong Sword and Shield Build",
+      "stageName": "Grand Barong Sword and Shield Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315188",
+      "weapons": [
+        {
+          "rawNameEn": "Grand Barong II",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "wweapon_224"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Kulve Taroth's Ire Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_655"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_24",
+        "rawNameEn": "Health Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 5,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "屬性解放／裝填擴充",
+          "level": 3,
+          "rawNameEn": "Free Elem/Ammo Up"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 1,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "dual-blades_worldHighRank_0",
+      "weaponType": "dual-blades",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Kjarr Dual Blades Build",
+      "stageName": "Kjarr Dual Blades Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315191",
+      "weapons": [
+        {
+          "rawNameEn": "Kjarr Daggers \"Water\"",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "wweapon_10388"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Gala Suit Top Hat Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            }
+          ],
+          "id": "warmor_723"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            },
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 6,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "無傷",
+          "level": 3,
+          "rawNameEn": "Peak Performance"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        }
+      ],
+      "unmodeled": {
+        "kjarr": true
+      }
+    },
+    {
+      "id": "dual-blades_worldHighRank_1",
+      "weaponType": "dual-blades",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Master's Touch Dual Blades Build",
+      "stageName": "Master's Touch Dual Blades Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315191",
+      "weapons": [
+        {
+          "rawNameEn": "Fire and Ice",
+          "decorations": [],
+          "id": "wweapon_343"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Kaiser Crown Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_87",
+              "count": 2,
+              "rawNameEn": "Sprinter Jewel 2"
+            }
+          ],
+          "id": "warmor_733"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Rathalos Mail Beta",
+          "decorations": [],
+          "id": "warmor_478"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Kaiser Vambraces Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_87",
+              "count": 1,
+              "rawNameEn": "Sprinter Jewel 2"
+            }
+          ],
+          "id": "warmor_735"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Azure Starlord Tassets Alpha",
+          "decorations": [],
+          "id": "warmor_741"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Kaiser Greaves Gamma",
+          "decorations": [],
+          "id": "warmor_737"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "匠",
+          "level": 4,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "跑者",
+          "level": 3,
+          "rawNameEn": "Marathon Runner"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "dual-blades_worldHighRank_2",
+      "weaponType": "dual-blades",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Empress Dual Blades Build",
+      "stageName": "Empress Dual Blades Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315191",
+      "weapons": [
+        {
+          "rawNameEn": "Empress Daggers \"Styx\"",
+          "decorations": [
+            {
+              "id": "wdeco_33",
+              "count": 2,
+              "rawNameEn": "Evasion Jewel 2"
+            }
+          ],
+          "id": "wweapon_1205"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_33",
+              "count": 1,
+              "rawNameEn": "Evasion Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_87",
+              "count": 1,
+              "rawNameEn": "Sprinter Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Kirin Hoop Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_672"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_24",
+        "rawNameEn": "Health Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 6,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "跑者",
+          "level": 3,
+          "rawNameEn": "Marathon Runner"
+        },
+        {
+          "id": "迴避性能",
+          "level": 3,
+          "rawNameEn": "Evade Window"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "hammer_worldHighRank_0",
+      "weaponType": "hammer",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Drachen Taroth Hammer Build",
+      "stageName": "Drachen Taroth Hammer Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315194",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Hammer \"Sleep\"",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "wweapon_10131"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Empress Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 3,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_685"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_133",
+        "rawNameEn": "Master's Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "無傷",
+          "level": 3,
+          "rawNameEn": "Peak Performance"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "hammer_worldHighRank_1",
+      "weaponType": "hammer",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Taroth Earplugs Hammer Build",
+      "stageName": "Taroth Earplugs Hammer Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315194",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Hammer \"Sleep\"",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "wweapon_10131"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Bazel Helm Beta",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_527"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_188",
+        "rawNameEn": "Earplugs Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "耳塞",
+          "level": 5,
+          "rawNameEn": "Earplugs"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "hammer_worldHighRank_2",
+      "weaponType": "hammer",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Nergigante Shatterer Build",
+      "stageName": "Nergigante Shatterer Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315194",
+      "weapons": [
+        {
+          "rawNameEn": "Diablos Shatterer II",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "wweapon_405"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_94",
+              "count": 1,
+              "rawNameEn": "Handicraft Jewel 3"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "匠",
+          "level": 4,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "超會心",
+          "level": 2,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "hunting-horn_worldHighRank_0",
+      "weaponType": "hunting-horn",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Empress Roar Blaze Build",
+      "stageName": "Empress Roar Blaze Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315257",
+      "weapons": [
+        {
+          "rawNameEn": "Empress Roar \"Blaze\"",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "wweapon_1215"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Empress Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            },
+            {
+              "id": "wdeco_52",
+              "count": 1,
+              "rawNameEn": "Sonorous Jewel 1"
+            }
+          ],
+          "id": "warmor_685"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_6",
+        "rawNameEn": "Attack Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "hunting-horn_worldHighRank_1",
+      "weaponType": "hunting-horn",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Empress Roar Blaze Build With Earplugs",
+      "stageName": "Empress Roar Blaze Build With Earplugs",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315257",
+      "weapons": [
+        {
+          "rawNameEn": "Empress Roar \"Blaze\"",
+          "decorations": [
+            {
+              "id": "wdeco_52",
+              "count": 1,
+              "rawNameEn": "Sonorous Jewel 1"
+            }
+          ],
+          "id": "wweapon_1215"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_49",
+              "count": 1,
+              "rawNameEn": "Earplug Jewel 3"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_49",
+              "count": 1,
+              "rawNameEn": "Earplug Jewel 3"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_761"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_188",
+        "rawNameEn": "Earplugs Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "hunting-horn_worldHighRank_2",
+      "weaponType": "hunting-horn",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Taroth Pipe Sleep Build",
+      "stageName": "Taroth Pipe Sleep Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315257",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Pipe \"Sleep\"",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "wweapon_10156"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Beta",
+          "decorations": [
+            {
+              "id": "wdeco_52",
+              "count": 1,
+              "rawNameEn": "Sonorous Jewel 1"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_568"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 2,
+              "rawNameEn": "Flawless Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_192",
+        "rawNameEn": "Exploiter Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "hunting-horn_worldHighRank_3",
+      "weaponType": "hunting-horn",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Deep Vero Build",
+      "stageName": "Deep Vero Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315257",
+      "weapons": [
+        {
+          "rawNameEn": "Deep Vero",
+          "decorations": [],
+          "id": "wweapon_1161"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_52",
+              "count": 1,
+              "rawNameEn": "Sonorous Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "lance_worldHighRank_0",
+      "weaponType": "lance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Drachen Taroth Lance Build",
+      "stageName": "Drachen Taroth Lance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315200",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Crest \"Claw\"",
+          "decorations": [],
+          "id": "wweapon_10174"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Vaal Hazak Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_76",
+              "count": 2,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_716"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_76",
+              "count": 1,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 4,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "防禦性能",
+          "level": 3,
+          "rawNameEn": "Guard"
+        },
+        {
+          "id": "回復速度",
+          "level": 2,
+          "rawNameEn": "Recovery Speed"
+        },
+        {
+          "id": "龍屬性攻擊強化",
+          "level": 1,
+          "rawNameEn": "Dragon Attack"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "lance_worldHighRank_1",
+      "weaponType": "lance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Master's Touch Taroth Lance Build",
+      "stageName": "Master's Touch Taroth Lance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315200",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Crest \"Claw\"",
+          "decorations": [],
+          "id": "wweapon_10174"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Kaiser Crown Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 2,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_733"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kulve Taroth's Ire Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_655"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Kaiser Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_76",
+              "count": 1,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_575"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Kaiser Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_76",
+              "count": 2,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_736"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Empress Greaves Beta",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_688"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "力量解放",
+          "level": 3,
+          "rawNameEn": "Latent Power"
+        },
+        {
+          "id": "防禦性能",
+          "level": 3,
+          "rawNameEn": "Guard"
+        },
+        {
+          "id": "昏厥耐性",
+          "level": 2,
+          "rawNameEn": "Stun Resistance"
+        },
+        {
+          "id": "看破",
+          "level": 2,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "lance_worldHighRank_2",
+      "weaponType": "lance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Fiendish Nergigante Lance Build",
+      "stageName": "Fiendish Nergigante Lance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315200",
+      "weapons": [
+        {
+          "rawNameEn": "Fiendish Tower",
+          "decorations": [],
+          "id": "wweapon_1163"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_76",
+              "count": 1,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 6,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 3,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "防禦性能",
+          "level": 1,
+          "rawNameEn": "Guard"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "lance_worldHighRank_3",
+      "weaponType": "lance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Fiendish Tower Lance Build",
+      "stageName": "Fiendish Tower Lance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315200",
+      "weapons": [
+        {
+          "rawNameEn": "Fiendish Tower",
+          "decorations": [],
+          "id": "wweapon_1163"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Kulve Taroth's Fury Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_39",
+              "count": 1,
+              "rawNameEn": "Grinder Jewel 1"
+            }
+          ],
+          "id": "warmor_654"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kushala Cista Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_66",
+              "count": 1,
+              "rawNameEn": "Sharp Jewel 2"
+            }
+          ],
+          "id": "warmor_584"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Nergigante Vambraces Alpha",
+          "decorations": [],
+          "id": "warmor_565"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Beta",
+          "decorations": [
+            {
+              "id": "wdeco_82",
+              "count": 1,
+              "rawNameEn": "Challenger Jewel 2"
+            },
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_687"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Dante's Leather Boots Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_39",
+              "count": 2,
+              "rawNameEn": "Grinder Jewel 1"
+            }
+          ],
+          "id": "warmor_678"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_6",
+        "rawNameEn": "Attack Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "挑戰者",
+          "level": 5,
+          "rawNameEn": "Agitator"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "砥石使用高速化",
+          "level": 3,
+          "rawNameEn": "Speed Sharpening"
+        },
+        {
+          "id": "匠",
+          "level": 2,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "整備",
+          "level": 2,
+          "rawNameEn": "Tool Specialist"
+        },
+        {
+          "id": "屬性解放／裝填擴充",
+          "level": 1,
+          "rawNameEn": "Free Elem/Ammo Up"
+        },
+        {
+          "id": "剛刃研磨",
+          "level": 1,
+          "rawNameEn": "Protective Polish"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "gunlance_worldHighRank_0",
+      "weaponType": "gunlance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Razor Sharp / Spare Shot + Water Gunlance Build",
+      "stageName": "Razor Sharp / Spare Shot + Water Gunlance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315210",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Buster \"Water\"",
+          "decorations": [
+            {
+              "id": "wdeco_85",
+              "count": 1,
+              "rawNameEn": "Magazine Jewel 2"
+            }
+          ],
+          "id": "wweapon_10205"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Xeno'jiiva Headgear Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_85",
+              "count": 3,
+              "rawNameEn": "Magazine Jewel 2"
+            }
+          ],
+          "id": "warmor_768"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_69",
+        "rawNameEn": "Ironside Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "看破",
+          "level": 4,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "防禦性能",
+          "level": 3,
+          "rawNameEn": "Guard"
+        },
+        {
+          "id": "砲術",
+          "level": 3,
+          "rawNameEn": "Artillery"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        },
+        {
+          "id": "屬性異常狀態的耐性",
+          "level": 2,
+          "rawNameEn": "Blight Resistance"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "砲彈裝填數UP",
+          "level": 1,
+          "rawNameEn": "Capacity Boost"
+        },
+        {
+          "id": "利刃／彈丸節約",
+          "level": 1,
+          "rawNameEn": "Razor Sharp/Spare Shot"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "gunlance_worldHighRank_1",
+      "weaponType": "gunlance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Evasion + Sharp / Spare Shot Gunlance Build",
+      "stageName": "Evasion + Sharp / Spare Shot Gunlance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315210",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Buster \"Water\"",
+          "decorations": [
+            {
+              "id": "wdeco_85",
+              "count": 1,
+              "rawNameEn": "Magazine Jewel 2"
+            }
+          ],
+          "id": "wweapon_10205"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Xeno'jiiva Headgear Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_89",
+              "count": 3,
+              "rawNameEn": "Artillery Jewel 1"
+            }
+          ],
+          "id": "warmor_768"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_761"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_63",
+              "count": 2,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_136",
+        "rawNameEn": "Evasion Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 3,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "迴避性能",
+          "level": 5,
+          "rawNameEn": "Evade Window"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 2,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "砲術",
+          "level": 3,
+          "rawNameEn": "Artillery"
+        },
+        {
+          "id": "砲彈裝填數UP",
+          "level": 1,
+          "rawNameEn": "Capacity Boost"
+        },
+        {
+          "id": "特殊射擊強化",
+          "level": 1,
+          "rawNameEn": "Special Ammo Boost"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "屬性異常狀態的耐性",
+          "level": 2,
+          "rawNameEn": "Blight Resistance"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        },
+        {
+          "id": "強化持續",
+          "level": 2,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "利刃／彈丸節約",
+          "level": 1,
+          "rawNameEn": "Razor Sharp/Spare Shot"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "gunlance_worldHighRank_2",
+      "weaponType": "gunlance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Ironside Sleep Gunlance Build",
+      "stageName": "Ironside Sleep Gunlance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315210",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Buster \"Sleep\"",
+          "decorations": [
+            {
+              "id": "wdeco_85",
+              "count": 1,
+              "rawNameEn": "Magazine Jewel 2"
+            }
+          ],
+          "id": "wweapon_10207"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_94",
+              "count": 1,
+              "rawNameEn": "Handicraft Jewel 3"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Empress Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_680"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Gala Suit Cuffs Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_66",
+              "count": 1,
+              "rawNameEn": "Sharp Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            },
+            {
+              "id": "wdeco_89",
+              "count": 1,
+              "rawNameEn": "Artillery Jewel 1"
+            }
+          ],
+          "id": "warmor_725"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Kushala Cocoon Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_89",
+              "count": 1,
+              "rawNameEn": "Artillery Jewel 1"
+            }
+          ],
+          "id": "warmor_756"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Nergigante Greaves Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_782"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_69",
+        "rawNameEn": "Ironside Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "砲術",
+          "level": 3,
+          "rawNameEn": "Artillery"
+        },
+        {
+          "id": "防禦性能",
+          "level": 3,
+          "rawNameEn": "Guard"
+        },
+        {
+          "id": "無傷",
+          "level": 2,
+          "rawNameEn": "Peak Performance"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        },
+        {
+          "id": "砲彈裝填數UP",
+          "level": 1,
+          "rawNameEn": "Capacity Boost"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "剛刃研磨",
+          "level": 1,
+          "rawNameEn": "Protective Polish"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "gunlance_worldHighRank_3",
+      "weaponType": "gunlance",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Soul of the Dragoon Poison Gunlance Build",
+      "stageName": "Soul of the Dragoon Poison Gunlance Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315210",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Buster \"Poison\"",
+          "decorations": [
+            {
+              "id": "wdeco_94",
+              "count": 1,
+              "rawNameEn": "Handicraft Jewel 3"
+            }
+          ],
+          "id": "wweapon_10206"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Beta",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 2,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_687"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_69",
+        "rawNameEn": "Ironside Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "防禦性能",
+          "level": 3,
+          "rawNameEn": "Guard"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "switch-axe_worldHighRank_0",
+      "weaponType": "switch-axe",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Tyrannos Soul of the Dragoon Switch Axe Build",
+      "stageName": "Tyrannos Soul of the Dragoon Switch Axe Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315242",
+      "weapons": [
+        {
+          "rawNameEn": "Terror Tyrannos",
+          "decorations": [],
+          "id": "wweapon_1167"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 3,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "飛燕【屬性】",
+          "level": 1,
+          "rawNameEn": "Elemental Airborne"
+        },
+        {
+          "id": "達人藝",
+          "level": 1,
+          "rawNameEn": "Master's Touch"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "switch-axe_worldHighRank_1",
+      "weaponType": "switch-axe",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Paralysis Attack Switch Axe Build",
+      "stageName": "Paralysis Attack Switch Axe Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315242",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Axe \"Paralysis\"",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "wweapon_10233"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_74",
+              "count": 1,
+              "rawNameEn": "Paralyzer Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Kirin Leg Guards Beta",
+          "decorations": [
+            {
+              "id": "wdeco_74",
+              "count": 1,
+              "rawNameEn": "Paralyzer Jewel 1"
+            }
+          ],
+          "id": "warmor_612"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_6",
+        "rawNameEn": "Attack Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 6,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "麻痺屬性強化",
+          "level": 3,
+          "rawNameEn": "Paralysis Attack"
+        },
+        {
+          "id": "屬性解放／裝填擴充",
+          "level": 3,
+          "rawNameEn": "Free Elem/Ammo Up"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "飛燕【屬性】",
+          "level": 1,
+          "rawNameEn": "Elemental Airborne"
+        },
+        {
+          "id": "達人藝",
+          "level": 1,
+          "rawNameEn": "Master's Touch"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "switch-axe_worldHighRank_2",
+      "weaponType": "switch-axe",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Paralysis Evasion Switch Axe Build",
+      "stageName": "Paralysis Evasion Switch Axe Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315242",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Axe \"Paralysis\"",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "wweapon_10233"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_761"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_136",
+        "rawNameEn": "Evasion Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "迴避性能",
+          "level": 5,
+          "rawNameEn": "Evade Window"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "看破",
+          "level": 4,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 3,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "體力增強",
+          "level": 2,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "switch-axe_worldHighRank_3",
+      "weaponType": "switch-axe",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Power Smasher Evasion Switch Axe Build",
+      "stageName": "Power Smasher Evasion Switch Axe Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315242",
+      "weapons": [
+        {
+          "rawNameEn": "Power Smasher II",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "wweapon_717"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Drachen Armet Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_718"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "warmor_761"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_136",
+        "rawNameEn": "Evasion Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "迴避性能",
+          "level": 5,
+          "rawNameEn": "Evade Window"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "看破",
+          "level": 4,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "超會心",
+          "level": 3,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "飛燕",
+          "level": 1,
+          "rawNameEn": "Airborne"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 1,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "減輕膽怯",
+          "level": 1,
+          "rawNameEn": "Flinch Free"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "switch-axe_worldHighRank_4",
+      "weaponType": "switch-axe",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Power Smasher Evasion Switch Axe Build",
+      "stageName": "Power Smasher Evasion Switch Axe Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315242",
+      "weapons": [
+        {
+          "rawNameEn": "Axe of Demons+",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "wweapon_2713"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kushala Cista Beta",
+          "decorations": [
+            {
+              "id": "wdeco_66",
+              "count": 1,
+              "rawNameEn": "Sharp Jewel 2"
+            }
+          ],
+          "id": "warmor_589"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Empress Vambraces Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            }
+          ],
+          "id": "warmor_760"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Vaal Hazak Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_39",
+              "count": 1,
+              "rawNameEn": "Grinder Jewel 1"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_716"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Dante's Leather Boots Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_39",
+              "count": 2,
+              "rawNameEn": "Grinder Jewel 1"
+            }
+          ],
+          "id": "warmor_678"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "匠",
+          "level": 5,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "砥石使用高速化",
+          "level": 3,
+          "rawNameEn": "Speed Sharpening"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 3,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "廣域化",
+          "level": 2,
+          "rawNameEn": "Wide-Range"
+        },
+        {
+          "id": "回復速度",
+          "level": 2,
+          "rawNameEn": "Recovery Speed"
+        },
+        {
+          "id": "龍屬性攻擊強化",
+          "level": 1,
+          "rawNameEn": "Dragon Attack"
+        },
+        {
+          "id": "剛刃研磨",
+          "level": 1,
+          "rawNameEn": "Protective Polish"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "charge-blade_worldHighRank_0",
+      "weaponType": "charge-blade",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Master's Touch Charge Blade Build",
+      "stageName": "Master's Touch Charge Blade Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315275",
+      "weapons": [
+        {
+          "rawNameEn": "Kjarr Strongarm \"Ice\"",
+          "decorations": [],
+          "id": "wweapon_10430"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Kaiser Crown Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_85",
+              "count": 1,
+              "rawNameEn": "Magazine Jewel 2"
+            }
+          ],
+          "id": "warmor_733"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Damascus Mail Beta",
+          "decorations": [],
+          "id": "warmor_538"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Kaiser Vambraces Alpha",
+          "decorations": [],
+          "id": "warmor_575"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Damascus Coil Beta",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_540"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Kaiser Greaves Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_737"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "看破",
+          "level": 7,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "集中",
+          "level": 3,
+          "rawNameEn": "Focus"
+        },
+        {
+          "id": "匠",
+          "level": 3,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "超會心",
+          "level": 1,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "砲彈裝填數UP",
+          "level": 1,
+          "rawNameEn": "Capacity Boost"
+        },
+        {
+          "id": "防禦性能",
+          "level": 1,
+          "rawNameEn": "Guard"
+        }
+      ],
+      "unmodeled": {
+        "kjarr": true
+      }
+    },
+    {
+      "id": "charge-blade_worldHighRank_1",
+      "weaponType": "charge-blade",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Dragonking Diablos Charge Blade Build",
+      "stageName": "Dragonking Diablos Charge Blade Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315275",
+      "weapons": [
+        {
+          "rawNameEn": "Diablos Tyrannis II",
+          "decorations": [],
+          "id": "wweapon_795"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_85",
+              "count": 1,
+              "rawNameEn": "Magazine Jewel 2"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Nergigante Mail Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_76",
+              "count": 1,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_779"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Kushala Grip Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_89",
+              "count": 3,
+              "rawNameEn": "Artillery Jewel 1"
+            }
+          ],
+          "id": "warmor_755"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Kushala Cocoon Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_756"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Nergigante Greaves Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_93",
+              "count": 1,
+              "rawNameEn": "Charger Jewel 2"
+            },
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_782"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "匠",
+          "level": 5,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "攻擊",
+          "level": 5,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "集中",
+          "level": 3,
+          "rawNameEn": "Focus"
+        },
+        {
+          "id": "砲術",
+          "level": 3,
+          "rawNameEn": "Artillery"
+        },
+        {
+          "id": "弱點特效",
+          "level": 3,
+          "rawNameEn": "Weakness Exploit"
+        },
+        {
+          "id": "防禦性能",
+          "level": 1,
+          "rawNameEn": "Guard"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "砲彈裝填數UP",
+          "level": 1,
+          "rawNameEn": "Capacity Boost"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        },
+        {
+          "id": "達人藝",
+          "level": 1,
+          "rawNameEn": "Master's Touch"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "charge-blade_worldHighRank_2",
+      "weaponType": "charge-blade",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Diablos Handicraft Charge Blade Build",
+      "stageName": "Diablos Handicraft Charge Blade Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315275",
+      "weapons": [
+        {
+          "rawNameEn": "Diablos Tyrannis II",
+          "decorations": [],
+          "id": "wweapon_795"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_76",
+              "count": 1,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_564"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Damascus Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_89",
+              "count": 3,
+              "rawNameEn": "Artillery Jewel 1"
+            }
+          ],
+          "id": "warmor_538"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_66",
+              "count": 1,
+              "rawNameEn": "Sharp Jewel 2"
+            },
+            {
+              "id": "wdeco_85",
+              "count": 1,
+              "rawNameEn": "Magazine Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Gamma",
+          "decorations": [],
+          "id": "warmor_761"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Kushala Cocoon Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_93",
+              "count": 1,
+              "rawNameEn": "Charger Jewel 2"
+            }
+          ],
+          "id": "warmor_756"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "匠",
+          "level": 5,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "集中",
+          "level": 4,
+          "rawNameEn": "Focus"
+        },
+        {
+          "id": "砲術",
+          "level": 3,
+          "rawNameEn": "Artillery"
+        },
+        {
+          "id": "體力增強",
+          "level": 3,
+          "rawNameEn": "Health Boost"
+        },
+        {
+          "id": "看破",
+          "level": 3,
+          "rawNameEn": "Critical Eye"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "砲彈裝填數UP",
+          "level": 1,
+          "rawNameEn": "Capacity Boost"
+        },
+        {
+          "id": "防禦性能",
+          "level": 1,
+          "rawNameEn": "Guard"
+        },
+        {
+          "id": "剛刃研磨",
+          "level": 1,
+          "rawNameEn": "Protective Polish"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "charge-blade_worldHighRank_3",
+      "weaponType": "charge-blade",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Xeno'jiiva Divinity Charge Blade Build",
+      "stageName": "Xeno'jiiva Divinity Charge Blade Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315275",
+      "weapons": [
+        {
+          "rawNameEn": "Diablos Tyrannis II",
+          "decorations": [],
+          "id": "wweapon_795"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Kushala Glare Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_93",
+              "count": 1,
+              "rawNameEn": "Charger Jewel 2"
+            }
+          ],
+          "id": "warmor_753"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Damascus Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_89",
+              "count": 3,
+              "rawNameEn": "Artillery Jewel 1"
+            }
+          ],
+          "id": "warmor_538"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 2,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_85",
+              "count": 1,
+              "rawNameEn": "Magazine Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [
+        {
+          "id": "匠",
+          "level": 5,
+          "rawNameEn": "Handicraft"
+        },
+        {
+          "id": "攻擊",
+          "level": 4,
+          "rawNameEn": "Attack Boost"
+        },
+        {
+          "id": "集中",
+          "level": 3,
+          "rawNameEn": "Focus"
+        },
+        {
+          "id": "砲術",
+          "level": 3,
+          "rawNameEn": "Artillery"
+        },
+        {
+          "id": "超會心",
+          "level": 2,
+          "rawNameEn": "Critical Boost"
+        },
+        {
+          "id": "精神抖擻",
+          "level": 2,
+          "rawNameEn": "Maximum Might"
+        },
+        {
+          "id": "強化持續",
+          "level": 1,
+          "rawNameEn": "Power Prolonger"
+        },
+        {
+          "id": "砲彈裝填數UP",
+          "level": 1,
+          "rawNameEn": "Capacity Boost"
+        },
+        {
+          "id": "特殊射擊強化",
+          "level": 1,
+          "rawNameEn": "Special Ammo Boost"
+        },
+        {
+          "id": "無屬性強化",
+          "level": 1,
+          "rawNameEn": "Non-elemental Boost"
+        }
+      ],
+      "unmodeled": {}
+    },
+    {
+      "id": "insect-glaive_worldHighRank_0",
+      "weaponType": "insect-glaive",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Offensive Grunge Storm Build",
+      "stageName": "Offensive Grunge Storm Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315253",
+      "weapons": [
+        {
+          "rawNameEn": "Grunge Storm",
+          "decorations": [],
+          "id": "wweapon_1180"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Nergigante Helm Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_563"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Drachen Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_721"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_177",
+        "rawNameEn": "Handicraft Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "insect-glaive_worldHighRank_1",
+      "weaponType": "insect-glaive",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Defensive Empress Cane Styx Build",
+      "stageName": "Defensive Empress Cane Styx Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315253",
+      "weapons": [
+        {
+          "rawNameEn": "Empress Cane \"Styx\"",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "wweapon_1242"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Gala Suit Top Hat Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_723"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Empress Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_680"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 2,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_682"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_192",
+        "rawNameEn": "Exploiter Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "insect-glaive_worldHighRank_2",
+      "weaponType": "insect-glaive",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Taroth Glaive Paralysis Build",
+      "stageName": "Taroth Glaive Paralysis Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315253",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Glaive \"Paralysis\"",
+          "decorations": [
+            {
+              "id": "wdeco_47",
+              "count": 1,
+              "rawNameEn": "Brace Jewel 3"
+            }
+          ],
+          "id": "wweapon_10284"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Gala Suit Top Hat Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_723"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kirin Jacket Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_670"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Vambraces Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 2,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_720"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Kulve Taroth's Malic Beta",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_662"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_192",
+        "rawNameEn": "Exploiter Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "bow_worldHighRank_0",
+      "weaponType": "bow",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "General Bow Build",
+      "stageName": "General Bow Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315271",
+      "weapons": [
+        {
+          "rawNameEn": "Anja Arch III",
+          "decorations": [],
+          "id": "wweapon_1134"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Rath Soul Helm Beta",
+          "decorations": [],
+          "id": "warmor_487"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Rathalos Mail Beta",
+          "decorations": [],
+          "id": "warmor_478"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Kushala Grip Beta",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_590"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Empress Coil Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_31",
+              "count": 1,
+              "rawNameEn": "Physique Jewel 2"
+            }
+          ],
+          "id": "warmor_761"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Empress Greaves Beta",
+          "decorations": [
+            {
+              "id": "wdeco_31",
+              "count": 1,
+              "rawNameEn": "Physique Jewel 2"
+            },
+            {
+              "id": "wdeco_95",
+              "count": 1,
+              "rawNameEn": "Mighty Bow Jewel 2"
+            }
+          ],
+          "id": "warmor_688"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_163",
+        "rawNameEn": "Fitness Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "bow_worldHighRank_1",
+      "weaponType": "bow",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Thunder Bow Build",
+      "stageName": "Thunder Bow Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315271",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Arrow \"Thunder\"",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            }
+          ],
+          "id": "wweapon_10360"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Rath Soul Helm Beta",
+          "decorations": [
+            {
+              "id": "wdeco_56",
+              "count": 2,
+              "rawNameEn": "Bolt Jewel 1"
+            }
+          ],
+          "id": "warmor_487"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Rathalos Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_56",
+              "count": 1,
+              "rawNameEn": "Bolt Jewel 1"
+            }
+          ],
+          "id": "warmor_478"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_95",
+              "count": 1,
+              "rawNameEn": "Mighty Bow Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Kulve Taroth's Malic Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "warmor_776"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Kirin Leg Guards Beta",
+          "decorations": [
+            {
+              "id": "wdeco_60",
+              "count": 2,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_612"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_163",
+        "rawNameEn": "Fitness Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "bow_worldHighRank_2",
+      "weaponType": "bow",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Water Bow Build",
+      "stageName": "Water Bow Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315271",
+      "weapons": [
+        {
+          "rawNameEn": "Kjarr Bow \"Water\"",
+          "decorations": [],
+          "id": "wweapon_10456"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Gala Suit Top Hat Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_54",
+              "count": 2,
+              "rawNameEn": "Stream Jewel 1"
+            }
+          ],
+          "id": "warmor_723"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_71",
+              "count": 1,
+              "rawNameEn": "Forceshot Jewel 3"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            },
+            {
+              "id": "wdeco_54",
+              "count": 1,
+              "rawNameEn": "Stream Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Nergigante Greaves Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_95",
+              "count": 1,
+              "rawNameEn": "Mighty Bow Jewel 2"
+            },
+            {
+              "id": "wdeco_82",
+              "count": 1,
+              "rawNameEn": "Challenger Jewel 2"
+            }
+          ],
+          "id": "warmor_782"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_163",
+        "rawNameEn": "Fitness Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {
+        "kjarr": true
+      }
+    },
+    {
+      "id": "bow_worldHighRank_3",
+      "weaponType": "bow",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Fire Bow Build",
+      "stageName": "Fire Bow Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315271",
+      "weapons": [
+        {
+          "rawNameEn": "Anja Arch III",
+          "decorations": [],
+          "id": "wweapon_1134"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Rath Soul Helm Beta",
+          "decorations": [
+            {
+              "id": "wdeco_32",
+              "count": 2,
+              "rawNameEn": "Blaze Jewel 1"
+            }
+          ],
+          "id": "warmor_487"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Rathalos Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_32",
+              "count": 1,
+              "rawNameEn": "Blaze Jewel 1"
+            }
+          ],
+          "id": "warmor_478"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_95",
+              "count": 1,
+              "rawNameEn": "Mighty Bow Jewel 2"
+            },
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Zorah Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            },
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_766"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Kaiser Greaves Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_71",
+              "count": 1,
+              "rawNameEn": "Forceshot Jewel 3"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_737"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_163",
+        "rawNameEn": "Fitness Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "bow_worldHighRank_4",
+      "weaponType": "bow",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Ice Bow Build",
+      "stageName": "Ice Bow Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315271",
+      "weapons": [
+        {
+          "rawNameEn": "Kjarr Bow \"Stream\"",
+          "decorations": [],
+          "id": "wweapon_10453"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Gala Suit Top Hat Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_55",
+              "count": 2,
+              "rawNameEn": "Frost Jewel 1"
+            }
+          ],
+          "id": "warmor_723"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_71",
+              "count": 1,
+              "rawNameEn": "Forceshot Jewel 3"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            },
+            {
+              "id": "wdeco_55",
+              "count": 1,
+              "rawNameEn": "Frost Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Nergigante Greaves Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_95",
+              "count": 1,
+              "rawNameEn": "Mighty Bow Jewel 2"
+            },
+            {
+              "id": "wdeco_82",
+              "count": 1,
+              "rawNameEn": "Challenger Jewel 2"
+            }
+          ],
+          "id": "warmor_782"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_163",
+        "rawNameEn": "Fitness Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {
+        "kjarr": true
+      }
+    },
+    {
+      "id": "bow_worldHighRank_5",
+      "weaponType": "bow",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Dragon Bow Build",
+      "stageName": "Dragon Bow Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315271",
+      "weapons": [
+        {
+          "rawNameEn": "Kjarr Bow \"Decay\"",
+          "decorations": [],
+          "id": "wweapon_10455"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Gala Suit Top Hat Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_57",
+              "count": 2,
+              "rawNameEn": "Dragon Jewel 1"
+            }
+          ],
+          "id": "warmor_723"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Drachen Mail Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_71",
+              "count": 1,
+              "rawNameEn": "Forceshot Jewel 3"
+            }
+          ],
+          "id": "warmor_719"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Drachen Greaves Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_722"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            },
+            {
+              "id": "wdeco_57",
+              "count": 1,
+              "rawNameEn": "Dragon Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Nergigante Greaves Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_95",
+              "count": 1,
+              "rawNameEn": "Mighty Bow Jewel 2"
+            },
+            {
+              "id": "wdeco_82",
+              "count": 1,
+              "rawNameEn": "Challenger Jewel 2"
+            }
+          ],
+          "id": "warmor_782"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_163",
+        "rawNameEn": "Fitness Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {
+        "kjarr": true
+      }
+    },
+    {
+      "id": "light-bowgun_worldHighRank_0",
+      "weaponType": "light-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Offensive Taroth Blitz Support Build",
+      "stageName": "Offensive Taroth Blitz Support Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315202",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Blitz \"Support\"",
+          "decorations": [
+            {
+              "id": "wdeco_71",
+              "count": 1,
+              "rawNameEn": "Forceshot Jewel 3"
+            }
+          ],
+          "id": "wweapon_10312"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Kaiser Crown Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            }
+          ],
+          "id": "warmor_733"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Empress Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 3,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_685"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 2,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_174",
+        "rawNameEn": "Awakening Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "light-bowgun_worldHighRank_1",
+      "weaponType": "light-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Defensive Taroth Blitz Support Build",
+      "stageName": "Defensive Taroth Blitz Support Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315202",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Blitz \"Support\"",
+          "decorations": [
+            {
+              "id": "wdeco_71",
+              "count": 1,
+              "rawNameEn": "Forceshot Jewel 3"
+            }
+          ],
+          "id": "wweapon_10312"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Kaiser Crown Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 2,
+              "rawNameEn": "Mighty Jewel 2"
+            }
+          ],
+          "id": "warmor_733"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kirin Jacket Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_670"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 2,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 2,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_136",
+        "rawNameEn": "Evasion Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "light-bowgun_worldHighRank_2",
+      "weaponType": "light-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Shotgun Build",
+      "stageName": "Shotgun Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315202",
+      "weapons": [
+        {
+          "rawNameEn": "Devil's Madness",
+          "decorations": [],
+          "id": "wweapon_1182"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kirin Jacket Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_670"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_86",
+              "count": 1,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_211",
+        "rawNameEn": "Mighty Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "light-bowgun_worldHighRank_3",
+      "weaponType": "light-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "General Light Bowgun Build for Each Element",
+      "stageName": "General Light Bowgun Build for Each Element",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315202",
+      "weapons": [
+        {
+          "rawNameEn": "Kjarr Blitz \"Thunder\"",
+          "decorations": [],
+          "id": "wweapon_10444"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Empress Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 3,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_685"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_86",
+              "count": 2,
+              "rawNameEn": "Mighty Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_174",
+        "rawNameEn": "Awakening Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {
+        "kjarr": true
+      }
+    },
+    {
+      "id": "heavy-bowgun_worldHighRank_0",
+      "weaponType": "heavy-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Offensive Dark Devourer Build",
+      "stageName": "Offensive Dark Devourer Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315220",
+      "weapons": [
+        {
+          "rawNameEn": "Dark Devourer",
+          "decorations": [],
+          "id": "wweapon_1184"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Xeno'jiiva Headgear Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_19",
+              "count": 1,
+              "rawNameEn": "Fortitude Jewel 1"
+            },
+            {
+              "id": "wdeco_84",
+              "count": 1,
+              "rawNameEn": "Flawless Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_768"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Empress Mail Beta",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            },
+            {
+              "id": "wdeco_29",
+              "count": 1,
+              "rawNameEn": "Maintenance Jewel 1"
+            }
+          ],
+          "id": "warmor_685"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_29",
+              "count": 2,
+              "rawNameEn": "Maintenance Jewel 1"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Kirin Leg Guards Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_673"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_6",
+        "rawNameEn": "Attack Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "heavy-bowgun_worldHighRank_1",
+      "weaponType": "heavy-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Defensive Dark Devourer Build",
+      "stageName": "Defensive Dark Devourer Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315220",
+      "weapons": [
+        {
+          "rawNameEn": "Dark Devourer",
+          "decorations": [],
+          "id": "wweapon_1184"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Xeno'jiiva Headgear Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_19",
+              "count": 3,
+              "rawNameEn": "Fortitude Jewel 1"
+            }
+          ],
+          "id": "warmor_768"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kirin Jacket Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_670"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Zorah Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_29",
+              "count": 1,
+              "rawNameEn": "Maintenance Jewel 1"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_765"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 2,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 3,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_188",
+        "rawNameEn": "Earplugs Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "heavy-bowgun_worldHighRank_2",
+      "weaponType": "heavy-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Offensive Shotgun Build",
+      "stageName": "Offensive Shotgun Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315220",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Assault \"Glutton\"",
+          "decorations": [],
+          "id": "wweapon_10325"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kirin Jacket Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_670"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 2,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_211",
+        "rawNameEn": "Mighty Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "heavy-bowgun_worldHighRank_3",
+      "weaponType": "heavy-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Defensive Shotgun Build",
+      "stageName": "Defensive Shotgun Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315220",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Assault \"Glutton\"",
+          "decorations": [],
+          "id": "wweapon_10325"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kirin Jacket Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 2,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_670"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            },
+            {
+              "id": "wdeco_67",
+              "count": 1,
+              "rawNameEn": "Shield Jewel 2"
+            },
+            {
+              "id": "wdeco_50",
+              "count": 1,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_92",
+              "count": 1,
+              "rawNameEn": "Spread Jewel 3"
+            },
+            {
+              "id": "wdeco_60",
+              "count": 1,
+              "rawNameEn": "Expert Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_63",
+              "count": 1,
+              "rawNameEn": "Elementless Jewel 2"
+            },
+            {
+              "id": "wdeco_76",
+              "count": 2,
+              "rawNameEn": "Ironwall Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_69",
+        "rawNameEn": "Ironside Charm III"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
+    },
+    {
+      "id": "heavy-bowgun_worldHighRank_4",
+      "weaponType": "heavy-bowgun",
+      "category": "worldHighRank",
+      "kind": "full-build",
+      "buildName": "Piercing Ammo Build",
+      "stageName": "Piercing Ammo Build",
+      "sourceUrl": "https://game8.co/games/Monster-Hunter-World/archives/315220",
+      "weapons": [
+        {
+          "rawNameEn": "Taroth Assault \"Support\"",
+          "decorations": [
+            {
+              "id": "wdeco_61",
+              "count": 1,
+              "rawNameEn": "Tenderizer Jewel 2"
+            }
+          ],
+          "id": "wweapon_10334"
+        }
+      ],
+      "armor": [
+        {
+          "slot": "head",
+          "rawNameEn": "Dragonking Eyepatch Alpha",
+          "decorations": [
+            {
+              "id": "wdeco_91",
+              "count": 1,
+              "rawNameEn": "Release Jewel 3"
+            }
+          ],
+          "id": "warmor_633"
+        },
+        {
+          "slot": "chest",
+          "rawNameEn": "Kirin Jacket Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_83",
+              "count": 2,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_670"
+        },
+        {
+          "slot": "arms",
+          "rawNameEn": "Xeno'jiiva Claws Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_96",
+              "count": 1,
+              "rawNameEn": "Mind's Eye Jewel 2"
+            },
+            {
+              "id": "wdeco_88",
+              "count": 1,
+              "rawNameEn": "Critical Jewel 2"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_770"
+        },
+        {
+          "slot": "waist",
+          "rawNameEn": "Xeno'jiiva Spine Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_98",
+              "count": 1,
+              "rawNameEn": "Pierce Jewel 3"
+            },
+            {
+              "id": "wdeco_83",
+              "count": 1,
+              "rawNameEn": "Attack Jewel 1"
+            }
+          ],
+          "id": "warmor_771"
+        },
+        {
+          "slot": "legs",
+          "rawNameEn": "Xeno'jiiva Spurs Gamma",
+          "decorations": [
+            {
+              "id": "wdeco_50",
+              "count": 3,
+              "rawNameEn": "Vitality Jewel 1"
+            }
+          ],
+          "id": "warmor_772"
+        }
+      ],
+      "charm": {
+        "id": "wcharm_211",
+        "rawNameEn": "Mighty Charm II"
+      },
+      "skillTotals": [],
+      "unmodeled": {}
     }
   ],
   "unresolved": [

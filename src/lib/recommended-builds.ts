@@ -28,17 +28,21 @@ export const CATEGORY_LABELS: Record<RecommendedCategory, string> = {
   mrEarly: "大師位拓荒裝",
   mrEndgame: "大師位畢業裝",
   weaponRecommend: "推薦武器一覽",
-  // World（Game8 MHW）三階
+  // World（Game8 MHW）：base-game 上位 + Iceborne 三階
+  worldHighRank: "上位裝（HR・本篇）",
   worldEndgame: "畢業旗艦裝（Meta）",
   worldMeta: "畢業 Meta 裝",
   worldProgression: "進度拓荒裝",
 };
 
-/** World 分區顯示順序（畢業旗艦 → Meta → 進度）。 */
+/** World 分區顯示順序（實力遞增：上位 HR → Iceborne 進度 → Meta → 畢業旗艦）。
+ * A2 註：任務原設「下位→上位→進度→meta→畢業」，但 Game8 MHW base-game 無下位全配裝
+ * （實測；見 docs/world-game8-audit.md），故無 worldLowRank，序列自上位起。 */
 export const WORLD_STAGE_CATEGORY_ORDER: RecommendedCategory[] = [
-  "worldEndgame",
-  "worldMeta",
+  "worldHighRank",
   "worldProgression",
+  "worldMeta",
+  "worldEndgame",
 ];
 
 /** 分區顯示順序（下位 → 上位過渡 → 上位畢業 → 大師位拓荒 → 大師位畢業）。 */

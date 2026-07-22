@@ -100,6 +100,7 @@ heading 驅動（不依版型），每頁：
   - `worldMeta`（其餘畢業 meta：Velkhana/Raging Brachy/Safi/屬性等）
   - `worldProgression`（Starter / Early / Mid-Late Iceborne，每武器 3 筆）
 - Rise 的 5 階類別（`riseLow`…`mrEndgame`）不套用於 World；World 用上列 3 個新 category。
+- **A2 追加 `worldHighRank`（base-game 上位）**：見「六之三」。Iceborne 三階不動。
 
 ## 六之二、驗證與匯入校準（Task C，`scripts/world/validate-mhwi-builds.mjs`）
 
@@ -121,9 +122,35 @@ heading 驅動（不依版型），每頁：
   取 5 兼顧「匯入接近該套識別度」與「全數樣本仍有結果」；clamp/ratio 用 **World `resolveSkillMax`
   含該套 set bonus 的動態上限**，故 secret 延伸級（挑戰者7、精神抖擻5）得以保留為必要技能。
 
+## 六之三、A2：base-game 上位（worldHighRank）+ 下位缺源點名
+
+- **來源**：`Best Builds for {W} (Base Game)` 各武器種頁（14 頁；GS=314993，其餘 315xxx；
+  id 表見 `scrape-game8-mhwi.mjs` 的 `BASE_PAGES`）。頁面結構與 Iceborne 頁**相同**（Weapon 表 /
+  Armor 表 5 件+護石 / Skills 表），沿用同一 parser；只換 `categoryOfBase`（h2 認「{W} Best Builds」
+  → `worldHighRank`，Best Skills/Related Links 略過）。
+- **★ PLAN↔實測衝突點名（實測為準）**：任務原設「下位/上位」兩 category，**實測 Game8 MHW
+  base-game 各武器種頁的 build 全為上位（HR）**——14 頁 55 筆，逐套解析後其防具 rarity **一律 8**
+  （Nergigante/Kulve/Drachen 級 HR 畢業裝）。**零下位（LR）全配裝**：
+  - base-game 頁**無** Low Rank / Beginner / Starter 任何 h2 區塊（14 頁機械掃描皆空）。
+  - 標題「Best Progression Builds for **Low Rank/High Rank**」（313887）實為**純導覽 hub**
+    ——僅 3 張連結表、零 build 表；各武器 H3 段內 0 tables。
+  - 別無 LR 全配裝頁（僅「Beginner's Guide/Best Weapons for Beginners」等散文導引，非 build 表）。
+  - 成因＝MHW 下位裝即用即棄，社群不出下位全配裝。**裁決（經確認）：A2 只落 `worldHighRank`；
+    `worldLowRank` 因來源無資料不建立**（非漏做）。
+- **名稱新落差（已進 override）**：Game8 拼字 `Kulve Taroth's Malic β/γ`（漏 e）＝MHWorldData
+  `Malice β/γ`（warmor_662 / warmor_776）。其餘沿用 Phase 6 override；base-game 新增 0 筆未解
+  （殘 2 筆 `Adept Stormslinger`/`Buff Arms Alpha+` 皆 Phase 6 既有 Iceborne meta 落差，非 A2 引入）。
+- **N 校準（worldHighRank 獨立抽驗 10 筆）**：`validate-mhwi-builds.mjs` calibrateN() →
+  **N=3/4/5 皆 10/10 有結果**、N=6 掉到 9/10（switch-axe/Paralysis Evasion 零結果）。
+  上位裝洞位/技能較畢業略簡，但 **`WORLD_CORE_SKILL_COUNT = 5` 仍 10/10 適用**（沿用畢業值，
+  無須為上位另設 N）。
+- **UI**：`WORLD_STAGE_CATEGORY_ORDER` 改實力遞增序 **上位→進度→meta→畢業旗艦**
+  （`worldHighRank`→`worldProgression`→`worldMeta`→`worldEndgame`）；空 category 不渲染。
+  端到端抽驗：大劍上位卡「以此為基礎修改」→ 搜尋得「前 100 套 · 有效組合 20981」（HR 防具結果）。
+
 ## 七、結論
 
-- 來源可用、結構穩定、覆蓋 14 武器種共 **124 筆**（每種 7–14 筆）。
+- 來源可用、結構穩定、覆蓋 14 武器種：Iceborne **124 筆** + A2 base-game 上位 **55 筆** = **179 筆**。
 - **35% 配裝依賴 Safi 覺醒、4% 依賴 Kjarr、meta 普遍隱含客製強化**——這些**不丟棄**，
   Task B 完整保留並打 `awakened`/`kjarr`/`customAugment` 結構化旗標，供 UI 標示與匯入時排除
   （引擎不模擬這些系統，硬匯入必零結果——比照 Rise 對 special 技能的「排除並點名」哲學）。

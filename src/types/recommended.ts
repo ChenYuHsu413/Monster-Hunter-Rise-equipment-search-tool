@@ -20,7 +20,8 @@ export type RecommendedCategory =
   // World（Game8 MHW，實測收斂 3 階，見 docs/world-game8-audit.md）
   | "worldEndgame"
   | "worldMeta"
-  | "worldProgression";
+  | "worldProgression"
+  | "worldHighRank";
 
 export type RecommendedKind =
   | "full-build"
