@@ -1,0 +1,63 @@
+{
+  "skills": {
+    "Clutch Claw Boost": {
+      "zh": "飛翔爪攻擊強化",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/bkBXA/fei-xiang-zhua-gong-ji-qiang-hua"
+    },
+    "Coldproof": {
+      "zh": "寒冷耐性",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/b3YGL/han-leng-nai-xing"
+    },
+    "Provoker": {
+      "zh": "佯動攻擊",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/mWx4L/yang-dong-gong-ji"
+    },
+    "Safe Landing": {
+      "zh": "受身術",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/bKvoA/shou-shen-shu"
+    }
+  },
+  "decorations": {},
+  "setBonuses": {
+    "New World": {
+      "zh": "新世界",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/bRx1L/xin-shi-jie"
+    },
+    "Fatalis Legend": {
+      "zh": "黑龍的傳說",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/Lz6WL/hei-long-de-chuan-shuo"
+    },
+    "Fun Fright Blessing": {
+      "zh": "驚魂夜的祝福",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/LllYL/jing-hun-ye-de-zhu-fu"
+    },
+    "Sizzling Blessing": {
+      "zh": "熱情的祝福",
+      "src": "https://mhworld.kiranico.com/zh-Hant/skilltrees/bwdom/re-qing-de-zhu-fu"
+    }
+  },
+  "armorSets": {
+    "Namielle γ+": {
+      "zh": "【精英·觸角γ】服裝",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BwOrB/jing-ying-chu-jiao-g-fu-zhuang"
+    },
+    "Velkhana γ+": {
+      "zh": "【精英·雪崩γ】服裝",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/7xGV5/jing-ying-xue-beng-g-fu-zhuang"
+    },
+    "Azure Age α+": {
+      "zh": "精英‧蒼世武士α",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/5v6R5/jing-ying-cang-shi-wu-shi-a"
+    },
+    "Dragon α+": {
+      "zh": "【精英‧龍α】服裝",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/pzbGp/jing-ying-long-a-fu-zhuang",
+      "via": "Kiranico EN \"Fatalis α+\"（MHWorldData EN \"Dragon α+\" 別名橋接）"
+    },
+    "Dragon β+": {
+      "zh": "【精英‧龍β】服裝",
+      "src": "https://mhworld.kiranico.com/zh-Hant/armorseries/BrvgB/jing-ying-long-b-fu-zhuang",
+      "via": "Kiranico EN \"Fatalis β+\"（MHWorldData EN \"Dragon β+\" 別名橋接）"
+    }
+  }
+}

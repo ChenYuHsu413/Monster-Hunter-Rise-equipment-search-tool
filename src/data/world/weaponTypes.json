@@ -1,0 +1,16 @@
+[
+  {"id":"great-sword","nameZh":"大劍","nameEn":"Great Sword","supported":true},
+  {"id":"long-sword","nameZh":"太刀","nameEn":"Long Sword","supported":true},
+  {"id":"sword-and-shield","nameZh":"片手劍","nameEn":"Sword & Shield","supported":true},
+  {"id":"dual-blades","nameZh":"雙刀","nameEn":"Dual Blades","supported":true},
+  {"id":"hammer","nameZh":"大錘","nameEn":"Hammer","supported":true},
+  {"id":"hunting-horn","nameZh":"狩獵笛","nameEn":"Hunting Horn","supported":true},
+  {"id":"lance","nameZh":"長槍","nameEn":"Lance","supported":true},
+  {"id":"gunlance","nameZh":"銃槍","nameEn":"Gunlance","supported":true},
+  {"id":"switch-axe","nameZh":"斬擊斧","nameEn":"Switch Axe","supported":true},
+  {"id":"charge-blade","nameZh":"盾斧","nameEn":"Charge Blade","supported":true},
+  {"id":"insect-glaive","nameZh":"操蟲棍","nameEn":"Insect Glaive","supported":true},
+  {"id":"light-bowgun","nameZh":"輕弩","nameEn":"Light Bowgun","supported":true},
+  {"id":"heavy-bowgun","nameZh":"重弩","nameEn":"Heavy Bowgun","supported":true},
+  {"id":"bow","nameZh":"弓","nameEn":"Bow","supported":true}
+]

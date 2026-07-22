@@ -17,7 +17,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = path.join(__dirname, "..", "src", "data");
+// Phase 1c（多遊戲改造）：Rise 資料已搬至 src/data/rise/。此腳本輸出/讀取一律指向 rise/，
+// 避免在已搬空的 src/data/ 重建孤兒檔污染新結構（Rise TU5 已凍結，正常不會重跑）。
+const DATA_DIR = path.join(__dirname, "..", "src", "data", "rise");
 
 const unlocks = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "unlocks.json"), "utf8"));
 const armors = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "armors.json"), "utf8"));

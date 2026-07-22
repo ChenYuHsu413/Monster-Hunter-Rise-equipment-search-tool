@@ -1,0 +1,4680 @@
+[
+  {
+    "id": "wdeco_1",
+    "nameZh": "耐毒珠【１】",
+    "slotLevel": 1,
+    "skillName": "毒耐性",
+    "skillLevel": 1,
+    "skills": {
+      "毒耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_2",
+    "nameZh": "地學珠【１】",
+    "slotLevel": 1,
+    "skillName": "地質學",
+    "skillLevel": 1,
+    "skills": {
+      "地質學": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_3",
+    "nameZh": "砲手珠【１】",
+    "slotLevel": 1,
+    "skillName": "砲擊手",
+    "skillLevel": 1,
+    "skills": {
+      "砲擊手": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_4",
+    "nameZh": "無食珠【１】",
+    "slotLevel": 1,
+    "skillName": "飢餓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "飢餓耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_5",
+    "nameZh": "節食珠【１】",
+    "slotLevel": 1,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "skills": {
+      "滿足感": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_6",
+    "nameZh": "加護珠【１】",
+    "slotLevel": 1,
+    "skillName": "精靈加護",
+    "skillLevel": 1,
+    "skills": {
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_7",
+    "nameZh": "指示珠【１】",
+    "slotLevel": 1,
+    "skillName": "指示隨從",
+    "skillLevel": 1,
+    "skills": {
+      "指示隨從": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_8",
+    "nameZh": "植學珠【１】",
+    "slotLevel": 1,
+    "skillName": "植生學",
+    "skillLevel": 1,
+    "skills": {
+      "植生學": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_9",
+    "nameZh": "潛伏珠【１】",
+    "slotLevel": 1,
+    "skillName": "潛伏",
+    "skillLevel": 1,
+    "skills": {
+      "潛伏": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_10",
+    "nameZh": "飛燕珠【２】",
+    "slotLevel": 2,
+    "skillName": "飛燕",
+    "skillLevel": 1,
+    "skills": {
+      "飛燕": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_12",
+    "nameZh": "沼渡珠【１】",
+    "slotLevel": 1,
+    "skillName": "適應水場‧深雪",
+    "skillLevel": 1,
+    "skills": {
+      "適應水場‧深雪": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_13",
+    "nameZh": "標本珠【１】",
+    "slotLevel": 1,
+    "skillName": "昆蟲標本達人",
+    "skillLevel": 1,
+    "skills": {
+      "昆蟲標本達人": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_14",
+    "nameZh": "耐瘴珠【１】",
+    "slotLevel": 1,
+    "skillName": "瘴氣耐性",
+    "skillLevel": 1,
+    "skills": {
+      "瘴氣耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_15",
+    "nameZh": "嗅覺珠【１】",
+    "slotLevel": 1,
+    "skillName": "追蹤達人",
+    "skillLevel": 1,
+    "skills": {
+      "追蹤達人": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_16",
+    "nameZh": "威嚇珠【１】",
+    "slotLevel": 1,
+    "skillName": "威嚇",
+    "skillLevel": 1,
+    "skills": {
+      "威嚇": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_17",
+    "nameZh": "絕路珠【１】",
+    "slotLevel": 1,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "skills": {
+      "死裡逃生": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_18",
+    "nameZh": "耐麻珠【１】",
+    "slotLevel": 1,
+    "skillName": "麻痺耐性",
+    "skillLevel": 1,
+    "skills": {
+      "麻痺耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_19",
+    "nameZh": "逆境珠【１】",
+    "slotLevel": 1,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "skills": {
+      "不屈": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_20",
+    "nameZh": "耐水珠【１】",
+    "slotLevel": 1,
+    "skillName": "水耐性",
+    "skillLevel": 1,
+    "skills": {
+      "水耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_21",
+    "nameZh": "耐裂珠【１】",
+    "slotLevel": 1,
+    "skillName": "裂傷耐性",
+    "skillLevel": 1,
+    "skills": {
+      "裂傷耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_22",
+    "nameZh": "耐龍珠【１】",
+    "slotLevel": 1,
+    "skillName": "龍耐性",
+    "skillLevel": 1,
+    "skills": {
+      "龍耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_23",
+    "nameZh": "耐火珠【１】",
+    "slotLevel": 1,
+    "skillName": "火耐性",
+    "skillLevel": 1,
+    "skills": {
+      "火耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_24",
+    "nameZh": "耐冰珠【１】",
+    "slotLevel": 1,
+    "skillName": "冰耐性",
+    "skillLevel": 1,
+    "skills": {
+      "冰耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_25",
+    "nameZh": "耐防珠【１】",
+    "slotLevel": 1,
+    "skillName": "防禦力DOWN耐性",
+    "skillLevel": 1,
+    "skills": {
+      "防禦力DOWN耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_26",
+    "nameZh": "耐雷珠【１】",
+    "slotLevel": 1,
+    "skillName": "雷耐性",
+    "skillLevel": 1,
+    "skills": {
+      "雷耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_27",
+    "nameZh": "耐眠珠【１】",
+    "slotLevel": 1,
+    "skillName": "睡眠耐性",
+    "skillLevel": 1,
+    "skills": {
+      "睡眠耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_28",
+    "nameZh": "耐爆珠【１】",
+    "slotLevel": 1,
+    "skillName": "爆破異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "爆破異常狀態的耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_29",
+    "nameZh": "整備珠【１】",
+    "slotLevel": 1,
+    "skillName": "整備",
+    "skillLevel": 1,
+    "skills": {
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_30",
+    "nameZh": "快吃珠【１】",
+    "slotLevel": 1,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "skills": {
+      "快吃": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_31",
+    "nameZh": "體術珠【２】",
+    "slotLevel": 2,
+    "skillName": "體術",
+    "skillLevel": 1,
+    "skills": {
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_32",
+    "nameZh": "火炎珠【１】",
+    "slotLevel": 1,
+    "skillName": "火屬性攻擊強化",
+    "skillLevel": 1,
+    "skills": {
+      "火屬性攻擊強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_33",
+    "nameZh": "迴避珠【２】",
+    "slotLevel": 2,
+    "skillName": "迴避性能",
+    "skillLevel": 1,
+    "skills": {
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_34",
+    "nameZh": "跳躍珠【２】",
+    "slotLevel": 2,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "skills": {
+      "迴避距離UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_35",
+    "nameZh": "速納珠【１】",
+    "slotLevel": 1,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "skills": {
+      "收刀術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_36",
+    "nameZh": "友愛珠【１】",
+    "slotLevel": 1,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "skills": {
+      "廣域化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_37",
+    "nameZh": "持續珠【１】",
+    "slotLevel": 1,
+    "skillName": "道具使用強化",
+    "skillLevel": 1,
+    "skills": {
+      "道具使用強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_38",
+    "nameZh": "治癒珠【１】",
+    "slotLevel": 1,
+    "skillName": "體力回復量UP",
+    "skillLevel": 1,
+    "skills": {
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_39",
+    "nameZh": "研磨珠【１】",
+    "slotLevel": 1,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "skills": {
+      "砥石使用高速化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_40",
+    "nameZh": "耐絕珠【１】",
+    "slotLevel": 1,
+    "skillName": "昏厥耐性",
+    "skillLevel": 1,
+    "skills": {
+      "昏厥耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_41",
+    "nameZh": "爆師珠【１】",
+    "slotLevel": 1,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "skills": {
+      "炸彈客": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_42",
+    "nameZh": "早復珠【１】",
+    "slotLevel": 1,
+    "skillName": "回復速度",
+    "skillLevel": 1,
+    "skills": {
+      "回復速度": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_43",
+    "nameZh": "滑走珠【２】",
+    "slotLevel": 2,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "skills": {
+      "滑走強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_44",
+    "nameZh": "防禦珠【１】",
+    "slotLevel": 1,
+    "skillName": "防禦",
+    "skillLevel": 1,
+    "skills": {
+      "防禦": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_45",
+    "nameZh": "投石珠【１】",
+    "slotLevel": 1,
+    "skillName": "投射器裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "投射器裝填數UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_46",
+    "nameZh": "耐震珠【２】",
+    "slotLevel": 2,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "skills": {
+      "耐震": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_47",
+    "nameZh": "耐衝珠【３】",
+    "slotLevel": 3,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "skills": {
+      "減輕膽怯": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_48",
+    "nameZh": "防風珠【２】",
+    "slotLevel": 2,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "風壓耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_49",
+    "nameZh": "防音珠【３】",
+    "slotLevel": 3,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "skills": {
+      "耳塞": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_50",
+    "nameZh": "體力珠【１】",
+    "slotLevel": 1,
+    "skillName": "體力增強",
+    "skillLevel": 1,
+    "skills": {
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_51",
+    "nameZh": "耐屬珠【１】",
+    "slotLevel": 1,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "屬性異常狀態的耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_52",
+    "nameZh": "鼓笛珠【１】",
+    "slotLevel": 1,
+    "skillName": "吹笛名人",
+    "skillLevel": 1,
+    "skills": {
+      "吹笛名人": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_53",
+    "nameZh": "ＫＯ珠【２】",
+    "slotLevel": 2,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "skills": {
+      "KO術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_54",
+    "nameZh": "流水珠【１】",
+    "slotLevel": 1,
+    "skillName": "水屬性攻擊強化",
+    "skillLevel": 1,
+    "skills": {
+      "水屬性攻擊強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_55",
+    "nameZh": "冰結珠【１】",
+    "slotLevel": 1,
+    "skillName": "冰屬性攻擊強化",
+    "skillLevel": 1,
+    "skills": {
+      "冰屬性攻擊強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_56",
+    "nameZh": "雷光珠【１】",
+    "slotLevel": 1,
+    "skillName": "雷屬性攻擊強化",
+    "skillLevel": 1,
+    "skills": {
+      "雷屬性攻擊強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_57",
+    "nameZh": "破龍珠【１】",
+    "slotLevel": 1,
+    "skillName": "龍屬性攻擊強化",
+    "skillLevel": 1,
+    "skills": {
+      "龍屬性攻擊強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_58",
+    "nameZh": "毒珠【１】",
+    "slotLevel": 1,
+    "skillName": "毒屬性強化",
+    "skillLevel": 1,
+    "skills": {
+      "毒屬性強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_59",
+    "nameZh": "毒瓶珠【３】",
+    "slotLevel": 3,
+    "skillName": "毒瓶追加",
+    "skillLevel": 1,
+    "skills": {
+      "毒瓶追加": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_60",
+    "nameZh": "達人珠【１】",
+    "slotLevel": 1,
+    "skillName": "看破",
+    "skillLevel": 1,
+    "skills": {
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_61",
+    "nameZh": "痛擊珠【２】",
+    "slotLevel": 2,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "skills": {
+      "弱點特效": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_62",
+    "nameZh": "重擊珠【２】",
+    "slotLevel": 2,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "skills": {
+      "破壞王": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_63",
+    "nameZh": "無擊珠【２】",
+    "slotLevel": 2,
+    "skillName": "無屬性強化",
+    "skillLevel": 1,
+    "skills": {
+      "無屬性強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_64",
+    "nameZh": "奪氣珠【１】",
+    "slotLevel": 1,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "skills": {
+      "奪取耐力": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_65",
+    "nameZh": "痺瓶珠【３】",
+    "slotLevel": 3,
+    "skillName": "麻痺瓶追加",
+    "skillLevel": 1,
+    "skills": {
+      "麻痺瓶追加": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_66",
+    "nameZh": "剛刃珠【２】",
+    "slotLevel": 2,
+    "skillName": "剛刃研磨",
+    "skillLevel": 1,
+    "skills": {
+      "剛刃研磨": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_67",
+    "nameZh": "強壁珠【２】",
+    "slotLevel": 2,
+    "skillName": "防禦強化",
+    "skillLevel": 1,
+    "skills": {
+      "防禦強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_68",
+    "nameZh": "龍封珠【３】",
+    "slotLevel": 3,
+    "skillName": "龍封力強化",
+    "skillLevel": 1,
+    "skills": {
+      "龍封力強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_69",
+    "nameZh": "特射珠【１】",
+    "slotLevel": 1,
+    "skillName": "特殊射擊強化",
+    "skillLevel": 1,
+    "skills": {
+      "特殊射擊強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_70",
+    "nameZh": "昂揚珠【２】",
+    "slotLevel": 2,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "skills": {
+      "強化持續": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_71",
+    "nameZh": "強彈珠【３】",
+    "slotLevel": 3,
+    "skillName": "通常彈‧通常箭強化",
+    "skillLevel": 1,
+    "skills": {
+      "通常彈‧通常箭強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_72",
+    "nameZh": "逆上珠【２】",
+    "slotLevel": 2,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "skills": {
+      "怨恨": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_73",
+    "nameZh": "底力珠【２】",
+    "slotLevel": 2,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "skills": {
+      "火場怪力": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_74",
+    "nameZh": "麻痺珠【１】",
+    "slotLevel": 1,
+    "skillName": "麻痺屬性強化",
+    "skillLevel": 1,
+    "skills": {
+      "麻痺屬性強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_75",
+    "nameZh": "睡眠珠【１】",
+    "slotLevel": 1,
+    "skillName": "睡眠屬性強化",
+    "skillLevel": 1,
+    "skills": {
+      "睡眠屬性強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_76",
+    "nameZh": "鐵壁珠【１】",
+    "slotLevel": 1,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "skills": {
+      "防禦性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_77",
+    "nameZh": "早氣珠【２】",
+    "slotLevel": 2,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "skills": {
+      "耐力急速回復": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_78",
+    "nameZh": "爆破珠【１】",
+    "slotLevel": 1,
+    "skillName": "爆破屬性強化",
+    "skillLevel": 1,
+    "skills": {
+      "爆破屬性強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_79",
+    "nameZh": "眠瓶珠【３】",
+    "slotLevel": 3,
+    "skillName": "睡眠瓶追加",
+    "skillLevel": 1,
+    "skills": {
+      "睡眠瓶追加": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_80",
+    "nameZh": "爆瓶珠【３】",
+    "slotLevel": 3,
+    "skillName": "爆破瓶追加",
+    "skillLevel": 1,
+    "skills": {
+      "爆破瓶追加": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_81",
+    "nameZh": "全開珠【２】",
+    "slotLevel": 2,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "skills": {
+      "力量解放": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_82",
+    "nameZh": "挑戰珠【２】",
+    "slotLevel": 2,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "skills": {
+      "挑戰者": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_83",
+    "nameZh": "攻擊珠【１】",
+    "slotLevel": 1,
+    "skillName": "攻擊",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_84",
+    "nameZh": "無傷珠【２】",
+    "slotLevel": 2,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "skills": {
+      "無傷": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_85",
+    "nameZh": "增彈珠【２】",
+    "slotLevel": 2,
+    "skillName": "砲彈裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "砲彈裝填數UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_86",
+    "nameZh": "渾身珠【２】",
+    "slotLevel": 2,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "skills": {
+      "精神抖擻": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_87",
+    "nameZh": "強走珠【２】",
+    "slotLevel": 2,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "skills": {
+      "跑者": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_88",
+    "nameZh": "超心珠【２】",
+    "slotLevel": 2,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "skills": {
+      "超會心": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_89",
+    "nameZh": "砲術珠【１】",
+    "slotLevel": 1,
+    "skillName": "砲術",
+    "skillLevel": 1,
+    "skills": {
+      "砲術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_90",
+    "nameZh": "茸好珠【１】",
+    "slotLevel": 1,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "skills": {
+      "最愛菇類": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_91",
+    "nameZh": "解放珠【３】",
+    "slotLevel": 3,
+    "skillName": "屬性解放／裝填擴充",
+    "skillLevel": 1,
+    "skills": {
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_92",
+    "nameZh": "散彈珠【３】",
+    "slotLevel": 3,
+    "skillName": "散彈‧剛射強化",
+    "skillLevel": 1,
+    "skills": {
+      "散彈‧剛射強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_93",
+    "nameZh": "縮短珠【２】",
+    "slotLevel": 2,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "skills": {
+      "集中": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_94",
+    "nameZh": "匠珠【３】",
+    "slotLevel": 3,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "skills": {
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_95",
+    "nameZh": "強弓珠【２】",
+    "slotLevel": 2,
+    "skillName": "解放弓的蓄力階段",
+    "skillLevel": 1,
+    "skills": {
+      "解放弓的蓄力階段": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_96",
+    "nameZh": "心眼珠【２】",
+    "slotLevel": 2,
+    "skillName": "心眼／彈道強化",
+    "skillLevel": 1,
+    "skills": {
+      "心眼／彈道強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_97",
+    "nameZh": "拔刀珠【２】",
+    "slotLevel": 2,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "skills": {
+      "拔刀術【技】": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_98",
+    "nameZh": "貫通珠【３】",
+    "slotLevel": 3,
+    "skillName": "貫通彈‧龍之箭強化",
+    "skillLevel": 1,
+    "skills": {
+      "貫通彈‧龍之箭強化": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_99",
+    "nameZh": "轉福珠【３】",
+    "slotLevel": 3,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "skills": {
+      "轉禍為福": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_100",
+    "nameZh": "耐火珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "火耐性",
+    "skillLevel": 2,
+    "skills": {
+      "火耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_101",
+    "nameZh": "耐水珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "水耐性",
+    "skillLevel": 2,
+    "skills": {
+      "水耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_102",
+    "nameZh": "耐冰珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "冰耐性",
+    "skillLevel": 2,
+    "skills": {
+      "冰耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_103",
+    "nameZh": "耐雷珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "雷耐性",
+    "skillLevel": 2,
+    "skills": {
+      "雷耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_104",
+    "nameZh": "耐龍珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "龍耐性",
+    "skillLevel": 2,
+    "skills": {
+      "龍耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_105",
+    "nameZh": "火炎珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "火屬性攻擊強化",
+    "skillLevel": 2,
+    "skills": {
+      "火屬性攻擊強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_106",
+    "nameZh": "流水珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "水屬性攻擊強化",
+    "skillLevel": 2,
+    "skills": {
+      "水屬性攻擊強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_107",
+    "nameZh": "冰結珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "冰屬性攻擊強化",
+    "skillLevel": 2,
+    "skills": {
+      "冰屬性攻擊強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_108",
+    "nameZh": "雷光珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "雷屬性攻擊強化",
+    "skillLevel": 2,
+    "skills": {
+      "雷屬性攻擊強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_109",
+    "nameZh": "破龍珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "龍屬性攻擊強化",
+    "skillLevel": 2,
+    "skills": {
+      "龍屬性攻擊強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_110",
+    "nameZh": "毒珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "毒屬性強化",
+    "skillLevel": 2,
+    "skills": {
+      "毒屬性強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_111",
+    "nameZh": "麻痺珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "麻痺屬性強化",
+    "skillLevel": 2,
+    "skills": {
+      "麻痺屬性強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_112",
+    "nameZh": "睡眠珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "睡眠屬性強化",
+    "skillLevel": 2,
+    "skills": {
+      "睡眠屬性強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_113",
+    "nameZh": "爆破珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "爆破屬性強化",
+    "skillLevel": 2,
+    "skills": {
+      "爆破屬性強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_114",
+    "nameZh": "耐火珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "火耐性",
+    "skillLevel": 3,
+    "skills": {
+      "火耐性": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_115",
+    "nameZh": "耐水珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "水耐性",
+    "skillLevel": 3,
+    "skills": {
+      "水耐性": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_116",
+    "nameZh": "耐冰珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "冰耐性",
+    "skillLevel": 3,
+    "skills": {
+      "冰耐性": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_117",
+    "nameZh": "耐雷珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "雷耐性",
+    "skillLevel": 3,
+    "skills": {
+      "雷耐性": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_118",
+    "nameZh": "耐龍珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "龍耐性",
+    "skillLevel": 3,
+    "skills": {
+      "龍耐性": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_119",
+    "nameZh": "耐毒珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "毒耐性",
+    "skillLevel": 2,
+    "skills": {
+      "毒耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_120",
+    "nameZh": "耐麻珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "麻痺耐性",
+    "skillLevel": 2,
+    "skills": {
+      "麻痺耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_121",
+    "nameZh": "耐眠珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "睡眠耐性",
+    "skillLevel": 2,
+    "skills": {
+      "睡眠耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_122",
+    "nameZh": "耐絕珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "昏厥耐性",
+    "skillLevel": 2,
+    "skills": {
+      "昏厥耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_123",
+    "nameZh": "耐爆珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "爆破異常狀態的耐性",
+    "skillLevel": 2,
+    "skills": {
+      "爆破異常狀態的耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_124",
+    "nameZh": "耐裂珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "裂傷耐性",
+    "skillLevel": 2,
+    "skills": {
+      "裂傷耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_125",
+    "nameZh": "耐防珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "防禦力DOWN耐性",
+    "skillLevel": 2,
+    "skills": {
+      "防禦力DOWN耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_126",
+    "nameZh": "耐瘴珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "瘴氣耐性",
+    "skillLevel": 2,
+    "skills": {
+      "瘴氣耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_127",
+    "nameZh": "無食珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "飢餓耐性",
+    "skillLevel": 2,
+    "skills": {
+      "飢餓耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_128",
+    "nameZh": "早復珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "回復速度",
+    "skillLevel": 2,
+    "skills": {
+      "回復速度": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_129",
+    "nameZh": "潛伏珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "潛伏",
+    "skillLevel": 2,
+    "skills": {
+      "潛伏": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_130",
+    "nameZh": "威嚇珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "威嚇",
+    "skillLevel": 2,
+    "skills": {
+      "威嚇": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_131",
+    "nameZh": "指示珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "指示隨從",
+    "skillLevel": 2,
+    "skills": {
+      "指示隨從": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_132",
+    "nameZh": "潛伏珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "潛伏",
+    "skillLevel": 3,
+    "skills": {
+      "潛伏": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_133",
+    "nameZh": "威嚇珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "威嚇",
+    "skillLevel": 3,
+    "skills": {
+      "威嚇": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_134",
+    "nameZh": "指示珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "指示隨從",
+    "skillLevel": 3,
+    "skills": {
+      "指示隨從": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_135",
+    "nameZh": "特射珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "特殊射擊強化",
+    "skillLevel": 2,
+    "skills": {
+      "特殊射擊強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_136",
+    "nameZh": "砲手珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "砲擊手",
+    "skillLevel": 2,
+    "skills": {
+      "砲擊手": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_137",
+    "nameZh": "植學珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "植生學",
+    "skillLevel": 2,
+    "skills": {
+      "植生學": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_138",
+    "nameZh": "地學珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "地質學",
+    "skillLevel": 2,
+    "skills": {
+      "地質學": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_139",
+    "nameZh": "環境珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "環境利用知識",
+    "skillLevel": 2,
+    "skills": {
+      "環境利用知識": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_140",
+    "nameZh": "沼渡珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "適應水場‧深雪",
+    "skillLevel": 2,
+    "skills": {
+      "適應水場‧深雪": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_141",
+    "nameZh": "標本珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "昆蟲標本達人",
+    "skillLevel": 2,
+    "skills": {
+      "昆蟲標本達人": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_142",
+    "nameZh": "鼓笛珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "吹笛名人",
+    "skillLevel": 2,
+    "skills": {
+      "吹笛名人": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_143",
+    "nameZh": "植學珠Ⅳ【４】",
+    "slotLevel": 4,
+    "skillName": "植生學",
+    "skillLevel": 4,
+    "skills": {
+      "植生學": 4
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_144",
+    "nameZh": "地學珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "地質學",
+    "skillLevel": 3,
+    "skills": {
+      "地質學": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_145",
+    "nameZh": "環境珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "環境利用知識",
+    "skillLevel": 3,
+    "skills": {
+      "環境利用知識": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_146",
+    "nameZh": "標本珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "昆蟲標本達人",
+    "skillLevel": 3,
+    "skills": {
+      "昆蟲標本達人": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_147",
+    "nameZh": "持續珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "道具使用強化",
+    "skillLevel": 2,
+    "skills": {
+      "道具使用強化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_148",
+    "nameZh": "防禦珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "防禦",
+    "skillLevel": 2,
+    "skills": {
+      "防禦": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_149",
+    "nameZh": "持續珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "道具使用強化",
+    "skillLevel": 3,
+    "skills": {
+      "道具使用強化": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_150",
+    "nameZh": "防禦珠Ⅲ【４】",
+    "slotLevel": 4,
+    "skillName": "防禦",
+    "skillLevel": 3,
+    "skills": {
+      "防禦": 3
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_151",
+    "nameZh": "砲術珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "砲術",
+    "skillLevel": 2,
+    "skills": {
+      "砲術": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_152",
+    "nameZh": "防音珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 2,
+    "skills": {
+      "耳塞": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_153",
+    "nameZh": "防風珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 2,
+    "skills": {
+      "風壓耐性": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_154",
+    "nameZh": "攻擊珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "攻擊",
+    "skillLevel": 2,
+    "skills": {
+      "攻擊": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_155",
+    "nameZh": "達人珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "看破",
+    "skillLevel": 2,
+    "skills": {
+      "看破": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_156",
+    "nameZh": "匠珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 2,
+    "skills": {
+      "匠": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_157",
+    "nameZh": "全開珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 2,
+    "skills": {
+      "力量解放": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_158",
+    "nameZh": "挑戰珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 2,
+    "skills": {
+      "挑戰者": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_159",
+    "nameZh": "底力珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 2,
+    "skills": {
+      "火場怪力": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_160",
+    "nameZh": "逆上珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 2,
+    "skills": {
+      "怨恨": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_161",
+    "nameZh": "體術珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "體術",
+    "skillLevel": 2,
+    "skills": {
+      "體術": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_162",
+    "nameZh": "迴避珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "迴避性能",
+    "skillLevel": 2,
+    "skills": {
+      "迴避性能": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_163",
+    "nameZh": "鐵壁珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "防禦性能",
+    "skillLevel": 2,
+    "skills": {
+      "防禦性能": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_164",
+    "nameZh": "友愛珠Ⅱ【４】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 2,
+    "skills": {
+      "廣域化": 2
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_165",
+    "nameZh": "奪氣‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "skills": {
+      "奪取耐力": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_166",
+    "nameZh": "逆境‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "skills": {
+      "不屈": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_167",
+    "nameZh": "絕路‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "skills": {
+      "死裡逃生": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_168",
+    "nameZh": "鐵壁‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "skills": {
+      "防禦性能": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_169",
+    "nameZh": "友愛‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "skills": {
+      "廣域化": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_170",
+    "nameZh": "節食‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "skills": {
+      "滿足感": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_171",
+    "nameZh": "投石‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "投射器裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "投射器裝填數UP": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_172",
+    "nameZh": "耐屬‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "屬性異常狀態的耐性": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_173",
+    "nameZh": "飛燕‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "飛燕",
+    "skillLevel": 1,
+    "skills": {
+      "飛燕": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_174",
+    "nameZh": "強走‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "skills": {
+      "跑者": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_175",
+    "nameZh": "早氣‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "skills": {
+      "耐力急速回復": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_176",
+    "nameZh": "跳躍‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "skills": {
+      "迴避距離UP": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_177",
+    "nameZh": "速納‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "skills": {
+      "收刀術": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_178",
+    "nameZh": "快吃‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "skills": {
+      "快吃": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_179",
+    "nameZh": "研磨‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "skills": {
+      "砥石使用高速化": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_180",
+    "nameZh": "爆師‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "skills": {
+      "炸彈客": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_181",
+    "nameZh": "茸好‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "skills": {
+      "最愛菇類": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_182",
+    "nameZh": "滑走‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "skills": {
+      "滑走強化": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_183",
+    "nameZh": "守勢‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊守勢": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_184",
+    "nameZh": "奪氣‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "skills": {
+      "奪取耐力": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_185",
+    "nameZh": "逆境‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "skills": {
+      "不屈": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_186",
+    "nameZh": "絕路‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "skills": {
+      "死裡逃生": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_187",
+    "nameZh": "鐵壁‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "skills": {
+      "防禦性能": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_188",
+    "nameZh": "友愛‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "skills": {
+      "廣域化": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_189",
+    "nameZh": "節食‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "skills": {
+      "滿足感": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_190",
+    "nameZh": "投石‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "投射器裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "投射器裝填數UP": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_191",
+    "nameZh": "耐屬‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "屬性異常狀態的耐性": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_192",
+    "nameZh": "飛燕‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "飛燕",
+    "skillLevel": 1,
+    "skills": {
+      "飛燕": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_193",
+    "nameZh": "強走‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "skills": {
+      "跑者": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_194",
+    "nameZh": "早氣‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "skills": {
+      "耐力急速回復": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_195",
+    "nameZh": "跳躍‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "skills": {
+      "迴避距離UP": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_196",
+    "nameZh": "速納‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "skills": {
+      "收刀術": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_197",
+    "nameZh": "快吃‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "skills": {
+      "快吃": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_198",
+    "nameZh": "研磨‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "skills": {
+      "砥石使用高速化": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_199",
+    "nameZh": "爆師‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "skills": {
+      "炸彈客": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_200",
+    "nameZh": "茸好‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "skills": {
+      "最愛菇類": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_201",
+    "nameZh": "滑走‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "skills": {
+      "滑走強化": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_202",
+    "nameZh": "守勢‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊守勢": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_203",
+    "nameZh": "奪氣‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "skills": {
+      "奪取耐力": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_204",
+    "nameZh": "逆境‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "skills": {
+      "不屈": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_205",
+    "nameZh": "絕路‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "skills": {
+      "死裡逃生": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_206",
+    "nameZh": "鐵壁‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "skills": {
+      "防禦性能": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_207",
+    "nameZh": "友愛‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "skills": {
+      "廣域化": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_208",
+    "nameZh": "節食‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "skills": {
+      "滿足感": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_209",
+    "nameZh": "投石‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "投射器裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "投射器裝填數UP": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_210",
+    "nameZh": "耐屬‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "屬性異常狀態的耐性": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_211",
+    "nameZh": "飛燕‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "飛燕",
+    "skillLevel": 1,
+    "skills": {
+      "飛燕": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_212",
+    "nameZh": "強走‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "skills": {
+      "跑者": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_213",
+    "nameZh": "早氣‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "skills": {
+      "耐力急速回復": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_214",
+    "nameZh": "跳躍‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "skills": {
+      "迴避距離UP": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_215",
+    "nameZh": "速納‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "skills": {
+      "收刀術": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_216",
+    "nameZh": "快吃‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "skills": {
+      "快吃": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_217",
+    "nameZh": "研磨‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "skills": {
+      "砥石使用高速化": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_218",
+    "nameZh": "爆師‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "skills": {
+      "炸彈客": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_219",
+    "nameZh": "茸好‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "skills": {
+      "最愛菇類": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_220",
+    "nameZh": "滑走‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "skills": {
+      "滑走強化": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_221",
+    "nameZh": "守勢‧攻擊珠【４】",
+    "slotLevel": 4,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊守勢": 1,
+      "攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_222",
+    "nameZh": "奪氣‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "skills": {
+      "奪取耐力": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_223",
+    "nameZh": "逆境‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "skills": {
+      "不屈": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_224",
+    "nameZh": "絕路‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "skills": {
+      "死裡逃生": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_225",
+    "nameZh": "鐵壁‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "skills": {
+      "防禦性能": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_226",
+    "nameZh": "友愛‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "skills": {
+      "廣域化": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_227",
+    "nameZh": "節食‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "skills": {
+      "滿足感": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_228",
+    "nameZh": "投石‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "投射器裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "投射器裝填數UP": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_229",
+    "nameZh": "耐屬‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "屬性異常狀態的耐性": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_230",
+    "nameZh": "飛燕‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "飛燕",
+    "skillLevel": 1,
+    "skills": {
+      "飛燕": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_231",
+    "nameZh": "強走‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "skills": {
+      "跑者": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_232",
+    "nameZh": "早氣‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "skills": {
+      "耐力急速回復": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_233",
+    "nameZh": "跳躍‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "skills": {
+      "迴避距離UP": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_234",
+    "nameZh": "速納‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "skills": {
+      "收刀術": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_235",
+    "nameZh": "快吃‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "skills": {
+      "快吃": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_236",
+    "nameZh": "研磨‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "skills": {
+      "砥石使用高速化": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_237",
+    "nameZh": "爆師‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "skills": {
+      "炸彈客": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_238",
+    "nameZh": "茸好‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "skills": {
+      "最愛菇類": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_239",
+    "nameZh": "滑走‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "skills": {
+      "滑走強化": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_240",
+    "nameZh": "守勢‧達人珠【４】",
+    "slotLevel": 4,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊守勢": 1,
+      "看破": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_241",
+    "nameZh": "奪氣‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "skills": {
+      "奪取耐力": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_242",
+    "nameZh": "逆境‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "skills": {
+      "不屈": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_243",
+    "nameZh": "絕路‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "skills": {
+      "死裡逃生": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_244",
+    "nameZh": "鐵壁‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "skills": {
+      "防禦性能": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_245",
+    "nameZh": "友愛‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "skills": {
+      "廣域化": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_246",
+    "nameZh": "節食‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "skills": {
+      "滿足感": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_247",
+    "nameZh": "投石‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "投射器裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "投射器裝填數UP": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_248",
+    "nameZh": "耐屬‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "屬性異常狀態的耐性": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_249",
+    "nameZh": "飛燕‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "飛燕",
+    "skillLevel": 1,
+    "skills": {
+      "飛燕": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_250",
+    "nameZh": "強走‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "skills": {
+      "跑者": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_251",
+    "nameZh": "早氣‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "skills": {
+      "耐力急速回復": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_252",
+    "nameZh": "跳躍‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "skills": {
+      "迴避距離UP": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_253",
+    "nameZh": "速納‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "skills": {
+      "收刀術": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_254",
+    "nameZh": "快吃‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "skills": {
+      "快吃": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_255",
+    "nameZh": "研磨‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "skills": {
+      "砥石使用高速化": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_256",
+    "nameZh": "爆師‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "skills": {
+      "炸彈客": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_257",
+    "nameZh": "茸好‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "skills": {
+      "最愛菇類": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_258",
+    "nameZh": "滑走‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "skills": {
+      "滑走強化": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_259",
+    "nameZh": "守勢‧解放珠【４】",
+    "slotLevel": 4,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊守勢": 1,
+      "屬性解放／裝填擴充": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_260",
+    "nameZh": "奪氣‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "奪取耐力",
+    "skillLevel": 1,
+    "skills": {
+      "奪取耐力": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_261",
+    "nameZh": "逆境‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "不屈",
+    "skillLevel": 1,
+    "skills": {
+      "不屈": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_262",
+    "nameZh": "絕路‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "死裡逃生",
+    "skillLevel": 1,
+    "skills": {
+      "死裡逃生": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_263",
+    "nameZh": "鐵壁‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "防禦性能",
+    "skillLevel": 1,
+    "skills": {
+      "防禦性能": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_264",
+    "nameZh": "友愛‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "廣域化",
+    "skillLevel": 1,
+    "skills": {
+      "廣域化": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_265",
+    "nameZh": "節食‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "滿足感",
+    "skillLevel": 1,
+    "skills": {
+      "滿足感": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_266",
+    "nameZh": "投石‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "投射器裝填數UP",
+    "skillLevel": 1,
+    "skills": {
+      "投射器裝填數UP": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_267",
+    "nameZh": "耐屬‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性異常狀態的耐性",
+    "skillLevel": 1,
+    "skills": {
+      "屬性異常狀態的耐性": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_268",
+    "nameZh": "飛燕‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "飛燕",
+    "skillLevel": 1,
+    "skills": {
+      "飛燕": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_269",
+    "nameZh": "強走‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "跑者",
+    "skillLevel": 1,
+    "skills": {
+      "跑者": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_270",
+    "nameZh": "早氣‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐力急速回復",
+    "skillLevel": 1,
+    "skills": {
+      "耐力急速回復": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_271",
+    "nameZh": "跳躍‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "迴避距離UP",
+    "skillLevel": 1,
+    "skills": {
+      "迴避距離UP": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_272",
+    "nameZh": "速納‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "收刀術",
+    "skillLevel": 1,
+    "skills": {
+      "收刀術": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_273",
+    "nameZh": "快吃‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "快吃",
+    "skillLevel": 1,
+    "skills": {
+      "快吃": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_274",
+    "nameZh": "研磨‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "砥石使用高速化",
+    "skillLevel": 1,
+    "skills": {
+      "砥石使用高速化": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_275",
+    "nameZh": "爆師‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "炸彈客",
+    "skillLevel": 1,
+    "skills": {
+      "炸彈客": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_276",
+    "nameZh": "茸好‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "最愛菇類",
+    "skillLevel": 1,
+    "skills": {
+      "最愛菇類": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_277",
+    "nameZh": "滑走‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "滑走強化",
+    "skillLevel": 1,
+    "skills": {
+      "滑走強化": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_278",
+    "nameZh": "守勢‧匠珠【４】",
+    "slotLevel": 4,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊守勢": 1,
+      "匠": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_279",
+    "nameZh": "耐震‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "skills": {
+      "耐震": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_280",
+    "nameZh": "縮短‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "skills": {
+      "集中": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_281",
+    "nameZh": "昂揚‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "skills": {
+      "強化持續": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_282",
+    "nameZh": "重擊‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "skills": {
+      "破壞王": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_283",
+    "nameZh": "ＫＯ‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "skills": {
+      "KO術": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_284",
+    "nameZh": "底力‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "skills": {
+      "火場怪力": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_285",
+    "nameZh": "防風‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "風壓耐性": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_286",
+    "nameZh": "拔刀‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "skills": {
+      "拔刀術【技】": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_287",
+    "nameZh": "全開‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "skills": {
+      "力量解放": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_288",
+    "nameZh": "挑戰‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "skills": {
+      "挑戰者": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_289",
+    "nameZh": "無傷‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "skills": {
+      "無傷": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_290",
+    "nameZh": "逆上‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "skills": {
+      "怨恨": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_291",
+    "nameZh": "渾身‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "skills": {
+      "精神抖擻": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_292",
+    "nameZh": "耐衝‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "skills": {
+      "減輕膽怯": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_293",
+    "nameZh": "轉福‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "skills": {
+      "轉禍為福": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_294",
+    "nameZh": "防音‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "skills": {
+      "耳塞": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_295",
+    "nameZh": "超心‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "skills": {
+      "超會心": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_296",
+    "nameZh": "痛擊‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "skills": {
+      "弱點特效": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_297",
+    "nameZh": "匠‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "skills": {
+      "匠": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_298",
+    "nameZh": "解放‧加護珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性解放／裝填擴充",
+    "skillLevel": 1,
+    "skills": {
+      "屬性解放／裝填擴充": 1,
+      "精靈加護": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_299",
+    "nameZh": "耐震‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "skills": {
+      "耐震": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_300",
+    "nameZh": "縮短‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "skills": {
+      "集中": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_301",
+    "nameZh": "昂揚‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "skills": {
+      "強化持續": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_302",
+    "nameZh": "重擊‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "skills": {
+      "破壞王": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_303",
+    "nameZh": "ＫＯ‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "skills": {
+      "KO術": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_304",
+    "nameZh": "底力‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "skills": {
+      "火場怪力": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_305",
+    "nameZh": "防風‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "風壓耐性": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_306",
+    "nameZh": "拔刀‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "skills": {
+      "拔刀術【技】": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_307",
+    "nameZh": "全開‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "skills": {
+      "力量解放": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_308",
+    "nameZh": "挑戰‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "skills": {
+      "挑戰者": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_309",
+    "nameZh": "無傷‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "skills": {
+      "無傷": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_310",
+    "nameZh": "逆上‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "skills": {
+      "怨恨": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_311",
+    "nameZh": "渾身‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "skills": {
+      "精神抖擻": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_312",
+    "nameZh": "耐衝‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "skills": {
+      "減輕膽怯": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_313",
+    "nameZh": "轉福‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "skills": {
+      "轉禍為福": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_314",
+    "nameZh": "防音‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "skills": {
+      "耳塞": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_315",
+    "nameZh": "超心‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "skills": {
+      "超會心": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_316",
+    "nameZh": "痛擊‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "skills": {
+      "弱點特效": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_317",
+    "nameZh": "匠‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "skills": {
+      "匠": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_318",
+    "nameZh": "解放‧治癒珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性解放／裝填擴充",
+    "skillLevel": 1,
+    "skills": {
+      "屬性解放／裝填擴充": 1,
+      "體力回復量UP": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_319",
+    "nameZh": "耐震‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "skills": {
+      "耐震": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_320",
+    "nameZh": "縮短‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "skills": {
+      "集中": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_321",
+    "nameZh": "昂揚‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "skills": {
+      "強化持續": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_322",
+    "nameZh": "重擊‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "skills": {
+      "破壞王": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_323",
+    "nameZh": "ＫＯ‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "skills": {
+      "KO術": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_324",
+    "nameZh": "底力‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "skills": {
+      "火場怪力": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_325",
+    "nameZh": "防風‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "風壓耐性": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_326",
+    "nameZh": "拔刀‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "skills": {
+      "拔刀術【技】": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_327",
+    "nameZh": "全開‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "skills": {
+      "力量解放": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_328",
+    "nameZh": "挑戰‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "skills": {
+      "挑戰者": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_329",
+    "nameZh": "無傷‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "skills": {
+      "無傷": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_330",
+    "nameZh": "逆上‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "skills": {
+      "怨恨": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_331",
+    "nameZh": "渾身‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "skills": {
+      "精神抖擻": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_332",
+    "nameZh": "耐衝‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "skills": {
+      "減輕膽怯": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_333",
+    "nameZh": "轉福‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "skills": {
+      "轉禍為福": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_334",
+    "nameZh": "防音‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "skills": {
+      "耳塞": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_335",
+    "nameZh": "超心‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "skills": {
+      "超會心": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_336",
+    "nameZh": "痛擊‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "skills": {
+      "弱點特效": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_337",
+    "nameZh": "匠‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "skills": {
+      "匠": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_338",
+    "nameZh": "解放‧體力珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性解放／裝填擴充",
+    "skillLevel": 1,
+    "skills": {
+      "屬性解放／裝填擴充": 1,
+      "體力增強": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_339",
+    "nameZh": "耐震‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "skills": {
+      "耐震": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_340",
+    "nameZh": "縮短‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "skills": {
+      "集中": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_341",
+    "nameZh": "昂揚‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "skills": {
+      "強化持續": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_342",
+    "nameZh": "重擊‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "skills": {
+      "破壞王": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_343",
+    "nameZh": "ＫＯ‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "skills": {
+      "KO術": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_344",
+    "nameZh": "底力‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "skills": {
+      "火場怪力": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_345",
+    "nameZh": "防風‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "風壓耐性": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_346",
+    "nameZh": "拔刀‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "skills": {
+      "拔刀術【技】": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_347",
+    "nameZh": "全開‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "skills": {
+      "力量解放": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_348",
+    "nameZh": "挑戰‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "skills": {
+      "挑戰者": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_349",
+    "nameZh": "無傷‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "skills": {
+      "無傷": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_350",
+    "nameZh": "逆上‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "skills": {
+      "怨恨": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_351",
+    "nameZh": "渾身‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "skills": {
+      "精神抖擻": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_352",
+    "nameZh": "耐衝‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "skills": {
+      "減輕膽怯": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_353",
+    "nameZh": "轉福‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "skills": {
+      "轉禍為福": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_354",
+    "nameZh": "防音‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "skills": {
+      "耳塞": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_355",
+    "nameZh": "超心‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "skills": {
+      "超會心": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_356",
+    "nameZh": "痛擊‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "skills": {
+      "弱點特效": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_357",
+    "nameZh": "匠‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "skills": {
+      "匠": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_358",
+    "nameZh": "解放‧整備珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性解放／裝填擴充",
+    "skillLevel": 1,
+    "skills": {
+      "屬性解放／裝填擴充": 1,
+      "整備": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_359",
+    "nameZh": "耐震‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "skills": {
+      "耐震": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_360",
+    "nameZh": "縮短‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "skills": {
+      "集中": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_361",
+    "nameZh": "昂揚‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "skills": {
+      "強化持續": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_362",
+    "nameZh": "重擊‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "skills": {
+      "破壞王": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_363",
+    "nameZh": "ＫＯ‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "skills": {
+      "KO術": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_364",
+    "nameZh": "底力‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "skills": {
+      "火場怪力": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_365",
+    "nameZh": "防風‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "風壓耐性": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_366",
+    "nameZh": "拔刀‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "skills": {
+      "拔刀術【技】": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_367",
+    "nameZh": "全開‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "skills": {
+      "力量解放": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_368",
+    "nameZh": "挑戰‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "skills": {
+      "挑戰者": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_369",
+    "nameZh": "無傷‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "skills": {
+      "無傷": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_370",
+    "nameZh": "逆上‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "skills": {
+      "怨恨": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_371",
+    "nameZh": "渾身‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "skills": {
+      "精神抖擻": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_372",
+    "nameZh": "耐衝‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "skills": {
+      "減輕膽怯": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_373",
+    "nameZh": "轉福‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "skills": {
+      "轉禍為福": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_374",
+    "nameZh": "防音‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "skills": {
+      "耳塞": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_375",
+    "nameZh": "超心‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "skills": {
+      "超會心": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_376",
+    "nameZh": "痛擊‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "skills": {
+      "弱點特效": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_377",
+    "nameZh": "匠‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "skills": {
+      "匠": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_378",
+    "nameZh": "解放‧體術珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性解放／裝填擴充",
+    "skillLevel": 1,
+    "skills": {
+      "屬性解放／裝填擴充": 1,
+      "體術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_379",
+    "nameZh": "耐震‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "耐震",
+    "skillLevel": 1,
+    "skills": {
+      "耐震": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_380",
+    "nameZh": "縮短‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "集中",
+    "skillLevel": 1,
+    "skills": {
+      "集中": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_381",
+    "nameZh": "昂揚‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "強化持續",
+    "skillLevel": 1,
+    "skills": {
+      "強化持續": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_382",
+    "nameZh": "重擊‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "破壞王",
+    "skillLevel": 1,
+    "skills": {
+      "破壞王": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_383",
+    "nameZh": "ＫＯ‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "KO術",
+    "skillLevel": 1,
+    "skills": {
+      "KO術": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_384",
+    "nameZh": "底力‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "火場怪力",
+    "skillLevel": 1,
+    "skills": {
+      "火場怪力": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_385",
+    "nameZh": "防風‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "風壓耐性",
+    "skillLevel": 1,
+    "skills": {
+      "風壓耐性": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_386",
+    "nameZh": "拔刀‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "拔刀術【技】",
+    "skillLevel": 1,
+    "skills": {
+      "拔刀術【技】": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_387",
+    "nameZh": "全開‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "力量解放",
+    "skillLevel": 1,
+    "skills": {
+      "力量解放": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_388",
+    "nameZh": "挑戰‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "挑戰者",
+    "skillLevel": 1,
+    "skills": {
+      "挑戰者": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_389",
+    "nameZh": "無傷‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "無傷",
+    "skillLevel": 1,
+    "skills": {
+      "無傷": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_390",
+    "nameZh": "逆上‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "怨恨",
+    "skillLevel": 1,
+    "skills": {
+      "怨恨": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_391",
+    "nameZh": "渾身‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "精神抖擻",
+    "skillLevel": 1,
+    "skills": {
+      "精神抖擻": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_392",
+    "nameZh": "耐衝‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "減輕膽怯",
+    "skillLevel": 1,
+    "skills": {
+      "減輕膽怯": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_393",
+    "nameZh": "轉福‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "轉禍為福",
+    "skillLevel": 1,
+    "skills": {
+      "轉禍為福": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_394",
+    "nameZh": "防音‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "耳塞",
+    "skillLevel": 1,
+    "skills": {
+      "耳塞": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_395",
+    "nameZh": "超心‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "超會心",
+    "skillLevel": 1,
+    "skills": {
+      "超會心": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_396",
+    "nameZh": "痛擊‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "弱點特效",
+    "skillLevel": 1,
+    "skills": {
+      "弱點特效": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_397",
+    "nameZh": "匠‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "匠",
+    "skillLevel": 1,
+    "skills": {
+      "匠": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_398",
+    "nameZh": "解放‧迴避珠【４】",
+    "slotLevel": 4,
+    "skillName": "屬性解放／裝填擴充",
+    "skillLevel": 1,
+    "skills": {
+      "屬性解放／裝填擴充": 1,
+      "迴避性能": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_399",
+    "nameZh": "Survival Jewel 1",
+    "slotLevel": 1,
+    "skillName": "環境利用知識",
+    "skillLevel": 1,
+    "skills": {
+      "環境利用知識": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_400",
+    "nameZh": "Guardian Jewel 2",
+    "slotLevel": 2,
+    "skillName": "攻擊守勢",
+    "skillLevel": 1,
+    "skills": {
+      "攻擊守勢": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_402",
+    "nameZh": "Cooling Jewel 2",
+    "slotLevel": 2,
+    "skillName": "熱傷害無效",
+    "skillLevel": 1,
+    "skills": {
+      "熱傷害無效": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_403",
+    "nameZh": "Warming Jewel 2",
+    "slotLevel": 2,
+    "skillName": "寒冷耐性",
+    "skillLevel": 1,
+    "skills": {
+      "寒冷耐性": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_404",
+    "nameZh": "Diversion Jewel 3",
+    "slotLevel": 3,
+    "skillName": "佯動攻擊",
+    "skillLevel": 1,
+    "skills": {
+      "佯動攻擊": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_405",
+    "nameZh": "Acrobat Jewel 3",
+    "slotLevel": 3,
+    "skillName": "受身術",
+    "skillLevel": 1,
+    "skills": {
+      "受身術": 1
+    },
+    "craftable": true
+  },
+  {
+    "id": "wdeco_406",
+    "nameZh": "Shaver Jewel 3",
+    "slotLevel": 3,
+    "skillName": "飛翔爪攻擊強化",
+    "skillLevel": 1,
+    "skills": {
+      "飛翔爪攻擊強化": 1
+    },
+    "craftable": true
+  }
+]

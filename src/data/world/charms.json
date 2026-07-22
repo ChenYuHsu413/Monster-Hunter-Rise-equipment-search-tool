@@ -1,0 +1,2554 @@
+[
+  {
+    "id": "wcharm_1",
+    "name": "耐毒護石Ⅰ",
+    "skills": {
+      "毒耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_2",
+    "name": "耐毒護石Ⅱ",
+    "skills": {
+      "毒耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_3",
+    "name": "耐毒護石Ⅲ",
+    "skills": {
+      "毒耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_4",
+    "name": "攻擊護石Ⅰ",
+    "skills": {
+      "攻擊": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_5",
+    "name": "攻擊護石Ⅱ",
+    "skills": {
+      "攻擊": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_6",
+    "name": "攻擊護石Ⅲ",
+    "skills": {
+      "攻擊": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_235",
+    "name": "攻擊護石Ⅳ",
+    "skills": {
+      "攻擊": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_7",
+    "name": "防禦護石Ⅰ",
+    "skills": {
+      "防禦": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_8",
+    "name": "防禦護石Ⅱ",
+    "skills": {
+      "防禦": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_9",
+    "name": "防禦護石Ⅲ",
+    "skills": {
+      "防禦": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_236",
+    "name": "防禦護石Ⅳ",
+    "skills": {
+      "防禦": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_237",
+    "name": "防禦護石Ⅴ",
+    "skills": {
+      "防禦": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_10",
+    "name": "耐痺護石Ⅰ",
+    "skills": {
+      "麻痺耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_11",
+    "name": "耐痺護石Ⅱ",
+    "skills": {
+      "麻痺耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_12",
+    "name": "耐痺護石Ⅲ",
+    "skills": {
+      "麻痺耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_13",
+    "name": "耐眠護石Ⅰ",
+    "skills": {
+      "睡眠耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_14",
+    "name": "耐眠護石Ⅱ",
+    "skills": {
+      "睡眠耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_15",
+    "name": "耐眠護石Ⅲ",
+    "skills": {
+      "睡眠耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_16",
+    "name": "耐絕護石Ⅰ",
+    "skills": {
+      "昏厥耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_17",
+    "name": "耐絕護石Ⅱ",
+    "skills": {
+      "昏厥耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_18",
+    "name": "耐絕護石Ⅲ",
+    "skills": {
+      "昏厥耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_19",
+    "name": "防風護石Ⅰ",
+    "skills": {
+      "風壓耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_20",
+    "name": "防風護石Ⅱ",
+    "skills": {
+      "風壓耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_21",
+    "name": "防風護石Ⅲ",
+    "skills": {
+      "風壓耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_238",
+    "name": "防風護石Ⅳ",
+    "skills": {
+      "風壓耐性": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_22",
+    "name": "體力護石Ⅰ",
+    "skills": {
+      "體力增強": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_23",
+    "name": "體力護石Ⅱ",
+    "skills": {
+      "體力增強": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_24",
+    "name": "體力護石Ⅲ",
+    "skills": {
+      "體力增強": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_25",
+    "name": "治癒護石Ⅰ",
+    "skills": {
+      "體力回復量UP": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_26",
+    "name": "治癒護石Ⅱ",
+    "skills": {
+      "體力回復量UP": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_27",
+    "name": "治癒護石Ⅲ",
+    "skills": {
+      "體力回復量UP": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_28",
+    "name": "耐火護石Ⅰ",
+    "skills": {
+      "火耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_29",
+    "name": "耐火護石Ⅱ",
+    "skills": {
+      "火耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_30",
+    "name": "耐火護石Ⅲ",
+    "skills": {
+      "火耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_31",
+    "name": "耐水護石Ⅰ",
+    "skills": {
+      "水耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_32",
+    "name": "耐水護石Ⅱ",
+    "skills": {
+      "水耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_33",
+    "name": "耐水護石Ⅲ",
+    "skills": {
+      "水耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_34",
+    "name": "耐雷護石Ⅰ",
+    "skills": {
+      "雷耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_35",
+    "name": "耐雷護石Ⅱ",
+    "skills": {
+      "雷耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_36",
+    "name": "耐雷護石Ⅲ",
+    "skills": {
+      "雷耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_37",
+    "name": "火焰護石Ⅰ",
+    "skills": {
+      "火屬性攻擊強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_38",
+    "name": "火焰護石Ⅱ",
+    "skills": {
+      "火屬性攻擊強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_39",
+    "name": "火焰護石Ⅲ",
+    "skills": {
+      "火屬性攻擊強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_239",
+    "name": "火焰護石Ⅳ",
+    "skills": {
+      "火屬性攻擊強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_240",
+    "name": "火焰護石Ⅴ",
+    "skills": {
+      "火屬性攻擊強化": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_40",
+    "name": "流水護石Ⅰ",
+    "skills": {
+      "水屬性攻擊強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_41",
+    "name": "流水護石Ⅱ",
+    "skills": {
+      "水屬性攻擊強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_42",
+    "name": "流水護石Ⅲ",
+    "skills": {
+      "水屬性攻擊強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_241",
+    "name": "流水護石Ⅳ",
+    "skills": {
+      "水屬性攻擊強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_242",
+    "name": "流水護石Ⅴ",
+    "skills": {
+      "水屬性攻擊強化": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_43",
+    "name": "雷光護石Ⅰ",
+    "skills": {
+      "雷屬性攻擊強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_44",
+    "name": "雷光護石Ⅱ",
+    "skills": {
+      "雷屬性攻擊強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_45",
+    "name": "雷光護石Ⅲ",
+    "skills": {
+      "雷屬性攻擊強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_243",
+    "name": "雷光護石Ⅳ",
+    "skills": {
+      "雷屬性攻擊強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_244",
+    "name": "雷光護石Ⅴ",
+    "skills": {
+      "雷屬性攻擊強化": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_46",
+    "name": "毒擊護石Ⅰ",
+    "skills": {
+      "毒屬性強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_47",
+    "name": "毒擊護石Ⅱ",
+    "skills": {
+      "毒屬性強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_48",
+    "name": "毒擊護石Ⅲ",
+    "skills": {
+      "毒屬性強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_245",
+    "name": "毒擊護石Ⅳ",
+    "skills": {
+      "毒屬性強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_49",
+    "name": "痺擊護石Ⅰ",
+    "skills": {
+      "麻痺屬性強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_50",
+    "name": "痺擊護石Ⅱ",
+    "skills": {
+      "麻痺屬性強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_51",
+    "name": "痺擊護石Ⅲ",
+    "skills": {
+      "麻痺屬性強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_246",
+    "name": "痺擊護石Ⅳ",
+    "skills": {
+      "麻痺屬性強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_52",
+    "name": "睡擊護石Ⅰ",
+    "skills": {
+      "睡眠屬性強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_53",
+    "name": "睡擊護石Ⅱ",
+    "skills": {
+      "睡眠屬性強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_54",
+    "name": "睡擊護石Ⅲ",
+    "skills": {
+      "睡眠屬性強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_247",
+    "name": "睡擊護石Ⅳ",
+    "skills": {
+      "睡眠屬性強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_55",
+    "name": "KO護石Ⅰ",
+    "skills": {
+      "KO術": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_56",
+    "name": "KO護石Ⅱ",
+    "skills": {
+      "KO術": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_57",
+    "name": "KO護石Ⅲ",
+    "skills": {
+      "KO術": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_58",
+    "name": "奪氣護石Ⅰ",
+    "skills": {
+      "奪取耐力": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_59",
+    "name": "奪氣護石Ⅱ",
+    "skills": {
+      "奪取耐力": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_60",
+    "name": "奪氣護石Ⅲ",
+    "skills": {
+      "奪取耐力": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_61",
+    "name": "砲術護石Ⅰ",
+    "skills": {
+      "砲術": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_62",
+    "name": "砲術護石Ⅱ",
+    "skills": {
+      "砲術": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_63",
+    "name": "砲術護石Ⅲ",
+    "skills": {
+      "砲術": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_64",
+    "name": "斷食護石Ⅰ",
+    "skills": {
+      "飢餓耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_65",
+    "name": "斷食護石Ⅱ",
+    "skills": {
+      "飢餓耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_66",
+    "name": "斷食護石Ⅲ",
+    "skills": {
+      "飢餓耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_67",
+    "name": "鐵壁護石Ⅰ",
+    "skills": {
+      "防禦性能": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_68",
+    "name": "鐵壁護石Ⅱ",
+    "skills": {
+      "防禦性能": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_69",
+    "name": "鐵壁護石Ⅲ",
+    "skills": {
+      "防禦性能": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_248",
+    "name": "鐵壁護石Ⅳ",
+    "skills": {
+      "防禦性能": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_249",
+    "name": "鐵壁護石Ⅴ",
+    "skills": {
+      "防禦性能": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_70",
+    "name": "友愛護石Ⅰ",
+    "skills": {
+      "廣域化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_71",
+    "name": "友愛護石Ⅱ",
+    "skills": {
+      "廣域化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_72",
+    "name": "友愛護石Ⅲ",
+    "skills": {
+      "廣域化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_250",
+    "name": "友愛護石Ⅳ",
+    "skills": {
+      "廣域化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_251",
+    "name": "友愛護石Ⅴ",
+    "skills": {
+      "廣域化": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_73",
+    "name": "持續護石Ⅰ",
+    "skills": {
+      "道具使用強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_74",
+    "name": "持續護石Ⅱ",
+    "skills": {
+      "道具使用強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_75",
+    "name": "持續護石Ⅲ",
+    "skills": {
+      "道具使用強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_76",
+    "name": "快吃護石Ⅰ",
+    "skills": {
+      "快吃": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_77",
+    "name": "快吃護石Ⅱ",
+    "skills": {
+      "快吃": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_78",
+    "name": "快吃護石Ⅲ",
+    "skills": {
+      "快吃": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_79",
+    "name": "加護護石Ⅰ",
+    "skills": {
+      "精靈加護": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_80",
+    "name": "加護護石Ⅱ",
+    "skills": {
+      "精靈加護": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_81",
+    "name": "加護護石Ⅲ",
+    "skills": {
+      "精靈加護": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_82",
+    "name": "指揮護石Ⅰ",
+    "skills": {
+      "指示隨從": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_83",
+    "name": "指揮護石Ⅱ",
+    "skills": {
+      "指示隨從": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_84",
+    "name": "指揮護石Ⅲ",
+    "skills": {
+      "指示隨從": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_252",
+    "name": "指揮護石Ⅳ",
+    "skills": {
+      "指示隨從": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_253",
+    "name": "指揮護石Ⅴ",
+    "skills": {
+      "指示隨從": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_85",
+    "name": "植學護石Ⅰ",
+    "skills": {
+      "植生學": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_86",
+    "name": "植學護石Ⅱ",
+    "skills": {
+      "植生學": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_87",
+    "name": "植學護石Ⅲ",
+    "skills": {
+      "植生學": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_254",
+    "name": "植學護石Ⅳ",
+    "skills": {
+      "植生學": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_88",
+    "name": "地學護石Ⅰ",
+    "skills": {
+      "地質學": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_89",
+    "name": "地學護石Ⅱ",
+    "skills": {
+      "地質學": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_90",
+    "name": "地學護石Ⅲ",
+    "skills": {
+      "地質學": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_91",
+    "name": "投石護石Ⅰ",
+    "skills": {
+      "投射器裝填數UP": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_92",
+    "name": "投石護石Ⅱ",
+    "skills": {
+      "投射器裝填數UP": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_93",
+    "name": "投石護石Ⅲ",
+    "skills": {
+      "投射器裝填數UP": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_94",
+    "name": "潛伏護石Ⅰ",
+    "skills": {
+      "潛伏": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_95",
+    "name": "潛伏護石Ⅱ",
+    "skills": {
+      "潛伏": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_96",
+    "name": "潛伏護石Ⅲ",
+    "skills": {
+      "潛伏": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_97",
+    "name": "煙復護石Ⅰ",
+    "skills": {
+      "環境利用知識": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_98",
+    "name": "煙復護石Ⅱ",
+    "skills": {
+      "環境利用知識": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_99",
+    "name": "煙復護石Ⅲ",
+    "skills": {
+      "環境利用知識": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_100",
+    "name": "沼渡護石Ⅰ",
+    "skills": {
+      "適應水場‧深雪": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_101",
+    "name": "沼渡護石Ⅱ",
+    "skills": {
+      "適應水場‧深雪": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_102",
+    "name": "沼渡護石Ⅲ",
+    "skills": {
+      "適應水場‧深雪": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_103",
+    "name": "昆蟲學護石Ⅰ",
+    "skills": {
+      "昆蟲標本達人": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_104",
+    "name": "昆蟲學護石Ⅱ",
+    "skills": {
+      "昆蟲標本達人": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_105",
+    "name": "昆蟲學護石Ⅲ",
+    "skills": {
+      "昆蟲標本達人": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_106",
+    "name": "威嚇護石Ⅰ",
+    "skills": {
+      "威嚇": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_107",
+    "name": "威嚇護石Ⅱ",
+    "skills": {
+      "威嚇": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_108",
+    "name": "威嚇護石Ⅲ",
+    "skills": {
+      "威嚇": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_109",
+    "name": "砲擊手護石Ⅰ",
+    "skills": {
+      "砲擊手": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_110",
+    "name": "砲擊手護石Ⅱ",
+    "skills": {
+      "砲擊手": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_111",
+    "name": "小胃口護石",
+    "skills": {
+      "滿足感": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_112",
+    "name": "追蹤護石",
+    "skills": {
+      "追蹤達人": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_113",
+    "name": "不屈護石",
+    "skills": {
+      "不屈": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_114",
+    "name": "吹笛護石",
+    "skills": {
+      "吹笛名人": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_255",
+    "name": "吹笛護石Ⅱ",
+    "skills": {
+      "吹笛名人": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_115",
+    "name": "裝填護石",
+    "skills": {
+      "砲彈裝填數UP": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_116",
+    "name": "耐裂護石Ⅰ",
+    "skills": {
+      "裂傷耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_117",
+    "name": "耐裂護石Ⅱ",
+    "skills": {
+      "裂傷耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_118",
+    "name": "耐裂護石Ⅲ",
+    "skills": {
+      "裂傷耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_119",
+    "name": "早復護石Ⅰ",
+    "skills": {
+      "回復速度": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_120",
+    "name": "早復護石Ⅱ",
+    "skills": {
+      "回復速度": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_121",
+    "name": "早復護石Ⅲ",
+    "skills": {
+      "回復速度": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_122",
+    "name": "耐冰護石Ⅰ",
+    "skills": {
+      "冰耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_123",
+    "name": "耐冰護石Ⅱ",
+    "skills": {
+      "冰耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_124",
+    "name": "耐冰護石Ⅲ",
+    "skills": {
+      "冰耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_125",
+    "name": "耐屬護石Ⅰ",
+    "skills": {
+      "屬性異常狀態的耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_126",
+    "name": "耐屬護石Ⅱ",
+    "skills": {
+      "屬性異常狀態的耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_127",
+    "name": "耐屬護石Ⅲ",
+    "skills": {
+      "屬性異常狀態的耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_128",
+    "name": "冰結護石Ⅰ",
+    "skills": {
+      "冰屬性攻擊強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_129",
+    "name": "冰結護石Ⅱ",
+    "skills": {
+      "冰屬性攻擊強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_130",
+    "name": "冰結護石Ⅲ",
+    "skills": {
+      "冰屬性攻擊強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_256",
+    "name": "冰結護石Ⅳ",
+    "skills": {
+      "冰屬性攻擊強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_257",
+    "name": "冰結護石Ⅴ",
+    "skills": {
+      "冰屬性攻擊強化": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_131",
+    "name": "達人護石Ⅰ",
+    "skills": {
+      "看破": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_132",
+    "name": "達人護石Ⅱ",
+    "skills": {
+      "看破": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_133",
+    "name": "達人護石Ⅲ",
+    "skills": {
+      "看破": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_258",
+    "name": "達人護石Ⅳ",
+    "skills": {
+      "看破": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_134",
+    "name": "迴避護石Ⅰ",
+    "skills": {
+      "迴避性能": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_135",
+    "name": "迴避護石Ⅱ",
+    "skills": {
+      "迴避性能": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_136",
+    "name": "回迴避護石Ⅲ",
+    "skills": {
+      "迴避性能": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_259",
+    "name": "迴避護石Ⅳ",
+    "skills": {
+      "迴避性能": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_137",
+    "name": "納刀護石Ⅰ",
+    "skills": {
+      "收刀術": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_138",
+    "name": "納刀護石Ⅱ",
+    "skills": {
+      "收刀術": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_139",
+    "name": "納刀護石Ⅲ",
+    "skills": {
+      "收刀術": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_140",
+    "name": "研磨護石Ⅰ",
+    "skills": {
+      "砥石使用高速化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_141",
+    "name": "研磨護石Ⅱ",
+    "skills": {
+      "砥石使用高速化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_142",
+    "name": "研磨護石Ⅲ",
+    "skills": {
+      "砥石使用高速化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_143",
+    "name": "耐爆護石Ⅰ",
+    "skills": {
+      "爆破異常狀態的耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_144",
+    "name": "耐爆護石Ⅱ",
+    "skills": {
+      "爆破異常狀態的耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_145",
+    "name": "耐爆護石Ⅲ",
+    "skills": {
+      "爆破異常狀態的耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_146",
+    "name": "耐龍護石Ⅰ",
+    "skills": {
+      "龍耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_147",
+    "name": "耐龍護石Ⅱ",
+    "skills": {
+      "龍耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_148",
+    "name": "耐龍護石Ⅲ",
+    "skills": {
+      "龍耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_149",
+    "name": "破龍護石Ⅰ",
+    "skills": {
+      "龍屬性攻擊強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_150",
+    "name": "破龍護石Ⅱ",
+    "skills": {
+      "龍屬性攻擊強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_151",
+    "name": "破龍護石Ⅲ",
+    "skills": {
+      "龍屬性攻擊強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_260",
+    "name": "破龍護石Ⅳ",
+    "skills": {
+      "龍屬性攻擊強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_261",
+    "name": "破龍護石Ⅴ",
+    "skills": {
+      "龍屬性攻擊強化": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_152",
+    "name": "爆破護石Ⅰ",
+    "skills": {
+      "爆破屬性強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_153",
+    "name": "爆破護石Ⅱ",
+    "skills": {
+      "爆破屬性強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_154",
+    "name": "爆破護石Ⅲ",
+    "skills": {
+      "爆破屬性強化": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_262",
+    "name": "爆破護石Ⅳ",
+    "skills": {
+      "爆破屬性強化": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_155",
+    "name": "拔刀護石Ⅰ",
+    "skills": {
+      "拔刀術【技】": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_156",
+    "name": "拔刀護石Ⅱ",
+    "skills": {
+      "拔刀術【技】": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_301",
+    "name": "拔刀護石Ⅲ",
+    "skills": {
+      "拔刀術【技】": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_157",
+    "name": "特射護石Ⅰ",
+    "skills": {
+      "特殊射擊強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_158",
+    "name": "特射護石Ⅱ",
+    "skills": {
+      "特殊射擊強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_159",
+    "name": "強走護石Ⅰ",
+    "skills": {
+      "跑者": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_160",
+    "name": "強走護石Ⅱ",
+    "skills": {
+      "跑者": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_263",
+    "name": "強走護石Ⅲ",
+    "skills": {
+      "跑者": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_161",
+    "name": "體術護石Ⅰ",
+    "skills": {
+      "體術": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_162",
+    "name": "體術護石Ⅱ",
+    "skills": {
+      "體術": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_163",
+    "name": "體術護石Ⅲ",
+    "skills": {
+      "體術": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_264",
+    "name": "體術護石Ⅳ",
+    "skills": {
+      "體術": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_303",
+    "name": "體術護石Ⅴ",
+    "skills": {
+      "體術": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_164",
+    "name": "早氣護石Ⅰ",
+    "skills": {
+      "耐力急速回復": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_165",
+    "name": "早氣護石Ⅱ",
+    "skills": {
+      "耐力急速回復": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_265",
+    "name": "早氣護石Ⅲ",
+    "skills": {
+      "耐力急速回復": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_166",
+    "name": "跳躍護石Ⅰ",
+    "skills": {
+      "迴避距離UP": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_167",
+    "name": "跳躍護石Ⅱ",
+    "skills": {
+      "迴避距離UP": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_266",
+    "name": "跳躍護石Ⅲ",
+    "skills": {
+      "迴避距離UP": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_168",
+    "name": "爆師護石Ⅰ",
+    "skills": {
+      "炸彈客": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_169",
+    "name": "爆師護石Ⅱ",
+    "skills": {
+      "炸彈客": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_170",
+    "name": "爆師護石Ⅲ",
+    "skills": {
+      "炸彈客": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_171",
+    "name": "嗜菇護石Ⅰ",
+    "skills": {
+      "最愛菇類": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_172",
+    "name": "嗜菇護石Ⅱ",
+    "skills": {
+      "最愛菇類": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_267",
+    "name": "嗜菇護石Ⅲ",
+    "skills": {
+      "最愛菇類": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_173",
+    "name": "覺醒護石Ⅰ",
+    "skills": {
+      "屬性解放／裝填擴充": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_174",
+    "name": "覺醒護石Ⅱ",
+    "skills": {
+      "屬性解放／裝填擴充": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_268",
+    "name": "覺醒護石Ⅲ",
+    "skills": {
+      "屬性解放／裝填擴充": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_175",
+    "name": "匠之護石Ⅰ",
+    "skills": {
+      "匠": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_176",
+    "name": "匠之護石Ⅱ",
+    "skills": {
+      "匠": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_177",
+    "name": "匠之護石Ⅲ",
+    "skills": {
+      "匠": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_269",
+    "name": "匠之護石Ⅳ",
+    "skills": {
+      "匠": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_178",
+    "name": "泥浴護石",
+    "skills": {
+      "泥耐性": 1,
+      "飛身躍入": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_179",
+    "name": "陷阱彈護石",
+    "skills": {
+      "異臭名人": 1,
+      "閃光強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_180",
+    "name": "狩獵生活護石",
+    "skills": {
+      "烤肉名人": 1,
+      "釣魚名人": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_181",
+    "name": "籌備護石",
+    "skills": {
+      "搬運達人": 1,
+      "蜂蜜獵人": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_182",
+    "name": "採集鐵人護石",
+    "skills": {
+      "採集達人": 1,
+      "剝取鐵人": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_183",
+    "name": "耐防護石Ⅰ",
+    "skills": {
+      "防禦力DOWN耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_184",
+    "name": "耐防護石Ⅱ",
+    "skills": {
+      "防禦力DOWN耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_185",
+    "name": "耐防護石Ⅲ",
+    "skills": {
+      "防禦力DOWN耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_186",
+    "name": "耳塞護石Ⅰ",
+    "skills": {
+      "耳塞": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_187",
+    "name": "耳塞護石Ⅱ",
+    "skills": {
+      "耳塞": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_188",
+    "name": "耳塞護石Ⅲ",
+    "skills": {
+      "耳塞": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_270",
+    "name": "耳塞護石Ⅳ",
+    "skills": {
+      "耳塞": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_189",
+    "name": "耐震護石Ⅰ",
+    "skills": {
+      "耐震": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_190",
+    "name": "耐震護石Ⅱ",
+    "skills": {
+      "耐震": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_271",
+    "name": "耐震護石Ⅲ",
+    "skills": {
+      "耐震": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_191",
+    "name": "痛擊護石Ⅰ",
+    "skills": {
+      "弱點特效": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_192",
+    "name": "痛擊護石Ⅱ",
+    "skills": {
+      "弱點特效": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_193",
+    "name": "集中護石Ⅰ",
+    "skills": {
+      "集中": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_194",
+    "name": "集中護石Ⅱ",
+    "skills": {
+      "集中": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_272",
+    "name": "集中護石Ⅲ",
+    "skills": {
+      "集中": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_195",
+    "name": "重擊護石Ⅰ",
+    "skills": {
+      "破壞王": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_196",
+    "name": "重擊護石Ⅱ",
+    "skills": {
+      "破壞王": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_273",
+    "name": "重擊護石Ⅲ",
+    "skills": {
+      "破壞王": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_197",
+    "name": "暴怒護石Ⅰ",
+    "skills": {
+      "怨恨": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_198",
+    "name": "暴怒護石Ⅱ",
+    "skills": {
+      "怨恨": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_274",
+    "name": "暴怒護石Ⅲ",
+    "skills": {
+      "怨恨": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_275",
+    "name": "暴怒護石Ⅳ",
+    "skills": {
+      "怨恨": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_297",
+    "name": "暴怒護石Ⅴ",
+    "skills": {
+      "怨恨": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_199",
+    "name": "底力護石Ⅰ",
+    "skills": {
+      "火場怪力": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_200",
+    "name": "底力護石Ⅱ",
+    "skills": {
+      "火場怪力": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_276",
+    "name": "底力護石Ⅲ",
+    "skills": {
+      "火場怪力": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_277",
+    "name": "底力護石Ⅳ",
+    "skills": {
+      "火場怪力": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_201",
+    "name": "裝備護石Ⅰ",
+    "skills": {
+      "整備": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_202",
+    "name": "整備護石Ⅱ",
+    "skills": {
+      "整備": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_203",
+    "name": "整備護石Ⅲ",
+    "skills": {
+      "整備": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_204",
+    "name": "全開護石Ⅰ",
+    "skills": {
+      "力量解放": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_205",
+    "name": "全開護石Ⅱ",
+    "skills": {
+      "力量解放": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_278",
+    "name": "全開護石Ⅲ",
+    "skills": {
+      "力量解放": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_279",
+    "name": "全開護石Ⅳ",
+    "skills": {
+      "力量解放": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_298",
+    "name": "全開護石Ⅴ",
+    "skills": {
+      "力量解放": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_206",
+    "name": "挑戰護石Ⅰ",
+    "skills": {
+      "挑戰者": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_207",
+    "name": "挑戰護石Ⅱ",
+    "skills": {
+      "挑戰者": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_280",
+    "name": "挑戰護石Ⅲ",
+    "skills": {
+      "挑戰者": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_281",
+    "name": "挑戰護石Ⅳ",
+    "skills": {
+      "挑戰者": 4
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_300",
+    "name": "挑戰護石Ⅴ",
+    "skills": {
+      "挑戰者": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_208",
+    "name": "無傷護石Ⅰ",
+    "skills": {
+      "無傷": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_209",
+    "name": "無傷護石Ⅱ",
+    "skills": {
+      "無傷": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_210",
+    "name": "渾身護石Ⅰ",
+    "skills": {
+      "精神抖擻": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_211",
+    "name": "渾身護石Ⅱ",
+    "skills": {
+      "精神抖擻": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_299",
+    "name": "渾身護石Ⅲ",
+    "skills": {
+      "精神抖擻": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_212",
+    "name": "耐衝護石Ⅰ",
+    "skills": {
+      "減輕膽怯": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_213",
+    "name": "耐衝護石Ⅱ",
+    "skills": {
+      "減輕膽怯": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_282",
+    "name": "耐衝護石Ⅲ",
+    "skills": {
+      "減輕膽怯": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_214",
+    "name": "耐瘴護石Ⅰ",
+    "skills": {
+      "瘴氣耐性": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_215",
+    "name": "耐瘴護石Ⅱ",
+    "skills": {
+      "瘴氣耐性": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_216",
+    "name": "耐瘴護石Ⅲ",
+    "skills": {
+      "瘴氣耐性": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_217",
+    "name": "通常彈護石",
+    "skills": {
+      "通常彈‧通常箭強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_283",
+    "name": "通常彈護石Ⅱ",
+    "skills": {
+      "通常彈‧通常箭強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_218",
+    "name": "心靜自然涼護石",
+    "skills": {
+      "熱傷害無效": 1,
+      "適應瘴氣環境": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_219",
+    "name": "騎手護石",
+    "skills": {
+      "騎乘名人": 1,
+      "跳躍鐵人": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_220",
+    "name": "調查達人護石",
+    "skills": {
+      "導蟲反應距離UP": 1,
+      "研究者": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_221",
+    "name": "超心護石",
+    "skills": {
+      "超會心": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_284",
+    "name": "超心護石Ⅱ",
+    "skills": {
+      "超會心": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_222",
+    "name": "昂揚護石Ⅰ",
+    "skills": {
+      "強化持續": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_223",
+    "name": "昂揚護石Ⅱ",
+    "skills": {
+      "強化持續": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_285",
+    "name": "昂揚護石Ⅲ",
+    "skills": {
+      "強化持續": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_224",
+    "name": "貫通彈護石",
+    "skills": {
+      "貫通彈‧龍之箭強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_286",
+    "name": "貫通彈護石Ⅱ",
+    "skills": {
+      "貫通彈‧龍之箭強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_225",
+    "name": "散彈護石",
+    "skills": {
+      "散彈‧剛射強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_287",
+    "name": "散彈護石Ⅱ",
+    "skills": {
+      "散彈‧剛射強化": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_226",
+    "name": "毒瓶護石",
+    "skills": {
+      "毒瓶追加": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_227",
+    "name": "麻痺瓶護石",
+    "skills": {
+      "麻痺瓶追加": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_228",
+    "name": "睡眠瓶護石",
+    "skills": {
+      "睡眠瓶追加": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_229",
+    "name": "爆破瓶護石",
+    "skills": {
+      "爆破瓶追加": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_230",
+    "name": "風水護石",
+    "skills": {
+      "探索者之幸運": 1,
+      "察覺": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_231",
+    "name": "疾風護石",
+    "skills": {
+      "滑走強化": 1,
+      "飛燕": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_232",
+    "name": "滅龍護石",
+    "skills": {
+      "龍封力強化": 1,
+      "龍屬性攻擊強化": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_233",
+    "name": "堅守護石",
+    "skills": {
+      "防禦強化": 1,
+      "死裡逃生": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_288",
+    "name": "守勢護石Ⅰ",
+    "skills": {
+      "攻擊守勢": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_289",
+    "name": "守勢護石Ⅱ",
+    "skills": {
+      "攻擊守勢": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_290",
+    "name": "守勢護石Ⅲ",
+    "skills": {
+      "攻擊守勢": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_291",
+    "name": "轉福護石Ⅰ",
+    "skills": {
+      "轉禍為福": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_292",
+    "name": "轉福護石Ⅱ",
+    "skills": {
+      "轉禍為福": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_302",
+    "name": "轉福護石Ⅲ",
+    "skills": {
+      "轉禍為福": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_293",
+    "name": "剛力護石",
+    "skills": {
+      "無屬性強化": 1,
+      "鈍器能手": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_294",
+    "name": "利刃護石",
+    "skills": {
+      "利刃／彈丸節約": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_295",
+    "name": "封印護石",
+    "skills": {
+      "龍封力強化": 1,
+      "振奮": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_296",
+    "name": "毅力護石",
+    "skills": {
+      "毅力": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_234",
+    "name": "順風護石",
+    "skills": {
+      "攻擊": 1,
+      "精靈加護": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_304",
+    "name": "Attack Charm V",
+    "skills": {
+      "攻擊": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_305",
+    "name": "Windproof Charm V",
+    "skills": {
+      "風壓耐性": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_306",
+    "name": "Survival Charm I",
+    "skills": {
+      "環境利用知識": 1
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_307",
+    "name": "Survival Charm II",
+    "skills": {
+      "環境利用知識": 2
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_308",
+    "name": "Survival Charm III",
+    "skills": {
+      "環境利用知識": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_309",
+    "name": "Master's Charm V",
+    "skills": {
+      "看破": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_310",
+    "name": "Evasion Charm V",
+    "skills": {
+      "迴避性能": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_311",
+    "name": "Handicraft Charm V",
+    "skills": {
+      "匠": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_312",
+    "name": "Earplugs Charm V",
+    "skills": {
+      "耳塞": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_313",
+    "name": "Exploiter Charm III",
+    "skills": {
+      "弱點特效": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_314",
+    "name": "Grit Charm V",
+    "skills": {
+      "火場怪力": 5
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_315",
+    "name": "Unscathed Charm III",
+    "skills": {
+      "無傷": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_316",
+    "name": "Critical Charm III",
+    "skills": {
+      "超會心": 3
+    },
+    "slots": []
+  },
+  {
+    "id": "wcharm_317",
+    "name": "Shaver Charm",
+    "skills": {
+      "飛翔爪攻擊強化": 1,
+      "攀岩者": 1
+    },
+    "slots": []
+  }
+]

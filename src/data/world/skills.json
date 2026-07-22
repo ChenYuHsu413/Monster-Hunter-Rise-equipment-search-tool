@@ -1,0 +1,916 @@
+[
+  {
+    "name": "毒耐性",
+    "nameEn": "Poison Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "麻痺耐性",
+    "nameEn": "Paralysis Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "睡眠耐性",
+    "nameEn": "Sleep Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "昏厥耐性",
+    "nameEn": "Stun Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "泥耐性",
+    "nameEn": "Muck Resistance",
+    "maxLevel": 1
+  },
+  {
+    "name": "爆破異常狀態的耐性",
+    "nameEn": "Blast Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "裂傷耐性",
+    "nameEn": "Bleeding Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "防禦力DOWN耐性",
+    "nameEn": "Iron Skin",
+    "maxLevel": 3
+  },
+  {
+    "name": "耳塞",
+    "nameEn": "Earplugs",
+    "maxLevel": 5
+  },
+  {
+    "name": "風壓耐性",
+    "nameEn": "Windproof",
+    "maxLevel": 5
+  },
+  {
+    "name": "耐震",
+    "nameEn": "Tremor Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "異臭名人",
+    "nameEn": "Dungmaster",
+    "maxLevel": 1
+  },
+  {
+    "name": "適應瘴氣環境",
+    "nameEn": "Effluvial Expert",
+    "maxLevel": 1
+  },
+  {
+    "name": "熱傷害無效",
+    "nameEn": "Heat Guard",
+    "maxLevel": 1
+  },
+  {
+    "name": "攻擊",
+    "nameEn": "Attack Boost",
+    "maxLevel": 7
+  },
+  {
+    "name": "防禦",
+    "nameEn": "Defense Boost",
+    "maxLevel": 7
+  },
+  {
+    "name": "體力增強",
+    "nameEn": "Health Boost",
+    "maxLevel": 3
+  },
+  {
+    "name": "體力回復量UP",
+    "nameEn": "Recovery Up",
+    "maxLevel": 3
+  },
+  {
+    "name": "回復速度",
+    "nameEn": "Recovery Speed",
+    "maxLevel": 3
+  },
+  {
+    "name": "火耐性",
+    "nameEn": "Fire Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "水耐性",
+    "nameEn": "Water Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "冰耐性",
+    "nameEn": "Ice Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "雷耐性",
+    "nameEn": "Thunder Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "龍耐性",
+    "nameEn": "Dragon Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "屬性異常狀態的耐性",
+    "nameEn": "Blight Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "火屬性攻擊強化",
+    "nameEn": "Fire Attack",
+    "maxLevel": 6
+  },
+  {
+    "name": "水屬性攻擊強化",
+    "nameEn": "Water Attack",
+    "maxLevel": 6
+  },
+  {
+    "name": "冰屬性攻擊強化",
+    "nameEn": "Ice Attack",
+    "maxLevel": 6
+  },
+  {
+    "name": "雷屬性攻擊強化",
+    "nameEn": "Thunder Attack",
+    "maxLevel": 6
+  },
+  {
+    "name": "龍屬性攻擊強化",
+    "nameEn": "Dragon Attack",
+    "maxLevel": 6
+  },
+  {
+    "name": "毒屬性強化",
+    "nameEn": "Poison Attack",
+    "maxLevel": 4
+  },
+  {
+    "name": "麻痺屬性強化",
+    "nameEn": "Paralysis Attack",
+    "maxLevel": 4
+  },
+  {
+    "name": "睡眠屬性強化",
+    "nameEn": "Sleep Attack",
+    "maxLevel": 4
+  },
+  {
+    "name": "爆破屬性強化",
+    "nameEn": "Blast Attack",
+    "maxLevel": 4
+  },
+  {
+    "name": "通常彈‧通常箭強化",
+    "nameEn": "Normal Shots",
+    "maxLevel": 2
+  },
+  {
+    "name": "貫通彈‧龍之箭強化",
+    "nameEn": "Piercing Shots",
+    "maxLevel": 2
+  },
+  {
+    "name": "散彈‧剛射強化",
+    "nameEn": "Spread/Power Shots",
+    "maxLevel": 2
+  },
+  {
+    "name": "屬性解放／裝填擴充",
+    "nameEn": "Free Elem/Ammo Up",
+    "maxLevel": 3
+  },
+  {
+    "name": "看破",
+    "nameEn": "Critical Eye",
+    "maxLevel": 7
+  },
+  {
+    "name": "超會心",
+    "nameEn": "Critical Boost",
+    "maxLevel": 3
+  },
+  {
+    "name": "弱點特效",
+    "nameEn": "Weakness Exploit",
+    "maxLevel": 3
+  },
+  {
+    "name": "集中",
+    "nameEn": "Focus",
+    "maxLevel": 3
+  },
+  {
+    "name": "強化持續",
+    "nameEn": "Power Prolonger",
+    "maxLevel": 3
+  },
+  {
+    "name": "匠",
+    "nameEn": "Handicraft",
+    "maxLevel": 5
+  },
+  {
+    "name": "拔刀術【技】",
+    "nameEn": "Critical Draw",
+    "maxLevel": 3
+  },
+  {
+    "name": "破壞王",
+    "nameEn": "Partbreaker",
+    "maxLevel": 3
+  },
+  {
+    "name": "KO術",
+    "nameEn": "Slugger",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "KO術‧極意"
+  },
+  {
+    "name": "奪取耐力",
+    "nameEn": "Stamina Thief",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "奪取耐力‧極意"
+  },
+  {
+    "name": "騎乘名人",
+    "nameEn": "Master Mounter",
+    "maxLevel": 1
+  },
+  {
+    "name": "飛燕",
+    "nameEn": "Airborne",
+    "maxLevel": 1
+  },
+  {
+    "name": "力量解放",
+    "nameEn": "Latent Power",
+    "maxLevel": 5,
+    "secretMaxLevel": 7,
+    "secretUnlockedBy": "力量解放‧極意"
+  },
+  {
+    "name": "挑戰者",
+    "nameEn": "Agitator",
+    "maxLevel": 5,
+    "secretMaxLevel": 7,
+    "secretUnlockedBy": "挑戰者‧極意"
+  },
+  {
+    "name": "無傷",
+    "nameEn": "Peak Performance",
+    "maxLevel": 3
+  },
+  {
+    "name": "火場怪力",
+    "nameEn": "Heroics",
+    "maxLevel": 5,
+    "secretMaxLevel": 7,
+    "secretUnlockedBy": "火場怪力‧極意"
+  },
+  {
+    "name": "不屈",
+    "nameEn": "Fortify",
+    "maxLevel": 1
+  },
+  {
+    "name": "怨恨",
+    "nameEn": "Resentment",
+    "maxLevel": 5
+  },
+  {
+    "name": "死裡逃生",
+    "nameEn": "Resuscitate",
+    "maxLevel": 1
+  },
+  {
+    "name": "吹笛名人",
+    "nameEn": "Horn Maestro",
+    "maxLevel": 2
+  },
+  {
+    "name": "砲彈裝填數UP",
+    "nameEn": "Capacity Boost",
+    "maxLevel": 1
+  },
+  {
+    "name": "特殊射擊強化",
+    "nameEn": "Special Ammo Boost",
+    "maxLevel": 2
+  },
+  {
+    "name": "砲術",
+    "nameEn": "Artillery",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "砲術‧極意"
+  },
+  {
+    "name": "砲擊手",
+    "nameEn": "Heavy Artillery",
+    "maxLevel": 2
+  },
+  {
+    "name": "跑者",
+    "nameEn": "Marathon Runner",
+    "maxLevel": 3
+  },
+  {
+    "name": "體術",
+    "nameEn": "Constitution",
+    "maxLevel": 5
+  },
+  {
+    "name": "飛身躍入",
+    "nameEn": "Leap of Faith",
+    "maxLevel": 1
+  },
+  {
+    "name": "耐力急速回復",
+    "nameEn": "Stamina Surge",
+    "maxLevel": 3
+  },
+  {
+    "name": "飢餓耐性",
+    "nameEn": "Hunger Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "迴避性能",
+    "nameEn": "Evade Window",
+    "maxLevel": 5
+  },
+  {
+    "name": "迴避距離UP",
+    "nameEn": "Evade Extender",
+    "maxLevel": 3
+  },
+  {
+    "name": "防禦性能",
+    "nameEn": "Guard",
+    "maxLevel": 5
+  },
+  {
+    "name": "收刀術",
+    "nameEn": "Quick Sheath",
+    "maxLevel": 3
+  },
+  {
+    "name": "廣域化",
+    "nameEn": "Wide-Range",
+    "maxLevel": 5
+  },
+  {
+    "name": "道具使用強化",
+    "nameEn": "Item Prolonger",
+    "maxLevel": 3
+  },
+  {
+    "name": "滿足感",
+    "nameEn": "Free Meal",
+    "maxLevel": 1,
+    "secretMaxLevel": 3,
+    "secretUnlockedBy": "滿足感‧極意"
+  },
+  {
+    "name": "快吃",
+    "nameEn": "Speed Eating",
+    "maxLevel": 3
+  },
+  {
+    "name": "砥石使用高速化",
+    "nameEn": "Speed Sharpening",
+    "maxLevel": 3
+  },
+  {
+    "name": "炸彈客",
+    "nameEn": "Bombardier",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "炸彈客‧極意"
+  },
+  {
+    "name": "最愛菇類",
+    "nameEn": "Mushroomancer",
+    "maxLevel": 3
+  },
+  {
+    "name": "釣魚名人",
+    "nameEn": "Master Fisher",
+    "maxLevel": 1
+  },
+  {
+    "name": "搬運達人",
+    "nameEn": "Pro Transporter",
+    "maxLevel": 1
+  },
+  {
+    "name": "採集達人",
+    "nameEn": "Master Gatherer",
+    "maxLevel": 1
+  },
+  {
+    "name": "蜂蜜獵人",
+    "nameEn": "Honey Hunter",
+    "maxLevel": 1
+  },
+  {
+    "name": "剝取鐵人",
+    "nameEn": "Carving Pro",
+    "maxLevel": 1
+  },
+  {
+    "name": "精靈加護",
+    "nameEn": "Divine Blessing",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "精靈加護‧極意"
+  },
+  {
+    "name": "指示隨從",
+    "nameEn": "Palico Rally",
+    "maxLevel": 5
+  },
+  {
+    "name": "植生學",
+    "nameEn": "Botanist",
+    "maxLevel": 4
+  },
+  {
+    "name": "地質學",
+    "nameEn": "Geologist",
+    "maxLevel": 3
+  },
+  {
+    "name": "精神抖擻",
+    "nameEn": "Maximum Might",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "渾身‧極意"
+  },
+  {
+    "name": "投射器裝填數UP",
+    "nameEn": "Slinger Capacity",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "投射器裝填‧極意"
+  },
+  {
+    "name": "潛伏",
+    "nameEn": "Stealth",
+    "maxLevel": 3
+  },
+  {
+    "name": "減輕膽怯",
+    "nameEn": "Flinch Free",
+    "maxLevel": 3
+  },
+  {
+    "name": "導蟲反應距離UP",
+    "nameEn": "Scoutfly Range Up",
+    "maxLevel": 1
+  },
+  {
+    "name": "蹲下移動速度UP",
+    "nameEn": "Speed Crawler",
+    "maxLevel": 1
+  },
+  {
+    "name": "跳躍鐵人",
+    "nameEn": "Jump Master",
+    "maxLevel": 1
+  },
+  {
+    "name": "環境利用知識",
+    "nameEn": "Survival Expert",
+    "maxLevel": 3
+  },
+  {
+    "name": "適應水場‧深雪",
+    "nameEn": "Aquatic/Polar Mobility",
+    "maxLevel": 3
+  },
+  {
+    "name": "攀岩者",
+    "nameEn": "Cliffhanger",
+    "maxLevel": 1
+  },
+  {
+    "name": "閃光強化",
+    "nameEn": "Blindsider",
+    "maxLevel": 1
+  },
+  {
+    "name": "研究者",
+    "nameEn": "Scholar",
+    "maxLevel": 1
+  },
+  {
+    "name": "昆蟲標本達人",
+    "nameEn": "Entomologist",
+    "maxLevel": 3
+  },
+  {
+    "name": "瘴氣耐性",
+    "nameEn": "Effluvia Resistance",
+    "maxLevel": 3
+  },
+  {
+    "name": "追蹤達人",
+    "nameEn": "Scenthound",
+    "maxLevel": 1
+  },
+  {
+    "name": "探索者之幸運",
+    "nameEn": "Forager's Luck",
+    "maxLevel": 1
+  },
+  {
+    "name": "察覺",
+    "nameEn": "Detector",
+    "maxLevel": 1
+  },
+  {
+    "name": "整備",
+    "nameEn": "Tool Specialist",
+    "maxLevel": 3,
+    "secretMaxLevel": 5,
+    "secretUnlockedBy": "整備‧極意"
+  },
+  {
+    "name": "滑走強化",
+    "nameEn": "Affinity Sliding",
+    "maxLevel": 1
+  },
+  {
+    "name": "威嚇",
+    "nameEn": "Intimidator",
+    "maxLevel": 3
+  },
+  {
+    "name": "加速再生",
+    "nameEn": "Hasten Recovery",
+    "maxLevel": 1
+  },
+  {
+    "name": "超回復力",
+    "nameEn": "Super Recovery",
+    "maxLevel": 1
+  },
+  {
+    "name": "毒傷害強化",
+    "nameEn": "Poison Duration Up",
+    "maxLevel": 1
+  },
+  {
+    "name": "振奮",
+    "nameEn": "Adrenaline",
+    "maxLevel": 1
+  },
+  {
+    "name": "突破耐力上限",
+    "nameEn": "Stamina Cap Up",
+    "maxLevel": 1
+  },
+  {
+    "name": "會心攻擊【屬性】",
+    "nameEn": "Critical Element",
+    "maxLevel": 1
+  },
+  {
+    "name": "心眼／彈道強化",
+    "nameEn": "Mind's Eye/Ballistics",
+    "maxLevel": 1
+  },
+  {
+    "name": "鈍器能手",
+    "nameEn": "Bludgeoner",
+    "maxLevel": 1
+  },
+  {
+    "name": "無屬性強化",
+    "nameEn": "Non-elemental Boost",
+    "maxLevel": 1
+  },
+  {
+    "name": "捕獲名人",
+    "nameEn": "Capture Master",
+    "maxLevel": 1
+  },
+  {
+    "name": "防禦強化",
+    "nameEn": "Guard Up",
+    "maxLevel": 1
+  },
+  {
+    "name": "毅力",
+    "nameEn": "Guts",
+    "maxLevel": 1
+  },
+  {
+    "name": "達人藝",
+    "nameEn": "Master's Touch",
+    "maxLevel": 1
+  },
+  {
+    "name": "風壓完全無效",
+    "nameEn": "Nullify Wind Pressure",
+    "maxLevel": 1
+  },
+  {
+    "name": "利刃／彈丸節約",
+    "nameEn": "Razor Sharp/Spare Shot",
+    "maxLevel": 1
+  },
+  {
+    "name": "會心攻擊【特殊】",
+    "nameEn": "Critical Status",
+    "maxLevel": 1
+  },
+  {
+    "name": "強運",
+    "nameEn": "Great Luck",
+    "maxLevel": 1
+  },
+  {
+    "name": "剝取名人",
+    "nameEn": "Carving Master",
+    "maxLevel": 1
+  },
+  {
+    "name": "幸運",
+    "nameEn": "Good Luck",
+    "maxLevel": 1
+  },
+  {
+    "name": "解放弓的蓄力階段",
+    "nameEn": "Bow Charge Plus",
+    "maxLevel": 1
+  },
+  {
+    "name": "拔刀術【力】",
+    "nameEn": "Punishing Draw",
+    "maxLevel": 1
+  },
+  {
+    "name": "剛刃研磨",
+    "nameEn": "Protective Polish",
+    "maxLevel": 1
+  },
+  {
+    "name": "烤肉名人",
+    "nameEn": "BBQ Master",
+    "maxLevel": 1
+  },
+  {
+    "name": "爆破瓶追加",
+    "nameEn": "Blast Functionality",
+    "maxLevel": 1
+  },
+  {
+    "name": "龍封力強化",
+    "nameEn": "Elderseal Boost",
+    "maxLevel": 1
+  },
+  {
+    "name": "麻痺瓶追加",
+    "nameEn": "Para Functionality",
+    "maxLevel": 1
+  },
+  {
+    "name": "毒瓶追加",
+    "nameEn": "Poison Functionality",
+    "maxLevel": 1
+  },
+  {
+    "name": "睡眠瓶追加",
+    "nameEn": "Sleep Functionality",
+    "maxLevel": 1
+  },
+  {
+    "name": "飛燕【屬性】",
+    "nameEn": "Elemental Airborne",
+    "maxLevel": 1
+  },
+  {
+    "name": "真‧利刃／彈丸節約",
+    "nameEn": "True Razor Sharp/Spare Shot",
+    "maxLevel": 1
+  },
+  {
+    "name": "攻擊守勢",
+    "nameEn": "Offensive Guard",
+    "maxLevel": 3
+  },
+  {
+    "name": "轉禍為福",
+    "nameEn": "Coalescence",
+    "maxLevel": 3
+  },
+  {
+    "name": "寒氣鍊成",
+    "nameEn": "Frostcraft",
+    "maxLevel": 1
+  },
+  {
+    "name": "屬性加速",
+    "nameEn": "Element Acceleration",
+    "maxLevel": 1
+  },
+  {
+    "name": "真‧屬性加速",
+    "nameEn": "True Element Acceleration",
+    "maxLevel": 1
+  },
+  {
+    "name": "大地縫纏",
+    "nameEn": "Gaia's Veil",
+    "maxLevel": 1
+  },
+  {
+    "name": "真‧大地縫纏",
+    "nameEn": "True Gaia's Veil",
+    "maxLevel": 1
+  },
+  {
+    "name": "龍脈覺醒",
+    "nameEn": "Dragonvein Awakening",
+    "maxLevel": 1
+  },
+  {
+    "name": "真‧龍脈覺醒",
+    "nameEn": "True Dragonvein Awakening",
+    "maxLevel": 1
+  },
+  {
+    "name": "滿足感‧極意",
+    "nameEn": "Free Meal Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "渾身‧極意",
+    "nameEn": "Maximum Might Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "炸彈客‧極意",
+    "nameEn": "Bombardier Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "KO術‧極意",
+    "nameEn": "Slugger Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "挑戰者‧極意",
+    "nameEn": "Agitator Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "砲術‧極意",
+    "nameEn": "Artillery Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "奪取耐力‧極意",
+    "nameEn": "Stamina Thief Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "整備‧極意",
+    "nameEn": "Tool Specialist Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "力量解放‧極意",
+    "nameEn": "Latent Power Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "精靈加護‧極意",
+    "nameEn": "Divine Blessing Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "投射器裝填‧極意",
+    "nameEn": "Slinger Ammo Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "火場怪力‧極意",
+    "nameEn": "Heroics Secret",
+    "maxLevel": 1
+  },
+  {
+    "name": "真‧會心擊【特殊】",
+    "nameEn": "True Critical Status",
+    "maxLevel": 1
+  },
+  {
+    "name": "真‧會心擊【屬性】",
+    "nameEn": "True Critical Element",
+    "maxLevel": 1
+  },
+  {
+    "name": "萬福的獻禮",
+    "nameEn": "Joy's Gift",
+    "maxLevel": 1
+  },
+  {
+    "name": "萬福的恩惠",
+    "nameEn": "Joy's Gratitude",
+    "maxLevel": 1
+  },
+  {
+    "name": "大感謝的贈禮",
+    "nameEn": "Gratitude's Gift",
+    "maxLevel": 1
+  },
+  {
+    "name": "大感謝的恩惠",
+    "nameEn": "Gratitude's Blessing",
+    "maxLevel": 1
+  },
+  {
+    "name": "盛放的獻禮",
+    "nameEn": "Full Bloom's Gift",
+    "maxLevel": 1
+  },
+  {
+    "name": "盛放之恩惠",
+    "nameEn": "Full Bloom Gratitude",
+    "maxLevel": 1
+  },
+  {
+    "name": "耐性變換【屬性】",
+    "nameEn": "Element Conversion",
+    "maxLevel": 1
+  },
+  {
+    "name": "全屬性耐性強化",
+    "nameEn": "All Elemental Resistance",
+    "maxLevel": 1
+  },
+  {
+    "name": "飛翔爪攻擊強化",
+    "nameEn": "Clutch Claw Boost",
+    "maxLevel": 1
+  },
+  {
+    "name": "Inheritance",
+    "nameEn": "Inheritance",
+    "maxLevel": 1
+  },
+  {
+    "name": "Transcendance",
+    "nameEn": "Transcendance",
+    "maxLevel": 1
+  },
+  {
+    "name": "Fun Fright's Gift",
+    "nameEn": "Fun Fright's Gift",
+    "maxLevel": 1
+  },
+  {
+    "name": "Fun Fright's Gratitude",
+    "nameEn": "Fun Fright's Gratitude",
+    "maxLevel": 1
+  },
+  {
+    "name": "Sizzling Gift",
+    "nameEn": "Sizzling Gift",
+    "maxLevel": 1
+  },
+  {
+    "name": "Sizzling Gratitude",
+    "nameEn": "Sizzling Gratitude",
+    "maxLevel": 1
+  },
+  {
+    "name": "寒冷耐性",
+    "nameEn": "Coldproof",
+    "maxLevel": 1
+  },
+  {
+    "name": "佯動攻擊",
+    "nameEn": "Provoker",
+    "maxLevel": 1
+  },
+  {
+    "name": "受身術",
+    "nameEn": "Safe Landing",
+    "maxLevel": 1
+  }
+]

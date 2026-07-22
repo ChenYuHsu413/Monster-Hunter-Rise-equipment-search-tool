@@ -46,3 +46,6 @@ scripts/.cache/
 
 # 爬蟲候選中繼產出（保留在本機供追溯；正式資料已上架 data/community-builds/，故不入版控）
 scripts/output/
+
+# World 匯入管線快取（MHWorldData raw CSV + Kiranico World 交叉稽核快取；重跑零抓取）
+scripts/world/.cache/
