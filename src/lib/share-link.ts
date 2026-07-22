@@ -1,4 +1,4 @@
-import type { ExcludedItems, FixedParts, SkillMap, WeaponSearchMode } from "@/types/build";
+import type { ExcludedItems, FixedParts, GameId, SkillMap, WeaponSearchMode } from "@/types/build";
 import {
   deserializeSearchConditions,
   type SearchConditions,
@@ -20,6 +20,8 @@ import {
 /** 分享用的配裝器狀態子集。 */
 export type ShareableBuilderState = {
   v: 1;
+  /** 遊戲；舊格式連結無此欄，解碼時視為 "rise"（向後相容）。 */
+  game?: GameId;
   weaponType?: string;
   weaponSearchMode?: WeaponSearchMode;
   fixedWeaponId?: string;
@@ -36,6 +38,8 @@ export type ShareableBuilderState = {
 
 /** 解碼後回傳給頁面的形狀：條件已消毒（charms 為 []），另附武器選擇欄位。 */
 export type DecodedShare = {
+  /** 遊戲；舊格式連結無 game 欄時恆為 "rise"。 */
+  game: GameId;
   conditions: SearchConditions;
   weaponType?: string;
   weaponSearchMode?: WeaponSearchMode;
@@ -45,6 +49,7 @@ export type DecodedShare = {
 
 /** 把配裝器目前狀態編成 URL query 值（不含護石）。 */
 export function encodeShareState(input: {
+  game?: GameId;
   conditions: SearchConditions;
   weaponType?: string;
   weaponSearchMode?: WeaponSearchMode;
@@ -53,6 +58,7 @@ export function encodeShareState(input: {
 }): string {
   const payload: ShareableBuilderState = {
     v: 1,
+    game: input.game ?? "rise",
     weaponType: input.weaponType,
     weaponSearchMode: input.weaponSearchMode,
     fixedWeaponId: input.fixedWeaponId || undefined,
@@ -86,7 +92,10 @@ export function decodeShareState(raw: string): DecodedShare | null {
   // conditions 經 deserialize 消毒（護石缺→[]、畸形欄位退預設）。
   const conditions = deserializeSearchConditions(obj.conditions);
   const mode = asString(obj.weaponSearchMode);
+  // 舊格式（無 game 欄）視為 rise；只認識已知遊戲，其餘退回 rise。
+  const game: GameId = obj.game === "world" ? "world" : "rise";
   return {
+    game,
     conditions,
     weaponType: asString(obj.weaponType),
     weaponSearchMode:

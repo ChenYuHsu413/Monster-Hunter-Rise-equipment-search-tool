@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { WEAPON_ICONS, ARMOR_ICONS } from "@/lib/equipment-icons";
 import { rarityColor } from "@/lib/rarity";
+import { useGameId } from "@/lib/game-context";
 import { cn } from "@/lib/utils";
 
 /**
@@ -64,12 +65,13 @@ export function ArmorIcon({
   className?: string;
   title?: string;
 }) {
+  const gameId = useGameId();
   const inner = ARMOR_ICONS[part];
   if (!inner) return null;
   return (
     <IconSvg
       inner={inner}
-      color={rarity != null ? rarityColor(rarity) : undefined}
+      color={rarity != null ? rarityColor(rarity, gameId) : undefined}
       className={className}
       title={title}
     />
