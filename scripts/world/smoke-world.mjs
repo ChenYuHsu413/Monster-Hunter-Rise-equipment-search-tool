@@ -102,3 +102,36 @@ if (run(1)) {
     "預期：Fatalis 5 件 → Inheritance 觸發 → 挑戰者原生 5 撐到 7；finalSkills 挑戰者=7。"
   );
 }
+
+// ---- 測③ 複合珠：要求 {攻擊:1, 奪取耐力:1}，複合珠 2-in-1 應被選用 ----
+if (run(3)) {
+  const dragon = armorsBy((a) => a.setBonusId === "sb_fatalis-legend" && /α\+$/.test(a.nameEn));
+  const byPart = {};
+  for (const a of dragon) byPart[a.part] ??= a;
+  const gs = pick((w) => w.weaponType === "great-sword" && w.rarity === 12);
+  const { results } = report(
+    "測③ 複合珠 2-in-1（固定 Fatalis α+，要求 攻擊1 + 奪取耐力1）",
+    {
+      weaponType: "great-sword",
+      weaponSearchMode: "fixed",
+      fixedWeaponId: gs.id,
+      charms: [],
+      fixedParts: {
+        head: byPart.head.id, chest: byPart.chest.id, arms: byPart.arms.id,
+        waist: byPart.waist.id, legs: byPart.legs.id,
+      },
+      excludedItems: NO_EXCL,
+      requiredSkills: { 攻擊: 1, 奪取耐力: 1 },
+      excludedSkills: [],
+      reservedSlots: RESERVED0,
+      searchMode: "exact",
+      resultLimit: 3,
+    },
+    "預期：出現雙技能 Lv4 珠（如 奪氣‧攻擊珠【４】），finalSkills 攻擊≥1 且 奪取耐力≥1。"
+  );
+  const r = results[0];
+  const compound = r?.decorations.find((d) => /‧/.test(d.decorationName));
+  console.log(
+    `  ✅ 驗證：複合珠=${compound?.decorationName ?? "（無）"}；攻擊=${r?.finalSkills["攻擊"]}、奪取耐力=${r?.finalSkills["奪取耐力"]}`
+  );
+}

@@ -62,16 +62,22 @@ export function buildStaticData(
   );
 
   const decorationsBySkill: Record<string, Decoration[]> = {};
+  const levelForSkill = (d: Decoration, skill: string): number =>
+    (d.skills ?? { [d.skillName]: d.skillLevel })[skill] ?? 0;
   for (const d of decorations) {
     const effSkills = d.skills ?? { [d.skillName]: d.skillLevel };
     for (const skillName of Object.keys(effSkills)) {
       (decorationsBySkill[skillName] ??= []).push(d);
     }
   }
-  for (const list of Object.values(decorationsBySkill)) {
+  // 排序鍵以「該索引技能的等級」計：複合珠對不同技能可有不同排序位置，
+  // 另一技能視為附贈不參與。Rise 珠子單技能，退回 skillLevel，排序與改造前逐位元一致。
+  for (const [skill, list] of Object.entries(decorationsBySkill)) {
     list.sort((a, b) => {
+      const la = levelForSkill(a, skill);
+      const lb = levelForSkill(b, skill);
       // 高覆蓋在前
-      if (b.skillLevel !== a.skillLevel) return b.skillLevel - a.skillLevel;
+      if (lb !== la) return lb - la;
       // 同覆蓋則洞小在前
       return a.slotLevel - b.slotLevel;
     });

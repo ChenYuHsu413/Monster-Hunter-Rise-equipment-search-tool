@@ -398,8 +398,11 @@ export function searchBuilds(
 
                 if (!solve.success) continue; // 必要技能或保留洞位不符 → 淘汰
 
+                // solve.achievedSkills = currentSkills + 所有珠子技能（含複合珠附贈）。
+                // 對 Rise 單技能珠，等同 mergeSkills(currentSkills, 逐 assignment 累加)，
+                // 逐位元一致（由回歸基準保證）；World 複合珠的第二技能亦正確納入。
                 const finalSkills = clampSkillsToMax(
-                  mergeSkills(currentSkills, decoSkillMap(solve.assignments)),
+                  solve.achievedSkills,
                   effSkillMax
                 );
 
@@ -474,17 +477,6 @@ export function searchBuilds(
       elapsedMs: now() - start,
     },
   };
-}
-
-/** 將珠子指派彙整成技能 map。 */
-function decoSkillMap(
-  assignments: { skillName: string; skillLevel: number }[]
-): SkillMap {
-  const out: SkillMap = {};
-  for (const a of assignments) {
-    out[a.skillName] = (out[a.skillName] ?? 0) + a.skillLevel;
-  }
-  return out;
 }
 
 /** 補齊 request 缺省欄位，避免 undefined。 */
