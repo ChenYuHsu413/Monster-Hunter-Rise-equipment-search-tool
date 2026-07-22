@@ -258,14 +258,36 @@ const weaponZh = {};
 for (const r of weaponTr) weaponZh[norm(r.name_en)] = r.name_zh;
 
 // sharpness：MHWorldData 每把近戰武器**僅一列**（2825 melee；719 遠程無斬味）。
-// 欄序 red..purple 對應 Rise [紅橙黃綠藍白紫]。maxed=FALSE 為匠0 base（多數）、
-// maxed=TRUE 為匠5 maxed（少數末期武器）。單列無法同時給 base 與 max，故：
-//   base = max = 該列值（World v1 不建模匠 +50 延伸；活性斬味色不隨匠變化）。
-// 此為 v1 近似，記於稽核文件與 efr-world-notes（Phase 4 可精修）。
+// 欄序 red..purple 對應 Rise [紅橙黃綠藍白紫]。
+//
+// ★ Phase 4 考證修正（推翻 Phase 0/2 初判）：實測 7 把武器對 Kiranico World 詳細頁
+//   逐段核對（Fatalis Blade / Buster Sword I / Defender GS I / Don Monstro / Ruinous
+//   Atrocity / Nergal Reaver / Safi GS，見 docs/world-sharpness-audit.md）判定：
+//   **該單列 = 匠5（handicraft-maxed）色帶，非匠0 base。** `maxed` 欄語意：
+//     - maxed=TRUE  → base 已等於此列（匠加成 0；例 Nergal/Safi 已達 400 上限）。
+//     - maxed=FALSE → 匠 Lv5 較 base 恰 +50（base = 由高色端剝除 50）。實測 Fatalis
+//       purple 60→base10、Buster green/yellow、Defender green 140→90 皆恰 −50。
+//   MHWorldData 以**二值（0/50）**建模匠加成——無「加不滿 +50」的中間值（連 sum=250
+//   的短帶 Buster/Defender 都吃滿 +50）。故機械推導 base，max 直接取該列。
 const SHARP_COLS = ["red", "orange", "yellow", "green", "blue", "white", "purple"];
+const HANDI_BONUS = 50; // World 匠 Lv5 = +10/級 × 5；MHWorldData 二值建模（見上）
+// 由匠5 maxed 色帶剝除 amount（自最高色端往低色扣），得匠0 base。
+function peelFromTop(arr, amount) {
+  const out = arr.slice();
+  let rem = amount;
+  for (let i = out.length - 1; i >= 0 && rem > 0; i--) {
+    const take = Math.min(out[i], rem);
+    out[i] -= take;
+    rem -= take;
+  }
+  return out;
+}
 const sharpByName = {};
 for (const r of sharpRows) {
-  sharpByName[norm(r.base_name_en)] = SHARP_COLS.map((c) => Number(r[c]) || 0);
+  const maxedBar = SHARP_COLS.map((c) => Number(r[c]) || 0); // = 匠5 maxed
+  const isMaxed = String(r.maxed).trim().toUpperCase() === "TRUE";
+  const base = isMaxed ? maxedBar.slice() : peelFromTop(maxedBar, HANDI_BONUS);
+  sharpByName[norm(r.base_name_en)] = { base, max: maxedBar };
 }
 
 const ELEM_MAP = {
@@ -285,7 +307,7 @@ const weaponsOut = weaponBase.map((w) => {
     affinity: Number(w.affinity) || 0,
   };
   const sh = sharpByName[norm(en)];
-  if (sh) out.sharpness = { base: sh, max: sh };
+  if (sh) out.sharpness = { base: sh.base, max: sh.max };
   out.slots = [w.slot_1, w.slot_2, w.slot_3].map(Number).filter((n) => n > 0);
   if (!isBlank(w.element1) && ELEM_MAP[w.element1]) {
     out.element = { type: ELEM_MAP[w.element1], value: Number(w.element1_attack) || 0 };
