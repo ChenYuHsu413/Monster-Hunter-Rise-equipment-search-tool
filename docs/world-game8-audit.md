@@ -1,0 +1,110 @@
+# World 推薦配裝來源盤點（Game8 MHW，Phase 6 Task A）
+
+> Phase 6（World 推薦配裝 tab）動工前的來源實測。所有數字為 2026-07-22 對 game8.co
+> MHW Iceborne 各武器種 build 頁的**實測抽查**（快取於 `scripts/world/.game8-mhwi-cache/`，
+> gitignore）。與 Rise 的 Game8 管線（`scrape-game8.js`）差異逐條列於第五節。
+
+---
+
+## 一、來源與 URL 結構
+
+- **來源＝game8.co（英文 Game8）的 MHW 區**，每武器種一頁「Best {Weapon} Builds for Iceborne」。
+  （Rise 管線爬的是**日文** Game8／Altema，名稱走 `jp-name-map`；World 走英文頁，名稱走
+  MHWorldData `name_en`——見第四節。）
+- URL 格式：`https://game8.co/games/Monster-Hunter-World/archives/{id}`。14 武器種 id：
+
+| 武器種 | id | 武器種 | id |
+|---|---|---|---|
+| great-sword | 314144 | switch-axe | 314805 |
+| long-sword | 314083 | charge-blade | 314812 |
+| sword-and-shield | 314170 | insect-glaive | 314855 |
+| dual-blades | 314162 | bow | 314871 |
+| hammer | 314192 | light-bowgun | 314934 |
+| hunting-horn | 314231 | heavy-bowgun | 314965 |
+| lance | 314772 | gunlance | 314799 |
+
+- base-game（下位/上位，非 Iceborne）另有 `Best Builds for {W} (Base Game)`（315xxx）與
+  `Best Progression Builds for Low Rank/High Rank`（313887）——**本次不納入**（World 第一版
+  聚焦 Iceborne MR，比照 Rise 推薦頁只做畢業/進度階段）。
+
+## 二、頁面結構（parser 設計依據）
+
+heading 驅動（不依版型），每頁：
+- `<h2 class='a-header--2' id='hl_N'>` ＝**階段區塊**：`{W} Endgame Meta Build` / `{W} Meta Builds` /
+  `{W} Progression Build`（外加 `Best {W} Weapons and Skills`、`Best Counter Builds`、
+  `Related Guides` 等**非配裝**區塊，靜默略過）。
+- `<h2>` 下的 `<h3 class='a-header--3' id='hm_N'>` ＝**單一配裝名**（如 Full Fatalis Armor Build）。
+- 每個 build 下接數張 `<table>`：
+  1. **Weapon 表**（表頭 `Weapon | Decorations`）：武器名 + 武器珠。
+  2. **Armor 表**（表頭 `Armor | Decorations`）：**5 列防具（依位置＝head/chest/arms/waist/legs，
+     首欄部位 label 不可靠，用列序）** + 末列 `Charm | 護石名`。每列附該部位裝飾珠（可多顆）。
+  3. **Skills 表**：2 欄一列的技能對（`Critical Eye 7 | Agitator 7`…）。
+- 裝備名為**英文**且用 `Alpha +/Beta +/Gamma +`（MHWorldData 用 `α+/β+/γ+`）、
+  珠名如 `Attack Jewel+ 4`、`Critical/Protection Jewel 4`（複合珠斜線分隔）、護石 `Challenger Charm V`。
+
+## 三、覆蓋度（實測，僅計 Meta/Progression 區塊下的真實配裝）
+
+| 武器種 | 配裝數 | meta | progression | Safi 依賴 | Kjarr 依賴 |
+|---|---|---|---|---|---|
+| great-sword | 7 | 4 | 3 | 1 | 0 |
+| long-sword | 8 | 5 | 3 | 3 | 0 |
+| sword-and-shield | 8 | 5 | 3 | 2 | 0 |
+| dual-blades | 11 | 8 | 3 | 4 | 2 |
+| hammer | 8 | 5 | 3 | 3 | 0 |
+| hunting-horn | 9 | 6 | 3 | 3 | 0 |
+| lance | 7 | 4 | 3 | 2 | 0 |
+| gunlance | 10 | 7 | 3 | 3 | 0 |
+| switch-axe | 8 | 5 | 3 | 3 | 0 |
+| charge-blade | 9 | 6 | 3 | 3 | 1 |
+| insect-glaive | 8 | 5 | 3 | 2 | 0 |
+| bow | 14 | 11 | 3 | 10 | 2 |
+| light-bowgun | 8 | 5 | 3 | 3 | 0 |
+| heavy-bowgun | 9 | 6 | 3 | 2 | 0 |
+| **合計** | **124** | **82** | **42** | **44（35%）** | **5（4%）** |
+
+- **每武器種恰有 3 筆 progression**（Starter Iceborne / Early Iceborne / Mid-Late Iceborne），
+  其餘為 meta（含 1 筆 Endgame Meta 旗艦，通常 Fatalis）。
+- **依賴未模擬系統的佔比**：Safi 覺醒武器 **35%**、Kjarr 自帶技武器 **4%**；bow 最重（10/14 用 Safi，
+  屬性弓 meta 幾乎全靠 Safi/Kjarr 覺醒屬性）。**客製強化（custom augment）**在 meta 武器上近乎普遍
+  （攻擊/會心強化），但 Game8 表格多未逐條列出，屬**隱性依賴**——一律以「含客製強化」旗標保守標示。
+
+## 四、名稱映射策略（Game8 EN → 專案 id）
+
+- **防具**：`armors.json` 的 `nameEn` 欄即 MHWorldData `name_en`（`Dragonhead α+`）。Game8
+  `Dragonhead Beta +` → 正規化 `Beta +`→`β+`、`Alpha +`→`α+`、`Gamma +`→`γ+`、去空白，比對 `nameEn`。
+- **武器**：同理走 `weapons.json` 的 `nameEn`（`Black Fatalis Blade` 直接吻合）。
+- **裝飾珠 / 護石**：產出 JSON **無 EN 名**，但 id ＝ `wdeco_{mhwdId}` / `wcharm_{mhwdId}`；
+  由 `.cache/mhwd/{decorations,charms}__*_base*.csv`（含 id + `name_en`）建 EN→id 映射
+  （實測 `Attack Jewel+ 4`、`Attack Charm III` 與 Game8 命名吻合）。
+- 對不上者**先分類**（顯示名差異 vs 真的缺，用技能/顆數收支鑑別），差異進
+  `scripts/world/game8-en-overrides.json` 逐筆附出處（延續 Rise「人工裁決進 override」原則）。
+
+## 五、與 Rise `scrape-game8.js` 的差異（不可照抄，需新解析器）
+
+| 面向 | Rise（日文 Game8/Altema） | World（英文 Game8） |
+|---|---|---|
+| 語言/名稱源 | 日文名 → `jp-name-map.json`（`normalizeJa`） | 英文名 → MHWorldData `name_en` |
+| 套裝機制 | 百龍孔/百龍技能表、傀異錬成欄 | **無百龍/傀異**；改為 set bonus（由防具件數觸發，引擎已模擬） |
+| 防具列 | 部位 label 驅動 | **列序驅動**（label 不可靠，位置＝5 部位） |
+| 技能表 | 發動技能總表（含紅字 required/augmentedLevel） | 2 欄技能對；無傀異 augmentedLevel |
+| 未模擬系統 | special（狂化/業鎧等錬成衍生） | **Safi 覺醒能力 / Kjarr 自帶技 / 客製強化** |
+| 階段 taxonomy | 下位/上位/畢業/M位前期… | 見下（實測收斂為 3 階） |
+
+## 六、階段 taxonomy（實測收斂，PLAN↔實測衝突點名）
+
+- **PLAN 建議**：「下位 / 上位 / M位前期 / 畢業（煌黑期）」。
+- **實測**：Game8 MHW 的 Iceborne build 頁**只有** `Endgame Meta` + `Meta` + `Progression`
+  （progression 內部再分 Starter / Early / Mid-Late 三筆），**沒有**下位/上位分階（base-game
+  builds 在另外的 315xxx 頁，本次不做）。→ **實測為準，收斂為 3 階**：
+  - `worldEndgame`（畢業旗艦 meta，通常 Fatalis；每武器 1 筆）
+  - `worldMeta`（其餘畢業 meta：Velkhana/Raging Brachy/Safi/屬性等）
+  - `worldProgression`（Starter / Early / Mid-Late Iceborne，每武器 3 筆）
+- Rise 的 5 階類別（`riseLow`…`mrEndgame`）不套用於 World；World 用上列 3 個新 category。
+
+## 七、結論
+
+- 來源可用、結構穩定、覆蓋 14 武器種共 **124 筆**（每種 7–14 筆）。
+- **35% 配裝依賴 Safi 覺醒、4% 依賴 Kjarr、meta 普遍隱含客製強化**——這些**不丟棄**，
+  Task B 完整保留並打 `awakened`/`kjarr`/`customAugment` 結構化旗標，供 UI 標示與匯入時排除
+  （引擎不模擬這些系統，硬匯入必零結果——比照 Rise 對 special 技能的「排除並點名」哲學）。
+- 名稱映射走 MHWorldData `name_en`，人工裁決進 `game8-en-overrides.json`（重跑安全）。
