@@ -101,6 +101,26 @@ heading 驅動（不依版型），每頁：
   - `worldProgression`（Starter / Early / Mid-Late Iceborne，每武器 3 筆）
 - Rise 的 5 階類別（`riseLow`…`mrEndgame`）不套用於 World；World 用上列 3 個新 category。
 
+## 六之二、驗證與匯入校準（Task C，`scripts/world/validate-mhwi-builds.mjs`）
+
+### skillTotals 重算 vs Game8 宣稱
+用我方資料（防具技能 + 珠 + 護石 + set bonus，動態上限 clamp）重算每套 → 對 Game8 宣稱：
+- **99/124 套 ±1 相符**；25 套有 >1 級差，分類：
+  - **10 套**：覺醒/Kjarr 未模擬武器貢獻（我方重算 < Game8，如 long-sword_worldMeta_2 攻擊 2 vs 7
+    來自 Safi「Attack Increase」覺醒能力）——**非資料錯，屬引擎不模擬**（已打 unmodeled 旗標）。
+  - **15 套**：主因 **Game8 per-slot 珠標註不全**——例 hammer_worldEndgame_0 有 14 洞但 Game8 只列
+    13 顆珠、且無任何超會心珠，卻於 skillTotals 宣稱超會心 3。**印證 CLAUDE.md「Game8 孔位標註
+    不可信、skillTotals 才是權威」**。少數為我方防具技能欄小差（±1~2）。
+- **結論**：無系統性我方資料錯。匯入一律取 **skillTotals（權威）** 的核心技能，不依 per-slot 珠重算，
+  故匯入穩健。
+
+### 核心技能 N 校準（10 筆畢業裝，top-N → World 搜尋有無結果）
+- **N=3 / 4 / 5 / 6 皆 10/10 有結果**。World 因 set bonus + secret 解放 + 洞位充足，核心技能匯入
+  **不受結果數約束**（與 Rise 不同——Rise N=6 掉到 5/10）。
+- **裁決：World `WORLD_CORE_SKILL_COUNT = 5`**（Rise 的 N=4 為 Rise 資料校準，實測不可照抄）。
+  取 5 兼顧「匯入接近該套識別度」與「全數樣本仍有結果」；clamp/ratio 用 **World `resolveSkillMax`
+  含該套 set bonus 的動態上限**，故 secret 延伸級（挑戰者7、精神抖擻5）得以保留為必要技能。
+
 ## 七、結論
 
 - 來源可用、結構穩定、覆蓋 14 武器種共 **124 筆**（每種 7–14 筆）。

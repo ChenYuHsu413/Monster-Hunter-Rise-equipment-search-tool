@@ -1,4 +1,4 @@
-import type { SkillMap } from "@/types/build";
+import type { GameId, SkillMap } from "@/types/build";
 import type { RecommendedBuild, RecoTalisman } from "@/types/recommended";
 import {
   deserializeSearchConditions,
@@ -34,6 +34,12 @@ export type BuilderImport =
       droppedAugment: boolean;
       /** 因不可重現而被排除的 special 技能名（提示點名用）。 */
       excludedSpecial: string[];
+      /** 遊戲（World 匯入時 BuilderView 依此走 World 規則）。未帶＝rise。 */
+      gameId?: GameId;
+      /** World：固定護石 id（資料裝備，直接對 id 匯入固定，不走 reco 取代制）。 */
+      fixedCharmId?: string;
+      /** World：此配裝依賴的未模擬系統中文標籤（提示點名；技能仍匯入可搜者）。 */
+      unmodeledSystems?: string[];
     }
   | { kind: "lock-armor"; id: string }
   | { kind: "lock-weapon"; id: string; weaponType: string }
@@ -209,6 +215,93 @@ export function buildFullBuildImport(
     totalCount: core.totalCount,
     droppedAugment: core.droppedAugment,
     excludedSpecial: core.excludedSpecial,
+  };
+}
+
+// ═══════════════════════ World（Phase 6）匯入規則 ═══════════════════════
+// 與 Rise 的關鍵差異：
+//  (1) set bonus 賦予技與 secret 延伸級「可以」匯入為必要技能（引擎已模擬，Phase 3/5 冒煙為證）——
+//      故不排除 skillTotals 中已解析（有 id）者；set bonus **名**（無 id）本就自然被略過。
+//  (2)「必須排除並點名」的換成 Safi 覺醒能力 / Kjarr 自帶技 / 客製強化——這些是武器內建、
+//      不在 skillTotals 的可解析技能中（實測所有 resolved 技能皆可由防具/珠/set bonus 取得），
+//      故無「技能」可排除；改以 build.unmodeled 旗標在匯入時**點名警告**（結果 EFR 會低於 Game8）。
+//  (3) 核心技能排序沿用 Rise B′ 鍵，但 clamp/ratio 用 **World resolveSkillMax（含該套 set bonus 的
+//      動態上限）**，故 挑戰者7/精神抖擻5 等 secret 延伸級得以保留；N 由 10 筆畢業裝校準
+//      （見 scripts/world/validate-mhwi-builds.mjs，不照抄 Rise 的 N=4）。
+//  (4) 護石：World 護石是資料裝備，直接對 id 匯入固定（fixedCharmId），不走 Rise 的 reco 取代制。
+
+/** World 核心技能項數（由 validate-mhwi-builds.mjs 校準；預設值見該腳本輸出）。 */
+export const WORLD_CORE_SKILL_COUNT = 5;
+
+/** 未模擬系統 → 中文標籤（提示點名）。 */
+export const WORLD_UNMODELED_LABELS: Record<string, string> = {
+  awakened: "Safi 覺醒武器能力",
+  kjarr: "Kjarr 武器自帶技",
+  customAugment: "武器客製強化加成",
+};
+
+/**
+ * World：挑核心技能列（有序）。resolveMax(name) 回傳「該套配裝的動態上限」（已含 set bonus 解放），
+ * 故 secret 延伸級（挑戰者7）以其實際上限 clamp/計 ratio，不被砍回原生上限。
+ * skillTotals 中無 id（set bonus 名/防禦技名差）者自然被排除。
+ */
+export function selectWorldCoreSkillRows(
+  build: RecommendedBuild,
+  resolveMax: (name: string) => number,
+  n: number = WORLD_CORE_SKILL_COUNT
+): { rows: CoreSkillRow[]; totalCount: number } {
+  const totals = build.skillTotals ?? [];
+  const byName = new Map<string, { name: string; level: number; ratio: number; order: number; required: boolean }>();
+  totals.forEach((s, i) => {
+    const name = s.id;
+    if (!name) return; // 無 id（set bonus 名/未對上）→ 略過
+    const max = resolveMax(name);
+    if (!max || !Number.isFinite(max)) return;
+    const level = Math.min(s.level, max);
+    if (level <= 0) return;
+    const row = { name, level, ratio: level / max, order: i, required: !!s.required };
+    const prev = byName.get(name);
+    if (!prev || row.level > prev.level) byName.set(name, row);
+  });
+  const picked = [...byName.values()]
+    .sort(
+      (a, b) =>
+        Number(b.required) - Number(a.required) ||
+        b.ratio - a.ratio ||
+        b.level - a.level ||
+        a.order - b.order
+    )
+    .slice(0, n);
+  return { rows: picked.map((r) => ({ name: r.name, level: r.level })), totalCount: byName.size };
+}
+
+/**
+ * 由 World full-build 組出匯入 payload。
+ * @param resolveMax 該套配裝的動態技能上限閉包（caller 以 profile.resolveSkillMax + 該套 set bonus 建）。
+ */
+export function buildWorldFullBuildImport(
+  build: RecommendedBuild,
+  resolveMax: (name: string) => number,
+  n: number = WORLD_CORE_SKILL_COUNT
+): BuilderImport {
+  const core = selectWorldCoreSkillRows(build, resolveMax, n);
+  const requiredSkills: SkillMap = {};
+  for (const r of core.rows) requiredSkills[r.name] = r.level;
+  const unmodeledSystems = Object.entries(build.unmodeled ?? {})
+    .filter(([, on]) => on)
+    .map(([k]) => WORLD_UNMODELED_LABELS[k] ?? k);
+  return {
+    kind: "full-build",
+    gameId: "world",
+    weaponType: build.weaponType,
+    requiredSkills,
+    // World 護石直接對 id 匯入固定（非 reco 取代制）。
+    fixedCharmId: build.charm?.id,
+    importedCount: core.rows.length,
+    totalCount: core.totalCount,
+    droppedAugment: false,
+    excludedSpecial: [],
+    ...(unmodeledSystems.length ? { unmodeledSystems } : {}),
   };
 }
 

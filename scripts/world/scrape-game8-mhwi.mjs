@@ -226,15 +226,19 @@ function parseBuild(html, weaponType, category, buildName, stageName, sourceUrl,
         }
       }
     } else {
-      // 技能表：每格「Name N」。
-      for (const r of rows) {
-        for (const cell of cellsOf(r)) {
-          const sk = parseSkillCell(cell);
-          if (!sk) continue;
-          const zh = skillMap.get(normSkill(sk.en));
-          if (zh) build.skillTotals.push({ id: zh, level: sk.level, rawNameEn: sk.en });
-          else build.skillTotals.push({ rawNameEn: sk.en, level: sk.level, setBonusOrUnknown: true });
-        }
+      // 技能表：要求多數格為「Name N」或對得上技能名，才視為技能表——過濾覺醒能力表
+      // （Velkhana Essence / Attack Increase VI…）、相關 build nav 表、build 名等污染。
+      const allCells = rows.flatMap((r) => cellsOf(r).map((c) => textOf(c))).filter(Boolean);
+      const skillLike = (t) =>
+        /\s\d+(-\d+)?$/.test(t) || skillMap.has(normSkill(t.replace(/\s+\d+(-\d+)?$/, "")));
+      const nLike = allCells.filter(skillLike).length;
+      if (nLike < 2 || nLike / allCells.length < 0.4) continue; // 非技能表
+      for (const t of allCells) {
+        const sk = parseSkillCell(t);
+        if (!sk) continue;
+        const zh = skillMap.get(normSkill(sk.en));
+        if (zh) build.skillTotals.push({ id: zh, level: sk.level, rawNameEn: sk.en });
+        else if (skillLike(t)) build.skillTotals.push({ rawNameEn: sk.en, level: sk.level, setBonusOrUnknown: true });
       }
     }
   }

@@ -9,14 +9,18 @@
  * 顯示端 fallback 到 rawNameJa 並加警告樣式。
  */
 
-/** 五個階段分類 + 推薦武器一覽。 */
+/** 階段分類：Rise 五階 + 推薦武器一覽；World（Phase 6）三階。 */
 export type RecommendedCategory =
   | "riseLow"
   | "riseHigh"
   | "riseEndgame"
   | "mrEarly"
   | "mrEndgame"
-  | "weaponRecommend";
+  | "weaponRecommend"
+  // World（Game8 MHW，實測收斂 3 階，見 docs/world-game8-audit.md）
+  | "worldEndgame"
+  | "worldMeta"
+  | "worldProgression";
 
 export type RecommendedKind =
   | "full-build"
@@ -26,9 +30,11 @@ export type RecommendedKind =
 
 /** 一顆裝飾珠引用。placeholder=true 時為屬性佔位符（無 id，顯示「對應屬性珠」）。 */
 export type RecoDecoration = {
-  /** 內部 deco id（deco_* / deco_manual_*）。placeholder 珠無此欄。 */
+  /** 內部 deco id（deco_* / deco_manual_* / World wdeco_*）。placeholder 珠無此欄。 */
   id?: string;
   rawNameJa?: string;
+  /** World：Game8 英文原名（對不上 id 時 fallback 顯示）。 */
+  rawNameEn?: string;
   count?: number;
   game8Id?: number;
   /** 屬性佔位符：依武器屬性自選對應珠，非單一珠、無 id。 */
@@ -43,7 +49,11 @@ export type RecoDecoration = {
 export type RecoSkill = {
   id?: string;
   rawNameJa?: string;
+  /** World：Game8 英文原名。 */
+  rawNameEn?: string;
   level: number;
+  /** World：對不上 skills.json（多為 set bonus 名/防禦技名差），非可匯入必要技能。 */
+  setBonusOrUnknown?: boolean;
 };
 
 /** 發動技能總表的一列（僅 full-build，來源提供時）。 */
@@ -58,6 +68,8 @@ export type RecoSkillTotal = RecoSkill & {
 export type RecoWeapon = {
   id?: string;
   rawNameJa?: string;
+  /** World：Game8 英文原名（fallback 顯示）。 */
+  rawNameEn?: string;
   game8Id?: number;
   /** 洞位等級陣列（weapon-list 有）。 */
   slots?: number[];
@@ -82,6 +94,8 @@ export type RecoArmor = {
   slot: "head" | "chest" | "arms" | "waist" | "legs" | null;
   id?: string;
   rawNameJa?: string;
+  /** World：Game8 英文原名（fallback 顯示）。 */
+  rawNameEn?: string;
   game8Id?: number;
   /** A/B 二擇一：存在時 id=alternatives[0].id，全部可選件列此。 */
   alternatives?: { id?: string; rawNameJa?: string }[];
@@ -120,6 +134,14 @@ export type RecommendedBuild = {
   weapons?: RecoWeapon[];
   armor?: RecoArmor[];
   talisman?: RecoTalisman | null;
+  /** World：護石（資料裝備，直接對 id）。Rise 用 talisman。 */
+  charm?: { id?: string; rawNameEn?: string } | null;
+  /** World：此配裝依賴的未模擬系統旗標（引擎不模擬，UI 標示＋匯入點名）。 */
+  unmodeled?: {
+    awakened?: boolean;
+    kjarr?: boolean;
+    customAugment?: boolean;
+  };
   /** 全裝珠總計（僅上位畢業格式；該格式不逐部位標珠）。 */
   buildDecorations?: RecoDecoration[] | null;
   /** 發動技能總表（null＝來源未提供）。 */

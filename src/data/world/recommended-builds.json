@@ -289,26 +289,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Frostcraft Velkhana Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Raging Brachydios Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Awakened Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -522,26 +502,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Frostcraft Velkhana Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Raging Brachydios Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Awakened Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -580,11 +540,6 @@
           "id": "體力增強",
           "level": 3,
           "rawNameEn": "Health Boost"
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -700,46 +655,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Frostcraft Velkhana Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Raging Brachydios Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Awakened Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -793,11 +708,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Frostfang Absolute Art",
-          "level": 1,
-          "setBonusOrUnknown": true
         },
         {
           "rawNameEn": "Velkhana Divinity",
@@ -897,11 +807,6 @@
         "rawNameEn": "Earplugs Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "精靈加護",
           "level": 3,
@@ -1038,11 +943,6 @@
         "rawNameEn": "Earplugs Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "rawNameEn": "Attack",
           "level": 4,
@@ -1215,11 +1115,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "耳塞",
           "level": 5,
           "rawNameEn": "Earplugs"
@@ -1263,11 +1158,6 @@
           "id": "砥石使用高速化",
           "level": 1,
           "rawNameEn": "Speed Sharpening"
-        },
-        {
-          "rawNameEn": "Guts (Secret)",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {}
@@ -1385,11 +1275,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "挑戰者",
           "level": 7,
@@ -1589,31 +1474,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Raging Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Punishing Draw Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Blast Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Paralysis Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "挑戰者",
           "level": 7,
           "rawNameEn": "Agitator"
@@ -1662,16 +1522,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra's Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -1807,51 +1657,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Raging Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Punishing Draw Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Blast Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Paralysis Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra's Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -1900,11 +1705,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Teostra's Essence (Awakening)",
-          "level": 1,
-          "setBonusOrUnknown": true
         },
         {
           "rawNameEn": "Frostfang Absolute Art",
@@ -2031,46 +1831,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Raging Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Punishing Draw Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Blast Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Paralysis Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x4",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -2119,11 +1879,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Teostra's Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -2255,51 +2010,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Raging Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Punishing Draw Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Blast Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Paralysis Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra's Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -2348,16 +2058,6 @@
           "id": "力量解放",
           "level": 1,
           "rawNameEn": "Latent Power"
-        },
-        {
-          "rawNameEn": "Teostra's Essence (Awakening)",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -2452,11 +2152,6 @@
         "rawNameEn": "Earplugs Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "體力增強",
           "level": 3,
@@ -2577,11 +2272,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "rawNameEn": "Attack",
           "level": 4,
@@ -2723,11 +2413,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "無傷",
           "level": 3,
           "rawNameEn": "Peak Performance"
@@ -2761,11 +2446,6 @@
           "id": "攻擊",
           "level": 4,
           "rawNameEn": "Attack Boost"
-        },
-        {
-          "rawNameEn": "Non Elemental Boost",
-          "level": 1,
-          "setBonusOrUnknown": true
         },
         {
           "id": "真‧利刃／彈丸節約",
@@ -2888,11 +2568,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -3081,31 +2756,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Velkhana Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Sword and Shield Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Paralysis Sword and Shield Awakened Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -3320,31 +2970,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Velkhana Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Sword and Shield Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Paralysis Sword and Shield Awakened Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -3548,51 +3173,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Velkhana Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Sword and Shield Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Paralysis Sword and Shield Awakened Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -3641,16 +3221,6 @@
           "id": "熱傷害無效",
           "level": 1,
           "rawNameEn": "Heat Guard"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -3787,51 +3357,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Velkhana Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Sword and Shield Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Paralysis Sword and Shield Awakened Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Status Effect Up VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Status Effect V",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -3885,16 +3410,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -3989,11 +3504,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "體力增強",
           "level": 3,
@@ -4114,11 +3624,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "火屬性攻擊強化",
           "level": 2,
@@ -4260,11 +3765,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 3,
@@ -4417,11 +3917,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -4480,11 +3975,6 @@
           "id": "收刀術",
           "level": 2,
           "rawNameEn": "Quick Sheath"
-        },
-        {
-          "rawNameEn": "Presence of Rimeguard",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -4605,46 +4095,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi-Alatreon Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fire Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Kulve Taroth Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Dual Blades Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Teostra Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Dual Blades Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -4718,11 +4168,6 @@
           "id": "龍耐性",
           "level": 3,
           "rawNameEn": "Dragon Resistance"
-        },
-        {
-          "rawNameEn": "Escadora Might",
-          "level": 1,
-          "setBonusOrUnknown": true
         },
         {
           "rawNameEn": "Safi'jiiva Seal",
@@ -4853,46 +4298,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi-Alatreon Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fire Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Kulve Taroth Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Dual Blades Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Teostra Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Dual Blades Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -4941,16 +4346,6 @@
           "id": "體力回復量UP",
           "level": 1,
           "rawNameEn": "Recovery Up"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -5059,46 +4454,6 @@
         "rawNameEn": "Blaze Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Safi-Alatreon Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fire Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Kulve Taroth Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Dual Blades Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Teostra Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Dual Blades Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -5268,46 +4623,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi-Alatreon Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fire Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Kulve Taroth Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Dual Blades Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Teostra Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Dual Blades Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -5376,11 +4691,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         },
         {
           "rawNameEn": "Alatreon Divinity",
@@ -5516,46 +4826,6 @@
         "rawNameEn": "Marathon Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Safi-Alatreon Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fire Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Kulve Taroth Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Dual Blades Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Teostra Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Dual Blades Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "雷屬性攻擊強化",
           "level": 6,
@@ -5741,66 +5011,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi-Alatreon Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fire Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Kulve Taroth Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Dual Blades Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Teostra Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Dual Blades Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "龍屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Dragon Attack"
@@ -5863,11 +5073,6 @@
         {
           "rawNameEn": "Safi'jiiva Seal",
           "level": 3,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
           "setBonusOrUnknown": true
         }
       ],
@@ -5995,66 +5200,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi-Alatreon Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fire Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Kulve Taroth Dual Blades Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Dual Blades Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Teostra Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Dual Blades Awaken Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Status Effect Up V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Status Effect Up VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -6103,11 +5248,6 @@
           "id": "力量解放",
           "level": 1,
           "rawNameEn": "Latent Power"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         },
         {
           "rawNameEn": "Safi'jiiva Seal",
@@ -6207,11 +5347,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "體力增強",
           "level": 3,
@@ -6332,11 +5467,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "火屬性攻擊強化",
           "level": 2,
@@ -6483,11 +5613,6 @@
         "rawNameEn": "Exploiter Charm II"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "匠",
           "level": 5,
@@ -6640,11 +5765,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -6700,18 +5820,8 @@
           "rawNameEn": "Evade Window"
         },
         {
-          "rawNameEn": "Frostfang Absolute Art",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "rawNameEn": "Fatalis Legend",
           "level": 4,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "-",
-          "level": 1,
           "setBonusOrUnknown": true
         }
       ],
@@ -6843,31 +5953,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Raging Brachy Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Slugger Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guiding Lands Sleep Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -6921,16 +6006,6 @@
           "id": "集中",
           "level": 1,
           "rawNameEn": "Focus"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -7055,46 +6130,6 @@
         "rawNameEn": "Attack Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Raging Brachy Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Slugger Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guiding Lands Sleep Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x4",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -7269,31 +6304,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Raging Brachy Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Slugger Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guiding Lands Sleep Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -7474,51 +6484,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Raging Brachy Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Slugger Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Blast Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guiding Lands Sleep Hammer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Gold Rathian Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Status Effect Up VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Status Effect Up V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -7572,11 +6537,6 @@
           "id": "怨恨",
           "level": 2,
           "rawNameEn": "Resentment"
-        },
-        {
-          "rawNameEn": "Gold Rathian Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -7671,11 +6631,6 @@
         "rawNameEn": "Earplugs Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "體力增強",
           "level": 3,
@@ -7801,11 +6756,6 @@
         "rawNameEn": "Earplugs Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "快吃",
           "level": 2,
@@ -7947,11 +6897,6 @@
         "rawNameEn": "Earplugs Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "匠",
           "level": 4,
@@ -8118,11 +7063,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -8317,36 +7257,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Full Offense Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Paralysis Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Support with Earplugs Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Wide Area Healer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "吹笛名人",
           "level": 2,
           "rawNameEn": "Horn Maestro"
@@ -8400,11 +7310,6 @@
           "id": "力量解放",
           "level": 1,
           "rawNameEn": "Latent Power"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -8520,36 +7425,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Full Offense Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Paralysis Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Support with Earplugs Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Wide Area Healer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "吹笛名人",
           "level": 2,
           "rawNameEn": "Horn Maestro"
@@ -8603,11 +7478,6 @@
           "id": "整備",
           "level": 1,
           "rawNameEn": "Tool Specialist"
-        },
-        {
-          "rawNameEn": "Ancient Divinity",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -8727,56 +7597,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Full Offense Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Paralysis Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Support with Earplugs Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Wide Area Healer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Melody III",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "挑戰者",
           "level": 7,
@@ -8962,56 +7782,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Full Offense Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Paralysis Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Support with Earplugs Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Wide Area Healer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Earplugs Melody I",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "KO術",
           "level": 3,
           "rawNameEn": "Slugger"
@@ -9191,61 +7961,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Full Offense Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sleep Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Paralysis Horn Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Support with Earplugs Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Wide Area Healer Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Melody III",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Tigrex Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -9294,11 +8009,6 @@
           "id": "攻擊",
           "level": 1,
           "rawNameEn": "Attack Boost"
-        },
-        {
-          "rawNameEn": "Tigrex Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -9394,11 +8104,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "體力增強",
           "level": 3,
           "rawNameEn": "Health Boost"
@@ -9432,11 +8137,6 @@
           "id": "吹笛名人",
           "level": 2,
           "rawNameEn": "Horn Maestro"
-        },
-        {
-          "rawNameEn": "Lunastra Favor",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {}
@@ -9534,11 +8234,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "快吃",
           "level": 2,
@@ -9701,11 +8396,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 3,
           "rawNameEn": "Critical Eye"
@@ -9754,11 +8444,6 @@
           "id": "熱傷害無效",
           "level": 1,
           "rawNameEn": "Heat Guard"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {}
@@ -9886,11 +8571,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -10084,26 +8764,6 @@
         "rawNameEn": "Evasion Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Evade Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Guard Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Evade Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -10303,51 +8963,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Evade Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Guard Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Evade Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase V",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -10406,11 +9021,6 @@
           "id": "防禦強化",
           "level": 1,
           "rawNameEn": "Guard Up"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -10542,51 +9152,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Evade Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Guard Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Evade Lance Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase V",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -10635,11 +9200,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Teostra Technique",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -10739,11 +9299,6 @@
         "rawNameEn": "Stun Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "體力增強",
           "level": 3,
@@ -10875,11 +9430,6 @@
         "rawNameEn": "Ironside Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 2,
@@ -11035,11 +9585,6 @@
         "rawNameEn": "Challenger Charm II"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "防禦性能",
           "level": 5,
@@ -11202,11 +9747,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -11275,11 +9815,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Fatalis Legend",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -11409,41 +9944,6 @@
         "rawNameEn": "Ironside Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Agitator Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Artillery Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Hazak Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fatalis-Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Normal-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "挑戰者",
           "level": 7,
@@ -11632,41 +10132,6 @@
         "rawNameEn": "Ironside Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Agitator Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Artillery Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Hazak Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fatalis-Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Normal-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "砲術",
           "level": 5,
@@ -11871,41 +10336,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Agitator Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Artillery Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Hazak Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fatalis-Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Normal-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "砲術",
           "level": 5,
           "rawNameEn": "Artillery"
@@ -11954,16 +10384,6 @@
           "id": "防禦強化",
           "level": 1,
           "rawNameEn": "Guard Up"
-        },
-        {
-          "rawNameEn": "Silver Rathalos Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Zorah Magdaros Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -12073,41 +10493,6 @@
         "rawNameEn": "Earplugs Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Agitator Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Artillery Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Hazak Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fatalis-Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Normal-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "耳塞",
           "level": 5,
@@ -12323,66 +10708,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Agitator Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Artillery Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Hazak Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fatalis-Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Normal-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Zorah Magdaros Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long Shelling II",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Slot Upgrade VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "砲術",
           "level": 5,
           "rawNameEn": "Artillery"
@@ -12441,16 +10766,6 @@
           "id": "利刃／彈丸節約",
           "level": 1,
           "rawNameEn": "Razor Sharp/Spare Shot"
-        },
-        {
-          "rawNameEn": "Silver Rathalos Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Zorah Magdaros Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -12587,66 +10902,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Agitator Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Artillery Wide-Shelling Brachydios Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Hazak Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Fatalis-Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Long-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Normal-Shelling Safi Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Zorah Magdaros Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Normal Shelling II",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Slot Upgrade VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "砲術",
           "level": 5,
           "rawNameEn": "Artillery"
@@ -12705,16 +10960,6 @@
           "id": "利刃／彈丸節約",
           "level": 1,
           "rawNameEn": "Razor Sharp/Spare Shot"
-        },
-        {
-          "rawNameEn": "Silver Rathalos Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Zorah Magdaros Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -12814,11 +11059,6 @@
         "rawNameEn": "Artillery Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "體力增強",
           "level": 3,
@@ -12960,11 +11200,6 @@
         "rawNameEn": "Artillery Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "投射器裝填數UP",
           "level": 2,
@@ -13152,11 +11387,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "砲術",
           "level": 3,
           "rawNameEn": "Artillery"
@@ -13327,11 +11557,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -13520,31 +11745,6 @@
         "rawNameEn": "Tranq Charm IV"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Sleep Axe Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Tool Specialist Agitator Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teo-Luna Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Velkhana Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -13739,51 +11939,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Sleep Axe Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Tool Specialist Agitator Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teo-Luna Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Velkhana Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Lunastra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "挑戰者",
           "level": 7,
           "rawNameEn": "Agitator"
@@ -13841,11 +11996,6 @@
         {
           "rawNameEn": "Brachydios Will",
           "level": 2,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Lunastra Essence",
-          "level": 1,
           "setBonusOrUnknown": true
         },
         {
@@ -13978,51 +12128,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Sleep Axe Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Tool Specialist Agitator Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teo-Luna Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Velkhana Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -14081,16 +12186,6 @@
           "id": "迴避距離UP",
           "level": 1,
           "rawNameEn": "Evade Extender"
-        },
-        {
-          "rawNameEn": "Lunastra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -14221,51 +12316,6 @@
         "rawNameEn": "Blaze Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Sleep Axe Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Tool Specialist Agitator Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teo-Luna Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi-Velkhana Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Up VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Up V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Phial",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -14435,11 +12485,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "耳塞",
           "level": 5,
           "rawNameEn": "Earplugs"
@@ -14473,11 +12518,6 @@
           "id": "昏厥耐性",
           "level": 3,
           "rawNameEn": "Stun Resistance"
-        },
-        {
-          "rawNameEn": "Lunastra Favor",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {}
@@ -14564,11 +12604,6 @@
         "rawNameEn": "Handicraft Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 4,
@@ -14720,11 +12755,6 @@
         "rawNameEn": "Attack Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -14901,11 +12931,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -15105,36 +13130,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Brachy Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Poison Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Ice Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -15313,36 +13308,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Brachy Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Poison Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Ice Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "體力增強",
           "level": 3,
           "rawNameEn": "Health Boost"
@@ -15401,11 +13366,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Zorah Magdaros Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -15541,61 +13501,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Brachy Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Poison Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Ice Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Sharpness Increase V",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "火屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Fire Attack"
@@ -15659,16 +13564,6 @@
           "id": "防禦強化",
           "level": 1,
           "rawNameEn": "Guard Up"
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -15805,56 +13700,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Brachy Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Poison Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Ice Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 4,
           "rawNameEn": "Critical Eye"
@@ -15923,16 +13768,6 @@
           "id": "防禦強化",
           "level": 1,
           "rawNameEn": "Guard Up"
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -16058,36 +13893,6 @@
         "rawNameEn": "Frost Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Brachy Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Poison Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Charge Blade Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "High-Damage Ice Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -16252,11 +14057,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "防禦性能",
           "level": 5,
           "rawNameEn": "Guard"
@@ -16392,11 +14192,6 @@
         "rawNameEn": "Artillery Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 2,
@@ -16554,11 +14349,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "砲術",
           "level": 5,
           "rawNameEn": "Artillery"
@@ -16617,11 +14407,6 @@
           "id": "攻擊",
           "level": 4,
           "rawNameEn": "Attack Boost"
-        },
-        {
-          "rawNameEn": "Zorah Magdaros Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {}
@@ -16724,11 +14509,6 @@
         "rawNameEn": "Master's Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -16928,11 +14708,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "挑戰者",
           "level": 7,
           "rawNameEn": "Agitator"
@@ -16981,16 +14756,6 @@
           "id": "力量解放",
           "level": 1,
           "rawNameEn": "Latent Power"
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -17110,31 +14875,6 @@
         "rawNameEn": "Invigorate Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Blast Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Comfortable Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -17319,56 +15059,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Blast Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Comfortable Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Kinsect Bonus (Spirit / Strength)",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "挑戰者",
           "level": 7,
           "rawNameEn": "Agitator"
@@ -17422,16 +15112,6 @@
           "id": "熱傷害無效",
           "level": 1,
           "rawNameEn": "Heat Guard"
-        },
-        {
-          "rawNameEn": "Brachydios Will",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -17563,56 +15243,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Blast Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Comfortable Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Blast Awakening Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Insect Glaive Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Kinsect Bonus (Spirit / Strength)",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase V x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 4,
           "rawNameEn": "Attack Boost"
@@ -17661,16 +15291,6 @@
           "id": "迴避性能",
           "level": 1,
           "rawNameEn": "Evade Window"
-        },
-        {
-          "rawNameEn": "Safi'jiiva's Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Teostra Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -17770,11 +15390,6 @@
         "rawNameEn": "Attack Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 4,
@@ -17927,11 +15542,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "快吃",
           "level": 2,
           "rawNameEn": "Speed Eating"
@@ -18073,11 +15683,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 3,
           "rawNameEn": "Critical Eye"
@@ -18121,11 +15726,6 @@
           "id": "貫通彈‧龍之箭強化",
           "level": 1,
           "rawNameEn": "Piercing Shots"
-        },
-        {
-          "rawNameEn": "Nargacuga Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {}
@@ -18243,11 +15843,6 @@
         "rawNameEn": "Attack Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -18416,61 +16011,6 @@
         "rawNameEn": "Master's Charm IV"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "火屬性攻擊強化",
           "level": 6,
@@ -18645,61 +16185,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "水屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Water Attack"
@@ -18868,61 +16353,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "雷屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Thunder Attack"
@@ -18970,11 +16400,6 @@
         {
           "rawNameEn": "Silver Rathalos Essence",
           "level": 4,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Another one for the thunder Element!",
-          "level": 1,
           "setBonusOrUnknown": true
         }
       ],
@@ -19100,61 +16525,6 @@
         "rawNameEn": "Frost Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "冰屬性攻擊強化",
           "level": 6,
@@ -19334,61 +16704,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "龍屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Dragon Attack"
@@ -19556,61 +16871,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "冰屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Ice Attack"
@@ -19659,16 +16919,6 @@
           "id": "解放弓的蓄力階段",
           "level": 1,
           "rawNameEn": "Bow Charge Plus"
-        },
-        {
-          "rawNameEn": "Weapon Skill: Critical Element",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -19789,61 +17039,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 7,
           "rawNameEn": "Critical Eye"
@@ -19912,21 +17107,6 @@
           "id": "解放弓的蓄力階段",
           "level": 1,
           "rawNameEn": "Bow Charge Plus"
-        },
-        {
-          "rawNameEn": "Alatreon Divinity",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Weapon Skill: Critical Element",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -20043,76 +17223,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase V x4",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "雷屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Thunder Attack"
@@ -20171,16 +17281,6 @@
           "id": "解放弓的蓄力階段",
           "level": 1,
           "rawNameEn": "Bow Charge Plus"
-        },
-        {
-          "rawNameEn": "Namielle Divinity",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -20312,76 +17412,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase V x4",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "火屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Fire Attack"
@@ -20445,16 +17475,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Velkhana Divinity",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -20566,76 +17586,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Fire Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Water Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Thunder Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Ice Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Dragon Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Elemental Kulve Taroth Bow",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Namielle Stamina Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi'jiiva Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Safi Bow Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase VI",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Element Increase V x4",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "火屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Fire Attack"
@@ -20689,11 +17639,6 @@
           "id": "解放弓的蓄力階段",
           "level": 1,
           "rawNameEn": "Bow Charge Plus"
-        },
-        {
-          "rawNameEn": "Silver Rathalos Essence",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -20793,11 +17738,6 @@
         "rawNameEn": "Fitness Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "體術",
           "level": 5,
@@ -20933,11 +17873,6 @@
         "rawNameEn": "Fitness Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "火屬性攻擊強化",
           "level": 2,
@@ -21098,11 +18033,6 @@
         "rawNameEn": "Fitness Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "火屬性攻擊強化",
           "level": 3,
@@ -21274,11 +18204,6 @@
         "rawNameEn": "Challenger Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 7,
@@ -21457,11 +18382,6 @@
         "rawNameEn": "Razor Sharp Charm"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "挑戰者",
           "level": 7,
@@ -21651,26 +18571,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi'jiiva Elemental Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon RF Ice and Fire Builld",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Stormslinger Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "火屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Fire Attack"
@@ -21834,26 +18734,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi'jiiva Elemental Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon RF Ice and Fire Builld",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Stormslinger Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -21902,11 +18782,6 @@
           "id": "利刃／彈丸節約",
           "level": 1,
           "rawNameEn": "Razor Sharp/Spare Shot"
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -22031,26 +18906,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Safi'jiiva Elemental Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Alatreon RF Ice and Fire Builld",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Stormslinger Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "雷屬性攻擊強化",
           "level": 6,
           "rawNameEn": "Thunder Attack"
@@ -22094,11 +18949,6 @@
           "id": "迴避性能",
           "level": 3,
           "rawNameEn": "Evade Window"
-        },
-        {
-          "rawNameEn": "Safi'jiiva Seal",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -22197,11 +19047,6 @@
         "rawNameEn": "Stun Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "看破",
           "level": 4,
@@ -22332,11 +19177,6 @@
         "rawNameEn": "Blaze Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "火屬性攻擊強化",
           "level": 6,
@@ -22482,11 +19322,6 @@
         "rawNameEn": "Attack Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 6,
@@ -22638,31 +19473,6 @@
         "rawNameEn": "Attack Charm V"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Bowgun Modifications",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Recoil Suppressor x3",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Close Range Up x1",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Shield x1",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "攻擊",
           "level": 7,
@@ -22835,56 +19645,6 @@
         "rawNameEn": "Razor Sharp Charm"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Sticky Rajang Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guard HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Gamma Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Spread HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Hi-Power Pierce HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Bowgun Modifications",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Recoil Suppressor x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Reload Assist x2",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Shield x1",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "挑戰者",
           "level": 7,
@@ -23064,36 +19824,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Sticky Rajang Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guard HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Gamma Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Spread HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Hi-Power Pierce HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "體力增強",
           "level": 3,
           "rawNameEn": "Health Boost"
@@ -23267,36 +19997,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Sticky Rajang Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guard HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Gamma Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Spread HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Hi-Power Pierce HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -23365,11 +20065,6 @@
           "id": "死裡逃生",
           "level": 1,
           "rawNameEn": "Resuscitate"
-        },
-        {
-          "rawNameEn": "Velkhana Divinity",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -23490,51 +20185,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Sticky Rajang Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guard HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Gamma Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Spread HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Hi-Power Pierce HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Spread Capacity III",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x4",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 6,
           "rawNameEn": "Attack Boost"
@@ -23578,11 +20228,6 @@
           "id": "心眼／彈道強化",
           "level": 1,
           "rawNameEn": "Mind's Eye/Ballistics"
-        },
-        {
-          "rawNameEn": "Rajang's Rage",
-          "level": 1,
-          "setBonusOrUnknown": true
         },
         {
           "id": "利刃／彈丸節約",
@@ -23708,51 +20353,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Sticky Rajang Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Guard HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Velkhana Gamma Armor Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Spread HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Hi-Power Pierce HBG Build",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Awakened Ability",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Pierce Capacity III",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Attack Increase V x4",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "攻擊",
           "level": 7,
           "rawNameEn": "Attack Boost"
@@ -23811,16 +20411,6 @@
           "id": "減輕膽怯",
           "level": 1,
           "rawNameEn": "Flinch Free"
-        },
-        {
-          "rawNameEn": "Rajang's Rage",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
-          "rawNameEn": "-",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {
@@ -23916,11 +20506,6 @@
       },
       "skillTotals": [
         {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
-        {
           "id": "看破",
           "level": 4,
           "rawNameEn": "Critical Eye"
@@ -23969,11 +20554,6 @@
           "id": "集中",
           "level": 1,
           "rawNameEn": "Focus"
-        },
-        {
-          "rawNameEn": "Lunastra Favor",
-          "level": 1,
-          "setBonusOrUnknown": true
         }
       ],
       "unmodeled": {}
@@ -24060,11 +20640,6 @@
         "rawNameEn": "Blaze Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "火屬性攻擊強化",
           "level": 6,
@@ -24225,11 +20800,6 @@
         "rawNameEn": "Health Charm III"
       },
       "skillTotals": [
-        {
-          "rawNameEn": "Skills",
-          "level": 1,
-          "setBonusOrUnknown": true
-        },
         {
           "id": "貫通彈‧龍之箭強化",
           "level": 1,

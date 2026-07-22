@@ -28,7 +28,18 @@ export const CATEGORY_LABELS: Record<RecommendedCategory, string> = {
   mrEarly: "大師位拓荒裝",
   mrEndgame: "大師位畢業裝",
   weaponRecommend: "推薦武器一覽",
+  // World（Game8 MHW）三階
+  worldEndgame: "畢業旗艦裝（Meta）",
+  worldMeta: "畢業 Meta 裝",
+  worldProgression: "進度拓荒裝",
 };
+
+/** World 分區顯示順序（畢業旗艦 → Meta → 進度）。 */
+export const WORLD_STAGE_CATEGORY_ORDER: RecommendedCategory[] = [
+  "worldEndgame",
+  "worldMeta",
+  "worldProgression",
+];
 
 /** 分區顯示順序（下位 → 上位過渡 → 上位畢業 → 大師位拓荒 → 大師位畢業）。 */
 export const STAGE_CATEGORY_ORDER: RecommendedCategory[] = [
