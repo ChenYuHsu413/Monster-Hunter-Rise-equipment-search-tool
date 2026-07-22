@@ -1,0 +1,32 @@
+{
+  "$meta": "Game8 MHW 英文裝備名 → 專案 id 的人工裁決（正規化後仍對不上者，皆為顯示名差異非缺）。重跑安全：只補此檔，不手改產出。",
+  "$sources": {
+    "Para Jewel+ 4": "Game8 縮寫；= MHWorldData 'Paralyzer Jewel+ 4'（麻痺珠Ⅱ【４】）",
+    "Earplugs Jewel+ 4": "Game8 複數；= MHWorldData 'Earplug Jewel+ 4'（單數）",
+    "Defender's Shield V": "Game8 加所有格；= MHWorldData 'Defender Shield V'（charge-blade Defender）",
+    "Aerial Magnus III": "Game8 拼字 Magnus；= MHWorldData 'Aerial Magus III'（insect-glaive）",
+    "Frostfang Braces": "Game8 Braces = MHWorldData 'Frostfang Vambraces'（arms）",
+    "Grand God's Peer Garbs Beta +": "Game8 Garbs 複數 = MHWorldData 'Grand God's Peer Garb β+'（chest）",
+    "Death Stench Heels": "Game8 Heels 複數 = MHWorldData 'Death Stench Heel'（legs）",
+    "Kulu Helm Alpha +": "Game8 Helm = MHWorldData 'Kulu Headpiece α+'（head）",
+    "Buff Arms Alpha +": "未解析（MHWorldData 無 Buff 系列）→ 保留 EN fallback，待補"
+  },
+  "armors": {
+    "Frostfang Braces Beta +": "warmor_1553",
+    "Frostfang Braces Alpha +": "warmor_1548",
+    "Grand God's Peer Garbs Beta +": "warmor_1487",
+    "Death Stench Heels Beta": "warmor_561",
+    "Death Stench Heels": "warmor_123",
+    "Kulu Helm Alpha +": "warmor_877"
+  },
+  "weapons": {
+    "Defender's Shield V": "wweapon_2737",
+    "Aerial Magnus III": "wweapon_2844"
+  },
+  "decorations": {
+    "Para Jewel+ 4": "wdeco_111",
+    "Earplugs Jewel+ 4": "wdeco_152"
+  },
+  "charms": {},
+  "skills": {}
+}
