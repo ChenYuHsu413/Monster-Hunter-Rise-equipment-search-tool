@@ -5,6 +5,7 @@ import type {
   Charm,
   Decoration,
   SetBonus,
+  Skill,
   SkillMap,
   Weapon,
 } from "@/types/build";
@@ -18,9 +19,11 @@ import type { GameProfile } from "./game-profile";
 import { isCraftable, type UnlockEntry } from "./unlocks";
 import {
   applyFixedParts,
+  buildCharmPool,
   buildEquipmentPools,
   buildWeaponPool,
   prunePools,
+  type WorldArmorRelevance,
 } from "./equipment-pools";
 import { collectSlots, formatSlots } from "./slot-utils";
 import {
@@ -46,6 +49,8 @@ export type WorldSearchExt = {
   setBonusById: Record<string, SetBonus>;
   /** 有 secret 的技能名（動態上限只需覆寫這些，實測 12 個）。 */
   secretSkillNames: readonly string[];
+  /** 技能名 → Skill（原生上限/secretUnlockedBy/unlocksAllSecrets，供防具相關度判定）。 */
+  skillByName: Record<string, Skill>;
   /** 護石候選（charmMode = craftable-list，取代 Rise 的使用者護石庫）。 */
   charmPool: Charm[];
 };
@@ -225,19 +230,38 @@ export function searchBuilds(
   const preferElement =
     request.preferElement ?? !!autoRules?.addElementAttackSkill;
 
-  // 護石清單：帶有排除技能的護石直接跳過；清單為空（或全被排除）＝不使用護石。
-  // 再做支配剪枝剔除冗餘護石（玩家常囤數十顆，多數被完全壓過），控制組合維度。
-  const usableCharms = charms.filter(
-    (c) => !Object.keys(c.skills).some((s) => excludedSet.has(s))
-  );
-  // 相關技能 = 必要技能 ∪ EFR 技能（含各屬性攻擊強化，故已涵蓋逐武器自動技能）。
-  const relevantCharmSkills = new Set<string>([
-    ...Object.keys(requiredSkills),
-    ...EFR_RELEVANT_SKILLS,
-  ]);
-  const prunedCharms = pruneDominatedCharms(usableCharms, relevantCharmSkills);
-  const charmCandidates: Charm[] =
-    prunedCharms.length > 0 ? prunedCharms : [NO_CHARM];
+  // 護石候選：World 與 Rise 走不同路徑。
+  let charmCandidates: Charm[];
+  let charmsTried: number;
+  if (deps.world) {
+    // World（charmMode = craftable-list）：由 charms.json 建候選池，走相關度裁切
+    // （limit 12）、支援固定/排除；不做支配剪枝（features.charmDominancePruning=false，
+    // 無隨機護石，剪枝無意義）。Rise 的護石庫路徑完全不受影響。
+    const pool = buildCharmPool({
+      charms: deps.world.charmPool,
+      requiredSkills,
+      excludedSkills: excludedSet,
+      excludedCharmIds: excludedItems.charmIds ?? [],
+      fixedCharmId: request.fixedCharmId,
+      limit: 12,
+    });
+    charmCandidates = pool.length > 0 ? pool : [NO_CHARM];
+    charmsTried = pool.length;
+  } else {
+    // Rise：帶有排除技能的護石直接跳過；清單為空（或全被排除）＝不使用護石。
+    // 再做支配剪枝剔除冗餘護石（玩家常囤數十顆，多數被完全壓過），控制組合維度。
+    const usableCharms = charms.filter(
+      (c) => !Object.keys(c.skills).some((s) => excludedSet.has(s))
+    );
+    // 相關技能 = 必要技能 ∪ EFR 技能（含各屬性攻擊強化，故已涵蓋逐武器自動技能）。
+    const relevantCharmSkills = new Set<string>([
+      ...Object.keys(requiredSkills),
+      ...EFR_RELEVANT_SKILLS,
+    ]);
+    const prunedCharms = pruneDominatedCharms(usableCharms, relevantCharmSkills);
+    charmCandidates = prunedCharms.length > 0 ? prunedCharms : [NO_CHARM];
+    charmsTried = prunedCharms.length;
+  }
 
   // 進度解放篩選：request.progress 與 deps.unlocks 同時給定才啟用（旗標疊加，
   // 未啟用時行為與既有搜尋完全相同）。固定部位/武器照舊不受限。
@@ -286,10 +310,45 @@ export function searchBuilds(
   let valid = 0;
   let truncated = false;
 
+  // World：預算防具相關度所需的常量（不依 effRequired，故迴圈外算一次）。
+  const worldGlobalUnlockers: string[] = deps.world
+    ? Object.values(deps.world.skillByName)
+        .filter((s) => s.unlocksAllSecrets)
+        .map((s) => s.name)
+    : [];
+  const worldSetBonusSkillNames = new Set<string>();
+  if (deps.world) {
+    for (const sb of Object.values(deps.world.setBonusById)) {
+      for (const r of sb.ranks) worldSetBonusSkillNames.add(r.skillName);
+    }
+  }
+
   weaponLoop: for (const weapon of weaponCandidates) {
     // 依武器屬性套用自動技能（硬條件：併入必要技能）
     const autoSkills = resolveAutoSkills(autoRules, weapon);
     const effRequired = mergeMaxSkills(requiredSkills, autoSkills);
+
+    // World 防具相關度：必要技能等級超過原生上限時，收集可解放該 secret 的件之
+    // 解放器名（專屬極意 + 全域 Inheritance），並標出「只由 set bonus 提供的必要技能」。
+    // 使 prunePools 保留自身不帶目標技能、但 set bonus 才是價值的件（Fatalis 之於挑戰者7）。
+    let worldRel: WorldArmorRelevance | undefined;
+    if (deps.world) {
+      const demandedUnlockers = new Set<string>();
+      const requiredSetBonusSkills = new Set<string>();
+      for (const [skill, lvl] of Object.entries(effRequired)) {
+        const s = deps.world.skillByName[skill];
+        if (s?.secretMaxLevel != null && lvl > s.maxLevel) {
+          if (s.secretUnlockedBy) demandedUnlockers.add(s.secretUnlockedBy);
+          for (const g of worldGlobalUnlockers) demandedUnlockers.add(g);
+        }
+        if (worldSetBonusSkillNames.has(skill)) requiredSetBonusSkills.add(skill);
+      }
+      worldRel = {
+        setBonusById: deps.world.setBonusById,
+        demandedUnlockers,
+        requiredSetBonusSkills,
+      };
+    }
 
     const pools = prunePools(
       basePools,
@@ -297,7 +356,8 @@ export function searchBuilds(
       searchMode,
       fixedParts,
       weaponCandidates.length,
-      charmCandidates.length
+      charmCandidates.length,
+      worldRel
     );
     for (const part of ARMOR_PARTS) {
       candidatesPerPart[part] = pools[part].length;
@@ -473,7 +533,7 @@ export function searchBuilds(
       mode: searchMode,
       candidatesPerPart,
       weaponsTried: weaponPool.length,
-      charmsTried: prunedCharms.length,
+      charmsTried,
       elapsedMs: now() - start,
     },
   };

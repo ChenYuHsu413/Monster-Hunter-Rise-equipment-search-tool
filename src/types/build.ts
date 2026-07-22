@@ -304,6 +304,8 @@ export type FixedParts = {
 export type ExcludedItems = {
   armorIds: string[];
   weaponIds: string[];
+  /** 排除的護石 id（World craftable-list 模式；Rise 護石為使用者庫，不用此欄）。 */
+  charmIds?: string[];
 };
 
 /** 保留洞位：每個等級要留幾個。第一版為硬性條件。 */
@@ -370,6 +372,8 @@ export type BuildSearchRequest = {
   weaponSlots?: number[];
   /** 護石清單：每顆都會納入組合計算。空陣列＝不使用護石。 */
   charms: Charm[];
+  /** 固定護石 id（World craftable-list 模式：只用此護石；Rise 不用此欄）。 */
+  fixedCharmId?: string;
   fixedParts: FixedParts;
   excludedItems: ExcludedItems;
   requiredSkills: SkillMap;

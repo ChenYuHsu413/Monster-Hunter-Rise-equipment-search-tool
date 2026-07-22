@@ -125,6 +125,7 @@ export async function loadWorldSearchDeps(): Promise<SearchDeps> {
     profile: getGameProfile("world"),
     setBonusById: s.setBonusById,
     secretSkillNames: s.secretSkillNames,
+    skillByName: s.skillByName,
     charmPool: s.charms,
   };
   return {

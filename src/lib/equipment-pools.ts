@@ -1,8 +1,10 @@
 import type {
   ArmorPiece,
+  Charm,
   EquipmentPools,
   ExcludedItems,
   FixedParts,
+  SetBonus,
   SkillMap,
   Weapon,
   WeaponElementFilter,
@@ -10,6 +12,54 @@ import type {
 } from "@/types/build";
 import { ARMOR_PARTS } from "@/types/build";
 import { slotValue } from "./slot-utils";
+
+/**
+ * World 防具相關度上下文（PLAN Phase 3 改動點 3 的已知失敗模式修法）。
+ * 相關度裁切原本只看件上技能，會剪掉「自身不帶目標技能、但 set bonus 才是價值」的件
+ * （如 Fatalis 之於挑戰者 Lv7）。給定此 ctx 時：
+ *  - demandedUnlockers：必要技能等級超過原生上限時，可解放該 secret 的件須保留。
+ *  - requiredSetBonusSkills：被直接要求、但只由 set bonus 提供的技能（虛擬技能評分）。
+ * Rise 不給此 ctx（防具無 setBonusId），行為與改造前逐位元一致。
+ */
+export type WorldArmorRelevance = {
+  setBonusById: Record<string, SetBonus>;
+  demandedUnlockers: ReadonlySet<string>;
+  requiredSetBonusSkills: ReadonlySet<string>;
+};
+
+/** 該件 setBonus 可提供的技能名（任一 rank）。無 setBonus 回空。 */
+function pieceSetBonusSkillNames(
+  piece: ArmorPiece,
+  setBonusById: Record<string, SetBonus>
+): string[] {
+  const sb = piece.setBonusId ? setBonusById[piece.setBonusId] : undefined;
+  return sb ? sb.ranks.map((r) => r.skillName) : [];
+}
+
+/** 該件的 set bonus 是否貢獻「需解放的 secret」或「被要求的 set bonus 技能」。 */
+function pieceContributesSetBonus(
+  piece: ArmorPiece,
+  rel: WorldArmorRelevance
+): boolean {
+  const names = pieceSetBonusSkillNames(piece, rel.setBonusById);
+  return names.some(
+    (n) => rel.demandedUnlockers.has(n) || rel.requiredSetBonusSkills.has(n)
+  );
+}
+
+/** World set bonus 保留/評分加權（demanded unlock 給大權重確保進候選）。 */
+function worldSetBonusBoost(
+  piece: ArmorPiece,
+  rel: WorldArmorRelevance
+): number {
+  const names = pieceSetBonusSkillNames(piece, rel.setBonusById);
+  let boost = 0;
+  for (const n of names) {
+    if (rel.demandedUnlockers.has(n)) boost += 100; // 解放件保留權重（必進候選）
+    if (rel.requiredSetBonusSkills.has(n)) boost += 60; // 直接要求的 set bonus 技能
+  }
+  return boost;
+}
 
 /** 裝備是否帶有任一排除技能（排除技能為硬條件，直接踢出候選池）。 */
 function hasExcludedSkill(
@@ -134,7 +184,9 @@ export function prunePools(
   /** 參與搜尋的武器候選數。>1 時縮小每部位件數，讓總組合數（W × N^5）維持在可負荷範圍。 */
   weaponCount: number = 1,
   /** 護石候選數。多顆時解算次數 ×C，再縮小每部位件數以維持總量。 */
-  charmCount: number = 1
+  charmCount: number = 1,
+  /** World 防具相關度上下文（Rise 不給，行為與改造前逐位元一致）。 */
+  worldRel?: WorldArmorRelevance
 ): EquipmentPools {
   // 每部位保留件數 limit：搜尋解算次數約為 weaponCount × limit^5 × charmCount，
   // 全防具庫每部位 300+ 件無法暴力枚舉，故各模式依相關度只留前 limit 名。
@@ -177,7 +229,9 @@ export function prunePools(
     scoreArmorPieceForRequired(piece, requiredSkills) +
     (mode === "greedy"
       ? requiredCoverageScore(piece, requiredSkills) * 20
-      : 0);
+      : 0) +
+    // World：set bonus 保留/評分加權（Rise worldRel 為 undefined → +0，逐位元一致）。
+    (worldRel ? worldSetBonusBoost(piece, worldRel) : 0);
 
   const out = {} as EquipmentPools;
   for (const part of ARMOR_PARTS) {
@@ -187,10 +241,13 @@ export function prunePools(
       continue;
     }
     // 預先濾除：既無相關技能、洞位又少（<4)的裝備直接淘汰。
+    // World：另保留「set bonus 貢獻需解放 secret / 被要求 set bonus 技能」的件
+    // （Rise worldRel 為 undefined，此條恆 false，濾除與改造前逐位元一致）。
     const useful = pools[part].filter((p) => {
       const hasRel = Object.keys(p.skills).some((s) => relevant.has(s));
       const slotV = (p.slots ?? []).reduce((a, b) => a + b, 0);
-      return hasRel || slotV >= 4;
+      const sbRel = worldRel ? pieceContributesSetBonus(p, worldRel) : false;
+      return hasRel || slotV >= 4 || sbRel;
     });
     const pool = useful.length ? useful : pools[part];
     out[part] = pool
@@ -299,4 +356,56 @@ export function buildWeaponPool(opts: {
     .sort((a, b) => b.score - a.score)
     .slice(0, cap)
     .map((x) => x.w);
+}
+
+/**
+ * World 護石候選池（charmMode = craftable-list）。由 charms.json 建，走與防具相同的
+ * 相關度裁切：以必要技能覆蓋計分，取前 limit（建議 12）。無覆蓋者對搜尋無益
+ * （World 護石無孔）→ 淘汰。支援固定（只用該護石）/排除（濾掉指定 id）。
+ * Rise 護石走使用者護石庫路徑，不呼叫此函式。
+ */
+export function buildCharmPool(opts: {
+  charms: Charm[];
+  requiredSkills: SkillMap;
+  excludedSkills: Set<string>;
+  excludedCharmIds: string[];
+  fixedCharmId?: string;
+  limit: number;
+}): Charm[] {
+  const {
+    charms,
+    requiredSkills,
+    excludedSkills,
+    excludedCharmIds,
+    fixedCharmId,
+    limit,
+  } = opts;
+
+  // 固定護石：只回傳指定護石（找不到則空，由呼叫端後援 NO_CHARM）。
+  if (fixedCharmId) {
+    const f = charms.find((c) => c.id === fixedCharmId);
+    return f ? [f] : [];
+  }
+
+  const excl = new Set(excludedCharmIds);
+  const usable = charms.filter(
+    (c) =>
+      !(c.id && excl.has(c.id)) &&
+      !Object.keys(c.skills).some((s) => excludedSkills.has(s))
+  );
+
+  const scored = usable
+    .map((c) => ({ c, score: charmRequiredScore(c, requiredSkills) }))
+    .filter((x) => x.score > 0);
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, limit).map((x) => x.c);
+}
+
+/** 護石對必要技能的覆蓋分（相關度裁切用）。 */
+function charmRequiredScore(charm: Charm, required: SkillMap): number {
+  let s = 0;
+  for (const [skill, lvl] of Object.entries(charm.skills)) {
+    if (required[skill]) s += lvl;
+  }
+  return s;
 }
